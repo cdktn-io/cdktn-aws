@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataDhcpOptionsConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfDhcpOptionsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_dhcp_options#dhcp_options_id TfDataDhcpOptions#dhcp_options_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_dhcp_options#dhcp_options_id DataTfDhcpOptions#dhcp_options_id}
   */
   readonly dhcpOptionsId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_dhcp_options#id TfDataDhcpOptions#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_dhcp_options#id DataTfDhcpOptions#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,31 +20,31 @@ export interface TfDataDhcpOptionsConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_dhcp_options#region TfDataDhcpOptions#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_dhcp_options#region DataTfDhcpOptions#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_dhcp_options#tags TfDataDhcpOptions#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_dhcp_options#tags DataTfDhcpOptions#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_dhcp_options#filter TfDataDhcpOptions#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_dhcp_options#filter DataTfDhcpOptions#filter}
   */
-  readonly filter?: TfDataDhcpOptions.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataTfDhcpOptions.FilterProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_dhcp_options#timeouts TfDataDhcpOptions#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_dhcp_options#timeouts DataTfDhcpOptions#timeouts}
   */
-  readonly timeouts?: TfDataDhcpOptions.TimeoutsProperty;
+  readonly timeouts?: DataTfDhcpOptions.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_dhcp_options aws_vpc_dhcp_options}
 */
-export class TfDataDhcpOptions extends cdktn.TerraformDataSource {
+export class DataTfDhcpOptions extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class TfDataDhcpOptions extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataDhcpOptions resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfDhcpOptions resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataDhcpOptions to import
-  * @param importFromId The id of the existing TfDataDhcpOptions that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_dhcp_options#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataDhcpOptions to import is found
+  * @param importToId The construct id used in the generated config for the DataTfDhcpOptions to import
+  * @param importFromId The id of the existing DataTfDhcpOptions that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_dhcp_options#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfDhcpOptions to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpc_dhcp_options", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class TfDataDhcpOptions extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataDhcpOptionsConfig = {}
+  * @param options DataTfDhcpOptionsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataDhcpOptionsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfDhcpOptionsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_vpc_dhcp_options',
       terraformGeneratorMetadata: {
@@ -209,11 +209,11 @@ export class TfDataDhcpOptions extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new TfDataDhcpOptions.FilterPropertyList(this, "filter", true);
+  private _filter = new DataTfDhcpOptions.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: TfDataDhcpOptions.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataTfDhcpOptions.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -225,11 +225,11 @@ export class TfDataDhcpOptions extends cdktn.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfDataDhcpOptions.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new DataTfDhcpOptions.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfDataDhcpOptions.TimeoutsProperty) {
+  public putTimeouts(value: DataTfDhcpOptions.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -250,8 +250,8 @@ export class TfDataDhcpOptions extends cdktn.TerraformDataSource {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      filter: cdktn.listMapper(tfDataDhcpOptionsFilterPropertyToTerraform, true)(this._filter.internalValue),
-      timeouts: tfDataDhcpOptionsTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      filter: cdktn.listMapper(dataTfDhcpOptionsFilterPropertyToTerraform, true)(this._filter.internalValue),
+      timeouts: dataTfDhcpOptionsTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -282,16 +282,16 @@ export class TfDataDhcpOptions extends cdktn.TerraformDataSource {
         storageClassType: "stringMap",
       },
       filter: {
-        value: cdktn.listMapperHcl(tfDataDhcpOptionsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataTfDhcpOptionsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfDataDhcpOptions.FilterPropertyList",
+        storageClassType: "DataTfDhcpOptions.FilterPropertyList",
       },
       timeouts: {
-        value: tfDataDhcpOptionsTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: dataTfDhcpOptionsTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfDataDhcpOptions.TimeoutsProperty",
+        storageClassType: "DataTfDhcpOptions.TimeoutsProperty",
       },
     };
 
@@ -300,7 +300,7 @@ export class TfDataDhcpOptions extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataDhcpOptionsFilterPropertyToTerraform(struct?: TfDataDhcpOptions.FilterProperty | cdktn.IResolvable): any {
+export function dataTfDhcpOptionsFilterPropertyToTerraform(struct?: DataTfDhcpOptions.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -312,7 +312,7 @@ export function tfDataDhcpOptionsFilterPropertyToTerraform(struct?: TfDataDhcpOp
 }
 
 
-export function tfDataDhcpOptionsFilterPropertyToHclTerraform(struct?: TfDataDhcpOptions.FilterProperty | cdktn.IResolvable): any {
+export function dataTfDhcpOptionsFilterPropertyToHclTerraform(struct?: DataTfDhcpOptions.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -337,7 +337,7 @@ export function tfDataDhcpOptionsFilterPropertyToHclTerraform(struct?: TfDataDhc
 }
 
 
-export function tfDataDhcpOptionsTimeoutsPropertyToTerraform(struct?: TfDataDhcpOptions.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfDhcpOptionsTimeoutsPropertyToTerraform(struct?: DataTfDhcpOptions.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -348,7 +348,7 @@ export function tfDataDhcpOptionsTimeoutsPropertyToTerraform(struct?: TfDataDhcp
 }
 
 
-export function tfDataDhcpOptionsTimeoutsPropertyToHclTerraform(struct?: TfDataDhcpOptions.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfDhcpOptionsTimeoutsPropertyToHclTerraform(struct?: DataTfDhcpOptions.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -367,14 +367,14 @@ export function tfDataDhcpOptionsTimeoutsPropertyToHclTerraform(struct?: TfDataD
 }
 
 
-export namespace TfDataDhcpOptions {
+export namespace DataTfDhcpOptions {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_dhcp_options#name TfDataDhcpOptions#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_dhcp_options#name DataTfDhcpOptions#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_dhcp_options#values TfDataDhcpOptions#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_dhcp_options#values DataTfDhcpOptions#values}
   */
   readonly values: string[];
 }
@@ -476,7 +476,7 @@ export class FilterPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_dhcp_options#read TfDataDhcpOptions#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_dhcp_options#read DataTfDhcpOptions#read}
   */
   readonly read?: string;
 }

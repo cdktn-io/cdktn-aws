@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataBucketConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfBucketConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_bucket#bucket TfDataBucket#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_bucket#bucket DataTfBucket#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_bucket#id TfDataBucket#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_bucket#id DataTfBucket#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,7 +20,7 @@ export interface TfDataBucketConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_bucket#region TfDataBucket#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_bucket#region DataTfBucket#region}
   */
   readonly region?: string;
 }
@@ -28,7 +28,7 @@ export interface TfDataBucketConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_bucket aws_s3_bucket}
 */
-export class TfDataBucket extends cdktn.TerraformDataSource {
+export class DataTfBucket extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class TfDataBucket extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataBucket resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfBucket resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataBucket to import
-  * @param importFromId The id of the existing TfDataBucket that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_bucket#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataBucket to import is found
+  * @param importToId The construct id used in the generated config for the DataTfBucket to import
+  * @param importFromId The id of the existing DataTfBucket that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_bucket#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfBucket to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3_bucket", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class TfDataBucket extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataBucketConfig
+  * @param options DataTfBucketConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataBucketConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfBucketConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3_bucket',
       terraformGeneratorMetadata: {

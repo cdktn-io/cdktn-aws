@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataContactChannelConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfContactChannelConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssmcontacts_contact_channel#arn TfDataContactChannel#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssmcontacts_contact_channel#arn DataTfContactChannel#arn}
   */
   readonly arn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssmcontacts_contact_channel#id TfDataContactChannel#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssmcontacts_contact_channel#id DataTfContactChannel#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,7 +20,7 @@ export interface TfDataContactChannelConfig extends cdktn.TerraformMetaArguments
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssmcontacts_contact_channel#region TfDataContactChannel#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssmcontacts_contact_channel#region DataTfContactChannel#region}
   */
   readonly region?: string;
 }
@@ -28,7 +28,7 @@ export interface TfDataContactChannelConfig extends cdktn.TerraformMetaArguments
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssmcontacts_contact_channel aws_ssmcontacts_contact_channel}
 */
-export class TfDataContactChannel extends cdktn.TerraformDataSource {
+export class DataTfContactChannel extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class TfDataContactChannel extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataContactChannel resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfContactChannel resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataContactChannel to import
-  * @param importFromId The id of the existing TfDataContactChannel that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssmcontacts_contact_channel#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataContactChannel to import is found
+  * @param importToId The construct id used in the generated config for the DataTfContactChannel to import
+  * @param importFromId The id of the existing DataTfContactChannel that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssmcontacts_contact_channel#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfContactChannel to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ssmcontacts_contact_channel", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class TfDataContactChannel extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataContactChannelConfig
+  * @param options DataTfContactChannelConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataContactChannelConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfContactChannelConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ssmcontacts_contact_channel',
       terraformGeneratorMetadata: {
@@ -109,7 +109,7 @@ export class TfDataContactChannel extends cdktn.TerraformDataSource {
   }
 
   // delivery_address - computed: true, optional: false, required: false
-  private _deliveryAddress = new TfDataContactChannel.DeliveryAddressPropertyList(this, "delivery_address", false);
+  private _deliveryAddress = new DataTfContactChannel.DeliveryAddressPropertyList(this, "delivery_address", false);
   public get deliveryAddress() {
     return this._deliveryAddress;
   }
@@ -195,7 +195,7 @@ export class TfDataContactChannel extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataContactChannelDeliveryAddressPropertyToTerraform(struct?: TfDataContactChannel.DeliveryAddressProperty): any {
+export function dataTfContactChannelDeliveryAddressPropertyToTerraform(struct?: DataTfContactChannel.DeliveryAddressProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -205,7 +205,7 @@ export function tfDataContactChannelDeliveryAddressPropertyToTerraform(struct?: 
 }
 
 
-export function tfDataContactChannelDeliveryAddressPropertyToHclTerraform(struct?: TfDataContactChannel.DeliveryAddressProperty): any {
+export function dataTfContactChannelDeliveryAddressPropertyToHclTerraform(struct?: DataTfContactChannel.DeliveryAddressProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -216,7 +216,7 @@ export function tfDataContactChannelDeliveryAddressPropertyToHclTerraform(struct
 }
 
 
-export namespace TfDataContactChannel {
+export namespace DataTfContactChannel {
 export interface DeliveryAddressProperty {
 }
 export class DeliveryAddressPropertyOutputReference extends cdktn.ComplexObject {

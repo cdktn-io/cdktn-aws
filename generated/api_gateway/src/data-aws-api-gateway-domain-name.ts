@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataDomainNameConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfDomainNameConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_domain_name#domain_name TfDataDomainName#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_domain_name#domain_name DataTfDomainName#domain_name}
   */
   readonly domainName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_domain_name#domain_name_id TfDataDomainName#domain_name_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_domain_name#domain_name_id DataTfDomainName#domain_name_id}
   */
   readonly domainNameId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_domain_name#id TfDataDomainName#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_domain_name#id DataTfDomainName#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,11 +24,11 @@ export interface TfDataDomainNameConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_domain_name#region TfDataDomainName#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_domain_name#region DataTfDomainName#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_domain_name#tags TfDataDomainName#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_domain_name#tags DataTfDomainName#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -36,7 +36,7 @@ export interface TfDataDomainNameConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_domain_name aws_api_gateway_domain_name}
 */
-export class TfDataDomainName extends cdktn.TerraformDataSource {
+export class DataTfDomainName extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class TfDataDomainName extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataDomainName resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfDomainName resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataDomainName to import
-  * @param importFromId The id of the existing TfDataDomainName that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_domain_name#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataDomainName to import is found
+  * @param importToId The construct id used in the generated config for the DataTfDomainName to import
+  * @param importFromId The id of the existing DataTfDomainName that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_domain_name#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfDomainName to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_api_gateway_domain_name", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class TfDataDomainName extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataDomainNameConfig
+  * @param options DataTfDomainNameConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataDomainNameConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfDomainNameConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_api_gateway_domain_name',
       terraformGeneratorMetadata: {
@@ -160,7 +160,7 @@ export class TfDataDomainName extends cdktn.TerraformDataSource {
   }
 
   // endpoint_configuration - computed: true, optional: false, required: false
-  private _endpointConfiguration = new TfDataDomainName.EndpointConfigurationPropertyList(this, "endpoint_configuration", false);
+  private _endpointConfiguration = new DataTfDomainName.EndpointConfigurationPropertyList(this, "endpoint_configuration", false);
   public get endpointConfiguration() {
     return this._endpointConfiguration;
   }
@@ -296,7 +296,7 @@ export class TfDataDomainName extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataDomainNameEndpointConfigurationPropertyToTerraform(struct?: TfDataDomainName.EndpointConfigurationProperty): any {
+export function dataTfDomainNameEndpointConfigurationPropertyToTerraform(struct?: DataTfDomainName.EndpointConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -306,7 +306,7 @@ export function tfDataDomainNameEndpointConfigurationPropertyToTerraform(struct?
 }
 
 
-export function tfDataDomainNameEndpointConfigurationPropertyToHclTerraform(struct?: TfDataDomainName.EndpointConfigurationProperty): any {
+export function dataTfDomainNameEndpointConfigurationPropertyToHclTerraform(struct?: DataTfDomainName.EndpointConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -317,7 +317,7 @@ export function tfDataDomainNameEndpointConfigurationPropertyToHclTerraform(stru
 }
 
 
-export namespace TfDataDomainName {
+export namespace DataTfDomainName {
 export interface EndpointConfigurationProperty {
 }
 export class EndpointConfigurationPropertyOutputReference extends cdktn.ComplexObject {

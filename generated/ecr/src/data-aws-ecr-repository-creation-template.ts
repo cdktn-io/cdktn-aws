@@ -5,26 +5,26 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataRepositoryCreationTemplateConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfRepositoryCreationTemplateConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_repository_creation_template#id TfDataRepositoryCreationTemplate#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_repository_creation_template#id DataTfRepositoryCreationTemplate#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_repository_creation_template#prefix TfDataRepositoryCreationTemplate#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_repository_creation_template#prefix DataTfRepositoryCreationTemplate#prefix}
   */
   readonly prefix: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_repository_creation_template#region TfDataRepositoryCreationTemplate#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_repository_creation_template#region DataTfRepositoryCreationTemplate#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_repository_creation_template#resource_tags TfDataRepositoryCreationTemplate#resource_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_repository_creation_template#resource_tags DataTfRepositoryCreationTemplate#resource_tags}
   */
   readonly resourceTags?: { [key: string]: string };
 }
@@ -32,7 +32,7 @@ export interface TfDataRepositoryCreationTemplateConfig extends cdktn.TerraformM
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_repository_creation_template aws_ecr_repository_creation_template}
 */
-export class TfDataRepositoryCreationTemplate extends cdktn.TerraformDataSource {
+export class DataTfRepositoryCreationTemplate extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class TfDataRepositoryCreationTemplate extends cdktn.TerraformDataSource 
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataRepositoryCreationTemplate resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfRepositoryCreationTemplate resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataRepositoryCreationTemplate to import
-  * @param importFromId The id of the existing TfDataRepositoryCreationTemplate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_repository_creation_template#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataRepositoryCreationTemplate to import is found
+  * @param importToId The construct id used in the generated config for the DataTfRepositoryCreationTemplate to import
+  * @param importFromId The id of the existing DataTfRepositoryCreationTemplate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_repository_creation_template#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfRepositoryCreationTemplate to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ecr_repository_creation_template", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class TfDataRepositoryCreationTemplate extends cdktn.TerraformDataSource 
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataRepositoryCreationTemplateConfig
+  * @param options DataTfRepositoryCreationTemplateConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataRepositoryCreationTemplateConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfRepositoryCreationTemplateConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ecr_repository_creation_template',
       terraformGeneratorMetadata: {
@@ -106,7 +106,7 @@ export class TfDataRepositoryCreationTemplate extends cdktn.TerraformDataSource 
   }
 
   // encryption_configuration - computed: true, optional: false, required: false
-  private _encryptionConfiguration = new TfDataRepositoryCreationTemplate.EncryptionConfigurationPropertyList(this, "encryption_configuration", false);
+  private _encryptionConfiguration = new DataTfRepositoryCreationTemplate.EncryptionConfigurationPropertyList(this, "encryption_configuration", false);
   public get encryptionConfiguration() {
     return this._encryptionConfiguration;
   }
@@ -133,7 +133,7 @@ export class TfDataRepositoryCreationTemplate extends cdktn.TerraformDataSource 
   }
 
   // image_tag_mutability_exclusion_filter - computed: true, optional: false, required: false
-  private _imageTagMutabilityExclusionFilter = new TfDataRepositoryCreationTemplate.ImageTagMutabilityExclusionFilterPropertyList(this, "image_tag_mutability_exclusion_filter", false);
+  private _imageTagMutabilityExclusionFilter = new DataTfRepositoryCreationTemplate.ImageTagMutabilityExclusionFilterPropertyList(this, "image_tag_mutability_exclusion_filter", false);
   public get imageTagMutabilityExclusionFilter() {
     return this._imageTagMutabilityExclusionFilter;
   }
@@ -244,7 +244,7 @@ export class TfDataRepositoryCreationTemplate extends cdktn.TerraformDataSource 
   }
 }
 
-export function tfDataRepositoryCreationTemplateEncryptionConfigurationPropertyToTerraform(struct?: TfDataRepositoryCreationTemplate.EncryptionConfigurationProperty): any {
+export function dataTfRepositoryCreationTemplateEncryptionConfigurationPropertyToTerraform(struct?: DataTfRepositoryCreationTemplate.EncryptionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -254,7 +254,7 @@ export function tfDataRepositoryCreationTemplateEncryptionConfigurationPropertyT
 }
 
 
-export function tfDataRepositoryCreationTemplateEncryptionConfigurationPropertyToHclTerraform(struct?: TfDataRepositoryCreationTemplate.EncryptionConfigurationProperty): any {
+export function dataTfRepositoryCreationTemplateEncryptionConfigurationPropertyToHclTerraform(struct?: DataTfRepositoryCreationTemplate.EncryptionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -265,7 +265,7 @@ export function tfDataRepositoryCreationTemplateEncryptionConfigurationPropertyT
 }
 
 
-export function tfDataRepositoryCreationTemplateImageTagMutabilityExclusionFilterPropertyToTerraform(struct?: TfDataRepositoryCreationTemplate.ImageTagMutabilityExclusionFilterProperty): any {
+export function dataTfRepositoryCreationTemplateImageTagMutabilityExclusionFilterPropertyToTerraform(struct?: DataTfRepositoryCreationTemplate.ImageTagMutabilityExclusionFilterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -275,7 +275,7 @@ export function tfDataRepositoryCreationTemplateImageTagMutabilityExclusionFilte
 }
 
 
-export function tfDataRepositoryCreationTemplateImageTagMutabilityExclusionFilterPropertyToHclTerraform(struct?: TfDataRepositoryCreationTemplate.ImageTagMutabilityExclusionFilterProperty): any {
+export function dataTfRepositoryCreationTemplateImageTagMutabilityExclusionFilterPropertyToHclTerraform(struct?: DataTfRepositoryCreationTemplate.ImageTagMutabilityExclusionFilterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -286,7 +286,7 @@ export function tfDataRepositoryCreationTemplateImageTagMutabilityExclusionFilte
 }
 
 
-export namespace TfDataRepositoryCreationTemplate {
+export namespace DataTfRepositoryCreationTemplate {
 export interface EncryptionConfigurationProperty {
 }
 export class EncryptionConfigurationPropertyOutputReference extends cdktn.ComplexObject {

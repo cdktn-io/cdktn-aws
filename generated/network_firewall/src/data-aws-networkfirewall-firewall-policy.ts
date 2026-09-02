@@ -5,30 +5,30 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataFirewallPolicyConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfFirewallPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkfirewall_firewall_policy#arn TfDataFirewallPolicy#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkfirewall_firewall_policy#arn DataTfFirewallPolicy#arn}
   */
   readonly arn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkfirewall_firewall_policy#id TfDataFirewallPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkfirewall_firewall_policy#id DataTfFirewallPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkfirewall_firewall_policy#name TfDataFirewallPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkfirewall_firewall_policy#name DataTfFirewallPolicy#name}
   */
   readonly name?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkfirewall_firewall_policy#region TfDataFirewallPolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkfirewall_firewall_policy#region DataTfFirewallPolicy#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkfirewall_firewall_policy#tags TfDataFirewallPolicy#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkfirewall_firewall_policy#tags DataTfFirewallPolicy#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -36,7 +36,7 @@ export interface TfDataFirewallPolicyConfig extends cdktn.TerraformMetaArguments
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkfirewall_firewall_policy aws_networkfirewall_firewall_policy}
 */
-export class TfDataFirewallPolicy extends cdktn.TerraformDataSource {
+export class DataTfFirewallPolicy extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class TfDataFirewallPolicy extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataFirewallPolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfFirewallPolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataFirewallPolicy to import
-  * @param importFromId The id of the existing TfDataFirewallPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkfirewall_firewall_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataFirewallPolicy to import is found
+  * @param importToId The construct id used in the generated config for the DataTfFirewallPolicy to import
+  * @param importFromId The id of the existing DataTfFirewallPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkfirewall_firewall_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfFirewallPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_networkfirewall_firewall_policy", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class TfDataFirewallPolicy extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataFirewallPolicyConfig = {}
+  * @param options DataTfFirewallPolicyConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataFirewallPolicyConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfFirewallPolicyConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_networkfirewall_firewall_policy',
       terraformGeneratorMetadata: {
@@ -117,7 +117,7 @@ export class TfDataFirewallPolicy extends cdktn.TerraformDataSource {
   }
 
   // firewall_policy - computed: true, optional: false, required: false
-  private _firewallPolicy = new TfDataFirewallPolicy.FirewallPolicyPropertyList(this, "firewall_policy", false);
+  private _firewallPolicy = new DataTfFirewallPolicy.FirewallPolicyPropertyList(this, "firewall_policy", false);
   public get firewallPolicy() {
     return this._firewallPolicy;
   }
@@ -244,7 +244,7 @@ export class TfDataFirewallPolicy extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataFirewallPolicyIpSetPropertyToTerraform(struct?: TfDataFirewallPolicy.IpSetProperty): any {
+export function dataTfFirewallPolicyIpSetPropertyToTerraform(struct?: DataTfFirewallPolicy.IpSetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -254,7 +254,7 @@ export function tfDataFirewallPolicyIpSetPropertyToTerraform(struct?: TfDataFire
 }
 
 
-export function tfDataFirewallPolicyIpSetPropertyToHclTerraform(struct?: TfDataFirewallPolicy.IpSetProperty): any {
+export function dataTfFirewallPolicyIpSetPropertyToHclTerraform(struct?: DataTfFirewallPolicy.IpSetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -265,7 +265,7 @@ export function tfDataFirewallPolicyIpSetPropertyToHclTerraform(struct?: TfDataF
 }
 
 
-export function tfDataFirewallPolicyRuleVariablesPropertyToTerraform(struct?: TfDataFirewallPolicy.RuleVariablesProperty): any {
+export function dataTfFirewallPolicyRuleVariablesPropertyToTerraform(struct?: DataTfFirewallPolicy.RuleVariablesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -275,7 +275,7 @@ export function tfDataFirewallPolicyRuleVariablesPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfDataFirewallPolicyRuleVariablesPropertyToHclTerraform(struct?: TfDataFirewallPolicy.RuleVariablesProperty): any {
+export function dataTfFirewallPolicyRuleVariablesPropertyToHclTerraform(struct?: DataTfFirewallPolicy.RuleVariablesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -286,7 +286,7 @@ export function tfDataFirewallPolicyRuleVariablesPropertyToHclTerraform(struct?:
 }
 
 
-export function tfDataFirewallPolicyPolicyVariablesPropertyToTerraform(struct?: TfDataFirewallPolicy.PolicyVariablesProperty): any {
+export function dataTfFirewallPolicyPolicyVariablesPropertyToTerraform(struct?: DataTfFirewallPolicy.PolicyVariablesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -296,7 +296,7 @@ export function tfDataFirewallPolicyPolicyVariablesPropertyToTerraform(struct?: 
 }
 
 
-export function tfDataFirewallPolicyPolicyVariablesPropertyToHclTerraform(struct?: TfDataFirewallPolicy.PolicyVariablesProperty): any {
+export function dataTfFirewallPolicyPolicyVariablesPropertyToHclTerraform(struct?: DataTfFirewallPolicy.PolicyVariablesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -307,7 +307,7 @@ export function tfDataFirewallPolicyPolicyVariablesPropertyToHclTerraform(struct
 }
 
 
-export function tfDataFirewallPolicyFlowTimeoutsPropertyToTerraform(struct?: TfDataFirewallPolicy.FlowTimeoutsProperty): any {
+export function dataTfFirewallPolicyFlowTimeoutsPropertyToTerraform(struct?: DataTfFirewallPolicy.FlowTimeoutsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -317,7 +317,7 @@ export function tfDataFirewallPolicyFlowTimeoutsPropertyToTerraform(struct?: TfD
 }
 
 
-export function tfDataFirewallPolicyFlowTimeoutsPropertyToHclTerraform(struct?: TfDataFirewallPolicy.FlowTimeoutsProperty): any {
+export function dataTfFirewallPolicyFlowTimeoutsPropertyToHclTerraform(struct?: DataTfFirewallPolicy.FlowTimeoutsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -328,7 +328,7 @@ export function tfDataFirewallPolicyFlowTimeoutsPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfDataFirewallPolicyStatefulEngineOptionsPropertyToTerraform(struct?: TfDataFirewallPolicy.StatefulEngineOptionsProperty): any {
+export function dataTfFirewallPolicyStatefulEngineOptionsPropertyToTerraform(struct?: DataTfFirewallPolicy.StatefulEngineOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -338,7 +338,7 @@ export function tfDataFirewallPolicyStatefulEngineOptionsPropertyToTerraform(str
 }
 
 
-export function tfDataFirewallPolicyStatefulEngineOptionsPropertyToHclTerraform(struct?: TfDataFirewallPolicy.StatefulEngineOptionsProperty): any {
+export function dataTfFirewallPolicyStatefulEngineOptionsPropertyToHclTerraform(struct?: DataTfFirewallPolicy.StatefulEngineOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -349,7 +349,7 @@ export function tfDataFirewallPolicyStatefulEngineOptionsPropertyToHclTerraform(
 }
 
 
-export function tfDataFirewallPolicyOverridePropertyToTerraform(struct?: TfDataFirewallPolicy.OverrideProperty): any {
+export function dataTfFirewallPolicyOverridePropertyToTerraform(struct?: DataTfFirewallPolicy.OverrideProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -359,7 +359,7 @@ export function tfDataFirewallPolicyOverridePropertyToTerraform(struct?: TfDataF
 }
 
 
-export function tfDataFirewallPolicyOverridePropertyToHclTerraform(struct?: TfDataFirewallPolicy.OverrideProperty): any {
+export function dataTfFirewallPolicyOverridePropertyToHclTerraform(struct?: DataTfFirewallPolicy.OverrideProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -370,7 +370,7 @@ export function tfDataFirewallPolicyOverridePropertyToHclTerraform(struct?: TfDa
 }
 
 
-export function tfDataFirewallPolicyStatefulRuleGroupReferencePropertyToTerraform(struct?: TfDataFirewallPolicy.StatefulRuleGroupReferenceProperty): any {
+export function dataTfFirewallPolicyStatefulRuleGroupReferencePropertyToTerraform(struct?: DataTfFirewallPolicy.StatefulRuleGroupReferenceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -380,7 +380,7 @@ export function tfDataFirewallPolicyStatefulRuleGroupReferencePropertyToTerrafor
 }
 
 
-export function tfDataFirewallPolicyStatefulRuleGroupReferencePropertyToHclTerraform(struct?: TfDataFirewallPolicy.StatefulRuleGroupReferenceProperty): any {
+export function dataTfFirewallPolicyStatefulRuleGroupReferencePropertyToHclTerraform(struct?: DataTfFirewallPolicy.StatefulRuleGroupReferenceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -391,7 +391,7 @@ export function tfDataFirewallPolicyStatefulRuleGroupReferencePropertyToHclTerra
 }
 
 
-export function tfDataFirewallPolicyDimensionPropertyToTerraform(struct?: TfDataFirewallPolicy.DimensionProperty): any {
+export function dataTfFirewallPolicyDimensionPropertyToTerraform(struct?: DataTfFirewallPolicy.DimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -401,7 +401,7 @@ export function tfDataFirewallPolicyDimensionPropertyToTerraform(struct?: TfData
 }
 
 
-export function tfDataFirewallPolicyDimensionPropertyToHclTerraform(struct?: TfDataFirewallPolicy.DimensionProperty): any {
+export function dataTfFirewallPolicyDimensionPropertyToHclTerraform(struct?: DataTfFirewallPolicy.DimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -412,7 +412,7 @@ export function tfDataFirewallPolicyDimensionPropertyToHclTerraform(struct?: TfD
 }
 
 
-export function tfDataFirewallPolicyPublishMetricActionPropertyToTerraform(struct?: TfDataFirewallPolicy.PublishMetricActionProperty): any {
+export function dataTfFirewallPolicyPublishMetricActionPropertyToTerraform(struct?: DataTfFirewallPolicy.PublishMetricActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -422,7 +422,7 @@ export function tfDataFirewallPolicyPublishMetricActionPropertyToTerraform(struc
 }
 
 
-export function tfDataFirewallPolicyPublishMetricActionPropertyToHclTerraform(struct?: TfDataFirewallPolicy.PublishMetricActionProperty): any {
+export function dataTfFirewallPolicyPublishMetricActionPropertyToHclTerraform(struct?: DataTfFirewallPolicy.PublishMetricActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -433,7 +433,7 @@ export function tfDataFirewallPolicyPublishMetricActionPropertyToHclTerraform(st
 }
 
 
-export function tfDataFirewallPolicyActionDefinitionPropertyToTerraform(struct?: TfDataFirewallPolicy.ActionDefinitionProperty): any {
+export function dataTfFirewallPolicyActionDefinitionPropertyToTerraform(struct?: DataTfFirewallPolicy.ActionDefinitionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -443,7 +443,7 @@ export function tfDataFirewallPolicyActionDefinitionPropertyToTerraform(struct?:
 }
 
 
-export function tfDataFirewallPolicyActionDefinitionPropertyToHclTerraform(struct?: TfDataFirewallPolicy.ActionDefinitionProperty): any {
+export function dataTfFirewallPolicyActionDefinitionPropertyToHclTerraform(struct?: DataTfFirewallPolicy.ActionDefinitionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -454,7 +454,7 @@ export function tfDataFirewallPolicyActionDefinitionPropertyToHclTerraform(struc
 }
 
 
-export function tfDataFirewallPolicyStatelessCustomActionPropertyToTerraform(struct?: TfDataFirewallPolicy.StatelessCustomActionProperty): any {
+export function dataTfFirewallPolicyStatelessCustomActionPropertyToTerraform(struct?: DataTfFirewallPolicy.StatelessCustomActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -464,7 +464,7 @@ export function tfDataFirewallPolicyStatelessCustomActionPropertyToTerraform(str
 }
 
 
-export function tfDataFirewallPolicyStatelessCustomActionPropertyToHclTerraform(struct?: TfDataFirewallPolicy.StatelessCustomActionProperty): any {
+export function dataTfFirewallPolicyStatelessCustomActionPropertyToHclTerraform(struct?: DataTfFirewallPolicy.StatelessCustomActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -475,7 +475,7 @@ export function tfDataFirewallPolicyStatelessCustomActionPropertyToHclTerraform(
 }
 
 
-export function tfDataFirewallPolicyStatelessRuleGroupReferencePropertyToTerraform(struct?: TfDataFirewallPolicy.StatelessRuleGroupReferenceProperty): any {
+export function dataTfFirewallPolicyStatelessRuleGroupReferencePropertyToTerraform(struct?: DataTfFirewallPolicy.StatelessRuleGroupReferenceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -485,7 +485,7 @@ export function tfDataFirewallPolicyStatelessRuleGroupReferencePropertyToTerrafo
 }
 
 
-export function tfDataFirewallPolicyStatelessRuleGroupReferencePropertyToHclTerraform(struct?: TfDataFirewallPolicy.StatelessRuleGroupReferenceProperty): any {
+export function dataTfFirewallPolicyStatelessRuleGroupReferencePropertyToHclTerraform(struct?: DataTfFirewallPolicy.StatelessRuleGroupReferenceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -496,7 +496,7 @@ export function tfDataFirewallPolicyStatelessRuleGroupReferencePropertyToHclTerr
 }
 
 
-export function tfDataFirewallPolicyFirewallPolicyPropertyToTerraform(struct?: TfDataFirewallPolicy.FirewallPolicyProperty): any {
+export function dataTfFirewallPolicyFirewallPolicyPropertyToTerraform(struct?: DataTfFirewallPolicy.FirewallPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -506,7 +506,7 @@ export function tfDataFirewallPolicyFirewallPolicyPropertyToTerraform(struct?: T
 }
 
 
-export function tfDataFirewallPolicyFirewallPolicyPropertyToHclTerraform(struct?: TfDataFirewallPolicy.FirewallPolicyProperty): any {
+export function dataTfFirewallPolicyFirewallPolicyPropertyToHclTerraform(struct?: DataTfFirewallPolicy.FirewallPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -517,7 +517,7 @@ export function tfDataFirewallPolicyFirewallPolicyPropertyToHclTerraform(struct?
 }
 
 
-export namespace TfDataFirewallPolicy {
+export namespace DataTfFirewallPolicy {
 export interface IpSetProperty {
 }
 export class IpSetPropertyOutputReference extends cdktn.ComplexObject {

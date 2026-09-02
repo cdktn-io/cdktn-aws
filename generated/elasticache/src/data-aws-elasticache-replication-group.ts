@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataReplicationGroupConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfReplicationGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_replication_group#id TfDataReplicationGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_replication_group#id DataTfReplicationGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,11 +16,11 @@ export interface TfDataReplicationGroupConfig extends cdktn.TerraformMetaArgumen
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_replication_group#region TfDataReplicationGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_replication_group#region DataTfReplicationGroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_replication_group#replication_group_id TfDataReplicationGroup#replication_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_replication_group#replication_group_id DataTfReplicationGroup#replication_group_id}
   */
   readonly replicationGroupId: string;
 }
@@ -28,7 +28,7 @@ export interface TfDataReplicationGroupConfig extends cdktn.TerraformMetaArgumen
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_replication_group aws_elasticache_replication_group}
 */
-export class TfDataReplicationGroup extends cdktn.TerraformDataSource {
+export class DataTfReplicationGroup extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class TfDataReplicationGroup extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataReplicationGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfReplicationGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataReplicationGroup to import
-  * @param importFromId The id of the existing TfDataReplicationGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_replication_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataReplicationGroup to import is found
+  * @param importToId The construct id used in the generated config for the DataTfReplicationGroup to import
+  * @param importFromId The id of the existing DataTfReplicationGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_replication_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfReplicationGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_elasticache_replication_group", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class TfDataReplicationGroup extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataReplicationGroupConfig
+  * @param options DataTfReplicationGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataReplicationGroupConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfReplicationGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_elasticache_replication_group',
       terraformGeneratorMetadata: {
@@ -132,7 +132,7 @@ export class TfDataReplicationGroup extends cdktn.TerraformDataSource {
   }
 
   // log_delivery_configuration - computed: true, optional: false, required: false
-  private _logDeliveryConfiguration = new TfDataReplicationGroup.LogDeliveryConfigurationPropertyList(this, "log_delivery_configuration", true);
+  private _logDeliveryConfiguration = new DataTfReplicationGroup.LogDeliveryConfigurationPropertyList(this, "log_delivery_configuration", true);
   public get logDeliveryConfiguration() {
     return this._logDeliveryConfiguration;
   }
@@ -148,7 +148,7 @@ export class TfDataReplicationGroup extends cdktn.TerraformDataSource {
   }
 
   // node_group_configuration - computed: true, optional: false, required: false
-  private _nodeGroupConfiguration = new TfDataReplicationGroup.NodeGroupConfigurationPropertyList(this, "node_group_configuration", true);
+  private _nodeGroupConfiguration = new DataTfReplicationGroup.NodeGroupConfigurationPropertyList(this, "node_group_configuration", true);
   public get nodeGroupConfiguration() {
     return this._nodeGroupConfiguration;
   }
@@ -266,7 +266,7 @@ export class TfDataReplicationGroup extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataReplicationGroupLogDeliveryConfigurationPropertyToTerraform(struct?: TfDataReplicationGroup.LogDeliveryConfigurationProperty): any {
+export function dataTfReplicationGroupLogDeliveryConfigurationPropertyToTerraform(struct?: DataTfReplicationGroup.LogDeliveryConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -276,7 +276,7 @@ export function tfDataReplicationGroupLogDeliveryConfigurationPropertyToTerrafor
 }
 
 
-export function tfDataReplicationGroupLogDeliveryConfigurationPropertyToHclTerraform(struct?: TfDataReplicationGroup.LogDeliveryConfigurationProperty): any {
+export function dataTfReplicationGroupLogDeliveryConfigurationPropertyToHclTerraform(struct?: DataTfReplicationGroup.LogDeliveryConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -287,7 +287,7 @@ export function tfDataReplicationGroupLogDeliveryConfigurationPropertyToHclTerra
 }
 
 
-export function tfDataReplicationGroupNodeGroupConfigurationPropertyToTerraform(struct?: TfDataReplicationGroup.NodeGroupConfigurationProperty): any {
+export function dataTfReplicationGroupNodeGroupConfigurationPropertyToTerraform(struct?: DataTfReplicationGroup.NodeGroupConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -297,7 +297,7 @@ export function tfDataReplicationGroupNodeGroupConfigurationPropertyToTerraform(
 }
 
 
-export function tfDataReplicationGroupNodeGroupConfigurationPropertyToHclTerraform(struct?: TfDataReplicationGroup.NodeGroupConfigurationProperty): any {
+export function dataTfReplicationGroupNodeGroupConfigurationPropertyToHclTerraform(struct?: DataTfReplicationGroup.NodeGroupConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -308,7 +308,7 @@ export function tfDataReplicationGroupNodeGroupConfigurationPropertyToHclTerrafo
 }
 
 
-export namespace TfDataReplicationGroup {
+export namespace DataTfReplicationGroup {
 export interface LogDeliveryConfigurationProperty {
 }
 export class LogDeliveryConfigurationPropertyOutputReference extends cdktn.ComplexObject {

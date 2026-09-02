@@ -10274,4135 +10274,4135 @@
   "data_aws_account_primary_contact": {
     "surface": "data_source",
     "group": "account_management",
-    "className": "TfDataPrimaryContact",
+    "className": "DataTfPrimaryContact",
     "previous": "DataAwsAccountPrimaryContact"
   },
   "data_aws_account_regions": {
     "surface": "data_source",
     "group": "account_management",
-    "className": "TfDataRegions",
+    "className": "DataTfRegions",
     "previous": "DataAwsAccountRegions"
   },
   "data_aws_acm_certificate": {
     "surface": "data_source",
     "group": "acm",
-    "className": "TfDataCertificate",
+    "className": "DataTfCertificate",
     "previous": "DataAwsAcmCertificate"
   },
   "data_aws_acmpca_certificate": {
     "surface": "data_source",
     "group": "acm_pca",
-    "className": "TfDataCertificate",
+    "className": "DataTfCertificate",
     "previous": "DataAwsAcmpcaCertificate"
   },
   "data_aws_acmpca_certificate_authority": {
     "surface": "data_source",
     "group": "acm_pca",
-    "className": "TfDataCertificateAuthority",
+    "className": "DataTfCertificateAuthority",
     "previous": "DataAwsAcmpcaCertificateAuthority"
   },
   "data_aws_alb": {
     "surface": "data_source",
     "group": "elb",
-    "className": "TfDataAlb",
+    "className": "DataTfAlb",
     "previous": "DataAwsAlb"
   },
   "data_aws_alb_listener": {
     "surface": "data_source",
     "group": "elb",
-    "className": "TfDataAlbListener",
+    "className": "DataTfAlbListener",
     "previous": "DataAwsAlbListener"
   },
   "data_aws_alb_target_group": {
     "surface": "data_source",
     "group": "elb",
-    "className": "TfDataAlbTargetGroup",
+    "className": "DataTfAlbTargetGroup",
     "previous": "DataAwsAlbTargetGroup"
   },
   "data_aws_ami": {
     "surface": "data_source",
     "group": "ec2",
-    "className": "TfDataAmi",
+    "className": "DataTfAmi",
     "previous": "DataAwsAmi"
   },
   "data_aws_ami_ids": {
     "surface": "data_source",
     "group": "ec2",
-    "className": "TfDataAmiIds",
+    "className": "DataTfAmiIds",
     "previous": "DataAwsAmiIds"
   },
   "data_aws_api_gateway_api_key": {
     "surface": "data_source",
     "group": "api_gateway",
-    "className": "TfDataApiKey",
+    "className": "DataTfApiKey",
     "previous": "DataAwsApiGatewayApiKey"
   },
   "data_aws_api_gateway_api_keys": {
     "surface": "data_source",
     "group": "api_gateway",
-    "className": "TfDataApiKeys",
+    "className": "DataTfApiKeys",
     "previous": "DataAwsApiGatewayApiKeys"
   },
   "data_aws_api_gateway_authorizer": {
     "surface": "data_source",
     "group": "api_gateway",
-    "className": "TfDataAuthorizer",
+    "className": "DataTfAuthorizer",
     "previous": "DataAwsApiGatewayAuthorizer"
   },
   "data_aws_api_gateway_authorizers": {
     "surface": "data_source",
     "group": "api_gateway",
-    "className": "TfDataAuthorizers",
+    "className": "DataTfAuthorizers",
     "previous": "DataAwsApiGatewayAuthorizers"
   },
   "data_aws_api_gateway_domain_name": {
     "surface": "data_source",
     "group": "api_gateway",
-    "className": "TfDataDomainName",
+    "className": "DataTfDomainName",
     "previous": "DataAwsApiGatewayDomainName"
   },
   "data_aws_api_gateway_export": {
     "surface": "data_source",
     "group": "api_gateway",
-    "className": "TfDataExport",
+    "className": "DataTfExport",
     "previous": "DataAwsApiGatewayExport"
   },
   "data_aws_api_gateway_resource": {
     "surface": "data_source",
     "group": "api_gateway",
-    "className": "TfDataResource",
+    "className": "DataTfResource",
     "previous": "DataAwsApiGatewayResource"
   },
   "data_aws_api_gateway_rest_api": {
     "surface": "data_source",
     "group": "api_gateway",
-    "className": "TfDataRestApi",
+    "className": "DataTfRestApi",
     "previous": "DataAwsApiGatewayRestApi"
   },
   "data_aws_api_gateway_sdk": {
     "surface": "data_source",
     "group": "api_gateway",
-    "className": "TfDataSdk",
+    "className": "DataTfSdk",
     "previous": "DataAwsApiGatewaySdk"
   },
   "data_aws_api_gateway_vpc_link": {
     "surface": "data_source",
     "group": "api_gateway",
-    "className": "TfDataVpcLink",
+    "className": "DataTfVpcLink",
     "previous": "DataAwsApiGatewayVpcLink"
   },
   "data_aws_apigatewayv2_api": {
     "surface": "data_source",
     "group": "api_gateway_v2",
-    "className": "TfDataApi",
+    "className": "DataTfApi",
     "previous": "DataAwsApigatewayv2Api"
   },
   "data_aws_apigatewayv2_apis": {
     "surface": "data_source",
     "group": "api_gateway_v2",
-    "className": "TfDataApis",
+    "className": "DataTfApis",
     "previous": "DataAwsApigatewayv2Apis"
   },
   "data_aws_apigatewayv2_export": {
     "surface": "data_source",
     "group": "api_gateway_v2",
-    "className": "TfDataExport",
+    "className": "DataTfExport",
     "previous": "DataAwsApigatewayv2Export"
   },
   "data_aws_apigatewayv2_vpc_link": {
     "surface": "data_source",
     "group": "api_gateway_v2",
-    "className": "TfDataVpcLink",
+    "className": "DataTfVpcLink",
     "previous": "DataAwsApigatewayv2VpcLink"
   },
   "data_aws_appconfig_application": {
     "surface": "data_source",
     "group": "appconfig",
-    "className": "TfDataApplication",
+    "className": "DataTfApplication",
     "previous": "DataAwsAppconfigApplication"
   },
   "data_aws_appconfig_configuration_profile": {
     "surface": "data_source",
     "group": "appconfig",
-    "className": "TfDataConfigurationProfile",
+    "className": "DataTfConfigurationProfile",
     "previous": "DataAwsAppconfigConfigurationProfile"
   },
   "data_aws_appconfig_configuration_profiles": {
     "surface": "data_source",
     "group": "appconfig",
-    "className": "TfDataConfigurationProfiles",
+    "className": "DataTfConfigurationProfiles",
     "previous": "DataAwsAppconfigConfigurationProfiles"
   },
   "data_aws_appconfig_environment": {
     "surface": "data_source",
     "group": "appconfig",
-    "className": "TfDataEnvironment",
+    "className": "DataTfEnvironment",
     "previous": "DataAwsAppconfigEnvironment"
   },
   "data_aws_appconfig_environments": {
     "surface": "data_source",
     "group": "appconfig",
-    "className": "TfDataEnvironments",
+    "className": "DataTfEnvironments",
     "previous": "DataAwsAppconfigEnvironments"
   },
   "data_aws_appintegrations_event_integration": {
     "surface": "data_source",
     "group": "appintegrations",
-    "className": "TfDataEventIntegration",
+    "className": "DataTfEventIntegration",
     "previous": "DataAwsAppintegrationsEventIntegration"
   },
   "data_aws_appmesh_gateway_route": {
     "surface": "data_source",
     "group": "app_mesh",
-    "className": "TfDataGatewayRoute",
+    "className": "DataTfGatewayRoute",
     "previous": "DataAwsAppmeshGatewayRoute"
   },
   "data_aws_appmesh_mesh": {
     "surface": "data_source",
     "group": "app_mesh",
-    "className": "TfDataMesh",
+    "className": "DataTfMesh",
     "previous": "DataAwsAppmeshMesh"
   },
   "data_aws_appmesh_route": {
     "surface": "data_source",
     "group": "app_mesh",
-    "className": "TfDataRoute",
+    "className": "DataTfRoute",
     "previous": "DataAwsAppmeshRoute"
   },
   "data_aws_appmesh_virtual_gateway": {
     "surface": "data_source",
     "group": "app_mesh",
-    "className": "TfDataVirtualGateway",
+    "className": "DataTfVirtualGateway",
     "previous": "DataAwsAppmeshVirtualGateway"
   },
   "data_aws_appmesh_virtual_node": {
     "surface": "data_source",
     "group": "app_mesh",
-    "className": "TfDataVirtualNode",
+    "className": "DataTfVirtualNode",
     "previous": "DataAwsAppmeshVirtualNode"
   },
   "data_aws_appmesh_virtual_router": {
     "surface": "data_source",
     "group": "app_mesh",
-    "className": "TfDataVirtualRouter",
+    "className": "DataTfVirtualRouter",
     "previous": "DataAwsAppmeshVirtualRouter"
   },
   "data_aws_appmesh_virtual_service": {
     "surface": "data_source",
     "group": "app_mesh",
-    "className": "TfDataVirtualService",
+    "className": "DataTfVirtualService",
     "previous": "DataAwsAppmeshVirtualService"
   },
   "data_aws_apprunner_hosted_zone_id": {
     "surface": "data_source",
     "group": "app_runner",
-    "className": "TfDataHostedZoneId",
+    "className": "DataTfHostedZoneId",
     "previous": "DataAwsApprunnerHostedZoneId"
   },
   "data_aws_appstream_image": {
     "surface": "data_source",
     "group": "appstream_2_0",
-    "className": "TfDataImage",
+    "className": "DataTfImage",
     "previous": "DataAwsAppstreamImage"
   },
   "data_aws_arcregionswitch_plan": {
     "surface": "data_source",
     "group": "arc_region_switch",
-    "className": "TfDataPlan",
+    "className": "DataTfPlan",
     "previous": "DataAwsArcregionswitchPlan"
   },
   "data_aws_arcregionswitch_route53_health_checks": {
     "surface": "data_source",
     "group": "arc_region_switch",
-    "className": "TfDataRoute53HealthChecks",
+    "className": "DataTfRoute53HealthChecks",
     "previous": "DataAwsArcregionswitchRoute53HealthChecks"
   },
   "data_aws_arn": {
     "surface": "data_source",
     "group": "meta_data_sources",
-    "className": "TfDataArn",
+    "className": "DataTfArn",
     "previous": "DataAwsArn"
   },
   "data_aws_athena_named_query": {
     "surface": "data_source",
     "group": "athena",
-    "className": "TfDataNamedQuery",
+    "className": "DataTfNamedQuery",
     "previous": "DataAwsAthenaNamedQuery"
   },
   "data_aws_auditmanager_control": {
     "surface": "data_source",
     "group": "audit_manager",
-    "className": "TfDataControl",
+    "className": "DataTfControl",
     "previous": "DataAwsAuditmanagerControl"
   },
   "data_aws_auditmanager_framework": {
     "surface": "data_source",
     "group": "audit_manager",
-    "className": "TfDataFramework",
+    "className": "DataTfFramework",
     "previous": "DataAwsAuditmanagerFramework"
   },
   "data_aws_autoscaling_group": {
     "surface": "data_source",
     "group": "auto_scaling",
-    "className": "TfDataGroup",
+    "className": "DataTfGroup",
     "previous": "DataAwsAutoscalingGroup"
   },
   "data_aws_autoscaling_groups": {
     "surface": "data_source",
     "group": "auto_scaling",
-    "className": "TfDataGroups",
+    "className": "DataTfGroups",
     "previous": "DataAwsAutoscalingGroups"
   },
   "data_aws_availability_zone": {
     "surface": "data_source",
     "group": "ec2",
-    "className": "TfDataAvailabilityZone",
+    "className": "DataTfAvailabilityZone",
     "previous": "DataAwsAvailabilityZone"
   },
   "data_aws_availability_zones": {
     "surface": "data_source",
     "group": "ec2",
-    "className": "TfDataAvailabilityZones",
+    "className": "DataTfAvailabilityZones",
     "previous": "DataAwsAvailabilityZones"
   },
   "data_aws_backup_framework": {
     "surface": "data_source",
     "group": "backup",
-    "className": "TfDataFramework",
+    "className": "DataTfFramework",
     "previous": "DataAwsBackupFramework"
   },
   "data_aws_backup_plan": {
     "surface": "data_source",
     "group": "backup",
-    "className": "TfDataPlan",
+    "className": "DataTfPlan",
     "previous": "DataAwsBackupPlan"
   },
   "data_aws_backup_report_plan": {
     "surface": "data_source",
     "group": "backup",
-    "className": "TfDataReportPlan",
+    "className": "DataTfReportPlan",
     "previous": "DataAwsBackupReportPlan"
   },
   "data_aws_backup_selection": {
     "surface": "data_source",
     "group": "backup",
-    "className": "TfDataSelection",
+    "className": "DataTfSelection",
     "previous": "DataAwsBackupSelection"
   },
   "data_aws_backup_vault": {
     "surface": "data_source",
     "group": "backup",
-    "className": "TfDataVault",
+    "className": "DataTfVault",
     "previous": "DataAwsBackupVault"
   },
   "data_aws_batch_compute_environment": {
     "surface": "data_source",
     "group": "batch",
-    "className": "TfDataComputeEnvironment",
+    "className": "DataTfComputeEnvironment",
     "previous": "DataAwsBatchComputeEnvironment"
   },
   "data_aws_batch_job_definition": {
     "surface": "data_source",
     "group": "batch",
-    "className": "TfDataJobDefinition",
+    "className": "DataTfJobDefinition",
     "previous": "DataAwsBatchJobDefinition"
   },
   "data_aws_batch_job_queue": {
     "surface": "data_source",
     "group": "batch",
-    "className": "TfDataJobQueue",
+    "className": "DataTfJobQueue",
     "previous": "DataAwsBatchJobQueue"
   },
   "data_aws_batch_scheduling_policy": {
     "surface": "data_source",
     "group": "batch",
-    "className": "TfDataSchedulingPolicy",
+    "className": "DataTfSchedulingPolicy",
     "previous": "DataAwsBatchSchedulingPolicy"
   },
   "data_aws_bedrock_custom_model": {
     "surface": "data_source",
     "group": "bedrock",
-    "className": "TfDataCustomModel",
+    "className": "DataTfCustomModel",
     "previous": "DataAwsBedrockCustomModel"
   },
   "data_aws_bedrock_custom_models": {
     "surface": "data_source",
     "group": "bedrock",
-    "className": "TfDataCustomModels",
+    "className": "DataTfCustomModels",
     "previous": "DataAwsBedrockCustomModels"
   },
   "data_aws_bedrock_foundation_model": {
     "surface": "data_source",
     "group": "bedrock",
-    "className": "TfDataFoundationModel",
+    "className": "DataTfFoundationModel",
     "previous": "DataAwsBedrockFoundationModel"
   },
   "data_aws_bedrock_foundation_model_agreement_offers": {
     "surface": "data_source",
     "group": "bedrock",
-    "className": "TfDataFoundationModelAgreementOffers",
+    "className": "DataTfFoundationModelAgreementOffers",
     "previous": "DataAwsBedrockFoundationModelAgreementOffers"
   },
   "data_aws_bedrock_foundation_models": {
     "surface": "data_source",
     "group": "bedrock",
-    "className": "TfDataFoundationModels",
+    "className": "DataTfFoundationModels",
     "previous": "DataAwsBedrockFoundationModels"
   },
   "data_aws_bedrock_inference_profile": {
     "surface": "data_source",
     "group": "bedrock",
-    "className": "TfDataInferenceProfile",
+    "className": "DataTfInferenceProfile",
     "previous": "DataAwsBedrockInferenceProfile"
   },
   "data_aws_bedrock_inference_profiles": {
     "surface": "data_source",
     "group": "bedrock",
-    "className": "TfDataInferenceProfiles",
+    "className": "DataTfInferenceProfiles",
     "previous": "DataAwsBedrockInferenceProfiles"
   },
   "data_aws_bedrock_use_case_for_model_access": {
     "surface": "data_source",
     "group": "bedrock",
-    "className": "TfDataUseCaseForModelAccess",
+    "className": "DataTfUseCaseForModelAccess",
     "previous": "DataAwsBedrockUseCaseForModelAccess"
   },
   "data_aws_bedrockagent_agent_versions": {
     "surface": "data_source",
     "group": "bedrock_agents",
-    "className": "TfDataAgentVersions",
+    "className": "DataTfAgentVersions",
     "previous": "DataAwsBedrockagentAgentVersions"
   },
   "data_aws_billing_service_account": {
     "surface": "data_source",
     "group": "billing",
-    "className": "TfDataServiceAccount",
+    "className": "DataTfServiceAccount",
     "previous": "DataAwsBillingServiceAccount"
   },
   "data_aws_billing_views": {
     "surface": "data_source",
     "group": "billing",
-    "className": "TfDataViews",
+    "className": "DataTfViews",
     "previous": "DataAwsBillingViews"
   },
   "data_aws_budgets_budget": {
     "surface": "data_source",
     "group": "web_services_budgets",
-    "className": "TfDataBudget",
+    "className": "DataTfBudget",
     "previous": "DataAwsBudgetsBudget"
   },
   "data_aws_caller_identity": {
     "surface": "data_source",
     "group": "sts",
-    "className": "TfDataCallerIdentity",
+    "className": "DataTfCallerIdentity",
     "previous": "DataAwsCallerIdentity"
   },
   "data_aws_canonical_user_id": {
     "surface": "data_source",
     "group": "s3",
-    "className": "TfDataCanonicalUserId",
+    "className": "DataTfCanonicalUserId",
     "previous": "DataAwsCanonicalUserId"
   },
   "data_aws_ce_cost_category": {
     "surface": "data_source",
     "group": "ce",
-    "className": "TfDataCostCategory",
+    "className": "DataTfCostCategory",
     "previous": "DataAwsCeCostCategory"
   },
   "data_aws_ce_tags": {
     "surface": "data_source",
     "group": "ce",
-    "className": "TfDataTags",
+    "className": "DataTfTags",
     "previous": "DataAwsCeTags"
   },
   "data_aws_chatbot_slack_workspace": {
     "surface": "data_source",
     "group": "chatbot",
-    "className": "TfDataSlackWorkspace",
+    "className": "DataTfSlackWorkspace",
     "previous": "DataAwsChatbotSlackWorkspace"
   },
   "data_aws_cloudcontrolapi_resource": {
     "surface": "data_source",
     "group": "cloud_control_api",
-    "className": "TfDataResource",
+    "className": "DataTfResource",
     "previous": "DataAwsCloudcontrolapiResource"
   },
   "data_aws_cloudformation_export": {
     "surface": "data_source",
     "group": "cloudformation",
-    "className": "TfDataExport",
+    "className": "DataTfExport",
     "previous": "DataAwsCloudformationExport"
   },
   "data_aws_cloudformation_stack": {
     "surface": "data_source",
     "group": "cloudformation",
-    "className": "TfDataStack",
+    "className": "DataTfStack",
     "previous": "DataAwsCloudformationStack"
   },
   "data_aws_cloudformation_type": {
     "surface": "data_source",
     "group": "cloudformation",
-    "className": "TfDataType",
+    "className": "DataTfType",
     "previous": "DataAwsCloudformationType"
   },
   "data_aws_cloudfront_cache_policy": {
     "surface": "data_source",
     "group": "cloudfront",
-    "className": "TfDataCachePolicy",
+    "className": "DataTfCachePolicy",
     "previous": "DataAwsCloudfrontCachePolicy"
   },
   "data_aws_cloudfront_connection_group": {
     "surface": "data_source",
     "group": "cloudfront",
-    "className": "TfDataConnectionGroup",
+    "className": "DataTfConnectionGroup",
     "previous": "DataAwsCloudfrontConnectionGroup"
   },
   "data_aws_cloudfront_distribution": {
     "surface": "data_source",
     "group": "cloudfront",
-    "className": "TfDataDistribution",
+    "className": "DataTfDistribution",
     "previous": "DataAwsCloudfrontDistribution"
   },
   "data_aws_cloudfront_distribution_tenant": {
     "surface": "data_source",
     "group": "cloudfront",
-    "className": "TfDataDistributionTenant",
+    "className": "DataTfDistributionTenant",
     "previous": "DataAwsCloudfrontDistributionTenant"
   },
   "data_aws_cloudfront_function": {
     "surface": "data_source",
     "group": "cloudfront",
-    "className": "TfDataFunction",
+    "className": "DataTfFunction",
     "previous": "DataAwsCloudfrontFunction"
   },
   "data_aws_cloudfront_log_delivery_canonical_user_id": {
     "surface": "data_source",
     "group": "cloudfront",
-    "className": "TfDataLogDeliveryCanonicalUserId",
+    "className": "DataTfLogDeliveryCanonicalUserId",
     "previous": "DataAwsCloudfrontLogDeliveryCanonicalUserId"
   },
   "data_aws_cloudfront_origin_access_control": {
     "surface": "data_source",
     "group": "cloudfront",
-    "className": "TfDataOriginAccessControl",
+    "className": "DataTfOriginAccessControl",
     "previous": "DataAwsCloudfrontOriginAccessControl"
   },
   "data_aws_cloudfront_origin_access_identities": {
     "surface": "data_source",
     "group": "cloudfront",
-    "className": "TfDataOriginAccessIdentities",
+    "className": "DataTfOriginAccessIdentities",
     "previous": "DataAwsCloudfrontOriginAccessIdentities"
   },
   "data_aws_cloudfront_origin_access_identity": {
     "surface": "data_source",
     "group": "cloudfront",
-    "className": "TfDataOriginAccessIdentity",
+    "className": "DataTfOriginAccessIdentity",
     "previous": "DataAwsCloudfrontOriginAccessIdentity"
   },
   "data_aws_cloudfront_origin_request_policy": {
     "surface": "data_source",
     "group": "cloudfront",
-    "className": "TfDataOriginRequestPolicy",
+    "className": "DataTfOriginRequestPolicy",
     "previous": "DataAwsCloudfrontOriginRequestPolicy"
   },
   "data_aws_cloudfront_realtime_log_config": {
     "surface": "data_source",
     "group": "cloudfront",
-    "className": "TfDataRealtimeLogConfig",
+    "className": "DataTfRealtimeLogConfig",
     "previous": "DataAwsCloudfrontRealtimeLogConfig"
   },
   "data_aws_cloudfront_response_headers_policy": {
     "surface": "data_source",
     "group": "cloudfront",
-    "className": "TfDataResponseHeadersPolicy",
+    "className": "DataTfResponseHeadersPolicy",
     "previous": "DataAwsCloudfrontResponseHeadersPolicy"
   },
   "data_aws_cloudhsm_v2_cluster": {
     "surface": "data_source",
     "group": "cloudhsm",
-    "className": "TfDataCluster",
+    "className": "DataTfCluster",
     "previous": "DataAwsCloudhsmV2Cluster"
   },
   "data_aws_cloudtrail_service_account": {
     "surface": "data_source",
     "group": "cloudtrail",
-    "className": "TfDataServiceAccount",
+    "className": "DataTfServiceAccount",
     "previous": "DataAwsCloudtrailServiceAccount"
   },
   "data_aws_cloudwatch_contributor_managed_insight_rules": {
     "surface": "data_source",
     "group": "cloudwatch",
-    "className": "TfDataContributorManagedInsightRules",
+    "className": "DataTfContributorManagedInsightRules",
     "previous": "DataAwsCloudwatchContributorManagedInsightRules"
   },
   "data_aws_cloudwatch_event_bus": {
     "surface": "data_source",
     "group": "eventbridge",
-    "className": "TfDataBus",
+    "className": "DataTfBus",
     "previous": "DataAwsCloudwatchEventBus"
   },
   "data_aws_cloudwatch_event_buses": {
     "surface": "data_source",
     "group": "eventbridge",
-    "className": "TfDataBuses",
+    "className": "DataTfBuses",
     "previous": "DataAwsCloudwatchEventBuses"
   },
   "data_aws_cloudwatch_event_connection": {
     "surface": "data_source",
     "group": "eventbridge",
-    "className": "TfDataConnection",
+    "className": "DataTfConnection",
     "previous": "DataAwsCloudwatchEventConnection"
   },
   "data_aws_cloudwatch_event_source": {
     "surface": "data_source",
     "group": "eventbridge",
-    "className": "TfDataSource",
+    "className": "DataTfSource",
     "previous": "DataAwsCloudwatchEventSource"
   },
   "data_aws_cloudwatch_log_data_protection_policy_document": {
     "surface": "data_source",
     "group": "cloudwatch_logs",
-    "className": "TfDataDataProtectionPolicyDocument",
+    "className": "DataTfDataProtectionPolicyDocument",
     "previous": "DataAwsCloudwatchLogDataProtectionPolicyDocument"
   },
   "data_aws_cloudwatch_log_group": {
     "surface": "data_source",
     "group": "cloudwatch_logs",
-    "className": "TfDataGroup",
+    "className": "DataTfGroup",
     "previous": "DataAwsCloudwatchLogGroup"
   },
   "data_aws_cloudwatch_log_groups": {
     "surface": "data_source",
     "group": "cloudwatch_logs",
-    "className": "TfDataGroups",
+    "className": "DataTfGroups",
     "previous": "DataAwsCloudwatchLogGroups"
   },
   "data_aws_codeartifact_authorization_token": {
     "surface": "data_source",
     "group": "codeartifact",
-    "className": "TfDataAuthorizationToken",
+    "className": "DataTfAuthorizationToken",
     "previous": "DataAwsCodeartifactAuthorizationToken"
   },
   "data_aws_codeartifact_repository_endpoint": {
     "surface": "data_source",
     "group": "codeartifact",
-    "className": "TfDataRepositoryEndpoint",
+    "className": "DataTfRepositoryEndpoint",
     "previous": "DataAwsCodeartifactRepositoryEndpoint"
   },
   "data_aws_codebuild_fleet": {
     "surface": "data_source",
     "group": "codebuild",
-    "className": "TfDataFleet",
+    "className": "DataTfFleet",
     "previous": "DataAwsCodebuildFleet"
   },
   "data_aws_codecatalyst_dev_environment": {
     "surface": "data_source",
     "group": "codecatalyst",
-    "className": "TfDataDevEnvironment",
+    "className": "DataTfDevEnvironment",
     "previous": "DataAwsCodecatalystDevEnvironment"
   },
   "data_aws_codecommit_approval_rule_template": {
     "surface": "data_source",
     "group": "codecommit",
-    "className": "TfDataApprovalRuleTemplate",
+    "className": "DataTfApprovalRuleTemplate",
     "previous": "DataAwsCodecommitApprovalRuleTemplate"
   },
   "data_aws_codecommit_repository": {
     "surface": "data_source",
     "group": "codecommit",
-    "className": "TfDataRepository",
+    "className": "DataTfRepository",
     "previous": "DataAwsCodecommitRepository"
   },
   "data_aws_codeguruprofiler_profiling_group": {
     "surface": "data_source",
     "group": "codeguru_profiler",
-    "className": "TfDataProfilingGroup",
+    "className": "DataTfProfilingGroup",
     "previous": "DataAwsCodeguruprofilerProfilingGroup"
   },
   "data_aws_codestarconnections_connection": {
     "surface": "data_source",
     "group": "codestar_connections",
-    "className": "TfDataConnection",
+    "className": "DataTfConnection",
     "previous": "DataAwsCodestarconnectionsConnection"
   },
   "data_aws_cognito_identity_pool": {
     "surface": "data_source",
     "group": "cognito_identity",
-    "className": "TfDataPool",
+    "className": "DataTfPool",
     "previous": "DataAwsCognitoIdentityPool"
   },
   "data_aws_cognito_user_group": {
     "surface": "data_source",
     "group": "cognito_idp",
-    "className": "TfDataUserGroup",
+    "className": "DataTfUserGroup",
     "previous": "DataAwsCognitoUserGroup"
   },
   "data_aws_cognito_user_groups": {
     "surface": "data_source",
     "group": "cognito_idp",
-    "className": "TfDataUserGroups",
+    "className": "DataTfUserGroups",
     "previous": "DataAwsCognitoUserGroups"
   },
   "data_aws_cognito_user_pool": {
     "surface": "data_source",
     "group": "cognito_idp",
-    "className": "TfDataUserPool",
+    "className": "DataTfUserPool",
     "previous": "DataAwsCognitoUserPool"
   },
   "data_aws_cognito_user_pool_client": {
     "surface": "data_source",
     "group": "cognito_idp",
-    "className": "TfDataUserPoolClient",
+    "className": "DataTfUserPoolClient",
     "previous": "DataAwsCognitoUserPoolClient"
   },
   "data_aws_cognito_user_pool_clients": {
     "surface": "data_source",
     "group": "cognito_idp",
-    "className": "TfDataUserPoolClients",
+    "className": "DataTfUserPoolClients",
     "previous": "DataAwsCognitoUserPoolClients"
   },
   "data_aws_cognito_user_pool_signing_certificate": {
     "surface": "data_source",
     "group": "cognito_idp",
-    "className": "TfDataUserPoolSigningCertificate",
+    "className": "DataTfUserPoolSigningCertificate",
     "previous": "DataAwsCognitoUserPoolSigningCertificate"
   },
   "data_aws_cognito_user_pools": {
     "surface": "data_source",
     "group": "cognito_idp",
-    "className": "TfDataUserPools",
+    "className": "DataTfUserPools",
     "previous": "DataAwsCognitoUserPools"
   },
   "data_aws_connect_bot_association": {
     "surface": "data_source",
     "group": "connect",
-    "className": "TfDataBotAssociation",
+    "className": "DataTfBotAssociation",
     "previous": "DataAwsConnectBotAssociation"
   },
   "data_aws_connect_contact_flow": {
     "surface": "data_source",
     "group": "connect",
-    "className": "TfDataContactFlow",
+    "className": "DataTfContactFlow",
     "previous": "DataAwsConnectContactFlow"
   },
   "data_aws_connect_contact_flow_module": {
     "surface": "data_source",
     "group": "connect",
-    "className": "TfDataContactFlowModule",
+    "className": "DataTfContactFlowModule",
     "previous": "DataAwsConnectContactFlowModule"
   },
   "data_aws_connect_hours_of_operation": {
     "surface": "data_source",
     "group": "connect",
-    "className": "TfDataHoursOfOperation",
+    "className": "DataTfHoursOfOperation",
     "previous": "DataAwsConnectHoursOfOperation"
   },
   "data_aws_connect_instance": {
     "surface": "data_source",
     "group": "connect",
-    "className": "TfDataInstance",
+    "className": "DataTfInstance",
     "previous": "DataAwsConnectInstance"
   },
   "data_aws_connect_instance_storage_config": {
     "surface": "data_source",
     "group": "connect",
-    "className": "TfDataInstanceStorageConfig",
+    "className": "DataTfInstanceStorageConfig",
     "previous": "DataAwsConnectInstanceStorageConfig"
   },
   "data_aws_connect_lambda_function_association": {
     "surface": "data_source",
     "group": "connect",
-    "className": "TfDataLambdaFunctionAssociation",
+    "className": "DataTfLambdaFunctionAssociation",
     "previous": "DataAwsConnectLambdaFunctionAssociation"
   },
   "data_aws_connect_prompt": {
     "surface": "data_source",
     "group": "connect",
-    "className": "TfDataPrompt",
+    "className": "DataTfPrompt",
     "previous": "DataAwsConnectPrompt"
   },
   "data_aws_connect_queue": {
     "surface": "data_source",
     "group": "connect",
-    "className": "TfDataQueue",
+    "className": "DataTfQueue",
     "previous": "DataAwsConnectQueue"
   },
   "data_aws_connect_quick_connect": {
     "surface": "data_source",
     "group": "connect",
-    "className": "TfDataQuickConnect",
+    "className": "DataTfQuickConnect",
     "previous": "DataAwsConnectQuickConnect"
   },
   "data_aws_connect_routing_profile": {
     "surface": "data_source",
     "group": "connect",
-    "className": "TfDataRoutingProfile",
+    "className": "DataTfRoutingProfile",
     "previous": "DataAwsConnectRoutingProfile"
   },
   "data_aws_connect_security_profile": {
     "surface": "data_source",
     "group": "connect",
-    "className": "TfDataSecurityProfile",
+    "className": "DataTfSecurityProfile",
     "previous": "DataAwsConnectSecurityProfile"
   },
   "data_aws_connect_user": {
     "surface": "data_source",
     "group": "connect",
-    "className": "TfDataUser",
+    "className": "DataTfUser",
     "previous": "DataAwsConnectUser"
   },
   "data_aws_connect_user_hierarchy_group": {
     "surface": "data_source",
     "group": "connect",
-    "className": "TfDataUserHierarchyGroup",
+    "className": "DataTfUserHierarchyGroup",
     "previous": "DataAwsConnectUserHierarchyGroup"
   },
   "data_aws_connect_user_hierarchy_structure": {
     "surface": "data_source",
     "group": "connect",
-    "className": "TfDataUserHierarchyStructure",
+    "className": "DataTfUserHierarchyStructure",
     "previous": "DataAwsConnectUserHierarchyStructure"
   },
   "data_aws_connect_vocabulary": {
     "surface": "data_source",
     "group": "connect",
-    "className": "TfDataVocabulary",
+    "className": "DataTfVocabulary",
     "previous": "DataAwsConnectVocabulary"
   },
   "data_aws_controltower_controls": {
     "surface": "data_source",
     "group": "control_tower",
-    "className": "TfDataControls",
+    "className": "DataTfControls",
     "previous": "DataAwsControltowerControls"
   },
   "data_aws_cur_report_definition": {
     "surface": "data_source",
     "group": "cost_and_usage_report",
-    "className": "TfDataReportDefinition",
+    "className": "DataTfReportDefinition",
     "previous": "DataAwsCurReportDefinition"
   },
   "data_aws_customer_gateway": {
     "surface": "data_source",
     "group": "vpn_site_to_site",
-    "className": "TfDataCustomerGateway",
+    "className": "DataTfCustomerGateway",
     "previous": "DataAwsCustomerGateway"
   },
   "data_aws_datapipeline_pipeline": {
     "surface": "data_source",
     "group": "data_pipeline",
-    "className": "TfDataPipeline",
+    "className": "DataTfPipeline",
     "previous": "DataAwsDatapipelinePipeline"
   },
   "data_aws_datapipeline_pipeline_definition": {
     "surface": "data_source",
     "group": "data_pipeline",
-    "className": "TfDataPipelineDefinition",
+    "className": "DataTfPipelineDefinition",
     "previous": "DataAwsDatapipelinePipelineDefinition"
   },
   "data_aws_datazone_domain": {
     "surface": "data_source",
     "group": "datazone",
-    "className": "TfDataDomain",
+    "className": "DataTfDomain",
     "previous": "DataAwsDatazoneDomain"
   },
   "data_aws_datazone_environment_blueprint": {
     "surface": "data_source",
     "group": "datazone",
-    "className": "TfDataEnvironmentBlueprint",
+    "className": "DataTfEnvironmentBlueprint",
     "previous": "DataAwsDatazoneEnvironmentBlueprint"
   },
   "data_aws_db_cluster_snapshot": {
     "surface": "data_source",
     "group": "rds",
-    "className": "TfDataDbClusterSnapshot",
+    "className": "DataTfDbClusterSnapshot",
     "previous": "DataAwsDbClusterSnapshot"
   },
   "data_aws_db_event_categories": {
     "surface": "data_source",
     "group": "rds",
-    "className": "TfDataDbEventCategories",
+    "className": "DataTfDbEventCategories",
     "previous": "DataAwsDbEventCategories"
   },
   "data_aws_db_instance": {
     "surface": "data_source",
     "group": "rds",
-    "className": "TfDataDbInstance",
+    "className": "DataTfDbInstance",
     "previous": "DataAwsDbInstance"
   },
   "data_aws_db_instances": {
     "surface": "data_source",
     "group": "rds",
-    "className": "TfDataDbInstances",
+    "className": "DataTfDbInstances",
     "previous": "DataAwsDbInstances"
   },
   "data_aws_db_parameter_group": {
     "surface": "data_source",
     "group": "rds",
-    "className": "TfDataDbParameterGroup",
+    "className": "DataTfDbParameterGroup",
     "previous": "DataAwsDbParameterGroup"
   },
   "data_aws_db_proxy": {
     "surface": "data_source",
     "group": "rds",
-    "className": "TfDataDbProxy",
+    "className": "DataTfDbProxy",
     "previous": "DataAwsDbProxy"
   },
   "data_aws_db_snapshot": {
     "surface": "data_source",
     "group": "rds",
-    "className": "TfDataDbSnapshot",
+    "className": "DataTfDbSnapshot",
     "previous": "DataAwsDbSnapshot"
   },
   "data_aws_db_subnet_group": {
     "surface": "data_source",
     "group": "rds",
-    "className": "TfDataDbSubnetGroup",
+    "className": "DataTfDbSubnetGroup",
     "previous": "DataAwsDbSubnetGroup"
   },
   "data_aws_default_tags": {
     "surface": "data_source",
     "group": "meta_data_sources",
-    "className": "TfDataDefaultTags",
+    "className": "DataTfDefaultTags",
     "previous": "DataAwsDefaultTags"
   },
   "data_aws_devopsguru_notification_channel": {
     "surface": "data_source",
     "group": "devops_guru",
-    "className": "TfDataNotificationChannel",
+    "className": "DataTfNotificationChannel",
     "previous": "DataAwsDevopsguruNotificationChannel"
   },
   "data_aws_devopsguru_resource_collection": {
     "surface": "data_source",
     "group": "devops_guru",
-    "className": "TfDataResourceCollection",
+    "className": "DataTfResourceCollection",
     "previous": "DataAwsDevopsguruResourceCollection"
   },
   "data_aws_directory_service_directory": {
     "surface": "data_source",
     "group": "directory_service",
-    "className": "TfDataDirectory",
+    "className": "DataTfDirectory",
     "previous": "DataAwsDirectoryServiceDirectory"
   },
   "data_aws_dms_certificate": {
     "surface": "data_source",
     "group": "dms",
-    "className": "TfDataCertificate",
+    "className": "DataTfCertificate",
     "previous": "DataAwsDmsCertificate"
   },
   "data_aws_dms_endpoint": {
     "surface": "data_source",
     "group": "dms",
-    "className": "TfDataEndpoint",
+    "className": "DataTfEndpoint",
     "previous": "DataAwsDmsEndpoint"
   },
   "data_aws_dms_replication_instance": {
     "surface": "data_source",
     "group": "dms",
-    "className": "TfDataReplicationInstance",
+    "className": "DataTfReplicationInstance",
     "previous": "DataAwsDmsReplicationInstance"
   },
   "data_aws_dms_replication_subnet_group": {
     "surface": "data_source",
     "group": "dms",
-    "className": "TfDataReplicationSubnetGroup",
+    "className": "DataTfReplicationSubnetGroup",
     "previous": "DataAwsDmsReplicationSubnetGroup"
   },
   "data_aws_dms_replication_task": {
     "surface": "data_source",
     "group": "dms",
-    "className": "TfDataReplicationTask",
+    "className": "DataTfReplicationTask",
     "previous": "DataAwsDmsReplicationTask"
   },
   "data_aws_docdb_engine_version": {
     "surface": "data_source",
     "group": "documentdb",
-    "className": "TfDataEngineVersion",
+    "className": "DataTfEngineVersion",
     "previous": "DataAwsDocdbEngineVersion"
   },
   "data_aws_docdb_orderable_db_instance": {
     "surface": "data_source",
     "group": "documentdb",
-    "className": "TfDataOrderableDbInstance",
+    "className": "DataTfOrderableDbInstance",
     "previous": "DataAwsDocdbOrderableDbInstance"
   },
   "data_aws_dx_connection": {
     "surface": "data_source",
     "group": "direct_connect",
-    "className": "TfDataConnection",
+    "className": "DataTfConnection",
     "previous": "DataAwsDxConnection"
   },
   "data_aws_dx_gateway": {
     "surface": "data_source",
     "group": "direct_connect",
-    "className": "TfDataGateway",
+    "className": "DataTfGateway",
     "previous": "DataAwsDxGateway"
   },
   "data_aws_dx_location": {
     "surface": "data_source",
     "group": "direct_connect",
-    "className": "TfDataLocation",
+    "className": "DataTfLocation",
     "previous": "DataAwsDxLocation"
   },
   "data_aws_dx_locations": {
     "surface": "data_source",
     "group": "direct_connect",
-    "className": "TfDataLocations",
+    "className": "DataTfLocations",
     "previous": "DataAwsDxLocations"
   },
   "data_aws_dx_router_configuration": {
     "surface": "data_source",
     "group": "direct_connect",
-    "className": "TfDataRouterConfiguration",
+    "className": "DataTfRouterConfiguration",
     "previous": "DataAwsDxRouterConfiguration"
   },
   "data_aws_dynamodb_backups": {
     "surface": "data_source",
     "group": "dynamodb",
-    "className": "TfDataBackups",
+    "className": "DataTfBackups",
     "previous": "DataAwsDynamodbBackups"
   },
   "data_aws_dynamodb_table": {
     "surface": "data_source",
     "group": "dynamodb",
-    "className": "TfDataTable",
+    "className": "DataTfTable",
     "previous": "DataAwsDynamodbTable"
   },
   "data_aws_dynamodb_table_item": {
     "surface": "data_source",
     "group": "dynamodb",
-    "className": "TfDataTableItem",
+    "className": "DataTfTableItem",
     "previous": "DataAwsDynamodbTableItem"
   },
   "data_aws_dynamodb_tables": {
     "surface": "data_source",
     "group": "dynamodb",
-    "className": "TfDataTables",
+    "className": "DataTfTables",
     "previous": "DataAwsDynamodbTables"
   },
   "data_aws_ebs_default_kms_key": {
     "surface": "data_source",
     "group": "ebs",
-    "className": "TfDataDefaultKmsKey",
+    "className": "DataTfDefaultKmsKey",
     "previous": "DataAwsEbsDefaultKmsKey"
   },
   "data_aws_ebs_encryption_by_default": {
     "surface": "data_source",
     "group": "ebs",
-    "className": "TfDataEncryptionByDefault",
+    "className": "DataTfEncryptionByDefault",
     "previous": "DataAwsEbsEncryptionByDefault"
   },
   "data_aws_ebs_snapshot": {
     "surface": "data_source",
     "group": "ebs",
-    "className": "TfDataSnapshot",
+    "className": "DataTfSnapshot",
     "previous": "DataAwsEbsSnapshot"
   },
   "data_aws_ebs_snapshot_ids": {
     "surface": "data_source",
     "group": "ebs",
-    "className": "TfDataSnapshotIds",
+    "className": "DataTfSnapshotIds",
     "previous": "DataAwsEbsSnapshotIds"
   },
   "data_aws_ebs_volume": {
     "surface": "data_source",
     "group": "ebs",
-    "className": "TfDataVolume",
+    "className": "DataTfVolume",
     "previous": "DataAwsEbsVolume"
   },
   "data_aws_ebs_volumes": {
     "surface": "data_source",
     "group": "ebs",
-    "className": "TfDataVolumes",
+    "className": "DataTfVolumes",
     "previous": "DataAwsEbsVolumes"
   },
   "data_aws_ec2_capacity_block_offering": {
     "surface": "data_source",
     "group": "ec2",
-    "className": "TfDataCapacityBlockOffering",
+    "className": "DataTfCapacityBlockOffering",
     "previous": "DataAwsEc2CapacityBlockOffering"
   },
   "data_aws_ec2_capacity_block_reservation": {
     "surface": "data_source",
     "group": "ec2",
-    "className": "TfDataCapacityBlockReservation",
+    "className": "DataTfCapacityBlockReservation",
     "previous": "DataAwsEc2CapacityBlockReservation"
   },
   "data_aws_ec2_client_vpn_endpoint": {
     "surface": "data_source",
     "group": "vpn_client",
-    "className": "TfDataClientVpnEndpoint",
+    "className": "DataTfClientVpnEndpoint",
     "previous": "DataAwsEc2ClientVpnEndpoint"
   },
   "data_aws_ec2_coip_pool": {
     "surface": "data_source",
     "group": "outposts_ec2",
-    "className": "TfDataCoipPool",
+    "className": "DataTfCoipPool",
     "previous": "DataAwsEc2CoipPool"
   },
   "data_aws_ec2_coip_pools": {
     "surface": "data_source",
     "group": "outposts_ec2",
-    "className": "TfDataCoipPools",
+    "className": "DataTfCoipPools",
     "previous": "DataAwsEc2CoipPools"
   },
   "data_aws_ec2_host": {
     "surface": "data_source",
     "group": "ec2",
-    "className": "TfDataHost",
+    "className": "DataTfHost",
     "previous": "DataAwsEc2Host"
   },
   "data_aws_ec2_hosts": {
     "surface": "data_source",
     "group": "ec2",
-    "className": "TfDataHosts",
+    "className": "DataTfHosts",
     "previous": "DataAwsEc2Hosts"
   },
   "data_aws_ec2_instance_type": {
     "surface": "data_source",
     "group": "ec2",
-    "className": "TfDataInstanceType",
+    "className": "DataTfInstanceType",
     "previous": "DataAwsEc2InstanceType"
   },
   "data_aws_ec2_instance_type_offering": {
     "surface": "data_source",
     "group": "ec2",
-    "className": "TfDataInstanceTypeOffering",
+    "className": "DataTfInstanceTypeOffering",
     "previous": "DataAwsEc2InstanceTypeOffering"
   },
   "data_aws_ec2_instance_type_offerings": {
     "surface": "data_source",
     "group": "ec2",
-    "className": "TfDataInstanceTypeOfferings",
+    "className": "DataTfInstanceTypeOfferings",
     "previous": "DataAwsEc2InstanceTypeOfferings"
   },
   "data_aws_ec2_instance_types": {
     "surface": "data_source",
     "group": "ec2",
-    "className": "TfDataInstanceTypes",
+    "className": "DataTfInstanceTypes",
     "previous": "DataAwsEc2InstanceTypes"
   },
   "data_aws_ec2_local_gateway": {
     "surface": "data_source",
     "group": "outposts_ec2",
-    "className": "TfDataLocalGateway",
+    "className": "DataTfLocalGateway",
     "previous": "DataAwsEc2LocalGateway"
   },
   "data_aws_ec2_local_gateway_route_table": {
     "surface": "data_source",
     "group": "outposts_ec2",
-    "className": "TfDataLocalGatewayRouteTable",
+    "className": "DataTfLocalGatewayRouteTable",
     "previous": "DataAwsEc2LocalGatewayRouteTable"
   },
   "data_aws_ec2_local_gateway_route_tables": {
     "surface": "data_source",
     "group": "outposts_ec2",
-    "className": "TfDataLocalGatewayRouteTables",
+    "className": "DataTfLocalGatewayRouteTables",
     "previous": "DataAwsEc2LocalGatewayRouteTables"
   },
   "data_aws_ec2_local_gateway_virtual_interface": {
     "surface": "data_source",
     "group": "outposts_ec2",
-    "className": "TfDataLocalGatewayVirtualInterface",
+    "className": "DataTfLocalGatewayVirtualInterface",
     "previous": "DataAwsEc2LocalGatewayVirtualInterface"
   },
   "data_aws_ec2_local_gateway_virtual_interface_group": {
     "surface": "data_source",
     "group": "outposts_ec2",
-    "className": "TfDataLocalGatewayVirtualInterfaceGroup",
+    "className": "DataTfLocalGatewayVirtualInterfaceGroup",
     "previous": "DataAwsEc2LocalGatewayVirtualInterfaceGroup"
   },
   "data_aws_ec2_local_gateway_virtual_interface_groups": {
     "surface": "data_source",
     "group": "outposts_ec2",
-    "className": "TfDataLocalGatewayVirtualInterfaceGroups",
+    "className": "DataTfLocalGatewayVirtualInterfaceGroups",
     "previous": "DataAwsEc2LocalGatewayVirtualInterfaceGroups"
   },
   "data_aws_ec2_local_gateways": {
     "surface": "data_source",
     "group": "outposts_ec2",
-    "className": "TfDataLocalGateways",
+    "className": "DataTfLocalGateways",
     "previous": "DataAwsEc2LocalGateways"
   },
   "data_aws_ec2_managed_prefix_list": {
     "surface": "data_source",
     "group": "vpc",
-    "className": "TfDataEc2ManagedPrefixList",
+    "className": "DataTfEc2ManagedPrefixList",
     "previous": "DataAwsEc2ManagedPrefixList"
   },
   "data_aws_ec2_managed_prefix_lists": {
     "surface": "data_source",
     "group": "vpc",
-    "className": "TfDataEc2ManagedPrefixLists",
+    "className": "DataTfEc2ManagedPrefixLists",
     "previous": "DataAwsEc2ManagedPrefixLists"
   },
   "data_aws_ec2_network_insights_analysis": {
     "surface": "data_source",
     "group": "vpc",
-    "className": "TfDataEc2NetworkInsightsAnalysis",
+    "className": "DataTfEc2NetworkInsightsAnalysis",
     "previous": "DataAwsEc2NetworkInsightsAnalysis"
   },
   "data_aws_ec2_network_insights_path": {
     "surface": "data_source",
     "group": "vpc",
-    "className": "TfDataEc2NetworkInsightsPath",
+    "className": "DataTfEc2NetworkInsightsPath",
     "previous": "DataAwsEc2NetworkInsightsPath"
   },
   "data_aws_ec2_public_ipv4_pool": {
     "surface": "data_source",
     "group": "ec2",
-    "className": "TfDataPublicIpv4Pool",
+    "className": "DataTfPublicIpv4Pool",
     "previous": "DataAwsEc2PublicIpv4Pool"
   },
   "data_aws_ec2_public_ipv4_pools": {
     "surface": "data_source",
     "group": "ec2",
-    "className": "TfDataPublicIpv4Pools",
+    "className": "DataTfPublicIpv4Pools",
     "previous": "DataAwsEc2PublicIpv4Pools"
   },
   "data_aws_ec2_serial_console_access": {
     "surface": "data_source",
     "group": "ec2",
-    "className": "TfDataSerialConsoleAccess",
+    "className": "DataTfSerialConsoleAccess",
     "previous": "DataAwsEc2SerialConsoleAccess"
   },
   "data_aws_ec2_service_link_virtual_interface": {
     "surface": "data_source",
     "group": "outposts_ec2",
-    "className": "TfDataServiceLinkVirtualInterface",
+    "className": "DataTfServiceLinkVirtualInterface",
     "previous": "DataAwsEc2ServiceLinkVirtualInterface"
   },
   "data_aws_ec2_service_link_virtual_interfaces": {
     "surface": "data_source",
     "group": "outposts_ec2",
-    "className": "TfDataServiceLinkVirtualInterfaces",
+    "className": "DataTfServiceLinkVirtualInterfaces",
     "previous": "DataAwsEc2ServiceLinkVirtualInterfaces"
   },
   "data_aws_ec2_spot_price": {
     "surface": "data_source",
     "group": "ec2",
-    "className": "TfDataSpotPrice",
+    "className": "DataTfSpotPrice",
     "previous": "DataAwsEc2SpotPrice"
   },
   "data_aws_ec2_transit_gateway": {
     "surface": "data_source",
     "group": "transit_gateway",
-    "className": "TfDataTransitGateway",
+    "className": "DataTfTransitGateway",
     "previous": "DataAwsEc2TransitGateway"
   },
   "data_aws_ec2_transit_gateway_attachment": {
     "surface": "data_source",
     "group": "transit_gateway",
-    "className": "TfDataTransitGatewayAttachment",
+    "className": "DataTfTransitGatewayAttachment",
     "previous": "DataAwsEc2TransitGatewayAttachment"
   },
   "data_aws_ec2_transit_gateway_attachments": {
     "surface": "data_source",
     "group": "transit_gateway",
-    "className": "TfDataTransitGatewayAttachments",
+    "className": "DataTfTransitGatewayAttachments",
     "previous": "DataAwsEc2TransitGatewayAttachments"
   },
   "data_aws_ec2_transit_gateway_connect": {
     "surface": "data_source",
     "group": "transit_gateway",
-    "className": "TfDataTransitGatewayConnect",
+    "className": "DataTfTransitGatewayConnect",
     "previous": "DataAwsEc2TransitGatewayConnect"
   },
   "data_aws_ec2_transit_gateway_connect_peer": {
     "surface": "data_source",
     "group": "transit_gateway",
-    "className": "TfDataTransitGatewayConnectPeer",
+    "className": "DataTfTransitGatewayConnectPeer",
     "previous": "DataAwsEc2TransitGatewayConnectPeer"
   },
   "data_aws_ec2_transit_gateway_dx_gateway_attachment": {
     "surface": "data_source",
     "group": "transit_gateway",
-    "className": "TfDataTransitGatewayDxGatewayAttachment",
+    "className": "DataTfTransitGatewayDxGatewayAttachment",
     "previous": "DataAwsEc2TransitGatewayDxGatewayAttachment"
   },
   "data_aws_ec2_transit_gateway_multicast_domain": {
     "surface": "data_source",
     "group": "transit_gateway",
-    "className": "TfDataTransitGatewayMulticastDomain",
+    "className": "DataTfTransitGatewayMulticastDomain",
     "previous": "DataAwsEc2TransitGatewayMulticastDomain"
   },
   "data_aws_ec2_transit_gateway_peering_attachment": {
     "surface": "data_source",
     "group": "transit_gateway",
-    "className": "TfDataTransitGatewayPeeringAttachment",
+    "className": "DataTfTransitGatewayPeeringAttachment",
     "previous": "DataAwsEc2TransitGatewayPeeringAttachment"
   },
   "data_aws_ec2_transit_gateway_peering_attachments": {
     "surface": "data_source",
     "group": "transit_gateway",
-    "className": "TfDataTransitGatewayPeeringAttachments",
+    "className": "DataTfTransitGatewayPeeringAttachments",
     "previous": "DataAwsEc2TransitGatewayPeeringAttachments"
   },
   "data_aws_ec2_transit_gateway_route_table": {
     "surface": "data_source",
     "group": "transit_gateway",
-    "className": "TfDataTransitGatewayRouteTable",
+    "className": "DataTfTransitGatewayRouteTable",
     "previous": "DataAwsEc2TransitGatewayRouteTable"
   },
   "data_aws_ec2_transit_gateway_route_table_associations": {
     "surface": "data_source",
     "group": "transit_gateway",
-    "className": "TfDataTransitGatewayRouteTableAssociations",
+    "className": "DataTfTransitGatewayRouteTableAssociations",
     "previous": "DataAwsEc2TransitGatewayRouteTableAssociations"
   },
   "data_aws_ec2_transit_gateway_route_table_propagations": {
     "surface": "data_source",
     "group": "transit_gateway",
-    "className": "TfDataTransitGatewayRouteTablePropagations",
+    "className": "DataTfTransitGatewayRouteTablePropagations",
     "previous": "DataAwsEc2TransitGatewayRouteTablePropagations"
   },
   "data_aws_ec2_transit_gateway_route_table_routes": {
     "surface": "data_source",
     "group": "transit_gateway",
-    "className": "TfDataTransitGatewayRouteTableRoutes",
+    "className": "DataTfTransitGatewayRouteTableRoutes",
     "previous": "DataAwsEc2TransitGatewayRouteTableRoutes"
   },
   "data_aws_ec2_transit_gateway_route_tables": {
     "surface": "data_source",
     "group": "transit_gateway",
-    "className": "TfDataTransitGatewayRouteTables",
+    "className": "DataTfTransitGatewayRouteTables",
     "previous": "DataAwsEc2TransitGatewayRouteTables"
   },
   "data_aws_ec2_transit_gateway_vpc_attachment": {
     "surface": "data_source",
     "group": "transit_gateway",
-    "className": "TfDataTransitGatewayVpcAttachment",
+    "className": "DataTfTransitGatewayVpcAttachment",
     "previous": "DataAwsEc2TransitGatewayVpcAttachment"
   },
   "data_aws_ec2_transit_gateway_vpc_attachments": {
     "surface": "data_source",
     "group": "transit_gateway",
-    "className": "TfDataTransitGatewayVpcAttachments",
+    "className": "DataTfTransitGatewayVpcAttachments",
     "previous": "DataAwsEc2TransitGatewayVpcAttachments"
   },
   "data_aws_ec2_transit_gateway_vpn_attachment": {
     "surface": "data_source",
     "group": "transit_gateway",
-    "className": "TfDataTransitGatewayVpnAttachment",
+    "className": "DataTfTransitGatewayVpnAttachment",
     "previous": "DataAwsEc2TransitGatewayVpnAttachment"
   },
   "data_aws_ecr_authorization_token": {
     "surface": "data_source",
     "group": "ecr",
-    "className": "TfDataAuthorizationToken",
+    "className": "DataTfAuthorizationToken",
     "previous": "DataAwsEcrAuthorizationToken"
   },
   "data_aws_ecr_image": {
     "surface": "data_source",
     "group": "ecr",
-    "className": "TfDataImage",
+    "className": "DataTfImage",
     "previous": "DataAwsEcrImage"
   },
   "data_aws_ecr_images": {
     "surface": "data_source",
     "group": "ecr",
-    "className": "TfDataImages",
+    "className": "DataTfImages",
     "previous": "DataAwsEcrImages"
   },
   "data_aws_ecr_lifecycle_policy_document": {
     "surface": "data_source",
     "group": "ecr",
-    "className": "TfDataLifecyclePolicyDocument",
+    "className": "DataTfLifecyclePolicyDocument",
     "previous": "DataAwsEcrLifecyclePolicyDocument"
   },
   "data_aws_ecr_pull_through_cache_rule": {
     "surface": "data_source",
     "group": "ecr",
-    "className": "TfDataPullThroughCacheRule",
+    "className": "DataTfPullThroughCacheRule",
     "previous": "DataAwsEcrPullThroughCacheRule"
   },
   "data_aws_ecr_repositories": {
     "surface": "data_source",
     "group": "ecr",
-    "className": "TfDataRepositories",
+    "className": "DataTfRepositories",
     "previous": "DataAwsEcrRepositories"
   },
   "data_aws_ecr_repository": {
     "surface": "data_source",
     "group": "ecr",
-    "className": "TfDataRepository",
+    "className": "DataTfRepository",
     "previous": "DataAwsEcrRepository"
   },
   "data_aws_ecr_repository_creation_template": {
     "surface": "data_source",
     "group": "ecr",
-    "className": "TfDataRepositoryCreationTemplate",
+    "className": "DataTfRepositoryCreationTemplate",
     "previous": "DataAwsEcrRepositoryCreationTemplate"
   },
   "data_aws_ecrpublic_authorization_token": {
     "surface": "data_source",
     "group": "ecr_public",
-    "className": "TfDataAuthorizationToken",
+    "className": "DataTfAuthorizationToken",
     "previous": "DataAwsEcrpublicAuthorizationToken"
   },
   "data_aws_ecrpublic_images": {
     "surface": "data_source",
     "group": "ecr_public",
-    "className": "TfDataImages",
+    "className": "DataTfImages",
     "previous": "DataAwsEcrpublicImages"
   },
   "data_aws_ecs_cluster": {
     "surface": "data_source",
     "group": "ecs",
-    "className": "TfDataCluster",
+    "className": "DataTfCluster",
     "previous": "DataAwsEcsCluster"
   },
   "data_aws_ecs_clusters": {
     "surface": "data_source",
     "group": "ecs",
-    "className": "TfDataClusters",
+    "className": "DataTfClusters",
     "previous": "DataAwsEcsClusters"
   },
   "data_aws_ecs_container_definition": {
     "surface": "data_source",
     "group": "ecs",
-    "className": "TfDataContainerDefinition",
+    "className": "DataTfContainerDefinition",
     "previous": "DataAwsEcsContainerDefinition"
   },
   "data_aws_ecs_service": {
     "surface": "data_source",
     "group": "ecs",
-    "className": "TfDataService",
+    "className": "DataTfService",
     "previous": "DataAwsEcsService"
   },
   "data_aws_ecs_task_definition": {
     "surface": "data_source",
     "group": "ecs",
-    "className": "TfDataTaskDefinition",
+    "className": "DataTfTaskDefinition",
     "previous": "DataAwsEcsTaskDefinition"
   },
   "data_aws_ecs_task_execution": {
     "surface": "data_source",
     "group": "ecs",
-    "className": "TfDataTaskExecution",
+    "className": "DataTfTaskExecution",
     "previous": "DataAwsEcsTaskExecution"
   },
   "data_aws_efs_access_point": {
     "surface": "data_source",
     "group": "efs",
-    "className": "TfDataAccessPoint",
+    "className": "DataTfAccessPoint",
     "previous": "DataAwsEfsAccessPoint"
   },
   "data_aws_efs_access_points": {
     "surface": "data_source",
     "group": "efs",
-    "className": "TfDataAccessPoints",
+    "className": "DataTfAccessPoints",
     "previous": "DataAwsEfsAccessPoints"
   },
   "data_aws_efs_file_system": {
     "surface": "data_source",
     "group": "efs",
-    "className": "TfDataFileSystem",
+    "className": "DataTfFileSystem",
     "previous": "DataAwsEfsFileSystem"
   },
   "data_aws_efs_mount_target": {
     "surface": "data_source",
     "group": "efs",
-    "className": "TfDataMountTarget",
+    "className": "DataTfMountTarget",
     "previous": "DataAwsEfsMountTarget"
   },
   "data_aws_eip": {
     "surface": "data_source",
     "group": "ec2",
-    "className": "TfDataEip",
+    "className": "DataTfEip",
     "previous": "DataAwsEip"
   },
   "data_aws_eips": {
     "surface": "data_source",
     "group": "ec2",
-    "className": "TfDataEips",
+    "className": "DataTfEips",
     "previous": "DataAwsEips"
   },
   "data_aws_eks_access_entry": {
     "surface": "data_source",
     "group": "eks",
-    "className": "TfDataAccessEntry",
+    "className": "DataTfAccessEntry",
     "previous": "DataAwsEksAccessEntry"
   },
   "data_aws_eks_access_policies": {
     "surface": "data_source",
     "group": "eks",
-    "className": "TfDataAccessPolicies",
+    "className": "DataTfAccessPolicies",
     "previous": "DataAwsEksAccessPolicies"
   },
   "data_aws_eks_addon": {
     "surface": "data_source",
     "group": "eks",
-    "className": "TfDataAddon",
+    "className": "DataTfAddon",
     "previous": "DataAwsEksAddon"
   },
   "data_aws_eks_addon_version": {
     "surface": "data_source",
     "group": "eks",
-    "className": "TfDataAddonVersion",
+    "className": "DataTfAddonVersion",
     "previous": "DataAwsEksAddonVersion"
   },
   "data_aws_eks_cluster": {
     "surface": "data_source",
     "group": "eks",
-    "className": "TfDataCluster",
+    "className": "DataTfCluster",
     "previous": "DataAwsEksCluster"
   },
   "data_aws_eks_cluster_auth": {
     "surface": "data_source",
     "group": "eks",
-    "className": "TfDataClusterAuth",
+    "className": "DataTfClusterAuth",
     "previous": "DataAwsEksClusterAuth"
   },
   "data_aws_eks_cluster_versions": {
     "surface": "data_source",
     "group": "eks",
-    "className": "TfDataClusterVersions",
+    "className": "DataTfClusterVersions",
     "previous": "DataAwsEksClusterVersions"
   },
   "data_aws_eks_clusters": {
     "surface": "data_source",
     "group": "eks",
-    "className": "TfDataClusters",
+    "className": "DataTfClusters",
     "previous": "DataAwsEksClusters"
   },
   "data_aws_eks_node_group": {
     "surface": "data_source",
     "group": "eks",
-    "className": "TfDataNodeGroup",
+    "className": "DataTfNodeGroup",
     "previous": "DataAwsEksNodeGroup"
   },
   "data_aws_eks_node_groups": {
     "surface": "data_source",
     "group": "eks",
-    "className": "TfDataNodeGroups",
+    "className": "DataTfNodeGroups",
     "previous": "DataAwsEksNodeGroups"
   },
   "data_aws_elastic_beanstalk_application": {
     "surface": "data_source",
     "group": "elastic_beanstalk",
-    "className": "TfDataApplication",
+    "className": "DataTfApplication",
     "previous": "DataAwsElasticBeanstalkApplication"
   },
   "data_aws_elastic_beanstalk_hosted_zone": {
     "surface": "data_source",
     "group": "elastic_beanstalk",
-    "className": "TfDataHostedZone",
+    "className": "DataTfHostedZone",
     "previous": "DataAwsElasticBeanstalkHostedZone"
   },
   "data_aws_elastic_beanstalk_solution_stack": {
     "surface": "data_source",
     "group": "elastic_beanstalk",
-    "className": "TfDataSolutionStack",
+    "className": "DataTfSolutionStack",
     "previous": "DataAwsElasticBeanstalkSolutionStack"
   },
   "data_aws_elasticache_cluster": {
     "surface": "data_source",
     "group": "elasticache",
-    "className": "TfDataCluster",
+    "className": "DataTfCluster",
     "previous": "DataAwsElasticacheCluster"
   },
   "data_aws_elasticache_replication_group": {
     "surface": "data_source",
     "group": "elasticache",
-    "className": "TfDataReplicationGroup",
+    "className": "DataTfReplicationGroup",
     "previous": "DataAwsElasticacheReplicationGroup"
   },
   "data_aws_elasticache_reserved_cache_node_offering": {
     "surface": "data_source",
     "group": "elasticache",
-    "className": "TfDataReservedCacheNodeOffering",
+    "className": "DataTfReservedCacheNodeOffering",
     "previous": "DataAwsElasticacheReservedCacheNodeOffering"
   },
   "data_aws_elasticache_serverless_cache": {
     "surface": "data_source",
     "group": "elasticache",
-    "className": "TfDataServerlessCache",
+    "className": "DataTfServerlessCache",
     "previous": "DataAwsElasticacheServerlessCache"
   },
   "data_aws_elasticache_service_update_actions": {
     "surface": "data_source",
     "group": "elasticache",
-    "className": "TfDataServiceUpdateActions",
+    "className": "DataTfServiceUpdateActions",
     "previous": "DataAwsElasticacheServiceUpdateActions"
   },
   "data_aws_elasticache_service_updates": {
     "surface": "data_source",
     "group": "elasticache",
-    "className": "TfDataServiceUpdates",
+    "className": "DataTfServiceUpdates",
     "previous": "DataAwsElasticacheServiceUpdates"
   },
   "data_aws_elasticache_subnet_group": {
     "surface": "data_source",
     "group": "elasticache",
-    "className": "TfDataSubnetGroup",
+    "className": "DataTfSubnetGroup",
     "previous": "DataAwsElasticacheSubnetGroup"
   },
   "data_aws_elasticache_user": {
     "surface": "data_source",
     "group": "elasticache",
-    "className": "TfDataUser",
+    "className": "DataTfUser",
     "previous": "DataAwsElasticacheUser"
   },
   "data_aws_elasticsearch_domain": {
     "surface": "data_source",
     "group": "elasticsearch",
-    "className": "TfDataDomain",
+    "className": "DataTfDomain",
     "previous": "DataAwsElasticsearchDomain"
   },
   "data_aws_elb": {
     "surface": "data_source",
     "group": "elb_classic",
-    "className": "TfDataElb",
+    "className": "DataTfElb",
     "previous": "DataAwsElb"
   },
   "data_aws_elb_hosted_zone_id": {
     "surface": "data_source",
     "group": "elb_classic",
-    "className": "TfDataHostedZoneId",
+    "className": "DataTfHostedZoneId",
     "previous": "DataAwsElbHostedZoneId"
   },
   "data_aws_elb_service_account": {
     "surface": "data_source",
     "group": "elb_classic",
-    "className": "TfDataServiceAccount",
+    "className": "DataTfServiceAccount",
     "previous": "DataAwsElbServiceAccount"
   },
   "data_aws_emr_release_labels": {
     "surface": "data_source",
     "group": "emr",
-    "className": "TfDataReleaseLabels",
+    "className": "DataTfReleaseLabels",
     "previous": "DataAwsEmrReleaseLabels"
   },
   "data_aws_emr_supported_instance_types": {
     "surface": "data_source",
     "group": "emr",
-    "className": "TfDataSupportedInstanceTypes",
+    "className": "DataTfSupportedInstanceTypes",
     "previous": "DataAwsEmrSupportedInstanceTypes"
   },
   "data_aws_emrcontainers_virtual_cluster": {
     "surface": "data_source",
     "group": "emr_containers",
-    "className": "TfDataVirtualCluster",
+    "className": "DataTfVirtualCluster",
     "previous": "DataAwsEmrcontainersVirtualCluster"
   },
   "data_aws_fis_experiment_templates": {
     "surface": "data_source",
     "group": "fis",
-    "className": "TfDataExperimentTemplates",
+    "className": "DataTfExperimentTemplates",
     "previous": "DataAwsFisExperimentTemplates"
   },
   "data_aws_fsx_ontap_file_system": {
     "surface": "data_source",
     "group": "fsx",
-    "className": "TfDataOntapFileSystem",
+    "className": "DataTfOntapFileSystem",
     "previous": "DataAwsFsxOntapFileSystem"
   },
   "data_aws_fsx_ontap_storage_virtual_machine": {
     "surface": "data_source",
     "group": "fsx",
-    "className": "TfDataOntapStorageVirtualMachine",
+    "className": "DataTfOntapStorageVirtualMachine",
     "previous": "DataAwsFsxOntapStorageVirtualMachine"
   },
   "data_aws_fsx_ontap_storage_virtual_machines": {
     "surface": "data_source",
     "group": "fsx",
-    "className": "TfDataOntapStorageVirtualMachines",
+    "className": "DataTfOntapStorageVirtualMachines",
     "previous": "DataAwsFsxOntapStorageVirtualMachines"
   },
   "data_aws_fsx_openzfs_snapshot": {
     "surface": "data_source",
     "group": "fsx",
-    "className": "TfDataOpenzfsSnapshot",
+    "className": "DataTfOpenzfsSnapshot",
     "previous": "DataAwsFsxOpenzfsSnapshot"
   },
   "data_aws_fsx_windows_file_system": {
     "surface": "data_source",
     "group": "fsx",
-    "className": "TfDataWindowsFileSystem",
+    "className": "DataTfWindowsFileSystem",
     "previous": "DataAwsFsxWindowsFileSystem"
   },
   "data_aws_globalaccelerator_accelerator": {
     "surface": "data_source",
     "group": "global_accelerator",
-    "className": "TfDataAccelerator",
+    "className": "DataTfAccelerator",
     "previous": "DataAwsGlobalacceleratorAccelerator"
   },
   "data_aws_globalaccelerator_custom_routing_accelerator": {
     "surface": "data_source",
     "group": "global_accelerator",
-    "className": "TfDataCustomRoutingAccelerator",
+    "className": "DataTfCustomRoutingAccelerator",
     "previous": "DataAwsGlobalacceleratorCustomRoutingAccelerator"
   },
   "data_aws_glue_catalog": {
     "surface": "data_source",
     "group": "glue",
-    "className": "TfDataCatalog",
+    "className": "DataTfCatalog",
     "previous": "DataAwsGlueCatalog"
   },
   "data_aws_glue_catalog_table": {
     "surface": "data_source",
     "group": "glue",
-    "className": "TfDataCatalogTable",
+    "className": "DataTfCatalogTable",
     "previous": "DataAwsGlueCatalogTable"
   },
   "data_aws_glue_connection": {
     "surface": "data_source",
     "group": "glue",
-    "className": "TfDataConnection",
+    "className": "DataTfConnection",
     "previous": "DataAwsGlueConnection"
   },
   "data_aws_glue_data_catalog_encryption_settings": {
     "surface": "data_source",
     "group": "glue",
-    "className": "TfDataDataCatalogEncryptionSettings",
+    "className": "DataTfDataCatalogEncryptionSettings",
     "previous": "DataAwsGlueDataCatalogEncryptionSettings"
   },
   "data_aws_glue_registry": {
     "surface": "data_source",
     "group": "glue",
-    "className": "TfDataRegistry",
+    "className": "DataTfRegistry",
     "previous": "DataAwsGlueRegistry"
   },
   "data_aws_glue_script": {
     "surface": "data_source",
     "group": "glue",
-    "className": "TfDataScript",
+    "className": "DataTfScript",
     "previous": "DataAwsGlueScript"
   },
   "data_aws_grafana_workspace": {
     "surface": "data_source",
     "group": "managed_grafana",
-    "className": "TfDataWorkspace",
+    "className": "DataTfWorkspace",
     "previous": "DataAwsGrafanaWorkspace"
   },
   "data_aws_guardduty_detector": {
     "surface": "data_source",
     "group": "guardduty",
-    "className": "TfDataDetector",
+    "className": "DataTfDetector",
     "previous": "DataAwsGuarddutyDetector"
   },
   "data_aws_guardduty_finding_ids": {
     "surface": "data_source",
     "group": "guardduty",
-    "className": "TfDataFindingIds",
+    "className": "DataTfFindingIds",
     "previous": "DataAwsGuarddutyFindingIds"
   },
   "data_aws_iam_access_keys": {
     "surface": "data_source",
     "group": "iam",
-    "className": "TfDataAccessKeys",
+    "className": "DataTfAccessKeys",
     "previous": "DataAwsIamAccessKeys"
   },
   "data_aws_iam_account_alias": {
     "surface": "data_source",
     "group": "iam",
-    "className": "TfDataAccountAlias",
+    "className": "DataTfAccountAlias",
     "previous": "DataAwsIamAccountAlias"
   },
   "data_aws_iam_group": {
     "surface": "data_source",
     "group": "iam",
-    "className": "TfDataGroup",
+    "className": "DataTfGroup",
     "previous": "DataAwsIamGroup"
   },
   "data_aws_iam_instance_profile": {
     "surface": "data_source",
     "group": "iam",
-    "className": "TfDataInstanceProfile",
+    "className": "DataTfInstanceProfile",
     "previous": "DataAwsIamInstanceProfile"
   },
   "data_aws_iam_instance_profiles": {
     "surface": "data_source",
     "group": "iam",
-    "className": "TfDataInstanceProfiles",
+    "className": "DataTfInstanceProfiles",
     "previous": "DataAwsIamInstanceProfiles"
   },
   "data_aws_iam_openid_connect_provider": {
     "surface": "data_source",
     "group": "iam",
-    "className": "TfDataOpenidConnectProvider",
+    "className": "DataTfOpenidConnectProvider",
     "previous": "DataAwsIamOpenidConnectProvider"
   },
   "data_aws_iam_outbound_web_identity_federation": {
     "surface": "data_source",
     "group": "iam",
-    "className": "TfDataOutboundWebIdentityFederation",
+    "className": "DataTfOutboundWebIdentityFederation",
     "previous": "DataAwsIamOutboundWebIdentityFederation"
   },
   "data_aws_iam_policy": {
     "surface": "data_source",
     "group": "iam",
-    "className": "TfDataPolicy",
+    "className": "DataTfPolicy",
     "previous": "DataAwsIamPolicy"
   },
   "data_aws_iam_policy_document": {
     "surface": "data_source",
     "group": "iam",
-    "className": "TfDataPolicyDocument",
+    "className": "DataTfPolicyDocument",
     "previous": "DataAwsIamPolicyDocument"
   },
   "data_aws_iam_principal_policy_simulation": {
     "surface": "data_source",
     "group": "iam",
-    "className": "TfDataPrincipalPolicySimulation",
+    "className": "DataTfPrincipalPolicySimulation",
     "previous": "DataAwsIamPrincipalPolicySimulation"
   },
   "data_aws_iam_role": {
     "surface": "data_source",
     "group": "iam",
-    "className": "TfDataRole",
+    "className": "DataTfRole",
     "previous": "DataAwsIamRole"
   },
   "data_aws_iam_role_policies": {
     "surface": "data_source",
     "group": "iam",
-    "className": "TfDataRolePolicies",
+    "className": "DataTfRolePolicies",
     "previous": "DataAwsIamRolePolicies"
   },
   "data_aws_iam_role_policy_attachments": {
     "surface": "data_source",
     "group": "iam",
-    "className": "TfDataRolePolicyAttachments",
+    "className": "DataTfRolePolicyAttachments",
     "previous": "DataAwsIamRolePolicyAttachments"
   },
   "data_aws_iam_roles": {
     "surface": "data_source",
     "group": "iam",
-    "className": "TfDataRoles",
+    "className": "DataTfRoles",
     "previous": "DataAwsIamRoles"
   },
   "data_aws_iam_saml_provider": {
     "surface": "data_source",
     "group": "iam",
-    "className": "TfDataSamlProvider",
+    "className": "DataTfSamlProvider",
     "previous": "DataAwsIamSamlProvider"
   },
   "data_aws_iam_server_certificate": {
     "surface": "data_source",
     "group": "iam",
-    "className": "TfDataServerCertificate",
+    "className": "DataTfServerCertificate",
     "previous": "DataAwsIamServerCertificate"
   },
   "data_aws_iam_session_context": {
     "surface": "data_source",
     "group": "iam",
-    "className": "TfDataSessionContext",
+    "className": "DataTfSessionContext",
     "previous": "DataAwsIamSessionContext"
   },
   "data_aws_iam_user": {
     "surface": "data_source",
     "group": "iam",
-    "className": "TfDataUser",
+    "className": "DataTfUser",
     "previous": "DataAwsIamUser"
   },
   "data_aws_iam_user_ssh_key": {
     "surface": "data_source",
     "group": "iam",
-    "className": "TfDataUserSshKey",
+    "className": "DataTfUserSshKey",
     "previous": "DataAwsIamUserSshKey"
   },
   "data_aws_iam_users": {
     "surface": "data_source",
     "group": "iam",
-    "className": "TfDataUsers",
+    "className": "DataTfUsers",
     "previous": "DataAwsIamUsers"
   },
   "data_aws_identitystore_group": {
     "surface": "data_source",
     "group": "sso_identity_store",
-    "className": "TfDataGroup",
+    "className": "DataTfGroup",
     "previous": "DataAwsIdentitystoreGroup"
   },
   "data_aws_identitystore_group_memberships": {
     "surface": "data_source",
     "group": "sso_identity_store",
-    "className": "TfDataGroupMemberships",
+    "className": "DataTfGroupMemberships",
     "previous": "DataAwsIdentitystoreGroupMemberships"
   },
   "data_aws_identitystore_groups": {
     "surface": "data_source",
     "group": "sso_identity_store",
-    "className": "TfDataGroups",
+    "className": "DataTfGroups",
     "previous": "DataAwsIdentitystoreGroups"
   },
   "data_aws_identitystore_user": {
     "surface": "data_source",
     "group": "sso_identity_store",
-    "className": "TfDataUser",
+    "className": "DataTfUser",
     "previous": "DataAwsIdentitystoreUser"
   },
   "data_aws_identitystore_users": {
     "surface": "data_source",
     "group": "sso_identity_store",
-    "className": "TfDataUsers",
+    "className": "DataTfUsers",
     "previous": "DataAwsIdentitystoreUsers"
   },
   "data_aws_imagebuilder_component": {
     "surface": "data_source",
     "group": "ec2_image_builder",
-    "className": "TfDataComponent",
+    "className": "DataTfComponent",
     "previous": "DataAwsImagebuilderComponent"
   },
   "data_aws_imagebuilder_components": {
     "surface": "data_source",
     "group": "ec2_image_builder",
-    "className": "TfDataComponents",
+    "className": "DataTfComponents",
     "previous": "DataAwsImagebuilderComponents"
   },
   "data_aws_imagebuilder_container_recipe": {
     "surface": "data_source",
     "group": "ec2_image_builder",
-    "className": "TfDataContainerRecipe",
+    "className": "DataTfContainerRecipe",
     "previous": "DataAwsImagebuilderContainerRecipe"
   },
   "data_aws_imagebuilder_container_recipes": {
     "surface": "data_source",
     "group": "ec2_image_builder",
-    "className": "TfDataContainerRecipes",
+    "className": "DataTfContainerRecipes",
     "previous": "DataAwsImagebuilderContainerRecipes"
   },
   "data_aws_imagebuilder_distribution_configuration": {
     "surface": "data_source",
     "group": "ec2_image_builder",
-    "className": "TfDataDistributionConfiguration",
+    "className": "DataTfDistributionConfiguration",
     "previous": "DataAwsImagebuilderDistributionConfiguration"
   },
   "data_aws_imagebuilder_distribution_configurations": {
     "surface": "data_source",
     "group": "ec2_image_builder",
-    "className": "TfDataDistributionConfigurations",
+    "className": "DataTfDistributionConfigurations",
     "previous": "DataAwsImagebuilderDistributionConfigurations"
   },
   "data_aws_imagebuilder_image": {
     "surface": "data_source",
     "group": "ec2_image_builder",
-    "className": "TfDataImage",
+    "className": "DataTfImage",
     "previous": "DataAwsImagebuilderImage"
   },
   "data_aws_imagebuilder_image_pipeline": {
     "surface": "data_source",
     "group": "ec2_image_builder",
-    "className": "TfDataImagePipeline",
+    "className": "DataTfImagePipeline",
     "previous": "DataAwsImagebuilderImagePipeline"
   },
   "data_aws_imagebuilder_image_pipelines": {
     "surface": "data_source",
     "group": "ec2_image_builder",
-    "className": "TfDataImagePipelines",
+    "className": "DataTfImagePipelines",
     "previous": "DataAwsImagebuilderImagePipelines"
   },
   "data_aws_imagebuilder_image_recipe": {
     "surface": "data_source",
     "group": "ec2_image_builder",
-    "className": "TfDataImageRecipe",
+    "className": "DataTfImageRecipe",
     "previous": "DataAwsImagebuilderImageRecipe"
   },
   "data_aws_imagebuilder_image_recipes": {
     "surface": "data_source",
     "group": "ec2_image_builder",
-    "className": "TfDataImageRecipes",
+    "className": "DataTfImageRecipes",
     "previous": "DataAwsImagebuilderImageRecipes"
   },
   "data_aws_imagebuilder_infrastructure_configuration": {
     "surface": "data_source",
     "group": "ec2_image_builder",
-    "className": "TfDataInfrastructureConfiguration",
+    "className": "DataTfInfrastructureConfiguration",
     "previous": "DataAwsImagebuilderInfrastructureConfiguration"
   },
   "data_aws_imagebuilder_infrastructure_configurations": {
     "surface": "data_source",
     "group": "ec2_image_builder",
-    "className": "TfDataInfrastructureConfigurations",
+    "className": "DataTfInfrastructureConfigurations",
     "previous": "DataAwsImagebuilderInfrastructureConfigurations"
   },
   "data_aws_inspector_rules_packages": {
     "surface": "data_source",
     "group": "inspector_classic",
-    "className": "TfDataRulesPackages",
+    "className": "DataTfRulesPackages",
     "previous": "DataAwsInspectorRulesPackages"
   },
   "data_aws_instance": {
     "surface": "data_source",
     "group": "ec2",
-    "className": "TfDataInstance",
+    "className": "DataTfInstance",
     "previous": "DataAwsInstance"
   },
   "data_aws_instances": {
     "surface": "data_source",
     "group": "ec2",
-    "className": "TfDataInstances",
+    "className": "DataTfInstances",
     "previous": "DataAwsInstances"
   },
   "data_aws_internet_gateway": {
     "surface": "data_source",
     "group": "vpc",
-    "className": "TfDataInternetGateway",
+    "className": "DataTfInternetGateway",
     "previous": "DataAwsInternetGateway"
   },
   "data_aws_iot_endpoint": {
     "surface": "data_source",
     "group": "iot_core",
-    "className": "TfDataEndpoint",
+    "className": "DataTfEndpoint",
     "previous": "DataAwsIotEndpoint"
   },
   "data_aws_iot_registration_code": {
     "surface": "data_source",
     "group": "iot_core",
-    "className": "TfDataRegistrationCode",
+    "className": "DataTfRegistrationCode",
     "previous": "DataAwsIotRegistrationCode"
   },
   "data_aws_ip_ranges": {
     "surface": "data_source",
     "group": "meta_data_sources",
-    "className": "TfDataIpRanges",
+    "className": "DataTfIpRanges",
     "previous": "DataAwsIpRanges"
   },
   "data_aws_ivs_stream_key": {
     "surface": "data_source",
     "group": "ivs",
-    "className": "TfDataStreamKey",
+    "className": "DataTfStreamKey",
     "previous": "DataAwsIvsStreamKey"
   },
   "data_aws_kendra_experience": {
     "surface": "data_source",
     "group": "kendra",
-    "className": "TfDataExperience",
+    "className": "DataTfExperience",
     "previous": "DataAwsKendraExperience"
   },
   "data_aws_kendra_faq": {
     "surface": "data_source",
     "group": "kendra",
-    "className": "TfDataFaq",
+    "className": "DataTfFaq",
     "previous": "DataAwsKendraFaq"
   },
   "data_aws_kendra_index": {
     "surface": "data_source",
     "group": "kendra",
-    "className": "TfDataIndex",
+    "className": "DataTfIndex",
     "previous": "DataAwsKendraIndex"
   },
   "data_aws_kendra_query_suggestions_block_list": {
     "surface": "data_source",
     "group": "kendra",
-    "className": "TfDataQuerySuggestionsBlockList",
+    "className": "DataTfQuerySuggestionsBlockList",
     "previous": "DataAwsKendraQuerySuggestionsBlockList"
   },
   "data_aws_kendra_thesaurus": {
     "surface": "data_source",
     "group": "kendra",
-    "className": "TfDataThesaurus",
+    "className": "DataTfThesaurus",
     "previous": "DataAwsKendraThesaurus"
   },
   "data_aws_key_pair": {
     "surface": "data_source",
     "group": "ec2",
-    "className": "TfDataKeyPair",
+    "className": "DataTfKeyPair",
     "previous": "DataAwsKeyPair"
   },
   "data_aws_kinesis_firehose_delivery_stream": {
     "surface": "data_source",
     "group": "kinesis_firehose",
-    "className": "TfDataDeliveryStream",
+    "className": "DataTfDeliveryStream",
     "previous": "DataAwsKinesisFirehoseDeliveryStream"
   },
   "data_aws_kinesis_stream": {
     "surface": "data_source",
     "group": "kinesis",
-    "className": "TfDataStream",
+    "className": "DataTfStream",
     "previous": "DataAwsKinesisStream"
   },
   "data_aws_kinesis_stream_consumer": {
     "surface": "data_source",
     "group": "kinesis",
-    "className": "TfDataStreamConsumer",
+    "className": "DataTfStreamConsumer",
     "previous": "DataAwsKinesisStreamConsumer"
   },
   "data_aws_kms_alias": {
     "surface": "data_source",
     "group": "kms",
-    "className": "TfDataAlias",
+    "className": "DataTfAlias",
     "previous": "DataAwsKmsAlias"
   },
   "data_aws_kms_ciphertext": {
     "surface": "data_source",
     "group": "kms",
-    "className": "TfDataCiphertext",
+    "className": "DataTfCiphertext",
     "previous": "DataAwsKmsCiphertext"
   },
   "data_aws_kms_custom_key_store": {
     "surface": "data_source",
     "group": "kms",
-    "className": "TfDataCustomKeyStore",
+    "className": "DataTfCustomKeyStore",
     "previous": "DataAwsKmsCustomKeyStore"
   },
   "data_aws_kms_key": {
     "surface": "data_source",
     "group": "kms",
-    "className": "TfDataKey",
+    "className": "DataTfKey",
     "previous": "DataAwsKmsKey"
   },
   "data_aws_kms_public_key": {
     "surface": "data_source",
     "group": "kms",
-    "className": "TfDataPublicKey",
+    "className": "DataTfPublicKey",
     "previous": "DataAwsKmsPublicKey"
   },
   "data_aws_kms_secret": {
     "surface": "data_source",
     "group": "kms",
-    "className": "TfDataSecret",
+    "className": "DataTfSecret",
     "previous": "DataAwsKmsSecret"
   },
   "data_aws_kms_secrets": {
     "surface": "data_source",
     "group": "kms",
-    "className": "TfDataSecrets",
+    "className": "DataTfSecrets",
     "previous": "DataAwsKmsSecrets"
   },
   "data_aws_lakeformation_data_lake_settings": {
     "surface": "data_source",
     "group": "lake_formation",
-    "className": "TfDataDataLakeSettings",
+    "className": "DataTfDataLakeSettings",
     "previous": "DataAwsLakeformationDataLakeSettings"
   },
   "data_aws_lakeformation_permissions": {
     "surface": "data_source",
     "group": "lake_formation",
-    "className": "TfDataPermissions",
+    "className": "DataTfPermissions",
     "previous": "DataAwsLakeformationPermissions"
   },
   "data_aws_lakeformation_resource": {
     "surface": "data_source",
     "group": "lake_formation",
-    "className": "TfDataResource",
+    "className": "DataTfResource",
     "previous": "DataAwsLakeformationResource"
   },
   "data_aws_lambda_alias": {
     "surface": "data_source",
     "group": "lambda",
-    "className": "TfDataAlias",
+    "className": "DataTfAlias",
     "previous": "DataAwsLambdaAlias"
   },
   "data_aws_lambda_code_signing_config": {
     "surface": "data_source",
     "group": "lambda",
-    "className": "TfDataCodeSigningConfig",
+    "className": "DataTfCodeSigningConfig",
     "previous": "DataAwsLambdaCodeSigningConfig"
   },
   "data_aws_lambda_function": {
     "surface": "data_source",
     "group": "lambda",
-    "className": "TfDataFunction",
+    "className": "DataTfFunction",
     "previous": "DataAwsLambdaFunction"
   },
   "data_aws_lambda_function_url": {
     "surface": "data_source",
     "group": "lambda",
-    "className": "TfDataFunctionUrl",
+    "className": "DataTfFunctionUrl",
     "previous": "DataAwsLambdaFunctionUrl"
   },
   "data_aws_lambda_functions": {
     "surface": "data_source",
     "group": "lambda",
-    "className": "TfDataFunctions",
+    "className": "DataTfFunctions",
     "previous": "DataAwsLambdaFunctions"
   },
   "data_aws_lambda_invocation": {
     "surface": "data_source",
     "group": "lambda",
-    "className": "TfDataInvocation",
+    "className": "DataTfInvocation",
     "previous": "DataAwsLambdaInvocation"
   },
   "data_aws_lambda_layer_version": {
     "surface": "data_source",
     "group": "lambda",
-    "className": "TfDataLayerVersion",
+    "className": "DataTfLayerVersion",
     "previous": "DataAwsLambdaLayerVersion"
   },
   "data_aws_launch_configuration": {
     "surface": "data_source",
     "group": "auto_scaling",
-    "className": "TfDataLaunchConfiguration",
+    "className": "DataTfLaunchConfiguration",
     "previous": "DataAwsLaunchConfiguration"
   },
   "data_aws_launch_template": {
     "surface": "data_source",
     "group": "ec2",
-    "className": "TfDataLaunchTemplate",
+    "className": "DataTfLaunchTemplate",
     "previous": "DataAwsLaunchTemplate"
   },
   "data_aws_lb": {
     "surface": "data_source",
     "group": "elb",
-    "className": "TfDataLb",
+    "className": "DataTfLb",
     "previous": "DataAwsLb"
   },
   "data_aws_lb_hosted_zone_id": {
     "surface": "data_source",
     "group": "elb",
-    "className": "TfDataHostedZoneId",
+    "className": "DataTfHostedZoneId",
     "previous": "DataAwsLbHostedZoneId"
   },
   "data_aws_lb_listener": {
     "surface": "data_source",
     "group": "elb",
-    "className": "TfDataListener",
+    "className": "DataTfListener",
     "previous": "DataAwsLbListener"
   },
   "data_aws_lb_listener_rule": {
     "surface": "data_source",
     "group": "elb",
-    "className": "TfDataListenerRule",
+    "className": "DataTfListenerRule",
     "previous": "DataAwsLbListenerRule"
   },
   "data_aws_lb_target_group": {
     "surface": "data_source",
     "group": "elb",
-    "className": "TfDataTargetGroup",
+    "className": "DataTfTargetGroup",
     "previous": "DataAwsLbTargetGroup"
   },
   "data_aws_lb_trust_store": {
     "surface": "data_source",
     "group": "elb",
-    "className": "TfDataTrustStore",
+    "className": "DataTfTrustStore",
     "previous": "DataAwsLbTrustStore"
   },
   "data_aws_lbs": {
     "surface": "data_source",
     "group": "elb",
-    "className": "TfDataLbs",
+    "className": "DataTfLbs",
     "previous": "DataAwsLbs"
   },
   "data_aws_lex_bot": {
     "surface": "data_source",
     "group": "lex_model_building",
-    "className": "TfDataBot",
+    "className": "DataTfBot",
     "previous": "DataAwsLexBot"
   },
   "data_aws_lex_bot_alias": {
     "surface": "data_source",
     "group": "lex_model_building",
-    "className": "TfDataBotAlias",
+    "className": "DataTfBotAlias",
     "previous": "DataAwsLexBotAlias"
   },
   "data_aws_lex_intent": {
     "surface": "data_source",
     "group": "lex_model_building",
-    "className": "TfDataIntent",
+    "className": "DataTfIntent",
     "previous": "DataAwsLexIntent"
   },
   "data_aws_lex_slot_type": {
     "surface": "data_source",
     "group": "lex_model_building",
-    "className": "TfDataSlotType",
+    "className": "DataTfSlotType",
     "previous": "DataAwsLexSlotType"
   },
   "data_aws_licensemanager_grants": {
     "surface": "data_source",
     "group": "license_manager",
-    "className": "TfDataGrants",
+    "className": "DataTfGrants",
     "previous": "DataAwsLicensemanagerGrants"
   },
   "data_aws_licensemanager_received_license": {
     "surface": "data_source",
     "group": "license_manager",
-    "className": "TfDataReceivedLicense",
+    "className": "DataTfReceivedLicense",
     "previous": "DataAwsLicensemanagerReceivedLicense"
   },
   "data_aws_licensemanager_received_licenses": {
     "surface": "data_source",
     "group": "license_manager",
-    "className": "TfDataReceivedLicenses",
+    "className": "DataTfReceivedLicenses",
     "previous": "DataAwsLicensemanagerReceivedLicenses"
   },
   "data_aws_location_geofence_collection": {
     "surface": "data_source",
     "group": "location",
-    "className": "TfDataGeofenceCollection",
+    "className": "DataTfGeofenceCollection",
     "previous": "DataAwsLocationGeofenceCollection"
   },
   "data_aws_location_map": {
     "surface": "data_source",
     "group": "location",
-    "className": "TfDataMap",
+    "className": "DataTfMap",
     "previous": "DataAwsLocationMap"
   },
   "data_aws_location_place_index": {
     "surface": "data_source",
     "group": "location",
-    "className": "TfDataPlaceIndex",
+    "className": "DataTfPlaceIndex",
     "previous": "DataAwsLocationPlaceIndex"
   },
   "data_aws_location_route_calculator": {
     "surface": "data_source",
     "group": "location",
-    "className": "TfDataRouteCalculator",
+    "className": "DataTfRouteCalculator",
     "previous": "DataAwsLocationRouteCalculator"
   },
   "data_aws_location_tracker": {
     "surface": "data_source",
     "group": "location",
-    "className": "TfDataTracker",
+    "className": "DataTfTracker",
     "previous": "DataAwsLocationTracker"
   },
   "data_aws_location_tracker_association": {
     "surface": "data_source",
     "group": "location",
-    "className": "TfDataTrackerAssociation",
+    "className": "DataTfTrackerAssociation",
     "previous": "DataAwsLocationTrackerAssociation"
   },
   "data_aws_location_tracker_associations": {
     "surface": "data_source",
     "group": "location",
-    "className": "TfDataTrackerAssociations",
+    "className": "DataTfTrackerAssociations",
     "previous": "DataAwsLocationTrackerAssociations"
   },
   "data_aws_media_convert_queue": {
     "surface": "data_source",
     "group": "elemental_mediaconvert",
-    "className": "TfDataQueue",
+    "className": "DataTfQueue",
     "previous": "DataAwsMediaConvertQueue"
   },
   "data_aws_medialive_input": {
     "surface": "data_source",
     "group": "elemental_medialive",
-    "className": "TfDataInput",
+    "className": "DataTfInput",
     "previous": "DataAwsMedialiveInput"
   },
   "data_aws_memorydb_acl": {
     "surface": "data_source",
     "group": "memorydb",
-    "className": "TfDataAcl",
+    "className": "DataTfAcl",
     "previous": "DataAwsMemorydbAcl"
   },
   "data_aws_memorydb_cluster": {
     "surface": "data_source",
     "group": "memorydb",
-    "className": "TfDataCluster",
+    "className": "DataTfCluster",
     "previous": "DataAwsMemorydbCluster"
   },
   "data_aws_memorydb_parameter_group": {
     "surface": "data_source",
     "group": "memorydb",
-    "className": "TfDataParameterGroup",
+    "className": "DataTfParameterGroup",
     "previous": "DataAwsMemorydbParameterGroup"
   },
   "data_aws_memorydb_snapshot": {
     "surface": "data_source",
     "group": "memorydb",
-    "className": "TfDataSnapshot",
+    "className": "DataTfSnapshot",
     "previous": "DataAwsMemorydbSnapshot"
   },
   "data_aws_memorydb_subnet_group": {
     "surface": "data_source",
     "group": "memorydb",
-    "className": "TfDataSubnetGroup",
+    "className": "DataTfSubnetGroup",
     "previous": "DataAwsMemorydbSubnetGroup"
   },
   "data_aws_memorydb_user": {
     "surface": "data_source",
     "group": "memorydb",
-    "className": "TfDataUser",
+    "className": "DataTfUser",
     "previous": "DataAwsMemorydbUser"
   },
   "data_aws_mq_broker": {
     "surface": "data_source",
     "group": "mq",
-    "className": "TfDataBroker",
+    "className": "DataTfBroker",
     "previous": "DataAwsMqBroker"
   },
   "data_aws_mq_broker_engine_types": {
     "surface": "data_source",
     "group": "mq",
-    "className": "TfDataBrokerEngineTypes",
+    "className": "DataTfBrokerEngineTypes",
     "previous": "DataAwsMqBrokerEngineTypes"
   },
   "data_aws_mq_broker_instance_type_offerings": {
     "surface": "data_source",
     "group": "mq",
-    "className": "TfDataBrokerInstanceTypeOfferings",
+    "className": "DataTfBrokerInstanceTypeOfferings",
     "previous": "DataAwsMqBrokerInstanceTypeOfferings"
   },
   "data_aws_msk_bootstrap_brokers": {
     "surface": "data_source",
     "group": "msk",
-    "className": "TfDataBootstrapBrokers",
+    "className": "DataTfBootstrapBrokers",
     "previous": "DataAwsMskBootstrapBrokers"
   },
   "data_aws_msk_broker_nodes": {
     "surface": "data_source",
     "group": "msk",
-    "className": "TfDataBrokerNodes",
+    "className": "DataTfBrokerNodes",
     "previous": "DataAwsMskBrokerNodes"
   },
   "data_aws_msk_cluster": {
     "surface": "data_source",
     "group": "msk",
-    "className": "TfDataCluster",
+    "className": "DataTfCluster",
     "previous": "DataAwsMskCluster"
   },
   "data_aws_msk_configuration": {
     "surface": "data_source",
     "group": "msk",
-    "className": "TfDataConfiguration",
+    "className": "DataTfConfiguration",
     "previous": "DataAwsMskConfiguration"
   },
   "data_aws_msk_kafka_version": {
     "surface": "data_source",
     "group": "msk",
-    "className": "TfDataKafkaVersion",
+    "className": "DataTfKafkaVersion",
     "previous": "DataAwsMskKafkaVersion"
   },
   "data_aws_msk_topic": {
     "surface": "data_source",
     "group": "msk",
-    "className": "TfDataTopic",
+    "className": "DataTfTopic",
     "previous": "DataAwsMskTopic"
   },
   "data_aws_msk_vpc_connection": {
     "surface": "data_source",
     "group": "msk",
-    "className": "TfDataVpcConnection",
+    "className": "DataTfVpcConnection",
     "previous": "DataAwsMskVpcConnection"
   },
   "data_aws_mskconnect_connector": {
     "surface": "data_source",
     "group": "mskconnect",
-    "className": "TfDataConnector",
+    "className": "DataTfConnector",
     "previous": "DataAwsMskconnectConnector"
   },
   "data_aws_mskconnect_custom_plugin": {
     "surface": "data_source",
     "group": "mskconnect",
-    "className": "TfDataCustomPlugin",
+    "className": "DataTfCustomPlugin",
     "previous": "DataAwsMskconnectCustomPlugin"
   },
   "data_aws_mskconnect_worker_configuration": {
     "surface": "data_source",
     "group": "mskconnect",
-    "className": "TfDataWorkerConfiguration",
+    "className": "DataTfWorkerConfiguration",
     "previous": "DataAwsMskconnectWorkerConfiguration"
   },
   "data_aws_nat_gateway": {
     "surface": "data_source",
     "group": "vpc",
-    "className": "TfDataNatGateway",
+    "className": "DataTfNatGateway",
     "previous": "DataAwsNatGateway"
   },
   "data_aws_nat_gateways": {
     "surface": "data_source",
     "group": "vpc",
-    "className": "TfDataNatGateways",
+    "className": "DataTfNatGateways",
     "previous": "DataAwsNatGateways"
   },
   "data_aws_neptune_engine_version": {
     "surface": "data_source",
     "group": "neptune",
-    "className": "TfDataEngineVersion",
+    "className": "DataTfEngineVersion",
     "previous": "DataAwsNeptuneEngineVersion"
   },
   "data_aws_neptune_orderable_db_instance": {
     "surface": "data_source",
     "group": "neptune",
-    "className": "TfDataOrderableDbInstance",
+    "className": "DataTfOrderableDbInstance",
     "previous": "DataAwsNeptuneOrderableDbInstance"
   },
   "data_aws_network_acls": {
     "surface": "data_source",
     "group": "vpc",
-    "className": "TfDataNetworkAcls",
+    "className": "DataTfNetworkAcls",
     "previous": "DataAwsNetworkAcls"
   },
   "data_aws_network_interface": {
     "surface": "data_source",
     "group": "vpc",
-    "className": "TfDataNetworkInterface",
+    "className": "DataTfNetworkInterface",
     "previous": "DataAwsNetworkInterface"
   },
   "data_aws_network_interfaces": {
     "surface": "data_source",
     "group": "vpc",
-    "className": "TfDataNetworkInterfaces",
+    "className": "DataTfNetworkInterfaces",
     "previous": "DataAwsNetworkInterfaces"
   },
   "data_aws_networkfirewall_firewall": {
     "surface": "data_source",
     "group": "network_firewall",
-    "className": "TfDataFirewall",
+    "className": "DataTfFirewall",
     "previous": "DataAwsNetworkfirewallFirewall"
   },
   "data_aws_networkfirewall_firewall_policy": {
     "surface": "data_source",
     "group": "network_firewall",
-    "className": "TfDataFirewallPolicy",
+    "className": "DataTfFirewallPolicy",
     "previous": "DataAwsNetworkfirewallFirewallPolicy"
   },
   "data_aws_networkfirewall_resource_policy": {
     "surface": "data_source",
     "group": "network_firewall",
-    "className": "TfDataResourcePolicy",
+    "className": "DataTfResourcePolicy",
     "previous": "DataAwsNetworkfirewallResourcePolicy"
   },
   "data_aws_networkmanager_connection": {
     "surface": "data_source",
     "group": "network_manager",
-    "className": "TfDataConnection",
+    "className": "DataTfConnection",
     "previous": "DataAwsNetworkmanagerConnection"
   },
   "data_aws_networkmanager_connections": {
     "surface": "data_source",
     "group": "network_manager",
-    "className": "TfDataConnections",
+    "className": "DataTfConnections",
     "previous": "DataAwsNetworkmanagerConnections"
   },
   "data_aws_networkmanager_core_network": {
     "surface": "data_source",
     "group": "network_manager",
-    "className": "TfDataCoreNetwork",
+    "className": "DataTfCoreNetwork",
     "previous": "DataAwsNetworkmanagerCoreNetwork"
   },
   "data_aws_networkmanager_core_network_policy_document": {
     "surface": "data_source",
     "group": "network_manager",
-    "className": "TfDataCoreNetworkPolicyDocument",
+    "className": "DataTfCoreNetworkPolicyDocument",
     "previous": "DataAwsNetworkmanagerCoreNetworkPolicyDocument"
   },
   "data_aws_networkmanager_device": {
     "surface": "data_source",
     "group": "network_manager",
-    "className": "TfDataDevice",
+    "className": "DataTfDevice",
     "previous": "DataAwsNetworkmanagerDevice"
   },
   "data_aws_networkmanager_devices": {
     "surface": "data_source",
     "group": "network_manager",
-    "className": "TfDataDevices",
+    "className": "DataTfDevices",
     "previous": "DataAwsNetworkmanagerDevices"
   },
   "data_aws_networkmanager_global_network": {
     "surface": "data_source",
     "group": "network_manager",
-    "className": "TfDataGlobalNetwork",
+    "className": "DataTfGlobalNetwork",
     "previous": "DataAwsNetworkmanagerGlobalNetwork"
   },
   "data_aws_networkmanager_global_networks": {
     "surface": "data_source",
     "group": "network_manager",
-    "className": "TfDataGlobalNetworks",
+    "className": "DataTfGlobalNetworks",
     "previous": "DataAwsNetworkmanagerGlobalNetworks"
   },
   "data_aws_networkmanager_link": {
     "surface": "data_source",
     "group": "network_manager",
-    "className": "TfDataLink",
+    "className": "DataTfLink",
     "previous": "DataAwsNetworkmanagerLink"
   },
   "data_aws_networkmanager_links": {
     "surface": "data_source",
     "group": "network_manager",
-    "className": "TfDataLinks",
+    "className": "DataTfLinks",
     "previous": "DataAwsNetworkmanagerLinks"
   },
   "data_aws_networkmanager_site": {
     "surface": "data_source",
     "group": "network_manager",
-    "className": "TfDataSite",
+    "className": "DataTfSite",
     "previous": "DataAwsNetworkmanagerSite"
   },
   "data_aws_networkmanager_sites": {
     "surface": "data_source",
     "group": "network_manager",
-    "className": "TfDataSites",
+    "className": "DataTfSites",
     "previous": "DataAwsNetworkmanagerSites"
   },
   "data_aws_oam_link": {
     "surface": "data_source",
     "group": "oam",
-    "className": "TfDataLink",
+    "className": "DataTfLink",
     "previous": "DataAwsOamLink"
   },
   "data_aws_oam_links": {
     "surface": "data_source",
     "group": "oam",
-    "className": "TfDataLinks",
+    "className": "DataTfLinks",
     "previous": "DataAwsOamLinks"
   },
   "data_aws_oam_sink": {
     "surface": "data_source",
     "group": "oam",
-    "className": "TfDataSink",
+    "className": "DataTfSink",
     "previous": "DataAwsOamSink"
   },
   "data_aws_oam_sinks": {
     "surface": "data_source",
     "group": "oam",
-    "className": "TfDataSinks",
+    "className": "DataTfSinks",
     "previous": "DataAwsOamSinks"
   },
   "data_aws_odb_cloud_autonomous_vm_cluster": {
     "surface": "data_source",
     "group": "oracle_database_aws",
-    "className": "TfDataCloudAutonomousVmCluster",
+    "className": "DataTfCloudAutonomousVmCluster",
     "previous": "DataAwsOdbCloudAutonomousVmCluster"
   },
   "data_aws_odb_cloud_autonomous_vm_clusters": {
     "surface": "data_source",
     "group": "oracle_database_aws",
-    "className": "TfDataCloudAutonomousVmClusters",
+    "className": "DataTfCloudAutonomousVmClusters",
     "previous": "DataAwsOdbCloudAutonomousVmClusters"
   },
   "data_aws_odb_cloud_exadata_infrastructure": {
     "surface": "data_source",
     "group": "oracle_database_aws",
-    "className": "TfDataCloudExadataInfrastructure",
+    "className": "DataTfCloudExadataInfrastructure",
     "previous": "DataAwsOdbCloudExadataInfrastructure"
   },
   "data_aws_odb_cloud_exadata_infrastructures": {
     "surface": "data_source",
     "group": "oracle_database_aws",
-    "className": "TfDataCloudExadataInfrastructures",
+    "className": "DataTfCloudExadataInfrastructures",
     "previous": "DataAwsOdbCloudExadataInfrastructures"
   },
   "data_aws_odb_cloud_vm_cluster": {
     "surface": "data_source",
     "group": "oracle_database_aws",
-    "className": "TfDataCloudVmCluster",
+    "className": "DataTfCloudVmCluster",
     "previous": "DataAwsOdbCloudVmCluster"
   },
   "data_aws_odb_cloud_vm_clusters": {
     "surface": "data_source",
     "group": "oracle_database_aws",
-    "className": "TfDataCloudVmClusters",
+    "className": "DataTfCloudVmClusters",
     "previous": "DataAwsOdbCloudVmClusters"
   },
   "data_aws_odb_db_node": {
     "surface": "data_source",
     "group": "oracle_database_aws",
-    "className": "TfDataDbNode",
+    "className": "DataTfDbNode",
     "previous": "DataAwsOdbDbNode"
   },
   "data_aws_odb_db_nodes": {
     "surface": "data_source",
     "group": "oracle_database_aws",
-    "className": "TfDataDbNodes",
+    "className": "DataTfDbNodes",
     "previous": "DataAwsOdbDbNodes"
   },
   "data_aws_odb_db_server": {
     "surface": "data_source",
     "group": "oracle_database_aws",
-    "className": "TfDataDbServer",
+    "className": "DataTfDbServer",
     "previous": "DataAwsOdbDbServer"
   },
   "data_aws_odb_db_servers": {
     "surface": "data_source",
     "group": "oracle_database_aws",
-    "className": "TfDataDbServers",
+    "className": "DataTfDbServers",
     "previous": "DataAwsOdbDbServers"
   },
   "data_aws_odb_db_system_shapes": {
     "surface": "data_source",
     "group": "oracle_database_aws",
-    "className": "TfDataDbSystemShapes",
+    "className": "DataTfDbSystemShapes",
     "previous": "DataAwsOdbDbSystemShapes"
   },
   "data_aws_odb_gi_versions": {
     "surface": "data_source",
     "group": "oracle_database_aws",
-    "className": "TfDataGiVersions",
+    "className": "DataTfGiVersions",
     "previous": "DataAwsOdbGiVersions"
   },
   "data_aws_odb_iam_role_association": {
     "surface": "data_source",
     "group": "oracle_database_aws",
-    "className": "TfDataIamRoleAssociation",
+    "className": "DataTfIamRoleAssociation",
     "previous": "DataAwsOdbIamRoleAssociation"
   },
   "data_aws_odb_network": {
     "surface": "data_source",
     "group": "oracle_database_aws",
-    "className": "TfDataNetwork",
+    "className": "DataTfNetwork",
     "previous": "DataAwsOdbNetwork"
   },
   "data_aws_odb_network_peering_connection": {
     "surface": "data_source",
     "group": "oracle_database_aws",
-    "className": "TfDataNetworkPeeringConnection",
+    "className": "DataTfNetworkPeeringConnection",
     "previous": "DataAwsOdbNetworkPeeringConnection"
   },
   "data_aws_odb_network_peering_connections": {
     "surface": "data_source",
     "group": "oracle_database_aws",
-    "className": "TfDataNetworkPeeringConnections",
+    "className": "DataTfNetworkPeeringConnections",
     "previous": "DataAwsOdbNetworkPeeringConnections"
   },
   "data_aws_odb_networks": {
     "surface": "data_source",
     "group": "oracle_database_aws",
-    "className": "TfDataNetworks",
+    "className": "DataTfNetworks",
     "previous": "DataAwsOdbNetworks"
   },
   "data_aws_opensearch_domain": {
     "surface": "data_source",
     "group": "opensearch",
-    "className": "TfDataDomain",
+    "className": "DataTfDomain",
     "previous": "DataAwsOpensearchDomain"
   },
   "data_aws_opensearchserverless_access_policy": {
     "surface": "data_source",
     "group": "opensearch_serverless",
-    "className": "TfDataAccessPolicy",
+    "className": "DataTfAccessPolicy",
     "previous": "DataAwsOpensearchserverlessAccessPolicy"
   },
   "data_aws_opensearchserverless_collection": {
     "surface": "data_source",
     "group": "opensearch_serverless",
-    "className": "TfDataCollection",
+    "className": "DataTfCollection",
     "previous": "DataAwsOpensearchserverlessCollection"
   },
   "data_aws_opensearchserverless_collection_group": {
     "surface": "data_source",
     "group": "opensearch_serverless",
-    "className": "TfDataCollectionGroup",
+    "className": "DataTfCollectionGroup",
     "previous": "DataAwsOpensearchserverlessCollectionGroup"
   },
   "data_aws_opensearchserverless_collection_groups": {
     "surface": "data_source",
     "group": "opensearch_serverless",
-    "className": "TfDataCollectionGroups",
+    "className": "DataTfCollectionGroups",
     "previous": "DataAwsOpensearchserverlessCollectionGroups"
   },
   "data_aws_opensearchserverless_lifecycle_policy": {
     "surface": "data_source",
     "group": "opensearch_serverless",
-    "className": "TfDataLifecyclePolicy",
+    "className": "DataTfLifecyclePolicy",
     "previous": "DataAwsOpensearchserverlessLifecyclePolicy"
   },
   "data_aws_opensearchserverless_security_config": {
     "surface": "data_source",
     "group": "opensearch_serverless",
-    "className": "TfDataSecurityConfig",
+    "className": "DataTfSecurityConfig",
     "previous": "DataAwsOpensearchserverlessSecurityConfig"
   },
   "data_aws_opensearchserverless_security_policy": {
     "surface": "data_source",
     "group": "opensearch_serverless",
-    "className": "TfDataSecurityPolicy",
+    "className": "DataTfSecurityPolicy",
     "previous": "DataAwsOpensearchserverlessSecurityPolicy"
   },
   "data_aws_opensearchserverless_vpc_endpoint": {
     "surface": "data_source",
     "group": "opensearch_serverless",
-    "className": "TfDataVpcEndpoint",
+    "className": "DataTfVpcEndpoint",
     "previous": "DataAwsOpensearchserverlessVpcEndpoint"
   },
   "data_aws_organizations_account": {
     "surface": "data_source",
     "group": "organizations",
-    "className": "TfDataAccount",
+    "className": "DataTfAccount",
     "previous": "DataAwsOrganizationsAccount"
   },
   "data_aws_organizations_delegated_administrators": {
     "surface": "data_source",
     "group": "organizations",
-    "className": "TfDataDelegatedAdministrators",
+    "className": "DataTfDelegatedAdministrators",
     "previous": "DataAwsOrganizationsDelegatedAdministrators"
   },
   "data_aws_organizations_delegated_services": {
     "surface": "data_source",
     "group": "organizations",
-    "className": "TfDataDelegatedServices",
+    "className": "DataTfDelegatedServices",
     "previous": "DataAwsOrganizationsDelegatedServices"
   },
   "data_aws_organizations_entity_path": {
     "surface": "data_source",
     "group": "organizations",
-    "className": "TfDataEntityPath",
+    "className": "DataTfEntityPath",
     "previous": "DataAwsOrganizationsEntityPath"
   },
   "data_aws_organizations_organization": {
     "surface": "data_source",
     "group": "organizations",
-    "className": "TfDataOrganization",
+    "className": "DataTfOrganization",
     "previous": "DataAwsOrganizationsOrganization"
   },
   "data_aws_organizations_organizational_unit": {
     "surface": "data_source",
     "group": "organizations",
-    "className": "TfDataOrganizationalUnit",
+    "className": "DataTfOrganizationalUnit",
     "previous": "DataAwsOrganizationsOrganizationalUnit"
   },
   "data_aws_organizations_organizational_unit_child_accounts": {
     "surface": "data_source",
     "group": "organizations",
-    "className": "TfDataOrganizationalUnitChildAccounts",
+    "className": "DataTfOrganizationalUnitChildAccounts",
     "previous": "DataAwsOrganizationsOrganizationalUnitChildAccounts"
   },
   "data_aws_organizations_organizational_unit_descendant_accounts": {
     "surface": "data_source",
     "group": "organizations",
-    "className": "TfDataOrganizationalUnitDescendantAccounts",
+    "className": "DataTfOrganizationalUnitDescendantAccounts",
     "previous": "DataAwsOrganizationsOrganizationalUnitDescendantAccounts"
   },
   "data_aws_organizations_organizational_unit_descendant_organizational_units": {
     "surface": "data_source",
     "group": "organizations",
-    "className": "TfDataOrganizationalUnitDescendantOrganizationalUnits",
+    "className": "DataTfOrganizationalUnitDescendantOrganizationalUnits",
     "previous": "DataAwsOrganizationsOrganizationalUnitDescendantOrganizationalUnits"
   },
   "data_aws_organizations_organizational_units": {
     "surface": "data_source",
     "group": "organizations",
-    "className": "TfDataOrganizationalUnits",
+    "className": "DataTfOrganizationalUnits",
     "previous": "DataAwsOrganizationsOrganizationalUnits"
   },
   "data_aws_organizations_policies": {
     "surface": "data_source",
     "group": "organizations",
-    "className": "TfDataPolicies",
+    "className": "DataTfPolicies",
     "previous": "DataAwsOrganizationsPolicies"
   },
   "data_aws_organizations_policies_for_target": {
     "surface": "data_source",
     "group": "organizations",
-    "className": "TfDataPoliciesForTarget",
+    "className": "DataTfPoliciesForTarget",
     "previous": "DataAwsOrganizationsPoliciesForTarget"
   },
   "data_aws_organizations_policy": {
     "surface": "data_source",
     "group": "organizations",
-    "className": "TfDataPolicy",
+    "className": "DataTfPolicy",
     "previous": "DataAwsOrganizationsPolicy"
   },
   "data_aws_organizations_resource_tags": {
     "surface": "data_source",
     "group": "organizations",
-    "className": "TfDataResourceTags",
+    "className": "DataTfResourceTags",
     "previous": "DataAwsOrganizationsResourceTags"
   },
   "data_aws_outposts_asset": {
     "surface": "data_source",
     "group": "outposts",
-    "className": "TfDataAsset",
+    "className": "DataTfAsset",
     "previous": "DataAwsOutpostsAsset"
   },
   "data_aws_outposts_assets": {
     "surface": "data_source",
     "group": "outposts",
-    "className": "TfDataAssets",
+    "className": "DataTfAssets",
     "previous": "DataAwsOutpostsAssets"
   },
   "data_aws_outposts_outpost": {
     "surface": "data_source",
     "group": "outposts",
-    "className": "TfDataOutpost",
+    "className": "DataTfOutpost",
     "previous": "DataAwsOutpostsOutpost"
   },
   "data_aws_outposts_outpost_instance_type": {
     "surface": "data_source",
     "group": "outposts",
-    "className": "TfDataOutpostInstanceType",
+    "className": "DataTfOutpostInstanceType",
     "previous": "DataAwsOutpostsOutpostInstanceType"
   },
   "data_aws_outposts_outpost_instance_types": {
     "surface": "data_source",
     "group": "outposts",
-    "className": "TfDataOutpostInstanceTypes",
+    "className": "DataTfOutpostInstanceTypes",
     "previous": "DataAwsOutpostsOutpostInstanceTypes"
   },
   "data_aws_outposts_outposts": {
     "surface": "data_source",
     "group": "outposts",
-    "className": "TfDataOutposts",
+    "className": "DataTfOutposts",
     "previous": "DataAwsOutpostsOutposts"
   },
   "data_aws_outposts_site": {
     "surface": "data_source",
     "group": "outposts",
-    "className": "TfDataSite",
+    "className": "DataTfSite",
     "previous": "DataAwsOutpostsSite"
   },
   "data_aws_outposts_sites": {
     "surface": "data_source",
     "group": "outposts",
-    "className": "TfDataSites",
+    "className": "DataTfSites",
     "previous": "DataAwsOutpostsSites"
   },
   "data_aws_partition": {
     "surface": "data_source",
     "group": "meta_data_sources",
-    "className": "TfDataPartition",
+    "className": "DataTfPartition",
     "previous": "DataAwsPartition"
   },
   "data_aws_polly_voices": {
     "surface": "data_source",
     "group": "polly",
-    "className": "TfDataVoices",
+    "className": "DataTfVoices",
     "previous": "DataAwsPollyVoices"
   },
   "data_aws_prefix_list": {
     "surface": "data_source",
     "group": "vpc",
-    "className": "TfDataPrefixList",
+    "className": "DataTfPrefixList",
     "previous": "DataAwsPrefixList"
   },
   "data_aws_pricing_product": {
     "surface": "data_source",
     "group": "pricing_calculator",
-    "className": "TfDataProduct",
+    "className": "DataTfProduct",
     "previous": "DataAwsPricingProduct"
   },
   "data_aws_prometheus_default_scraper_configuration": {
     "surface": "data_source",
     "group": "amp",
-    "className": "TfDataDefaultScraperConfiguration",
+    "className": "DataTfDefaultScraperConfiguration",
     "previous": "DataAwsPrometheusDefaultScraperConfiguration"
   },
   "data_aws_prometheus_workspace": {
     "surface": "data_source",
     "group": "amp",
-    "className": "TfDataWorkspace",
+    "className": "DataTfWorkspace",
     "previous": "DataAwsPrometheusWorkspace"
   },
   "data_aws_prometheus_workspaces": {
     "surface": "data_source",
     "group": "amp",
-    "className": "TfDataWorkspaces",
+    "className": "DataTfWorkspaces",
     "previous": "DataAwsPrometheusWorkspaces"
   },
   "data_aws_qldb_ledger": {
     "surface": "data_source",
     "group": "qldb",
-    "className": "TfDataLedger",
+    "className": "DataTfLedger",
     "previous": "DataAwsQldbLedger"
   },
   "data_aws_quicksight_analysis": {
     "surface": "data_source",
     "group": "quicksight",
-    "className": "TfDataAnalysis",
+    "className": "DataTfAnalysis",
     "previous": "DataAwsQuicksightAnalysis"
   },
   "data_aws_quicksight_data_set": {
     "surface": "data_source",
     "group": "quicksight",
-    "className": "TfDataDataSet",
+    "className": "DataTfDataSet",
     "previous": "DataAwsQuicksightDataSet"
   },
   "data_aws_quicksight_group": {
     "surface": "data_source",
     "group": "quicksight",
-    "className": "TfDataGroup",
+    "className": "DataTfGroup",
     "previous": "DataAwsQuicksightGroup"
   },
   "data_aws_quicksight_theme": {
     "surface": "data_source",
     "group": "quicksight",
-    "className": "TfDataTheme",
+    "className": "DataTfTheme",
     "previous": "DataAwsQuicksightTheme"
   },
   "data_aws_quicksight_user": {
     "surface": "data_source",
     "group": "quicksight",
-    "className": "TfDataUser",
+    "className": "DataTfUser",
     "previous": "DataAwsQuicksightUser"
   },
   "data_aws_ram_resource_share": {
     "surface": "data_source",
     "group": "ram",
-    "className": "TfDataResourceShare",
+    "className": "DataTfResourceShare",
     "previous": "DataAwsRamResourceShare"
   },
   "data_aws_rds_certificate": {
     "surface": "data_source",
     "group": "rds",
-    "className": "TfDataCertificate",
+    "className": "DataTfCertificate",
     "previous": "DataAwsRdsCertificate"
   },
   "data_aws_rds_cluster": {
     "surface": "data_source",
     "group": "rds",
-    "className": "TfDataCluster",
+    "className": "DataTfCluster",
     "previous": "DataAwsRdsCluster"
   },
   "data_aws_rds_cluster_parameter_group": {
     "surface": "data_source",
     "group": "rds",
-    "className": "TfDataClusterParameterGroup",
+    "className": "DataTfClusterParameterGroup",
     "previous": "DataAwsRdsClusterParameterGroup"
   },
   "data_aws_rds_clusters": {
     "surface": "data_source",
     "group": "rds",
-    "className": "TfDataClusters",
+    "className": "DataTfClusters",
     "previous": "DataAwsRdsClusters"
   },
   "data_aws_rds_engine_version": {
     "surface": "data_source",
     "group": "rds",
-    "className": "TfDataEngineVersion",
+    "className": "DataTfEngineVersion",
     "previous": "DataAwsRdsEngineVersion"
   },
   "data_aws_rds_global_cluster": {
     "surface": "data_source",
     "group": "rds",
-    "className": "TfDataGlobalCluster",
+    "className": "DataTfGlobalCluster",
     "previous": "DataAwsRdsGlobalCluster"
   },
   "data_aws_rds_orderable_db_instance": {
     "surface": "data_source",
     "group": "rds",
-    "className": "TfDataOrderableDbInstance",
+    "className": "DataTfOrderableDbInstance",
     "previous": "DataAwsRdsOrderableDbInstance"
   },
   "data_aws_rds_reserved_instance_offering": {
     "surface": "data_source",
     "group": "rds",
-    "className": "TfDataReservedInstanceOffering",
+    "className": "DataTfReservedInstanceOffering",
     "previous": "DataAwsRdsReservedInstanceOffering"
   },
   "data_aws_rds_snapshots": {
     "surface": "data_source",
     "group": "rds",
-    "className": "TfDataSnapshots",
+    "className": "DataTfSnapshots",
     "previous": "DataAwsRdsSnapshots"
   },
   "data_aws_redshift_cluster": {
     "surface": "data_source",
     "group": "redshift",
-    "className": "TfDataCluster",
+    "className": "DataTfCluster",
     "previous": "DataAwsRedshiftCluster"
   },
   "data_aws_redshift_cluster_credentials": {
     "surface": "data_source",
     "group": "redshift",
-    "className": "TfDataClusterCredentials",
+    "className": "DataTfClusterCredentials",
     "previous": "DataAwsRedshiftClusterCredentials"
   },
   "data_aws_redshift_data_shares": {
     "surface": "data_source",
     "group": "redshift",
-    "className": "TfDataDataShares",
+    "className": "DataTfDataShares",
     "previous": "DataAwsRedshiftDataShares"
   },
   "data_aws_redshift_orderable_cluster": {
     "surface": "data_source",
     "group": "redshift",
-    "className": "TfDataOrderableCluster",
+    "className": "DataTfOrderableCluster",
     "previous": "DataAwsRedshiftOrderableCluster"
   },
   "data_aws_redshift_producer_data_shares": {
     "surface": "data_source",
     "group": "redshift",
-    "className": "TfDataProducerDataShares",
+    "className": "DataTfProducerDataShares",
     "previous": "DataAwsRedshiftProducerDataShares"
   },
   "data_aws_redshift_subnet_group": {
     "surface": "data_source",
     "group": "redshift",
-    "className": "TfDataSubnetGroup",
+    "className": "DataTfSubnetGroup",
     "previous": "DataAwsRedshiftSubnetGroup"
   },
   "data_aws_redshiftserverless_credentials": {
     "surface": "data_source",
     "group": "redshift_serverless",
-    "className": "TfDataCredentials",
+    "className": "DataTfCredentials",
     "previous": "DataAwsRedshiftserverlessCredentials"
   },
   "data_aws_redshiftserverless_namespace": {
     "surface": "data_source",
     "group": "redshift_serverless",
-    "className": "TfDataNamespace",
+    "className": "DataTfNamespace",
     "previous": "DataAwsRedshiftserverlessNamespace"
   },
   "data_aws_redshiftserverless_workgroup": {
     "surface": "data_source",
     "group": "redshift_serverless",
-    "className": "TfDataWorkgroup",
+    "className": "DataTfWorkgroup",
     "previous": "DataAwsRedshiftserverlessWorkgroup"
   },
   "data_aws_region": {
     "surface": "data_source",
     "group": "meta_data_sources",
-    "className": "TfDataRegion",
+    "className": "DataTfRegion",
     "previous": "DataAwsRegion"
   },
   "data_aws_regions": {
     "surface": "data_source",
     "group": "meta_data_sources",
-    "className": "TfDataRegions",
+    "className": "DataTfRegions",
     "previous": "DataAwsRegions"
   },
   "data_aws_resiliencehubv2_policy": {
     "surface": "data_source",
     "group": "resilience_hub_v2",
-    "className": "TfDataPolicy",
+    "className": "DataTfPolicy",
     "previous": "DataAwsResiliencehubv2Policy"
   },
   "data_aws_resiliencehubv2_service": {
     "surface": "data_source",
     "group": "resilience_hub_v2",
-    "className": "TfDataService",
+    "className": "DataTfService",
     "previous": "DataAwsResiliencehubv2Service"
   },
   "data_aws_resiliencehubv2_system": {
     "surface": "data_source",
     "group": "resilience_hub_v2",
-    "className": "TfDataSystem",
+    "className": "DataTfSystem",
     "previous": "DataAwsResiliencehubv2System"
   },
   "data_aws_resourceexplorer2_search": {
     "surface": "data_source",
     "group": "resource_explorer",
-    "className": "TfDataSearch",
+    "className": "DataTfSearch",
     "previous": "DataAwsResourceexplorer2Search"
   },
   "data_aws_resourcegroupstaggingapi_required_tags": {
     "surface": "data_source",
     "group": "resource_groups_tagging",
-    "className": "TfDataRequiredTags",
+    "className": "DataTfRequiredTags",
     "previous": "DataAwsResourcegroupstaggingapiRequiredTags"
   },
   "data_aws_resourcegroupstaggingapi_resources": {
     "surface": "data_source",
     "group": "resource_groups_tagging",
-    "className": "TfDataResources",
+    "className": "DataTfResources",
     "previous": "DataAwsResourcegroupstaggingapiResources"
   },
   "data_aws_route": {
     "surface": "data_source",
     "group": "vpc",
-    "className": "TfDataRoute",
+    "className": "DataTfRoute",
     "previous": "DataAwsRoute"
   },
   "data_aws_route53_delegation_set": {
     "surface": "data_source",
     "group": "route_53",
-    "className": "TfDataDelegationSet",
+    "className": "DataTfDelegationSet",
     "previous": "DataAwsRoute53DelegationSet"
   },
   "data_aws_route53_records": {
     "surface": "data_source",
     "group": "route_53",
-    "className": "TfDataRecords",
+    "className": "DataTfRecords",
     "previous": "DataAwsRoute53Records"
   },
   "data_aws_route53_resolver_endpoint": {
     "surface": "data_source",
     "group": "route_53_resolver",
-    "className": "TfDataResolverEndpoint",
+    "className": "DataTfResolverEndpoint",
     "previous": "DataAwsRoute53ResolverEndpoint"
   },
   "data_aws_route53_resolver_firewall_config": {
     "surface": "data_source",
     "group": "route_53_resolver",
-    "className": "TfDataResolverFirewallConfig",
+    "className": "DataTfResolverFirewallConfig",
     "previous": "DataAwsRoute53ResolverFirewallConfig"
   },
   "data_aws_route53_resolver_firewall_domain_list": {
     "surface": "data_source",
     "group": "route_53_resolver",
-    "className": "TfDataResolverFirewallDomainList",
+    "className": "DataTfResolverFirewallDomainList",
     "previous": "DataAwsRoute53ResolverFirewallDomainList"
   },
   "data_aws_route53_resolver_firewall_rule_group": {
     "surface": "data_source",
     "group": "route_53_resolver",
-    "className": "TfDataResolverFirewallRuleGroup",
+    "className": "DataTfResolverFirewallRuleGroup",
     "previous": "DataAwsRoute53ResolverFirewallRuleGroup"
   },
   "data_aws_route53_resolver_firewall_rule_group_association": {
     "surface": "data_source",
     "group": "route_53_resolver",
-    "className": "TfDataResolverFirewallRuleGroupAssociation",
+    "className": "DataTfResolverFirewallRuleGroupAssociation",
     "previous": "DataAwsRoute53ResolverFirewallRuleGroupAssociation"
   },
   "data_aws_route53_resolver_firewall_rules": {
     "surface": "data_source",
     "group": "route_53_resolver",
-    "className": "TfDataResolverFirewallRules",
+    "className": "DataTfResolverFirewallRules",
     "previous": "DataAwsRoute53ResolverFirewallRules"
   },
   "data_aws_route53_resolver_query_log_config": {
     "surface": "data_source",
     "group": "route_53_resolver",
-    "className": "TfDataResolverQueryLogConfig",
+    "className": "DataTfResolverQueryLogConfig",
     "previous": "DataAwsRoute53ResolverQueryLogConfig"
   },
   "data_aws_route53_resolver_rule": {
     "surface": "data_source",
     "group": "route_53_resolver",
-    "className": "TfDataResolverRule",
+    "className": "DataTfResolverRule",
     "previous": "DataAwsRoute53ResolverRule"
   },
   "data_aws_route53_resolver_rules": {
     "surface": "data_source",
     "group": "route_53_resolver",
-    "className": "TfDataResolverRules",
+    "className": "DataTfResolverRules",
     "previous": "DataAwsRoute53ResolverRules"
   },
   "data_aws_route53_traffic_policy_document": {
     "surface": "data_source",
     "group": "route_53",
-    "className": "TfDataTrafficPolicyDocument",
+    "className": "DataTfTrafficPolicyDocument",
     "previous": "DataAwsRoute53TrafficPolicyDocument"
   },
   "data_aws_route53_zone": {
     "surface": "data_source",
     "group": "route_53",
-    "className": "TfDataZone",
+    "className": "DataTfZone",
     "previous": "DataAwsRoute53Zone"
   },
   "data_aws_route53_zones": {
     "surface": "data_source",
     "group": "route_53",
-    "className": "TfDataZones",
+    "className": "DataTfZones",
     "previous": "DataAwsRoute53Zones"
   },
   "data_aws_route53profiles_profile": {
     "surface": "data_source",
     "group": "route_53_profiles",
-    "className": "TfDataProfile",
+    "className": "DataTfProfile",
     "previous": "DataAwsRoute53ProfilesProfile"
   },
   "data_aws_route53profiles_profiles": {
     "surface": "data_source",
     "group": "route_53_profiles",
-    "className": "TfDataProfiles",
+    "className": "DataTfProfiles",
     "previous": "DataAwsRoute53ProfilesProfiles"
   },
   "data_aws_route_table": {
     "surface": "data_source",
     "group": "vpc",
-    "className": "TfDataRouteTable",
+    "className": "DataTfRouteTable",
     "previous": "DataAwsRouteTable"
   },
   "data_aws_route_tables": {
     "surface": "data_source",
     "group": "vpc",
-    "className": "TfDataRouteTables",
+    "className": "DataTfRouteTables",
     "previous": "DataAwsRouteTables"
   },
   "data_aws_s3_access_point": {
     "surface": "data_source",
     "group": "s3_control",
-    "className": "TfDataS3AccessPoint",
+    "className": "DataTfS3AccessPoint",
     "previous": "DataAwsS3AccessPoint"
   },
   "data_aws_s3_account_public_access_block": {
     "surface": "data_source",
     "group": "s3_control",
-    "className": "TfDataS3AccountPublicAccessBlock",
+    "className": "DataTfS3AccountPublicAccessBlock",
     "previous": "DataAwsS3AccountPublicAccessBlock"
   },
   "data_aws_s3_bucket": {
     "surface": "data_source",
     "group": "s3",
-    "className": "TfDataBucket",
+    "className": "DataTfBucket",
     "previous": "DataAwsS3Bucket"
   },
   "data_aws_s3_bucket_notification": {
     "surface": "data_source",
     "group": "s3",
-    "className": "TfDataBucketNotification",
+    "className": "DataTfBucketNotification",
     "previous": "DataAwsS3BucketNotification"
   },
   "data_aws_s3_bucket_object": {
     "surface": "data_source",
     "group": "s3",
-    "className": "TfDataBucketObject",
+    "className": "DataTfBucketObject",
     "previous": "DataAwsS3BucketObject"
   },
   "data_aws_s3_bucket_object_lock_configuration": {
     "surface": "data_source",
     "group": "s3",
-    "className": "TfDataBucketObjectLockConfiguration",
+    "className": "DataTfBucketObjectLockConfiguration",
     "previous": "DataAwsS3BucketObjectLockConfiguration"
   },
   "data_aws_s3_bucket_objects": {
     "surface": "data_source",
     "group": "s3",
-    "className": "TfDataBucketObjects",
+    "className": "DataTfBucketObjects",
     "previous": "DataAwsS3BucketObjects"
   },
   "data_aws_s3_bucket_policy": {
     "surface": "data_source",
     "group": "s3",
-    "className": "TfDataBucketPolicy",
+    "className": "DataTfBucketPolicy",
     "previous": "DataAwsS3BucketPolicy"
   },
   "data_aws_s3_bucket_replication_configuration": {
     "surface": "data_source",
     "group": "s3",
-    "className": "TfDataBucketReplicationConfiguration",
+    "className": "DataTfBucketReplicationConfiguration",
     "previous": "DataAwsS3BucketReplicationConfiguration"
   },
   "data_aws_s3_buckets": {
     "surface": "data_source",
     "group": "s3",
-    "className": "TfDataBuckets",
+    "className": "DataTfBuckets",
     "previous": "DataAwsS3Buckets"
   },
   "data_aws_s3_directory_buckets": {
     "surface": "data_source",
     "group": "s3",
-    "className": "TfDataDirectoryBuckets",
+    "className": "DataTfDirectoryBuckets",
     "previous": "DataAwsS3DirectoryBuckets"
   },
   "data_aws_s3_object": {
     "surface": "data_source",
     "group": "s3",
-    "className": "TfDataObject",
+    "className": "DataTfObject",
     "previous": "DataAwsS3Object"
   },
   "data_aws_s3_objects": {
     "surface": "data_source",
     "group": "s3",
-    "className": "TfDataObjects",
+    "className": "DataTfObjects",
     "previous": "DataAwsS3Objects"
   },
   "data_aws_s3control_access_points": {
     "surface": "data_source",
     "group": "s3_control",
-    "className": "TfDataAccessPoints",
+    "className": "DataTfAccessPoints",
     "previous": "DataAwsS3ControlAccessPoints"
   },
   "data_aws_s3control_multi_region_access_point": {
     "surface": "data_source",
     "group": "s3_control",
-    "className": "TfDataMultiRegionAccessPoint",
+    "className": "DataTfMultiRegionAccessPoint",
     "previous": "DataAwsS3ControlMultiRegionAccessPoint"
   },
   "data_aws_s3control_multi_region_access_points": {
     "surface": "data_source",
     "group": "s3_control",
-    "className": "TfDataMultiRegionAccessPoints",
+    "className": "DataTfMultiRegionAccessPoints",
     "previous": "DataAwsS3ControlMultiRegionAccessPoints"
   },
   "data_aws_s3files_access_point": {
     "surface": "data_source",
     "group": "s3_files",
-    "className": "TfDataAccessPoint",
+    "className": "DataTfAccessPoint",
     "previous": "DataAwsS3FilesAccessPoint"
   },
   "data_aws_s3files_file_system": {
     "surface": "data_source",
     "group": "s3_files",
-    "className": "TfDataFileSystem",
+    "className": "DataTfFileSystem",
     "previous": "DataAwsS3FilesFileSystem"
   },
   "data_aws_s3files_file_systems": {
     "surface": "data_source",
     "group": "s3_files",
-    "className": "TfDataFileSystems",
+    "className": "DataTfFileSystems",
     "previous": "DataAwsS3FilesFileSystems"
   },
   "data_aws_s3files_mount_target": {
     "surface": "data_source",
     "group": "s3_files",
-    "className": "TfDataMountTarget",
+    "className": "DataTfMountTarget",
     "previous": "DataAwsS3FilesMountTarget"
   },
   "data_aws_sagemaker_prebuilt_ecr_image": {
     "surface": "data_source",
     "group": "sagemaker_ai",
-    "className": "TfDataPrebuiltEcrImage",
+    "className": "DataTfPrebuiltEcrImage",
     "previous": "DataAwsSagemakerPrebuiltEcrImage"
   },
   "data_aws_savingsplans_offerings": {
     "surface": "data_source",
     "group": "savings_plans",
-    "className": "TfDataOfferings",
+    "className": "DataTfOfferings",
     "previous": "DataAwsSavingsplansOfferings"
   },
   "data_aws_savingsplans_savings_plan": {
     "surface": "data_source",
     "group": "savings_plans",
-    "className": "TfDataSavingsPlan",
+    "className": "DataTfSavingsPlan",
     "previous": "DataAwsSavingsplansSavingsPlan"
   },
   "data_aws_secretsmanager_random_password": {
     "surface": "data_source",
     "group": "secrets_manager",
-    "className": "TfDataRandomPassword",
+    "className": "DataTfRandomPassword",
     "previous": "DataAwsSecretsmanagerRandomPassword"
   },
   "data_aws_secretsmanager_secret": {
     "surface": "data_source",
     "group": "secrets_manager",
-    "className": "TfDataSecret",
+    "className": "DataTfSecret",
     "previous": "DataAwsSecretsmanagerSecret"
   },
   "data_aws_secretsmanager_secret_rotation": {
     "surface": "data_source",
     "group": "secrets_manager",
-    "className": "TfDataSecretRotation",
+    "className": "DataTfSecretRotation",
     "previous": "DataAwsSecretsmanagerSecretRotation"
   },
   "data_aws_secretsmanager_secret_version": {
     "surface": "data_source",
     "group": "secrets_manager",
-    "className": "TfDataSecretVersion",
+    "className": "DataTfSecretVersion",
     "previous": "DataAwsSecretsmanagerSecretVersion"
   },
   "data_aws_secretsmanager_secret_versions": {
     "surface": "data_source",
     "group": "secrets_manager",
-    "className": "TfDataSecretVersions",
+    "className": "DataTfSecretVersions",
     "previous": "DataAwsSecretsmanagerSecretVersions"
   },
   "data_aws_secretsmanager_secrets": {
     "surface": "data_source",
     "group": "secrets_manager",
-    "className": "TfDataSecrets",
+    "className": "DataTfSecrets",
     "previous": "DataAwsSecretsmanagerSecrets"
   },
   "data_aws_security_group": {
     "surface": "data_source",
     "group": "vpc",
-    "className": "TfDataSecurityGroup",
+    "className": "DataTfSecurityGroup",
     "previous": "DataAwsSecurityGroup"
   },
   "data_aws_security_groups": {
     "surface": "data_source",
     "group": "vpc",
-    "className": "TfDataSecurityGroups",
+    "className": "DataTfSecurityGroups",
     "previous": "DataAwsSecurityGroups"
   },
   "data_aws_securityhub_enabled_standards": {
     "surface": "data_source",
     "group": "security_hub",
-    "className": "TfDataEnabledStandards",
+    "className": "DataTfEnabledStandards",
     "previous": "DataAwsSecurityhubEnabledStandards"
   },
   "data_aws_securityhub_security_controls": {
     "surface": "data_source",
     "group": "security_hub",
-    "className": "TfDataSecurityControls",
+    "className": "DataTfSecurityControls",
     "previous": "DataAwsSecurityhubSecurityControls"
   },
   "data_aws_securityhub_standards_control_associations": {
     "surface": "data_source",
     "group": "security_hub",
-    "className": "TfDataStandardsControlAssociations",
+    "className": "DataTfStandardsControlAssociations",
     "previous": "DataAwsSecurityhubStandardsControlAssociations"
   },
   "data_aws_serverlessapplicationrepository_application": {
     "surface": "data_source",
     "group": "serverlessrepo",
-    "className": "TfDataApplication",
+    "className": "DataTfApplication",
     "previous": "DataAwsServerlessapplicationrepositoryApplication"
   },
   "data_aws_service": {
     "surface": "data_source",
     "group": "meta_data_sources",
-    "className": "TfDataService",
+    "className": "DataTfService",
     "previous": "DataAwsService"
   },
   "data_aws_service_discovery_dns_namespace": {
     "surface": "data_source",
     "group": "cloud_map",
-    "className": "TfDataDnsNamespace",
+    "className": "DataTfDnsNamespace",
     "previous": "DataAwsServiceDiscoveryDnsNamespace"
   },
   "data_aws_service_discovery_http_namespace": {
     "surface": "data_source",
     "group": "cloud_map",
-    "className": "TfDataHttpNamespace",
+    "className": "DataTfHttpNamespace",
     "previous": "DataAwsServiceDiscoveryHttpNamespace"
   },
   "data_aws_service_discovery_service": {
     "surface": "data_source",
     "group": "cloud_map",
-    "className": "TfDataService",
+    "className": "DataTfService",
     "previous": "DataAwsServiceDiscoveryService"
   },
   "data_aws_service_principal": {
     "surface": "data_source",
     "group": "meta_data_sources",
-    "className": "TfDataServicePrincipal",
+    "className": "DataTfServicePrincipal",
     "previous": "DataAwsServicePrincipal"
   },
   "data_aws_servicecatalog_constraint": {
     "surface": "data_source",
     "group": "service_catalog",
-    "className": "TfDataConstraint",
+    "className": "DataTfConstraint",
     "previous": "DataAwsServicecatalogConstraint"
   },
   "data_aws_servicecatalog_launch_paths": {
     "surface": "data_source",
     "group": "service_catalog",
-    "className": "TfDataLaunchPaths",
+    "className": "DataTfLaunchPaths",
     "previous": "DataAwsServicecatalogLaunchPaths"
   },
   "data_aws_servicecatalog_portfolio": {
     "surface": "data_source",
     "group": "service_catalog",
-    "className": "TfDataPortfolio",
+    "className": "DataTfPortfolio",
     "previous": "DataAwsServicecatalogPortfolio"
   },
   "data_aws_servicecatalog_portfolio_constraints": {
     "surface": "data_source",
     "group": "service_catalog",
-    "className": "TfDataPortfolioConstraints",
+    "className": "DataTfPortfolioConstraints",
     "previous": "DataAwsServicecatalogPortfolioConstraints"
   },
   "data_aws_servicecatalog_product": {
     "surface": "data_source",
     "group": "service_catalog",
-    "className": "TfDataProduct",
+    "className": "DataTfProduct",
     "previous": "DataAwsServicecatalogProduct"
   },
   "data_aws_servicecatalog_provisioning_artifacts": {
     "surface": "data_source",
     "group": "service_catalog",
-    "className": "TfDataProvisioningArtifacts",
+    "className": "DataTfProvisioningArtifacts",
     "previous": "DataAwsServicecatalogProvisioningArtifacts"
   },
   "data_aws_servicecatalogappregistry_application": {
     "surface": "data_source",
     "group": "service_catalog_appregistry",
-    "className": "TfDataApplication",
+    "className": "DataTfApplication",
     "previous": "DataAwsServicecatalogappregistryApplication"
   },
   "data_aws_servicecatalogappregistry_attribute_group": {
     "surface": "data_source",
     "group": "service_catalog_appregistry",
-    "className": "TfDataAttributeGroup",
+    "className": "DataTfAttributeGroup",
     "previous": "DataAwsServicecatalogappregistryAttributeGroup"
   },
   "data_aws_servicecatalogappregistry_attribute_group_associations": {
     "surface": "data_source",
     "group": "service_catalog_appregistry",
-    "className": "TfDataAttributeGroupAssociations",
+    "className": "DataTfAttributeGroupAssociations",
     "previous": "DataAwsServicecatalogappregistryAttributeGroupAssociations"
   },
   "data_aws_servicequotas_service": {
     "surface": "data_source",
     "group": "service_quotas",
-    "className": "TfDataService",
+    "className": "DataTfService",
     "previous": "DataAwsServicequotasService"
   },
   "data_aws_servicequotas_service_quota": {
     "surface": "data_source",
     "group": "service_quotas",
-    "className": "TfDataServiceQuota",
+    "className": "DataTfServiceQuota",
     "previous": "DataAwsServicequotasServiceQuota"
   },
   "data_aws_servicequotas_templates": {
     "surface": "data_source",
     "group": "service_quotas",
-    "className": "TfDataTemplates",
+    "className": "DataTfTemplates",
     "previous": "DataAwsServicequotasTemplates"
   },
   "data_aws_ses_active_receipt_rule_set": {
     "surface": "data_source",
     "group": "ses",
-    "className": "TfDataActiveReceiptRuleSet",
+    "className": "DataTfActiveReceiptRuleSet",
     "previous": "DataAwsSesActiveReceiptRuleSet"
   },
   "data_aws_ses_domain_identity": {
     "surface": "data_source",
     "group": "ses",
-    "className": "TfDataDomainIdentity",
+    "className": "DataTfDomainIdentity",
     "previous": "DataAwsSesDomainIdentity"
   },
   "data_aws_ses_email_identity": {
     "surface": "data_source",
     "group": "ses",
-    "className": "TfDataEmailIdentity",
+    "className": "DataTfEmailIdentity",
     "previous": "DataAwsSesEmailIdentity"
   },
   "data_aws_sesv2_configuration_set": {
     "surface": "data_source",
     "group": "sesv2",
-    "className": "TfDataConfigurationSet",
+    "className": "DataTfConfigurationSet",
     "previous": "DataAwsSesv2ConfigurationSet"
   },
   "data_aws_sesv2_dedicated_ip_pool": {
     "surface": "data_source",
     "group": "sesv2",
-    "className": "TfDataDedicatedIpPool",
+    "className": "DataTfDedicatedIpPool",
     "previous": "DataAwsSesv2DedicatedIpPool"
   },
   "data_aws_sesv2_email_identity": {
     "surface": "data_source",
     "group": "sesv2",
-    "className": "TfDataEmailIdentity",
+    "className": "DataTfEmailIdentity",
     "previous": "DataAwsSesv2EmailIdentity"
   },
   "data_aws_sesv2_email_identity_mail_from_attributes": {
     "surface": "data_source",
     "group": "sesv2",
-    "className": "TfDataEmailIdentityMailFromAttributes",
+    "className": "DataTfEmailIdentityMailFromAttributes",
     "previous": "DataAwsSesv2EmailIdentityMailFromAttributes"
   },
   "data_aws_sfn_activity": {
     "surface": "data_source",
     "group": "sfn",
-    "className": "TfDataActivity",
+    "className": "DataTfActivity",
     "previous": "DataAwsSfnActivity"
   },
   "data_aws_sfn_alias": {
     "surface": "data_source",
     "group": "sfn",
-    "className": "TfDataAlias",
+    "className": "DataTfAlias",
     "previous": "DataAwsSfnAlias"
   },
   "data_aws_sfn_state_machine": {
     "surface": "data_source",
     "group": "sfn",
-    "className": "TfDataStateMachine",
+    "className": "DataTfStateMachine",
     "previous": "DataAwsSfnStateMachine"
   },
   "data_aws_sfn_state_machine_versions": {
     "surface": "data_source",
     "group": "sfn",
-    "className": "TfDataStateMachineVersions",
+    "className": "DataTfStateMachineVersions",
     "previous": "DataAwsSfnStateMachineVersions"
   },
   "data_aws_shield_protection": {
     "surface": "data_source",
     "group": "shield",
-    "className": "TfDataProtection",
+    "className": "DataTfProtection",
     "previous": "DataAwsShieldProtection"
   },
   "data_aws_signer_signing_job": {
     "surface": "data_source",
     "group": "signer",
-    "className": "TfDataSigningJob",
+    "className": "DataTfSigningJob",
     "previous": "DataAwsSignerSigningJob"
   },
   "data_aws_signer_signing_profile": {
     "surface": "data_source",
     "group": "signer",
-    "className": "TfDataSigningProfile",
+    "className": "DataTfSigningProfile",
     "previous": "DataAwsSignerSigningProfile"
   },
   "data_aws_sns_topic": {
     "surface": "data_source",
     "group": "sns",
-    "className": "TfDataTopic",
+    "className": "DataTfTopic",
     "previous": "DataAwsSnsTopic"
   },
   "data_aws_spot_datafeed_subscription": {
     "surface": "data_source",
     "group": "ec2",
-    "className": "TfDataSpotDatafeedSubscription",
+    "className": "DataTfSpotDatafeedSubscription",
     "previous": "DataAwsSpotDatafeedSubscription"
   },
   "data_aws_sqs_queue": {
     "surface": "data_source",
     "group": "sqs",
-    "className": "TfDataQueue",
+    "className": "DataTfQueue",
     "previous": "DataAwsSqsQueue"
   },
   "data_aws_sqs_queues": {
     "surface": "data_source",
     "group": "sqs",
-    "className": "TfDataQueues",
+    "className": "DataTfQueues",
     "previous": "DataAwsSqsQueues"
   },
   "data_aws_ssm_document": {
     "surface": "data_source",
     "group": "ssm",
-    "className": "TfDataDocument",
+    "className": "DataTfDocument",
     "previous": "DataAwsSsmDocument"
   },
   "data_aws_ssm_instances": {
     "surface": "data_source",
     "group": "ssm",
-    "className": "TfDataInstances",
+    "className": "DataTfInstances",
     "previous": "DataAwsSsmInstances"
   },
   "data_aws_ssm_maintenance_windows": {
     "surface": "data_source",
     "group": "ssm",
-    "className": "TfDataMaintenanceWindows",
+    "className": "DataTfMaintenanceWindows",
     "previous": "DataAwsSsmMaintenanceWindows"
   },
   "data_aws_ssm_parameter": {
     "surface": "data_source",
     "group": "ssm",
-    "className": "TfDataParameter",
+    "className": "DataTfParameter",
     "previous": "DataAwsSsmParameter"
   },
   "data_aws_ssm_parameters_by_path": {
     "surface": "data_source",
     "group": "ssm",
-    "className": "TfDataParametersByPath",
+    "className": "DataTfParametersByPath",
     "previous": "DataAwsSsmParametersByPath"
   },
   "data_aws_ssm_patch_baseline": {
     "surface": "data_source",
     "group": "ssm",
-    "className": "TfDataPatchBaseline",
+    "className": "DataTfPatchBaseline",
     "previous": "DataAwsSsmPatchBaseline"
   },
   "data_aws_ssm_patch_baselines": {
     "surface": "data_source",
     "group": "ssm",
-    "className": "TfDataPatchBaselines",
+    "className": "DataTfPatchBaselines",
     "previous": "DataAwsSsmPatchBaselines"
   },
   "data_aws_ssmcontacts_contact": {
     "surface": "data_source",
     "group": "ssm_contacts",
-    "className": "TfDataContact",
+    "className": "DataTfContact",
     "previous": "DataAwsSsmcontactsContact"
   },
   "data_aws_ssmcontacts_contact_channel": {
     "surface": "data_source",
     "group": "ssm_contacts",
-    "className": "TfDataContactChannel",
+    "className": "DataTfContactChannel",
     "previous": "DataAwsSsmcontactsContactChannel"
   },
   "data_aws_ssmcontacts_plan": {
     "surface": "data_source",
     "group": "ssm_contacts",
-    "className": "TfDataPlan",
+    "className": "DataTfPlan",
     "previous": "DataAwsSsmcontactsPlan"
   },
   "data_aws_ssmcontacts_rotation": {
     "surface": "data_source",
     "group": "ssm_contacts",
-    "className": "TfDataRotation",
+    "className": "DataTfRotation",
     "previous": "DataAwsSsmcontactsRotation"
   },
   "data_aws_ssmincidents_replication_set": {
     "surface": "data_source",
     "group": "ssm_incident_manager_incidents",
-    "className": "TfDataReplicationSet",
+    "className": "DataTfReplicationSet",
     "previous": "DataAwsSsmincidentsReplicationSet"
   },
   "data_aws_ssmincidents_response_plan": {
     "surface": "data_source",
     "group": "ssm_incident_manager_incidents",
-    "className": "TfDataResponsePlan",
+    "className": "DataTfResponsePlan",
     "previous": "DataAwsSsmincidentsResponsePlan"
   },
   "data_aws_ssoadmin_application": {
     "surface": "data_source",
     "group": "sso_admin",
-    "className": "TfDataApplication",
+    "className": "DataTfApplication",
     "previous": "DataAwsSsoadminApplication"
   },
   "data_aws_ssoadmin_application_assignments": {
     "surface": "data_source",
     "group": "sso_admin",
-    "className": "TfDataApplicationAssignments",
+    "className": "DataTfApplicationAssignments",
     "previous": "DataAwsSsoadminApplicationAssignments"
   },
   "data_aws_ssoadmin_application_providers": {
     "surface": "data_source",
     "group": "sso_admin",
-    "className": "TfDataApplicationProviders",
+    "className": "DataTfApplicationProviders",
     "previous": "DataAwsSsoadminApplicationProviders"
   },
   "data_aws_ssoadmin_instances": {
     "surface": "data_source",
     "group": "sso_admin",
-    "className": "TfDataInstances",
+    "className": "DataTfInstances",
     "previous": "DataAwsSsoadminInstances"
   },
   "data_aws_ssoadmin_permission_set": {
     "surface": "data_source",
     "group": "sso_admin",
-    "className": "TfDataPermissionSet",
+    "className": "DataTfPermissionSet",
     "previous": "DataAwsSsoadminPermissionSet"
   },
   "data_aws_ssoadmin_permission_sets": {
     "surface": "data_source",
     "group": "sso_admin",
-    "className": "TfDataPermissionSets",
+    "className": "DataTfPermissionSets",
     "previous": "DataAwsSsoadminPermissionSets"
   },
   "data_aws_ssoadmin_principal_application_assignments": {
     "surface": "data_source",
     "group": "sso_admin",
-    "className": "TfDataPrincipalApplicationAssignments",
+    "className": "DataTfPrincipalApplicationAssignments",
     "previous": "DataAwsSsoadminPrincipalApplicationAssignments"
   },
   "data_aws_storagegateway_local_disk": {
     "surface": "data_source",
     "group": "storage_gateway",
-    "className": "TfDataLocalDisk",
+    "className": "DataTfLocalDisk",
     "previous": "DataAwsStoragegatewayLocalDisk"
   },
   "data_aws_subnet": {
     "surface": "data_source",
     "group": "vpc",
-    "className": "TfDataSubnet",
+    "className": "DataTfSubnet",
     "previous": "DataAwsSubnet"
   },
   "data_aws_subnets": {
     "surface": "data_source",
     "group": "vpc",
-    "className": "TfDataSubnets",
+    "className": "DataTfSubnets",
     "previous": "DataAwsSubnets"
   },
   "data_aws_synthetics_runtime_version": {
     "surface": "data_source",
     "group": "cloudwatch_synthetics",
-    "className": "TfDataRuntimeVersion",
+    "className": "DataTfRuntimeVersion",
     "previous": "DataAwsSyntheticsRuntimeVersion"
   },
   "data_aws_synthetics_runtime_versions": {
     "surface": "data_source",
     "group": "cloudwatch_synthetics",
-    "className": "TfDataRuntimeVersions",
+    "className": "DataTfRuntimeVersions",
     "previous": "DataAwsSyntheticsRuntimeVersions"
   },
   "data_aws_timestreamwrite_database": {
     "surface": "data_source",
     "group": "timestream_write",
-    "className": "TfDataDatabase",
+    "className": "DataTfDatabase",
     "previous": "DataAwsTimestreamwriteDatabase"
   },
   "data_aws_timestreamwrite_table": {
     "surface": "data_source",
     "group": "timestream_write",
-    "className": "TfDataTable",
+    "className": "DataTfTable",
     "previous": "DataAwsTimestreamwriteTable"
   },
   "data_aws_transfer_connector": {
     "surface": "data_source",
     "group": "transfer_family",
-    "className": "TfDataConnector",
+    "className": "DataTfConnector",
     "previous": "DataAwsTransferConnector"
   },
   "data_aws_transfer_server": {
     "surface": "data_source",
     "group": "transfer_family",
-    "className": "TfDataServer",
+    "className": "DataTfServer",
     "previous": "DataAwsTransferServer"
   },
   "data_aws_uxc_services": {
     "surface": "data_source",
     "group": "user_experience_customization",
-    "className": "TfDataServices",
+    "className": "DataTfServices",
     "previous": "DataAwsUxcServices"
   },
   "data_aws_verifiedpermissions_policy_store": {
     "surface": "data_source",
     "group": "verified_permissions",
-    "className": "TfDataPolicyStore",
+    "className": "DataTfPolicyStore",
     "previous": "DataAwsVerifiedpermissionsPolicyStore"
   },
   "data_aws_vpc": {
     "surface": "data_source",
     "group": "vpc",
-    "className": "TfDataVpc",
+    "className": "DataTfVpc",
     "previous": "DataAwsVpc"
   },
   "data_aws_vpc_dhcp_options": {
     "surface": "data_source",
     "group": "vpc",
-    "className": "TfDataDhcpOptions",
+    "className": "DataTfDhcpOptions",
     "previous": "DataAwsVpcDhcpOptions"
   },
   "data_aws_vpc_endpoint": {
     "surface": "data_source",
     "group": "vpc",
-    "className": "TfDataEndpoint",
+    "className": "DataTfEndpoint",
     "previous": "DataAwsVpcEndpoint"
   },
   "data_aws_vpc_endpoint_associations": {
     "surface": "data_source",
     "group": "vpc",
-    "className": "TfDataEndpointAssociations",
+    "className": "DataTfEndpointAssociations",
     "previous": "DataAwsVpcEndpointAssociations"
   },
   "data_aws_vpc_endpoint_service": {
     "surface": "data_source",
     "group": "vpc",
-    "className": "TfDataEndpointService",
+    "className": "DataTfEndpointService",
     "previous": "DataAwsVpcEndpointService"
   },
   "data_aws_vpc_ipam": {
     "surface": "data_source",
     "group": "vpc_ipam",
-    "className": "TfDataVpcIpam",
+    "className": "DataTfVpcIpam",
     "previous": "DataAwsVpcIpam"
   },
   "data_aws_vpc_ipam_pool": {
     "surface": "data_source",
     "group": "vpc_ipam",
-    "className": "TfDataPool",
+    "className": "DataTfPool",
     "previous": "DataAwsVpcIpamPool"
   },
   "data_aws_vpc_ipam_pool_cidrs": {
     "surface": "data_source",
     "group": "vpc_ipam",
-    "className": "TfDataPoolCidrs",
+    "className": "DataTfPoolCidrs",
     "previous": "DataAwsVpcIpamPoolCidrs"
   },
   "data_aws_vpc_ipam_pools": {
     "surface": "data_source",
     "group": "vpc_ipam",
-    "className": "TfDataPools",
+    "className": "DataTfPools",
     "previous": "DataAwsVpcIpamPools"
   },
   "data_aws_vpc_ipam_preview_next_cidr": {
     "surface": "data_source",
     "group": "vpc_ipam",
-    "className": "TfDataPreviewNextCidr",
+    "className": "DataTfPreviewNextCidr",
     "previous": "DataAwsVpcIpamPreviewNextCidr"
   },
   "data_aws_vpc_ipams": {
     "surface": "data_source",
     "group": "vpc_ipam",
-    "className": "TfDataVpcIpams",
+    "className": "DataTfVpcIpams",
     "previous": "DataAwsVpcIpams"
   },
   "data_aws_vpc_peering_connection": {
     "surface": "data_source",
     "group": "vpc",
-    "className": "TfDataPeeringConnection",
+    "className": "DataTfPeeringConnection",
     "previous": "DataAwsVpcPeeringConnection"
   },
   "data_aws_vpc_peering_connections": {
     "surface": "data_source",
     "group": "vpc",
-    "className": "TfDataPeeringConnections",
+    "className": "DataTfPeeringConnections",
     "previous": "DataAwsVpcPeeringConnections"
   },
   "data_aws_vpc_security_group_rule": {
     "surface": "data_source",
     "group": "vpc",
-    "className": "TfDataSecurityGroupRule",
+    "className": "DataTfSecurityGroupRule",
     "previous": "DataAwsVpcSecurityGroupRule"
   },
   "data_aws_vpc_security_group_rules": {
     "surface": "data_source",
     "group": "vpc",
-    "className": "TfDataSecurityGroupRules",
+    "className": "DataTfSecurityGroupRules",
     "previous": "DataAwsVpcSecurityGroupRules"
   },
   "data_aws_vpclattice_auth_policy": {
     "surface": "data_source",
     "group": "vpc_lattice",
-    "className": "TfDataAuthPolicy",
+    "className": "DataTfAuthPolicy",
     "previous": "DataAwsVpclatticeAuthPolicy"
   },
   "data_aws_vpclattice_listener": {
     "surface": "data_source",
     "group": "vpc_lattice",
-    "className": "TfDataListener",
+    "className": "DataTfListener",
     "previous": "DataAwsVpclatticeListener"
   },
   "data_aws_vpclattice_resource_policy": {
     "surface": "data_source",
     "group": "vpc_lattice",
-    "className": "TfDataResourcePolicy",
+    "className": "DataTfResourcePolicy",
     "previous": "DataAwsVpclatticeResourcePolicy"
   },
   "data_aws_vpclattice_service": {
     "surface": "data_source",
     "group": "vpc_lattice",
-    "className": "TfDataService",
+    "className": "DataTfService",
     "previous": "DataAwsVpclatticeService"
   },
   "data_aws_vpclattice_service_network": {
     "surface": "data_source",
     "group": "vpc_lattice",
-    "className": "TfDataServiceNetwork",
+    "className": "DataTfServiceNetwork",
     "previous": "DataAwsVpclatticeServiceNetwork"
   },
   "data_aws_vpclattice_service_network_service_associations": {
     "surface": "data_source",
     "group": "vpc_lattice",
-    "className": "TfDataServiceNetworkServiceAssociations",
+    "className": "DataTfServiceNetworkServiceAssociations",
     "previous": "DataAwsVpclatticeServiceNetworkServiceAssociations"
   },
   "data_aws_vpcs": {
     "surface": "data_source",
     "group": "vpc",
-    "className": "TfDataVpcs",
+    "className": "DataTfVpcs",
     "previous": "DataAwsVpcs"
   },
   "data_aws_vpn_connection": {
     "surface": "data_source",
     "group": "vpn_site_to_site",
-    "className": "TfDataConnection",
+    "className": "DataTfConnection",
     "previous": "DataAwsVpnConnection"
   },
   "data_aws_vpn_gateway": {
     "surface": "data_source",
     "group": "vpn_site_to_site",
-    "className": "TfDataGateway",
+    "className": "DataTfGateway",
     "previous": "DataAwsVpnGateway"
   },
   "data_aws_waf_ipset": {
     "surface": "data_source",
     "group": "waf_classic",
-    "className": "TfDataIpset",
+    "className": "DataTfIpset",
     "previous": "DataAwsWafIpset"
   },
   "data_aws_waf_rate_based_rule": {
     "surface": "data_source",
     "group": "waf_classic",
-    "className": "TfDataRateBasedRule",
+    "className": "DataTfRateBasedRule",
     "previous": "DataAwsWafRateBasedRule"
   },
   "data_aws_waf_rule": {
     "surface": "data_source",
     "group": "waf_classic",
-    "className": "TfDataRule",
+    "className": "DataTfRule",
     "previous": "DataAwsWafRule"
   },
   "data_aws_waf_subscribed_rule_group": {
     "surface": "data_source",
     "group": "waf_classic",
-    "className": "TfDataSubscribedRuleGroup",
+    "className": "DataTfSubscribedRuleGroup",
     "previous": "DataAwsWafSubscribedRuleGroup"
   },
   "data_aws_waf_web_acl": {
     "surface": "data_source",
     "group": "waf_classic",
-    "className": "TfDataWebAcl",
+    "className": "DataTfWebAcl",
     "previous": "DataAwsWafWebAcl"
   },
   "data_aws_wafregional_ipset": {
     "surface": "data_source",
     "group": "waf_classic_regional",
-    "className": "TfDataIpset",
+    "className": "DataTfIpset",
     "previous": "DataAwsWafregionalIpset"
   },
   "data_aws_wafregional_rate_based_rule": {
     "surface": "data_source",
     "group": "waf_classic_regional",
-    "className": "TfDataRateBasedRule",
+    "className": "DataTfRateBasedRule",
     "previous": "DataAwsWafregionalRateBasedRule"
   },
   "data_aws_wafregional_rule": {
     "surface": "data_source",
     "group": "waf_classic_regional",
-    "className": "TfDataRule",
+    "className": "DataTfRule",
     "previous": "DataAwsWafregionalRule"
   },
   "data_aws_wafregional_subscribed_rule_group": {
     "surface": "data_source",
     "group": "waf_classic_regional",
-    "className": "TfDataSubscribedRuleGroup",
+    "className": "DataTfSubscribedRuleGroup",
     "previous": "DataAwsWafregionalSubscribedRuleGroup"
   },
   "data_aws_wafregional_web_acl": {
     "surface": "data_source",
     "group": "waf_classic_regional",
-    "className": "TfDataWebAcl",
+    "className": "DataTfWebAcl",
     "previous": "DataAwsWafregionalWebAcl"
   },
   "data_aws_wafv2_ip_set": {
     "surface": "data_source",
     "group": "waf",
-    "className": "TfDataIpSet",
+    "className": "DataTfIpSet",
     "previous": "DataAwsWafv2IpSet"
   },
   "data_aws_wafv2_managed_rule_group": {
     "surface": "data_source",
     "group": "waf",
-    "className": "TfDataManagedRuleGroup",
+    "className": "DataTfManagedRuleGroup",
     "previous": "DataAwsWafv2ManagedRuleGroup"
   },
   "data_aws_wafv2_regex_pattern_set": {
     "surface": "data_source",
     "group": "waf",
-    "className": "TfDataRegexPatternSet",
+    "className": "DataTfRegexPatternSet",
     "previous": "DataAwsWafv2RegexPatternSet"
   },
   "data_aws_wafv2_rule_group": {
     "surface": "data_source",
     "group": "waf",
-    "className": "TfDataRuleGroup",
+    "className": "DataTfRuleGroup",
     "previous": "DataAwsWafv2RuleGroup"
   },
   "data_aws_wafv2_web_acl": {
     "surface": "data_source",
     "group": "waf",
-    "className": "TfDataWebAcl",
+    "className": "DataTfWebAcl",
     "previous": "DataAwsWafv2WebAcl"
   },
   "data_aws_workspaces_bundle": {
     "surface": "data_source",
     "group": "workspaces",
-    "className": "TfDataBundle",
+    "className": "DataTfBundle",
     "previous": "DataAwsWorkspacesBundle"
   },
   "data_aws_workspaces_directory": {
     "surface": "data_source",
     "group": "workspaces",
-    "className": "TfDataDirectory",
+    "className": "DataTfDirectory",
     "previous": "DataAwsWorkspacesDirectory"
   },
   "data_aws_workspaces_image": {
     "surface": "data_source",
     "group": "workspaces",
-    "className": "TfDataImage",
+    "className": "DataTfImage",
     "previous": "DataAwsWorkspacesImage"
   },
   "data_aws_workspaces_workspace": {
     "surface": "data_source",
     "group": "workspaces",
-    "className": "TfDataWorkspace",
+    "className": "DataTfWorkspace",
     "previous": "DataAwsWorkspacesWorkspace"
   },
   "ephemeral_aws_cognito_identity_openid_token_for_developer_identity": {
     "surface": "ephemeral_resource",
     "group": "cognito_identity",
-    "className": "TfEphemeralOpenidTokenForDeveloperIdentity",
+    "className": "EphemeralTfOpenidTokenForDeveloperIdentity",
     "previous": "EphemeralAwsCognitoIdentityOpenidTokenForDeveloperIdentity"
   },
   "ephemeral_aws_ecr_authorization_token": {
     "surface": "ephemeral_resource",
     "group": "ecr",
-    "className": "TfEphemeralAuthorizationToken",
+    "className": "EphemeralTfAuthorizationToken",
     "previous": "EphemeralAwsEcrAuthorizationToken"
   },
   "ephemeral_aws_ecrpublic_authorization_token": {
     "surface": "ephemeral_resource",
     "group": "ecr_public",
-    "className": "TfEphemeralAuthorizationToken",
+    "className": "EphemeralTfAuthorizationToken",
     "previous": "EphemeralAwsEcrpublicAuthorizationToken"
   },
   "ephemeral_aws_eks_cluster_auth": {
     "surface": "ephemeral_resource",
     "group": "eks",
-    "className": "TfEphemeralClusterAuth",
+    "className": "EphemeralTfClusterAuth",
     "previous": "EphemeralAwsEksClusterAuth"
   },
   "ephemeral_aws_kms_secrets": {
     "surface": "ephemeral_resource",
     "group": "kms",
-    "className": "TfEphemeralSecrets",
+    "className": "EphemeralTfSecrets",
     "previous": "EphemeralAwsKmsSecrets"
   },
   "ephemeral_aws_lambda_invocation": {
     "surface": "ephemeral_resource",
     "group": "lambda",
-    "className": "TfEphemeralInvocation",
+    "className": "EphemeralTfInvocation",
     "previous": "EphemeralAwsLambdaInvocation"
   },
   "ephemeral_aws_secretsmanager_random_password": {
     "surface": "ephemeral_resource",
     "group": "secrets_manager",
-    "className": "TfEphemeralRandomPassword",
+    "className": "EphemeralTfRandomPassword",
     "previous": "EphemeralAwsSecretsmanagerRandomPassword"
   },
   "ephemeral_aws_secretsmanager_secret_version": {
     "surface": "ephemeral_resource",
     "group": "secrets_manager",
-    "className": "TfEphemeralSecretVersion",
+    "className": "EphemeralTfSecretVersion",
     "previous": "EphemeralAwsSecretsmanagerSecretVersion"
   },
   "ephemeral_aws_ssm_parameter": {
     "surface": "ephemeral_resource",
     "group": "ssm",
-    "className": "TfEphemeralParameter",
+    "className": "EphemeralTfParameter",
     "previous": "EphemeralAwsSsmParameter"
   },
   "ephemeral_aws_sts_web_identity_token": {
     "surface": "ephemeral_resource",
     "group": "sts",
-    "className": "TfEphemeralWebIdentityToken",
+    "className": "EphemeralTfWebIdentityToken",
     "previous": "EphemeralAwsStsWebIdentityToken"
   }
 }

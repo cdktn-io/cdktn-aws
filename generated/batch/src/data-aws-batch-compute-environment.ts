@@ -5,26 +5,26 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataComputeEnvironmentConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfComputeEnvironmentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/batch_compute_environment#id TfDataComputeEnvironment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/batch_compute_environment#id DataTfComputeEnvironment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/batch_compute_environment#name TfDataComputeEnvironment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/batch_compute_environment#name DataTfComputeEnvironment#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/batch_compute_environment#region TfDataComputeEnvironment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/batch_compute_environment#region DataTfComputeEnvironment#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/batch_compute_environment#tags TfDataComputeEnvironment#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/batch_compute_environment#tags DataTfComputeEnvironment#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -32,7 +32,7 @@ export interface TfDataComputeEnvironmentConfig extends cdktn.TerraformMetaArgum
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/batch_compute_environment aws_batch_compute_environment}
 */
-export class TfDataComputeEnvironment extends cdktn.TerraformDataSource {
+export class DataTfComputeEnvironment extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class TfDataComputeEnvironment extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataComputeEnvironment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfComputeEnvironment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataComputeEnvironment to import
-  * @param importFromId The id of the existing TfDataComputeEnvironment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/batch_compute_environment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataComputeEnvironment to import is found
+  * @param importToId The construct id used in the generated config for the DataTfComputeEnvironment to import
+  * @param importFromId The id of the existing DataTfComputeEnvironment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/batch_compute_environment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfComputeEnvironment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_batch_compute_environment", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class TfDataComputeEnvironment extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataComputeEnvironmentConfig
+  * @param options DataTfComputeEnvironmentConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataComputeEnvironmentConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfComputeEnvironmentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_batch_compute_environment',
       terraformGeneratorMetadata: {
@@ -187,7 +187,7 @@ export class TfDataComputeEnvironment extends cdktn.TerraformDataSource {
   }
 
   // update_policy - computed: true, optional: false, required: false
-  private _updatePolicy = new TfDataComputeEnvironment.UpdatePolicyPropertyList(this, "update_policy", false);
+  private _updatePolicy = new DataTfComputeEnvironment.UpdatePolicyPropertyList(this, "update_policy", false);
   public get updatePolicy() {
     return this._updatePolicy;
   }
@@ -238,7 +238,7 @@ export class TfDataComputeEnvironment extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataComputeEnvironmentUpdatePolicyPropertyToTerraform(struct?: TfDataComputeEnvironment.UpdatePolicyProperty): any {
+export function dataTfComputeEnvironmentUpdatePolicyPropertyToTerraform(struct?: DataTfComputeEnvironment.UpdatePolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -248,7 +248,7 @@ export function tfDataComputeEnvironmentUpdatePolicyPropertyToTerraform(struct?:
 }
 
 
-export function tfDataComputeEnvironmentUpdatePolicyPropertyToHclTerraform(struct?: TfDataComputeEnvironment.UpdatePolicyProperty): any {
+export function dataTfComputeEnvironmentUpdatePolicyPropertyToHclTerraform(struct?: DataTfComputeEnvironment.UpdatePolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -259,7 +259,7 @@ export function tfDataComputeEnvironmentUpdatePolicyPropertyToHclTerraform(struc
 }
 
 
-export namespace TfDataComputeEnvironment {
+export namespace DataTfComputeEnvironment {
 export interface UpdatePolicyProperty {
 }
 export class UpdatePolicyPropertyOutputReference extends cdktn.ComplexObject {

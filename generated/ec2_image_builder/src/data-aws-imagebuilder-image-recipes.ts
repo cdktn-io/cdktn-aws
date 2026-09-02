@@ -5,36 +5,36 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataImageRecipesConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfImageRecipesConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_image_recipes#id TfDataImageRecipes#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_image_recipes#id DataTfImageRecipes#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_image_recipes#owner TfDataImageRecipes#owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_image_recipes#owner DataTfImageRecipes#owner}
   */
   readonly owner?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_image_recipes#region TfDataImageRecipes#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_image_recipes#region DataTfImageRecipes#region}
   */
   readonly region?: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_image_recipes#filter TfDataImageRecipes#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_image_recipes#filter DataTfImageRecipes#filter}
   */
-  readonly filter?: TfDataImageRecipes.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataTfImageRecipes.FilterProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_image_recipes aws_imagebuilder_image_recipes}
 */
-export class TfDataImageRecipes extends cdktn.TerraformDataSource {
+export class DataTfImageRecipes extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class TfDataImageRecipes extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataImageRecipes resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfImageRecipes resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataImageRecipes to import
-  * @param importFromId The id of the existing TfDataImageRecipes that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_image_recipes#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataImageRecipes to import is found
+  * @param importToId The construct id used in the generated config for the DataTfImageRecipes to import
+  * @param importFromId The id of the existing DataTfImageRecipes that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_image_recipes#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfImageRecipes to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_imagebuilder_image_recipes", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class TfDataImageRecipes extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataImageRecipesConfig = {}
+  * @param options DataTfImageRecipesConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataImageRecipesConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfImageRecipesConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_imagebuilder_image_recipes',
       terraformGeneratorMetadata: {
@@ -151,11 +151,11 @@ export class TfDataImageRecipes extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new TfDataImageRecipes.FilterPropertyList(this, "filter", true);
+  private _filter = new DataTfImageRecipes.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: TfDataImageRecipes.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataTfImageRecipes.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -175,7 +175,7 @@ export class TfDataImageRecipes extends cdktn.TerraformDataSource {
       id: cdktn.stringToTerraform(this._id),
       owner: cdktn.stringToTerraform(this._owner),
       region: cdktn.stringToTerraform(this._region),
-      filter: cdktn.listMapper(tfDataImageRecipesFilterPropertyToTerraform, true)(this._filter.internalValue),
+      filter: cdktn.listMapper(dataTfImageRecipesFilterPropertyToTerraform, true)(this._filter.internalValue),
     };
   }
 
@@ -200,10 +200,10 @@ export class TfDataImageRecipes extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       filter: {
-        value: cdktn.listMapperHcl(tfDataImageRecipesFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataTfImageRecipesFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfDataImageRecipes.FilterPropertyList",
+        storageClassType: "DataTfImageRecipes.FilterPropertyList",
       },
     };
 
@@ -212,7 +212,7 @@ export class TfDataImageRecipes extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataImageRecipesFilterPropertyToTerraform(struct?: TfDataImageRecipes.FilterProperty | cdktn.IResolvable): any {
+export function dataTfImageRecipesFilterPropertyToTerraform(struct?: DataTfImageRecipes.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -224,7 +224,7 @@ export function tfDataImageRecipesFilterPropertyToTerraform(struct?: TfDataImage
 }
 
 
-export function tfDataImageRecipesFilterPropertyToHclTerraform(struct?: TfDataImageRecipes.FilterProperty | cdktn.IResolvable): any {
+export function dataTfImageRecipesFilterPropertyToHclTerraform(struct?: DataTfImageRecipes.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -249,14 +249,14 @@ export function tfDataImageRecipesFilterPropertyToHclTerraform(struct?: TfDataIm
 }
 
 
-export namespace TfDataImageRecipes {
+export namespace DataTfImageRecipes {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_image_recipes#name TfDataImageRecipes#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_image_recipes#name DataTfImageRecipes#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_image_recipes#values TfDataImageRecipes#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_image_recipes#values DataTfImageRecipes#values}
   */
   readonly values: string[];
 }

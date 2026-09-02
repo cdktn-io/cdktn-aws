@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataWorkgroupConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfWorkgroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/redshiftserverless_workgroup#id TfDataWorkgroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/redshiftserverless_workgroup#id DataTfWorkgroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,11 +16,11 @@ export interface TfDataWorkgroupConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/redshiftserverless_workgroup#region TfDataWorkgroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/redshiftserverless_workgroup#region DataTfWorkgroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/redshiftserverless_workgroup#workgroup_name TfDataWorkgroup#workgroup_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/redshiftserverless_workgroup#workgroup_name DataTfWorkgroup#workgroup_name}
   */
   readonly workgroupName: string;
 }
@@ -28,7 +28,7 @@ export interface TfDataWorkgroupConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/redshiftserverless_workgroup aws_redshiftserverless_workgroup}
 */
-export class TfDataWorkgroup extends cdktn.TerraformDataSource {
+export class DataTfWorkgroup extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class TfDataWorkgroup extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataWorkgroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfWorkgroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataWorkgroup to import
-  * @param importFromId The id of the existing TfDataWorkgroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/redshiftserverless_workgroup#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataWorkgroup to import is found
+  * @param importToId The construct id used in the generated config for the DataTfWorkgroup to import
+  * @param importFromId The id of the existing DataTfWorkgroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/redshiftserverless_workgroup#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfWorkgroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_redshiftserverless_workgroup", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class TfDataWorkgroup extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataWorkgroupConfig
+  * @param options DataTfWorkgroupConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataWorkgroupConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfWorkgroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_redshiftserverless_workgroup',
       terraformGeneratorMetadata: {
@@ -91,7 +91,7 @@ export class TfDataWorkgroup extends cdktn.TerraformDataSource {
   }
 
   // endpoint - computed: true, optional: false, required: false
-  private _endpoint = new TfDataWorkgroup.EndpointPropertyList(this, "endpoint", false);
+  private _endpoint = new DataTfWorkgroup.EndpointPropertyList(this, "endpoint", false);
   public get endpoint() {
     return this._endpoint;
   }
@@ -215,7 +215,7 @@ export class TfDataWorkgroup extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataWorkgroupNetworkInterfacePropertyToTerraform(struct?: TfDataWorkgroup.NetworkInterfaceProperty): any {
+export function dataTfWorkgroupNetworkInterfacePropertyToTerraform(struct?: DataTfWorkgroup.NetworkInterfaceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -225,7 +225,7 @@ export function tfDataWorkgroupNetworkInterfacePropertyToTerraform(struct?: TfDa
 }
 
 
-export function tfDataWorkgroupNetworkInterfacePropertyToHclTerraform(struct?: TfDataWorkgroup.NetworkInterfaceProperty): any {
+export function dataTfWorkgroupNetworkInterfacePropertyToHclTerraform(struct?: DataTfWorkgroup.NetworkInterfaceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -236,7 +236,7 @@ export function tfDataWorkgroupNetworkInterfacePropertyToHclTerraform(struct?: T
 }
 
 
-export function tfDataWorkgroupVpcEndpointPropertyToTerraform(struct?: TfDataWorkgroup.VpcEndpointProperty): any {
+export function dataTfWorkgroupVpcEndpointPropertyToTerraform(struct?: DataTfWorkgroup.VpcEndpointProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -246,7 +246,7 @@ export function tfDataWorkgroupVpcEndpointPropertyToTerraform(struct?: TfDataWor
 }
 
 
-export function tfDataWorkgroupVpcEndpointPropertyToHclTerraform(struct?: TfDataWorkgroup.VpcEndpointProperty): any {
+export function dataTfWorkgroupVpcEndpointPropertyToHclTerraform(struct?: DataTfWorkgroup.VpcEndpointProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -257,7 +257,7 @@ export function tfDataWorkgroupVpcEndpointPropertyToHclTerraform(struct?: TfData
 }
 
 
-export function tfDataWorkgroupEndpointPropertyToTerraform(struct?: TfDataWorkgroup.EndpointProperty): any {
+export function dataTfWorkgroupEndpointPropertyToTerraform(struct?: DataTfWorkgroup.EndpointProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -267,7 +267,7 @@ export function tfDataWorkgroupEndpointPropertyToTerraform(struct?: TfDataWorkgr
 }
 
 
-export function tfDataWorkgroupEndpointPropertyToHclTerraform(struct?: TfDataWorkgroup.EndpointProperty): any {
+export function dataTfWorkgroupEndpointPropertyToHclTerraform(struct?: DataTfWorkgroup.EndpointProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -278,7 +278,7 @@ export function tfDataWorkgroupEndpointPropertyToHclTerraform(struct?: TfDataWor
 }
 
 
-export namespace TfDataWorkgroup {
+export namespace DataTfWorkgroup {
 export interface NetworkInterfaceProperty {
 }
 export class NetworkInterfacePropertyOutputReference extends cdktn.ComplexObject {

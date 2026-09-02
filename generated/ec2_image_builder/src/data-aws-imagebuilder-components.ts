@@ -5,36 +5,36 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataComponentsConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfComponentsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_components#id TfDataComponents#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_components#id DataTfComponents#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_components#owner TfDataComponents#owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_components#owner DataTfComponents#owner}
   */
   readonly owner?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_components#region TfDataComponents#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_components#region DataTfComponents#region}
   */
   readonly region?: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_components#filter TfDataComponents#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_components#filter DataTfComponents#filter}
   */
-  readonly filter?: TfDataComponents.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataTfComponents.FilterProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_components aws_imagebuilder_components}
 */
-export class TfDataComponents extends cdktn.TerraformDataSource {
+export class DataTfComponents extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class TfDataComponents extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataComponents resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfComponents resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataComponents to import
-  * @param importFromId The id of the existing TfDataComponents that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_components#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataComponents to import is found
+  * @param importToId The construct id used in the generated config for the DataTfComponents to import
+  * @param importFromId The id of the existing DataTfComponents that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_components#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfComponents to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_imagebuilder_components", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class TfDataComponents extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataComponentsConfig = {}
+  * @param options DataTfComponentsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataComponentsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfComponentsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_imagebuilder_components',
       terraformGeneratorMetadata: {
@@ -151,11 +151,11 @@ export class TfDataComponents extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new TfDataComponents.FilterPropertyList(this, "filter", true);
+  private _filter = new DataTfComponents.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: TfDataComponents.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataTfComponents.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -175,7 +175,7 @@ export class TfDataComponents extends cdktn.TerraformDataSource {
       id: cdktn.stringToTerraform(this._id),
       owner: cdktn.stringToTerraform(this._owner),
       region: cdktn.stringToTerraform(this._region),
-      filter: cdktn.listMapper(tfDataComponentsFilterPropertyToTerraform, true)(this._filter.internalValue),
+      filter: cdktn.listMapper(dataTfComponentsFilterPropertyToTerraform, true)(this._filter.internalValue),
     };
   }
 
@@ -200,10 +200,10 @@ export class TfDataComponents extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       filter: {
-        value: cdktn.listMapperHcl(tfDataComponentsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataTfComponentsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfDataComponents.FilterPropertyList",
+        storageClassType: "DataTfComponents.FilterPropertyList",
       },
     };
 
@@ -212,7 +212,7 @@ export class TfDataComponents extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataComponentsFilterPropertyToTerraform(struct?: TfDataComponents.FilterProperty | cdktn.IResolvable): any {
+export function dataTfComponentsFilterPropertyToTerraform(struct?: DataTfComponents.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -224,7 +224,7 @@ export function tfDataComponentsFilterPropertyToTerraform(struct?: TfDataCompone
 }
 
 
-export function tfDataComponentsFilterPropertyToHclTerraform(struct?: TfDataComponents.FilterProperty | cdktn.IResolvable): any {
+export function dataTfComponentsFilterPropertyToHclTerraform(struct?: DataTfComponents.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -249,14 +249,14 @@ export function tfDataComponentsFilterPropertyToHclTerraform(struct?: TfDataComp
 }
 
 
-export namespace TfDataComponents {
+export namespace DataTfComponents {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_components#name TfDataComponents#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_components#name DataTfComponents#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_components#values TfDataComponents#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_components#values DataTfComponents#values}
   */
   readonly values: string[];
 }

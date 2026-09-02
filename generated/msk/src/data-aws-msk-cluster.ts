@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataClusterConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfClusterConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/msk_cluster#cluster_name TfDataCluster#cluster_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/msk_cluster#cluster_name DataTfCluster#cluster_name}
   */
   readonly clusterName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/msk_cluster#id TfDataCluster#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/msk_cluster#id DataTfCluster#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,11 +20,11 @@ export interface TfDataClusterConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/msk_cluster#region TfDataCluster#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/msk_cluster#region DataTfCluster#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/msk_cluster#tags TfDataCluster#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/msk_cluster#tags DataTfCluster#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -32,7 +32,7 @@ export interface TfDataClusterConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/msk_cluster aws_msk_cluster}
 */
-export class TfDataCluster extends cdktn.TerraformDataSource {
+export class DataTfCluster extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class TfDataCluster extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataCluster resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfCluster resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataCluster to import
-  * @param importFromId The id of the existing TfDataCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/msk_cluster#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataCluster to import is found
+  * @param importToId The construct id used in the generated config for the DataTfCluster to import
+  * @param importFromId The id of the existing DataTfCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/msk_cluster#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfCluster to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_msk_cluster", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class TfDataCluster extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataClusterConfig
+  * @param options DataTfClusterConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataClusterConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfClusterConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_msk_cluster',
       terraformGeneratorMetadata: {
@@ -131,7 +131,7 @@ export class TfDataCluster extends cdktn.TerraformDataSource {
   }
 
   // broker_node_group_info - computed: true, optional: false, required: false
-  private _brokerNodeGroupInfo = new TfDataCluster.BrokerNodeGroupInfoPropertyList(this, "broker_node_group_info", false);
+  private _brokerNodeGroupInfo = new DataTfCluster.BrokerNodeGroupInfoPropertyList(this, "broker_node_group_info", false);
   public get brokerNodeGroupInfo() {
     return this._brokerNodeGroupInfo;
   }
@@ -273,7 +273,7 @@ export class TfDataCluster extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataClusterPublicAccessPropertyToTerraform(struct?: TfDataCluster.PublicAccessProperty): any {
+export function dataTfClusterPublicAccessPropertyToTerraform(struct?: DataTfCluster.PublicAccessProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -283,7 +283,7 @@ export function tfDataClusterPublicAccessPropertyToTerraform(struct?: TfDataClus
 }
 
 
-export function tfDataClusterPublicAccessPropertyToHclTerraform(struct?: TfDataCluster.PublicAccessProperty): any {
+export function dataTfClusterPublicAccessPropertyToHclTerraform(struct?: DataTfCluster.PublicAccessProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -294,7 +294,7 @@ export function tfDataClusterPublicAccessPropertyToHclTerraform(struct?: TfDataC
 }
 
 
-export function tfDataClusterSaslPropertyToTerraform(struct?: TfDataCluster.SaslProperty): any {
+export function dataTfClusterSaslPropertyToTerraform(struct?: DataTfCluster.SaslProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -304,7 +304,7 @@ export function tfDataClusterSaslPropertyToTerraform(struct?: TfDataCluster.Sasl
 }
 
 
-export function tfDataClusterSaslPropertyToHclTerraform(struct?: TfDataCluster.SaslProperty): any {
+export function dataTfClusterSaslPropertyToHclTerraform(struct?: DataTfCluster.SaslProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -315,7 +315,7 @@ export function tfDataClusterSaslPropertyToHclTerraform(struct?: TfDataCluster.S
 }
 
 
-export function tfDataClusterClientAuthenticationPropertyToTerraform(struct?: TfDataCluster.ClientAuthenticationProperty): any {
+export function dataTfClusterClientAuthenticationPropertyToTerraform(struct?: DataTfCluster.ClientAuthenticationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -325,7 +325,7 @@ export function tfDataClusterClientAuthenticationPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfDataClusterClientAuthenticationPropertyToHclTerraform(struct?: TfDataCluster.ClientAuthenticationProperty): any {
+export function dataTfClusterClientAuthenticationPropertyToHclTerraform(struct?: DataTfCluster.ClientAuthenticationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -336,7 +336,7 @@ export function tfDataClusterClientAuthenticationPropertyToHclTerraform(struct?:
 }
 
 
-export function tfDataClusterVpcConnectivityPropertyToTerraform(struct?: TfDataCluster.VpcConnectivityProperty): any {
+export function dataTfClusterVpcConnectivityPropertyToTerraform(struct?: DataTfCluster.VpcConnectivityProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -346,7 +346,7 @@ export function tfDataClusterVpcConnectivityPropertyToTerraform(struct?: TfDataC
 }
 
 
-export function tfDataClusterVpcConnectivityPropertyToHclTerraform(struct?: TfDataCluster.VpcConnectivityProperty): any {
+export function dataTfClusterVpcConnectivityPropertyToHclTerraform(struct?: DataTfCluster.VpcConnectivityProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -357,7 +357,7 @@ export function tfDataClusterVpcConnectivityPropertyToHclTerraform(struct?: TfDa
 }
 
 
-export function tfDataClusterConnectivityInfoPropertyToTerraform(struct?: TfDataCluster.ConnectivityInfoProperty): any {
+export function dataTfClusterConnectivityInfoPropertyToTerraform(struct?: DataTfCluster.ConnectivityInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -367,7 +367,7 @@ export function tfDataClusterConnectivityInfoPropertyToTerraform(struct?: TfData
 }
 
 
-export function tfDataClusterConnectivityInfoPropertyToHclTerraform(struct?: TfDataCluster.ConnectivityInfoProperty): any {
+export function dataTfClusterConnectivityInfoPropertyToHclTerraform(struct?: DataTfCluster.ConnectivityInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -378,7 +378,7 @@ export function tfDataClusterConnectivityInfoPropertyToHclTerraform(struct?: TfD
 }
 
 
-export function tfDataClusterProvisionedThroughputPropertyToTerraform(struct?: TfDataCluster.ProvisionedThroughputProperty): any {
+export function dataTfClusterProvisionedThroughputPropertyToTerraform(struct?: DataTfCluster.ProvisionedThroughputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -388,7 +388,7 @@ export function tfDataClusterProvisionedThroughputPropertyToTerraform(struct?: T
 }
 
 
-export function tfDataClusterProvisionedThroughputPropertyToHclTerraform(struct?: TfDataCluster.ProvisionedThroughputProperty): any {
+export function dataTfClusterProvisionedThroughputPropertyToHclTerraform(struct?: DataTfCluster.ProvisionedThroughputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -399,7 +399,7 @@ export function tfDataClusterProvisionedThroughputPropertyToHclTerraform(struct?
 }
 
 
-export function tfDataClusterEbsStorageInfoPropertyToTerraform(struct?: TfDataCluster.EbsStorageInfoProperty): any {
+export function dataTfClusterEbsStorageInfoPropertyToTerraform(struct?: DataTfCluster.EbsStorageInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -409,7 +409,7 @@ export function tfDataClusterEbsStorageInfoPropertyToTerraform(struct?: TfDataCl
 }
 
 
-export function tfDataClusterEbsStorageInfoPropertyToHclTerraform(struct?: TfDataCluster.EbsStorageInfoProperty): any {
+export function dataTfClusterEbsStorageInfoPropertyToHclTerraform(struct?: DataTfCluster.EbsStorageInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -420,7 +420,7 @@ export function tfDataClusterEbsStorageInfoPropertyToHclTerraform(struct?: TfDat
 }
 
 
-export function tfDataClusterStorageInfoPropertyToTerraform(struct?: TfDataCluster.StorageInfoProperty): any {
+export function dataTfClusterStorageInfoPropertyToTerraform(struct?: DataTfCluster.StorageInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -430,7 +430,7 @@ export function tfDataClusterStorageInfoPropertyToTerraform(struct?: TfDataClust
 }
 
 
-export function tfDataClusterStorageInfoPropertyToHclTerraform(struct?: TfDataCluster.StorageInfoProperty): any {
+export function dataTfClusterStorageInfoPropertyToHclTerraform(struct?: DataTfCluster.StorageInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -441,7 +441,7 @@ export function tfDataClusterStorageInfoPropertyToHclTerraform(struct?: TfDataCl
 }
 
 
-export function tfDataClusterBrokerNodeGroupInfoPropertyToTerraform(struct?: TfDataCluster.BrokerNodeGroupInfoProperty): any {
+export function dataTfClusterBrokerNodeGroupInfoPropertyToTerraform(struct?: DataTfCluster.BrokerNodeGroupInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -451,7 +451,7 @@ export function tfDataClusterBrokerNodeGroupInfoPropertyToTerraform(struct?: TfD
 }
 
 
-export function tfDataClusterBrokerNodeGroupInfoPropertyToHclTerraform(struct?: TfDataCluster.BrokerNodeGroupInfoProperty): any {
+export function dataTfClusterBrokerNodeGroupInfoPropertyToHclTerraform(struct?: DataTfCluster.BrokerNodeGroupInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -462,7 +462,7 @@ export function tfDataClusterBrokerNodeGroupInfoPropertyToHclTerraform(struct?: 
 }
 
 
-export namespace TfDataCluster {
+export namespace DataTfCluster {
 export interface PublicAccessProperty {
 }
 export class PublicAccessPropertyOutputReference extends cdktn.ComplexObject {

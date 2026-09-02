@@ -5,40 +5,40 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataProvisioningArtifactsConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfProvisioningArtifactsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_provisioning_artifacts#accept_language TfDataProvisioningArtifacts#accept_language}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_provisioning_artifacts#accept_language DataTfProvisioningArtifacts#accept_language}
   */
   readonly acceptLanguage?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_provisioning_artifacts#id TfDataProvisioningArtifacts#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_provisioning_artifacts#id DataTfProvisioningArtifacts#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_provisioning_artifacts#product_id TfDataProvisioningArtifacts#product_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_provisioning_artifacts#product_id DataTfProvisioningArtifacts#product_id}
   */
   readonly productId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_provisioning_artifacts#region TfDataProvisioningArtifacts#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_provisioning_artifacts#region DataTfProvisioningArtifacts#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_provisioning_artifacts#timeouts TfDataProvisioningArtifacts#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_provisioning_artifacts#timeouts DataTfProvisioningArtifacts#timeouts}
   */
-  readonly timeouts?: TfDataProvisioningArtifacts.TimeoutsProperty;
+  readonly timeouts?: DataTfProvisioningArtifacts.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_provisioning_artifacts aws_servicecatalog_provisioning_artifacts}
 */
-export class TfDataProvisioningArtifacts extends cdktn.TerraformDataSource {
+export class DataTfProvisioningArtifacts extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class TfDataProvisioningArtifacts extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataProvisioningArtifacts resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfProvisioningArtifacts resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataProvisioningArtifacts to import
-  * @param importFromId The id of the existing TfDataProvisioningArtifacts that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_provisioning_artifacts#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataProvisioningArtifacts to import is found
+  * @param importToId The construct id used in the generated config for the DataTfProvisioningArtifacts to import
+  * @param importFromId The id of the existing DataTfProvisioningArtifacts that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_provisioning_artifacts#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfProvisioningArtifacts to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_servicecatalog_provisioning_artifacts", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class TfDataProvisioningArtifacts extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataProvisioningArtifactsConfig
+  * @param options DataTfProvisioningArtifactsConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataProvisioningArtifactsConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfProvisioningArtifactsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_servicecatalog_provisioning_artifacts',
       terraformGeneratorMetadata: {
@@ -143,7 +143,7 @@ export class TfDataProvisioningArtifacts extends cdktn.TerraformDataSource {
   }
 
   // provisioning_artifact_details - computed: true, optional: false, required: false
-  private _provisioningArtifactDetails = new TfDataProvisioningArtifacts.ProvisioningArtifactDetailsPropertyList(this, "provisioning_artifact_details", false);
+  private _provisioningArtifactDetails = new DataTfProvisioningArtifacts.ProvisioningArtifactDetailsPropertyList(this, "provisioning_artifact_details", false);
   public get provisioningArtifactDetails() {
     return this._provisioningArtifactDetails;
   }
@@ -165,11 +165,11 @@ export class TfDataProvisioningArtifacts extends cdktn.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfDataProvisioningArtifacts.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new DataTfProvisioningArtifacts.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfDataProvisioningArtifacts.TimeoutsProperty) {
+  public putTimeouts(value: DataTfProvisioningArtifacts.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -190,7 +190,7 @@ export class TfDataProvisioningArtifacts extends cdktn.TerraformDataSource {
       id: cdktn.stringToTerraform(this._id),
       product_id: cdktn.stringToTerraform(this._productId),
       region: cdktn.stringToTerraform(this._region),
-      timeouts: tfDataProvisioningArtifactsTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: dataTfProvisioningArtifactsTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -221,10 +221,10 @@ export class TfDataProvisioningArtifacts extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfDataProvisioningArtifactsTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: dataTfProvisioningArtifactsTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfDataProvisioningArtifacts.TimeoutsProperty",
+        storageClassType: "DataTfProvisioningArtifacts.TimeoutsProperty",
       },
     };
 
@@ -233,7 +233,7 @@ export class TfDataProvisioningArtifacts extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataProvisioningArtifactsProvisioningArtifactDetailsPropertyToTerraform(struct?: TfDataProvisioningArtifacts.ProvisioningArtifactDetailsProperty): any {
+export function dataTfProvisioningArtifactsProvisioningArtifactDetailsPropertyToTerraform(struct?: DataTfProvisioningArtifacts.ProvisioningArtifactDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -243,7 +243,7 @@ export function tfDataProvisioningArtifactsProvisioningArtifactDetailsPropertyTo
 }
 
 
-export function tfDataProvisioningArtifactsProvisioningArtifactDetailsPropertyToHclTerraform(struct?: TfDataProvisioningArtifacts.ProvisioningArtifactDetailsProperty): any {
+export function dataTfProvisioningArtifactsProvisioningArtifactDetailsPropertyToHclTerraform(struct?: DataTfProvisioningArtifacts.ProvisioningArtifactDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -254,7 +254,7 @@ export function tfDataProvisioningArtifactsProvisioningArtifactDetailsPropertyTo
 }
 
 
-export function tfDataProvisioningArtifactsTimeoutsPropertyToTerraform(struct?: TfDataProvisioningArtifacts.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfProvisioningArtifactsTimeoutsPropertyToTerraform(struct?: DataTfProvisioningArtifacts.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -265,7 +265,7 @@ export function tfDataProvisioningArtifactsTimeoutsPropertyToTerraform(struct?: 
 }
 
 
-export function tfDataProvisioningArtifactsTimeoutsPropertyToHclTerraform(struct?: TfDataProvisioningArtifacts.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfProvisioningArtifactsTimeoutsPropertyToHclTerraform(struct?: DataTfProvisioningArtifacts.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -284,7 +284,7 @@ export function tfDataProvisioningArtifactsTimeoutsPropertyToHclTerraform(struct
 }
 
 
-export namespace TfDataProvisioningArtifacts {
+export namespace DataTfProvisioningArtifacts {
 export interface ProvisioningArtifactDetailsProperty {
 }
 export class ProvisioningArtifactDetailsPropertyOutputReference extends cdktn.ComplexObject {
@@ -371,7 +371,7 @@ export class ProvisioningArtifactDetailsPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_provisioning_artifacts#read TfDataProvisioningArtifacts#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_provisioning_artifacts#read DataTfProvisioningArtifacts#read}
   */
   readonly read?: string;
 }

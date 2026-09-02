@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataDelegatedServicesConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfDelegatedServicesConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/organizations_delegated_services#account_id TfDataDelegatedServices#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/organizations_delegated_services#account_id DataTfDelegatedServices#account_id}
   */
   readonly accountId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/organizations_delegated_services#id TfDataDelegatedServices#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/organizations_delegated_services#id DataTfDelegatedServices#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,7 +22,7 @@ export interface TfDataDelegatedServicesConfig extends cdktn.TerraformMetaArgume
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/organizations_delegated_services aws_organizations_delegated_services}
 */
-export class TfDataDelegatedServices extends cdktn.TerraformDataSource {
+export class DataTfDelegatedServices extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -33,11 +33,11 @@ export class TfDataDelegatedServices extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataDelegatedServices resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfDelegatedServices resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataDelegatedServices to import
-  * @param importFromId The id of the existing TfDataDelegatedServices that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/organizations_delegated_services#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataDelegatedServices to import is found
+  * @param importToId The construct id used in the generated config for the DataTfDelegatedServices to import
+  * @param importFromId The id of the existing DataTfDelegatedServices that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/organizations_delegated_services#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfDelegatedServices to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_organizations_delegated_services", importId: importFromId, provider });
@@ -52,9 +52,9 @@ export class TfDataDelegatedServices extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataDelegatedServicesConfig
+  * @param options DataTfDelegatedServicesConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataDelegatedServicesConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfDelegatedServicesConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_organizations_delegated_services',
       terraformGeneratorMetadata: {
@@ -92,7 +92,7 @@ export class TfDataDelegatedServices extends cdktn.TerraformDataSource {
   }
 
   // delegated_services - computed: true, optional: false, required: false
-  private _delegatedServices = new TfDataDelegatedServices.DelegatedServicesPropertyList(this, "delegated_services", true);
+  private _delegatedServices = new DataTfDelegatedServices.DelegatedServicesPropertyList(this, "delegated_services", true);
   public get delegatedServices() {
     return this._delegatedServices;
   }
@@ -145,7 +145,7 @@ export class TfDataDelegatedServices extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataDelegatedServicesDelegatedServicesPropertyToTerraform(struct?: TfDataDelegatedServices.DelegatedServicesProperty): any {
+export function dataTfDelegatedServicesDelegatedServicesPropertyToTerraform(struct?: DataTfDelegatedServices.DelegatedServicesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -155,7 +155,7 @@ export function tfDataDelegatedServicesDelegatedServicesPropertyToTerraform(stru
 }
 
 
-export function tfDataDelegatedServicesDelegatedServicesPropertyToHclTerraform(struct?: TfDataDelegatedServices.DelegatedServicesProperty): any {
+export function dataTfDelegatedServicesDelegatedServicesPropertyToHclTerraform(struct?: DataTfDelegatedServices.DelegatedServicesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -166,7 +166,7 @@ export function tfDataDelegatedServicesDelegatedServicesPropertyToHclTerraform(s
 }
 
 
-export namespace TfDataDelegatedServices {
+export namespace DataTfDelegatedServices {
 export interface DelegatedServicesProperty {
 }
 export class DelegatedServicesPropertyOutputReference extends cdktn.ComplexObject {

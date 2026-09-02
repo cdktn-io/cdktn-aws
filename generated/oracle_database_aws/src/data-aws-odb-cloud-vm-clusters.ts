@@ -5,11 +5,11 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataCloudVmClustersConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfCloudVmClustersConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_cloud_vm_clusters#region TfDataCloudVmClusters#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_cloud_vm_clusters#region DataTfCloudVmClusters#region}
   */
   readonly region?: string;
 }
@@ -17,7 +17,7 @@ export interface TfDataCloudVmClustersConfig extends cdktn.TerraformMetaArgument
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_cloud_vm_clusters aws_odb_cloud_vm_clusters}
 */
-export class TfDataCloudVmClusters extends cdktn.TerraformDataSource {
+export class DataTfCloudVmClusters extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -28,11 +28,11 @@ export class TfDataCloudVmClusters extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataCloudVmClusters resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfCloudVmClusters resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataCloudVmClusters to import
-  * @param importFromId The id of the existing TfDataCloudVmClusters that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_cloud_vm_clusters#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataCloudVmClusters to import is found
+  * @param importToId The construct id used in the generated config for the DataTfCloudVmClusters to import
+  * @param importFromId The id of the existing DataTfCloudVmClusters that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_cloud_vm_clusters#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfCloudVmClusters to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_odb_cloud_vm_clusters", importId: importFromId, provider });
@@ -47,9 +47,9 @@ export class TfDataCloudVmClusters extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataCloudVmClustersConfig = {}
+  * @param options DataTfCloudVmClustersConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataCloudVmClustersConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfCloudVmClustersConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_odb_cloud_vm_clusters',
       terraformGeneratorMetadata: {
@@ -73,7 +73,7 @@ export class TfDataCloudVmClusters extends cdktn.TerraformDataSource {
   // ==========
 
   // cloud_vm_clusters - computed: true, optional: false, required: false
-  private _cloudVmClusters = new TfDataCloudVmClusters.CloudVmClustersPropertyList(this, "cloud_vm_clusters", false);
+  private _cloudVmClusters = new DataTfCloudVmClusters.CloudVmClustersPropertyList(this, "cloud_vm_clusters", false);
   public get cloudVmClusters() {
     return this._cloudVmClusters;
   }
@@ -119,7 +119,7 @@ export class TfDataCloudVmClusters extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataCloudVmClustersCloudVmClustersPropertyToTerraform(struct?: TfDataCloudVmClusters.CloudVmClustersProperty): any {
+export function dataTfCloudVmClustersCloudVmClustersPropertyToTerraform(struct?: DataTfCloudVmClusters.CloudVmClustersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -129,7 +129,7 @@ export function tfDataCloudVmClustersCloudVmClustersPropertyToTerraform(struct?:
 }
 
 
-export function tfDataCloudVmClustersCloudVmClustersPropertyToHclTerraform(struct?: TfDataCloudVmClusters.CloudVmClustersProperty): any {
+export function dataTfCloudVmClustersCloudVmClustersPropertyToHclTerraform(struct?: DataTfCloudVmClusters.CloudVmClustersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -140,7 +140,7 @@ export function tfDataCloudVmClustersCloudVmClustersPropertyToHclTerraform(struc
 }
 
 
-export namespace TfDataCloudVmClusters {
+export namespace DataTfCloudVmClusters {
 export interface CloudVmClustersProperty {
 }
 export class CloudVmClustersPropertyOutputReference extends cdktn.ComplexObject {

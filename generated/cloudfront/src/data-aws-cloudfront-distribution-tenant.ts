@@ -5,24 +5,24 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataDistributionTenantConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfDistributionTenantConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudfront_distribution_tenant#arn TfDataDistributionTenant#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudfront_distribution_tenant#arn DataTfDistributionTenant#arn}
   */
   readonly arn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudfront_distribution_tenant#domain TfDataDistributionTenant#domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudfront_distribution_tenant#domain DataTfDistributionTenant#domain}
   */
   readonly domain?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudfront_distribution_tenant#id TfDataDistributionTenant#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudfront_distribution_tenant#id DataTfDistributionTenant#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudfront_distribution_tenant#name TfDataDistributionTenant#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudfront_distribution_tenant#name DataTfDistributionTenant#name}
   */
   readonly name?: string;
 }
@@ -30,7 +30,7 @@ export interface TfDataDistributionTenantConfig extends cdktn.TerraformMetaArgum
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudfront_distribution_tenant aws_cloudfront_distribution_tenant}
 */
-export class TfDataDistributionTenant extends cdktn.TerraformDataSource {
+export class DataTfDistributionTenant extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -41,11 +41,11 @@ export class TfDataDistributionTenant extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataDistributionTenant resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfDistributionTenant resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataDistributionTenant to import
-  * @param importFromId The id of the existing TfDataDistributionTenant that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudfront_distribution_tenant#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataDistributionTenant to import is found
+  * @param importToId The construct id used in the generated config for the DataTfDistributionTenant to import
+  * @param importFromId The id of the existing DataTfDistributionTenant that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudfront_distribution_tenant#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfDistributionTenant to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudfront_distribution_tenant", importId: importFromId, provider });
@@ -60,9 +60,9 @@ export class TfDataDistributionTenant extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataDistributionTenantConfig = {}
+  * @param options DataTfDistributionTenantConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataDistributionTenantConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfDistributionTenantConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudfront_distribution_tenant',
       terraformGeneratorMetadata: {
@@ -110,7 +110,7 @@ export class TfDataDistributionTenant extends cdktn.TerraformDataSource {
   }
 
   // customizations - computed: true, optional: false, required: false
-  private _customizations = new TfDataDistributionTenant.CustomizationsPropertyList(this, "customizations", false);
+  private _customizations = new DataTfDistributionTenant.CustomizationsPropertyList(this, "customizations", false);
   public get customizations() {
     return this._customizations;
   }
@@ -137,7 +137,7 @@ export class TfDataDistributionTenant extends cdktn.TerraformDataSource {
   }
 
   // domains - computed: true, optional: false, required: false
-  private _domains = new TfDataDistributionTenant.DomainsPropertyList(this, "domains", false);
+  private _domains = new DataTfDistributionTenant.DomainsPropertyList(this, "domains", false);
   public get domains() {
     return this._domains;
   }
@@ -169,7 +169,7 @@ export class TfDataDistributionTenant extends cdktn.TerraformDataSource {
   }
 
   // managed_certificate_request - computed: true, optional: false, required: false
-  private _managedCertificateRequest = new TfDataDistributionTenant.ManagedCertificateRequestPropertyList(this, "managed_certificate_request", false);
+  private _managedCertificateRequest = new DataTfDistributionTenant.ManagedCertificateRequestPropertyList(this, "managed_certificate_request", false);
   public get managedCertificateRequest() {
     return this._managedCertificateRequest;
   }
@@ -191,7 +191,7 @@ export class TfDataDistributionTenant extends cdktn.TerraformDataSource {
   }
 
   // parameters - computed: true, optional: false, required: false
-  private _parameters = new TfDataDistributionTenant.ParametersPropertyList(this, "parameters", false);
+  private _parameters = new DataTfDistributionTenant.ParametersPropertyList(this, "parameters", false);
   public get parameters() {
     return this._parameters;
   }
@@ -253,7 +253,7 @@ export class TfDataDistributionTenant extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataDistributionTenantCertificatePropertyToTerraform(struct?: TfDataDistributionTenant.CertificateProperty): any {
+export function dataTfDistributionTenantCertificatePropertyToTerraform(struct?: DataTfDistributionTenant.CertificateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -263,7 +263,7 @@ export function tfDataDistributionTenantCertificatePropertyToTerraform(struct?: 
 }
 
 
-export function tfDataDistributionTenantCertificatePropertyToHclTerraform(struct?: TfDataDistributionTenant.CertificateProperty): any {
+export function dataTfDistributionTenantCertificatePropertyToHclTerraform(struct?: DataTfDistributionTenant.CertificateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -274,7 +274,7 @@ export function tfDataDistributionTenantCertificatePropertyToHclTerraform(struct
 }
 
 
-export function tfDataDistributionTenantGeoRestrictionPropertyToTerraform(struct?: TfDataDistributionTenant.GeoRestrictionProperty): any {
+export function dataTfDistributionTenantGeoRestrictionPropertyToTerraform(struct?: DataTfDistributionTenant.GeoRestrictionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -284,7 +284,7 @@ export function tfDataDistributionTenantGeoRestrictionPropertyToTerraform(struct
 }
 
 
-export function tfDataDistributionTenantGeoRestrictionPropertyToHclTerraform(struct?: TfDataDistributionTenant.GeoRestrictionProperty): any {
+export function dataTfDistributionTenantGeoRestrictionPropertyToHclTerraform(struct?: DataTfDistributionTenant.GeoRestrictionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -295,7 +295,7 @@ export function tfDataDistributionTenantGeoRestrictionPropertyToHclTerraform(str
 }
 
 
-export function tfDataDistributionTenantWebAclPropertyToTerraform(struct?: TfDataDistributionTenant.WebAclProperty): any {
+export function dataTfDistributionTenantWebAclPropertyToTerraform(struct?: DataTfDistributionTenant.WebAclProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -305,7 +305,7 @@ export function tfDataDistributionTenantWebAclPropertyToTerraform(struct?: TfDat
 }
 
 
-export function tfDataDistributionTenantWebAclPropertyToHclTerraform(struct?: TfDataDistributionTenant.WebAclProperty): any {
+export function dataTfDistributionTenantWebAclPropertyToHclTerraform(struct?: DataTfDistributionTenant.WebAclProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -316,7 +316,7 @@ export function tfDataDistributionTenantWebAclPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfDataDistributionTenantCustomizationsPropertyToTerraform(struct?: TfDataDistributionTenant.CustomizationsProperty): any {
+export function dataTfDistributionTenantCustomizationsPropertyToTerraform(struct?: DataTfDistributionTenant.CustomizationsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -326,7 +326,7 @@ export function tfDataDistributionTenantCustomizationsPropertyToTerraform(struct
 }
 
 
-export function tfDataDistributionTenantCustomizationsPropertyToHclTerraform(struct?: TfDataDistributionTenant.CustomizationsProperty): any {
+export function dataTfDistributionTenantCustomizationsPropertyToHclTerraform(struct?: DataTfDistributionTenant.CustomizationsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -337,7 +337,7 @@ export function tfDataDistributionTenantCustomizationsPropertyToHclTerraform(str
 }
 
 
-export function tfDataDistributionTenantDomainsPropertyToTerraform(struct?: TfDataDistributionTenant.DomainsProperty): any {
+export function dataTfDistributionTenantDomainsPropertyToTerraform(struct?: DataTfDistributionTenant.DomainsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -347,7 +347,7 @@ export function tfDataDistributionTenantDomainsPropertyToTerraform(struct?: TfDa
 }
 
 
-export function tfDataDistributionTenantDomainsPropertyToHclTerraform(struct?: TfDataDistributionTenant.DomainsProperty): any {
+export function dataTfDistributionTenantDomainsPropertyToHclTerraform(struct?: DataTfDistributionTenant.DomainsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -358,7 +358,7 @@ export function tfDataDistributionTenantDomainsPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfDataDistributionTenantManagedCertificateRequestPropertyToTerraform(struct?: TfDataDistributionTenant.ManagedCertificateRequestProperty): any {
+export function dataTfDistributionTenantManagedCertificateRequestPropertyToTerraform(struct?: DataTfDistributionTenant.ManagedCertificateRequestProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -368,7 +368,7 @@ export function tfDataDistributionTenantManagedCertificateRequestPropertyToTerra
 }
 
 
-export function tfDataDistributionTenantManagedCertificateRequestPropertyToHclTerraform(struct?: TfDataDistributionTenant.ManagedCertificateRequestProperty): any {
+export function dataTfDistributionTenantManagedCertificateRequestPropertyToHclTerraform(struct?: DataTfDistributionTenant.ManagedCertificateRequestProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -379,7 +379,7 @@ export function tfDataDistributionTenantManagedCertificateRequestPropertyToHclTe
 }
 
 
-export function tfDataDistributionTenantParametersPropertyToTerraform(struct?: TfDataDistributionTenant.ParametersProperty): any {
+export function dataTfDistributionTenantParametersPropertyToTerraform(struct?: DataTfDistributionTenant.ParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -389,7 +389,7 @@ export function tfDataDistributionTenantParametersPropertyToTerraform(struct?: T
 }
 
 
-export function tfDataDistributionTenantParametersPropertyToHclTerraform(struct?: TfDataDistributionTenant.ParametersProperty): any {
+export function dataTfDistributionTenantParametersPropertyToHclTerraform(struct?: DataTfDistributionTenant.ParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -400,7 +400,7 @@ export function tfDataDistributionTenantParametersPropertyToHclTerraform(struct?
 }
 
 
-export namespace TfDataDistributionTenant {
+export namespace DataTfDistributionTenant {
 export interface CertificateProperty {
 }
 export class CertificatePropertyOutputReference extends cdktn.ComplexObject {

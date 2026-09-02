@@ -5,59 +5,59 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataOfferingsConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfOfferingsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/savingsplans_offerings#currencies TfDataOfferings#currencies}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/savingsplans_offerings#currencies DataTfOfferings#currencies}
   */
   readonly currencies?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/savingsplans_offerings#descriptions TfDataOfferings#descriptions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/savingsplans_offerings#descriptions DataTfOfferings#descriptions}
   */
   readonly descriptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/savingsplans_offerings#durations TfDataOfferings#durations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/savingsplans_offerings#durations DataTfOfferings#durations}
   */
   readonly durations?: number[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/savingsplans_offerings#offering_ids TfDataOfferings#offering_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/savingsplans_offerings#offering_ids DataTfOfferings#offering_ids}
   */
   readonly offeringIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/savingsplans_offerings#operations TfDataOfferings#operations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/savingsplans_offerings#operations DataTfOfferings#operations}
   */
   readonly operations?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/savingsplans_offerings#payment_options TfDataOfferings#payment_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/savingsplans_offerings#payment_options DataTfOfferings#payment_options}
   */
   readonly paymentOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/savingsplans_offerings#plan_types TfDataOfferings#plan_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/savingsplans_offerings#plan_types DataTfOfferings#plan_types}
   */
   readonly planTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/savingsplans_offerings#product_type TfDataOfferings#product_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/savingsplans_offerings#product_type DataTfOfferings#product_type}
   */
   readonly productType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/savingsplans_offerings#service_codes TfDataOfferings#service_codes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/savingsplans_offerings#service_codes DataTfOfferings#service_codes}
   */
   readonly serviceCodes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/savingsplans_offerings#usage_types TfDataOfferings#usage_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/savingsplans_offerings#usage_types DataTfOfferings#usage_types}
   */
   readonly usageTypes?: string[];
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/savingsplans_offerings#filter TfDataOfferings#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/savingsplans_offerings#filter DataTfOfferings#filter}
   */
-  readonly filter?: TfDataOfferings.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataTfOfferings.FilterProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/savingsplans_offerings aws_savingsplans_offerings}
 */
-export class TfDataOfferings extends cdktn.TerraformDataSource {
+export class DataTfOfferings extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -68,11 +68,11 @@ export class TfDataOfferings extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataOfferings resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfOfferings resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataOfferings to import
-  * @param importFromId The id of the existing TfDataOfferings that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/savingsplans_offerings#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataOfferings to import is found
+  * @param importToId The construct id used in the generated config for the DataTfOfferings to import
+  * @param importFromId The id of the existing DataTfOfferings that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/savingsplans_offerings#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfOfferings to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_savingsplans_offerings", importId: importFromId, provider });
@@ -87,9 +87,9 @@ export class TfDataOfferings extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataOfferingsConfig = {}
+  * @param options DataTfOfferingsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataOfferingsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfOfferingsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_savingsplans_offerings',
       terraformGeneratorMetadata: {
@@ -187,7 +187,7 @@ export class TfDataOfferings extends cdktn.TerraformDataSource {
   }
 
   // offerings - computed: true, optional: false, required: false
-  private _offerings = new TfDataOfferings.OfferingsPropertyList(this, "offerings", false);
+  private _offerings = new DataTfOfferings.OfferingsPropertyList(this, "offerings", false);
   public get offerings() {
     return this._offerings;
   }
@@ -289,11 +289,11 @@ export class TfDataOfferings extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new TfDataOfferings.FilterPropertyList(this, "filter", false);
+  private _filter = new DataTfOfferings.FilterPropertyList(this, "filter", false);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: TfDataOfferings.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataTfOfferings.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -320,7 +320,7 @@ export class TfDataOfferings extends cdktn.TerraformDataSource {
       product_type: cdktn.stringToTerraform(this._productType),
       service_codes: cdktn.listMapper(cdktn.stringToTerraform, false)(this._serviceCodes),
       usage_types: cdktn.listMapper(cdktn.stringToTerraform, false)(this._usageTypes),
-      filter: cdktn.listMapper(tfDataOfferingsFilterPropertyToTerraform, true)(this._filter.internalValue),
+      filter: cdktn.listMapper(dataTfOfferingsFilterPropertyToTerraform, true)(this._filter.internalValue),
     };
   }
 
@@ -387,10 +387,10 @@ export class TfDataOfferings extends cdktn.TerraformDataSource {
         storageClassType: "stringList",
       },
       filter: {
-        value: cdktn.listMapperHcl(tfDataOfferingsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataTfOfferingsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDataOfferings.FilterPropertyList",
+        storageClassType: "DataTfOfferings.FilterPropertyList",
       },
     };
 
@@ -399,7 +399,7 @@ export class TfDataOfferings extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataOfferingsPropertiesPropertyToTerraform(struct?: TfDataOfferings.PropertiesProperty): any {
+export function dataTfOfferingsPropertiesPropertyToTerraform(struct?: DataTfOfferings.PropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -409,7 +409,7 @@ export function tfDataOfferingsPropertiesPropertyToTerraform(struct?: TfDataOffe
 }
 
 
-export function tfDataOfferingsPropertiesPropertyToHclTerraform(struct?: TfDataOfferings.PropertiesProperty): any {
+export function dataTfOfferingsPropertiesPropertyToHclTerraform(struct?: DataTfOfferings.PropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -420,7 +420,7 @@ export function tfDataOfferingsPropertiesPropertyToHclTerraform(struct?: TfDataO
 }
 
 
-export function tfDataOfferingsOfferingsPropertyToTerraform(struct?: TfDataOfferings.OfferingsProperty): any {
+export function dataTfOfferingsOfferingsPropertyToTerraform(struct?: DataTfOfferings.OfferingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -430,7 +430,7 @@ export function tfDataOfferingsOfferingsPropertyToTerraform(struct?: TfDataOffer
 }
 
 
-export function tfDataOfferingsOfferingsPropertyToHclTerraform(struct?: TfDataOfferings.OfferingsProperty): any {
+export function dataTfOfferingsOfferingsPropertyToHclTerraform(struct?: DataTfOfferings.OfferingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -441,7 +441,7 @@ export function tfDataOfferingsOfferingsPropertyToHclTerraform(struct?: TfDataOf
 }
 
 
-export function tfDataOfferingsFilterPropertyToTerraform(struct?: TfDataOfferings.FilterProperty | cdktn.IResolvable): any {
+export function dataTfOfferingsFilterPropertyToTerraform(struct?: DataTfOfferings.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -453,7 +453,7 @@ export function tfDataOfferingsFilterPropertyToTerraform(struct?: TfDataOffering
 }
 
 
-export function tfDataOfferingsFilterPropertyToHclTerraform(struct?: TfDataOfferings.FilterProperty | cdktn.IResolvable): any {
+export function dataTfOfferingsFilterPropertyToHclTerraform(struct?: DataTfOfferings.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -478,7 +478,7 @@ export function tfDataOfferingsFilterPropertyToHclTerraform(struct?: TfDataOffer
 }
 
 
-export namespace TfDataOfferings {
+export namespace DataTfOfferings {
 export interface PropertiesProperty {
 }
 export class PropertiesPropertyOutputReference extends cdktn.ComplexObject {
@@ -645,11 +645,11 @@ export class OfferingsPropertyList extends cdktn.ComplexList {
 }
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/savingsplans_offerings#name TfDataOfferings#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/savingsplans_offerings#name DataTfOfferings#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/savingsplans_offerings#values TfDataOfferings#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/savingsplans_offerings#values DataTfOfferings#values}
   */
   readonly values: string[];
 }

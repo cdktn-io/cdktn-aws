@@ -5,11 +5,11 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataCollectionGroupConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfCollectionGroupConfig extends cdktn.TerraformMetaArguments {
   /**
   * ID of the collection group.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_collection_group#id TfDataCollectionGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_collection_group#id DataTfCollectionGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -18,13 +18,13 @@ export interface TfDataCollectionGroupConfig extends cdktn.TerraformMetaArgument
   /**
   * Name of the collection group.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_collection_group#name TfDataCollectionGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_collection_group#name DataTfCollectionGroup#name}
   */
   readonly name?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_collection_group#region TfDataCollectionGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_collection_group#region DataTfCollectionGroup#region}
   */
   readonly region?: string;
 }
@@ -32,7 +32,7 @@ export interface TfDataCollectionGroupConfig extends cdktn.TerraformMetaArgument
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_collection_group aws_opensearchserverless_collection_group}
 */
-export class TfDataCollectionGroup extends cdktn.TerraformDataSource {
+export class DataTfCollectionGroup extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class TfDataCollectionGroup extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataCollectionGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfCollectionGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataCollectionGroup to import
-  * @param importFromId The id of the existing TfDataCollectionGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_collection_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataCollectionGroup to import is found
+  * @param importToId The construct id used in the generated config for the DataTfCollectionGroup to import
+  * @param importFromId The id of the existing DataTfCollectionGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_collection_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfCollectionGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_opensearchserverless_collection_group", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class TfDataCollectionGroup extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataCollectionGroupConfig = {}
+  * @param options DataTfCollectionGroupConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataCollectionGroupConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfCollectionGroupConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_opensearchserverless_collection_group',
       terraformGeneratorMetadata: {
@@ -95,7 +95,7 @@ export class TfDataCollectionGroup extends cdktn.TerraformDataSource {
   }
 
   // capacity_limits - computed: true, optional: false, required: false
-  private _capacityLimits = new TfDataCollectionGroup.CapacityLimitsPropertyList(this, "capacity_limits", false);
+  private _capacityLimits = new DataTfCollectionGroup.CapacityLimitsPropertyList(this, "capacity_limits", false);
   public get capacityLimits() {
     return this._capacityLimits;
   }
@@ -213,7 +213,7 @@ export class TfDataCollectionGroup extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataCollectionGroupCapacityLimitsPropertyToTerraform(struct?: TfDataCollectionGroup.CapacityLimitsProperty): any {
+export function dataTfCollectionGroupCapacityLimitsPropertyToTerraform(struct?: DataTfCollectionGroup.CapacityLimitsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -223,7 +223,7 @@ export function tfDataCollectionGroupCapacityLimitsPropertyToTerraform(struct?: 
 }
 
 
-export function tfDataCollectionGroupCapacityLimitsPropertyToHclTerraform(struct?: TfDataCollectionGroup.CapacityLimitsProperty): any {
+export function dataTfCollectionGroupCapacityLimitsPropertyToHclTerraform(struct?: DataTfCollectionGroup.CapacityLimitsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -234,7 +234,7 @@ export function tfDataCollectionGroupCapacityLimitsPropertyToHclTerraform(struct
 }
 
 
-export namespace TfDataCollectionGroup {
+export namespace DataTfCollectionGroup {
 export interface CapacityLimitsProperty {
 }
 export class CapacityLimitsPropertyOutputReference extends cdktn.ComplexObject {

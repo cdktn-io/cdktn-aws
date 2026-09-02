@@ -5,30 +5,30 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataListenerConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfListenerConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_listener#id TfDataListener#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_listener#id DataTfListener#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_listener#listener_identifier TfDataListener#listener_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_listener#listener_identifier DataTfListener#listener_identifier}
   */
   readonly listenerIdentifier: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_listener#region TfDataListener#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_listener#region DataTfListener#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_listener#service_identifier TfDataListener#service_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_listener#service_identifier DataTfListener#service_identifier}
   */
   readonly serviceIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_listener#tags TfDataListener#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_listener#tags DataTfListener#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -36,7 +36,7 @@ export interface TfDataListenerConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_listener aws_vpclattice_listener}
 */
-export class TfDataListener extends cdktn.TerraformDataSource {
+export class DataTfListener extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class TfDataListener extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataListener resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfListener resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataListener to import
-  * @param importFromId The id of the existing TfDataListener that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_listener#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataListener to import is found
+  * @param importToId The construct id used in the generated config for the DataTfListener to import
+  * @param importFromId The id of the existing DataTfListener that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_listener#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfListener to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpclattice_listener", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class TfDataListener extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataListenerConfig
+  * @param options DataTfListenerConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataListenerConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfListenerConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_vpclattice_listener',
       terraformGeneratorMetadata: {
@@ -106,7 +106,7 @@ export class TfDataListener extends cdktn.TerraformDataSource {
   }
 
   // default_action - computed: true, optional: false, required: false
-  private _defaultAction = new TfDataListener.DefaultActionPropertyList(this, "default_action", false);
+  private _defaultAction = new DataTfListener.DefaultActionPropertyList(this, "default_action", false);
   public get defaultAction() {
     return this._defaultAction;
   }
@@ -273,7 +273,7 @@ export class TfDataListener extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataListenerFixedResponsePropertyToTerraform(struct?: TfDataListener.FixedResponseProperty): any {
+export function dataTfListenerFixedResponsePropertyToTerraform(struct?: DataTfListener.FixedResponseProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -283,7 +283,7 @@ export function tfDataListenerFixedResponsePropertyToTerraform(struct?: TfDataLi
 }
 
 
-export function tfDataListenerFixedResponsePropertyToHclTerraform(struct?: TfDataListener.FixedResponseProperty): any {
+export function dataTfListenerFixedResponsePropertyToHclTerraform(struct?: DataTfListener.FixedResponseProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -294,7 +294,7 @@ export function tfDataListenerFixedResponsePropertyToHclTerraform(struct?: TfDat
 }
 
 
-export function tfDataListenerTargetGroupsPropertyToTerraform(struct?: TfDataListener.TargetGroupsProperty): any {
+export function dataTfListenerTargetGroupsPropertyToTerraform(struct?: DataTfListener.TargetGroupsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -304,7 +304,7 @@ export function tfDataListenerTargetGroupsPropertyToTerraform(struct?: TfDataLis
 }
 
 
-export function tfDataListenerTargetGroupsPropertyToHclTerraform(struct?: TfDataListener.TargetGroupsProperty): any {
+export function dataTfListenerTargetGroupsPropertyToHclTerraform(struct?: DataTfListener.TargetGroupsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -315,7 +315,7 @@ export function tfDataListenerTargetGroupsPropertyToHclTerraform(struct?: TfData
 }
 
 
-export function tfDataListenerForwardPropertyToTerraform(struct?: TfDataListener.ForwardProperty): any {
+export function dataTfListenerForwardPropertyToTerraform(struct?: DataTfListener.ForwardProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -325,7 +325,7 @@ export function tfDataListenerForwardPropertyToTerraform(struct?: TfDataListener
 }
 
 
-export function tfDataListenerForwardPropertyToHclTerraform(struct?: TfDataListener.ForwardProperty): any {
+export function dataTfListenerForwardPropertyToHclTerraform(struct?: DataTfListener.ForwardProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -336,7 +336,7 @@ export function tfDataListenerForwardPropertyToHclTerraform(struct?: TfDataListe
 }
 
 
-export function tfDataListenerDefaultActionPropertyToTerraform(struct?: TfDataListener.DefaultActionProperty): any {
+export function dataTfListenerDefaultActionPropertyToTerraform(struct?: DataTfListener.DefaultActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -346,7 +346,7 @@ export function tfDataListenerDefaultActionPropertyToTerraform(struct?: TfDataLi
 }
 
 
-export function tfDataListenerDefaultActionPropertyToHclTerraform(struct?: TfDataListener.DefaultActionProperty): any {
+export function dataTfListenerDefaultActionPropertyToHclTerraform(struct?: DataTfListener.DefaultActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -357,7 +357,7 @@ export function tfDataListenerDefaultActionPropertyToHclTerraform(struct?: TfDat
 }
 
 
-export namespace TfDataListener {
+export namespace DataTfListener {
 export interface FixedResponseProperty {
 }
 export class FixedResponsePropertyOutputReference extends cdktn.ComplexObject {

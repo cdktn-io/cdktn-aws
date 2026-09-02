@@ -5,26 +5,26 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataPromptConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfPromptConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_prompt#id TfDataPrompt#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_prompt#id DataTfPrompt#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_prompt#instance_id TfDataPrompt#instance_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_prompt#instance_id DataTfPrompt#instance_id}
   */
   readonly instanceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_prompt#name TfDataPrompt#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_prompt#name DataTfPrompt#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_prompt#region TfDataPrompt#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_prompt#region DataTfPrompt#region}
   */
   readonly region?: string;
 }
@@ -32,7 +32,7 @@ export interface TfDataPromptConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_prompt aws_connect_prompt}
 */
-export class TfDataPrompt extends cdktn.TerraformDataSource {
+export class DataTfPrompt extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class TfDataPrompt extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataPrompt resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfPrompt resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataPrompt to import
-  * @param importFromId The id of the existing TfDataPrompt that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_prompt#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataPrompt to import is found
+  * @param importToId The construct id used in the generated config for the DataTfPrompt to import
+  * @param importFromId The id of the existing DataTfPrompt that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_prompt#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfPrompt to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_connect_prompt", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class TfDataPrompt extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataPromptConfig
+  * @param options DataTfPromptConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataPromptConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfPromptConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_connect_prompt',
       terraformGeneratorMetadata: {

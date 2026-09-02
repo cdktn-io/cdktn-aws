@@ -5,26 +5,26 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataElbConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfElbConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elb#id TfDataElb#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elb#id DataTfElb#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elb#name TfDataElb#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elb#name DataTfElb#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elb#region TfDataElb#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elb#region DataTfElb#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elb#tags TfDataElb#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elb#tags DataTfElb#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -32,7 +32,7 @@ export interface TfDataElbConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elb aws_elb}
 */
-export class TfDataElb extends cdktn.TerraformDataSource {
+export class DataTfElb extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class TfDataElb extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataElb resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfElb resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataElb to import
-  * @param importFromId The id of the existing TfDataElb that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elb#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataElb to import is found
+  * @param importToId The construct id used in the generated config for the DataTfElb to import
+  * @param importFromId The id of the existing DataTfElb that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elb#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfElb to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_elb", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class TfDataElb extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataElbConfig
+  * @param options DataTfElbConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataElbConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfElbConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_elb',
       terraformGeneratorMetadata: {
@@ -91,7 +91,7 @@ export class TfDataElb extends cdktn.TerraformDataSource {
   // ==========
 
   // access_logs - computed: true, optional: false, required: false
-  private _accessLogs = new TfDataElb.AccessLogsPropertyList(this, "access_logs", false);
+  private _accessLogs = new DataTfElb.AccessLogsPropertyList(this, "access_logs", false);
   public get accessLogs() {
     return this._accessLogs;
   }
@@ -132,7 +132,7 @@ export class TfDataElb extends cdktn.TerraformDataSource {
   }
 
   // health_check - computed: true, optional: false, required: false
-  private _healthCheck = new TfDataElb.HealthCheckPropertyList(this, "health_check", false);
+  private _healthCheck = new DataTfElb.HealthCheckPropertyList(this, "health_check", false);
   public get healthCheck() {
     return this._healthCheck;
   }
@@ -169,7 +169,7 @@ export class TfDataElb extends cdktn.TerraformDataSource {
   }
 
   // listener - computed: true, optional: false, required: false
-  private _listener = new TfDataElb.ListenerPropertyList(this, "listener", true);
+  private _listener = new DataTfElb.ListenerPropertyList(this, "listener", true);
   public get listener() {
     return this._listener;
   }
@@ -290,7 +290,7 @@ export class TfDataElb extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataElbAccessLogsPropertyToTerraform(struct?: TfDataElb.AccessLogsProperty): any {
+export function dataTfElbAccessLogsPropertyToTerraform(struct?: DataTfElb.AccessLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -300,7 +300,7 @@ export function tfDataElbAccessLogsPropertyToTerraform(struct?: TfDataElb.Access
 }
 
 
-export function tfDataElbAccessLogsPropertyToHclTerraform(struct?: TfDataElb.AccessLogsProperty): any {
+export function dataTfElbAccessLogsPropertyToHclTerraform(struct?: DataTfElb.AccessLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -311,7 +311,7 @@ export function tfDataElbAccessLogsPropertyToHclTerraform(struct?: TfDataElb.Acc
 }
 
 
-export function tfDataElbHealthCheckPropertyToTerraform(struct?: TfDataElb.HealthCheckProperty): any {
+export function dataTfElbHealthCheckPropertyToTerraform(struct?: DataTfElb.HealthCheckProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -321,7 +321,7 @@ export function tfDataElbHealthCheckPropertyToTerraform(struct?: TfDataElb.Healt
 }
 
 
-export function tfDataElbHealthCheckPropertyToHclTerraform(struct?: TfDataElb.HealthCheckProperty): any {
+export function dataTfElbHealthCheckPropertyToHclTerraform(struct?: DataTfElb.HealthCheckProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -332,7 +332,7 @@ export function tfDataElbHealthCheckPropertyToHclTerraform(struct?: TfDataElb.He
 }
 
 
-export function tfDataElbListenerPropertyToTerraform(struct?: TfDataElb.ListenerProperty): any {
+export function dataTfElbListenerPropertyToTerraform(struct?: DataTfElb.ListenerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -342,7 +342,7 @@ export function tfDataElbListenerPropertyToTerraform(struct?: TfDataElb.Listener
 }
 
 
-export function tfDataElbListenerPropertyToHclTerraform(struct?: TfDataElb.ListenerProperty): any {
+export function dataTfElbListenerPropertyToHclTerraform(struct?: DataTfElb.ListenerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -353,7 +353,7 @@ export function tfDataElbListenerPropertyToHclTerraform(struct?: TfDataElb.Liste
 }
 
 
-export namespace TfDataElb {
+export namespace DataTfElb {
 export interface AccessLogsProperty {
 }
 export class AccessLogsPropertyOutputReference extends cdktn.ComplexObject {

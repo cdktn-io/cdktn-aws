@@ -5,44 +5,44 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataPortfolioConstraintsConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfPortfolioConstraintsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_portfolio_constraints#accept_language TfDataPortfolioConstraints#accept_language}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_portfolio_constraints#accept_language DataTfPortfolioConstraints#accept_language}
   */
   readonly acceptLanguage?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_portfolio_constraints#id TfDataPortfolioConstraints#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_portfolio_constraints#id DataTfPortfolioConstraints#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_portfolio_constraints#portfolio_id TfDataPortfolioConstraints#portfolio_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_portfolio_constraints#portfolio_id DataTfPortfolioConstraints#portfolio_id}
   */
   readonly portfolioId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_portfolio_constraints#product_id TfDataPortfolioConstraints#product_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_portfolio_constraints#product_id DataTfPortfolioConstraints#product_id}
   */
   readonly productId?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_portfolio_constraints#region TfDataPortfolioConstraints#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_portfolio_constraints#region DataTfPortfolioConstraints#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_portfolio_constraints#timeouts TfDataPortfolioConstraints#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_portfolio_constraints#timeouts DataTfPortfolioConstraints#timeouts}
   */
-  readonly timeouts?: TfDataPortfolioConstraints.TimeoutsProperty;
+  readonly timeouts?: DataTfPortfolioConstraints.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_portfolio_constraints aws_servicecatalog_portfolio_constraints}
 */
-export class TfDataPortfolioConstraints extends cdktn.TerraformDataSource {
+export class DataTfPortfolioConstraints extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -53,11 +53,11 @@ export class TfDataPortfolioConstraints extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataPortfolioConstraints resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfPortfolioConstraints resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataPortfolioConstraints to import
-  * @param importFromId The id of the existing TfDataPortfolioConstraints that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_portfolio_constraints#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataPortfolioConstraints to import is found
+  * @param importToId The construct id used in the generated config for the DataTfPortfolioConstraints to import
+  * @param importFromId The id of the existing DataTfPortfolioConstraints that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_portfolio_constraints#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfPortfolioConstraints to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_servicecatalog_portfolio_constraints", importId: importFromId, provider });
@@ -72,9 +72,9 @@ export class TfDataPortfolioConstraints extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataPortfolioConstraintsConfig
+  * @param options DataTfPortfolioConstraintsConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataPortfolioConstraintsConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfPortfolioConstraintsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_servicecatalog_portfolio_constraints',
       terraformGeneratorMetadata: {
@@ -119,7 +119,7 @@ export class TfDataPortfolioConstraints extends cdktn.TerraformDataSource {
   }
 
   // details - computed: true, optional: false, required: false
-  private _details = new TfDataPortfolioConstraints.DetailsPropertyList(this, "details", false);
+  private _details = new DataTfPortfolioConstraints.DetailsPropertyList(this, "details", false);
   public get details() {
     return this._details;
   }
@@ -186,11 +186,11 @@ export class TfDataPortfolioConstraints extends cdktn.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfDataPortfolioConstraints.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new DataTfPortfolioConstraints.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfDataPortfolioConstraints.TimeoutsProperty) {
+  public putTimeouts(value: DataTfPortfolioConstraints.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -212,7 +212,7 @@ export class TfDataPortfolioConstraints extends cdktn.TerraformDataSource {
       portfolio_id: cdktn.stringToTerraform(this._portfolioId),
       product_id: cdktn.stringToTerraform(this._productId),
       region: cdktn.stringToTerraform(this._region),
-      timeouts: tfDataPortfolioConstraintsTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: dataTfPortfolioConstraintsTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -249,10 +249,10 @@ export class TfDataPortfolioConstraints extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfDataPortfolioConstraintsTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: dataTfPortfolioConstraintsTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfDataPortfolioConstraints.TimeoutsProperty",
+        storageClassType: "DataTfPortfolioConstraints.TimeoutsProperty",
       },
     };
 
@@ -261,7 +261,7 @@ export class TfDataPortfolioConstraints extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataPortfolioConstraintsDetailsPropertyToTerraform(struct?: TfDataPortfolioConstraints.DetailsProperty): any {
+export function dataTfPortfolioConstraintsDetailsPropertyToTerraform(struct?: DataTfPortfolioConstraints.DetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -271,7 +271,7 @@ export function tfDataPortfolioConstraintsDetailsPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfDataPortfolioConstraintsDetailsPropertyToHclTerraform(struct?: TfDataPortfolioConstraints.DetailsProperty): any {
+export function dataTfPortfolioConstraintsDetailsPropertyToHclTerraform(struct?: DataTfPortfolioConstraints.DetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -282,7 +282,7 @@ export function tfDataPortfolioConstraintsDetailsPropertyToHclTerraform(struct?:
 }
 
 
-export function tfDataPortfolioConstraintsTimeoutsPropertyToTerraform(struct?: TfDataPortfolioConstraints.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfPortfolioConstraintsTimeoutsPropertyToTerraform(struct?: DataTfPortfolioConstraints.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -293,7 +293,7 @@ export function tfDataPortfolioConstraintsTimeoutsPropertyToTerraform(struct?: T
 }
 
 
-export function tfDataPortfolioConstraintsTimeoutsPropertyToHclTerraform(struct?: TfDataPortfolioConstraints.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfPortfolioConstraintsTimeoutsPropertyToHclTerraform(struct?: DataTfPortfolioConstraints.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -312,7 +312,7 @@ export function tfDataPortfolioConstraintsTimeoutsPropertyToHclTerraform(struct?
 }
 
 
-export namespace TfDataPortfolioConstraints {
+export namespace DataTfPortfolioConstraints {
 export interface DetailsProperty {
 }
 export class DetailsPropertyOutputReference extends cdktn.ComplexObject {
@@ -394,7 +394,7 @@ export class DetailsPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_portfolio_constraints#read TfDataPortfolioConstraints#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_portfolio_constraints#read DataTfPortfolioConstraints#read}
   */
   readonly read?: string;
 }

@@ -5,15 +5,15 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataContributorManagedInsightRulesConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfContributorManagedInsightRulesConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_contributor_managed_insight_rules#region TfDataContributorManagedInsightRules#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_contributor_managed_insight_rules#region DataTfContributorManagedInsightRules#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_contributor_managed_insight_rules#resource_arn TfDataContributorManagedInsightRules#resource_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_contributor_managed_insight_rules#resource_arn DataTfContributorManagedInsightRules#resource_arn}
   */
   readonly resourceArn: string;
 }
@@ -21,7 +21,7 @@ export interface TfDataContributorManagedInsightRulesConfig extends cdktn.Terraf
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_contributor_managed_insight_rules aws_cloudwatch_contributor_managed_insight_rules}
 */
-export class TfDataContributorManagedInsightRules extends cdktn.TerraformDataSource {
+export class DataTfContributorManagedInsightRules extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -32,11 +32,11 @@ export class TfDataContributorManagedInsightRules extends cdktn.TerraformDataSou
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataContributorManagedInsightRules resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfContributorManagedInsightRules resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataContributorManagedInsightRules to import
-  * @param importFromId The id of the existing TfDataContributorManagedInsightRules that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_contributor_managed_insight_rules#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataContributorManagedInsightRules to import is found
+  * @param importToId The construct id used in the generated config for the DataTfContributorManagedInsightRules to import
+  * @param importFromId The id of the existing DataTfContributorManagedInsightRules that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_contributor_managed_insight_rules#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfContributorManagedInsightRules to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudwatch_contributor_managed_insight_rules", importId: importFromId, provider });
@@ -51,9 +51,9 @@ export class TfDataContributorManagedInsightRules extends cdktn.TerraformDataSou
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataContributorManagedInsightRulesConfig
+  * @param options DataTfContributorManagedInsightRulesConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataContributorManagedInsightRulesConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfContributorManagedInsightRulesConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudwatch_contributor_managed_insight_rules',
       terraformGeneratorMetadata: {
@@ -78,7 +78,7 @@ export class TfDataContributorManagedInsightRules extends cdktn.TerraformDataSou
   // ==========
 
   // managed_rules - computed: true, optional: false, required: false
-  private _managedRules = new TfDataContributorManagedInsightRules.ManagedRulesPropertyList(this, "managed_rules", false);
+  private _managedRules = new DataTfContributorManagedInsightRules.ManagedRulesPropertyList(this, "managed_rules", false);
   public get managedRules() {
     return this._managedRules;
   }
@@ -144,7 +144,7 @@ export class TfDataContributorManagedInsightRules extends cdktn.TerraformDataSou
   }
 }
 
-export function tfDataContributorManagedInsightRulesRuleStatePropertyToTerraform(struct?: TfDataContributorManagedInsightRules.RuleStateProperty): any {
+export function dataTfContributorManagedInsightRulesRuleStatePropertyToTerraform(struct?: DataTfContributorManagedInsightRules.RuleStateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -154,7 +154,7 @@ export function tfDataContributorManagedInsightRulesRuleStatePropertyToTerraform
 }
 
 
-export function tfDataContributorManagedInsightRulesRuleStatePropertyToHclTerraform(struct?: TfDataContributorManagedInsightRules.RuleStateProperty): any {
+export function dataTfContributorManagedInsightRulesRuleStatePropertyToHclTerraform(struct?: DataTfContributorManagedInsightRules.RuleStateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -165,7 +165,7 @@ export function tfDataContributorManagedInsightRulesRuleStatePropertyToHclTerraf
 }
 
 
-export function tfDataContributorManagedInsightRulesManagedRulesPropertyToTerraform(struct?: TfDataContributorManagedInsightRules.ManagedRulesProperty): any {
+export function dataTfContributorManagedInsightRulesManagedRulesPropertyToTerraform(struct?: DataTfContributorManagedInsightRules.ManagedRulesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -175,7 +175,7 @@ export function tfDataContributorManagedInsightRulesManagedRulesPropertyToTerraf
 }
 
 
-export function tfDataContributorManagedInsightRulesManagedRulesPropertyToHclTerraform(struct?: TfDataContributorManagedInsightRules.ManagedRulesProperty): any {
+export function dataTfContributorManagedInsightRulesManagedRulesPropertyToHclTerraform(struct?: DataTfContributorManagedInsightRules.ManagedRulesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -186,7 +186,7 @@ export function tfDataContributorManagedInsightRulesManagedRulesPropertyToHclTer
 }
 
 
-export namespace TfDataContributorManagedInsightRules {
+export namespace DataTfContributorManagedInsightRules {
 export interface RuleStateProperty {
 }
 export class RuleStatePropertyOutputReference extends cdktn.ComplexObject {

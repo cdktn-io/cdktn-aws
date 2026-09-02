@@ -5,26 +5,26 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataKeyConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfKeyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kms_key#grant_tokens TfDataKey#grant_tokens}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kms_key#grant_tokens DataTfKey#grant_tokens}
   */
   readonly grantTokens?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kms_key#id TfDataKey#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kms_key#id DataTfKey#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kms_key#key_id TfDataKey#key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kms_key#key_id DataTfKey#key_id}
   */
   readonly keyId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kms_key#region TfDataKey#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kms_key#region DataTfKey#region}
   */
   readonly region?: string;
 }
@@ -32,7 +32,7 @@ export interface TfDataKeyConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kms_key aws_kms_key}
 */
-export class TfDataKey extends cdktn.TerraformDataSource {
+export class DataTfKey extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class TfDataKey extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataKey resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfKey resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataKey to import
-  * @param importFromId The id of the existing TfDataKey that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kms_key#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataKey to import is found
+  * @param importToId The construct id used in the generated config for the DataTfKey to import
+  * @param importFromId The id of the existing DataTfKey that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kms_key#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfKey to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_kms_key", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class TfDataKey extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataKeyConfig
+  * @param options DataTfKeyConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataKeyConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfKeyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_kms_key',
       terraformGeneratorMetadata: {
@@ -211,7 +211,7 @@ export class TfDataKey extends cdktn.TerraformDataSource {
   }
 
   // multi_region_configuration - computed: true, optional: false, required: false
-  private _multiRegionConfiguration = new TfDataKey.MultiRegionConfigurationPropertyList(this, "multi_region_configuration", false);
+  private _multiRegionConfiguration = new DataTfKey.MultiRegionConfigurationPropertyList(this, "multi_region_configuration", false);
   public get multiRegionConfiguration() {
     return this._multiRegionConfiguration;
   }
@@ -248,7 +248,7 @@ export class TfDataKey extends cdktn.TerraformDataSource {
   }
 
   // xks_key_configuration - computed: true, optional: false, required: false
-  private _xksKeyConfiguration = new TfDataKey.XksKeyConfigurationPropertyList(this, "xks_key_configuration", false);
+  private _xksKeyConfiguration = new DataTfKey.XksKeyConfigurationPropertyList(this, "xks_key_configuration", false);
   public get xksKeyConfiguration() {
     return this._xksKeyConfiguration;
   }
@@ -299,7 +299,7 @@ export class TfDataKey extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataKeyPrimaryKeyPropertyToTerraform(struct?: TfDataKey.PrimaryKeyProperty): any {
+export function dataTfKeyPrimaryKeyPropertyToTerraform(struct?: DataTfKey.PrimaryKeyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -309,7 +309,7 @@ export function tfDataKeyPrimaryKeyPropertyToTerraform(struct?: TfDataKey.Primar
 }
 
 
-export function tfDataKeyPrimaryKeyPropertyToHclTerraform(struct?: TfDataKey.PrimaryKeyProperty): any {
+export function dataTfKeyPrimaryKeyPropertyToHclTerraform(struct?: DataTfKey.PrimaryKeyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -320,7 +320,7 @@ export function tfDataKeyPrimaryKeyPropertyToHclTerraform(struct?: TfDataKey.Pri
 }
 
 
-export function tfDataKeyReplicaKeysPropertyToTerraform(struct?: TfDataKey.ReplicaKeysProperty): any {
+export function dataTfKeyReplicaKeysPropertyToTerraform(struct?: DataTfKey.ReplicaKeysProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -330,7 +330,7 @@ export function tfDataKeyReplicaKeysPropertyToTerraform(struct?: TfDataKey.Repli
 }
 
 
-export function tfDataKeyReplicaKeysPropertyToHclTerraform(struct?: TfDataKey.ReplicaKeysProperty): any {
+export function dataTfKeyReplicaKeysPropertyToHclTerraform(struct?: DataTfKey.ReplicaKeysProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -341,7 +341,7 @@ export function tfDataKeyReplicaKeysPropertyToHclTerraform(struct?: TfDataKey.Re
 }
 
 
-export function tfDataKeyMultiRegionConfigurationPropertyToTerraform(struct?: TfDataKey.MultiRegionConfigurationProperty): any {
+export function dataTfKeyMultiRegionConfigurationPropertyToTerraform(struct?: DataTfKey.MultiRegionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -351,7 +351,7 @@ export function tfDataKeyMultiRegionConfigurationPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfDataKeyMultiRegionConfigurationPropertyToHclTerraform(struct?: TfDataKey.MultiRegionConfigurationProperty): any {
+export function dataTfKeyMultiRegionConfigurationPropertyToHclTerraform(struct?: DataTfKey.MultiRegionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -362,7 +362,7 @@ export function tfDataKeyMultiRegionConfigurationPropertyToHclTerraform(struct?:
 }
 
 
-export function tfDataKeyXksKeyConfigurationPropertyToTerraform(struct?: TfDataKey.XksKeyConfigurationProperty): any {
+export function dataTfKeyXksKeyConfigurationPropertyToTerraform(struct?: DataTfKey.XksKeyConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -372,7 +372,7 @@ export function tfDataKeyXksKeyConfigurationPropertyToTerraform(struct?: TfDataK
 }
 
 
-export function tfDataKeyXksKeyConfigurationPropertyToHclTerraform(struct?: TfDataKey.XksKeyConfigurationProperty): any {
+export function dataTfKeyXksKeyConfigurationPropertyToHclTerraform(struct?: DataTfKey.XksKeyConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -383,7 +383,7 @@ export function tfDataKeyXksKeyConfigurationPropertyToHclTerraform(struct?: TfDa
 }
 
 
-export namespace TfDataKey {
+export namespace DataTfKey {
 export interface PrimaryKeyProperty {
 }
 export class PrimaryKeyPropertyOutputReference extends cdktn.ComplexObject {

@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataWorkspacesConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfWorkspacesConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/prometheus_workspaces#alias_prefix TfDataWorkspaces#alias_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/prometheus_workspaces#alias_prefix DataTfWorkspaces#alias_prefix}
   */
   readonly aliasPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/prometheus_workspaces#id TfDataWorkspaces#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/prometheus_workspaces#id DataTfWorkspaces#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,7 +20,7 @@ export interface TfDataWorkspacesConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/prometheus_workspaces#region TfDataWorkspaces#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/prometheus_workspaces#region DataTfWorkspaces#region}
   */
   readonly region?: string;
 }
@@ -28,7 +28,7 @@ export interface TfDataWorkspacesConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/prometheus_workspaces aws_prometheus_workspaces}
 */
-export class TfDataWorkspaces extends cdktn.TerraformDataSource {
+export class DataTfWorkspaces extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class TfDataWorkspaces extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataWorkspaces resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfWorkspaces resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataWorkspaces to import
-  * @param importFromId The id of the existing TfDataWorkspaces that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/prometheus_workspaces#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataWorkspaces to import is found
+  * @param importToId The construct id used in the generated config for the DataTfWorkspaces to import
+  * @param importFromId The id of the existing DataTfWorkspaces that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/prometheus_workspaces#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfWorkspaces to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_prometheus_workspaces", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class TfDataWorkspaces extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataWorkspacesConfig = {}
+  * @param options DataTfWorkspacesConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataWorkspacesConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfWorkspacesConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_prometheus_workspaces',
       terraformGeneratorMetadata: {

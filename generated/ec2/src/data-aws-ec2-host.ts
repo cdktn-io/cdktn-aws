@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataHostConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfHostConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_host#host_id TfDataHost#host_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_host#host_id DataTfHost#host_id}
   */
   readonly hostId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_host#id TfDataHost#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_host#id DataTfHost#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,31 +20,31 @@ export interface TfDataHostConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_host#region TfDataHost#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_host#region DataTfHost#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_host#tags TfDataHost#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_host#tags DataTfHost#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_host#filter TfDataHost#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_host#filter DataTfHost#filter}
   */
-  readonly filter?: TfDataHost.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataTfHost.FilterProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_host#timeouts TfDataHost#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_host#timeouts DataTfHost#timeouts}
   */
-  readonly timeouts?: TfDataHost.TimeoutsProperty;
+  readonly timeouts?: DataTfHost.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_host aws_ec2_host}
 */
-export class TfDataHost extends cdktn.TerraformDataSource {
+export class DataTfHost extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class TfDataHost extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataHost resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfHost resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataHost to import
-  * @param importFromId The id of the existing TfDataHost that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_host#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataHost to import is found
+  * @param importToId The construct id used in the generated config for the DataTfHost to import
+  * @param importFromId The id of the existing DataTfHost that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_host#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfHost to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_host", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class TfDataHost extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataHostConfig = {}
+  * @param options DataTfHostConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataHostConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfHostConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_host',
       terraformGeneratorMetadata: {
@@ -140,7 +140,7 @@ export class TfDataHost extends cdktn.TerraformDataSource {
   }
 
   // available_capacity - computed: true, optional: false, required: false
-  private _availableCapacity = new TfDataHost.AvailableCapacityPropertyList(this, "available_capacity", false);
+  private _availableCapacity = new DataTfHost.AvailableCapacityPropertyList(this, "available_capacity", false);
   public get availableCapacity() {
     return this._availableCapacity;
   }
@@ -208,7 +208,7 @@ export class TfDataHost extends cdktn.TerraformDataSource {
   }
 
   // instances - computed: true, optional: false, required: false
-  private _instances = new TfDataHost.InstancesPropertyList(this, "instances", false);
+  private _instances = new DataTfHost.InstancesPropertyList(this, "instances", false);
   public get instances() {
     return this._instances;
   }
@@ -281,11 +281,11 @@ export class TfDataHost extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new TfDataHost.FilterPropertyList(this, "filter", true);
+  private _filter = new DataTfHost.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: TfDataHost.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataTfHost.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -297,11 +297,11 @@ export class TfDataHost extends cdktn.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfDataHost.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new DataTfHost.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfDataHost.TimeoutsProperty) {
+  public putTimeouts(value: DataTfHost.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -322,8 +322,8 @@ export class TfDataHost extends cdktn.TerraformDataSource {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      filter: cdktn.listMapper(tfDataHostFilterPropertyToTerraform, true)(this._filter.internalValue),
-      timeouts: tfDataHostTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      filter: cdktn.listMapper(dataTfHostFilterPropertyToTerraform, true)(this._filter.internalValue),
+      timeouts: dataTfHostTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -354,16 +354,16 @@ export class TfDataHost extends cdktn.TerraformDataSource {
         storageClassType: "stringMap",
       },
       filter: {
-        value: cdktn.listMapperHcl(tfDataHostFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataTfHostFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfDataHost.FilterPropertyList",
+        storageClassType: "DataTfHost.FilterPropertyList",
       },
       timeouts: {
-        value: tfDataHostTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: dataTfHostTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfDataHost.TimeoutsProperty",
+        storageClassType: "DataTfHost.TimeoutsProperty",
       },
     };
 
@@ -372,7 +372,7 @@ export class TfDataHost extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataHostAvailableInstanceCapacityPropertyToTerraform(struct?: TfDataHost.AvailableInstanceCapacityProperty): any {
+export function dataTfHostAvailableInstanceCapacityPropertyToTerraform(struct?: DataTfHost.AvailableInstanceCapacityProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -382,7 +382,7 @@ export function tfDataHostAvailableInstanceCapacityPropertyToTerraform(struct?: 
 }
 
 
-export function tfDataHostAvailableInstanceCapacityPropertyToHclTerraform(struct?: TfDataHost.AvailableInstanceCapacityProperty): any {
+export function dataTfHostAvailableInstanceCapacityPropertyToHclTerraform(struct?: DataTfHost.AvailableInstanceCapacityProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -393,7 +393,7 @@ export function tfDataHostAvailableInstanceCapacityPropertyToHclTerraform(struct
 }
 
 
-export function tfDataHostAvailableCapacityPropertyToTerraform(struct?: TfDataHost.AvailableCapacityProperty): any {
+export function dataTfHostAvailableCapacityPropertyToTerraform(struct?: DataTfHost.AvailableCapacityProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -403,7 +403,7 @@ export function tfDataHostAvailableCapacityPropertyToTerraform(struct?: TfDataHo
 }
 
 
-export function tfDataHostAvailableCapacityPropertyToHclTerraform(struct?: TfDataHost.AvailableCapacityProperty): any {
+export function dataTfHostAvailableCapacityPropertyToHclTerraform(struct?: DataTfHost.AvailableCapacityProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -414,7 +414,7 @@ export function tfDataHostAvailableCapacityPropertyToHclTerraform(struct?: TfDat
 }
 
 
-export function tfDataHostInstancesPropertyToTerraform(struct?: TfDataHost.InstancesProperty): any {
+export function dataTfHostInstancesPropertyToTerraform(struct?: DataTfHost.InstancesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -424,7 +424,7 @@ export function tfDataHostInstancesPropertyToTerraform(struct?: TfDataHost.Insta
 }
 
 
-export function tfDataHostInstancesPropertyToHclTerraform(struct?: TfDataHost.InstancesProperty): any {
+export function dataTfHostInstancesPropertyToHclTerraform(struct?: DataTfHost.InstancesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -435,7 +435,7 @@ export function tfDataHostInstancesPropertyToHclTerraform(struct?: TfDataHost.In
 }
 
 
-export function tfDataHostFilterPropertyToTerraform(struct?: TfDataHost.FilterProperty | cdktn.IResolvable): any {
+export function dataTfHostFilterPropertyToTerraform(struct?: DataTfHost.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -447,7 +447,7 @@ export function tfDataHostFilterPropertyToTerraform(struct?: TfDataHost.FilterPr
 }
 
 
-export function tfDataHostFilterPropertyToHclTerraform(struct?: TfDataHost.FilterProperty | cdktn.IResolvable): any {
+export function dataTfHostFilterPropertyToHclTerraform(struct?: DataTfHost.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -472,7 +472,7 @@ export function tfDataHostFilterPropertyToHclTerraform(struct?: TfDataHost.Filte
 }
 
 
-export function tfDataHostTimeoutsPropertyToTerraform(struct?: TfDataHost.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfHostTimeoutsPropertyToTerraform(struct?: DataTfHost.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -483,7 +483,7 @@ export function tfDataHostTimeoutsPropertyToTerraform(struct?: TfDataHost.Timeou
 }
 
 
-export function tfDataHostTimeoutsPropertyToHclTerraform(struct?: TfDataHost.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfHostTimeoutsPropertyToHclTerraform(struct?: DataTfHost.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -502,7 +502,7 @@ export function tfDataHostTimeoutsPropertyToHclTerraform(struct?: TfDataHost.Tim
 }
 
 
-export namespace TfDataHost {
+export namespace DataTfHost {
 export interface AvailableInstanceCapacityProperty {
 }
 export class AvailableInstanceCapacityPropertyOutputReference extends cdktn.ComplexObject {
@@ -693,11 +693,11 @@ export class InstancesPropertyList extends cdktn.ComplexList {
 }
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_host#name TfDataHost#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_host#name DataTfHost#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_host#values TfDataHost#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_host#values DataTfHost#values}
   */
   readonly values: string[];
 }
@@ -799,7 +799,7 @@ export class FilterPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_host#read TfDataHost#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_host#read DataTfHost#read}
   */
   readonly read?: string;
 }

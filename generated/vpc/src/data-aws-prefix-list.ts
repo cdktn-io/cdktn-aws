@@ -5,46 +5,46 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataPrefixListConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfPrefixListConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/prefix_list#id TfDataPrefixList#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/prefix_list#id DataTfPrefixList#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/prefix_list#name TfDataPrefixList#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/prefix_list#name DataTfPrefixList#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/prefix_list#prefix_list_id TfDataPrefixList#prefix_list_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/prefix_list#prefix_list_id DataTfPrefixList#prefix_list_id}
   */
   readonly prefixListId?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/prefix_list#region TfDataPrefixList#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/prefix_list#region DataTfPrefixList#region}
   */
   readonly region?: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/prefix_list#filter TfDataPrefixList#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/prefix_list#filter DataTfPrefixList#filter}
   */
-  readonly filter?: TfDataPrefixList.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataTfPrefixList.FilterProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/prefix_list#timeouts TfDataPrefixList#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/prefix_list#timeouts DataTfPrefixList#timeouts}
   */
-  readonly timeouts?: TfDataPrefixList.TimeoutsProperty;
+  readonly timeouts?: DataTfPrefixList.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/prefix_list aws_prefix_list}
 */
-export class TfDataPrefixList extends cdktn.TerraformDataSource {
+export class DataTfPrefixList extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class TfDataPrefixList extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataPrefixList resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfPrefixList resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataPrefixList to import
-  * @param importFromId The id of the existing TfDataPrefixList that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/prefix_list#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataPrefixList to import is found
+  * @param importToId The construct id used in the generated config for the DataTfPrefixList to import
+  * @param importFromId The id of the existing DataTfPrefixList that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/prefix_list#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfPrefixList to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_prefix_list", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class TfDataPrefixList extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataPrefixListConfig = {}
+  * @param options DataTfPrefixListConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataPrefixListConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfPrefixListConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_prefix_list',
       terraformGeneratorMetadata: {
@@ -174,11 +174,11 @@ export class TfDataPrefixList extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new TfDataPrefixList.FilterPropertyList(this, "filter", true);
+  private _filter = new DataTfPrefixList.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: TfDataPrefixList.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataTfPrefixList.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -190,11 +190,11 @@ export class TfDataPrefixList extends cdktn.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfDataPrefixList.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new DataTfPrefixList.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfDataPrefixList.TimeoutsProperty) {
+  public putTimeouts(value: DataTfPrefixList.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -215,8 +215,8 @@ export class TfDataPrefixList extends cdktn.TerraformDataSource {
       name: cdktn.stringToTerraform(this._name),
       prefix_list_id: cdktn.stringToTerraform(this._prefixListId),
       region: cdktn.stringToTerraform(this._region),
-      filter: cdktn.listMapper(tfDataPrefixListFilterPropertyToTerraform, true)(this._filter.internalValue),
-      timeouts: tfDataPrefixListTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      filter: cdktn.listMapper(dataTfPrefixListFilterPropertyToTerraform, true)(this._filter.internalValue),
+      timeouts: dataTfPrefixListTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -247,16 +247,16 @@ export class TfDataPrefixList extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       filter: {
-        value: cdktn.listMapperHcl(tfDataPrefixListFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataTfPrefixListFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfDataPrefixList.FilterPropertyList",
+        storageClassType: "DataTfPrefixList.FilterPropertyList",
       },
       timeouts: {
-        value: tfDataPrefixListTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: dataTfPrefixListTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfDataPrefixList.TimeoutsProperty",
+        storageClassType: "DataTfPrefixList.TimeoutsProperty",
       },
     };
 
@@ -265,7 +265,7 @@ export class TfDataPrefixList extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataPrefixListFilterPropertyToTerraform(struct?: TfDataPrefixList.FilterProperty | cdktn.IResolvable): any {
+export function dataTfPrefixListFilterPropertyToTerraform(struct?: DataTfPrefixList.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -277,7 +277,7 @@ export function tfDataPrefixListFilterPropertyToTerraform(struct?: TfDataPrefixL
 }
 
 
-export function tfDataPrefixListFilterPropertyToHclTerraform(struct?: TfDataPrefixList.FilterProperty | cdktn.IResolvable): any {
+export function dataTfPrefixListFilterPropertyToHclTerraform(struct?: DataTfPrefixList.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -302,7 +302,7 @@ export function tfDataPrefixListFilterPropertyToHclTerraform(struct?: TfDataPref
 }
 
 
-export function tfDataPrefixListTimeoutsPropertyToTerraform(struct?: TfDataPrefixList.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfPrefixListTimeoutsPropertyToTerraform(struct?: DataTfPrefixList.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -313,7 +313,7 @@ export function tfDataPrefixListTimeoutsPropertyToTerraform(struct?: TfDataPrefi
 }
 
 
-export function tfDataPrefixListTimeoutsPropertyToHclTerraform(struct?: TfDataPrefixList.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfPrefixListTimeoutsPropertyToHclTerraform(struct?: DataTfPrefixList.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -332,14 +332,14 @@ export function tfDataPrefixListTimeoutsPropertyToHclTerraform(struct?: TfDataPr
 }
 
 
-export namespace TfDataPrefixList {
+export namespace DataTfPrefixList {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/prefix_list#name TfDataPrefixList#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/prefix_list#name DataTfPrefixList#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/prefix_list#values TfDataPrefixList#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/prefix_list#values DataTfPrefixList#values}
   */
   readonly values: string[];
 }
@@ -441,7 +441,7 @@ export class FilterPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/prefix_list#read TfDataPrefixList#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/prefix_list#read DataTfPrefixList#read}
   */
   readonly read?: string;
 }

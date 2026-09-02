@@ -5,31 +5,31 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataCapacityBlockOfferingConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfCapacityBlockOfferingConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_capacity_block_offering#capacity_duration_hours TfDataCapacityBlockOffering#capacity_duration_hours}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_capacity_block_offering#capacity_duration_hours DataTfCapacityBlockOffering#capacity_duration_hours}
   */
   readonly capacityDurationHours: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_capacity_block_offering#end_date_range TfDataCapacityBlockOffering#end_date_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_capacity_block_offering#end_date_range DataTfCapacityBlockOffering#end_date_range}
   */
   readonly endDateRange?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_capacity_block_offering#instance_count TfDataCapacityBlockOffering#instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_capacity_block_offering#instance_count DataTfCapacityBlockOffering#instance_count}
   */
   readonly instanceCount: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_capacity_block_offering#instance_type TfDataCapacityBlockOffering#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_capacity_block_offering#instance_type DataTfCapacityBlockOffering#instance_type}
   */
   readonly instanceType: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_capacity_block_offering#region TfDataCapacityBlockOffering#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_capacity_block_offering#region DataTfCapacityBlockOffering#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_capacity_block_offering#start_date_range TfDataCapacityBlockOffering#start_date_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_capacity_block_offering#start_date_range DataTfCapacityBlockOffering#start_date_range}
   */
   readonly startDateRange?: string;
 }
@@ -37,7 +37,7 @@ export interface TfDataCapacityBlockOfferingConfig extends cdktn.TerraformMetaAr
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_capacity_block_offering aws_ec2_capacity_block_offering}
 */
-export class TfDataCapacityBlockOffering extends cdktn.TerraformDataSource {
+export class DataTfCapacityBlockOffering extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -48,11 +48,11 @@ export class TfDataCapacityBlockOffering extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataCapacityBlockOffering resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfCapacityBlockOffering resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataCapacityBlockOffering to import
-  * @param importFromId The id of the existing TfDataCapacityBlockOffering that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_capacity_block_offering#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataCapacityBlockOffering to import is found
+  * @param importToId The construct id used in the generated config for the DataTfCapacityBlockOffering to import
+  * @param importFromId The id of the existing DataTfCapacityBlockOffering that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_capacity_block_offering#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfCapacityBlockOffering to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_capacity_block_offering", importId: importFromId, provider });
@@ -67,9 +67,9 @@ export class TfDataCapacityBlockOffering extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataCapacityBlockOfferingConfig
+  * @param options DataTfCapacityBlockOfferingConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataCapacityBlockOfferingConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfCapacityBlockOfferingConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_capacity_block_offering',
       terraformGeneratorMetadata: {

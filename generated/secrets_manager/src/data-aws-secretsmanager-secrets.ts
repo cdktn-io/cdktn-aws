@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataSecretsConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfSecretsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_secrets#id TfDataSecrets#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_secrets#id DataTfSecrets#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,21 +16,21 @@ export interface TfDataSecretsConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_secrets#region TfDataSecrets#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_secrets#region DataTfSecrets#region}
   */
   readonly region?: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_secrets#filter TfDataSecrets#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_secrets#filter DataTfSecrets#filter}
   */
-  readonly filter?: TfDataSecrets.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataTfSecrets.FilterProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_secrets aws_secretsmanager_secrets}
 */
-export class TfDataSecrets extends cdktn.TerraformDataSource {
+export class DataTfSecrets extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -41,11 +41,11 @@ export class TfDataSecrets extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataSecrets resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfSecrets resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataSecrets to import
-  * @param importFromId The id of the existing TfDataSecrets that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_secrets#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataSecrets to import is found
+  * @param importToId The construct id used in the generated config for the DataTfSecrets to import
+  * @param importFromId The id of the existing DataTfSecrets that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_secrets#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfSecrets to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_secretsmanager_secrets", importId: importFromId, provider });
@@ -60,9 +60,9 @@ export class TfDataSecrets extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataSecretsConfig = {}
+  * @param options DataTfSecretsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataSecretsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfSecretsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_secretsmanager_secrets',
       terraformGeneratorMetadata: {
@@ -130,11 +130,11 @@ export class TfDataSecrets extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new TfDataSecrets.FilterPropertyList(this, "filter", true);
+  private _filter = new DataTfSecrets.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: TfDataSecrets.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataTfSecrets.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -153,7 +153,7 @@ export class TfDataSecrets extends cdktn.TerraformDataSource {
     return {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      filter: cdktn.listMapper(tfDataSecretsFilterPropertyToTerraform, true)(this._filter.internalValue),
+      filter: cdktn.listMapper(dataTfSecretsFilterPropertyToTerraform, true)(this._filter.internalValue),
     };
   }
 
@@ -172,10 +172,10 @@ export class TfDataSecrets extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       filter: {
-        value: cdktn.listMapperHcl(tfDataSecretsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataTfSecretsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfDataSecrets.FilterPropertyList",
+        storageClassType: "DataTfSecrets.FilterPropertyList",
       },
     };
 
@@ -184,7 +184,7 @@ export class TfDataSecrets extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataSecretsFilterPropertyToTerraform(struct?: TfDataSecrets.FilterProperty | cdktn.IResolvable): any {
+export function dataTfSecretsFilterPropertyToTerraform(struct?: DataTfSecrets.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -196,7 +196,7 @@ export function tfDataSecretsFilterPropertyToTerraform(struct?: TfDataSecrets.Fi
 }
 
 
-export function tfDataSecretsFilterPropertyToHclTerraform(struct?: TfDataSecrets.FilterProperty | cdktn.IResolvable): any {
+export function dataTfSecretsFilterPropertyToHclTerraform(struct?: DataTfSecrets.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -221,14 +221,14 @@ export function tfDataSecretsFilterPropertyToHclTerraform(struct?: TfDataSecrets
 }
 
 
-export namespace TfDataSecrets {
+export namespace DataTfSecrets {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_secrets#name TfDataSecrets#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_secrets#name DataTfSecrets#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_secrets#values TfDataSecrets#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_secrets#values DataTfSecrets#values}
   */
   readonly values: string[];
 }

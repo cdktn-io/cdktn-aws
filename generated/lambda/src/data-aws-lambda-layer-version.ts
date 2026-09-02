@@ -5,38 +5,38 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataLayerVersionConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfLayerVersionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_layer_version#compatible_architecture TfDataLayerVersion#compatible_architecture}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_layer_version#compatible_architecture DataTfLayerVersion#compatible_architecture}
   */
   readonly compatibleArchitecture?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_layer_version#compatible_runtime TfDataLayerVersion#compatible_runtime}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_layer_version#compatible_runtime DataTfLayerVersion#compatible_runtime}
   */
   readonly compatibleRuntime?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_layer_version#id TfDataLayerVersion#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_layer_version#id DataTfLayerVersion#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_layer_version#layer_name TfDataLayerVersion#layer_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_layer_version#layer_name DataTfLayerVersion#layer_name}
   */
   readonly layerName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_layer_version#layer_version_arn TfDataLayerVersion#layer_version_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_layer_version#layer_version_arn DataTfLayerVersion#layer_version_arn}
   */
   readonly layerVersionArn?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_layer_version#region TfDataLayerVersion#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_layer_version#region DataTfLayerVersion#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_layer_version#version TfDataLayerVersion#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_layer_version#version DataTfLayerVersion#version}
   */
   readonly version?: number;
 }
@@ -44,7 +44,7 @@ export interface TfDataLayerVersionConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_layer_version aws_lambda_layer_version}
 */
-export class TfDataLayerVersion extends cdktn.TerraformDataSource {
+export class DataTfLayerVersion extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class TfDataLayerVersion extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataLayerVersion resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfLayerVersion resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataLayerVersion to import
-  * @param importFromId The id of the existing TfDataLayerVersion that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_layer_version#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataLayerVersion to import is found
+  * @param importToId The construct id used in the generated config for the DataTfLayerVersion to import
+  * @param importFromId The id of the existing DataTfLayerVersion that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_layer_version#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfLayerVersion to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lambda_layer_version", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class TfDataLayerVersion extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataLayerVersionConfig = {}
+  * @param options DataTfLayerVersionConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataLayerVersionConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfLayerVersionConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_lambda_layer_version',
       terraformGeneratorMetadata: {

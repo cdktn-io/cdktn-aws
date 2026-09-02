@@ -5,24 +5,24 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataOpenidConnectProviderConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfOpenidConnectProviderConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_openid_connect_provider#arn TfDataOpenidConnectProvider#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_openid_connect_provider#arn DataTfOpenidConnectProvider#arn}
   */
   readonly arn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_openid_connect_provider#id TfDataOpenidConnectProvider#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_openid_connect_provider#id DataTfOpenidConnectProvider#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_openid_connect_provider#tags TfDataOpenidConnectProvider#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_openid_connect_provider#tags DataTfOpenidConnectProvider#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_openid_connect_provider#url TfDataOpenidConnectProvider#url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_openid_connect_provider#url DataTfOpenidConnectProvider#url}
   */
   readonly url?: string;
 }
@@ -30,7 +30,7 @@ export interface TfDataOpenidConnectProviderConfig extends cdktn.TerraformMetaAr
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_openid_connect_provider aws_iam_openid_connect_provider}
 */
-export class TfDataOpenidConnectProvider extends cdktn.TerraformDataSource {
+export class DataTfOpenidConnectProvider extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -41,11 +41,11 @@ export class TfDataOpenidConnectProvider extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataOpenidConnectProvider resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfOpenidConnectProvider resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataOpenidConnectProvider to import
-  * @param importFromId The id of the existing TfDataOpenidConnectProvider that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_openid_connect_provider#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataOpenidConnectProvider to import is found
+  * @param importToId The construct id used in the generated config for the DataTfOpenidConnectProvider to import
+  * @param importFromId The id of the existing DataTfOpenidConnectProvider that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_openid_connect_provider#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfOpenidConnectProvider to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iam_openid_connect_provider", importId: importFromId, provider });
@@ -60,9 +60,9 @@ export class TfDataOpenidConnectProvider extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataOpenidConnectProviderConfig = {}
+  * @param options DataTfOpenidConnectProviderConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataOpenidConnectProviderConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfOpenidConnectProviderConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_iam_openid_connect_provider',
       terraformGeneratorMetadata: {

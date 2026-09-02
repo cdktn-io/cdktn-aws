@@ -5,46 +5,46 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataLaunchTemplateConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfLaunchTemplateConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/launch_template#id TfDataLaunchTemplate#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/launch_template#id DataTfLaunchTemplate#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/launch_template#name TfDataLaunchTemplate#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/launch_template#name DataTfLaunchTemplate#name}
   */
   readonly name?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/launch_template#region TfDataLaunchTemplate#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/launch_template#region DataTfLaunchTemplate#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/launch_template#tags TfDataLaunchTemplate#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/launch_template#tags DataTfLaunchTemplate#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/launch_template#filter TfDataLaunchTemplate#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/launch_template#filter DataTfLaunchTemplate#filter}
   */
-  readonly filter?: TfDataLaunchTemplate.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataTfLaunchTemplate.FilterProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/launch_template#timeouts TfDataLaunchTemplate#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/launch_template#timeouts DataTfLaunchTemplate#timeouts}
   */
-  readonly timeouts?: TfDataLaunchTemplate.TimeoutsProperty;
+  readonly timeouts?: DataTfLaunchTemplate.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/launch_template aws_launch_template}
 */
-export class TfDataLaunchTemplate extends cdktn.TerraformDataSource {
+export class DataTfLaunchTemplate extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class TfDataLaunchTemplate extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataLaunchTemplate resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfLaunchTemplate resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataLaunchTemplate to import
-  * @param importFromId The id of the existing TfDataLaunchTemplate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/launch_template#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataLaunchTemplate to import is found
+  * @param importToId The construct id used in the generated config for the DataTfLaunchTemplate to import
+  * @param importFromId The id of the existing DataTfLaunchTemplate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/launch_template#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfLaunchTemplate to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_launch_template", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class TfDataLaunchTemplate extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataLaunchTemplateConfig = {}
+  * @param options DataTfLaunchTemplateConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataLaunchTemplateConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfLaunchTemplateConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_launch_template',
       terraformGeneratorMetadata: {
@@ -110,25 +110,25 @@ export class TfDataLaunchTemplate extends cdktn.TerraformDataSource {
   }
 
   // block_device_mappings - computed: true, optional: false, required: false
-  private _blockDeviceMappings = new TfDataLaunchTemplate.BlockDeviceMappingsPropertyList(this, "block_device_mappings", false);
+  private _blockDeviceMappings = new DataTfLaunchTemplate.BlockDeviceMappingsPropertyList(this, "block_device_mappings", false);
   public get blockDeviceMappings() {
     return this._blockDeviceMappings;
   }
 
   // capacity_reservation_specification - computed: true, optional: false, required: false
-  private _capacityReservationSpecification = new TfDataLaunchTemplate.CapacityReservationSpecificationPropertyList(this, "capacity_reservation_specification", false);
+  private _capacityReservationSpecification = new DataTfLaunchTemplate.CapacityReservationSpecificationPropertyList(this, "capacity_reservation_specification", false);
   public get capacityReservationSpecification() {
     return this._capacityReservationSpecification;
   }
 
   // cpu_options - computed: true, optional: false, required: false
-  private _cpuOptions = new TfDataLaunchTemplate.CpuOptionsPropertyList(this, "cpu_options", false);
+  private _cpuOptions = new DataTfLaunchTemplate.CpuOptionsPropertyList(this, "cpu_options", false);
   public get cpuOptions() {
     return this._cpuOptions;
   }
 
   // credit_specification - computed: true, optional: false, required: false
-  private _creditSpecification = new TfDataLaunchTemplate.CreditSpecificationPropertyList(this, "credit_specification", false);
+  private _creditSpecification = new DataTfLaunchTemplate.CreditSpecificationPropertyList(this, "credit_specification", false);
   public get creditSpecification() {
     return this._creditSpecification;
   }
@@ -159,19 +159,19 @@ export class TfDataLaunchTemplate extends cdktn.TerraformDataSource {
   }
 
   // enclave_options - computed: true, optional: false, required: false
-  private _enclaveOptions = new TfDataLaunchTemplate.EnclaveOptionsPropertyList(this, "enclave_options", false);
+  private _enclaveOptions = new DataTfLaunchTemplate.EnclaveOptionsPropertyList(this, "enclave_options", false);
   public get enclaveOptions() {
     return this._enclaveOptions;
   }
 
   // hibernation_options - computed: true, optional: false, required: false
-  private _hibernationOptions = new TfDataLaunchTemplate.HibernationOptionsPropertyList(this, "hibernation_options", false);
+  private _hibernationOptions = new DataTfLaunchTemplate.HibernationOptionsPropertyList(this, "hibernation_options", false);
   public get hibernationOptions() {
     return this._hibernationOptions;
   }
 
   // iam_instance_profile - computed: true, optional: false, required: false
-  private _iamInstanceProfile = new TfDataLaunchTemplate.IamInstanceProfilePropertyList(this, "iam_instance_profile", false);
+  private _iamInstanceProfile = new DataTfLaunchTemplate.IamInstanceProfilePropertyList(this, "iam_instance_profile", false);
   public get iamInstanceProfile() {
     return this._iamInstanceProfile;
   }
@@ -203,13 +203,13 @@ export class TfDataLaunchTemplate extends cdktn.TerraformDataSource {
   }
 
   // instance_market_options - computed: true, optional: false, required: false
-  private _instanceMarketOptions = new TfDataLaunchTemplate.InstanceMarketOptionsPropertyList(this, "instance_market_options", false);
+  private _instanceMarketOptions = new DataTfLaunchTemplate.InstanceMarketOptionsPropertyList(this, "instance_market_options", false);
   public get instanceMarketOptions() {
     return this._instanceMarketOptions;
   }
 
   // instance_requirements - computed: true, optional: false, required: false
-  private _instanceRequirements = new TfDataLaunchTemplate.InstanceRequirementsPropertyList(this, "instance_requirements", false);
+  private _instanceRequirements = new DataTfLaunchTemplate.InstanceRequirementsPropertyList(this, "instance_requirements", false);
   public get instanceRequirements() {
     return this._instanceRequirements;
   }
@@ -235,25 +235,25 @@ export class TfDataLaunchTemplate extends cdktn.TerraformDataSource {
   }
 
   // license_specification - computed: true, optional: false, required: false
-  private _licenseSpecification = new TfDataLaunchTemplate.LicenseSpecificationPropertyList(this, "license_specification", false);
+  private _licenseSpecification = new DataTfLaunchTemplate.LicenseSpecificationPropertyList(this, "license_specification", false);
   public get licenseSpecification() {
     return this._licenseSpecification;
   }
 
   // maintenance_options - computed: true, optional: false, required: false
-  private _maintenanceOptions = new TfDataLaunchTemplate.MaintenanceOptionsPropertyList(this, "maintenance_options", false);
+  private _maintenanceOptions = new DataTfLaunchTemplate.MaintenanceOptionsPropertyList(this, "maintenance_options", false);
   public get maintenanceOptions() {
     return this._maintenanceOptions;
   }
 
   // metadata_options - computed: true, optional: false, required: false
-  private _metadataOptions = new TfDataLaunchTemplate.MetadataOptionsPropertyList(this, "metadata_options", false);
+  private _metadataOptions = new DataTfLaunchTemplate.MetadataOptionsPropertyList(this, "metadata_options", false);
   public get metadataOptions() {
     return this._metadataOptions;
   }
 
   // monitoring - computed: true, optional: false, required: false
-  private _monitoring = new TfDataLaunchTemplate.MonitoringPropertyList(this, "monitoring", false);
+  private _monitoring = new DataTfLaunchTemplate.MonitoringPropertyList(this, "monitoring", false);
   public get monitoring() {
     return this._monitoring;
   }
@@ -275,25 +275,25 @@ export class TfDataLaunchTemplate extends cdktn.TerraformDataSource {
   }
 
   // network_interfaces - computed: true, optional: false, required: false
-  private _networkInterfaces = new TfDataLaunchTemplate.NetworkInterfacesPropertyList(this, "network_interfaces", false);
+  private _networkInterfaces = new DataTfLaunchTemplate.NetworkInterfacesPropertyList(this, "network_interfaces", false);
   public get networkInterfaces() {
     return this._networkInterfaces;
   }
 
   // network_performance_options - computed: true, optional: false, required: false
-  private _networkPerformanceOptions = new TfDataLaunchTemplate.NetworkPerformanceOptionsPropertyList(this, "network_performance_options", false);
+  private _networkPerformanceOptions = new DataTfLaunchTemplate.NetworkPerformanceOptionsPropertyList(this, "network_performance_options", false);
   public get networkPerformanceOptions() {
     return this._networkPerformanceOptions;
   }
 
   // placement - computed: true, optional: false, required: false
-  private _placement = new TfDataLaunchTemplate.PlacementPropertyList(this, "placement", false);
+  private _placement = new DataTfLaunchTemplate.PlacementPropertyList(this, "placement", false);
   public get placement() {
     return this._placement;
   }
 
   // private_dns_name_options - computed: true, optional: false, required: false
-  private _privateDnsNameOptions = new TfDataLaunchTemplate.PrivateDnsNameOptionsPropertyList(this, "private_dns_name_options", false);
+  private _privateDnsNameOptions = new DataTfLaunchTemplate.PrivateDnsNameOptionsPropertyList(this, "private_dns_name_options", false);
   public get privateDnsNameOptions() {
     return this._privateDnsNameOptions;
   }
@@ -320,7 +320,7 @@ export class TfDataLaunchTemplate extends cdktn.TerraformDataSource {
   }
 
   // secondary_interfaces - computed: true, optional: false, required: false
-  private _secondaryInterfaces = new TfDataLaunchTemplate.SecondaryInterfacesPropertyList(this, "secondary_interfaces", false);
+  private _secondaryInterfaces = new DataTfLaunchTemplate.SecondaryInterfacesPropertyList(this, "secondary_interfaces", false);
   public get secondaryInterfaces() {
     return this._secondaryInterfaces;
   }
@@ -331,7 +331,7 @@ export class TfDataLaunchTemplate extends cdktn.TerraformDataSource {
   }
 
   // tag_specifications - computed: true, optional: false, required: false
-  private _tagSpecifications = new TfDataLaunchTemplate.TagSpecificationsPropertyList(this, "tag_specifications", false);
+  private _tagSpecifications = new DataTfLaunchTemplate.TagSpecificationsPropertyList(this, "tag_specifications", false);
   public get tagSpecifications() {
     return this._tagSpecifications;
   }
@@ -363,11 +363,11 @@ export class TfDataLaunchTemplate extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new TfDataLaunchTemplate.FilterPropertyList(this, "filter", true);
+  private _filter = new DataTfLaunchTemplate.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: TfDataLaunchTemplate.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataTfLaunchTemplate.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -379,11 +379,11 @@ export class TfDataLaunchTemplate extends cdktn.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfDataLaunchTemplate.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new DataTfLaunchTemplate.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfDataLaunchTemplate.TimeoutsProperty) {
+  public putTimeouts(value: DataTfLaunchTemplate.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -404,8 +404,8 @@ export class TfDataLaunchTemplate extends cdktn.TerraformDataSource {
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      filter: cdktn.listMapper(tfDataLaunchTemplateFilterPropertyToTerraform, true)(this._filter.internalValue),
-      timeouts: tfDataLaunchTemplateTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      filter: cdktn.listMapper(dataTfLaunchTemplateFilterPropertyToTerraform, true)(this._filter.internalValue),
+      timeouts: dataTfLaunchTemplateTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -436,16 +436,16 @@ export class TfDataLaunchTemplate extends cdktn.TerraformDataSource {
         storageClassType: "stringMap",
       },
       filter: {
-        value: cdktn.listMapperHcl(tfDataLaunchTemplateFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataTfLaunchTemplateFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfDataLaunchTemplate.FilterPropertyList",
+        storageClassType: "DataTfLaunchTemplate.FilterPropertyList",
       },
       timeouts: {
-        value: tfDataLaunchTemplateTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: dataTfLaunchTemplateTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfDataLaunchTemplate.TimeoutsProperty",
+        storageClassType: "DataTfLaunchTemplate.TimeoutsProperty",
       },
     };
 
@@ -454,7 +454,7 @@ export class TfDataLaunchTemplate extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataLaunchTemplateEbsPropertyToTerraform(struct?: TfDataLaunchTemplate.EbsProperty): any {
+export function dataTfLaunchTemplateEbsPropertyToTerraform(struct?: DataTfLaunchTemplate.EbsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -464,7 +464,7 @@ export function tfDataLaunchTemplateEbsPropertyToTerraform(struct?: TfDataLaunch
 }
 
 
-export function tfDataLaunchTemplateEbsPropertyToHclTerraform(struct?: TfDataLaunchTemplate.EbsProperty): any {
+export function dataTfLaunchTemplateEbsPropertyToHclTerraform(struct?: DataTfLaunchTemplate.EbsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -475,7 +475,7 @@ export function tfDataLaunchTemplateEbsPropertyToHclTerraform(struct?: TfDataLau
 }
 
 
-export function tfDataLaunchTemplateBlockDeviceMappingsPropertyToTerraform(struct?: TfDataLaunchTemplate.BlockDeviceMappingsProperty): any {
+export function dataTfLaunchTemplateBlockDeviceMappingsPropertyToTerraform(struct?: DataTfLaunchTemplate.BlockDeviceMappingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -485,7 +485,7 @@ export function tfDataLaunchTemplateBlockDeviceMappingsPropertyToTerraform(struc
 }
 
 
-export function tfDataLaunchTemplateBlockDeviceMappingsPropertyToHclTerraform(struct?: TfDataLaunchTemplate.BlockDeviceMappingsProperty): any {
+export function dataTfLaunchTemplateBlockDeviceMappingsPropertyToHclTerraform(struct?: DataTfLaunchTemplate.BlockDeviceMappingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -496,7 +496,7 @@ export function tfDataLaunchTemplateBlockDeviceMappingsPropertyToHclTerraform(st
 }
 
 
-export function tfDataLaunchTemplateCapacityReservationTargetPropertyToTerraform(struct?: TfDataLaunchTemplate.CapacityReservationTargetProperty): any {
+export function dataTfLaunchTemplateCapacityReservationTargetPropertyToTerraform(struct?: DataTfLaunchTemplate.CapacityReservationTargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -506,7 +506,7 @@ export function tfDataLaunchTemplateCapacityReservationTargetPropertyToTerraform
 }
 
 
-export function tfDataLaunchTemplateCapacityReservationTargetPropertyToHclTerraform(struct?: TfDataLaunchTemplate.CapacityReservationTargetProperty): any {
+export function dataTfLaunchTemplateCapacityReservationTargetPropertyToHclTerraform(struct?: DataTfLaunchTemplate.CapacityReservationTargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -517,7 +517,7 @@ export function tfDataLaunchTemplateCapacityReservationTargetPropertyToHclTerraf
 }
 
 
-export function tfDataLaunchTemplateCapacityReservationSpecificationPropertyToTerraform(struct?: TfDataLaunchTemplate.CapacityReservationSpecificationProperty): any {
+export function dataTfLaunchTemplateCapacityReservationSpecificationPropertyToTerraform(struct?: DataTfLaunchTemplate.CapacityReservationSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -527,7 +527,7 @@ export function tfDataLaunchTemplateCapacityReservationSpecificationPropertyToTe
 }
 
 
-export function tfDataLaunchTemplateCapacityReservationSpecificationPropertyToHclTerraform(struct?: TfDataLaunchTemplate.CapacityReservationSpecificationProperty): any {
+export function dataTfLaunchTemplateCapacityReservationSpecificationPropertyToHclTerraform(struct?: DataTfLaunchTemplate.CapacityReservationSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -538,7 +538,7 @@ export function tfDataLaunchTemplateCapacityReservationSpecificationPropertyToHc
 }
 
 
-export function tfDataLaunchTemplateCpuOptionsPropertyToTerraform(struct?: TfDataLaunchTemplate.CpuOptionsProperty): any {
+export function dataTfLaunchTemplateCpuOptionsPropertyToTerraform(struct?: DataTfLaunchTemplate.CpuOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -548,7 +548,7 @@ export function tfDataLaunchTemplateCpuOptionsPropertyToTerraform(struct?: TfDat
 }
 
 
-export function tfDataLaunchTemplateCpuOptionsPropertyToHclTerraform(struct?: TfDataLaunchTemplate.CpuOptionsProperty): any {
+export function dataTfLaunchTemplateCpuOptionsPropertyToHclTerraform(struct?: DataTfLaunchTemplate.CpuOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -559,7 +559,7 @@ export function tfDataLaunchTemplateCpuOptionsPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfDataLaunchTemplateCreditSpecificationPropertyToTerraform(struct?: TfDataLaunchTemplate.CreditSpecificationProperty): any {
+export function dataTfLaunchTemplateCreditSpecificationPropertyToTerraform(struct?: DataTfLaunchTemplate.CreditSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -569,7 +569,7 @@ export function tfDataLaunchTemplateCreditSpecificationPropertyToTerraform(struc
 }
 
 
-export function tfDataLaunchTemplateCreditSpecificationPropertyToHclTerraform(struct?: TfDataLaunchTemplate.CreditSpecificationProperty): any {
+export function dataTfLaunchTemplateCreditSpecificationPropertyToHclTerraform(struct?: DataTfLaunchTemplate.CreditSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -580,7 +580,7 @@ export function tfDataLaunchTemplateCreditSpecificationPropertyToHclTerraform(st
 }
 
 
-export function tfDataLaunchTemplateEnclaveOptionsPropertyToTerraform(struct?: TfDataLaunchTemplate.EnclaveOptionsProperty): any {
+export function dataTfLaunchTemplateEnclaveOptionsPropertyToTerraform(struct?: DataTfLaunchTemplate.EnclaveOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -590,7 +590,7 @@ export function tfDataLaunchTemplateEnclaveOptionsPropertyToTerraform(struct?: T
 }
 
 
-export function tfDataLaunchTemplateEnclaveOptionsPropertyToHclTerraform(struct?: TfDataLaunchTemplate.EnclaveOptionsProperty): any {
+export function dataTfLaunchTemplateEnclaveOptionsPropertyToHclTerraform(struct?: DataTfLaunchTemplate.EnclaveOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -601,7 +601,7 @@ export function tfDataLaunchTemplateEnclaveOptionsPropertyToHclTerraform(struct?
 }
 
 
-export function tfDataLaunchTemplateHibernationOptionsPropertyToTerraform(struct?: TfDataLaunchTemplate.HibernationOptionsProperty): any {
+export function dataTfLaunchTemplateHibernationOptionsPropertyToTerraform(struct?: DataTfLaunchTemplate.HibernationOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -611,7 +611,7 @@ export function tfDataLaunchTemplateHibernationOptionsPropertyToTerraform(struct
 }
 
 
-export function tfDataLaunchTemplateHibernationOptionsPropertyToHclTerraform(struct?: TfDataLaunchTemplate.HibernationOptionsProperty): any {
+export function dataTfLaunchTemplateHibernationOptionsPropertyToHclTerraform(struct?: DataTfLaunchTemplate.HibernationOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -622,7 +622,7 @@ export function tfDataLaunchTemplateHibernationOptionsPropertyToHclTerraform(str
 }
 
 
-export function tfDataLaunchTemplateIamInstanceProfilePropertyToTerraform(struct?: TfDataLaunchTemplate.IamInstanceProfileProperty): any {
+export function dataTfLaunchTemplateIamInstanceProfilePropertyToTerraform(struct?: DataTfLaunchTemplate.IamInstanceProfileProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -632,7 +632,7 @@ export function tfDataLaunchTemplateIamInstanceProfilePropertyToTerraform(struct
 }
 
 
-export function tfDataLaunchTemplateIamInstanceProfilePropertyToHclTerraform(struct?: TfDataLaunchTemplate.IamInstanceProfileProperty): any {
+export function dataTfLaunchTemplateIamInstanceProfilePropertyToHclTerraform(struct?: DataTfLaunchTemplate.IamInstanceProfileProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -643,7 +643,7 @@ export function tfDataLaunchTemplateIamInstanceProfilePropertyToHclTerraform(str
 }
 
 
-export function tfDataLaunchTemplateSpotOptionsPropertyToTerraform(struct?: TfDataLaunchTemplate.SpotOptionsProperty): any {
+export function dataTfLaunchTemplateSpotOptionsPropertyToTerraform(struct?: DataTfLaunchTemplate.SpotOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -653,7 +653,7 @@ export function tfDataLaunchTemplateSpotOptionsPropertyToTerraform(struct?: TfDa
 }
 
 
-export function tfDataLaunchTemplateSpotOptionsPropertyToHclTerraform(struct?: TfDataLaunchTemplate.SpotOptionsProperty): any {
+export function dataTfLaunchTemplateSpotOptionsPropertyToHclTerraform(struct?: DataTfLaunchTemplate.SpotOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -664,7 +664,7 @@ export function tfDataLaunchTemplateSpotOptionsPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfDataLaunchTemplateInstanceMarketOptionsPropertyToTerraform(struct?: TfDataLaunchTemplate.InstanceMarketOptionsProperty): any {
+export function dataTfLaunchTemplateInstanceMarketOptionsPropertyToTerraform(struct?: DataTfLaunchTemplate.InstanceMarketOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -674,7 +674,7 @@ export function tfDataLaunchTemplateInstanceMarketOptionsPropertyToTerraform(str
 }
 
 
-export function tfDataLaunchTemplateInstanceMarketOptionsPropertyToHclTerraform(struct?: TfDataLaunchTemplate.InstanceMarketOptionsProperty): any {
+export function dataTfLaunchTemplateInstanceMarketOptionsPropertyToHclTerraform(struct?: DataTfLaunchTemplate.InstanceMarketOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -685,7 +685,7 @@ export function tfDataLaunchTemplateInstanceMarketOptionsPropertyToHclTerraform(
 }
 
 
-export function tfDataLaunchTemplateAcceleratorCountPropertyToTerraform(struct?: TfDataLaunchTemplate.AcceleratorCountProperty): any {
+export function dataTfLaunchTemplateAcceleratorCountPropertyToTerraform(struct?: DataTfLaunchTemplate.AcceleratorCountProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -695,7 +695,7 @@ export function tfDataLaunchTemplateAcceleratorCountPropertyToTerraform(struct?:
 }
 
 
-export function tfDataLaunchTemplateAcceleratorCountPropertyToHclTerraform(struct?: TfDataLaunchTemplate.AcceleratorCountProperty): any {
+export function dataTfLaunchTemplateAcceleratorCountPropertyToHclTerraform(struct?: DataTfLaunchTemplate.AcceleratorCountProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -706,7 +706,7 @@ export function tfDataLaunchTemplateAcceleratorCountPropertyToHclTerraform(struc
 }
 
 
-export function tfDataLaunchTemplateAcceleratorTotalMemoryMibPropertyToTerraform(struct?: TfDataLaunchTemplate.AcceleratorTotalMemoryMibProperty): any {
+export function dataTfLaunchTemplateAcceleratorTotalMemoryMibPropertyToTerraform(struct?: DataTfLaunchTemplate.AcceleratorTotalMemoryMibProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -716,7 +716,7 @@ export function tfDataLaunchTemplateAcceleratorTotalMemoryMibPropertyToTerraform
 }
 
 
-export function tfDataLaunchTemplateAcceleratorTotalMemoryMibPropertyToHclTerraform(struct?: TfDataLaunchTemplate.AcceleratorTotalMemoryMibProperty): any {
+export function dataTfLaunchTemplateAcceleratorTotalMemoryMibPropertyToHclTerraform(struct?: DataTfLaunchTemplate.AcceleratorTotalMemoryMibProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -727,7 +727,7 @@ export function tfDataLaunchTemplateAcceleratorTotalMemoryMibPropertyToHclTerraf
 }
 
 
-export function tfDataLaunchTemplateBaselineEbsBandwidthMbpsPropertyToTerraform(struct?: TfDataLaunchTemplate.BaselineEbsBandwidthMbpsProperty): any {
+export function dataTfLaunchTemplateBaselineEbsBandwidthMbpsPropertyToTerraform(struct?: DataTfLaunchTemplate.BaselineEbsBandwidthMbpsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -737,7 +737,7 @@ export function tfDataLaunchTemplateBaselineEbsBandwidthMbpsPropertyToTerraform(
 }
 
 
-export function tfDataLaunchTemplateBaselineEbsBandwidthMbpsPropertyToHclTerraform(struct?: TfDataLaunchTemplate.BaselineEbsBandwidthMbpsProperty): any {
+export function dataTfLaunchTemplateBaselineEbsBandwidthMbpsPropertyToHclTerraform(struct?: DataTfLaunchTemplate.BaselineEbsBandwidthMbpsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -748,7 +748,7 @@ export function tfDataLaunchTemplateBaselineEbsBandwidthMbpsPropertyToHclTerrafo
 }
 
 
-export function tfDataLaunchTemplateMemoryGibPerVcpuPropertyToTerraform(struct?: TfDataLaunchTemplate.MemoryGibPerVcpuProperty): any {
+export function dataTfLaunchTemplateMemoryGibPerVcpuPropertyToTerraform(struct?: DataTfLaunchTemplate.MemoryGibPerVcpuProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -758,7 +758,7 @@ export function tfDataLaunchTemplateMemoryGibPerVcpuPropertyToTerraform(struct?:
 }
 
 
-export function tfDataLaunchTemplateMemoryGibPerVcpuPropertyToHclTerraform(struct?: TfDataLaunchTemplate.MemoryGibPerVcpuProperty): any {
+export function dataTfLaunchTemplateMemoryGibPerVcpuPropertyToHclTerraform(struct?: DataTfLaunchTemplate.MemoryGibPerVcpuProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -769,7 +769,7 @@ export function tfDataLaunchTemplateMemoryGibPerVcpuPropertyToHclTerraform(struc
 }
 
 
-export function tfDataLaunchTemplateMemoryMibPropertyToTerraform(struct?: TfDataLaunchTemplate.MemoryMibProperty): any {
+export function dataTfLaunchTemplateMemoryMibPropertyToTerraform(struct?: DataTfLaunchTemplate.MemoryMibProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -779,7 +779,7 @@ export function tfDataLaunchTemplateMemoryMibPropertyToTerraform(struct?: TfData
 }
 
 
-export function tfDataLaunchTemplateMemoryMibPropertyToHclTerraform(struct?: TfDataLaunchTemplate.MemoryMibProperty): any {
+export function dataTfLaunchTemplateMemoryMibPropertyToHclTerraform(struct?: DataTfLaunchTemplate.MemoryMibProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -790,7 +790,7 @@ export function tfDataLaunchTemplateMemoryMibPropertyToHclTerraform(struct?: TfD
 }
 
 
-export function tfDataLaunchTemplateNetworkBandwidthGbpsPropertyToTerraform(struct?: TfDataLaunchTemplate.NetworkBandwidthGbpsProperty): any {
+export function dataTfLaunchTemplateNetworkBandwidthGbpsPropertyToTerraform(struct?: DataTfLaunchTemplate.NetworkBandwidthGbpsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -800,7 +800,7 @@ export function tfDataLaunchTemplateNetworkBandwidthGbpsPropertyToTerraform(stru
 }
 
 
-export function tfDataLaunchTemplateNetworkBandwidthGbpsPropertyToHclTerraform(struct?: TfDataLaunchTemplate.NetworkBandwidthGbpsProperty): any {
+export function dataTfLaunchTemplateNetworkBandwidthGbpsPropertyToHclTerraform(struct?: DataTfLaunchTemplate.NetworkBandwidthGbpsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -811,7 +811,7 @@ export function tfDataLaunchTemplateNetworkBandwidthGbpsPropertyToHclTerraform(s
 }
 
 
-export function tfDataLaunchTemplateNetworkInterfaceCountPropertyToTerraform(struct?: TfDataLaunchTemplate.NetworkInterfaceCountProperty): any {
+export function dataTfLaunchTemplateNetworkInterfaceCountPropertyToTerraform(struct?: DataTfLaunchTemplate.NetworkInterfaceCountProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -821,7 +821,7 @@ export function tfDataLaunchTemplateNetworkInterfaceCountPropertyToTerraform(str
 }
 
 
-export function tfDataLaunchTemplateNetworkInterfaceCountPropertyToHclTerraform(struct?: TfDataLaunchTemplate.NetworkInterfaceCountProperty): any {
+export function dataTfLaunchTemplateNetworkInterfaceCountPropertyToHclTerraform(struct?: DataTfLaunchTemplate.NetworkInterfaceCountProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -832,7 +832,7 @@ export function tfDataLaunchTemplateNetworkInterfaceCountPropertyToHclTerraform(
 }
 
 
-export function tfDataLaunchTemplateTotalLocalStorageGbPropertyToTerraform(struct?: TfDataLaunchTemplate.TotalLocalStorageGbProperty): any {
+export function dataTfLaunchTemplateTotalLocalStorageGbPropertyToTerraform(struct?: DataTfLaunchTemplate.TotalLocalStorageGbProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -842,7 +842,7 @@ export function tfDataLaunchTemplateTotalLocalStorageGbPropertyToTerraform(struc
 }
 
 
-export function tfDataLaunchTemplateTotalLocalStorageGbPropertyToHclTerraform(struct?: TfDataLaunchTemplate.TotalLocalStorageGbProperty): any {
+export function dataTfLaunchTemplateTotalLocalStorageGbPropertyToHclTerraform(struct?: DataTfLaunchTemplate.TotalLocalStorageGbProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -853,7 +853,7 @@ export function tfDataLaunchTemplateTotalLocalStorageGbPropertyToHclTerraform(st
 }
 
 
-export function tfDataLaunchTemplateVcpuCountPropertyToTerraform(struct?: TfDataLaunchTemplate.VcpuCountProperty): any {
+export function dataTfLaunchTemplateVcpuCountPropertyToTerraform(struct?: DataTfLaunchTemplate.VcpuCountProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -863,7 +863,7 @@ export function tfDataLaunchTemplateVcpuCountPropertyToTerraform(struct?: TfData
 }
 
 
-export function tfDataLaunchTemplateVcpuCountPropertyToHclTerraform(struct?: TfDataLaunchTemplate.VcpuCountProperty): any {
+export function dataTfLaunchTemplateVcpuCountPropertyToHclTerraform(struct?: DataTfLaunchTemplate.VcpuCountProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -874,7 +874,7 @@ export function tfDataLaunchTemplateVcpuCountPropertyToHclTerraform(struct?: TfD
 }
 
 
-export function tfDataLaunchTemplateInstanceRequirementsPropertyToTerraform(struct?: TfDataLaunchTemplate.InstanceRequirementsProperty): any {
+export function dataTfLaunchTemplateInstanceRequirementsPropertyToTerraform(struct?: DataTfLaunchTemplate.InstanceRequirementsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -884,7 +884,7 @@ export function tfDataLaunchTemplateInstanceRequirementsPropertyToTerraform(stru
 }
 
 
-export function tfDataLaunchTemplateInstanceRequirementsPropertyToHclTerraform(struct?: TfDataLaunchTemplate.InstanceRequirementsProperty): any {
+export function dataTfLaunchTemplateInstanceRequirementsPropertyToHclTerraform(struct?: DataTfLaunchTemplate.InstanceRequirementsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -895,7 +895,7 @@ export function tfDataLaunchTemplateInstanceRequirementsPropertyToHclTerraform(s
 }
 
 
-export function tfDataLaunchTemplateLicenseSpecificationPropertyToTerraform(struct?: TfDataLaunchTemplate.LicenseSpecificationProperty): any {
+export function dataTfLaunchTemplateLicenseSpecificationPropertyToTerraform(struct?: DataTfLaunchTemplate.LicenseSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -905,7 +905,7 @@ export function tfDataLaunchTemplateLicenseSpecificationPropertyToTerraform(stru
 }
 
 
-export function tfDataLaunchTemplateLicenseSpecificationPropertyToHclTerraform(struct?: TfDataLaunchTemplate.LicenseSpecificationProperty): any {
+export function dataTfLaunchTemplateLicenseSpecificationPropertyToHclTerraform(struct?: DataTfLaunchTemplate.LicenseSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -916,7 +916,7 @@ export function tfDataLaunchTemplateLicenseSpecificationPropertyToHclTerraform(s
 }
 
 
-export function tfDataLaunchTemplateMaintenanceOptionsPropertyToTerraform(struct?: TfDataLaunchTemplate.MaintenanceOptionsProperty): any {
+export function dataTfLaunchTemplateMaintenanceOptionsPropertyToTerraform(struct?: DataTfLaunchTemplate.MaintenanceOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -926,7 +926,7 @@ export function tfDataLaunchTemplateMaintenanceOptionsPropertyToTerraform(struct
 }
 
 
-export function tfDataLaunchTemplateMaintenanceOptionsPropertyToHclTerraform(struct?: TfDataLaunchTemplate.MaintenanceOptionsProperty): any {
+export function dataTfLaunchTemplateMaintenanceOptionsPropertyToHclTerraform(struct?: DataTfLaunchTemplate.MaintenanceOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -937,7 +937,7 @@ export function tfDataLaunchTemplateMaintenanceOptionsPropertyToHclTerraform(str
 }
 
 
-export function tfDataLaunchTemplateMetadataOptionsPropertyToTerraform(struct?: TfDataLaunchTemplate.MetadataOptionsProperty): any {
+export function dataTfLaunchTemplateMetadataOptionsPropertyToTerraform(struct?: DataTfLaunchTemplate.MetadataOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -947,7 +947,7 @@ export function tfDataLaunchTemplateMetadataOptionsPropertyToTerraform(struct?: 
 }
 
 
-export function tfDataLaunchTemplateMetadataOptionsPropertyToHclTerraform(struct?: TfDataLaunchTemplate.MetadataOptionsProperty): any {
+export function dataTfLaunchTemplateMetadataOptionsPropertyToHclTerraform(struct?: DataTfLaunchTemplate.MetadataOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -958,7 +958,7 @@ export function tfDataLaunchTemplateMetadataOptionsPropertyToHclTerraform(struct
 }
 
 
-export function tfDataLaunchTemplateMonitoringPropertyToTerraform(struct?: TfDataLaunchTemplate.MonitoringProperty): any {
+export function dataTfLaunchTemplateMonitoringPropertyToTerraform(struct?: DataTfLaunchTemplate.MonitoringProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -968,7 +968,7 @@ export function tfDataLaunchTemplateMonitoringPropertyToTerraform(struct?: TfDat
 }
 
 
-export function tfDataLaunchTemplateMonitoringPropertyToHclTerraform(struct?: TfDataLaunchTemplate.MonitoringProperty): any {
+export function dataTfLaunchTemplateMonitoringPropertyToHclTerraform(struct?: DataTfLaunchTemplate.MonitoringProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -979,7 +979,7 @@ export function tfDataLaunchTemplateMonitoringPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfDataLaunchTemplateConnectionTrackingSpecificationPropertyToTerraform(struct?: TfDataLaunchTemplate.ConnectionTrackingSpecificationProperty): any {
+export function dataTfLaunchTemplateConnectionTrackingSpecificationPropertyToTerraform(struct?: DataTfLaunchTemplate.ConnectionTrackingSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -989,7 +989,7 @@ export function tfDataLaunchTemplateConnectionTrackingSpecificationPropertyToTer
 }
 
 
-export function tfDataLaunchTemplateConnectionTrackingSpecificationPropertyToHclTerraform(struct?: TfDataLaunchTemplate.ConnectionTrackingSpecificationProperty): any {
+export function dataTfLaunchTemplateConnectionTrackingSpecificationPropertyToHclTerraform(struct?: DataTfLaunchTemplate.ConnectionTrackingSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1000,7 +1000,7 @@ export function tfDataLaunchTemplateConnectionTrackingSpecificationPropertyToHcl
 }
 
 
-export function tfDataLaunchTemplateNetworkInterfacesPropertyToTerraform(struct?: TfDataLaunchTemplate.NetworkInterfacesProperty): any {
+export function dataTfLaunchTemplateNetworkInterfacesPropertyToTerraform(struct?: DataTfLaunchTemplate.NetworkInterfacesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1010,7 +1010,7 @@ export function tfDataLaunchTemplateNetworkInterfacesPropertyToTerraform(struct?
 }
 
 
-export function tfDataLaunchTemplateNetworkInterfacesPropertyToHclTerraform(struct?: TfDataLaunchTemplate.NetworkInterfacesProperty): any {
+export function dataTfLaunchTemplateNetworkInterfacesPropertyToHclTerraform(struct?: DataTfLaunchTemplate.NetworkInterfacesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1021,7 +1021,7 @@ export function tfDataLaunchTemplateNetworkInterfacesPropertyToHclTerraform(stru
 }
 
 
-export function tfDataLaunchTemplateNetworkPerformanceOptionsPropertyToTerraform(struct?: TfDataLaunchTemplate.NetworkPerformanceOptionsProperty): any {
+export function dataTfLaunchTemplateNetworkPerformanceOptionsPropertyToTerraform(struct?: DataTfLaunchTemplate.NetworkPerformanceOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1031,7 +1031,7 @@ export function tfDataLaunchTemplateNetworkPerformanceOptionsPropertyToTerraform
 }
 
 
-export function tfDataLaunchTemplateNetworkPerformanceOptionsPropertyToHclTerraform(struct?: TfDataLaunchTemplate.NetworkPerformanceOptionsProperty): any {
+export function dataTfLaunchTemplateNetworkPerformanceOptionsPropertyToHclTerraform(struct?: DataTfLaunchTemplate.NetworkPerformanceOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1042,7 +1042,7 @@ export function tfDataLaunchTemplateNetworkPerformanceOptionsPropertyToHclTerraf
 }
 
 
-export function tfDataLaunchTemplatePlacementPropertyToTerraform(struct?: TfDataLaunchTemplate.PlacementProperty): any {
+export function dataTfLaunchTemplatePlacementPropertyToTerraform(struct?: DataTfLaunchTemplate.PlacementProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1052,7 +1052,7 @@ export function tfDataLaunchTemplatePlacementPropertyToTerraform(struct?: TfData
 }
 
 
-export function tfDataLaunchTemplatePlacementPropertyToHclTerraform(struct?: TfDataLaunchTemplate.PlacementProperty): any {
+export function dataTfLaunchTemplatePlacementPropertyToHclTerraform(struct?: DataTfLaunchTemplate.PlacementProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1063,7 +1063,7 @@ export function tfDataLaunchTemplatePlacementPropertyToHclTerraform(struct?: TfD
 }
 
 
-export function tfDataLaunchTemplatePrivateDnsNameOptionsPropertyToTerraform(struct?: TfDataLaunchTemplate.PrivateDnsNameOptionsProperty): any {
+export function dataTfLaunchTemplatePrivateDnsNameOptionsPropertyToTerraform(struct?: DataTfLaunchTemplate.PrivateDnsNameOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1073,7 +1073,7 @@ export function tfDataLaunchTemplatePrivateDnsNameOptionsPropertyToTerraform(str
 }
 
 
-export function tfDataLaunchTemplatePrivateDnsNameOptionsPropertyToHclTerraform(struct?: TfDataLaunchTemplate.PrivateDnsNameOptionsProperty): any {
+export function dataTfLaunchTemplatePrivateDnsNameOptionsPropertyToHclTerraform(struct?: DataTfLaunchTemplate.PrivateDnsNameOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1084,7 +1084,7 @@ export function tfDataLaunchTemplatePrivateDnsNameOptionsPropertyToHclTerraform(
 }
 
 
-export function tfDataLaunchTemplateSecondaryInterfacesPropertyToTerraform(struct?: TfDataLaunchTemplate.SecondaryInterfacesProperty): any {
+export function dataTfLaunchTemplateSecondaryInterfacesPropertyToTerraform(struct?: DataTfLaunchTemplate.SecondaryInterfacesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1094,7 +1094,7 @@ export function tfDataLaunchTemplateSecondaryInterfacesPropertyToTerraform(struc
 }
 
 
-export function tfDataLaunchTemplateSecondaryInterfacesPropertyToHclTerraform(struct?: TfDataLaunchTemplate.SecondaryInterfacesProperty): any {
+export function dataTfLaunchTemplateSecondaryInterfacesPropertyToHclTerraform(struct?: DataTfLaunchTemplate.SecondaryInterfacesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1105,7 +1105,7 @@ export function tfDataLaunchTemplateSecondaryInterfacesPropertyToHclTerraform(st
 }
 
 
-export function tfDataLaunchTemplateTagSpecificationsPropertyToTerraform(struct?: TfDataLaunchTemplate.TagSpecificationsProperty): any {
+export function dataTfLaunchTemplateTagSpecificationsPropertyToTerraform(struct?: DataTfLaunchTemplate.TagSpecificationsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1115,7 +1115,7 @@ export function tfDataLaunchTemplateTagSpecificationsPropertyToTerraform(struct?
 }
 
 
-export function tfDataLaunchTemplateTagSpecificationsPropertyToHclTerraform(struct?: TfDataLaunchTemplate.TagSpecificationsProperty): any {
+export function dataTfLaunchTemplateTagSpecificationsPropertyToHclTerraform(struct?: DataTfLaunchTemplate.TagSpecificationsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1126,7 +1126,7 @@ export function tfDataLaunchTemplateTagSpecificationsPropertyToHclTerraform(stru
 }
 
 
-export function tfDataLaunchTemplateFilterPropertyToTerraform(struct?: TfDataLaunchTemplate.FilterProperty | cdktn.IResolvable): any {
+export function dataTfLaunchTemplateFilterPropertyToTerraform(struct?: DataTfLaunchTemplate.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1138,7 +1138,7 @@ export function tfDataLaunchTemplateFilterPropertyToTerraform(struct?: TfDataLau
 }
 
 
-export function tfDataLaunchTemplateFilterPropertyToHclTerraform(struct?: TfDataLaunchTemplate.FilterProperty | cdktn.IResolvable): any {
+export function dataTfLaunchTemplateFilterPropertyToHclTerraform(struct?: DataTfLaunchTemplate.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1163,7 +1163,7 @@ export function tfDataLaunchTemplateFilterPropertyToHclTerraform(struct?: TfData
 }
 
 
-export function tfDataLaunchTemplateTimeoutsPropertyToTerraform(struct?: TfDataLaunchTemplate.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfLaunchTemplateTimeoutsPropertyToTerraform(struct?: DataTfLaunchTemplate.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1174,7 +1174,7 @@ export function tfDataLaunchTemplateTimeoutsPropertyToTerraform(struct?: TfDataL
 }
 
 
-export function tfDataLaunchTemplateTimeoutsPropertyToHclTerraform(struct?: TfDataLaunchTemplate.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfLaunchTemplateTimeoutsPropertyToHclTerraform(struct?: DataTfLaunchTemplate.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1193,7 +1193,7 @@ export function tfDataLaunchTemplateTimeoutsPropertyToHclTerraform(struct?: TfDa
 }
 
 
-export namespace TfDataLaunchTemplate {
+export namespace DataTfLaunchTemplate {
 export interface EbsProperty {
 }
 export class EbsPropertyOutputReference extends cdktn.ComplexObject {
@@ -3428,11 +3428,11 @@ export class TagSpecificationsPropertyList extends cdktn.ComplexList {
 }
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/launch_template#name TfDataLaunchTemplate#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/launch_template#name DataTfLaunchTemplate#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/launch_template#values TfDataLaunchTemplate#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/launch_template#values DataTfLaunchTemplate#values}
   */
   readonly values: string[];
 }
@@ -3534,7 +3534,7 @@ export class FilterPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/launch_template#read TfDataLaunchTemplate#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/launch_template#read DataTfLaunchTemplate#read}
   */
   readonly read?: string;
 }

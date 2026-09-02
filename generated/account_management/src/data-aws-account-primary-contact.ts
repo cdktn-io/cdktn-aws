@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataPrimaryContactConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfPrimaryContactConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/account_primary_contact#account_id TfDataPrimaryContact#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/account_primary_contact#account_id DataTfPrimaryContact#account_id}
   */
   readonly accountId?: string;
 }
@@ -15,7 +15,7 @@ export interface TfDataPrimaryContactConfig extends cdktn.TerraformMetaArguments
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/account_primary_contact aws_account_primary_contact}
 */
-export class TfDataPrimaryContact extends cdktn.TerraformDataSource {
+export class DataTfPrimaryContact extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -26,11 +26,11 @@ export class TfDataPrimaryContact extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataPrimaryContact resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfPrimaryContact resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataPrimaryContact to import
-  * @param importFromId The id of the existing TfDataPrimaryContact that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/account_primary_contact#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataPrimaryContact to import is found
+  * @param importToId The construct id used in the generated config for the DataTfPrimaryContact to import
+  * @param importFromId The id of the existing DataTfPrimaryContact that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/account_primary_contact#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfPrimaryContact to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_account_primary_contact", importId: importFromId, provider });
@@ -45,9 +45,9 @@ export class TfDataPrimaryContact extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataPrimaryContactConfig = {}
+  * @param options DataTfPrimaryContactConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataPrimaryContactConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfPrimaryContactConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_account_primary_contact',
       terraformGeneratorMetadata: {

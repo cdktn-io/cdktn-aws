@@ -5,30 +5,30 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataConnectionConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfConnectionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codestarconnections_connection#arn TfDataConnection#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codestarconnections_connection#arn DataTfConnection#arn}
   */
   readonly arn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codestarconnections_connection#id TfDataConnection#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codestarconnections_connection#id DataTfConnection#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codestarconnections_connection#name TfDataConnection#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codestarconnections_connection#name DataTfConnection#name}
   */
   readonly name?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codestarconnections_connection#region TfDataConnection#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codestarconnections_connection#region DataTfConnection#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codestarconnections_connection#tags TfDataConnection#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codestarconnections_connection#tags DataTfConnection#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -36,7 +36,7 @@ export interface TfDataConnectionConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codestarconnections_connection aws_codestarconnections_connection}
 */
-export class TfDataConnection extends cdktn.TerraformDataSource {
+export class DataTfConnection extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class TfDataConnection extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataConnection resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfConnection resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataConnection to import
-  * @param importFromId The id of the existing TfDataConnection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codestarconnections_connection#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataConnection to import is found
+  * @param importToId The construct id used in the generated config for the DataTfConnection to import
+  * @param importFromId The id of the existing DataTfConnection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codestarconnections_connection#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfConnection to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_codestarconnections_connection", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class TfDataConnection extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataConnectionConfig = {}
+  * @param options DataTfConnectionConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataConnectionConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfConnectionConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_codestarconnections_connection',
       terraformGeneratorMetadata: {

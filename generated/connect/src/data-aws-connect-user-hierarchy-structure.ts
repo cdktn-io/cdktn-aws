@@ -5,22 +5,22 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataUserHierarchyStructureConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfUserHierarchyStructureConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_user_hierarchy_structure#id TfDataUserHierarchyStructure#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_user_hierarchy_structure#id DataTfUserHierarchyStructure#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_user_hierarchy_structure#instance_id TfDataUserHierarchyStructure#instance_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_user_hierarchy_structure#instance_id DataTfUserHierarchyStructure#instance_id}
   */
   readonly instanceId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_user_hierarchy_structure#region TfDataUserHierarchyStructure#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_user_hierarchy_structure#region DataTfUserHierarchyStructure#region}
   */
   readonly region?: string;
 }
@@ -28,7 +28,7 @@ export interface TfDataUserHierarchyStructureConfig extends cdktn.TerraformMetaA
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_user_hierarchy_structure aws_connect_user_hierarchy_structure}
 */
-export class TfDataUserHierarchyStructure extends cdktn.TerraformDataSource {
+export class DataTfUserHierarchyStructure extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class TfDataUserHierarchyStructure extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataUserHierarchyStructure resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfUserHierarchyStructure resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataUserHierarchyStructure to import
-  * @param importFromId The id of the existing TfDataUserHierarchyStructure that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_user_hierarchy_structure#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataUserHierarchyStructure to import is found
+  * @param importToId The construct id used in the generated config for the DataTfUserHierarchyStructure to import
+  * @param importFromId The id of the existing DataTfUserHierarchyStructure that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_user_hierarchy_structure#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfUserHierarchyStructure to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_connect_user_hierarchy_structure", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class TfDataUserHierarchyStructure extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataUserHierarchyStructureConfig
+  * @param options DataTfUserHierarchyStructureConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataUserHierarchyStructureConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfUserHierarchyStructureConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_connect_user_hierarchy_structure',
       terraformGeneratorMetadata: {
@@ -86,7 +86,7 @@ export class TfDataUserHierarchyStructure extends cdktn.TerraformDataSource {
   // ==========
 
   // hierarchy_structure - computed: true, optional: false, required: false
-  private _hierarchyStructure = new TfDataUserHierarchyStructure.HierarchyStructurePropertyList(this, "hierarchy_structure", false);
+  private _hierarchyStructure = new DataTfUserHierarchyStructure.HierarchyStructurePropertyList(this, "hierarchy_structure", false);
   public get hierarchyStructure() {
     return this._hierarchyStructure;
   }
@@ -175,7 +175,7 @@ export class TfDataUserHierarchyStructure extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataUserHierarchyStructureLevelFivePropertyToTerraform(struct?: TfDataUserHierarchyStructure.LevelFiveProperty): any {
+export function dataTfUserHierarchyStructureLevelFivePropertyToTerraform(struct?: DataTfUserHierarchyStructure.LevelFiveProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -185,7 +185,7 @@ export function tfDataUserHierarchyStructureLevelFivePropertyToTerraform(struct?
 }
 
 
-export function tfDataUserHierarchyStructureLevelFivePropertyToHclTerraform(struct?: TfDataUserHierarchyStructure.LevelFiveProperty): any {
+export function dataTfUserHierarchyStructureLevelFivePropertyToHclTerraform(struct?: DataTfUserHierarchyStructure.LevelFiveProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -196,7 +196,7 @@ export function tfDataUserHierarchyStructureLevelFivePropertyToHclTerraform(stru
 }
 
 
-export function tfDataUserHierarchyStructureLevelFourPropertyToTerraform(struct?: TfDataUserHierarchyStructure.LevelFourProperty): any {
+export function dataTfUserHierarchyStructureLevelFourPropertyToTerraform(struct?: DataTfUserHierarchyStructure.LevelFourProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -206,7 +206,7 @@ export function tfDataUserHierarchyStructureLevelFourPropertyToTerraform(struct?
 }
 
 
-export function tfDataUserHierarchyStructureLevelFourPropertyToHclTerraform(struct?: TfDataUserHierarchyStructure.LevelFourProperty): any {
+export function dataTfUserHierarchyStructureLevelFourPropertyToHclTerraform(struct?: DataTfUserHierarchyStructure.LevelFourProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -217,7 +217,7 @@ export function tfDataUserHierarchyStructureLevelFourPropertyToHclTerraform(stru
 }
 
 
-export function tfDataUserHierarchyStructureLevelOnePropertyToTerraform(struct?: TfDataUserHierarchyStructure.LevelOneProperty): any {
+export function dataTfUserHierarchyStructureLevelOnePropertyToTerraform(struct?: DataTfUserHierarchyStructure.LevelOneProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -227,7 +227,7 @@ export function tfDataUserHierarchyStructureLevelOnePropertyToTerraform(struct?:
 }
 
 
-export function tfDataUserHierarchyStructureLevelOnePropertyToHclTerraform(struct?: TfDataUserHierarchyStructure.LevelOneProperty): any {
+export function dataTfUserHierarchyStructureLevelOnePropertyToHclTerraform(struct?: DataTfUserHierarchyStructure.LevelOneProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -238,7 +238,7 @@ export function tfDataUserHierarchyStructureLevelOnePropertyToHclTerraform(struc
 }
 
 
-export function tfDataUserHierarchyStructureLevelThreePropertyToTerraform(struct?: TfDataUserHierarchyStructure.LevelThreeProperty): any {
+export function dataTfUserHierarchyStructureLevelThreePropertyToTerraform(struct?: DataTfUserHierarchyStructure.LevelThreeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -248,7 +248,7 @@ export function tfDataUserHierarchyStructureLevelThreePropertyToTerraform(struct
 }
 
 
-export function tfDataUserHierarchyStructureLevelThreePropertyToHclTerraform(struct?: TfDataUserHierarchyStructure.LevelThreeProperty): any {
+export function dataTfUserHierarchyStructureLevelThreePropertyToHclTerraform(struct?: DataTfUserHierarchyStructure.LevelThreeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -259,7 +259,7 @@ export function tfDataUserHierarchyStructureLevelThreePropertyToHclTerraform(str
 }
 
 
-export function tfDataUserHierarchyStructureLevelTwoPropertyToTerraform(struct?: TfDataUserHierarchyStructure.LevelTwoProperty): any {
+export function dataTfUserHierarchyStructureLevelTwoPropertyToTerraform(struct?: DataTfUserHierarchyStructure.LevelTwoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -269,7 +269,7 @@ export function tfDataUserHierarchyStructureLevelTwoPropertyToTerraform(struct?:
 }
 
 
-export function tfDataUserHierarchyStructureLevelTwoPropertyToHclTerraform(struct?: TfDataUserHierarchyStructure.LevelTwoProperty): any {
+export function dataTfUserHierarchyStructureLevelTwoPropertyToHclTerraform(struct?: DataTfUserHierarchyStructure.LevelTwoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -280,7 +280,7 @@ export function tfDataUserHierarchyStructureLevelTwoPropertyToHclTerraform(struc
 }
 
 
-export function tfDataUserHierarchyStructureHierarchyStructurePropertyToTerraform(struct?: TfDataUserHierarchyStructure.HierarchyStructureProperty): any {
+export function dataTfUserHierarchyStructureHierarchyStructurePropertyToTerraform(struct?: DataTfUserHierarchyStructure.HierarchyStructureProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -290,7 +290,7 @@ export function tfDataUserHierarchyStructureHierarchyStructurePropertyToTerrafor
 }
 
 
-export function tfDataUserHierarchyStructureHierarchyStructurePropertyToHclTerraform(struct?: TfDataUserHierarchyStructure.HierarchyStructureProperty): any {
+export function dataTfUserHierarchyStructureHierarchyStructurePropertyToHclTerraform(struct?: DataTfUserHierarchyStructure.HierarchyStructureProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -301,7 +301,7 @@ export function tfDataUserHierarchyStructureHierarchyStructurePropertyToHclTerra
 }
 
 
-export namespace TfDataUserHierarchyStructure {
+export namespace DataTfUserHierarchyStructure {
 export interface LevelFiveProperty {
 }
 export class LevelFivePropertyOutputReference extends cdktn.ComplexObject {

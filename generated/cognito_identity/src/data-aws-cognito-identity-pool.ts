@@ -5,26 +5,26 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataPoolConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfPoolConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_identity_pool#id TfDataPool#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_identity_pool#id DataTfPool#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_identity_pool#identity_pool_name TfDataPool#identity_pool_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_identity_pool#identity_pool_name DataTfPool#identity_pool_name}
   */
   readonly identityPoolName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_identity_pool#region TfDataPool#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_identity_pool#region DataTfPool#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_identity_pool#tags TfDataPool#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_identity_pool#tags DataTfPool#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -32,7 +32,7 @@ export interface TfDataPoolConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_identity_pool aws_cognito_identity_pool}
 */
-export class TfDataPool extends cdktn.TerraformDataSource {
+export class DataTfPool extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class TfDataPool extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataPool resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfPool resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataPool to import
-  * @param importFromId The id of the existing TfDataPool that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_identity_pool#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataPool to import is found
+  * @param importToId The construct id used in the generated config for the DataTfPool to import
+  * @param importFromId The id of the existing DataTfPool that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_identity_pool#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfPool to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cognito_identity_pool", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class TfDataPool extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataPoolConfig
+  * @param options DataTfPoolConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataPoolConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfPoolConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cognito_identity_pool',
       terraformGeneratorMetadata: {
@@ -106,7 +106,7 @@ export class TfDataPool extends cdktn.TerraformDataSource {
   }
 
   // cognito_identity_providers - computed: true, optional: false, required: false
-  private _cognitoIdentityProviders = new TfDataPool.CognitoIdentityProvidersPropertyList(this, "cognito_identity_providers", true);
+  private _cognitoIdentityProviders = new DataTfPool.CognitoIdentityProvidersPropertyList(this, "cognito_identity_providers", true);
   public get cognitoIdentityProviders() {
     return this._cognitoIdentityProviders;
   }
@@ -239,7 +239,7 @@ export class TfDataPool extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataPoolCognitoIdentityProvidersPropertyToTerraform(struct?: TfDataPool.CognitoIdentityProvidersProperty): any {
+export function dataTfPoolCognitoIdentityProvidersPropertyToTerraform(struct?: DataTfPool.CognitoIdentityProvidersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -249,7 +249,7 @@ export function tfDataPoolCognitoIdentityProvidersPropertyToTerraform(struct?: T
 }
 
 
-export function tfDataPoolCognitoIdentityProvidersPropertyToHclTerraform(struct?: TfDataPool.CognitoIdentityProvidersProperty): any {
+export function dataTfPoolCognitoIdentityProvidersPropertyToHclTerraform(struct?: DataTfPool.CognitoIdentityProvidersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -260,7 +260,7 @@ export function tfDataPoolCognitoIdentityProvidersPropertyToHclTerraform(struct?
 }
 
 
-export namespace TfDataPool {
+export namespace DataTfPool {
 export interface CognitoIdentityProvidersProperty {
 }
 export class CognitoIdentityProvidersPropertyOutputReference extends cdktn.ComplexObject {

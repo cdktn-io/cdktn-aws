@@ -5,34 +5,34 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataHoursOfOperationConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfHoursOfOperationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_hours_of_operation#hours_of_operation_id TfDataHoursOfOperation#hours_of_operation_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_hours_of_operation#hours_of_operation_id DataTfHoursOfOperation#hours_of_operation_id}
   */
   readonly hoursOfOperationId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_hours_of_operation#id TfDataHoursOfOperation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_hours_of_operation#id DataTfHoursOfOperation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_hours_of_operation#instance_id TfDataHoursOfOperation#instance_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_hours_of_operation#instance_id DataTfHoursOfOperation#instance_id}
   */
   readonly instanceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_hours_of_operation#name TfDataHoursOfOperation#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_hours_of_operation#name DataTfHoursOfOperation#name}
   */
   readonly name?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_hours_of_operation#region TfDataHoursOfOperation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_hours_of_operation#region DataTfHoursOfOperation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_hours_of_operation#tags TfDataHoursOfOperation#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_hours_of_operation#tags DataTfHoursOfOperation#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -40,7 +40,7 @@ export interface TfDataHoursOfOperationConfig extends cdktn.TerraformMetaArgumen
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_hours_of_operation aws_connect_hours_of_operation}
 */
-export class TfDataHoursOfOperation extends cdktn.TerraformDataSource {
+export class DataTfHoursOfOperation extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class TfDataHoursOfOperation extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataHoursOfOperation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfHoursOfOperation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataHoursOfOperation to import
-  * @param importFromId The id of the existing TfDataHoursOfOperation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_hours_of_operation#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataHoursOfOperation to import is found
+  * @param importToId The construct id used in the generated config for the DataTfHoursOfOperation to import
+  * @param importFromId The id of the existing DataTfHoursOfOperation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_hours_of_operation#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfHoursOfOperation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_connect_hours_of_operation", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class TfDataHoursOfOperation extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataHoursOfOperationConfig
+  * @param options DataTfHoursOfOperationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataHoursOfOperationConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfHoursOfOperationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_connect_hours_of_operation',
       terraformGeneratorMetadata: {
@@ -106,7 +106,7 @@ export class TfDataHoursOfOperation extends cdktn.TerraformDataSource {
   }
 
   // config - computed: true, optional: false, required: false
-  private _config = new TfDataHoursOfOperation.ConfigPropertyList(this, "config", true);
+  private _config = new DataTfHoursOfOperation.ConfigPropertyList(this, "config", true);
   public get config() {
     return this._config;
   }
@@ -274,7 +274,7 @@ export class TfDataHoursOfOperation extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataHoursOfOperationEndTimePropertyToTerraform(struct?: TfDataHoursOfOperation.EndTimeProperty): any {
+export function dataTfHoursOfOperationEndTimePropertyToTerraform(struct?: DataTfHoursOfOperation.EndTimeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -284,7 +284,7 @@ export function tfDataHoursOfOperationEndTimePropertyToTerraform(struct?: TfData
 }
 
 
-export function tfDataHoursOfOperationEndTimePropertyToHclTerraform(struct?: TfDataHoursOfOperation.EndTimeProperty): any {
+export function dataTfHoursOfOperationEndTimePropertyToHclTerraform(struct?: DataTfHoursOfOperation.EndTimeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -295,7 +295,7 @@ export function tfDataHoursOfOperationEndTimePropertyToHclTerraform(struct?: TfD
 }
 
 
-export function tfDataHoursOfOperationStartTimePropertyToTerraform(struct?: TfDataHoursOfOperation.StartTimeProperty): any {
+export function dataTfHoursOfOperationStartTimePropertyToTerraform(struct?: DataTfHoursOfOperation.StartTimeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -305,7 +305,7 @@ export function tfDataHoursOfOperationStartTimePropertyToTerraform(struct?: TfDa
 }
 
 
-export function tfDataHoursOfOperationStartTimePropertyToHclTerraform(struct?: TfDataHoursOfOperation.StartTimeProperty): any {
+export function dataTfHoursOfOperationStartTimePropertyToHclTerraform(struct?: DataTfHoursOfOperation.StartTimeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -316,7 +316,7 @@ export function tfDataHoursOfOperationStartTimePropertyToHclTerraform(struct?: T
 }
 
 
-export function tfDataHoursOfOperationConfigPropertyToTerraform(struct?: TfDataHoursOfOperation.ConfigProperty): any {
+export function dataTfHoursOfOperationConfigPropertyToTerraform(struct?: DataTfHoursOfOperation.ConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -326,7 +326,7 @@ export function tfDataHoursOfOperationConfigPropertyToTerraform(struct?: TfDataH
 }
 
 
-export function tfDataHoursOfOperationConfigPropertyToHclTerraform(struct?: TfDataHoursOfOperation.ConfigProperty): any {
+export function dataTfHoursOfOperationConfigPropertyToHclTerraform(struct?: DataTfHoursOfOperation.ConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -337,7 +337,7 @@ export function tfDataHoursOfOperationConfigPropertyToHclTerraform(struct?: TfDa
 }
 
 
-export namespace TfDataHoursOfOperation {
+export namespace DataTfHoursOfOperation {
 export interface EndTimeProperty {
 }
 export class EndTimePropertyOutputReference extends cdktn.ComplexObject {

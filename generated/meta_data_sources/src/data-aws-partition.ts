@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataPartitionConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfPartitionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/partition#id TfDataPartition#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/partition#id DataTfPartition#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -18,7 +18,7 @@ export interface TfDataPartitionConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/partition aws_partition}
 */
-export class TfDataPartition extends cdktn.TerraformDataSource {
+export class DataTfPartition extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -29,11 +29,11 @@ export class TfDataPartition extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataPartition resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfPartition resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataPartition to import
-  * @param importFromId The id of the existing TfDataPartition that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/partition#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataPartition to import is found
+  * @param importToId The construct id used in the generated config for the DataTfPartition to import
+  * @param importFromId The id of the existing DataTfPartition that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/partition#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfPartition to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_partition", importId: importFromId, provider });
@@ -48,9 +48,9 @@ export class TfDataPartition extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataPartitionConfig = {}
+  * @param options DataTfPartitionConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataPartitionConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfPartitionConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_partition',
       terraformGeneratorMetadata: {

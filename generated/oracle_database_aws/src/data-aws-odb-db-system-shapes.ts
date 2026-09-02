@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataDbSystemShapesConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfDbSystemShapesConfig extends cdktn.TerraformMetaArguments {
   /**
   * The physical ID of the AZ, for example, use1-az4. This ID persists across accounts.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_db_system_shapes#availability_zone_id TfDataDbSystemShapes#availability_zone_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_db_system_shapes#availability_zone_id DataTfDbSystemShapes#availability_zone_id}
   */
   readonly availabilityZoneId?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_db_system_shapes#region TfDataDbSystemShapes#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_db_system_shapes#region DataTfDbSystemShapes#region}
   */
   readonly region?: string;
 }
@@ -23,7 +23,7 @@ export interface TfDataDbSystemShapesConfig extends cdktn.TerraformMetaArguments
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_db_system_shapes aws_odb_db_system_shapes}
 */
-export class TfDataDbSystemShapes extends cdktn.TerraformDataSource {
+export class DataTfDbSystemShapes extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -34,11 +34,11 @@ export class TfDataDbSystemShapes extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataDbSystemShapes resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfDbSystemShapes resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataDbSystemShapes to import
-  * @param importFromId The id of the existing TfDataDbSystemShapes that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_db_system_shapes#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataDbSystemShapes to import is found
+  * @param importToId The construct id used in the generated config for the DataTfDbSystemShapes to import
+  * @param importFromId The id of the existing DataTfDbSystemShapes that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_db_system_shapes#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfDbSystemShapes to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_odb_db_system_shapes", importId: importFromId, provider });
@@ -53,9 +53,9 @@ export class TfDataDbSystemShapes extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataDbSystemShapesConfig = {}
+  * @param options DataTfDbSystemShapesConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataDbSystemShapesConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfDbSystemShapesConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_odb_db_system_shapes',
       terraformGeneratorMetadata: {
@@ -96,7 +96,7 @@ export class TfDataDbSystemShapes extends cdktn.TerraformDataSource {
   }
 
   // db_system_shapes - computed: true, optional: false, required: false
-  private _dbSystemShapes = new TfDataDbSystemShapes.DbSystemShapesPropertyList(this, "db_system_shapes", false);
+  private _dbSystemShapes = new DataTfDbSystemShapes.DbSystemShapesPropertyList(this, "db_system_shapes", false);
   public get dbSystemShapes() {
     return this._dbSystemShapes;
   }
@@ -149,7 +149,7 @@ export class TfDataDbSystemShapes extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataDbSystemShapesDbSystemShapesPropertyToTerraform(struct?: TfDataDbSystemShapes.DbSystemShapesProperty): any {
+export function dataTfDbSystemShapesDbSystemShapesPropertyToTerraform(struct?: DataTfDbSystemShapes.DbSystemShapesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -159,7 +159,7 @@ export function tfDataDbSystemShapesDbSystemShapesPropertyToTerraform(struct?: T
 }
 
 
-export function tfDataDbSystemShapesDbSystemShapesPropertyToHclTerraform(struct?: TfDataDbSystemShapes.DbSystemShapesProperty): any {
+export function dataTfDbSystemShapesDbSystemShapesPropertyToHclTerraform(struct?: DataTfDbSystemShapes.DbSystemShapesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -170,7 +170,7 @@ export function tfDataDbSystemShapesDbSystemShapesPropertyToHclTerraform(struct?
 }
 
 
-export namespace TfDataDbSystemShapes {
+export namespace DataTfDbSystemShapes {
 export interface DbSystemShapesProperty {
 }
 export class DbSystemShapesPropertyOutputReference extends cdktn.ComplexObject {

@@ -5,20 +5,20 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataRoleConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfRoleConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_role#id TfDataRole#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_role#id DataTfRole#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_role#name TfDataRole#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_role#name DataTfRole#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_role#tags TfDataRole#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_role#tags DataTfRole#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -26,7 +26,7 @@ export interface TfDataRoleConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_role aws_iam_role}
 */
-export class TfDataRole extends cdktn.TerraformDataSource {
+export class DataTfRole extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -37,11 +37,11 @@ export class TfDataRole extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataRole resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfRole resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataRole to import
-  * @param importFromId The id of the existing TfDataRole that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_role#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataRole to import is found
+  * @param importToId The construct id used in the generated config for the DataTfRole to import
+  * @param importFromId The id of the existing DataTfRole that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_role#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfRole to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iam_role", importId: importFromId, provider });
@@ -56,9 +56,9 @@ export class TfDataRole extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataRoleConfig
+  * @param options DataTfRoleConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataRoleConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfRoleConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_iam_role',
       terraformGeneratorMetadata: {
@@ -148,7 +148,7 @@ export class TfDataRole extends cdktn.TerraformDataSource {
   }
 
   // role_last_used - computed: true, optional: false, required: false
-  private _roleLastUsed = new TfDataRole.RoleLastUsedPropertyList(this, "role_last_used", false);
+  private _roleLastUsed = new DataTfRole.RoleLastUsedPropertyList(this, "role_last_used", false);
   public get roleLastUsed() {
     return this._roleLastUsed;
   }
@@ -213,7 +213,7 @@ export class TfDataRole extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataRoleRoleLastUsedPropertyToTerraform(struct?: TfDataRole.RoleLastUsedProperty): any {
+export function dataTfRoleRoleLastUsedPropertyToTerraform(struct?: DataTfRole.RoleLastUsedProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -223,7 +223,7 @@ export function tfDataRoleRoleLastUsedPropertyToTerraform(struct?: TfDataRole.Ro
 }
 
 
-export function tfDataRoleRoleLastUsedPropertyToHclTerraform(struct?: TfDataRole.RoleLastUsedProperty): any {
+export function dataTfRoleRoleLastUsedPropertyToHclTerraform(struct?: DataTfRole.RoleLastUsedProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -234,7 +234,7 @@ export function tfDataRoleRoleLastUsedPropertyToHclTerraform(struct?: TfDataRole
 }
 
 
-export namespace TfDataRole {
+export namespace DataTfRole {
 export interface RoleLastUsedProperty {
 }
 export class RoleLastUsedPropertyOutputReference extends cdktn.ComplexObject {

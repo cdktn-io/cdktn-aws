@@ -5,30 +5,30 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataBundleConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfBundleConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/workspaces_bundle#bundle_id TfDataBundle#bundle_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/workspaces_bundle#bundle_id DataTfBundle#bundle_id}
   */
   readonly bundleId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/workspaces_bundle#id TfDataBundle#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/workspaces_bundle#id DataTfBundle#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/workspaces_bundle#name TfDataBundle#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/workspaces_bundle#name DataTfBundle#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/workspaces_bundle#owner TfDataBundle#owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/workspaces_bundle#owner DataTfBundle#owner}
   */
   readonly owner?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/workspaces_bundle#region TfDataBundle#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/workspaces_bundle#region DataTfBundle#region}
   */
   readonly region?: string;
 }
@@ -36,7 +36,7 @@ export interface TfDataBundleConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/workspaces_bundle aws_workspaces_bundle}
 */
-export class TfDataBundle extends cdktn.TerraformDataSource {
+export class DataTfBundle extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class TfDataBundle extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataBundle resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfBundle resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataBundle to import
-  * @param importFromId The id of the existing TfDataBundle that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/workspaces_bundle#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataBundle to import is found
+  * @param importToId The construct id used in the generated config for the DataTfBundle to import
+  * @param importFromId The id of the existing DataTfBundle that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/workspaces_bundle#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfBundle to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_workspaces_bundle", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class TfDataBundle extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataBundleConfig = {}
+  * @param options DataTfBundleConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataBundleConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfBundleConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_workspaces_bundle',
       terraformGeneratorMetadata: {
@@ -112,7 +112,7 @@ export class TfDataBundle extends cdktn.TerraformDataSource {
   }
 
   // compute_type - computed: true, optional: false, required: false
-  private _computeType = new TfDataBundle.ComputeTypePropertyList(this, "compute_type", false);
+  private _computeType = new DataTfBundle.ComputeTypePropertyList(this, "compute_type", false);
   public get computeType() {
     return this._computeType;
   }
@@ -187,13 +187,13 @@ export class TfDataBundle extends cdktn.TerraformDataSource {
   }
 
   // root_storage - computed: true, optional: false, required: false
-  private _rootStorage = new TfDataBundle.RootStoragePropertyList(this, "root_storage", false);
+  private _rootStorage = new DataTfBundle.RootStoragePropertyList(this, "root_storage", false);
   public get rootStorage() {
     return this._rootStorage;
   }
 
   // user_storage - computed: true, optional: false, required: false
-  private _userStorage = new TfDataBundle.UserStoragePropertyList(this, "user_storage", false);
+  private _userStorage = new DataTfBundle.UserStoragePropertyList(this, "user_storage", false);
   public get userStorage() {
     return this._userStorage;
   }
@@ -251,7 +251,7 @@ export class TfDataBundle extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataBundleComputeTypePropertyToTerraform(struct?: TfDataBundle.ComputeTypeProperty): any {
+export function dataTfBundleComputeTypePropertyToTerraform(struct?: DataTfBundle.ComputeTypeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -261,7 +261,7 @@ export function tfDataBundleComputeTypePropertyToTerraform(struct?: TfDataBundle
 }
 
 
-export function tfDataBundleComputeTypePropertyToHclTerraform(struct?: TfDataBundle.ComputeTypeProperty): any {
+export function dataTfBundleComputeTypePropertyToHclTerraform(struct?: DataTfBundle.ComputeTypeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -272,7 +272,7 @@ export function tfDataBundleComputeTypePropertyToHclTerraform(struct?: TfDataBun
 }
 
 
-export function tfDataBundleRootStoragePropertyToTerraform(struct?: TfDataBundle.RootStorageProperty): any {
+export function dataTfBundleRootStoragePropertyToTerraform(struct?: DataTfBundle.RootStorageProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -282,7 +282,7 @@ export function tfDataBundleRootStoragePropertyToTerraform(struct?: TfDataBundle
 }
 
 
-export function tfDataBundleRootStoragePropertyToHclTerraform(struct?: TfDataBundle.RootStorageProperty): any {
+export function dataTfBundleRootStoragePropertyToHclTerraform(struct?: DataTfBundle.RootStorageProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -293,7 +293,7 @@ export function tfDataBundleRootStoragePropertyToHclTerraform(struct?: TfDataBun
 }
 
 
-export function tfDataBundleUserStoragePropertyToTerraform(struct?: TfDataBundle.UserStorageProperty): any {
+export function dataTfBundleUserStoragePropertyToTerraform(struct?: DataTfBundle.UserStorageProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -303,7 +303,7 @@ export function tfDataBundleUserStoragePropertyToTerraform(struct?: TfDataBundle
 }
 
 
-export function tfDataBundleUserStoragePropertyToHclTerraform(struct?: TfDataBundle.UserStorageProperty): any {
+export function dataTfBundleUserStoragePropertyToHclTerraform(struct?: DataTfBundle.UserStorageProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -314,7 +314,7 @@ export function tfDataBundleUserStoragePropertyToHclTerraform(struct?: TfDataBun
 }
 
 
-export namespace TfDataBundle {
+export namespace DataTfBundle {
 export interface ComputeTypeProperty {
 }
 export class ComputeTypePropertyOutputReference extends cdktn.ComplexObject {

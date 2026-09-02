@@ -5,58 +5,58 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataSnapshotConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfSnapshotConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_snapshot#id TfDataSnapshot#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_snapshot#id DataTfSnapshot#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_snapshot#most_recent TfDataSnapshot#most_recent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_snapshot#most_recent DataTfSnapshot#most_recent}
   */
   readonly mostRecent?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_snapshot#owners TfDataSnapshot#owners}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_snapshot#owners DataTfSnapshot#owners}
   */
   readonly owners?: string[];
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_snapshot#region TfDataSnapshot#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_snapshot#region DataTfSnapshot#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_snapshot#restorable_by_user_ids TfDataSnapshot#restorable_by_user_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_snapshot#restorable_by_user_ids DataTfSnapshot#restorable_by_user_ids}
   */
   readonly restorableByUserIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_snapshot#snapshot_ids TfDataSnapshot#snapshot_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_snapshot#snapshot_ids DataTfSnapshot#snapshot_ids}
   */
   readonly snapshotIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_snapshot#tags TfDataSnapshot#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_snapshot#tags DataTfSnapshot#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_snapshot#filter TfDataSnapshot#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_snapshot#filter DataTfSnapshot#filter}
   */
-  readonly filter?: TfDataSnapshot.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataTfSnapshot.FilterProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_snapshot#timeouts TfDataSnapshot#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_snapshot#timeouts DataTfSnapshot#timeouts}
   */
-  readonly timeouts?: TfDataSnapshot.TimeoutsProperty;
+  readonly timeouts?: DataTfSnapshot.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_snapshot aws_ebs_snapshot}
 */
-export class TfDataSnapshot extends cdktn.TerraformDataSource {
+export class DataTfSnapshot extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -67,11 +67,11 @@ export class TfDataSnapshot extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataSnapshot resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfSnapshot resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataSnapshot to import
-  * @param importFromId The id of the existing TfDataSnapshot that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_snapshot#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataSnapshot to import is found
+  * @param importToId The construct id used in the generated config for the DataTfSnapshot to import
+  * @param importFromId The id of the existing DataTfSnapshot that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_snapshot#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfSnapshot to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ebs_snapshot", importId: importFromId, provider });
@@ -86,9 +86,9 @@ export class TfDataSnapshot extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataSnapshotConfig = {}
+  * @param options DataTfSnapshotConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataSnapshotConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfSnapshotConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_ebs_snapshot',
       terraformGeneratorMetadata: {
@@ -302,11 +302,11 @@ export class TfDataSnapshot extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new TfDataSnapshot.FilterPropertyList(this, "filter", true);
+  private _filter = new DataTfSnapshot.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: TfDataSnapshot.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataTfSnapshot.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -318,11 +318,11 @@ export class TfDataSnapshot extends cdktn.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfDataSnapshot.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new DataTfSnapshot.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfDataSnapshot.TimeoutsProperty) {
+  public putTimeouts(value: DataTfSnapshot.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -346,8 +346,8 @@ export class TfDataSnapshot extends cdktn.TerraformDataSource {
       restorable_by_user_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._restorableByUserIds),
       snapshot_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._snapshotIds),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      filter: cdktn.listMapper(tfDataSnapshotFilterPropertyToTerraform, true)(this._filter.internalValue),
-      timeouts: tfDataSnapshotTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      filter: cdktn.listMapper(dataTfSnapshotFilterPropertyToTerraform, true)(this._filter.internalValue),
+      timeouts: dataTfSnapshotTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -396,16 +396,16 @@ export class TfDataSnapshot extends cdktn.TerraformDataSource {
         storageClassType: "stringMap",
       },
       filter: {
-        value: cdktn.listMapperHcl(tfDataSnapshotFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataTfSnapshotFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfDataSnapshot.FilterPropertyList",
+        storageClassType: "DataTfSnapshot.FilterPropertyList",
       },
       timeouts: {
-        value: tfDataSnapshotTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: dataTfSnapshotTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfDataSnapshot.TimeoutsProperty",
+        storageClassType: "DataTfSnapshot.TimeoutsProperty",
       },
     };
 
@@ -414,7 +414,7 @@ export class TfDataSnapshot extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataSnapshotFilterPropertyToTerraform(struct?: TfDataSnapshot.FilterProperty | cdktn.IResolvable): any {
+export function dataTfSnapshotFilterPropertyToTerraform(struct?: DataTfSnapshot.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -426,7 +426,7 @@ export function tfDataSnapshotFilterPropertyToTerraform(struct?: TfDataSnapshot.
 }
 
 
-export function tfDataSnapshotFilterPropertyToHclTerraform(struct?: TfDataSnapshot.FilterProperty | cdktn.IResolvable): any {
+export function dataTfSnapshotFilterPropertyToHclTerraform(struct?: DataTfSnapshot.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -451,7 +451,7 @@ export function tfDataSnapshotFilterPropertyToHclTerraform(struct?: TfDataSnapsh
 }
 
 
-export function tfDataSnapshotTimeoutsPropertyToTerraform(struct?: TfDataSnapshot.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfSnapshotTimeoutsPropertyToTerraform(struct?: DataTfSnapshot.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -462,7 +462,7 @@ export function tfDataSnapshotTimeoutsPropertyToTerraform(struct?: TfDataSnapsho
 }
 
 
-export function tfDataSnapshotTimeoutsPropertyToHclTerraform(struct?: TfDataSnapshot.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfSnapshotTimeoutsPropertyToHclTerraform(struct?: DataTfSnapshot.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -481,14 +481,14 @@ export function tfDataSnapshotTimeoutsPropertyToHclTerraform(struct?: TfDataSnap
 }
 
 
-export namespace TfDataSnapshot {
+export namespace DataTfSnapshot {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_snapshot#name TfDataSnapshot#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_snapshot#name DataTfSnapshot#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_snapshot#values TfDataSnapshot#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_snapshot#values DataTfSnapshot#values}
   */
   readonly values: string[];
 }
@@ -590,7 +590,7 @@ export class FilterPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_snapshot#read TfDataSnapshot#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_snapshot#read DataTfSnapshot#read}
   */
   readonly read?: string;
 }

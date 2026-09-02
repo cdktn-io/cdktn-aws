@@ -5,25 +5,25 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfEphemeralSecretsConfig extends cdktn.TerraformEphemeralMetaArguments {
+export interface EphemeralTfSecretsConfig extends cdktn.TerraformEphemeralMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/kms_secrets#region TfEphemeralSecrets#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/kms_secrets#region EphemeralTfSecrets#region}
   */
   readonly region?: string;
   /**
   * secret block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/kms_secrets#secret TfEphemeralSecrets#secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/kms_secrets#secret EphemeralTfSecrets#secret}
   */
-  readonly secret?: TfEphemeralSecrets.SecretProperty[] | cdktn.IResolvable;
+  readonly secret?: EphemeralTfSecrets.SecretProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/kms_secrets aws_kms_secrets}
 */
-export class TfEphemeralSecrets extends cdktn.TerraformEphemeralResource {
+export class EphemeralTfSecrets extends cdktn.TerraformEphemeralResource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,9 +39,9 @@ export class TfEphemeralSecrets extends cdktn.TerraformEphemeralResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfEphemeralSecretsConfig = {}
+  * @param options EphemeralTfSecretsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfEphemeralSecretsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: EphemeralTfSecretsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_kms_secrets',
       terraformGeneratorMetadata: {
@@ -86,11 +86,11 @@ export class TfEphemeralSecrets extends cdktn.TerraformEphemeralResource {
   }
 
   // secret - computed: false, optional: true, required: false
-  private _secret = new TfEphemeralSecrets.SecretPropertyList(this, "secret", true);
+  private _secret = new EphemeralTfSecrets.SecretPropertyList(this, "secret", true);
   public get secret() {
     return this._secret;
   }
-  public putSecret(value: TfEphemeralSecrets.SecretProperty[] | cdktn.IResolvable) {
+  public putSecret(value: EphemeralTfSecrets.SecretProperty[] | cdktn.IResolvable) {
     this._secret.internalValue = value;
   }
   public resetSecret() {
@@ -108,7 +108,7 @@ export class TfEphemeralSecrets extends cdktn.TerraformEphemeralResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       region: cdktn.stringToTerraform(this._region),
-      secret: cdktn.listMapper(tfEphemeralSecretsSecretPropertyToTerraform, true)(this._secret.internalValue),
+      secret: cdktn.listMapper(ephemeralTfSecretsSecretPropertyToTerraform, true)(this._secret.internalValue),
     };
   }
 
@@ -121,10 +121,10 @@ export class TfEphemeralSecrets extends cdktn.TerraformEphemeralResource {
         storageClassType: "string",
       },
       secret: {
-        value: cdktn.listMapperHcl(tfEphemeralSecretsSecretPropertyToHclTerraform, true)(this._secret.internalValue),
+        value: cdktn.listMapperHcl(ephemeralTfSecretsSecretPropertyToHclTerraform, true)(this._secret.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfEphemeralSecrets.SecretPropertyList",
+        storageClassType: "EphemeralTfSecrets.SecretPropertyList",
       },
     };
 
@@ -133,7 +133,7 @@ export class TfEphemeralSecrets extends cdktn.TerraformEphemeralResource {
   }
 }
 
-export function tfEphemeralSecretsSecretPropertyToTerraform(struct?: TfEphemeralSecrets.SecretProperty | cdktn.IResolvable): any {
+export function ephemeralTfSecretsSecretPropertyToTerraform(struct?: EphemeralTfSecrets.SecretProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -149,7 +149,7 @@ export function tfEphemeralSecretsSecretPropertyToTerraform(struct?: TfEphemeral
 }
 
 
-export function tfEphemeralSecretsSecretPropertyToHclTerraform(struct?: TfEphemeralSecrets.SecretProperty | cdktn.IResolvable): any {
+export function ephemeralTfSecretsSecretPropertyToHclTerraform(struct?: EphemeralTfSecrets.SecretProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -198,30 +198,30 @@ export function tfEphemeralSecretsSecretPropertyToHclTerraform(struct?: TfEpheme
 }
 
 
-export namespace TfEphemeralSecrets {
+export namespace EphemeralTfSecrets {
 export interface SecretProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/kms_secrets#context TfEphemeralSecrets#context}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/kms_secrets#context EphemeralTfSecrets#context}
   */
   readonly context?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/kms_secrets#encryption_algorithm TfEphemeralSecrets#encryption_algorithm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/kms_secrets#encryption_algorithm EphemeralTfSecrets#encryption_algorithm}
   */
   readonly encryptionAlgorithm?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/kms_secrets#grant_tokens TfEphemeralSecrets#grant_tokens}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/kms_secrets#grant_tokens EphemeralTfSecrets#grant_tokens}
   */
   readonly grantTokens?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/kms_secrets#key_id TfEphemeralSecrets#key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/kms_secrets#key_id EphemeralTfSecrets#key_id}
   */
   readonly keyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/kms_secrets#name TfEphemeralSecrets#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/kms_secrets#name EphemeralTfSecrets#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/kms_secrets#payload TfEphemeralSecrets#payload}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/kms_secrets#payload EphemeralTfSecrets#payload}
   */
   readonly payload: string;
 }

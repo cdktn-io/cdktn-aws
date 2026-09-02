@@ -5,29 +5,29 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataVpcIpamsConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfVpcIpamsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipams#ipam_ids TfDataVpcIpams#ipam_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipams#ipam_ids DataTfVpcIpams#ipam_ids}
   */
   readonly ipamIds?: string[];
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipams#region TfDataVpcIpams#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipams#region DataTfVpcIpams#region}
   */
   readonly region?: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipams#filter TfDataVpcIpams#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipams#filter DataTfVpcIpams#filter}
   */
-  readonly filter?: TfDataVpcIpams.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataTfVpcIpams.FilterProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipams aws_vpc_ipams}
 */
-export class TfDataVpcIpams extends cdktn.TerraformDataSource {
+export class DataTfVpcIpams extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -38,11 +38,11 @@ export class TfDataVpcIpams extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataVpcIpams resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfVpcIpams resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataVpcIpams to import
-  * @param importFromId The id of the existing TfDataVpcIpams that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipams#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataVpcIpams to import is found
+  * @param importToId The construct id used in the generated config for the DataTfVpcIpams to import
+  * @param importFromId The id of the existing DataTfVpcIpams that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipams#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfVpcIpams to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpc_ipams", importId: importFromId, provider });
@@ -57,9 +57,9 @@ export class TfDataVpcIpams extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataVpcIpamsConfig = {}
+  * @param options DataTfVpcIpamsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataVpcIpamsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfVpcIpamsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_vpc_ipams',
       terraformGeneratorMetadata: {
@@ -101,7 +101,7 @@ export class TfDataVpcIpams extends cdktn.TerraformDataSource {
   }
 
   // ipams - computed: true, optional: false, required: false
-  private _ipams = new TfDataVpcIpams.IpamsPropertyList(this, "ipams", false);
+  private _ipams = new DataTfVpcIpams.IpamsPropertyList(this, "ipams", false);
   public get ipams() {
     return this._ipams;
   }
@@ -123,11 +123,11 @@ export class TfDataVpcIpams extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new TfDataVpcIpams.FilterPropertyList(this, "filter", true);
+  private _filter = new DataTfVpcIpams.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: TfDataVpcIpams.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataTfVpcIpams.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -146,7 +146,7 @@ export class TfDataVpcIpams extends cdktn.TerraformDataSource {
     return {
       ipam_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._ipamIds),
       region: cdktn.stringToTerraform(this._region),
-      filter: cdktn.listMapper(tfDataVpcIpamsFilterPropertyToTerraform, true)(this._filter.internalValue),
+      filter: cdktn.listMapper(dataTfVpcIpamsFilterPropertyToTerraform, true)(this._filter.internalValue),
     };
   }
 
@@ -165,10 +165,10 @@ export class TfDataVpcIpams extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       filter: {
-        value: cdktn.listMapperHcl(tfDataVpcIpamsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataTfVpcIpamsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfDataVpcIpams.FilterPropertyList",
+        storageClassType: "DataTfVpcIpams.FilterPropertyList",
       },
     };
 
@@ -177,7 +177,7 @@ export class TfDataVpcIpams extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataVpcIpamsOperatingRegionsPropertyToTerraform(struct?: TfDataVpcIpams.OperatingRegionsProperty): any {
+export function dataTfVpcIpamsOperatingRegionsPropertyToTerraform(struct?: DataTfVpcIpams.OperatingRegionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -187,7 +187,7 @@ export function tfDataVpcIpamsOperatingRegionsPropertyToTerraform(struct?: TfDat
 }
 
 
-export function tfDataVpcIpamsOperatingRegionsPropertyToHclTerraform(struct?: TfDataVpcIpams.OperatingRegionsProperty): any {
+export function dataTfVpcIpamsOperatingRegionsPropertyToHclTerraform(struct?: DataTfVpcIpams.OperatingRegionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -198,7 +198,7 @@ export function tfDataVpcIpamsOperatingRegionsPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfDataVpcIpamsIpamsPropertyToTerraform(struct?: TfDataVpcIpams.IpamsProperty): any {
+export function dataTfVpcIpamsIpamsPropertyToTerraform(struct?: DataTfVpcIpams.IpamsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -208,7 +208,7 @@ export function tfDataVpcIpamsIpamsPropertyToTerraform(struct?: TfDataVpcIpams.I
 }
 
 
-export function tfDataVpcIpamsIpamsPropertyToHclTerraform(struct?: TfDataVpcIpams.IpamsProperty): any {
+export function dataTfVpcIpamsIpamsPropertyToHclTerraform(struct?: DataTfVpcIpams.IpamsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -219,7 +219,7 @@ export function tfDataVpcIpamsIpamsPropertyToHclTerraform(struct?: TfDataVpcIpam
 }
 
 
-export function tfDataVpcIpamsFilterPropertyToTerraform(struct?: TfDataVpcIpams.FilterProperty | cdktn.IResolvable): any {
+export function dataTfVpcIpamsFilterPropertyToTerraform(struct?: DataTfVpcIpams.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -231,7 +231,7 @@ export function tfDataVpcIpamsFilterPropertyToTerraform(struct?: TfDataVpcIpams.
 }
 
 
-export function tfDataVpcIpamsFilterPropertyToHclTerraform(struct?: TfDataVpcIpams.FilterProperty | cdktn.IResolvable): any {
+export function dataTfVpcIpamsFilterPropertyToHclTerraform(struct?: DataTfVpcIpams.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -256,7 +256,7 @@ export function tfDataVpcIpamsFilterPropertyToHclTerraform(struct?: TfDataVpcIpa
 }
 
 
-export namespace TfDataVpcIpams {
+export namespace DataTfVpcIpams {
 export interface OperatingRegionsProperty {
 }
 export class OperatingRegionsPropertyOutputReference extends cdktn.ComplexObject {
@@ -448,11 +448,11 @@ export class IpamsPropertyList extends cdktn.ComplexList {
 }
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipams#name TfDataVpcIpams#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipams#name DataTfVpcIpams#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipams#values TfDataVpcIpams#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipams#values DataTfVpcIpams#values}
   */
   readonly values: string[];
 }

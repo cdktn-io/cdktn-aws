@@ -5,42 +5,42 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataPoolCidrsConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfPoolCidrsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipam_pool_cidrs#id TfDataPoolCidrs#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipam_pool_cidrs#id DataTfPoolCidrs#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipam_pool_cidrs#ipam_pool_id TfDataPoolCidrs#ipam_pool_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipam_pool_cidrs#ipam_pool_id DataTfPoolCidrs#ipam_pool_id}
   */
   readonly ipamPoolId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipam_pool_cidrs#region TfDataPoolCidrs#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipam_pool_cidrs#region DataTfPoolCidrs#region}
   */
   readonly region?: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipam_pool_cidrs#filter TfDataPoolCidrs#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipam_pool_cidrs#filter DataTfPoolCidrs#filter}
   */
-  readonly filter?: TfDataPoolCidrs.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataTfPoolCidrs.FilterProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipam_pool_cidrs#timeouts TfDataPoolCidrs#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipam_pool_cidrs#timeouts DataTfPoolCidrs#timeouts}
   */
-  readonly timeouts?: TfDataPoolCidrs.TimeoutsProperty;
+  readonly timeouts?: DataTfPoolCidrs.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipam_pool_cidrs aws_vpc_ipam_pool_cidrs}
 */
-export class TfDataPoolCidrs extends cdktn.TerraformDataSource {
+export class DataTfPoolCidrs extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class TfDataPoolCidrs extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataPoolCidrs resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfPoolCidrs resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataPoolCidrs to import
-  * @param importFromId The id of the existing TfDataPoolCidrs that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipam_pool_cidrs#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataPoolCidrs to import is found
+  * @param importToId The construct id used in the generated config for the DataTfPoolCidrs to import
+  * @param importFromId The id of the existing DataTfPoolCidrs that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipam_pool_cidrs#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfPoolCidrs to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpc_ipam_pool_cidrs", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class TfDataPoolCidrs extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataPoolCidrsConfig
+  * @param options DataTfPoolCidrsConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataPoolCidrsConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfPoolCidrsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_vpc_ipam_pool_cidrs',
       terraformGeneratorMetadata: {
@@ -116,7 +116,7 @@ export class TfDataPoolCidrs extends cdktn.TerraformDataSource {
   }
 
   // ipam_pool_cidrs - computed: true, optional: false, required: false
-  private _ipamPoolCidrs = new TfDataPoolCidrs.IpamPoolCidrsPropertyList(this, "ipam_pool_cidrs", true);
+  private _ipamPoolCidrs = new DataTfPoolCidrs.IpamPoolCidrsPropertyList(this, "ipam_pool_cidrs", true);
   public get ipamPoolCidrs() {
     return this._ipamPoolCidrs;
   }
@@ -151,11 +151,11 @@ export class TfDataPoolCidrs extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new TfDataPoolCidrs.FilterPropertyList(this, "filter", true);
+  private _filter = new DataTfPoolCidrs.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: TfDataPoolCidrs.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataTfPoolCidrs.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -167,11 +167,11 @@ export class TfDataPoolCidrs extends cdktn.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfDataPoolCidrs.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new DataTfPoolCidrs.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfDataPoolCidrs.TimeoutsProperty) {
+  public putTimeouts(value: DataTfPoolCidrs.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -191,8 +191,8 @@ export class TfDataPoolCidrs extends cdktn.TerraformDataSource {
       id: cdktn.stringToTerraform(this._id),
       ipam_pool_id: cdktn.stringToTerraform(this._ipamPoolId),
       region: cdktn.stringToTerraform(this._region),
-      filter: cdktn.listMapper(tfDataPoolCidrsFilterPropertyToTerraform, true)(this._filter.internalValue),
-      timeouts: tfDataPoolCidrsTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      filter: cdktn.listMapper(dataTfPoolCidrsFilterPropertyToTerraform, true)(this._filter.internalValue),
+      timeouts: dataTfPoolCidrsTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -217,16 +217,16 @@ export class TfDataPoolCidrs extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       filter: {
-        value: cdktn.listMapperHcl(tfDataPoolCidrsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataTfPoolCidrsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfDataPoolCidrs.FilterPropertyList",
+        storageClassType: "DataTfPoolCidrs.FilterPropertyList",
       },
       timeouts: {
-        value: tfDataPoolCidrsTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: dataTfPoolCidrsTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfDataPoolCidrs.TimeoutsProperty",
+        storageClassType: "DataTfPoolCidrs.TimeoutsProperty",
       },
     };
 
@@ -235,7 +235,7 @@ export class TfDataPoolCidrs extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataPoolCidrsIpamPoolCidrsPropertyToTerraform(struct?: TfDataPoolCidrs.IpamPoolCidrsProperty): any {
+export function dataTfPoolCidrsIpamPoolCidrsPropertyToTerraform(struct?: DataTfPoolCidrs.IpamPoolCidrsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -245,7 +245,7 @@ export function tfDataPoolCidrsIpamPoolCidrsPropertyToTerraform(struct?: TfDataP
 }
 
 
-export function tfDataPoolCidrsIpamPoolCidrsPropertyToHclTerraform(struct?: TfDataPoolCidrs.IpamPoolCidrsProperty): any {
+export function dataTfPoolCidrsIpamPoolCidrsPropertyToHclTerraform(struct?: DataTfPoolCidrs.IpamPoolCidrsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -256,7 +256,7 @@ export function tfDataPoolCidrsIpamPoolCidrsPropertyToHclTerraform(struct?: TfDa
 }
 
 
-export function tfDataPoolCidrsFilterPropertyToTerraform(struct?: TfDataPoolCidrs.FilterProperty | cdktn.IResolvable): any {
+export function dataTfPoolCidrsFilterPropertyToTerraform(struct?: DataTfPoolCidrs.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -268,7 +268,7 @@ export function tfDataPoolCidrsFilterPropertyToTerraform(struct?: TfDataPoolCidr
 }
 
 
-export function tfDataPoolCidrsFilterPropertyToHclTerraform(struct?: TfDataPoolCidrs.FilterProperty | cdktn.IResolvable): any {
+export function dataTfPoolCidrsFilterPropertyToHclTerraform(struct?: DataTfPoolCidrs.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -293,7 +293,7 @@ export function tfDataPoolCidrsFilterPropertyToHclTerraform(struct?: TfDataPoolC
 }
 
 
-export function tfDataPoolCidrsTimeoutsPropertyToTerraform(struct?: TfDataPoolCidrs.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfPoolCidrsTimeoutsPropertyToTerraform(struct?: DataTfPoolCidrs.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -304,7 +304,7 @@ export function tfDataPoolCidrsTimeoutsPropertyToTerraform(struct?: TfDataPoolCi
 }
 
 
-export function tfDataPoolCidrsTimeoutsPropertyToHclTerraform(struct?: TfDataPoolCidrs.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfPoolCidrsTimeoutsPropertyToHclTerraform(struct?: DataTfPoolCidrs.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -323,7 +323,7 @@ export function tfDataPoolCidrsTimeoutsPropertyToHclTerraform(struct?: TfDataPoo
 }
 
 
-export namespace TfDataPoolCidrs {
+export namespace DataTfPoolCidrs {
 export interface IpamPoolCidrsProperty {
 }
 export class IpamPoolCidrsPropertyOutputReference extends cdktn.ComplexObject {
@@ -385,11 +385,11 @@ export class IpamPoolCidrsPropertyList extends cdktn.ComplexList {
 }
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipam_pool_cidrs#name TfDataPoolCidrs#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipam_pool_cidrs#name DataTfPoolCidrs#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipam_pool_cidrs#values TfDataPoolCidrs#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipam_pool_cidrs#values DataTfPoolCidrs#values}
   */
   readonly values: string[];
 }
@@ -491,7 +491,7 @@ export class FilterPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipam_pool_cidrs#read TfDataPoolCidrs#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipam_pool_cidrs#read DataTfPoolCidrs#read}
   */
   readonly read?: string;
 }

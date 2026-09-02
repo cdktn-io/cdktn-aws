@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataPullThroughCacheRuleConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfPullThroughCacheRuleConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_pull_through_cache_rule#ecr_repository_prefix TfDataPullThroughCacheRule#ecr_repository_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_pull_through_cache_rule#ecr_repository_prefix DataTfPullThroughCacheRule#ecr_repository_prefix}
   */
   readonly ecrRepositoryPrefix: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_pull_through_cache_rule#id TfDataPullThroughCacheRule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_pull_through_cache_rule#id DataTfPullThroughCacheRule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,7 +20,7 @@ export interface TfDataPullThroughCacheRuleConfig extends cdktn.TerraformMetaArg
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_pull_through_cache_rule#region TfDataPullThroughCacheRule#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_pull_through_cache_rule#region DataTfPullThroughCacheRule#region}
   */
   readonly region?: string;
 }
@@ -28,7 +28,7 @@ export interface TfDataPullThroughCacheRuleConfig extends cdktn.TerraformMetaArg
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_pull_through_cache_rule aws_ecr_pull_through_cache_rule}
 */
-export class TfDataPullThroughCacheRule extends cdktn.TerraformDataSource {
+export class DataTfPullThroughCacheRule extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class TfDataPullThroughCacheRule extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataPullThroughCacheRule resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfPullThroughCacheRule resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataPullThroughCacheRule to import
-  * @param importFromId The id of the existing TfDataPullThroughCacheRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_pull_through_cache_rule#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataPullThroughCacheRule to import is found
+  * @param importToId The construct id used in the generated config for the DataTfPullThroughCacheRule to import
+  * @param importFromId The id of the existing DataTfPullThroughCacheRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_pull_through_cache_rule#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfPullThroughCacheRule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ecr_pull_through_cache_rule", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class TfDataPullThroughCacheRule extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataPullThroughCacheRuleConfig
+  * @param options DataTfPullThroughCacheRuleConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataPullThroughCacheRuleConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfPullThroughCacheRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ecr_pull_through_cache_rule',
       terraformGeneratorMetadata: {

@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataOntapStorageVirtualMachineConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfOntapStorageVirtualMachineConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_ontap_storage_virtual_machine#id TfDataOntapStorageVirtualMachine#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_ontap_storage_virtual_machine#id DataTfOntapStorageVirtualMachine#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,25 +16,25 @@ export interface TfDataOntapStorageVirtualMachineConfig extends cdktn.TerraformM
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_ontap_storage_virtual_machine#region TfDataOntapStorageVirtualMachine#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_ontap_storage_virtual_machine#region DataTfOntapStorageVirtualMachine#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_ontap_storage_virtual_machine#tags TfDataOntapStorageVirtualMachine#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_ontap_storage_virtual_machine#tags DataTfOntapStorageVirtualMachine#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_ontap_storage_virtual_machine#filter TfDataOntapStorageVirtualMachine#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_ontap_storage_virtual_machine#filter DataTfOntapStorageVirtualMachine#filter}
   */
-  readonly filter?: TfDataOntapStorageVirtualMachine.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataTfOntapStorageVirtualMachine.FilterProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_ontap_storage_virtual_machine aws_fsx_ontap_storage_virtual_machine}
 */
-export class TfDataOntapStorageVirtualMachine extends cdktn.TerraformDataSource {
+export class DataTfOntapStorageVirtualMachine extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class TfDataOntapStorageVirtualMachine extends cdktn.TerraformDataSource 
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataOntapStorageVirtualMachine resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfOntapStorageVirtualMachine resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataOntapStorageVirtualMachine to import
-  * @param importFromId The id of the existing TfDataOntapStorageVirtualMachine that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_ontap_storage_virtual_machine#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataOntapStorageVirtualMachine to import is found
+  * @param importToId The construct id used in the generated config for the DataTfOntapStorageVirtualMachine to import
+  * @param importFromId The id of the existing DataTfOntapStorageVirtualMachine that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_ontap_storage_virtual_machine#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfOntapStorageVirtualMachine to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_fsx_ontap_storage_virtual_machine", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class TfDataOntapStorageVirtualMachine extends cdktn.TerraformDataSource 
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataOntapStorageVirtualMachineConfig = {}
+  * @param options DataTfOntapStorageVirtualMachineConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataOntapStorageVirtualMachineConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfOntapStorageVirtualMachineConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_fsx_ontap_storage_virtual_machine',
       terraformGeneratorMetadata: {
@@ -93,7 +93,7 @@ export class TfDataOntapStorageVirtualMachine extends cdktn.TerraformDataSource 
   // ==========
 
   // active_directory_configuration - computed: true, optional: false, required: false
-  private _activeDirectoryConfiguration = new TfDataOntapStorageVirtualMachine.ActiveDirectoryConfigurationPropertyList(this, "active_directory_configuration", false);
+  private _activeDirectoryConfiguration = new DataTfOntapStorageVirtualMachine.ActiveDirectoryConfigurationPropertyList(this, "active_directory_configuration", false);
   public get activeDirectoryConfiguration() {
     return this._activeDirectoryConfiguration;
   }
@@ -109,7 +109,7 @@ export class TfDataOntapStorageVirtualMachine extends cdktn.TerraformDataSource 
   }
 
   // endpoints - computed: true, optional: false, required: false
-  private _endpoints = new TfDataOntapStorageVirtualMachine.EndpointsPropertyList(this, "endpoints", false);
+  private _endpoints = new DataTfOntapStorageVirtualMachine.EndpointsPropertyList(this, "endpoints", false);
   public get endpoints() {
     return this._endpoints;
   }
@@ -141,7 +141,7 @@ export class TfDataOntapStorageVirtualMachine extends cdktn.TerraformDataSource 
   }
 
   // lifecycle_transition_reason - computed: true, optional: false, required: false
-  private _lifecycleTransitionReason = new TfDataOntapStorageVirtualMachine.LifecycleTransitionReasonPropertyList(this, "lifecycle_transition_reason", true);
+  private _lifecycleTransitionReason = new DataTfOntapStorageVirtualMachine.LifecycleTransitionReasonPropertyList(this, "lifecycle_transition_reason", true);
   public get lifecycleTransitionReason() {
     return this._lifecycleTransitionReason;
   }
@@ -194,11 +194,11 @@ export class TfDataOntapStorageVirtualMachine extends cdktn.TerraformDataSource 
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new TfDataOntapStorageVirtualMachine.FilterPropertyList(this, "filter", true);
+  private _filter = new DataTfOntapStorageVirtualMachine.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: TfDataOntapStorageVirtualMachine.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataTfOntapStorageVirtualMachine.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -218,7 +218,7 @@ export class TfDataOntapStorageVirtualMachine extends cdktn.TerraformDataSource 
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      filter: cdktn.listMapper(tfDataOntapStorageVirtualMachineFilterPropertyToTerraform, true)(this._filter.internalValue),
+      filter: cdktn.listMapper(dataTfOntapStorageVirtualMachineFilterPropertyToTerraform, true)(this._filter.internalValue),
     };
   }
 
@@ -243,10 +243,10 @@ export class TfDataOntapStorageVirtualMachine extends cdktn.TerraformDataSource 
         storageClassType: "stringMap",
       },
       filter: {
-        value: cdktn.listMapperHcl(tfDataOntapStorageVirtualMachineFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataTfOntapStorageVirtualMachineFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfDataOntapStorageVirtualMachine.FilterPropertyList",
+        storageClassType: "DataTfOntapStorageVirtualMachine.FilterPropertyList",
       },
     };
 
@@ -255,7 +255,7 @@ export class TfDataOntapStorageVirtualMachine extends cdktn.TerraformDataSource 
   }
 }
 
-export function tfDataOntapStorageVirtualMachineSelfManagedActiveDirectoryConfigurationPropertyToTerraform(struct?: TfDataOntapStorageVirtualMachine.SelfManagedActiveDirectoryConfigurationProperty): any {
+export function dataTfOntapStorageVirtualMachineSelfManagedActiveDirectoryConfigurationPropertyToTerraform(struct?: DataTfOntapStorageVirtualMachine.SelfManagedActiveDirectoryConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -265,7 +265,7 @@ export function tfDataOntapStorageVirtualMachineSelfManagedActiveDirectoryConfig
 }
 
 
-export function tfDataOntapStorageVirtualMachineSelfManagedActiveDirectoryConfigurationPropertyToHclTerraform(struct?: TfDataOntapStorageVirtualMachine.SelfManagedActiveDirectoryConfigurationProperty): any {
+export function dataTfOntapStorageVirtualMachineSelfManagedActiveDirectoryConfigurationPropertyToHclTerraform(struct?: DataTfOntapStorageVirtualMachine.SelfManagedActiveDirectoryConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -276,7 +276,7 @@ export function tfDataOntapStorageVirtualMachineSelfManagedActiveDirectoryConfig
 }
 
 
-export function tfDataOntapStorageVirtualMachineActiveDirectoryConfigurationPropertyToTerraform(struct?: TfDataOntapStorageVirtualMachine.ActiveDirectoryConfigurationProperty): any {
+export function dataTfOntapStorageVirtualMachineActiveDirectoryConfigurationPropertyToTerraform(struct?: DataTfOntapStorageVirtualMachine.ActiveDirectoryConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -286,7 +286,7 @@ export function tfDataOntapStorageVirtualMachineActiveDirectoryConfigurationProp
 }
 
 
-export function tfDataOntapStorageVirtualMachineActiveDirectoryConfigurationPropertyToHclTerraform(struct?: TfDataOntapStorageVirtualMachine.ActiveDirectoryConfigurationProperty): any {
+export function dataTfOntapStorageVirtualMachineActiveDirectoryConfigurationPropertyToHclTerraform(struct?: DataTfOntapStorageVirtualMachine.ActiveDirectoryConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -297,7 +297,7 @@ export function tfDataOntapStorageVirtualMachineActiveDirectoryConfigurationProp
 }
 
 
-export function tfDataOntapStorageVirtualMachineIscsiPropertyToTerraform(struct?: TfDataOntapStorageVirtualMachine.IscsiProperty): any {
+export function dataTfOntapStorageVirtualMachineIscsiPropertyToTerraform(struct?: DataTfOntapStorageVirtualMachine.IscsiProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -307,7 +307,7 @@ export function tfDataOntapStorageVirtualMachineIscsiPropertyToTerraform(struct?
 }
 
 
-export function tfDataOntapStorageVirtualMachineIscsiPropertyToHclTerraform(struct?: TfDataOntapStorageVirtualMachine.IscsiProperty): any {
+export function dataTfOntapStorageVirtualMachineIscsiPropertyToHclTerraform(struct?: DataTfOntapStorageVirtualMachine.IscsiProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -318,7 +318,7 @@ export function tfDataOntapStorageVirtualMachineIscsiPropertyToHclTerraform(stru
 }
 
 
-export function tfDataOntapStorageVirtualMachineManagementPropertyToTerraform(struct?: TfDataOntapStorageVirtualMachine.ManagementProperty): any {
+export function dataTfOntapStorageVirtualMachineManagementPropertyToTerraform(struct?: DataTfOntapStorageVirtualMachine.ManagementProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -328,7 +328,7 @@ export function tfDataOntapStorageVirtualMachineManagementPropertyToTerraform(st
 }
 
 
-export function tfDataOntapStorageVirtualMachineManagementPropertyToHclTerraform(struct?: TfDataOntapStorageVirtualMachine.ManagementProperty): any {
+export function dataTfOntapStorageVirtualMachineManagementPropertyToHclTerraform(struct?: DataTfOntapStorageVirtualMachine.ManagementProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -339,7 +339,7 @@ export function tfDataOntapStorageVirtualMachineManagementPropertyToHclTerraform
 }
 
 
-export function tfDataOntapStorageVirtualMachineNfsPropertyToTerraform(struct?: TfDataOntapStorageVirtualMachine.NfsProperty): any {
+export function dataTfOntapStorageVirtualMachineNfsPropertyToTerraform(struct?: DataTfOntapStorageVirtualMachine.NfsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -349,7 +349,7 @@ export function tfDataOntapStorageVirtualMachineNfsPropertyToTerraform(struct?: 
 }
 
 
-export function tfDataOntapStorageVirtualMachineNfsPropertyToHclTerraform(struct?: TfDataOntapStorageVirtualMachine.NfsProperty): any {
+export function dataTfOntapStorageVirtualMachineNfsPropertyToHclTerraform(struct?: DataTfOntapStorageVirtualMachine.NfsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -360,7 +360,7 @@ export function tfDataOntapStorageVirtualMachineNfsPropertyToHclTerraform(struct
 }
 
 
-export function tfDataOntapStorageVirtualMachineSmbPropertyToTerraform(struct?: TfDataOntapStorageVirtualMachine.SmbProperty): any {
+export function dataTfOntapStorageVirtualMachineSmbPropertyToTerraform(struct?: DataTfOntapStorageVirtualMachine.SmbProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -370,7 +370,7 @@ export function tfDataOntapStorageVirtualMachineSmbPropertyToTerraform(struct?: 
 }
 
 
-export function tfDataOntapStorageVirtualMachineSmbPropertyToHclTerraform(struct?: TfDataOntapStorageVirtualMachine.SmbProperty): any {
+export function dataTfOntapStorageVirtualMachineSmbPropertyToHclTerraform(struct?: DataTfOntapStorageVirtualMachine.SmbProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -381,7 +381,7 @@ export function tfDataOntapStorageVirtualMachineSmbPropertyToHclTerraform(struct
 }
 
 
-export function tfDataOntapStorageVirtualMachineEndpointsPropertyToTerraform(struct?: TfDataOntapStorageVirtualMachine.EndpointsProperty): any {
+export function dataTfOntapStorageVirtualMachineEndpointsPropertyToTerraform(struct?: DataTfOntapStorageVirtualMachine.EndpointsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -391,7 +391,7 @@ export function tfDataOntapStorageVirtualMachineEndpointsPropertyToTerraform(str
 }
 
 
-export function tfDataOntapStorageVirtualMachineEndpointsPropertyToHclTerraform(struct?: TfDataOntapStorageVirtualMachine.EndpointsProperty): any {
+export function dataTfOntapStorageVirtualMachineEndpointsPropertyToHclTerraform(struct?: DataTfOntapStorageVirtualMachine.EndpointsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -402,7 +402,7 @@ export function tfDataOntapStorageVirtualMachineEndpointsPropertyToHclTerraform(
 }
 
 
-export function tfDataOntapStorageVirtualMachineLifecycleTransitionReasonPropertyToTerraform(struct?: TfDataOntapStorageVirtualMachine.LifecycleTransitionReasonProperty): any {
+export function dataTfOntapStorageVirtualMachineLifecycleTransitionReasonPropertyToTerraform(struct?: DataTfOntapStorageVirtualMachine.LifecycleTransitionReasonProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -412,7 +412,7 @@ export function tfDataOntapStorageVirtualMachineLifecycleTransitionReasonPropert
 }
 
 
-export function tfDataOntapStorageVirtualMachineLifecycleTransitionReasonPropertyToHclTerraform(struct?: TfDataOntapStorageVirtualMachine.LifecycleTransitionReasonProperty): any {
+export function dataTfOntapStorageVirtualMachineLifecycleTransitionReasonPropertyToHclTerraform(struct?: DataTfOntapStorageVirtualMachine.LifecycleTransitionReasonProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -423,7 +423,7 @@ export function tfDataOntapStorageVirtualMachineLifecycleTransitionReasonPropert
 }
 
 
-export function tfDataOntapStorageVirtualMachineFilterPropertyToTerraform(struct?: TfDataOntapStorageVirtualMachine.FilterProperty | cdktn.IResolvable): any {
+export function dataTfOntapStorageVirtualMachineFilterPropertyToTerraform(struct?: DataTfOntapStorageVirtualMachine.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -435,7 +435,7 @@ export function tfDataOntapStorageVirtualMachineFilterPropertyToTerraform(struct
 }
 
 
-export function tfDataOntapStorageVirtualMachineFilterPropertyToHclTerraform(struct?: TfDataOntapStorageVirtualMachine.FilterProperty | cdktn.IResolvable): any {
+export function dataTfOntapStorageVirtualMachineFilterPropertyToHclTerraform(struct?: DataTfOntapStorageVirtualMachine.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -460,7 +460,7 @@ export function tfDataOntapStorageVirtualMachineFilterPropertyToHclTerraform(str
 }
 
 
-export namespace TfDataOntapStorageVirtualMachine {
+export namespace DataTfOntapStorageVirtualMachine {
 export interface SelfManagedActiveDirectoryConfigurationProperty {
 }
 export class SelfManagedActiveDirectoryConfigurationPropertyOutputReference extends cdktn.ComplexObject {
@@ -960,11 +960,11 @@ export class LifecycleTransitionReasonPropertyList extends cdktn.ComplexList {
 }
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_ontap_storage_virtual_machine#name TfDataOntapStorageVirtualMachine#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_ontap_storage_virtual_machine#name DataTfOntapStorageVirtualMachine#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_ontap_storage_virtual_machine#values TfDataOntapStorageVirtualMachine#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_ontap_storage_virtual_machine#values DataTfOntapStorageVirtualMachine#values}
   */
   readonly values: string[];
 }

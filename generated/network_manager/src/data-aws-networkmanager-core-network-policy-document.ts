@@ -5,66 +5,66 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataCoreNetworkPolicyDocumentConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfCoreNetworkPolicyDocumentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#id TfDataCoreNetworkPolicyDocument#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#id DataTfCoreNetworkPolicyDocument#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#version TfDataCoreNetworkPolicyDocument#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#version DataTfCoreNetworkPolicyDocument#version}
   */
   readonly version?: string;
   /**
   * attachment_policies block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#attachment_policies TfDataCoreNetworkPolicyDocument#attachment_policies}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#attachment_policies DataTfCoreNetworkPolicyDocument#attachment_policies}
   */
-  readonly attachmentPolicies?: TfDataCoreNetworkPolicyDocument.AttachmentPoliciesProperty[] | cdktn.IResolvable;
+  readonly attachmentPolicies?: DataTfCoreNetworkPolicyDocument.AttachmentPoliciesProperty[] | cdktn.IResolvable;
   /**
   * attachment_routing_policy_rules block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#attachment_routing_policy_rules TfDataCoreNetworkPolicyDocument#attachment_routing_policy_rules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#attachment_routing_policy_rules DataTfCoreNetworkPolicyDocument#attachment_routing_policy_rules}
   */
-  readonly attachmentRoutingPolicyRules?: TfDataCoreNetworkPolicyDocument.AttachmentRoutingPolicyRulesProperty[] | cdktn.IResolvable;
+  readonly attachmentRoutingPolicyRules?: DataTfCoreNetworkPolicyDocument.AttachmentRoutingPolicyRulesProperty[] | cdktn.IResolvable;
   /**
   * core_network_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#core_network_configuration TfDataCoreNetworkPolicyDocument#core_network_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#core_network_configuration DataTfCoreNetworkPolicyDocument#core_network_configuration}
   */
-  readonly coreNetworkConfiguration: TfDataCoreNetworkPolicyDocument.CoreNetworkConfigurationProperty[] | cdktn.IResolvable;
+  readonly coreNetworkConfiguration: DataTfCoreNetworkPolicyDocument.CoreNetworkConfigurationProperty[] | cdktn.IResolvable;
   /**
   * network_function_groups block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#network_function_groups TfDataCoreNetworkPolicyDocument#network_function_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#network_function_groups DataTfCoreNetworkPolicyDocument#network_function_groups}
   */
-  readonly networkFunctionGroups?: TfDataCoreNetworkPolicyDocument.NetworkFunctionGroupsProperty[] | cdktn.IResolvable;
+  readonly networkFunctionGroups?: DataTfCoreNetworkPolicyDocument.NetworkFunctionGroupsProperty[] | cdktn.IResolvable;
   /**
   * routing_policies block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#routing_policies TfDataCoreNetworkPolicyDocument#routing_policies}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#routing_policies DataTfCoreNetworkPolicyDocument#routing_policies}
   */
-  readonly routingPolicies?: TfDataCoreNetworkPolicyDocument.RoutingPoliciesProperty[] | cdktn.IResolvable;
+  readonly routingPolicies?: DataTfCoreNetworkPolicyDocument.RoutingPoliciesProperty[] | cdktn.IResolvable;
   /**
   * segment_actions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#segment_actions TfDataCoreNetworkPolicyDocument#segment_actions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#segment_actions DataTfCoreNetworkPolicyDocument#segment_actions}
   */
-  readonly segmentActions?: TfDataCoreNetworkPolicyDocument.SegmentActionsProperty[] | cdktn.IResolvable;
+  readonly segmentActions?: DataTfCoreNetworkPolicyDocument.SegmentActionsProperty[] | cdktn.IResolvable;
   /**
   * segments block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#segments TfDataCoreNetworkPolicyDocument#segments}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#segments DataTfCoreNetworkPolicyDocument#segments}
   */
-  readonly segments: TfDataCoreNetworkPolicyDocument.SegmentsProperty[] | cdktn.IResolvable;
+  readonly segments: DataTfCoreNetworkPolicyDocument.SegmentsProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document aws_networkmanager_core_network_policy_document}
 */
-export class TfDataCoreNetworkPolicyDocument extends cdktn.TerraformDataSource {
+export class DataTfCoreNetworkPolicyDocument extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -75,11 +75,11 @@ export class TfDataCoreNetworkPolicyDocument extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataCoreNetworkPolicyDocument resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfCoreNetworkPolicyDocument resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataCoreNetworkPolicyDocument to import
-  * @param importFromId The id of the existing TfDataCoreNetworkPolicyDocument that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataCoreNetworkPolicyDocument to import is found
+  * @param importToId The construct id used in the generated config for the DataTfCoreNetworkPolicyDocument to import
+  * @param importFromId The id of the existing DataTfCoreNetworkPolicyDocument that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfCoreNetworkPolicyDocument to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_networkmanager_core_network_policy_document", importId: importFromId, provider });
@@ -94,9 +94,9 @@ export class TfDataCoreNetworkPolicyDocument extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataCoreNetworkPolicyDocumentConfig
+  * @param options DataTfCoreNetworkPolicyDocumentConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataCoreNetworkPolicyDocumentConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfCoreNetworkPolicyDocumentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_networkmanager_core_network_policy_document',
       terraformGeneratorMetadata: {
@@ -165,11 +165,11 @@ export class TfDataCoreNetworkPolicyDocument extends cdktn.TerraformDataSource {
   }
 
   // attachment_policies - computed: false, optional: true, required: false
-  private _attachmentPolicies = new TfDataCoreNetworkPolicyDocument.AttachmentPoliciesPropertyList(this, "attachment_policies", false);
+  private _attachmentPolicies = new DataTfCoreNetworkPolicyDocument.AttachmentPoliciesPropertyList(this, "attachment_policies", false);
   public get attachmentPolicies() {
     return this._attachmentPolicies;
   }
-  public putAttachmentPolicies(value: TfDataCoreNetworkPolicyDocument.AttachmentPoliciesProperty[] | cdktn.IResolvable) {
+  public putAttachmentPolicies(value: DataTfCoreNetworkPolicyDocument.AttachmentPoliciesProperty[] | cdktn.IResolvable) {
     this._attachmentPolicies.internalValue = value;
   }
   public resetAttachmentPolicies() {
@@ -181,11 +181,11 @@ export class TfDataCoreNetworkPolicyDocument extends cdktn.TerraformDataSource {
   }
 
   // attachment_routing_policy_rules - computed: false, optional: true, required: false
-  private _attachmentRoutingPolicyRules = new TfDataCoreNetworkPolicyDocument.AttachmentRoutingPolicyRulesPropertyList(this, "attachment_routing_policy_rules", false);
+  private _attachmentRoutingPolicyRules = new DataTfCoreNetworkPolicyDocument.AttachmentRoutingPolicyRulesPropertyList(this, "attachment_routing_policy_rules", false);
   public get attachmentRoutingPolicyRules() {
     return this._attachmentRoutingPolicyRules;
   }
-  public putAttachmentRoutingPolicyRules(value: TfDataCoreNetworkPolicyDocument.AttachmentRoutingPolicyRulesProperty[] | cdktn.IResolvable) {
+  public putAttachmentRoutingPolicyRules(value: DataTfCoreNetworkPolicyDocument.AttachmentRoutingPolicyRulesProperty[] | cdktn.IResolvable) {
     this._attachmentRoutingPolicyRules.internalValue = value;
   }
   public resetAttachmentRoutingPolicyRules() {
@@ -197,11 +197,11 @@ export class TfDataCoreNetworkPolicyDocument extends cdktn.TerraformDataSource {
   }
 
   // core_network_configuration - computed: false, optional: false, required: true
-  private _coreNetworkConfiguration = new TfDataCoreNetworkPolicyDocument.CoreNetworkConfigurationPropertyList(this, "core_network_configuration", false);
+  private _coreNetworkConfiguration = new DataTfCoreNetworkPolicyDocument.CoreNetworkConfigurationPropertyList(this, "core_network_configuration", false);
   public get coreNetworkConfiguration() {
     return this._coreNetworkConfiguration;
   }
-  public putCoreNetworkConfiguration(value: TfDataCoreNetworkPolicyDocument.CoreNetworkConfigurationProperty[] | cdktn.IResolvable) {
+  public putCoreNetworkConfiguration(value: DataTfCoreNetworkPolicyDocument.CoreNetworkConfigurationProperty[] | cdktn.IResolvable) {
     this._coreNetworkConfiguration.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -210,11 +210,11 @@ export class TfDataCoreNetworkPolicyDocument extends cdktn.TerraformDataSource {
   }
 
   // network_function_groups - computed: false, optional: true, required: false
-  private _networkFunctionGroups = new TfDataCoreNetworkPolicyDocument.NetworkFunctionGroupsPropertyList(this, "network_function_groups", false);
+  private _networkFunctionGroups = new DataTfCoreNetworkPolicyDocument.NetworkFunctionGroupsPropertyList(this, "network_function_groups", false);
   public get networkFunctionGroups() {
     return this._networkFunctionGroups;
   }
-  public putNetworkFunctionGroups(value: TfDataCoreNetworkPolicyDocument.NetworkFunctionGroupsProperty[] | cdktn.IResolvable) {
+  public putNetworkFunctionGroups(value: DataTfCoreNetworkPolicyDocument.NetworkFunctionGroupsProperty[] | cdktn.IResolvable) {
     this._networkFunctionGroups.internalValue = value;
   }
   public resetNetworkFunctionGroups() {
@@ -226,11 +226,11 @@ export class TfDataCoreNetworkPolicyDocument extends cdktn.TerraformDataSource {
   }
 
   // routing_policies - computed: false, optional: true, required: false
-  private _routingPolicies = new TfDataCoreNetworkPolicyDocument.RoutingPoliciesPropertyList(this, "routing_policies", false);
+  private _routingPolicies = new DataTfCoreNetworkPolicyDocument.RoutingPoliciesPropertyList(this, "routing_policies", false);
   public get routingPolicies() {
     return this._routingPolicies;
   }
-  public putRoutingPolicies(value: TfDataCoreNetworkPolicyDocument.RoutingPoliciesProperty[] | cdktn.IResolvable) {
+  public putRoutingPolicies(value: DataTfCoreNetworkPolicyDocument.RoutingPoliciesProperty[] | cdktn.IResolvable) {
     this._routingPolicies.internalValue = value;
   }
   public resetRoutingPolicies() {
@@ -242,11 +242,11 @@ export class TfDataCoreNetworkPolicyDocument extends cdktn.TerraformDataSource {
   }
 
   // segment_actions - computed: false, optional: true, required: false
-  private _segmentActions = new TfDataCoreNetworkPolicyDocument.SegmentActionsPropertyList(this, "segment_actions", false);
+  private _segmentActions = new DataTfCoreNetworkPolicyDocument.SegmentActionsPropertyList(this, "segment_actions", false);
   public get segmentActions() {
     return this._segmentActions;
   }
-  public putSegmentActions(value: TfDataCoreNetworkPolicyDocument.SegmentActionsProperty[] | cdktn.IResolvable) {
+  public putSegmentActions(value: DataTfCoreNetworkPolicyDocument.SegmentActionsProperty[] | cdktn.IResolvable) {
     this._segmentActions.internalValue = value;
   }
   public resetSegmentActions() {
@@ -258,11 +258,11 @@ export class TfDataCoreNetworkPolicyDocument extends cdktn.TerraformDataSource {
   }
 
   // segments - computed: false, optional: false, required: true
-  private _segments = new TfDataCoreNetworkPolicyDocument.SegmentsPropertyList(this, "segments", false);
+  private _segments = new DataTfCoreNetworkPolicyDocument.SegmentsPropertyList(this, "segments", false);
   public get segments() {
     return this._segments;
   }
-  public putSegments(value: TfDataCoreNetworkPolicyDocument.SegmentsProperty[] | cdktn.IResolvable) {
+  public putSegments(value: DataTfCoreNetworkPolicyDocument.SegmentsProperty[] | cdktn.IResolvable) {
     this._segments.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -278,13 +278,13 @@ export class TfDataCoreNetworkPolicyDocument extends cdktn.TerraformDataSource {
     return {
       id: cdktn.stringToTerraform(this._id),
       version: cdktn.stringToTerraform(this._version),
-      attachment_policies: cdktn.listMapper(tfDataCoreNetworkPolicyDocumentAttachmentPoliciesPropertyToTerraform, true)(this._attachmentPolicies.internalValue),
-      attachment_routing_policy_rules: cdktn.listMapper(tfDataCoreNetworkPolicyDocumentAttachmentRoutingPolicyRulesPropertyToTerraform, true)(this._attachmentRoutingPolicyRules.internalValue),
-      core_network_configuration: cdktn.listMapper(tfDataCoreNetworkPolicyDocumentCoreNetworkConfigurationPropertyToTerraform, true)(this._coreNetworkConfiguration.internalValue),
-      network_function_groups: cdktn.listMapper(tfDataCoreNetworkPolicyDocumentNetworkFunctionGroupsPropertyToTerraform, true)(this._networkFunctionGroups.internalValue),
-      routing_policies: cdktn.listMapper(tfDataCoreNetworkPolicyDocumentRoutingPoliciesPropertyToTerraform, true)(this._routingPolicies.internalValue),
-      segment_actions: cdktn.listMapper(tfDataCoreNetworkPolicyDocumentSegmentActionsPropertyToTerraform, true)(this._segmentActions.internalValue),
-      segments: cdktn.listMapper(tfDataCoreNetworkPolicyDocumentSegmentsPropertyToTerraform, true)(this._segments.internalValue),
+      attachment_policies: cdktn.listMapper(dataTfCoreNetworkPolicyDocumentAttachmentPoliciesPropertyToTerraform, true)(this._attachmentPolicies.internalValue),
+      attachment_routing_policy_rules: cdktn.listMapper(dataTfCoreNetworkPolicyDocumentAttachmentRoutingPolicyRulesPropertyToTerraform, true)(this._attachmentRoutingPolicyRules.internalValue),
+      core_network_configuration: cdktn.listMapper(dataTfCoreNetworkPolicyDocumentCoreNetworkConfigurationPropertyToTerraform, true)(this._coreNetworkConfiguration.internalValue),
+      network_function_groups: cdktn.listMapper(dataTfCoreNetworkPolicyDocumentNetworkFunctionGroupsPropertyToTerraform, true)(this._networkFunctionGroups.internalValue),
+      routing_policies: cdktn.listMapper(dataTfCoreNetworkPolicyDocumentRoutingPoliciesPropertyToTerraform, true)(this._routingPolicies.internalValue),
+      segment_actions: cdktn.listMapper(dataTfCoreNetworkPolicyDocumentSegmentActionsPropertyToTerraform, true)(this._segmentActions.internalValue),
+      segments: cdktn.listMapper(dataTfCoreNetworkPolicyDocumentSegmentsPropertyToTerraform, true)(this._segments.internalValue),
     };
   }
 
@@ -303,46 +303,46 @@ export class TfDataCoreNetworkPolicyDocument extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       attachment_policies: {
-        value: cdktn.listMapperHcl(tfDataCoreNetworkPolicyDocumentAttachmentPoliciesPropertyToHclTerraform, true)(this._attachmentPolicies.internalValue),
+        value: cdktn.listMapperHcl(dataTfCoreNetworkPolicyDocumentAttachmentPoliciesPropertyToHclTerraform, true)(this._attachmentPolicies.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDataCoreNetworkPolicyDocument.AttachmentPoliciesPropertyList",
+        storageClassType: "DataTfCoreNetworkPolicyDocument.AttachmentPoliciesPropertyList",
       },
       attachment_routing_policy_rules: {
-        value: cdktn.listMapperHcl(tfDataCoreNetworkPolicyDocumentAttachmentRoutingPolicyRulesPropertyToHclTerraform, true)(this._attachmentRoutingPolicyRules.internalValue),
+        value: cdktn.listMapperHcl(dataTfCoreNetworkPolicyDocumentAttachmentRoutingPolicyRulesPropertyToHclTerraform, true)(this._attachmentRoutingPolicyRules.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDataCoreNetworkPolicyDocument.AttachmentRoutingPolicyRulesPropertyList",
+        storageClassType: "DataTfCoreNetworkPolicyDocument.AttachmentRoutingPolicyRulesPropertyList",
       },
       core_network_configuration: {
-        value: cdktn.listMapperHcl(tfDataCoreNetworkPolicyDocumentCoreNetworkConfigurationPropertyToHclTerraform, true)(this._coreNetworkConfiguration.internalValue),
+        value: cdktn.listMapperHcl(dataTfCoreNetworkPolicyDocumentCoreNetworkConfigurationPropertyToHclTerraform, true)(this._coreNetworkConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDataCoreNetworkPolicyDocument.CoreNetworkConfigurationPropertyList",
+        storageClassType: "DataTfCoreNetworkPolicyDocument.CoreNetworkConfigurationPropertyList",
       },
       network_function_groups: {
-        value: cdktn.listMapperHcl(tfDataCoreNetworkPolicyDocumentNetworkFunctionGroupsPropertyToHclTerraform, true)(this._networkFunctionGroups.internalValue),
+        value: cdktn.listMapperHcl(dataTfCoreNetworkPolicyDocumentNetworkFunctionGroupsPropertyToHclTerraform, true)(this._networkFunctionGroups.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDataCoreNetworkPolicyDocument.NetworkFunctionGroupsPropertyList",
+        storageClassType: "DataTfCoreNetworkPolicyDocument.NetworkFunctionGroupsPropertyList",
       },
       routing_policies: {
-        value: cdktn.listMapperHcl(tfDataCoreNetworkPolicyDocumentRoutingPoliciesPropertyToHclTerraform, true)(this._routingPolicies.internalValue),
+        value: cdktn.listMapperHcl(dataTfCoreNetworkPolicyDocumentRoutingPoliciesPropertyToHclTerraform, true)(this._routingPolicies.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDataCoreNetworkPolicyDocument.RoutingPoliciesPropertyList",
+        storageClassType: "DataTfCoreNetworkPolicyDocument.RoutingPoliciesPropertyList",
       },
       segment_actions: {
-        value: cdktn.listMapperHcl(tfDataCoreNetworkPolicyDocumentSegmentActionsPropertyToHclTerraform, true)(this._segmentActions.internalValue),
+        value: cdktn.listMapperHcl(dataTfCoreNetworkPolicyDocumentSegmentActionsPropertyToHclTerraform, true)(this._segmentActions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDataCoreNetworkPolicyDocument.SegmentActionsPropertyList",
+        storageClassType: "DataTfCoreNetworkPolicyDocument.SegmentActionsPropertyList",
       },
       segments: {
-        value: cdktn.listMapperHcl(tfDataCoreNetworkPolicyDocumentSegmentsPropertyToHclTerraform, true)(this._segments.internalValue),
+        value: cdktn.listMapperHcl(dataTfCoreNetworkPolicyDocumentSegmentsPropertyToHclTerraform, true)(this._segments.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDataCoreNetworkPolicyDocument.SegmentsPropertyList",
+        storageClassType: "DataTfCoreNetworkPolicyDocument.SegmentsPropertyList",
       },
     };
 
@@ -351,7 +351,7 @@ export class TfDataCoreNetworkPolicyDocument extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataCoreNetworkPolicyDocumentAttachmentPoliciesActionPropertyToTerraform(struct?: TfDataCoreNetworkPolicyDocument.AttachmentPoliciesActionPropertyOutputReference | TfDataCoreNetworkPolicyDocument.AttachmentPoliciesActionProperty): any {
+export function dataTfCoreNetworkPolicyDocumentAttachmentPoliciesActionPropertyToTerraform(struct?: DataTfCoreNetworkPolicyDocument.AttachmentPoliciesActionPropertyOutputReference | DataTfCoreNetworkPolicyDocument.AttachmentPoliciesActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -366,7 +366,7 @@ export function tfDataCoreNetworkPolicyDocumentAttachmentPoliciesActionPropertyT
 }
 
 
-export function tfDataCoreNetworkPolicyDocumentAttachmentPoliciesActionPropertyToHclTerraform(struct?: TfDataCoreNetworkPolicyDocument.AttachmentPoliciesActionPropertyOutputReference | TfDataCoreNetworkPolicyDocument.AttachmentPoliciesActionProperty): any {
+export function dataTfCoreNetworkPolicyDocumentAttachmentPoliciesActionPropertyToHclTerraform(struct?: DataTfCoreNetworkPolicyDocument.AttachmentPoliciesActionPropertyOutputReference | DataTfCoreNetworkPolicyDocument.AttachmentPoliciesActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -409,7 +409,7 @@ export function tfDataCoreNetworkPolicyDocumentAttachmentPoliciesActionPropertyT
 }
 
 
-export function tfDataCoreNetworkPolicyDocumentAttachmentPoliciesConditionsPropertyToTerraform(struct?: TfDataCoreNetworkPolicyDocument.AttachmentPoliciesConditionsProperty | cdktn.IResolvable): any {
+export function dataTfCoreNetworkPolicyDocumentAttachmentPoliciesConditionsPropertyToTerraform(struct?: DataTfCoreNetworkPolicyDocument.AttachmentPoliciesConditionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -423,7 +423,7 @@ export function tfDataCoreNetworkPolicyDocumentAttachmentPoliciesConditionsPrope
 }
 
 
-export function tfDataCoreNetworkPolicyDocumentAttachmentPoliciesConditionsPropertyToHclTerraform(struct?: TfDataCoreNetworkPolicyDocument.AttachmentPoliciesConditionsProperty | cdktn.IResolvable): any {
+export function dataTfCoreNetworkPolicyDocumentAttachmentPoliciesConditionsPropertyToHclTerraform(struct?: DataTfCoreNetworkPolicyDocument.AttachmentPoliciesConditionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -460,7 +460,7 @@ export function tfDataCoreNetworkPolicyDocumentAttachmentPoliciesConditionsPrope
 }
 
 
-export function tfDataCoreNetworkPolicyDocumentAttachmentPoliciesPropertyToTerraform(struct?: TfDataCoreNetworkPolicyDocument.AttachmentPoliciesProperty | cdktn.IResolvable): any {
+export function dataTfCoreNetworkPolicyDocumentAttachmentPoliciesPropertyToTerraform(struct?: DataTfCoreNetworkPolicyDocument.AttachmentPoliciesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -469,13 +469,13 @@ export function tfDataCoreNetworkPolicyDocumentAttachmentPoliciesPropertyToTerra
     condition_logic: cdktn.stringToTerraform(struct!.conditionLogic),
     description: cdktn.stringToTerraform(struct!.description),
     rule_number: cdktn.numberToTerraform(struct!.ruleNumber),
-    action: tfDataCoreNetworkPolicyDocumentAttachmentPoliciesActionPropertyToTerraform(struct!.action),
-    conditions: cdktn.listMapper(tfDataCoreNetworkPolicyDocumentAttachmentPoliciesConditionsPropertyToTerraform, true)(struct!.conditions),
+    action: dataTfCoreNetworkPolicyDocumentAttachmentPoliciesActionPropertyToTerraform(struct!.action),
+    conditions: cdktn.listMapper(dataTfCoreNetworkPolicyDocumentAttachmentPoliciesConditionsPropertyToTerraform, true)(struct!.conditions),
   }
 }
 
 
-export function tfDataCoreNetworkPolicyDocumentAttachmentPoliciesPropertyToHclTerraform(struct?: TfDataCoreNetworkPolicyDocument.AttachmentPoliciesProperty | cdktn.IResolvable): any {
+export function dataTfCoreNetworkPolicyDocumentAttachmentPoliciesPropertyToHclTerraform(struct?: DataTfCoreNetworkPolicyDocument.AttachmentPoliciesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -500,13 +500,13 @@ export function tfDataCoreNetworkPolicyDocumentAttachmentPoliciesPropertyToHclTe
       storageClassType: "number",
     },
     action: {
-      value: tfDataCoreNetworkPolicyDocumentAttachmentPoliciesActionPropertyToHclTerraform(struct!.action),
+      value: dataTfCoreNetworkPolicyDocumentAttachmentPoliciesActionPropertyToHclTerraform(struct!.action),
       isBlock: true,
       type: "list",
       storageClassType: "AttachmentPoliciesActionPropertyList",
     },
     conditions: {
-      value: cdktn.listMapperHcl(tfDataCoreNetworkPolicyDocumentAttachmentPoliciesConditionsPropertyToHclTerraform, true)(struct!.conditions),
+      value: cdktn.listMapperHcl(dataTfCoreNetworkPolicyDocumentAttachmentPoliciesConditionsPropertyToHclTerraform, true)(struct!.conditions),
       isBlock: true,
       type: "list",
       storageClassType: "AttachmentPoliciesConditionsPropertyList",
@@ -518,7 +518,7 @@ export function tfDataCoreNetworkPolicyDocumentAttachmentPoliciesPropertyToHclTe
 }
 
 
-export function tfDataCoreNetworkPolicyDocumentAttachmentRoutingPolicyRulesActionPropertyToTerraform(struct?: TfDataCoreNetworkPolicyDocument.AttachmentRoutingPolicyRulesActionPropertyOutputReference | TfDataCoreNetworkPolicyDocument.AttachmentRoutingPolicyRulesActionProperty): any {
+export function dataTfCoreNetworkPolicyDocumentAttachmentRoutingPolicyRulesActionPropertyToTerraform(struct?: DataTfCoreNetworkPolicyDocument.AttachmentRoutingPolicyRulesActionPropertyOutputReference | DataTfCoreNetworkPolicyDocument.AttachmentRoutingPolicyRulesActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -529,7 +529,7 @@ export function tfDataCoreNetworkPolicyDocumentAttachmentRoutingPolicyRulesActio
 }
 
 
-export function tfDataCoreNetworkPolicyDocumentAttachmentRoutingPolicyRulesActionPropertyToHclTerraform(struct?: TfDataCoreNetworkPolicyDocument.AttachmentRoutingPolicyRulesActionPropertyOutputReference | TfDataCoreNetworkPolicyDocument.AttachmentRoutingPolicyRulesActionProperty): any {
+export function dataTfCoreNetworkPolicyDocumentAttachmentRoutingPolicyRulesActionPropertyToHclTerraform(struct?: DataTfCoreNetworkPolicyDocument.AttachmentRoutingPolicyRulesActionPropertyOutputReference | DataTfCoreNetworkPolicyDocument.AttachmentRoutingPolicyRulesActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -548,7 +548,7 @@ export function tfDataCoreNetworkPolicyDocumentAttachmentRoutingPolicyRulesActio
 }
 
 
-export function tfDataCoreNetworkPolicyDocumentAttachmentRoutingPolicyRulesConditionsPropertyToTerraform(struct?: TfDataCoreNetworkPolicyDocument.AttachmentRoutingPolicyRulesConditionsProperty | cdktn.IResolvable): any {
+export function dataTfCoreNetworkPolicyDocumentAttachmentRoutingPolicyRulesConditionsPropertyToTerraform(struct?: DataTfCoreNetworkPolicyDocument.AttachmentRoutingPolicyRulesConditionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -560,7 +560,7 @@ export function tfDataCoreNetworkPolicyDocumentAttachmentRoutingPolicyRulesCondi
 }
 
 
-export function tfDataCoreNetworkPolicyDocumentAttachmentRoutingPolicyRulesConditionsPropertyToHclTerraform(struct?: TfDataCoreNetworkPolicyDocument.AttachmentRoutingPolicyRulesConditionsProperty | cdktn.IResolvable): any {
+export function dataTfCoreNetworkPolicyDocumentAttachmentRoutingPolicyRulesConditionsPropertyToHclTerraform(struct?: DataTfCoreNetworkPolicyDocument.AttachmentRoutingPolicyRulesConditionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -585,7 +585,7 @@ export function tfDataCoreNetworkPolicyDocumentAttachmentRoutingPolicyRulesCondi
 }
 
 
-export function tfDataCoreNetworkPolicyDocumentAttachmentRoutingPolicyRulesPropertyToTerraform(struct?: TfDataCoreNetworkPolicyDocument.AttachmentRoutingPolicyRulesProperty | cdktn.IResolvable): any {
+export function dataTfCoreNetworkPolicyDocumentAttachmentRoutingPolicyRulesPropertyToTerraform(struct?: DataTfCoreNetworkPolicyDocument.AttachmentRoutingPolicyRulesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -594,13 +594,13 @@ export function tfDataCoreNetworkPolicyDocumentAttachmentRoutingPolicyRulesPrope
     description: cdktn.stringToTerraform(struct!.description),
     edge_locations: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.edgeLocations),
     rule_number: cdktn.numberToTerraform(struct!.ruleNumber),
-    action: tfDataCoreNetworkPolicyDocumentAttachmentRoutingPolicyRulesActionPropertyToTerraform(struct!.action),
-    conditions: cdktn.listMapper(tfDataCoreNetworkPolicyDocumentAttachmentRoutingPolicyRulesConditionsPropertyToTerraform, true)(struct!.conditions),
+    action: dataTfCoreNetworkPolicyDocumentAttachmentRoutingPolicyRulesActionPropertyToTerraform(struct!.action),
+    conditions: cdktn.listMapper(dataTfCoreNetworkPolicyDocumentAttachmentRoutingPolicyRulesConditionsPropertyToTerraform, true)(struct!.conditions),
   }
 }
 
 
-export function tfDataCoreNetworkPolicyDocumentAttachmentRoutingPolicyRulesPropertyToHclTerraform(struct?: TfDataCoreNetworkPolicyDocument.AttachmentRoutingPolicyRulesProperty | cdktn.IResolvable): any {
+export function dataTfCoreNetworkPolicyDocumentAttachmentRoutingPolicyRulesPropertyToHclTerraform(struct?: DataTfCoreNetworkPolicyDocument.AttachmentRoutingPolicyRulesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -625,13 +625,13 @@ export function tfDataCoreNetworkPolicyDocumentAttachmentRoutingPolicyRulesPrope
       storageClassType: "number",
     },
     action: {
-      value: tfDataCoreNetworkPolicyDocumentAttachmentRoutingPolicyRulesActionPropertyToHclTerraform(struct!.action),
+      value: dataTfCoreNetworkPolicyDocumentAttachmentRoutingPolicyRulesActionPropertyToHclTerraform(struct!.action),
       isBlock: true,
       type: "list",
       storageClassType: "AttachmentRoutingPolicyRulesActionPropertyList",
     },
     conditions: {
-      value: cdktn.listMapperHcl(tfDataCoreNetworkPolicyDocumentAttachmentRoutingPolicyRulesConditionsPropertyToHclTerraform, true)(struct!.conditions),
+      value: cdktn.listMapperHcl(dataTfCoreNetworkPolicyDocumentAttachmentRoutingPolicyRulesConditionsPropertyToHclTerraform, true)(struct!.conditions),
       isBlock: true,
       type: "list",
       storageClassType: "AttachmentRoutingPolicyRulesConditionsPropertyList",
@@ -643,7 +643,7 @@ export function tfDataCoreNetworkPolicyDocumentAttachmentRoutingPolicyRulesPrope
 }
 
 
-export function tfDataCoreNetworkPolicyDocumentEdgeLocationsPropertyToTerraform(struct?: TfDataCoreNetworkPolicyDocument.EdgeLocationsProperty | cdktn.IResolvable): any {
+export function dataTfCoreNetworkPolicyDocumentEdgeLocationsPropertyToTerraform(struct?: DataTfCoreNetworkPolicyDocument.EdgeLocationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -656,7 +656,7 @@ export function tfDataCoreNetworkPolicyDocumentEdgeLocationsPropertyToTerraform(
 }
 
 
-export function tfDataCoreNetworkPolicyDocumentEdgeLocationsPropertyToHclTerraform(struct?: TfDataCoreNetworkPolicyDocument.EdgeLocationsProperty | cdktn.IResolvable): any {
+export function dataTfCoreNetworkPolicyDocumentEdgeLocationsPropertyToHclTerraform(struct?: DataTfCoreNetworkPolicyDocument.EdgeLocationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -687,7 +687,7 @@ export function tfDataCoreNetworkPolicyDocumentEdgeLocationsPropertyToHclTerrafo
 }
 
 
-export function tfDataCoreNetworkPolicyDocumentCoreNetworkConfigurationPropertyToTerraform(struct?: TfDataCoreNetworkPolicyDocument.CoreNetworkConfigurationProperty | cdktn.IResolvable): any {
+export function dataTfCoreNetworkPolicyDocumentCoreNetworkConfigurationPropertyToTerraform(struct?: DataTfCoreNetworkPolicyDocument.CoreNetworkConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -698,12 +698,12 @@ export function tfDataCoreNetworkPolicyDocumentCoreNetworkConfigurationPropertyT
     inside_cidr_blocks: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.insideCidrBlocks),
     security_group_referencing_support: cdktn.booleanToTerraform(struct!.securityGroupReferencingSupport),
     vpn_ecmp_support: cdktn.booleanToTerraform(struct!.vpnEcmpSupport),
-    edge_locations: cdktn.listMapper(tfDataCoreNetworkPolicyDocumentEdgeLocationsPropertyToTerraform, true)(struct!.edgeLocations),
+    edge_locations: cdktn.listMapper(dataTfCoreNetworkPolicyDocumentEdgeLocationsPropertyToTerraform, true)(struct!.edgeLocations),
   }
 }
 
 
-export function tfDataCoreNetworkPolicyDocumentCoreNetworkConfigurationPropertyToHclTerraform(struct?: TfDataCoreNetworkPolicyDocument.CoreNetworkConfigurationProperty | cdktn.IResolvable): any {
+export function dataTfCoreNetworkPolicyDocumentCoreNetworkConfigurationPropertyToHclTerraform(struct?: DataTfCoreNetworkPolicyDocument.CoreNetworkConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -740,7 +740,7 @@ export function tfDataCoreNetworkPolicyDocumentCoreNetworkConfigurationPropertyT
       storageClassType: "boolean",
     },
     edge_locations: {
-      value: cdktn.listMapperHcl(tfDataCoreNetworkPolicyDocumentEdgeLocationsPropertyToHclTerraform, true)(struct!.edgeLocations),
+      value: cdktn.listMapperHcl(dataTfCoreNetworkPolicyDocumentEdgeLocationsPropertyToHclTerraform, true)(struct!.edgeLocations),
       isBlock: true,
       type: "list",
       storageClassType: "EdgeLocationsPropertyList",
@@ -752,7 +752,7 @@ export function tfDataCoreNetworkPolicyDocumentCoreNetworkConfigurationPropertyT
 }
 
 
-export function tfDataCoreNetworkPolicyDocumentNetworkFunctionGroupsPropertyToTerraform(struct?: TfDataCoreNetworkPolicyDocument.NetworkFunctionGroupsProperty | cdktn.IResolvable): any {
+export function dataTfCoreNetworkPolicyDocumentNetworkFunctionGroupsPropertyToTerraform(struct?: DataTfCoreNetworkPolicyDocument.NetworkFunctionGroupsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -765,7 +765,7 @@ export function tfDataCoreNetworkPolicyDocumentNetworkFunctionGroupsPropertyToTe
 }
 
 
-export function tfDataCoreNetworkPolicyDocumentNetworkFunctionGroupsPropertyToHclTerraform(struct?: TfDataCoreNetworkPolicyDocument.NetworkFunctionGroupsProperty | cdktn.IResolvable): any {
+export function dataTfCoreNetworkPolicyDocumentNetworkFunctionGroupsPropertyToHclTerraform(struct?: DataTfCoreNetworkPolicyDocument.NetworkFunctionGroupsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -796,7 +796,7 @@ export function tfDataCoreNetworkPolicyDocumentNetworkFunctionGroupsPropertyToHc
 }
 
 
-export function tfDataCoreNetworkPolicyDocumentRoutingPoliciesRoutingPolicyRulesRuleDefinitionActionPropertyToTerraform(struct?: TfDataCoreNetworkPolicyDocument.RoutingPoliciesRoutingPolicyRulesRuleDefinitionActionPropertyOutputReference | TfDataCoreNetworkPolicyDocument.RoutingPoliciesRoutingPolicyRulesRuleDefinitionActionProperty): any {
+export function dataTfCoreNetworkPolicyDocumentRoutingPoliciesRoutingPolicyRulesRuleDefinitionActionPropertyToTerraform(struct?: DataTfCoreNetworkPolicyDocument.RoutingPoliciesRoutingPolicyRulesRuleDefinitionActionPropertyOutputReference | DataTfCoreNetworkPolicyDocument.RoutingPoliciesRoutingPolicyRulesRuleDefinitionActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -808,7 +808,7 @@ export function tfDataCoreNetworkPolicyDocumentRoutingPoliciesRoutingPolicyRules
 }
 
 
-export function tfDataCoreNetworkPolicyDocumentRoutingPoliciesRoutingPolicyRulesRuleDefinitionActionPropertyToHclTerraform(struct?: TfDataCoreNetworkPolicyDocument.RoutingPoliciesRoutingPolicyRulesRuleDefinitionActionPropertyOutputReference | TfDataCoreNetworkPolicyDocument.RoutingPoliciesRoutingPolicyRulesRuleDefinitionActionProperty): any {
+export function dataTfCoreNetworkPolicyDocumentRoutingPoliciesRoutingPolicyRulesRuleDefinitionActionPropertyToHclTerraform(struct?: DataTfCoreNetworkPolicyDocument.RoutingPoliciesRoutingPolicyRulesRuleDefinitionActionPropertyOutputReference | DataTfCoreNetworkPolicyDocument.RoutingPoliciesRoutingPolicyRulesRuleDefinitionActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -833,7 +833,7 @@ export function tfDataCoreNetworkPolicyDocumentRoutingPoliciesRoutingPolicyRules
 }
 
 
-export function tfDataCoreNetworkPolicyDocumentMatchConditionsPropertyToTerraform(struct?: TfDataCoreNetworkPolicyDocument.MatchConditionsProperty | cdktn.IResolvable): any {
+export function dataTfCoreNetworkPolicyDocumentMatchConditionsPropertyToTerraform(struct?: DataTfCoreNetworkPolicyDocument.MatchConditionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -845,7 +845,7 @@ export function tfDataCoreNetworkPolicyDocumentMatchConditionsPropertyToTerrafor
 }
 
 
-export function tfDataCoreNetworkPolicyDocumentMatchConditionsPropertyToHclTerraform(struct?: TfDataCoreNetworkPolicyDocument.MatchConditionsProperty | cdktn.IResolvable): any {
+export function dataTfCoreNetworkPolicyDocumentMatchConditionsPropertyToHclTerraform(struct?: DataTfCoreNetworkPolicyDocument.MatchConditionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -870,20 +870,20 @@ export function tfDataCoreNetworkPolicyDocumentMatchConditionsPropertyToHclTerra
 }
 
 
-export function tfDataCoreNetworkPolicyDocumentRuleDefinitionPropertyToTerraform(struct?: TfDataCoreNetworkPolicyDocument.RuleDefinitionPropertyOutputReference | TfDataCoreNetworkPolicyDocument.RuleDefinitionProperty): any {
+export function dataTfCoreNetworkPolicyDocumentRuleDefinitionPropertyToTerraform(struct?: DataTfCoreNetworkPolicyDocument.RuleDefinitionPropertyOutputReference | DataTfCoreNetworkPolicyDocument.RuleDefinitionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     condition_logic: cdktn.stringToTerraform(struct!.conditionLogic),
-    action: tfDataCoreNetworkPolicyDocumentRoutingPoliciesRoutingPolicyRulesRuleDefinitionActionPropertyToTerraform(struct!.action),
-    match_conditions: cdktn.listMapper(tfDataCoreNetworkPolicyDocumentMatchConditionsPropertyToTerraform, true)(struct!.matchConditions),
+    action: dataTfCoreNetworkPolicyDocumentRoutingPoliciesRoutingPolicyRulesRuleDefinitionActionPropertyToTerraform(struct!.action),
+    match_conditions: cdktn.listMapper(dataTfCoreNetworkPolicyDocumentMatchConditionsPropertyToTerraform, true)(struct!.matchConditions),
   }
 }
 
 
-export function tfDataCoreNetworkPolicyDocumentRuleDefinitionPropertyToHclTerraform(struct?: TfDataCoreNetworkPolicyDocument.RuleDefinitionPropertyOutputReference | TfDataCoreNetworkPolicyDocument.RuleDefinitionProperty): any {
+export function dataTfCoreNetworkPolicyDocumentRuleDefinitionPropertyToHclTerraform(struct?: DataTfCoreNetworkPolicyDocument.RuleDefinitionPropertyOutputReference | DataTfCoreNetworkPolicyDocument.RuleDefinitionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -896,13 +896,13 @@ export function tfDataCoreNetworkPolicyDocumentRuleDefinitionPropertyToHclTerraf
       storageClassType: "string",
     },
     action: {
-      value: tfDataCoreNetworkPolicyDocumentRoutingPoliciesRoutingPolicyRulesRuleDefinitionActionPropertyToHclTerraform(struct!.action),
+      value: dataTfCoreNetworkPolicyDocumentRoutingPoliciesRoutingPolicyRulesRuleDefinitionActionPropertyToHclTerraform(struct!.action),
       isBlock: true,
       type: "list",
       storageClassType: "RoutingPoliciesRoutingPolicyRulesRuleDefinitionActionPropertyList",
     },
     match_conditions: {
-      value: cdktn.listMapperHcl(tfDataCoreNetworkPolicyDocumentMatchConditionsPropertyToHclTerraform, true)(struct!.matchConditions),
+      value: cdktn.listMapperHcl(dataTfCoreNetworkPolicyDocumentMatchConditionsPropertyToHclTerraform, true)(struct!.matchConditions),
       isBlock: true,
       type: "list",
       storageClassType: "MatchConditionsPropertyList",
@@ -914,19 +914,19 @@ export function tfDataCoreNetworkPolicyDocumentRuleDefinitionPropertyToHclTerraf
 }
 
 
-export function tfDataCoreNetworkPolicyDocumentRoutingPolicyRulesPropertyToTerraform(struct?: TfDataCoreNetworkPolicyDocument.RoutingPolicyRulesProperty | cdktn.IResolvable): any {
+export function dataTfCoreNetworkPolicyDocumentRoutingPolicyRulesPropertyToTerraform(struct?: DataTfCoreNetworkPolicyDocument.RoutingPolicyRulesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     rule_number: cdktn.numberToTerraform(struct!.ruleNumber),
-    rule_definition: tfDataCoreNetworkPolicyDocumentRuleDefinitionPropertyToTerraform(struct!.ruleDefinition),
+    rule_definition: dataTfCoreNetworkPolicyDocumentRuleDefinitionPropertyToTerraform(struct!.ruleDefinition),
   }
 }
 
 
-export function tfDataCoreNetworkPolicyDocumentRoutingPolicyRulesPropertyToHclTerraform(struct?: TfDataCoreNetworkPolicyDocument.RoutingPolicyRulesProperty | cdktn.IResolvable): any {
+export function dataTfCoreNetworkPolicyDocumentRoutingPolicyRulesPropertyToHclTerraform(struct?: DataTfCoreNetworkPolicyDocument.RoutingPolicyRulesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -939,7 +939,7 @@ export function tfDataCoreNetworkPolicyDocumentRoutingPolicyRulesPropertyToHclTe
       storageClassType: "number",
     },
     rule_definition: {
-      value: tfDataCoreNetworkPolicyDocumentRuleDefinitionPropertyToHclTerraform(struct!.ruleDefinition),
+      value: dataTfCoreNetworkPolicyDocumentRuleDefinitionPropertyToHclTerraform(struct!.ruleDefinition),
       isBlock: true,
       type: "list",
       storageClassType: "RuleDefinitionPropertyList",
@@ -951,7 +951,7 @@ export function tfDataCoreNetworkPolicyDocumentRoutingPolicyRulesPropertyToHclTe
 }
 
 
-export function tfDataCoreNetworkPolicyDocumentRoutingPoliciesPropertyToTerraform(struct?: TfDataCoreNetworkPolicyDocument.RoutingPoliciesProperty | cdktn.IResolvable): any {
+export function dataTfCoreNetworkPolicyDocumentRoutingPoliciesPropertyToTerraform(struct?: DataTfCoreNetworkPolicyDocument.RoutingPoliciesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -961,12 +961,12 @@ export function tfDataCoreNetworkPolicyDocumentRoutingPoliciesPropertyToTerrafor
     routing_policy_direction: cdktn.stringToTerraform(struct!.routingPolicyDirection),
     routing_policy_name: cdktn.stringToTerraform(struct!.routingPolicyName),
     routing_policy_number: cdktn.numberToTerraform(struct!.routingPolicyNumber),
-    routing_policy_rules: cdktn.listMapper(tfDataCoreNetworkPolicyDocumentRoutingPolicyRulesPropertyToTerraform, true)(struct!.routingPolicyRules),
+    routing_policy_rules: cdktn.listMapper(dataTfCoreNetworkPolicyDocumentRoutingPolicyRulesPropertyToTerraform, true)(struct!.routingPolicyRules),
   }
 }
 
 
-export function tfDataCoreNetworkPolicyDocumentRoutingPoliciesPropertyToHclTerraform(struct?: TfDataCoreNetworkPolicyDocument.RoutingPoliciesProperty | cdktn.IResolvable): any {
+export function dataTfCoreNetworkPolicyDocumentRoutingPoliciesPropertyToHclTerraform(struct?: DataTfCoreNetworkPolicyDocument.RoutingPoliciesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -997,7 +997,7 @@ export function tfDataCoreNetworkPolicyDocumentRoutingPoliciesPropertyToHclTerra
       storageClassType: "number",
     },
     routing_policy_rules: {
-      value: cdktn.listMapperHcl(tfDataCoreNetworkPolicyDocumentRoutingPolicyRulesPropertyToHclTerraform, true)(struct!.routingPolicyRules),
+      value: cdktn.listMapperHcl(dataTfCoreNetworkPolicyDocumentRoutingPolicyRulesPropertyToHclTerraform, true)(struct!.routingPolicyRules),
       isBlock: true,
       type: "list",
       storageClassType: "RoutingPolicyRulesPropertyList",
@@ -1009,7 +1009,7 @@ export function tfDataCoreNetworkPolicyDocumentRoutingPoliciesPropertyToHclTerra
 }
 
 
-export function tfDataCoreNetworkPolicyDocumentEdgeLocationAssociationPropertyToTerraform(struct?: TfDataCoreNetworkPolicyDocument.EdgeLocationAssociationPropertyOutputReference | TfDataCoreNetworkPolicyDocument.EdgeLocationAssociationProperty): any {
+export function dataTfCoreNetworkPolicyDocumentEdgeLocationAssociationPropertyToTerraform(struct?: DataTfCoreNetworkPolicyDocument.EdgeLocationAssociationPropertyOutputReference | DataTfCoreNetworkPolicyDocument.EdgeLocationAssociationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1022,7 +1022,7 @@ export function tfDataCoreNetworkPolicyDocumentEdgeLocationAssociationPropertyTo
 }
 
 
-export function tfDataCoreNetworkPolicyDocumentEdgeLocationAssociationPropertyToHclTerraform(struct?: TfDataCoreNetworkPolicyDocument.EdgeLocationAssociationPropertyOutputReference | TfDataCoreNetworkPolicyDocument.EdgeLocationAssociationProperty): any {
+export function dataTfCoreNetworkPolicyDocumentEdgeLocationAssociationPropertyToHclTerraform(struct?: DataTfCoreNetworkPolicyDocument.EdgeLocationAssociationPropertyOutputReference | DataTfCoreNetworkPolicyDocument.EdgeLocationAssociationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1053,7 +1053,7 @@ export function tfDataCoreNetworkPolicyDocumentEdgeLocationAssociationPropertyTo
 }
 
 
-export function tfDataCoreNetworkPolicyDocumentWithEdgeOverridePropertyToTerraform(struct?: TfDataCoreNetworkPolicyDocument.WithEdgeOverrideProperty | cdktn.IResolvable): any {
+export function dataTfCoreNetworkPolicyDocumentWithEdgeOverridePropertyToTerraform(struct?: DataTfCoreNetworkPolicyDocument.WithEdgeOverrideProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1066,7 +1066,7 @@ export function tfDataCoreNetworkPolicyDocumentWithEdgeOverridePropertyToTerrafo
 }
 
 
-export function tfDataCoreNetworkPolicyDocumentWithEdgeOverridePropertyToHclTerraform(struct?: TfDataCoreNetworkPolicyDocument.WithEdgeOverrideProperty | cdktn.IResolvable): any {
+export function dataTfCoreNetworkPolicyDocumentWithEdgeOverridePropertyToHclTerraform(struct?: DataTfCoreNetworkPolicyDocument.WithEdgeOverrideProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1097,19 +1097,19 @@ export function tfDataCoreNetworkPolicyDocumentWithEdgeOverridePropertyToHclTerr
 }
 
 
-export function tfDataCoreNetworkPolicyDocumentViaPropertyToTerraform(struct?: TfDataCoreNetworkPolicyDocument.ViaPropertyOutputReference | TfDataCoreNetworkPolicyDocument.ViaProperty): any {
+export function dataTfCoreNetworkPolicyDocumentViaPropertyToTerraform(struct?: DataTfCoreNetworkPolicyDocument.ViaPropertyOutputReference | DataTfCoreNetworkPolicyDocument.ViaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     network_function_groups: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.networkFunctionGroups),
-    with_edge_override: cdktn.listMapper(tfDataCoreNetworkPolicyDocumentWithEdgeOverridePropertyToTerraform, true)(struct!.withEdgeOverride),
+    with_edge_override: cdktn.listMapper(dataTfCoreNetworkPolicyDocumentWithEdgeOverridePropertyToTerraform, true)(struct!.withEdgeOverride),
   }
 }
 
 
-export function tfDataCoreNetworkPolicyDocumentViaPropertyToHclTerraform(struct?: TfDataCoreNetworkPolicyDocument.ViaPropertyOutputReference | TfDataCoreNetworkPolicyDocument.ViaProperty): any {
+export function dataTfCoreNetworkPolicyDocumentViaPropertyToHclTerraform(struct?: DataTfCoreNetworkPolicyDocument.ViaPropertyOutputReference | DataTfCoreNetworkPolicyDocument.ViaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1122,7 +1122,7 @@ export function tfDataCoreNetworkPolicyDocumentViaPropertyToHclTerraform(struct?
       storageClassType: "stringList",
     },
     with_edge_override: {
-      value: cdktn.listMapperHcl(tfDataCoreNetworkPolicyDocumentWithEdgeOverridePropertyToHclTerraform, true)(struct!.withEdgeOverride),
+      value: cdktn.listMapperHcl(dataTfCoreNetworkPolicyDocumentWithEdgeOverridePropertyToHclTerraform, true)(struct!.withEdgeOverride),
       isBlock: true,
       type: "list",
       storageClassType: "WithEdgeOverridePropertyList",
@@ -1134,7 +1134,7 @@ export function tfDataCoreNetworkPolicyDocumentViaPropertyToHclTerraform(struct?
 }
 
 
-export function tfDataCoreNetworkPolicyDocumentWhenSentToPropertyToTerraform(struct?: TfDataCoreNetworkPolicyDocument.WhenSentToPropertyOutputReference | TfDataCoreNetworkPolicyDocument.WhenSentToProperty): any {
+export function dataTfCoreNetworkPolicyDocumentWhenSentToPropertyToTerraform(struct?: DataTfCoreNetworkPolicyDocument.WhenSentToPropertyOutputReference | DataTfCoreNetworkPolicyDocument.WhenSentToProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1145,7 +1145,7 @@ export function tfDataCoreNetworkPolicyDocumentWhenSentToPropertyToTerraform(str
 }
 
 
-export function tfDataCoreNetworkPolicyDocumentWhenSentToPropertyToHclTerraform(struct?: TfDataCoreNetworkPolicyDocument.WhenSentToPropertyOutputReference | TfDataCoreNetworkPolicyDocument.WhenSentToProperty): any {
+export function dataTfCoreNetworkPolicyDocumentWhenSentToPropertyToHclTerraform(struct?: DataTfCoreNetworkPolicyDocument.WhenSentToPropertyOutputReference | DataTfCoreNetworkPolicyDocument.WhenSentToProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1164,7 +1164,7 @@ export function tfDataCoreNetworkPolicyDocumentWhenSentToPropertyToHclTerraform(
 }
 
 
-export function tfDataCoreNetworkPolicyDocumentSegmentActionsPropertyToTerraform(struct?: TfDataCoreNetworkPolicyDocument.SegmentActionsProperty | cdktn.IResolvable): any {
+export function dataTfCoreNetworkPolicyDocumentSegmentActionsPropertyToTerraform(struct?: DataTfCoreNetworkPolicyDocument.SegmentActionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1179,14 +1179,14 @@ export function tfDataCoreNetworkPolicyDocumentSegmentActionsPropertyToTerraform
     segment: cdktn.stringToTerraform(struct!.segment),
     share_with: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.shareWith),
     share_with_except: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.shareWithExcept),
-    edge_location_association: tfDataCoreNetworkPolicyDocumentEdgeLocationAssociationPropertyToTerraform(struct!.edgeLocationAssociation),
-    via: tfDataCoreNetworkPolicyDocumentViaPropertyToTerraform(struct!.via),
-    when_sent_to: tfDataCoreNetworkPolicyDocumentWhenSentToPropertyToTerraform(struct!.whenSentTo),
+    edge_location_association: dataTfCoreNetworkPolicyDocumentEdgeLocationAssociationPropertyToTerraform(struct!.edgeLocationAssociation),
+    via: dataTfCoreNetworkPolicyDocumentViaPropertyToTerraform(struct!.via),
+    when_sent_to: dataTfCoreNetworkPolicyDocumentWhenSentToPropertyToTerraform(struct!.whenSentTo),
   }
 }
 
 
-export function tfDataCoreNetworkPolicyDocumentSegmentActionsPropertyToHclTerraform(struct?: TfDataCoreNetworkPolicyDocument.SegmentActionsProperty | cdktn.IResolvable): any {
+export function dataTfCoreNetworkPolicyDocumentSegmentActionsPropertyToHclTerraform(struct?: DataTfCoreNetworkPolicyDocument.SegmentActionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1247,19 +1247,19 @@ export function tfDataCoreNetworkPolicyDocumentSegmentActionsPropertyToHclTerraf
       storageClassType: "stringList",
     },
     edge_location_association: {
-      value: tfDataCoreNetworkPolicyDocumentEdgeLocationAssociationPropertyToHclTerraform(struct!.edgeLocationAssociation),
+      value: dataTfCoreNetworkPolicyDocumentEdgeLocationAssociationPropertyToHclTerraform(struct!.edgeLocationAssociation),
       isBlock: true,
       type: "list",
       storageClassType: "EdgeLocationAssociationPropertyList",
     },
     via: {
-      value: tfDataCoreNetworkPolicyDocumentViaPropertyToHclTerraform(struct!.via),
+      value: dataTfCoreNetworkPolicyDocumentViaPropertyToHclTerraform(struct!.via),
       isBlock: true,
       type: "list",
       storageClassType: "ViaPropertyList",
     },
     when_sent_to: {
-      value: tfDataCoreNetworkPolicyDocumentWhenSentToPropertyToHclTerraform(struct!.whenSentTo),
+      value: dataTfCoreNetworkPolicyDocumentWhenSentToPropertyToHclTerraform(struct!.whenSentTo),
       isBlock: true,
       type: "list",
       storageClassType: "WhenSentToPropertyList",
@@ -1271,7 +1271,7 @@ export function tfDataCoreNetworkPolicyDocumentSegmentActionsPropertyToHclTerraf
 }
 
 
-export function tfDataCoreNetworkPolicyDocumentSegmentsPropertyToTerraform(struct?: TfDataCoreNetworkPolicyDocument.SegmentsProperty | cdktn.IResolvable): any {
+export function dataTfCoreNetworkPolicyDocumentSegmentsPropertyToTerraform(struct?: DataTfCoreNetworkPolicyDocument.SegmentsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1288,7 +1288,7 @@ export function tfDataCoreNetworkPolicyDocumentSegmentsPropertyToTerraform(struc
 }
 
 
-export function tfDataCoreNetworkPolicyDocumentSegmentsPropertyToHclTerraform(struct?: TfDataCoreNetworkPolicyDocument.SegmentsProperty | cdktn.IResolvable): any {
+export function dataTfCoreNetworkPolicyDocumentSegmentsPropertyToHclTerraform(struct?: DataTfCoreNetworkPolicyDocument.SegmentsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1343,26 +1343,26 @@ export function tfDataCoreNetworkPolicyDocumentSegmentsPropertyToHclTerraform(st
 }
 
 
-export namespace TfDataCoreNetworkPolicyDocument {
+export namespace DataTfCoreNetworkPolicyDocument {
 export interface AttachmentPoliciesActionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#add_to_network_function_group TfDataCoreNetworkPolicyDocument#add_to_network_function_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#add_to_network_function_group DataTfCoreNetworkPolicyDocument#add_to_network_function_group}
   */
   readonly addToNetworkFunctionGroup?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#association_method TfDataCoreNetworkPolicyDocument#association_method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#association_method DataTfCoreNetworkPolicyDocument#association_method}
   */
   readonly associationMethod?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#require_acceptance TfDataCoreNetworkPolicyDocument#require_acceptance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#require_acceptance DataTfCoreNetworkPolicyDocument#require_acceptance}
   */
   readonly requireAcceptance?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#segment TfDataCoreNetworkPolicyDocument#segment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#segment DataTfCoreNetworkPolicyDocument#segment}
   */
   readonly segment?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#tag_value_of_key TfDataCoreNetworkPolicyDocument#tag_value_of_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#tag_value_of_key DataTfCoreNetworkPolicyDocument#tag_value_of_key}
   */
   readonly tagValueOfKey?: string;
 }
@@ -1504,19 +1504,19 @@ export class AttachmentPoliciesActionPropertyOutputReference extends cdktn.Compl
 }
 export interface AttachmentPoliciesConditionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#key TfDataCoreNetworkPolicyDocument#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#key DataTfCoreNetworkPolicyDocument#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#operator TfDataCoreNetworkPolicyDocument#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#operator DataTfCoreNetworkPolicyDocument#operator}
   */
   readonly operator?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#type TfDataCoreNetworkPolicyDocument#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#type DataTfCoreNetworkPolicyDocument#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#value TfDataCoreNetworkPolicyDocument#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#value DataTfCoreNetworkPolicyDocument#value}
   */
   readonly value?: string;
 }
@@ -1665,27 +1665,27 @@ export class AttachmentPoliciesConditionsPropertyList extends cdktn.ComplexList 
 }
 export interface AttachmentPoliciesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#condition_logic TfDataCoreNetworkPolicyDocument#condition_logic}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#condition_logic DataTfCoreNetworkPolicyDocument#condition_logic}
   */
   readonly conditionLogic?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#description TfDataCoreNetworkPolicyDocument#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#description DataTfCoreNetworkPolicyDocument#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#rule_number TfDataCoreNetworkPolicyDocument#rule_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#rule_number DataTfCoreNetworkPolicyDocument#rule_number}
   */
   readonly ruleNumber: number;
   /**
   * action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#action TfDataCoreNetworkPolicyDocument#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#action DataTfCoreNetworkPolicyDocument#action}
   */
   readonly action: AttachmentPoliciesActionProperty;
   /**
   * conditions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#conditions TfDataCoreNetworkPolicyDocument#conditions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#conditions DataTfCoreNetworkPolicyDocument#conditions}
   */
   readonly conditions: AttachmentPoliciesConditionsProperty[] | cdktn.IResolvable;
 }
@@ -1850,7 +1850,7 @@ export class AttachmentPoliciesPropertyList extends cdktn.ComplexList {
 }
 export interface AttachmentRoutingPolicyRulesActionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#associate_routing_policies TfDataCoreNetworkPolicyDocument#associate_routing_policies}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#associate_routing_policies DataTfCoreNetworkPolicyDocument#associate_routing_policies}
   */
   readonly associateRoutingPolicies: string[];
 }
@@ -1901,11 +1901,11 @@ export class AttachmentRoutingPolicyRulesActionPropertyOutputReference extends c
 }
 export interface AttachmentRoutingPolicyRulesConditionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#type TfDataCoreNetworkPolicyDocument#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#type DataTfCoreNetworkPolicyDocument#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#value TfDataCoreNetworkPolicyDocument#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#value DataTfCoreNetworkPolicyDocument#value}
   */
   readonly value: string;
 }
@@ -2007,27 +2007,27 @@ export class AttachmentRoutingPolicyRulesConditionsPropertyList extends cdktn.Co
 }
 export interface AttachmentRoutingPolicyRulesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#description TfDataCoreNetworkPolicyDocument#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#description DataTfCoreNetworkPolicyDocument#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#edge_locations TfDataCoreNetworkPolicyDocument#edge_locations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#edge_locations DataTfCoreNetworkPolicyDocument#edge_locations}
   */
   readonly edgeLocations?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#rule_number TfDataCoreNetworkPolicyDocument#rule_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#rule_number DataTfCoreNetworkPolicyDocument#rule_number}
   */
   readonly ruleNumber: number;
   /**
   * action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#action TfDataCoreNetworkPolicyDocument#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#action DataTfCoreNetworkPolicyDocument#action}
   */
   readonly action: AttachmentRoutingPolicyRulesActionProperty;
   /**
   * conditions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#conditions TfDataCoreNetworkPolicyDocument#conditions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#conditions DataTfCoreNetworkPolicyDocument#conditions}
   */
   readonly conditions: AttachmentRoutingPolicyRulesConditionsProperty[] | cdktn.IResolvable;
 }
@@ -2192,15 +2192,15 @@ export class AttachmentRoutingPolicyRulesPropertyList extends cdktn.ComplexList 
 }
 export interface EdgeLocationsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#asn TfDataCoreNetworkPolicyDocument#asn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#asn DataTfCoreNetworkPolicyDocument#asn}
   */
   readonly asn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#inside_cidr_blocks TfDataCoreNetworkPolicyDocument#inside_cidr_blocks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#inside_cidr_blocks DataTfCoreNetworkPolicyDocument#inside_cidr_blocks}
   */
   readonly insideCidrBlocks?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#location TfDataCoreNetworkPolicyDocument#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#location DataTfCoreNetworkPolicyDocument#location}
   */
   readonly location: string;
 }
@@ -2327,29 +2327,29 @@ export class EdgeLocationsPropertyList extends cdktn.ComplexList {
 }
 export interface CoreNetworkConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#asn_ranges TfDataCoreNetworkPolicyDocument#asn_ranges}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#asn_ranges DataTfCoreNetworkPolicyDocument#asn_ranges}
   */
   readonly asnRanges: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#dns_support TfDataCoreNetworkPolicyDocument#dns_support}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#dns_support DataTfCoreNetworkPolicyDocument#dns_support}
   */
   readonly dnsSupport?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#inside_cidr_blocks TfDataCoreNetworkPolicyDocument#inside_cidr_blocks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#inside_cidr_blocks DataTfCoreNetworkPolicyDocument#inside_cidr_blocks}
   */
   readonly insideCidrBlocks?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#security_group_referencing_support TfDataCoreNetworkPolicyDocument#security_group_referencing_support}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#security_group_referencing_support DataTfCoreNetworkPolicyDocument#security_group_referencing_support}
   */
   readonly securityGroupReferencingSupport?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#vpn_ecmp_support TfDataCoreNetworkPolicyDocument#vpn_ecmp_support}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#vpn_ecmp_support DataTfCoreNetworkPolicyDocument#vpn_ecmp_support}
   */
   readonly vpnEcmpSupport?: boolean | cdktn.IResolvable;
   /**
   * edge_locations block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#edge_locations TfDataCoreNetworkPolicyDocument#edge_locations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#edge_locations DataTfCoreNetworkPolicyDocument#edge_locations}
   */
   readonly edgeLocations: EdgeLocationsProperty[] | cdktn.IResolvable;
 }
@@ -2539,15 +2539,15 @@ export class CoreNetworkConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface NetworkFunctionGroupsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#description TfDataCoreNetworkPolicyDocument#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#description DataTfCoreNetworkPolicyDocument#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#name TfDataCoreNetworkPolicyDocument#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#name DataTfCoreNetworkPolicyDocument#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#require_attachment_acceptance TfDataCoreNetworkPolicyDocument#require_attachment_acceptance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#require_attachment_acceptance DataTfCoreNetworkPolicyDocument#require_attachment_acceptance}
   */
   readonly requireAttachmentAcceptance: boolean | cdktn.IResolvable;
 }
@@ -2671,11 +2671,11 @@ export class NetworkFunctionGroupsPropertyList extends cdktn.ComplexList {
 }
 export interface RoutingPoliciesRoutingPolicyRulesRuleDefinitionActionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#type TfDataCoreNetworkPolicyDocument#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#type DataTfCoreNetworkPolicyDocument#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#value TfDataCoreNetworkPolicyDocument#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#value DataTfCoreNetworkPolicyDocument#value}
   */
   readonly value?: string;
 }
@@ -2748,11 +2748,11 @@ export class RoutingPoliciesRoutingPolicyRulesRuleDefinitionActionPropertyOutput
 }
 export interface MatchConditionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#type TfDataCoreNetworkPolicyDocument#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#type DataTfCoreNetworkPolicyDocument#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#value TfDataCoreNetworkPolicyDocument#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#value DataTfCoreNetworkPolicyDocument#value}
   */
   readonly value: string;
 }
@@ -2854,19 +2854,19 @@ export class MatchConditionsPropertyList extends cdktn.ComplexList {
 }
 export interface RuleDefinitionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#condition_logic TfDataCoreNetworkPolicyDocument#condition_logic}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#condition_logic DataTfCoreNetworkPolicyDocument#condition_logic}
   */
   readonly conditionLogic?: string;
   /**
   * action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#action TfDataCoreNetworkPolicyDocument#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#action DataTfCoreNetworkPolicyDocument#action}
   */
   readonly action: RoutingPoliciesRoutingPolicyRulesRuleDefinitionActionProperty;
   /**
   * match_conditions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#match_conditions TfDataCoreNetworkPolicyDocument#match_conditions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#match_conditions DataTfCoreNetworkPolicyDocument#match_conditions}
   */
   readonly matchConditions?: MatchConditionsProperty[] | cdktn.IResolvable;
 }
@@ -2961,13 +2961,13 @@ export class RuleDefinitionPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface RoutingPolicyRulesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#rule_number TfDataCoreNetworkPolicyDocument#rule_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#rule_number DataTfCoreNetworkPolicyDocument#rule_number}
   */
   readonly ruleNumber: number;
   /**
   * rule_definition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#rule_definition TfDataCoreNetworkPolicyDocument#rule_definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#rule_definition DataTfCoreNetworkPolicyDocument#rule_definition}
   */
   readonly ruleDefinition: RuleDefinitionProperty;
 }
@@ -3069,25 +3069,25 @@ export class RoutingPolicyRulesPropertyList extends cdktn.ComplexList {
 }
 export interface RoutingPoliciesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#routing_policy_description TfDataCoreNetworkPolicyDocument#routing_policy_description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#routing_policy_description DataTfCoreNetworkPolicyDocument#routing_policy_description}
   */
   readonly routingPolicyDescription?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#routing_policy_direction TfDataCoreNetworkPolicyDocument#routing_policy_direction}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#routing_policy_direction DataTfCoreNetworkPolicyDocument#routing_policy_direction}
   */
   readonly routingPolicyDirection: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#routing_policy_name TfDataCoreNetworkPolicyDocument#routing_policy_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#routing_policy_name DataTfCoreNetworkPolicyDocument#routing_policy_name}
   */
   readonly routingPolicyName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#routing_policy_number TfDataCoreNetworkPolicyDocument#routing_policy_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#routing_policy_number DataTfCoreNetworkPolicyDocument#routing_policy_number}
   */
   readonly routingPolicyNumber: number;
   /**
   * routing_policy_rules block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#routing_policy_rules TfDataCoreNetworkPolicyDocument#routing_policy_rules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#routing_policy_rules DataTfCoreNetworkPolicyDocument#routing_policy_rules}
   */
   readonly routingPolicyRules: RoutingPolicyRulesProperty[] | cdktn.IResolvable;
 }
@@ -3249,15 +3249,15 @@ export class RoutingPoliciesPropertyList extends cdktn.ComplexList {
 }
 export interface EdgeLocationAssociationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#edge_location TfDataCoreNetworkPolicyDocument#edge_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#edge_location DataTfCoreNetworkPolicyDocument#edge_location}
   */
   readonly edgeLocation: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#peer_edge_location TfDataCoreNetworkPolicyDocument#peer_edge_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#peer_edge_location DataTfCoreNetworkPolicyDocument#peer_edge_location}
   */
   readonly peerEdgeLocation: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#routing_policy_names TfDataCoreNetworkPolicyDocument#routing_policy_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#routing_policy_names DataTfCoreNetworkPolicyDocument#routing_policy_names}
   */
   readonly routingPolicyNames: string[];
 }
@@ -3346,15 +3346,15 @@ export class EdgeLocationAssociationPropertyOutputReference extends cdktn.Comple
 }
 export interface WithEdgeOverrideProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#edge_sets TfDataCoreNetworkPolicyDocument#edge_sets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#edge_sets DataTfCoreNetworkPolicyDocument#edge_sets}
   */
   readonly edgeSets?: string[][] | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#use_edge TfDataCoreNetworkPolicyDocument#use_edge}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#use_edge DataTfCoreNetworkPolicyDocument#use_edge}
   */
   readonly useEdge?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#use_edge_location TfDataCoreNetworkPolicyDocument#use_edge_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#use_edge_location DataTfCoreNetworkPolicyDocument#use_edge_location}
   */
   readonly useEdgeLocation?: string;
 }
@@ -3484,13 +3484,13 @@ export class WithEdgeOverridePropertyList extends cdktn.ComplexList {
 }
 export interface ViaProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#network_function_groups TfDataCoreNetworkPolicyDocument#network_function_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#network_function_groups DataTfCoreNetworkPolicyDocument#network_function_groups}
   */
   readonly networkFunctionGroups?: string[];
   /**
   * with_edge_override block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#with_edge_override TfDataCoreNetworkPolicyDocument#with_edge_override}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#with_edge_override DataTfCoreNetworkPolicyDocument#with_edge_override}
   */
   readonly withEdgeOverride?: WithEdgeOverrideProperty[] | cdktn.IResolvable;
 }
@@ -3566,7 +3566,7 @@ export class ViaPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface WhenSentToProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#segments TfDataCoreNetworkPolicyDocument#segments}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#segments DataTfCoreNetworkPolicyDocument#segments}
   */
   readonly segments?: string[];
 }
@@ -3620,57 +3620,57 @@ export class WhenSentToPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SegmentActionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#action TfDataCoreNetworkPolicyDocument#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#action DataTfCoreNetworkPolicyDocument#action}
   */
   readonly action: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#description TfDataCoreNetworkPolicyDocument#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#description DataTfCoreNetworkPolicyDocument#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#destination_cidr_blocks TfDataCoreNetworkPolicyDocument#destination_cidr_blocks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#destination_cidr_blocks DataTfCoreNetworkPolicyDocument#destination_cidr_blocks}
   */
   readonly destinationCidrBlocks?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#destinations TfDataCoreNetworkPolicyDocument#destinations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#destinations DataTfCoreNetworkPolicyDocument#destinations}
   */
   readonly destinations?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#mode TfDataCoreNetworkPolicyDocument#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#mode DataTfCoreNetworkPolicyDocument#mode}
   */
   readonly mode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#routing_policy_names TfDataCoreNetworkPolicyDocument#routing_policy_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#routing_policy_names DataTfCoreNetworkPolicyDocument#routing_policy_names}
   */
   readonly routingPolicyNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#segment TfDataCoreNetworkPolicyDocument#segment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#segment DataTfCoreNetworkPolicyDocument#segment}
   */
   readonly segment: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#share_with TfDataCoreNetworkPolicyDocument#share_with}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#share_with DataTfCoreNetworkPolicyDocument#share_with}
   */
   readonly shareWith?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#share_with_except TfDataCoreNetworkPolicyDocument#share_with_except}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#share_with_except DataTfCoreNetworkPolicyDocument#share_with_except}
   */
   readonly shareWithExcept?: string[];
   /**
   * edge_location_association block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#edge_location_association TfDataCoreNetworkPolicyDocument#edge_location_association}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#edge_location_association DataTfCoreNetworkPolicyDocument#edge_location_association}
   */
   readonly edgeLocationAssociation?: EdgeLocationAssociationProperty;
   /**
   * via block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#via TfDataCoreNetworkPolicyDocument#via}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#via DataTfCoreNetworkPolicyDocument#via}
   */
   readonly via?: ViaProperty;
   /**
   * when_sent_to block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#when_sent_to TfDataCoreNetworkPolicyDocument#when_sent_to}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#when_sent_to DataTfCoreNetworkPolicyDocument#when_sent_to}
   */
   readonly whenSentTo?: WhenSentToProperty;
 }
@@ -3992,31 +3992,31 @@ export class SegmentActionsPropertyList extends cdktn.ComplexList {
 }
 export interface SegmentsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#allow_filter TfDataCoreNetworkPolicyDocument#allow_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#allow_filter DataTfCoreNetworkPolicyDocument#allow_filter}
   */
   readonly allowFilter?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#deny_filter TfDataCoreNetworkPolicyDocument#deny_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#deny_filter DataTfCoreNetworkPolicyDocument#deny_filter}
   */
   readonly denyFilter?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#description TfDataCoreNetworkPolicyDocument#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#description DataTfCoreNetworkPolicyDocument#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#edge_locations TfDataCoreNetworkPolicyDocument#edge_locations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#edge_locations DataTfCoreNetworkPolicyDocument#edge_locations}
   */
   readonly edgeLocations?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#isolate_attachments TfDataCoreNetworkPolicyDocument#isolate_attachments}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#isolate_attachments DataTfCoreNetworkPolicyDocument#isolate_attachments}
   */
   readonly isolateAttachments?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#name TfDataCoreNetworkPolicyDocument#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#name DataTfCoreNetworkPolicyDocument#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#require_attachment_acceptance TfDataCoreNetworkPolicyDocument#require_attachment_acceptance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network_policy_document#require_attachment_acceptance DataTfCoreNetworkPolicyDocument#require_attachment_acceptance}
   */
   readonly requireAttachmentAcceptance?: boolean | cdktn.IResolvable;
 }

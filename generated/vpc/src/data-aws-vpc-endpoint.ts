@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataEndpointConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfEndpointConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint#id TfDataEndpoint#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint#id DataTfEndpoint#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,51 +16,51 @@ export interface TfDataEndpointConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint#region TfDataEndpoint#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint#region DataTfEndpoint#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint#service_name TfDataEndpoint#service_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint#service_name DataTfEndpoint#service_name}
   */
   readonly serviceName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint#service_region TfDataEndpoint#service_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint#service_region DataTfEndpoint#service_region}
   */
   readonly serviceRegion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint#state TfDataEndpoint#state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint#state DataTfEndpoint#state}
   */
   readonly state?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint#tags TfDataEndpoint#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint#tags DataTfEndpoint#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint#vpc_endpoint_type TfDataEndpoint#vpc_endpoint_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint#vpc_endpoint_type DataTfEndpoint#vpc_endpoint_type}
   */
   readonly vpcEndpointType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint#vpc_id TfDataEndpoint#vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint#vpc_id DataTfEndpoint#vpc_id}
   */
   readonly vpcId?: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint#filter TfDataEndpoint#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint#filter DataTfEndpoint#filter}
   */
-  readonly filter?: TfDataEndpoint.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataTfEndpoint.FilterProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint#timeouts TfDataEndpoint#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint#timeouts DataTfEndpoint#timeouts}
   */
-  readonly timeouts?: TfDataEndpoint.TimeoutsProperty;
+  readonly timeouts?: DataTfEndpoint.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint aws_vpc_endpoint}
 */
-export class TfDataEndpoint extends cdktn.TerraformDataSource {
+export class DataTfEndpoint extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -71,11 +71,11 @@ export class TfDataEndpoint extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataEndpoint resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfEndpoint resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataEndpoint to import
-  * @param importFromId The id of the existing TfDataEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataEndpoint to import is found
+  * @param importToId The construct id used in the generated config for the DataTfEndpoint to import
+  * @param importFromId The id of the existing DataTfEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfEndpoint to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpc_endpoint", importId: importFromId, provider });
@@ -90,9 +90,9 @@ export class TfDataEndpoint extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataEndpointConfig = {}
+  * @param options DataTfEndpointConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataEndpointConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfEndpointConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_vpc_endpoint',
       terraformGeneratorMetadata: {
@@ -135,13 +135,13 @@ export class TfDataEndpoint extends cdktn.TerraformDataSource {
   }
 
   // dns_entry - computed: true, optional: false, required: false
-  private _dnsEntry = new TfDataEndpoint.DnsEntryPropertyList(this, "dns_entry", false);
+  private _dnsEntry = new DataTfEndpoint.DnsEntryPropertyList(this, "dns_entry", false);
   public get dnsEntry() {
     return this._dnsEntry;
   }
 
   // dns_options - computed: true, optional: false, required: false
-  private _dnsOptions = new TfDataEndpoint.DnsOptionsPropertyList(this, "dns_options", false);
+  private _dnsOptions = new DataTfEndpoint.DnsOptionsPropertyList(this, "dns_options", false);
   public get dnsOptions() {
     return this._dnsOptions;
   }
@@ -325,11 +325,11 @@ export class TfDataEndpoint extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new TfDataEndpoint.FilterPropertyList(this, "filter", true);
+  private _filter = new DataTfEndpoint.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: TfDataEndpoint.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataTfEndpoint.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -341,11 +341,11 @@ export class TfDataEndpoint extends cdktn.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfDataEndpoint.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new DataTfEndpoint.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfDataEndpoint.TimeoutsProperty) {
+  public putTimeouts(value: DataTfEndpoint.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -370,8 +370,8 @@ export class TfDataEndpoint extends cdktn.TerraformDataSource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       vpc_endpoint_type: cdktn.stringToTerraform(this._vpcEndpointType),
       vpc_id: cdktn.stringToTerraform(this._vpcId),
-      filter: cdktn.listMapper(tfDataEndpointFilterPropertyToTerraform, true)(this._filter.internalValue),
-      timeouts: tfDataEndpointTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      filter: cdktn.listMapper(dataTfEndpointFilterPropertyToTerraform, true)(this._filter.internalValue),
+      timeouts: dataTfEndpointTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -426,16 +426,16 @@ export class TfDataEndpoint extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       filter: {
-        value: cdktn.listMapperHcl(tfDataEndpointFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataTfEndpointFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfDataEndpoint.FilterPropertyList",
+        storageClassType: "DataTfEndpoint.FilterPropertyList",
       },
       timeouts: {
-        value: tfDataEndpointTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: dataTfEndpointTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfDataEndpoint.TimeoutsProperty",
+        storageClassType: "DataTfEndpoint.TimeoutsProperty",
       },
     };
 
@@ -444,7 +444,7 @@ export class TfDataEndpoint extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataEndpointDnsEntryPropertyToTerraform(struct?: TfDataEndpoint.DnsEntryProperty): any {
+export function dataTfEndpointDnsEntryPropertyToTerraform(struct?: DataTfEndpoint.DnsEntryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -454,7 +454,7 @@ export function tfDataEndpointDnsEntryPropertyToTerraform(struct?: TfDataEndpoin
 }
 
 
-export function tfDataEndpointDnsEntryPropertyToHclTerraform(struct?: TfDataEndpoint.DnsEntryProperty): any {
+export function dataTfEndpointDnsEntryPropertyToHclTerraform(struct?: DataTfEndpoint.DnsEntryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -465,7 +465,7 @@ export function tfDataEndpointDnsEntryPropertyToHclTerraform(struct?: TfDataEndp
 }
 
 
-export function tfDataEndpointDnsOptionsPropertyToTerraform(struct?: TfDataEndpoint.DnsOptionsProperty): any {
+export function dataTfEndpointDnsOptionsPropertyToTerraform(struct?: DataTfEndpoint.DnsOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -475,7 +475,7 @@ export function tfDataEndpointDnsOptionsPropertyToTerraform(struct?: TfDataEndpo
 }
 
 
-export function tfDataEndpointDnsOptionsPropertyToHclTerraform(struct?: TfDataEndpoint.DnsOptionsProperty): any {
+export function dataTfEndpointDnsOptionsPropertyToHclTerraform(struct?: DataTfEndpoint.DnsOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -486,7 +486,7 @@ export function tfDataEndpointDnsOptionsPropertyToHclTerraform(struct?: TfDataEn
 }
 
 
-export function tfDataEndpointFilterPropertyToTerraform(struct?: TfDataEndpoint.FilterProperty | cdktn.IResolvable): any {
+export function dataTfEndpointFilterPropertyToTerraform(struct?: DataTfEndpoint.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -498,7 +498,7 @@ export function tfDataEndpointFilterPropertyToTerraform(struct?: TfDataEndpoint.
 }
 
 
-export function tfDataEndpointFilterPropertyToHclTerraform(struct?: TfDataEndpoint.FilterProperty | cdktn.IResolvable): any {
+export function dataTfEndpointFilterPropertyToHclTerraform(struct?: DataTfEndpoint.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -523,7 +523,7 @@ export function tfDataEndpointFilterPropertyToHclTerraform(struct?: TfDataEndpoi
 }
 
 
-export function tfDataEndpointTimeoutsPropertyToTerraform(struct?: TfDataEndpoint.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfEndpointTimeoutsPropertyToTerraform(struct?: DataTfEndpoint.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -534,7 +534,7 @@ export function tfDataEndpointTimeoutsPropertyToTerraform(struct?: TfDataEndpoin
 }
 
 
-export function tfDataEndpointTimeoutsPropertyToHclTerraform(struct?: TfDataEndpoint.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfEndpointTimeoutsPropertyToHclTerraform(struct?: DataTfEndpoint.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -553,7 +553,7 @@ export function tfDataEndpointTimeoutsPropertyToHclTerraform(struct?: TfDataEndp
 }
 
 
-export namespace TfDataEndpoint {
+export namespace DataTfEndpoint {
 export interface DnsEntryProperty {
 }
 export class DnsEntryPropertyOutputReference extends cdktn.ComplexObject {
@@ -684,11 +684,11 @@ export class DnsOptionsPropertyList extends cdktn.ComplexList {
 }
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint#name TfDataEndpoint#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint#name DataTfEndpoint#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint#values TfDataEndpoint#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint#values DataTfEndpoint#values}
   */
   readonly values: string[];
 }
@@ -790,7 +790,7 @@ export class FilterPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint#read TfDataEndpoint#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint#read DataTfEndpoint#read}
   */
   readonly read?: string;
 }

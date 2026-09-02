@@ -5,36 +5,36 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataInstanceTypeConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfInstanceTypeConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_instance_type#id TfDataInstanceType#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_instance_type#id DataTfInstanceType#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_instance_type#instance_type TfDataInstanceType#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_instance_type#instance_type DataTfInstanceType#instance_type}
   */
   readonly instanceType: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_instance_type#region TfDataInstanceType#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_instance_type#region DataTfInstanceType#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_instance_type#timeouts TfDataInstanceType#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_instance_type#timeouts DataTfInstanceType#timeouts}
   */
-  readonly timeouts?: TfDataInstanceType.TimeoutsProperty;
+  readonly timeouts?: DataTfInstanceType.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_instance_type aws_ec2_instance_type}
 */
-export class TfDataInstanceType extends cdktn.TerraformDataSource {
+export class DataTfInstanceType extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class TfDataInstanceType extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataInstanceType resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfInstanceType resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataInstanceType to import
-  * @param importFromId The id of the existing TfDataInstanceType that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_instance_type#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataInstanceType to import is found
+  * @param importToId The construct id used in the generated config for the DataTfInstanceType to import
+  * @param importFromId The id of the existing DataTfInstanceType that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_instance_type#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfInstanceType to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_instance_type", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class TfDataInstanceType extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataInstanceTypeConfig
+  * @param options DataTfInstanceTypeConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataInstanceTypeConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfInstanceTypeConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_instance_type',
       terraformGeneratorMetadata: {
@@ -218,7 +218,7 @@ export class TfDataInstanceType extends cdktn.TerraformDataSource {
   }
 
   // fpgas - computed: true, optional: false, required: false
-  private _fpgas = new TfDataInstanceType.FpgasPropertyList(this, "fpgas", true);
+  private _fpgas = new DataTfInstanceType.FpgasPropertyList(this, "fpgas", true);
   public get fpgas() {
     return this._fpgas;
   }
@@ -229,7 +229,7 @@ export class TfDataInstanceType extends cdktn.TerraformDataSource {
   }
 
   // gpus - computed: true, optional: false, required: false
-  private _gpus = new TfDataInstanceType.GpusPropertyList(this, "gpus", true);
+  private _gpus = new DataTfInstanceType.GpusPropertyList(this, "gpus", true);
   public get gpus() {
     return this._gpus;
   }
@@ -261,13 +261,13 @@ export class TfDataInstanceType extends cdktn.TerraformDataSource {
   }
 
   // inference_accelerators - computed: true, optional: false, required: false
-  private _inferenceAccelerators = new TfDataInstanceType.InferenceAcceleratorsPropertyList(this, "inference_accelerators", true);
+  private _inferenceAccelerators = new DataTfInstanceType.InferenceAcceleratorsPropertyList(this, "inference_accelerators", true);
   public get inferenceAccelerators() {
     return this._inferenceAccelerators;
   }
 
   // instance_disks - computed: true, optional: false, required: false
-  private _instanceDisks = new TfDataInstanceType.InstanceDisksPropertyList(this, "instance_disks", true);
+  private _instanceDisks = new DataTfInstanceType.InstanceDisksPropertyList(this, "instance_disks", true);
   public get instanceDisks() {
     return this._instanceDisks;
   }
@@ -316,7 +316,7 @@ export class TfDataInstanceType extends cdktn.TerraformDataSource {
   }
 
   // media_accelerators - computed: true, optional: false, required: false
-  private _mediaAccelerators = new TfDataInstanceType.MediaAcceleratorsPropertyList(this, "media_accelerators", true);
+  private _mediaAccelerators = new DataTfInstanceType.MediaAcceleratorsPropertyList(this, "media_accelerators", true);
   public get mediaAccelerators() {
     return this._mediaAccelerators;
   }
@@ -327,7 +327,7 @@ export class TfDataInstanceType extends cdktn.TerraformDataSource {
   }
 
   // network_cards - computed: true, optional: false, required: false
-  private _networkCards = new TfDataInstanceType.NetworkCardsPropertyList(this, "network_cards", true);
+  private _networkCards = new DataTfInstanceType.NetworkCardsPropertyList(this, "network_cards", true);
   public get networkCards() {
     return this._networkCards;
   }
@@ -338,7 +338,7 @@ export class TfDataInstanceType extends cdktn.TerraformDataSource {
   }
 
   // neuron_devices - computed: true, optional: false, required: false
-  private _neuronDevices = new TfDataInstanceType.NeuronDevicesPropertyList(this, "neuron_devices", true);
+  private _neuronDevices = new DataTfInstanceType.NeuronDevicesPropertyList(this, "neuron_devices", true);
   public get neuronDevices() {
     return this._neuronDevices;
   }
@@ -455,11 +455,11 @@ export class TfDataInstanceType extends cdktn.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfDataInstanceType.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new DataTfInstanceType.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfDataInstanceType.TimeoutsProperty) {
+  public putTimeouts(value: DataTfInstanceType.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -479,7 +479,7 @@ export class TfDataInstanceType extends cdktn.TerraformDataSource {
       id: cdktn.stringToTerraform(this._id),
       instance_type: cdktn.stringToTerraform(this._instanceType),
       region: cdktn.stringToTerraform(this._region),
-      timeouts: tfDataInstanceTypeTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: dataTfInstanceTypeTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -504,10 +504,10 @@ export class TfDataInstanceType extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfDataInstanceTypeTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: dataTfInstanceTypeTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfDataInstanceType.TimeoutsProperty",
+        storageClassType: "DataTfInstanceType.TimeoutsProperty",
       },
     };
 
@@ -516,7 +516,7 @@ export class TfDataInstanceType extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataInstanceTypeFpgasPropertyToTerraform(struct?: TfDataInstanceType.FpgasProperty): any {
+export function dataTfInstanceTypeFpgasPropertyToTerraform(struct?: DataTfInstanceType.FpgasProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -526,7 +526,7 @@ export function tfDataInstanceTypeFpgasPropertyToTerraform(struct?: TfDataInstan
 }
 
 
-export function tfDataInstanceTypeFpgasPropertyToHclTerraform(struct?: TfDataInstanceType.FpgasProperty): any {
+export function dataTfInstanceTypeFpgasPropertyToHclTerraform(struct?: DataTfInstanceType.FpgasProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -537,7 +537,7 @@ export function tfDataInstanceTypeFpgasPropertyToHclTerraform(struct?: TfDataIns
 }
 
 
-export function tfDataInstanceTypeGpusPropertyToTerraform(struct?: TfDataInstanceType.GpusProperty): any {
+export function dataTfInstanceTypeGpusPropertyToTerraform(struct?: DataTfInstanceType.GpusProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -547,7 +547,7 @@ export function tfDataInstanceTypeGpusPropertyToTerraform(struct?: TfDataInstanc
 }
 
 
-export function tfDataInstanceTypeGpusPropertyToHclTerraform(struct?: TfDataInstanceType.GpusProperty): any {
+export function dataTfInstanceTypeGpusPropertyToHclTerraform(struct?: DataTfInstanceType.GpusProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -558,7 +558,7 @@ export function tfDataInstanceTypeGpusPropertyToHclTerraform(struct?: TfDataInst
 }
 
 
-export function tfDataInstanceTypeInferenceAcceleratorsPropertyToTerraform(struct?: TfDataInstanceType.InferenceAcceleratorsProperty): any {
+export function dataTfInstanceTypeInferenceAcceleratorsPropertyToTerraform(struct?: DataTfInstanceType.InferenceAcceleratorsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -568,7 +568,7 @@ export function tfDataInstanceTypeInferenceAcceleratorsPropertyToTerraform(struc
 }
 
 
-export function tfDataInstanceTypeInferenceAcceleratorsPropertyToHclTerraform(struct?: TfDataInstanceType.InferenceAcceleratorsProperty): any {
+export function dataTfInstanceTypeInferenceAcceleratorsPropertyToHclTerraform(struct?: DataTfInstanceType.InferenceAcceleratorsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -579,7 +579,7 @@ export function tfDataInstanceTypeInferenceAcceleratorsPropertyToHclTerraform(st
 }
 
 
-export function tfDataInstanceTypeInstanceDisksPropertyToTerraform(struct?: TfDataInstanceType.InstanceDisksProperty): any {
+export function dataTfInstanceTypeInstanceDisksPropertyToTerraform(struct?: DataTfInstanceType.InstanceDisksProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -589,7 +589,7 @@ export function tfDataInstanceTypeInstanceDisksPropertyToTerraform(struct?: TfDa
 }
 
 
-export function tfDataInstanceTypeInstanceDisksPropertyToHclTerraform(struct?: TfDataInstanceType.InstanceDisksProperty): any {
+export function dataTfInstanceTypeInstanceDisksPropertyToHclTerraform(struct?: DataTfInstanceType.InstanceDisksProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -600,7 +600,7 @@ export function tfDataInstanceTypeInstanceDisksPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfDataInstanceTypeMediaAcceleratorsPropertyToTerraform(struct?: TfDataInstanceType.MediaAcceleratorsProperty): any {
+export function dataTfInstanceTypeMediaAcceleratorsPropertyToTerraform(struct?: DataTfInstanceType.MediaAcceleratorsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -610,7 +610,7 @@ export function tfDataInstanceTypeMediaAcceleratorsPropertyToTerraform(struct?: 
 }
 
 
-export function tfDataInstanceTypeMediaAcceleratorsPropertyToHclTerraform(struct?: TfDataInstanceType.MediaAcceleratorsProperty): any {
+export function dataTfInstanceTypeMediaAcceleratorsPropertyToHclTerraform(struct?: DataTfInstanceType.MediaAcceleratorsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -621,7 +621,7 @@ export function tfDataInstanceTypeMediaAcceleratorsPropertyToHclTerraform(struct
 }
 
 
-export function tfDataInstanceTypeNetworkCardsPropertyToTerraform(struct?: TfDataInstanceType.NetworkCardsProperty): any {
+export function dataTfInstanceTypeNetworkCardsPropertyToTerraform(struct?: DataTfInstanceType.NetworkCardsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -631,7 +631,7 @@ export function tfDataInstanceTypeNetworkCardsPropertyToTerraform(struct?: TfDat
 }
 
 
-export function tfDataInstanceTypeNetworkCardsPropertyToHclTerraform(struct?: TfDataInstanceType.NetworkCardsProperty): any {
+export function dataTfInstanceTypeNetworkCardsPropertyToHclTerraform(struct?: DataTfInstanceType.NetworkCardsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -642,7 +642,7 @@ export function tfDataInstanceTypeNetworkCardsPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfDataInstanceTypeNeuronDevicesPropertyToTerraform(struct?: TfDataInstanceType.NeuronDevicesProperty): any {
+export function dataTfInstanceTypeNeuronDevicesPropertyToTerraform(struct?: DataTfInstanceType.NeuronDevicesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -652,7 +652,7 @@ export function tfDataInstanceTypeNeuronDevicesPropertyToTerraform(struct?: TfDa
 }
 
 
-export function tfDataInstanceTypeNeuronDevicesPropertyToHclTerraform(struct?: TfDataInstanceType.NeuronDevicesProperty): any {
+export function dataTfInstanceTypeNeuronDevicesPropertyToHclTerraform(struct?: DataTfInstanceType.NeuronDevicesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -663,7 +663,7 @@ export function tfDataInstanceTypeNeuronDevicesPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfDataInstanceTypeTimeoutsPropertyToTerraform(struct?: TfDataInstanceType.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfInstanceTypeTimeoutsPropertyToTerraform(struct?: DataTfInstanceType.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -674,7 +674,7 @@ export function tfDataInstanceTypeTimeoutsPropertyToTerraform(struct?: TfDataIns
 }
 
 
-export function tfDataInstanceTypeTimeoutsPropertyToHclTerraform(struct?: TfDataInstanceType.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfInstanceTypeTimeoutsPropertyToHclTerraform(struct?: DataTfInstanceType.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -693,7 +693,7 @@ export function tfDataInstanceTypeTimeoutsPropertyToHclTerraform(struct?: TfData
 }
 
 
-export namespace TfDataInstanceType {
+export namespace DataTfInstanceType {
 export interface FpgasProperty {
 }
 export class FpgasPropertyOutputReference extends cdktn.ComplexObject {
@@ -1184,7 +1184,7 @@ export class NeuronDevicesPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_instance_type#read TfDataInstanceType#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_instance_type#read DataTfInstanceType#read}
   */
   readonly read?: string;
 }

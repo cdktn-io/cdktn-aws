@@ -5,27 +5,27 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataFoundationModelsConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfFoundationModelsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrock_foundation_models#by_customization_type TfDataFoundationModels#by_customization_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrock_foundation_models#by_customization_type DataTfFoundationModels#by_customization_type}
   */
   readonly byCustomizationType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrock_foundation_models#by_inference_type TfDataFoundationModels#by_inference_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrock_foundation_models#by_inference_type DataTfFoundationModels#by_inference_type}
   */
   readonly byInferenceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrock_foundation_models#by_output_modality TfDataFoundationModels#by_output_modality}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrock_foundation_models#by_output_modality DataTfFoundationModels#by_output_modality}
   */
   readonly byOutputModality?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrock_foundation_models#by_provider TfDataFoundationModels#by_provider}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrock_foundation_models#by_provider DataTfFoundationModels#by_provider}
   */
   readonly byProvider?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrock_foundation_models#region TfDataFoundationModels#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrock_foundation_models#region DataTfFoundationModels#region}
   */
   readonly region?: string;
 }
@@ -33,7 +33,7 @@ export interface TfDataFoundationModelsConfig extends cdktn.TerraformMetaArgumen
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrock_foundation_models aws_bedrock_foundation_models}
 */
-export class TfDataFoundationModels extends cdktn.TerraformDataSource {
+export class DataTfFoundationModels extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -44,11 +44,11 @@ export class TfDataFoundationModels extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataFoundationModels resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfFoundationModels resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataFoundationModels to import
-  * @param importFromId The id of the existing TfDataFoundationModels that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrock_foundation_models#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataFoundationModels to import is found
+  * @param importToId The construct id used in the generated config for the DataTfFoundationModels to import
+  * @param importFromId The id of the existing DataTfFoundationModels that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrock_foundation_models#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfFoundationModels to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_bedrock_foundation_models", importId: importFromId, provider });
@@ -63,9 +63,9 @@ export class TfDataFoundationModels extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataFoundationModelsConfig = {}
+  * @param options DataTfFoundationModelsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataFoundationModelsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfFoundationModelsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_bedrock_foundation_models',
       terraformGeneratorMetadata: {
@@ -162,7 +162,7 @@ export class TfDataFoundationModels extends cdktn.TerraformDataSource {
   }
 
   // model_summaries - computed: true, optional: false, required: false
-  private _modelSummaries = new TfDataFoundationModels.ModelSummariesPropertyList(this, "model_summaries", false);
+  private _modelSummaries = new DataTfFoundationModels.ModelSummariesPropertyList(this, "model_summaries", false);
   public get modelSummaries() {
     return this._modelSummaries;
   }
@@ -236,7 +236,7 @@ export class TfDataFoundationModels extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataFoundationModelsModelSummariesPropertyToTerraform(struct?: TfDataFoundationModels.ModelSummariesProperty): any {
+export function dataTfFoundationModelsModelSummariesPropertyToTerraform(struct?: DataTfFoundationModels.ModelSummariesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -246,7 +246,7 @@ export function tfDataFoundationModelsModelSummariesPropertyToTerraform(struct?:
 }
 
 
-export function tfDataFoundationModelsModelSummariesPropertyToHclTerraform(struct?: TfDataFoundationModels.ModelSummariesProperty): any {
+export function dataTfFoundationModelsModelSummariesPropertyToHclTerraform(struct?: DataTfFoundationModels.ModelSummariesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -257,7 +257,7 @@ export function tfDataFoundationModelsModelSummariesPropertyToHclTerraform(struc
 }
 
 
-export namespace TfDataFoundationModels {
+export namespace DataTfFoundationModels {
 export interface ModelSummariesProperty {
 }
 export class ModelSummariesPropertyOutputReference extends cdktn.ComplexObject {

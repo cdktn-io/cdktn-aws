@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataLocalGatewayVirtualInterfaceConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfLocalGatewayVirtualInterfaceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_local_gateway_virtual_interface#id TfDataLocalGatewayVirtualInterface#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_local_gateway_virtual_interface#id DataTfLocalGatewayVirtualInterface#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,31 +16,31 @@ export interface TfDataLocalGatewayVirtualInterfaceConfig extends cdktn.Terrafor
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_local_gateway_virtual_interface#region TfDataLocalGatewayVirtualInterface#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_local_gateway_virtual_interface#region DataTfLocalGatewayVirtualInterface#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_local_gateway_virtual_interface#tags TfDataLocalGatewayVirtualInterface#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_local_gateway_virtual_interface#tags DataTfLocalGatewayVirtualInterface#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_local_gateway_virtual_interface#filter TfDataLocalGatewayVirtualInterface#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_local_gateway_virtual_interface#filter DataTfLocalGatewayVirtualInterface#filter}
   */
-  readonly filter?: TfDataLocalGatewayVirtualInterface.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataTfLocalGatewayVirtualInterface.FilterProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_local_gateway_virtual_interface#timeouts TfDataLocalGatewayVirtualInterface#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_local_gateway_virtual_interface#timeouts DataTfLocalGatewayVirtualInterface#timeouts}
   */
-  readonly timeouts?: TfDataLocalGatewayVirtualInterface.TimeoutsProperty;
+  readonly timeouts?: DataTfLocalGatewayVirtualInterface.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_local_gateway_virtual_interface aws_ec2_local_gateway_virtual_interface}
 */
-export class TfDataLocalGatewayVirtualInterface extends cdktn.TerraformDataSource {
+export class DataTfLocalGatewayVirtualInterface extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class TfDataLocalGatewayVirtualInterface extends cdktn.TerraformDataSourc
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataLocalGatewayVirtualInterface resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfLocalGatewayVirtualInterface resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataLocalGatewayVirtualInterface to import
-  * @param importFromId The id of the existing TfDataLocalGatewayVirtualInterface that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_local_gateway_virtual_interface#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataLocalGatewayVirtualInterface to import is found
+  * @param importToId The construct id used in the generated config for the DataTfLocalGatewayVirtualInterface to import
+  * @param importFromId The id of the existing DataTfLocalGatewayVirtualInterface that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_local_gateway_virtual_interface#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfLocalGatewayVirtualInterface to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_local_gateway_virtual_interface", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class TfDataLocalGatewayVirtualInterface extends cdktn.TerraformDataSourc
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataLocalGatewayVirtualInterfaceConfig = {}
+  * @param options DataTfLocalGatewayVirtualInterfaceConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataLocalGatewayVirtualInterfaceConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfLocalGatewayVirtualInterfaceConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_local_gateway_virtual_interface',
       terraformGeneratorMetadata: {
@@ -193,11 +193,11 @@ export class TfDataLocalGatewayVirtualInterface extends cdktn.TerraformDataSourc
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new TfDataLocalGatewayVirtualInterface.FilterPropertyList(this, "filter", true);
+  private _filter = new DataTfLocalGatewayVirtualInterface.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: TfDataLocalGatewayVirtualInterface.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataTfLocalGatewayVirtualInterface.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -209,11 +209,11 @@ export class TfDataLocalGatewayVirtualInterface extends cdktn.TerraformDataSourc
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfDataLocalGatewayVirtualInterface.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new DataTfLocalGatewayVirtualInterface.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfDataLocalGatewayVirtualInterface.TimeoutsProperty) {
+  public putTimeouts(value: DataTfLocalGatewayVirtualInterface.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -233,8 +233,8 @@ export class TfDataLocalGatewayVirtualInterface extends cdktn.TerraformDataSourc
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      filter: cdktn.listMapper(tfDataLocalGatewayVirtualInterfaceFilterPropertyToTerraform, true)(this._filter.internalValue),
-      timeouts: tfDataLocalGatewayVirtualInterfaceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      filter: cdktn.listMapper(dataTfLocalGatewayVirtualInterfaceFilterPropertyToTerraform, true)(this._filter.internalValue),
+      timeouts: dataTfLocalGatewayVirtualInterfaceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -259,16 +259,16 @@ export class TfDataLocalGatewayVirtualInterface extends cdktn.TerraformDataSourc
         storageClassType: "stringMap",
       },
       filter: {
-        value: cdktn.listMapperHcl(tfDataLocalGatewayVirtualInterfaceFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataTfLocalGatewayVirtualInterfaceFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfDataLocalGatewayVirtualInterface.FilterPropertyList",
+        storageClassType: "DataTfLocalGatewayVirtualInterface.FilterPropertyList",
       },
       timeouts: {
-        value: tfDataLocalGatewayVirtualInterfaceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: dataTfLocalGatewayVirtualInterfaceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfDataLocalGatewayVirtualInterface.TimeoutsProperty",
+        storageClassType: "DataTfLocalGatewayVirtualInterface.TimeoutsProperty",
       },
     };
 
@@ -277,7 +277,7 @@ export class TfDataLocalGatewayVirtualInterface extends cdktn.TerraformDataSourc
   }
 }
 
-export function tfDataLocalGatewayVirtualInterfaceFilterPropertyToTerraform(struct?: TfDataLocalGatewayVirtualInterface.FilterProperty | cdktn.IResolvable): any {
+export function dataTfLocalGatewayVirtualInterfaceFilterPropertyToTerraform(struct?: DataTfLocalGatewayVirtualInterface.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -289,7 +289,7 @@ export function tfDataLocalGatewayVirtualInterfaceFilterPropertyToTerraform(stru
 }
 
 
-export function tfDataLocalGatewayVirtualInterfaceFilterPropertyToHclTerraform(struct?: TfDataLocalGatewayVirtualInterface.FilterProperty | cdktn.IResolvable): any {
+export function dataTfLocalGatewayVirtualInterfaceFilterPropertyToHclTerraform(struct?: DataTfLocalGatewayVirtualInterface.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -314,7 +314,7 @@ export function tfDataLocalGatewayVirtualInterfaceFilterPropertyToHclTerraform(s
 }
 
 
-export function tfDataLocalGatewayVirtualInterfaceTimeoutsPropertyToTerraform(struct?: TfDataLocalGatewayVirtualInterface.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfLocalGatewayVirtualInterfaceTimeoutsPropertyToTerraform(struct?: DataTfLocalGatewayVirtualInterface.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -325,7 +325,7 @@ export function tfDataLocalGatewayVirtualInterfaceTimeoutsPropertyToTerraform(st
 }
 
 
-export function tfDataLocalGatewayVirtualInterfaceTimeoutsPropertyToHclTerraform(struct?: TfDataLocalGatewayVirtualInterface.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfLocalGatewayVirtualInterfaceTimeoutsPropertyToHclTerraform(struct?: DataTfLocalGatewayVirtualInterface.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -344,14 +344,14 @@ export function tfDataLocalGatewayVirtualInterfaceTimeoutsPropertyToHclTerraform
 }
 
 
-export namespace TfDataLocalGatewayVirtualInterface {
+export namespace DataTfLocalGatewayVirtualInterface {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_local_gateway_virtual_interface#name TfDataLocalGatewayVirtualInterface#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_local_gateway_virtual_interface#name DataTfLocalGatewayVirtualInterface#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_local_gateway_virtual_interface#values TfDataLocalGatewayVirtualInterface#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_local_gateway_virtual_interface#values DataTfLocalGatewayVirtualInterface#values}
   */
   readonly values: string[];
 }
@@ -453,7 +453,7 @@ export class FilterPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_local_gateway_virtual_interface#read TfDataLocalGatewayVirtualInterface#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_local_gateway_virtual_interface#read DataTfLocalGatewayVirtualInterface#read}
   */
   readonly read?: string;
 }

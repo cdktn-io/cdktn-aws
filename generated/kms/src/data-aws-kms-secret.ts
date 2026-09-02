@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataSecretConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfSecretConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kms_secret#id TfDataSecret#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kms_secret#id DataTfSecret#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,21 +16,21 @@ export interface TfDataSecretConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kms_secret#region TfDataSecret#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kms_secret#region DataTfSecret#region}
   */
   readonly region?: string;
   /**
   * secret block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kms_secret#secret TfDataSecret#secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kms_secret#secret DataTfSecret#secret}
   */
-  readonly secret: TfDataSecret.SecretProperty[] | cdktn.IResolvable;
+  readonly secret: DataTfSecret.SecretProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kms_secret aws_kms_secret}
 */
-export class TfDataSecret extends cdktn.TerraformDataSource {
+export class DataTfSecret extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -41,11 +41,11 @@ export class TfDataSecret extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataSecret resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfSecret resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataSecret to import
-  * @param importFromId The id of the existing TfDataSecret that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kms_secret#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataSecret to import is found
+  * @param importToId The construct id used in the generated config for the DataTfSecret to import
+  * @param importFromId The id of the existing DataTfSecret that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kms_secret#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfSecret to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_kms_secret", importId: importFromId, provider });
@@ -60,9 +60,9 @@ export class TfDataSecret extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataSecretConfig
+  * @param options DataTfSecretConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataSecretConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfSecretConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_kms_secret',
       terraformGeneratorMetadata: {
@@ -120,11 +120,11 @@ export class TfDataSecret extends cdktn.TerraformDataSource {
   }
 
   // secret - computed: false, optional: false, required: true
-  private _secret = new TfDataSecret.SecretPropertyList(this, "secret", true);
+  private _secret = new DataTfSecret.SecretPropertyList(this, "secret", true);
   public get secret() {
     return this._secret;
   }
-  public putSecret(value: TfDataSecret.SecretProperty[] | cdktn.IResolvable) {
+  public putSecret(value: DataTfSecret.SecretProperty[] | cdktn.IResolvable) {
     this._secret.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -140,7 +140,7 @@ export class TfDataSecret extends cdktn.TerraformDataSource {
     return {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      secret: cdktn.listMapper(tfDataSecretSecretPropertyToTerraform, true)(this._secret.internalValue),
+      secret: cdktn.listMapper(dataTfSecretSecretPropertyToTerraform, true)(this._secret.internalValue),
     };
   }
 
@@ -159,10 +159,10 @@ export class TfDataSecret extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       secret: {
-        value: cdktn.listMapperHcl(tfDataSecretSecretPropertyToHclTerraform, true)(this._secret.internalValue),
+        value: cdktn.listMapperHcl(dataTfSecretSecretPropertyToHclTerraform, true)(this._secret.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfDataSecret.SecretPropertyList",
+        storageClassType: "DataTfSecret.SecretPropertyList",
       },
     };
 
@@ -171,7 +171,7 @@ export class TfDataSecret extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataSecretSecretPropertyToTerraform(struct?: TfDataSecret.SecretProperty | cdktn.IResolvable): any {
+export function dataTfSecretSecretPropertyToTerraform(struct?: DataTfSecret.SecretProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -185,7 +185,7 @@ export function tfDataSecretSecretPropertyToTerraform(struct?: TfDataSecret.Secr
 }
 
 
-export function tfDataSecretSecretPropertyToHclTerraform(struct?: TfDataSecret.SecretProperty | cdktn.IResolvable): any {
+export function dataTfSecretSecretPropertyToHclTerraform(struct?: DataTfSecret.SecretProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -222,22 +222,22 @@ export function tfDataSecretSecretPropertyToHclTerraform(struct?: TfDataSecret.S
 }
 
 
-export namespace TfDataSecret {
+export namespace DataTfSecret {
 export interface SecretProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kms_secret#context TfDataSecret#context}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kms_secret#context DataTfSecret#context}
   */
   readonly context?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kms_secret#grant_tokens TfDataSecret#grant_tokens}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kms_secret#grant_tokens DataTfSecret#grant_tokens}
   */
   readonly grantTokens?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kms_secret#name TfDataSecret#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kms_secret#name DataTfSecret#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kms_secret#payload TfDataSecret#payload}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kms_secret#payload DataTfSecret#payload}
   */
   readonly payload: string;
 }

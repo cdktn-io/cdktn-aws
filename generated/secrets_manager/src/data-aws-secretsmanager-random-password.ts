@@ -5,50 +5,50 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataRandomPasswordConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfRandomPasswordConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_random_password#exclude_characters TfDataRandomPassword#exclude_characters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_random_password#exclude_characters DataTfRandomPassword#exclude_characters}
   */
   readonly excludeCharacters?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_random_password#exclude_lowercase TfDataRandomPassword#exclude_lowercase}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_random_password#exclude_lowercase DataTfRandomPassword#exclude_lowercase}
   */
   readonly excludeLowercase?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_random_password#exclude_numbers TfDataRandomPassword#exclude_numbers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_random_password#exclude_numbers DataTfRandomPassword#exclude_numbers}
   */
   readonly excludeNumbers?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_random_password#exclude_punctuation TfDataRandomPassword#exclude_punctuation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_random_password#exclude_punctuation DataTfRandomPassword#exclude_punctuation}
   */
   readonly excludePunctuation?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_random_password#exclude_uppercase TfDataRandomPassword#exclude_uppercase}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_random_password#exclude_uppercase DataTfRandomPassword#exclude_uppercase}
   */
   readonly excludeUppercase?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_random_password#id TfDataRandomPassword#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_random_password#id DataTfRandomPassword#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_random_password#include_space TfDataRandomPassword#include_space}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_random_password#include_space DataTfRandomPassword#include_space}
   */
   readonly includeSpace?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_random_password#password_length TfDataRandomPassword#password_length}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_random_password#password_length DataTfRandomPassword#password_length}
   */
   readonly passwordLength?: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_random_password#region TfDataRandomPassword#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_random_password#region DataTfRandomPassword#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_random_password#require_each_included_type TfDataRandomPassword#require_each_included_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_random_password#require_each_included_type DataTfRandomPassword#require_each_included_type}
   */
   readonly requireEachIncludedType?: boolean | cdktn.IResolvable;
 }
@@ -56,7 +56,7 @@ export interface TfDataRandomPasswordConfig extends cdktn.TerraformMetaArguments
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_random_password aws_secretsmanager_random_password}
 */
-export class TfDataRandomPassword extends cdktn.TerraformDataSource {
+export class DataTfRandomPassword extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -67,11 +67,11 @@ export class TfDataRandomPassword extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataRandomPassword resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfRandomPassword resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataRandomPassword to import
-  * @param importFromId The id of the existing TfDataRandomPassword that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_random_password#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataRandomPassword to import is found
+  * @param importToId The construct id used in the generated config for the DataTfRandomPassword to import
+  * @param importFromId The id of the existing DataTfRandomPassword that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_random_password#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfRandomPassword to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_secretsmanager_random_password", importId: importFromId, provider });
@@ -86,9 +86,9 @@ export class TfDataRandomPassword extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataRandomPasswordConfig = {}
+  * @param options DataTfRandomPasswordConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataRandomPasswordConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfRandomPasswordConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_secretsmanager_random_password',
       terraformGeneratorMetadata: {

@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataReceivedLicensesConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfReceivedLicensesConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/licensemanager_received_licenses#id TfDataReceivedLicenses#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/licensemanager_received_licenses#id DataTfReceivedLicenses#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,21 +16,21 @@ export interface TfDataReceivedLicensesConfig extends cdktn.TerraformMetaArgumen
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/licensemanager_received_licenses#region TfDataReceivedLicenses#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/licensemanager_received_licenses#region DataTfReceivedLicenses#region}
   */
   readonly region?: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/licensemanager_received_licenses#filter TfDataReceivedLicenses#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/licensemanager_received_licenses#filter DataTfReceivedLicenses#filter}
   */
-  readonly filter?: TfDataReceivedLicenses.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataTfReceivedLicenses.FilterProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/licensemanager_received_licenses aws_licensemanager_received_licenses}
 */
-export class TfDataReceivedLicenses extends cdktn.TerraformDataSource {
+export class DataTfReceivedLicenses extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -41,11 +41,11 @@ export class TfDataReceivedLicenses extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataReceivedLicenses resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfReceivedLicenses resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataReceivedLicenses to import
-  * @param importFromId The id of the existing TfDataReceivedLicenses that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/licensemanager_received_licenses#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataReceivedLicenses to import is found
+  * @param importToId The construct id used in the generated config for the DataTfReceivedLicenses to import
+  * @param importFromId The id of the existing DataTfReceivedLicenses that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/licensemanager_received_licenses#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfReceivedLicenses to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_licensemanager_received_licenses", importId: importFromId, provider });
@@ -60,9 +60,9 @@ export class TfDataReceivedLicenses extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataReceivedLicensesConfig = {}
+  * @param options DataTfReceivedLicensesConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataReceivedLicensesConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfReceivedLicensesConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_licensemanager_received_licenses',
       terraformGeneratorMetadata: {
@@ -125,11 +125,11 @@ export class TfDataReceivedLicenses extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new TfDataReceivedLicenses.FilterPropertyList(this, "filter", true);
+  private _filter = new DataTfReceivedLicenses.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: TfDataReceivedLicenses.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataTfReceivedLicenses.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -148,7 +148,7 @@ export class TfDataReceivedLicenses extends cdktn.TerraformDataSource {
     return {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      filter: cdktn.listMapper(tfDataReceivedLicensesFilterPropertyToTerraform, true)(this._filter.internalValue),
+      filter: cdktn.listMapper(dataTfReceivedLicensesFilterPropertyToTerraform, true)(this._filter.internalValue),
     };
   }
 
@@ -167,10 +167,10 @@ export class TfDataReceivedLicenses extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       filter: {
-        value: cdktn.listMapperHcl(tfDataReceivedLicensesFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataTfReceivedLicensesFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfDataReceivedLicenses.FilterPropertyList",
+        storageClassType: "DataTfReceivedLicenses.FilterPropertyList",
       },
     };
 
@@ -179,7 +179,7 @@ export class TfDataReceivedLicenses extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataReceivedLicensesFilterPropertyToTerraform(struct?: TfDataReceivedLicenses.FilterProperty | cdktn.IResolvable): any {
+export function dataTfReceivedLicensesFilterPropertyToTerraform(struct?: DataTfReceivedLicenses.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -191,7 +191,7 @@ export function tfDataReceivedLicensesFilterPropertyToTerraform(struct?: TfDataR
 }
 
 
-export function tfDataReceivedLicensesFilterPropertyToHclTerraform(struct?: TfDataReceivedLicenses.FilterProperty | cdktn.IResolvable): any {
+export function dataTfReceivedLicensesFilterPropertyToHclTerraform(struct?: DataTfReceivedLicenses.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -216,14 +216,14 @@ export function tfDataReceivedLicensesFilterPropertyToHclTerraform(struct?: TfDa
 }
 
 
-export namespace TfDataReceivedLicenses {
+export namespace DataTfReceivedLicenses {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/licensemanager_received_licenses#name TfDataReceivedLicenses#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/licensemanager_received_licenses#name DataTfReceivedLicenses#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/licensemanager_received_licenses#values TfDataReceivedLicenses#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/licensemanager_received_licenses#values DataTfReceivedLicenses#values}
   */
   readonly values: string[];
 }

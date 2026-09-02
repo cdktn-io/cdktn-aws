@@ -5,80 +5,80 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataPermissionsConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfPermissionsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#catalog_id TfDataPermissions#catalog_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#catalog_id DataTfPermissions#catalog_id}
   */
   readonly catalogId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#catalog_resource TfDataPermissions#catalog_resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#catalog_resource DataTfPermissions#catalog_resource}
   */
   readonly catalogResource?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#id TfDataPermissions#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#id DataTfPermissions#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#principal TfDataPermissions#principal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#principal DataTfPermissions#principal}
   */
   readonly principal: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#region TfDataPermissions#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#region DataTfPermissions#region}
   */
   readonly region?: string;
   /**
   * data_cells_filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#data_cells_filter TfDataPermissions#data_cells_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#data_cells_filter DataTfPermissions#data_cells_filter}
   */
-  readonly dataCellsFilter?: TfDataPermissions.DataCellsFilterProperty;
+  readonly dataCellsFilter?: DataTfPermissions.DataCellsFilterProperty;
   /**
   * data_location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#data_location TfDataPermissions#data_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#data_location DataTfPermissions#data_location}
   */
-  readonly dataLocation?: TfDataPermissions.DataLocationProperty;
+  readonly dataLocation?: DataTfPermissions.DataLocationProperty;
   /**
   * database block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#database TfDataPermissions#database}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#database DataTfPermissions#database}
   */
-  readonly database?: TfDataPermissions.DatabaseProperty;
+  readonly database?: DataTfPermissions.DatabaseProperty;
   /**
   * lf_tag block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#lf_tag TfDataPermissions#lf_tag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#lf_tag DataTfPermissions#lf_tag}
   */
-  readonly lfTag?: TfDataPermissions.LfTagProperty;
+  readonly lfTag?: DataTfPermissions.LfTagProperty;
   /**
   * lf_tag_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#lf_tag_policy TfDataPermissions#lf_tag_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#lf_tag_policy DataTfPermissions#lf_tag_policy}
   */
-  readonly lfTagPolicy?: TfDataPermissions.LfTagPolicyProperty;
+  readonly lfTagPolicy?: DataTfPermissions.LfTagPolicyProperty;
   /**
   * table block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#table TfDataPermissions#table}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#table DataTfPermissions#table}
   */
-  readonly table?: TfDataPermissions.TableProperty;
+  readonly table?: DataTfPermissions.TableProperty;
   /**
   * table_with_columns block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#table_with_columns TfDataPermissions#table_with_columns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#table_with_columns DataTfPermissions#table_with_columns}
   */
-  readonly tableWithColumns?: TfDataPermissions.TableWithColumnsProperty;
+  readonly tableWithColumns?: DataTfPermissions.TableWithColumnsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions aws_lakeformation_permissions}
 */
-export class TfDataPermissions extends cdktn.TerraformDataSource {
+export class DataTfPermissions extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -89,11 +89,11 @@ export class TfDataPermissions extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataPermissions resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfPermissions resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataPermissions to import
-  * @param importFromId The id of the existing TfDataPermissions that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataPermissions to import is found
+  * @param importToId The construct id used in the generated config for the DataTfPermissions to import
+  * @param importFromId The id of the existing DataTfPermissions that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfPermissions to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lakeformation_permissions", importId: importFromId, provider });
@@ -108,9 +108,9 @@ export class TfDataPermissions extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataPermissionsConfig
+  * @param options DataTfPermissionsConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataPermissionsConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfPermissionsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lakeformation_permissions',
       terraformGeneratorMetadata: {
@@ -232,11 +232,11 @@ export class TfDataPermissions extends cdktn.TerraformDataSource {
   }
 
   // data_cells_filter - computed: false, optional: true, required: false
-  private _dataCellsFilter = new TfDataPermissions.DataCellsFilterPropertyOutputReference(this, "data_cells_filter");
+  private _dataCellsFilter = new DataTfPermissions.DataCellsFilterPropertyOutputReference(this, "data_cells_filter");
   public get dataCellsFilter() {
     return this._dataCellsFilter;
   }
-  public putDataCellsFilter(value: TfDataPermissions.DataCellsFilterProperty) {
+  public putDataCellsFilter(value: DataTfPermissions.DataCellsFilterProperty) {
     this._dataCellsFilter.internalValue = value;
   }
   public resetDataCellsFilter() {
@@ -248,11 +248,11 @@ export class TfDataPermissions extends cdktn.TerraformDataSource {
   }
 
   // data_location - computed: false, optional: true, required: false
-  private _dataLocation = new TfDataPermissions.DataLocationPropertyOutputReference(this, "data_location");
+  private _dataLocation = new DataTfPermissions.DataLocationPropertyOutputReference(this, "data_location");
   public get dataLocation() {
     return this._dataLocation;
   }
-  public putDataLocation(value: TfDataPermissions.DataLocationProperty) {
+  public putDataLocation(value: DataTfPermissions.DataLocationProperty) {
     this._dataLocation.internalValue = value;
   }
   public resetDataLocation() {
@@ -264,11 +264,11 @@ export class TfDataPermissions extends cdktn.TerraformDataSource {
   }
 
   // database - computed: false, optional: true, required: false
-  private _database = new TfDataPermissions.DatabasePropertyOutputReference(this, "database");
+  private _database = new DataTfPermissions.DatabasePropertyOutputReference(this, "database");
   public get database() {
     return this._database;
   }
-  public putDatabase(value: TfDataPermissions.DatabaseProperty) {
+  public putDatabase(value: DataTfPermissions.DatabaseProperty) {
     this._database.internalValue = value;
   }
   public resetDatabase() {
@@ -280,11 +280,11 @@ export class TfDataPermissions extends cdktn.TerraformDataSource {
   }
 
   // lf_tag - computed: false, optional: true, required: false
-  private _lfTag = new TfDataPermissions.LfTagPropertyOutputReference(this, "lf_tag");
+  private _lfTag = new DataTfPermissions.LfTagPropertyOutputReference(this, "lf_tag");
   public get lfTag() {
     return this._lfTag;
   }
-  public putLfTag(value: TfDataPermissions.LfTagProperty) {
+  public putLfTag(value: DataTfPermissions.LfTagProperty) {
     this._lfTag.internalValue = value;
   }
   public resetLfTag() {
@@ -296,11 +296,11 @@ export class TfDataPermissions extends cdktn.TerraformDataSource {
   }
 
   // lf_tag_policy - computed: false, optional: true, required: false
-  private _lfTagPolicy = new TfDataPermissions.LfTagPolicyPropertyOutputReference(this, "lf_tag_policy");
+  private _lfTagPolicy = new DataTfPermissions.LfTagPolicyPropertyOutputReference(this, "lf_tag_policy");
   public get lfTagPolicy() {
     return this._lfTagPolicy;
   }
-  public putLfTagPolicy(value: TfDataPermissions.LfTagPolicyProperty) {
+  public putLfTagPolicy(value: DataTfPermissions.LfTagPolicyProperty) {
     this._lfTagPolicy.internalValue = value;
   }
   public resetLfTagPolicy() {
@@ -312,11 +312,11 @@ export class TfDataPermissions extends cdktn.TerraformDataSource {
   }
 
   // table - computed: false, optional: true, required: false
-  private _table = new TfDataPermissions.TablePropertyOutputReference(this, "table");
+  private _table = new DataTfPermissions.TablePropertyOutputReference(this, "table");
   public get table() {
     return this._table;
   }
-  public putTable(value: TfDataPermissions.TableProperty) {
+  public putTable(value: DataTfPermissions.TableProperty) {
     this._table.internalValue = value;
   }
   public resetTable() {
@@ -328,11 +328,11 @@ export class TfDataPermissions extends cdktn.TerraformDataSource {
   }
 
   // table_with_columns - computed: false, optional: true, required: false
-  private _tableWithColumns = new TfDataPermissions.TableWithColumnsPropertyOutputReference(this, "table_with_columns");
+  private _tableWithColumns = new DataTfPermissions.TableWithColumnsPropertyOutputReference(this, "table_with_columns");
   public get tableWithColumns() {
     return this._tableWithColumns;
   }
-  public putTableWithColumns(value: TfDataPermissions.TableWithColumnsProperty) {
+  public putTableWithColumns(value: DataTfPermissions.TableWithColumnsProperty) {
     this._tableWithColumns.internalValue = value;
   }
   public resetTableWithColumns() {
@@ -354,13 +354,13 @@ export class TfDataPermissions extends cdktn.TerraformDataSource {
       id: cdktn.stringToTerraform(this._id),
       principal: cdktn.stringToTerraform(this._principal),
       region: cdktn.stringToTerraform(this._region),
-      data_cells_filter: tfDataPermissionsDataCellsFilterPropertyToTerraform(this._dataCellsFilter.internalValue),
-      data_location: tfDataPermissionsDataLocationPropertyToTerraform(this._dataLocation.internalValue),
-      database: tfDataPermissionsDatabasePropertyToTerraform(this._database.internalValue),
-      lf_tag: tfDataPermissionsLfTagPropertyToTerraform(this._lfTag.internalValue),
-      lf_tag_policy: tfDataPermissionsLfTagPolicyPropertyToTerraform(this._lfTagPolicy.internalValue),
-      table: tfDataPermissionsTablePropertyToTerraform(this._table.internalValue),
-      table_with_columns: tfDataPermissionsTableWithColumnsPropertyToTerraform(this._tableWithColumns.internalValue),
+      data_cells_filter: dataTfPermissionsDataCellsFilterPropertyToTerraform(this._dataCellsFilter.internalValue),
+      data_location: dataTfPermissionsDataLocationPropertyToTerraform(this._dataLocation.internalValue),
+      database: dataTfPermissionsDatabasePropertyToTerraform(this._database.internalValue),
+      lf_tag: dataTfPermissionsLfTagPropertyToTerraform(this._lfTag.internalValue),
+      lf_tag_policy: dataTfPermissionsLfTagPolicyPropertyToTerraform(this._lfTagPolicy.internalValue),
+      table: dataTfPermissionsTablePropertyToTerraform(this._table.internalValue),
+      table_with_columns: dataTfPermissionsTableWithColumnsPropertyToTerraform(this._tableWithColumns.internalValue),
     };
   }
 
@@ -397,46 +397,46 @@ export class TfDataPermissions extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       data_cells_filter: {
-        value: tfDataPermissionsDataCellsFilterPropertyToHclTerraform(this._dataCellsFilter.internalValue),
+        value: dataTfPermissionsDataCellsFilterPropertyToHclTerraform(this._dataCellsFilter.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDataPermissions.DataCellsFilterPropertyList",
+        storageClassType: "DataTfPermissions.DataCellsFilterPropertyList",
       },
       data_location: {
-        value: tfDataPermissionsDataLocationPropertyToHclTerraform(this._dataLocation.internalValue),
+        value: dataTfPermissionsDataLocationPropertyToHclTerraform(this._dataLocation.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDataPermissions.DataLocationPropertyList",
+        storageClassType: "DataTfPermissions.DataLocationPropertyList",
       },
       database: {
-        value: tfDataPermissionsDatabasePropertyToHclTerraform(this._database.internalValue),
+        value: dataTfPermissionsDatabasePropertyToHclTerraform(this._database.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDataPermissions.DatabasePropertyList",
+        storageClassType: "DataTfPermissions.DatabasePropertyList",
       },
       lf_tag: {
-        value: tfDataPermissionsLfTagPropertyToHclTerraform(this._lfTag.internalValue),
+        value: dataTfPermissionsLfTagPropertyToHclTerraform(this._lfTag.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDataPermissions.LfTagPropertyList",
+        storageClassType: "DataTfPermissions.LfTagPropertyList",
       },
       lf_tag_policy: {
-        value: tfDataPermissionsLfTagPolicyPropertyToHclTerraform(this._lfTagPolicy.internalValue),
+        value: dataTfPermissionsLfTagPolicyPropertyToHclTerraform(this._lfTagPolicy.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDataPermissions.LfTagPolicyPropertyList",
+        storageClassType: "DataTfPermissions.LfTagPolicyPropertyList",
       },
       table: {
-        value: tfDataPermissionsTablePropertyToHclTerraform(this._table.internalValue),
+        value: dataTfPermissionsTablePropertyToHclTerraform(this._table.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDataPermissions.TablePropertyList",
+        storageClassType: "DataTfPermissions.TablePropertyList",
       },
       table_with_columns: {
-        value: tfDataPermissionsTableWithColumnsPropertyToHclTerraform(this._tableWithColumns.internalValue),
+        value: dataTfPermissionsTableWithColumnsPropertyToHclTerraform(this._tableWithColumns.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDataPermissions.TableWithColumnsPropertyList",
+        storageClassType: "DataTfPermissions.TableWithColumnsPropertyList",
       },
     };
 
@@ -445,7 +445,7 @@ export class TfDataPermissions extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataPermissionsDataCellsFilterPropertyToTerraform(struct?: TfDataPermissions.DataCellsFilterPropertyOutputReference | TfDataPermissions.DataCellsFilterProperty): any {
+export function dataTfPermissionsDataCellsFilterPropertyToTerraform(struct?: DataTfPermissions.DataCellsFilterPropertyOutputReference | DataTfPermissions.DataCellsFilterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -459,7 +459,7 @@ export function tfDataPermissionsDataCellsFilterPropertyToTerraform(struct?: TfD
 }
 
 
-export function tfDataPermissionsDataCellsFilterPropertyToHclTerraform(struct?: TfDataPermissions.DataCellsFilterPropertyOutputReference | TfDataPermissions.DataCellsFilterProperty): any {
+export function dataTfPermissionsDataCellsFilterPropertyToHclTerraform(struct?: DataTfPermissions.DataCellsFilterPropertyOutputReference | DataTfPermissions.DataCellsFilterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -496,7 +496,7 @@ export function tfDataPermissionsDataCellsFilterPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfDataPermissionsDataLocationPropertyToTerraform(struct?: TfDataPermissions.DataLocationPropertyOutputReference | TfDataPermissions.DataLocationProperty): any {
+export function dataTfPermissionsDataLocationPropertyToTerraform(struct?: DataTfPermissions.DataLocationPropertyOutputReference | DataTfPermissions.DataLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -508,7 +508,7 @@ export function tfDataPermissionsDataLocationPropertyToTerraform(struct?: TfData
 }
 
 
-export function tfDataPermissionsDataLocationPropertyToHclTerraform(struct?: TfDataPermissions.DataLocationPropertyOutputReference | TfDataPermissions.DataLocationProperty): any {
+export function dataTfPermissionsDataLocationPropertyToHclTerraform(struct?: DataTfPermissions.DataLocationPropertyOutputReference | DataTfPermissions.DataLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -533,7 +533,7 @@ export function tfDataPermissionsDataLocationPropertyToHclTerraform(struct?: TfD
 }
 
 
-export function tfDataPermissionsDatabasePropertyToTerraform(struct?: TfDataPermissions.DatabasePropertyOutputReference | TfDataPermissions.DatabaseProperty): any {
+export function dataTfPermissionsDatabasePropertyToTerraform(struct?: DataTfPermissions.DatabasePropertyOutputReference | DataTfPermissions.DatabaseProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -545,7 +545,7 @@ export function tfDataPermissionsDatabasePropertyToTerraform(struct?: TfDataPerm
 }
 
 
-export function tfDataPermissionsDatabasePropertyToHclTerraform(struct?: TfDataPermissions.DatabasePropertyOutputReference | TfDataPermissions.DatabaseProperty): any {
+export function dataTfPermissionsDatabasePropertyToHclTerraform(struct?: DataTfPermissions.DatabasePropertyOutputReference | DataTfPermissions.DatabaseProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -570,7 +570,7 @@ export function tfDataPermissionsDatabasePropertyToHclTerraform(struct?: TfDataP
 }
 
 
-export function tfDataPermissionsLfTagPropertyToTerraform(struct?: TfDataPermissions.LfTagPropertyOutputReference | TfDataPermissions.LfTagProperty): any {
+export function dataTfPermissionsLfTagPropertyToTerraform(struct?: DataTfPermissions.LfTagPropertyOutputReference | DataTfPermissions.LfTagProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -583,7 +583,7 @@ export function tfDataPermissionsLfTagPropertyToTerraform(struct?: TfDataPermiss
 }
 
 
-export function tfDataPermissionsLfTagPropertyToHclTerraform(struct?: TfDataPermissions.LfTagPropertyOutputReference | TfDataPermissions.LfTagProperty): any {
+export function dataTfPermissionsLfTagPropertyToHclTerraform(struct?: DataTfPermissions.LfTagPropertyOutputReference | DataTfPermissions.LfTagProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -614,7 +614,7 @@ export function tfDataPermissionsLfTagPropertyToHclTerraform(struct?: TfDataPerm
 }
 
 
-export function tfDataPermissionsExpressionPropertyToTerraform(struct?: TfDataPermissions.ExpressionProperty | cdktn.IResolvable): any {
+export function dataTfPermissionsExpressionPropertyToTerraform(struct?: DataTfPermissions.ExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -626,7 +626,7 @@ export function tfDataPermissionsExpressionPropertyToTerraform(struct?: TfDataPe
 }
 
 
-export function tfDataPermissionsExpressionPropertyToHclTerraform(struct?: TfDataPermissions.ExpressionProperty | cdktn.IResolvable): any {
+export function dataTfPermissionsExpressionPropertyToHclTerraform(struct?: DataTfPermissions.ExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -651,7 +651,7 @@ export function tfDataPermissionsExpressionPropertyToHclTerraform(struct?: TfDat
 }
 
 
-export function tfDataPermissionsLfTagPolicyPropertyToTerraform(struct?: TfDataPermissions.LfTagPolicyPropertyOutputReference | TfDataPermissions.LfTagPolicyProperty): any {
+export function dataTfPermissionsLfTagPolicyPropertyToTerraform(struct?: DataTfPermissions.LfTagPolicyPropertyOutputReference | DataTfPermissions.LfTagPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -659,12 +659,12 @@ export function tfDataPermissionsLfTagPolicyPropertyToTerraform(struct?: TfDataP
   return {
     catalog_id: cdktn.stringToTerraform(struct!.catalogId),
     resource_type: cdktn.stringToTerraform(struct!.resourceType),
-    expression: cdktn.listMapper(tfDataPermissionsExpressionPropertyToTerraform, true)(struct!.expression),
+    expression: cdktn.listMapper(dataTfPermissionsExpressionPropertyToTerraform, true)(struct!.expression),
   }
 }
 
 
-export function tfDataPermissionsLfTagPolicyPropertyToHclTerraform(struct?: TfDataPermissions.LfTagPolicyPropertyOutputReference | TfDataPermissions.LfTagPolicyProperty): any {
+export function dataTfPermissionsLfTagPolicyPropertyToHclTerraform(struct?: DataTfPermissions.LfTagPolicyPropertyOutputReference | DataTfPermissions.LfTagPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -683,7 +683,7 @@ export function tfDataPermissionsLfTagPolicyPropertyToHclTerraform(struct?: TfDa
       storageClassType: "string",
     },
     expression: {
-      value: cdktn.listMapperHcl(tfDataPermissionsExpressionPropertyToHclTerraform, true)(struct!.expression),
+      value: cdktn.listMapperHcl(dataTfPermissionsExpressionPropertyToHclTerraform, true)(struct!.expression),
       isBlock: true,
       type: "set",
       storageClassType: "ExpressionPropertyList",
@@ -695,7 +695,7 @@ export function tfDataPermissionsLfTagPolicyPropertyToHclTerraform(struct?: TfDa
 }
 
 
-export function tfDataPermissionsTablePropertyToTerraform(struct?: TfDataPermissions.TablePropertyOutputReference | TfDataPermissions.TableProperty): any {
+export function dataTfPermissionsTablePropertyToTerraform(struct?: DataTfPermissions.TablePropertyOutputReference | DataTfPermissions.TableProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -709,7 +709,7 @@ export function tfDataPermissionsTablePropertyToTerraform(struct?: TfDataPermiss
 }
 
 
-export function tfDataPermissionsTablePropertyToHclTerraform(struct?: TfDataPermissions.TablePropertyOutputReference | TfDataPermissions.TableProperty): any {
+export function dataTfPermissionsTablePropertyToHclTerraform(struct?: DataTfPermissions.TablePropertyOutputReference | DataTfPermissions.TableProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -746,7 +746,7 @@ export function tfDataPermissionsTablePropertyToHclTerraform(struct?: TfDataPerm
 }
 
 
-export function tfDataPermissionsTableWithColumnsPropertyToTerraform(struct?: TfDataPermissions.TableWithColumnsPropertyOutputReference | TfDataPermissions.TableWithColumnsProperty): any {
+export function dataTfPermissionsTableWithColumnsPropertyToTerraform(struct?: DataTfPermissions.TableWithColumnsPropertyOutputReference | DataTfPermissions.TableWithColumnsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -762,7 +762,7 @@ export function tfDataPermissionsTableWithColumnsPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfDataPermissionsTableWithColumnsPropertyToHclTerraform(struct?: TfDataPermissions.TableWithColumnsPropertyOutputReference | TfDataPermissions.TableWithColumnsProperty): any {
+export function dataTfPermissionsTableWithColumnsPropertyToHclTerraform(struct?: DataTfPermissions.TableWithColumnsPropertyOutputReference | DataTfPermissions.TableWithColumnsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -811,22 +811,22 @@ export function tfDataPermissionsTableWithColumnsPropertyToHclTerraform(struct?:
 }
 
 
-export namespace TfDataPermissions {
+export namespace DataTfPermissions {
 export interface DataCellsFilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#database_name TfDataPermissions#database_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#database_name DataTfPermissions#database_name}
   */
   readonly databaseName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#name TfDataPermissions#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#name DataTfPermissions#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#table_catalog_id TfDataPermissions#table_catalog_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#table_catalog_id DataTfPermissions#table_catalog_id}
   */
   readonly tableCatalogId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#table_name TfDataPermissions#table_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#table_name DataTfPermissions#table_name}
   */
   readonly tableName: string;
 }
@@ -934,11 +934,11 @@ export class DataCellsFilterPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface DataLocationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#arn TfDataPermissions#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#arn DataTfPermissions#arn}
   */
   readonly arn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#catalog_id TfDataPermissions#catalog_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#catalog_id DataTfPermissions#catalog_id}
   */
   readonly catalogId?: string;
 }
@@ -1011,11 +1011,11 @@ export class DataLocationPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface DatabaseProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#catalog_id TfDataPermissions#catalog_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#catalog_id DataTfPermissions#catalog_id}
   */
   readonly catalogId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#name TfDataPermissions#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#name DataTfPermissions#name}
   */
   readonly name: string;
 }
@@ -1088,15 +1088,15 @@ export class DatabasePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface LfTagProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#catalog_id TfDataPermissions#catalog_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#catalog_id DataTfPermissions#catalog_id}
   */
   readonly catalogId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#key TfDataPermissions#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#key DataTfPermissions#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#values TfDataPermissions#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#values DataTfPermissions#values}
   */
   readonly values: string[];
 }
@@ -1188,11 +1188,11 @@ export class LfTagPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ExpressionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#key TfDataPermissions#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#key DataTfPermissions#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#values TfDataPermissions#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#values DataTfPermissions#values}
   */
   readonly values: string[];
 }
@@ -1294,17 +1294,17 @@ export class ExpressionPropertyList extends cdktn.ComplexList {
 }
 export interface LfTagPolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#catalog_id TfDataPermissions#catalog_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#catalog_id DataTfPermissions#catalog_id}
   */
   readonly catalogId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#resource_type TfDataPermissions#resource_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#resource_type DataTfPermissions#resource_type}
   */
   readonly resourceType: string;
   /**
   * expression block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#expression TfDataPermissions#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#expression DataTfPermissions#expression}
   */
   readonly expression: ExpressionProperty[] | cdktn.IResolvable;
 }
@@ -1396,19 +1396,19 @@ export class LfTagPolicyPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TableProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#catalog_id TfDataPermissions#catalog_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#catalog_id DataTfPermissions#catalog_id}
   */
   readonly catalogId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#database_name TfDataPermissions#database_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#database_name DataTfPermissions#database_name}
   */
   readonly databaseName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#name TfDataPermissions#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#name DataTfPermissions#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#wildcard TfDataPermissions#wildcard}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#wildcard DataTfPermissions#wildcard}
   */
   readonly wildcard?: boolean | cdktn.IResolvable;
 }
@@ -1525,27 +1525,27 @@ export class TablePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TableWithColumnsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#catalog_id TfDataPermissions#catalog_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#catalog_id DataTfPermissions#catalog_id}
   */
   readonly catalogId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#column_names TfDataPermissions#column_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#column_names DataTfPermissions#column_names}
   */
   readonly columnNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#database_name TfDataPermissions#database_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#database_name DataTfPermissions#database_name}
   */
   readonly databaseName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#excluded_column_names TfDataPermissions#excluded_column_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#excluded_column_names DataTfPermissions#excluded_column_names}
   */
   readonly excludedColumnNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#name TfDataPermissions#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#name DataTfPermissions#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#wildcard TfDataPermissions#wildcard}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_permissions#wildcard DataTfPermissions#wildcard}
   */
   readonly wildcard?: boolean | cdktn.IResolvable;
 }

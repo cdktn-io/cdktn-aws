@@ -5,23 +5,23 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataLifecyclePolicyConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfLifecyclePolicyConfig extends cdktn.TerraformMetaArguments {
   /**
   * Name of the policy.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_lifecycle_policy#name TfDataLifecyclePolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_lifecycle_policy#name DataTfLifecyclePolicy#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_lifecycle_policy#region TfDataLifecyclePolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_lifecycle_policy#region DataTfLifecyclePolicy#region}
   */
   readonly region?: string;
   /**
   * Type of lifecycle policy. Must be `retention`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_lifecycle_policy#type TfDataLifecyclePolicy#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_lifecycle_policy#type DataTfLifecyclePolicy#type}
   */
   readonly type: string;
 }
@@ -29,7 +29,7 @@ export interface TfDataLifecyclePolicyConfig extends cdktn.TerraformMetaArgument
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_lifecycle_policy aws_opensearchserverless_lifecycle_policy}
 */
-export class TfDataLifecyclePolicy extends cdktn.TerraformDataSource {
+export class DataTfLifecyclePolicy extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -40,11 +40,11 @@ export class TfDataLifecyclePolicy extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataLifecyclePolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfLifecyclePolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataLifecyclePolicy to import
-  * @param importFromId The id of the existing TfDataLifecyclePolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_lifecycle_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataLifecyclePolicy to import is found
+  * @param importToId The construct id used in the generated config for the DataTfLifecyclePolicy to import
+  * @param importFromId The id of the existing DataTfLifecyclePolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_lifecycle_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfLifecyclePolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_opensearchserverless_lifecycle_policy", importId: importFromId, provider });
@@ -59,9 +59,9 @@ export class TfDataLifecyclePolicy extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataLifecyclePolicyConfig
+  * @param options DataTfLifecyclePolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataLifecyclePolicyConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfLifecyclePolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_opensearchserverless_lifecycle_policy',
       terraformGeneratorMetadata: {

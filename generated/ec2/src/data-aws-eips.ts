@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataEipsConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfEipsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eips#id TfDataEips#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eips#id DataTfEips#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,31 +16,31 @@ export interface TfDataEipsConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eips#region TfDataEips#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eips#region DataTfEips#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eips#tags TfDataEips#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eips#tags DataTfEips#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eips#filter TfDataEips#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eips#filter DataTfEips#filter}
   */
-  readonly filter?: TfDataEips.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataTfEips.FilterProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eips#timeouts TfDataEips#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eips#timeouts DataTfEips#timeouts}
   */
-  readonly timeouts?: TfDataEips.TimeoutsProperty;
+  readonly timeouts?: DataTfEips.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eips aws_eips}
 */
-export class TfDataEips extends cdktn.TerraformDataSource {
+export class DataTfEips extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class TfDataEips extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataEips resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfEips resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataEips to import
-  * @param importFromId The id of the existing TfDataEips that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eips#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataEips to import is found
+  * @param importToId The construct id used in the generated config for the DataTfEips to import
+  * @param importFromId The id of the existing DataTfEips that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eips#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfEips to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_eips", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class TfDataEips extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataEipsConfig = {}
+  * @param options DataTfEipsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataEipsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfEipsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_eips',
       terraformGeneratorMetadata: {
@@ -158,11 +158,11 @@ export class TfDataEips extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new TfDataEips.FilterPropertyList(this, "filter", true);
+  private _filter = new DataTfEips.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: TfDataEips.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataTfEips.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -174,11 +174,11 @@ export class TfDataEips extends cdktn.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfDataEips.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new DataTfEips.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfDataEips.TimeoutsProperty) {
+  public putTimeouts(value: DataTfEips.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -198,8 +198,8 @@ export class TfDataEips extends cdktn.TerraformDataSource {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      filter: cdktn.listMapper(tfDataEipsFilterPropertyToTerraform, true)(this._filter.internalValue),
-      timeouts: tfDataEipsTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      filter: cdktn.listMapper(dataTfEipsFilterPropertyToTerraform, true)(this._filter.internalValue),
+      timeouts: dataTfEipsTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -224,16 +224,16 @@ export class TfDataEips extends cdktn.TerraformDataSource {
         storageClassType: "stringMap",
       },
       filter: {
-        value: cdktn.listMapperHcl(tfDataEipsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataTfEipsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfDataEips.FilterPropertyList",
+        storageClassType: "DataTfEips.FilterPropertyList",
       },
       timeouts: {
-        value: tfDataEipsTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: dataTfEipsTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfDataEips.TimeoutsProperty",
+        storageClassType: "DataTfEips.TimeoutsProperty",
       },
     };
 
@@ -242,7 +242,7 @@ export class TfDataEips extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataEipsFilterPropertyToTerraform(struct?: TfDataEips.FilterProperty | cdktn.IResolvable): any {
+export function dataTfEipsFilterPropertyToTerraform(struct?: DataTfEips.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -254,7 +254,7 @@ export function tfDataEipsFilterPropertyToTerraform(struct?: TfDataEips.FilterPr
 }
 
 
-export function tfDataEipsFilterPropertyToHclTerraform(struct?: TfDataEips.FilterProperty | cdktn.IResolvable): any {
+export function dataTfEipsFilterPropertyToHclTerraform(struct?: DataTfEips.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -279,7 +279,7 @@ export function tfDataEipsFilterPropertyToHclTerraform(struct?: TfDataEips.Filte
 }
 
 
-export function tfDataEipsTimeoutsPropertyToTerraform(struct?: TfDataEips.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfEipsTimeoutsPropertyToTerraform(struct?: DataTfEips.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -290,7 +290,7 @@ export function tfDataEipsTimeoutsPropertyToTerraform(struct?: TfDataEips.Timeou
 }
 
 
-export function tfDataEipsTimeoutsPropertyToHclTerraform(struct?: TfDataEips.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfEipsTimeoutsPropertyToHclTerraform(struct?: DataTfEips.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -309,14 +309,14 @@ export function tfDataEipsTimeoutsPropertyToHclTerraform(struct?: TfDataEips.Tim
 }
 
 
-export namespace TfDataEips {
+export namespace DataTfEips {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eips#name TfDataEips#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eips#name DataTfEips#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eips#values TfDataEips#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eips#values DataTfEips#values}
   */
   readonly values: string[];
 }
@@ -418,7 +418,7 @@ export class FilterPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eips#read TfDataEips#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eips#read DataTfEips#read}
   */
   readonly read?: string;
 }

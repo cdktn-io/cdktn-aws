@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataEndpointConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfEndpointConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dms_endpoint#endpoint_id TfDataEndpoint#endpoint_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dms_endpoint#endpoint_id DataTfEndpoint#endpoint_id}
   */
   readonly endpointId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dms_endpoint#id TfDataEndpoint#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dms_endpoint#id DataTfEndpoint#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,11 +20,11 @@ export interface TfDataEndpointConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dms_endpoint#region TfDataEndpoint#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dms_endpoint#region DataTfEndpoint#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dms_endpoint#tags TfDataEndpoint#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dms_endpoint#tags DataTfEndpoint#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -32,7 +32,7 @@ export interface TfDataEndpointConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dms_endpoint aws_dms_endpoint}
 */
-export class TfDataEndpoint extends cdktn.TerraformDataSource {
+export class DataTfEndpoint extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class TfDataEndpoint extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataEndpoint resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfEndpoint resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataEndpoint to import
-  * @param importFromId The id of the existing TfDataEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dms_endpoint#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataEndpoint to import is found
+  * @param importToId The construct id used in the generated config for the DataTfEndpoint to import
+  * @param importFromId The id of the existing DataTfEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dms_endpoint#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfEndpoint to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_dms_endpoint", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class TfDataEndpoint extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataEndpointConfig
+  * @param options DataTfEndpointConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataEndpointConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfEndpointConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_dms_endpoint',
       terraformGeneratorMetadata: {
@@ -101,7 +101,7 @@ export class TfDataEndpoint extends cdktn.TerraformDataSource {
   }
 
   // elasticsearch_settings - computed: true, optional: false, required: false
-  private _elasticsearchSettings = new TfDataEndpoint.ElasticsearchSettingsPropertyList(this, "elasticsearch_settings", false);
+  private _elasticsearchSettings = new DataTfEndpoint.ElasticsearchSettingsPropertyList(this, "elasticsearch_settings", false);
   public get elasticsearchSettings() {
     return this._elasticsearchSettings;
   }
@@ -156,13 +156,13 @@ export class TfDataEndpoint extends cdktn.TerraformDataSource {
   }
 
   // kafka_settings - computed: true, optional: false, required: false
-  private _kafkaSettings = new TfDataEndpoint.KafkaSettingsPropertyList(this, "kafka_settings", false);
+  private _kafkaSettings = new DataTfEndpoint.KafkaSettingsPropertyList(this, "kafka_settings", false);
   public get kafkaSettings() {
     return this._kafkaSettings;
   }
 
   // kinesis_settings - computed: true, optional: false, required: false
-  private _kinesisSettings = new TfDataEndpoint.KinesisSettingsPropertyList(this, "kinesis_settings", false);
+  private _kinesisSettings = new DataTfEndpoint.KinesisSettingsPropertyList(this, "kinesis_settings", false);
   public get kinesisSettings() {
     return this._kinesisSettings;
   }
@@ -173,13 +173,13 @@ export class TfDataEndpoint extends cdktn.TerraformDataSource {
   }
 
   // mongodb_settings - computed: true, optional: false, required: false
-  private _mongodbSettings = new TfDataEndpoint.MongodbSettingsPropertyList(this, "mongodb_settings", false);
+  private _mongodbSettings = new DataTfEndpoint.MongodbSettingsPropertyList(this, "mongodb_settings", false);
   public get mongodbSettings() {
     return this._mongodbSettings;
   }
 
   // mysql_settings - computed: true, optional: false, required: false
-  private _mysqlSettings = new TfDataEndpoint.MysqlSettingsPropertyList(this, "mysql_settings", false);
+  private _mysqlSettings = new DataTfEndpoint.MysqlSettingsPropertyList(this, "mysql_settings", false);
   public get mysqlSettings() {
     return this._mysqlSettings;
   }
@@ -195,19 +195,19 @@ export class TfDataEndpoint extends cdktn.TerraformDataSource {
   }
 
   // postgres_settings - computed: true, optional: false, required: false
-  private _postgresSettings = new TfDataEndpoint.PostgresSettingsPropertyList(this, "postgres_settings", false);
+  private _postgresSettings = new DataTfEndpoint.PostgresSettingsPropertyList(this, "postgres_settings", false);
   public get postgresSettings() {
     return this._postgresSettings;
   }
 
   // redis_settings - computed: true, optional: false, required: false
-  private _redisSettings = new TfDataEndpoint.RedisSettingsPropertyList(this, "redis_settings", false);
+  private _redisSettings = new DataTfEndpoint.RedisSettingsPropertyList(this, "redis_settings", false);
   public get redisSettings() {
     return this._redisSettings;
   }
 
   // redshift_settings - computed: true, optional: false, required: false
-  private _redshiftSettings = new TfDataEndpoint.RedshiftSettingsPropertyList(this, "redshift_settings", false);
+  private _redshiftSettings = new DataTfEndpoint.RedshiftSettingsPropertyList(this, "redshift_settings", false);
   public get redshiftSettings() {
     return this._redshiftSettings;
   }
@@ -229,7 +229,7 @@ export class TfDataEndpoint extends cdktn.TerraformDataSource {
   }
 
   // s3_settings - computed: true, optional: false, required: false
-  private _s3Settings = new TfDataEndpoint.S3SettingsPropertyList(this, "s3_settings", false);
+  private _s3Settings = new DataTfEndpoint.S3SettingsPropertyList(this, "s3_settings", false);
   public get s3Settings() {
     return this._s3Settings;
   }
@@ -326,7 +326,7 @@ export class TfDataEndpoint extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataEndpointElasticsearchSettingsPropertyToTerraform(struct?: TfDataEndpoint.ElasticsearchSettingsProperty): any {
+export function dataTfEndpointElasticsearchSettingsPropertyToTerraform(struct?: DataTfEndpoint.ElasticsearchSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -336,7 +336,7 @@ export function tfDataEndpointElasticsearchSettingsPropertyToTerraform(struct?: 
 }
 
 
-export function tfDataEndpointElasticsearchSettingsPropertyToHclTerraform(struct?: TfDataEndpoint.ElasticsearchSettingsProperty): any {
+export function dataTfEndpointElasticsearchSettingsPropertyToHclTerraform(struct?: DataTfEndpoint.ElasticsearchSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -347,7 +347,7 @@ export function tfDataEndpointElasticsearchSettingsPropertyToHclTerraform(struct
 }
 
 
-export function tfDataEndpointKafkaSettingsPropertyToTerraform(struct?: TfDataEndpoint.KafkaSettingsProperty): any {
+export function dataTfEndpointKafkaSettingsPropertyToTerraform(struct?: DataTfEndpoint.KafkaSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -357,7 +357,7 @@ export function tfDataEndpointKafkaSettingsPropertyToTerraform(struct?: TfDataEn
 }
 
 
-export function tfDataEndpointKafkaSettingsPropertyToHclTerraform(struct?: TfDataEndpoint.KafkaSettingsProperty): any {
+export function dataTfEndpointKafkaSettingsPropertyToHclTerraform(struct?: DataTfEndpoint.KafkaSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -368,7 +368,7 @@ export function tfDataEndpointKafkaSettingsPropertyToHclTerraform(struct?: TfDat
 }
 
 
-export function tfDataEndpointKinesisSettingsPropertyToTerraform(struct?: TfDataEndpoint.KinesisSettingsProperty): any {
+export function dataTfEndpointKinesisSettingsPropertyToTerraform(struct?: DataTfEndpoint.KinesisSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -378,7 +378,7 @@ export function tfDataEndpointKinesisSettingsPropertyToTerraform(struct?: TfData
 }
 
 
-export function tfDataEndpointKinesisSettingsPropertyToHclTerraform(struct?: TfDataEndpoint.KinesisSettingsProperty): any {
+export function dataTfEndpointKinesisSettingsPropertyToHclTerraform(struct?: DataTfEndpoint.KinesisSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -389,7 +389,7 @@ export function tfDataEndpointKinesisSettingsPropertyToHclTerraform(struct?: TfD
 }
 
 
-export function tfDataEndpointMongodbSettingsPropertyToTerraform(struct?: TfDataEndpoint.MongodbSettingsProperty): any {
+export function dataTfEndpointMongodbSettingsPropertyToTerraform(struct?: DataTfEndpoint.MongodbSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -399,7 +399,7 @@ export function tfDataEndpointMongodbSettingsPropertyToTerraform(struct?: TfData
 }
 
 
-export function tfDataEndpointMongodbSettingsPropertyToHclTerraform(struct?: TfDataEndpoint.MongodbSettingsProperty): any {
+export function dataTfEndpointMongodbSettingsPropertyToHclTerraform(struct?: DataTfEndpoint.MongodbSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -410,7 +410,7 @@ export function tfDataEndpointMongodbSettingsPropertyToHclTerraform(struct?: TfD
 }
 
 
-export function tfDataEndpointMysqlSettingsPropertyToTerraform(struct?: TfDataEndpoint.MysqlSettingsProperty): any {
+export function dataTfEndpointMysqlSettingsPropertyToTerraform(struct?: DataTfEndpoint.MysqlSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -420,7 +420,7 @@ export function tfDataEndpointMysqlSettingsPropertyToTerraform(struct?: TfDataEn
 }
 
 
-export function tfDataEndpointMysqlSettingsPropertyToHclTerraform(struct?: TfDataEndpoint.MysqlSettingsProperty): any {
+export function dataTfEndpointMysqlSettingsPropertyToHclTerraform(struct?: DataTfEndpoint.MysqlSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -431,7 +431,7 @@ export function tfDataEndpointMysqlSettingsPropertyToHclTerraform(struct?: TfDat
 }
 
 
-export function tfDataEndpointPostgresSettingsPropertyToTerraform(struct?: TfDataEndpoint.PostgresSettingsProperty): any {
+export function dataTfEndpointPostgresSettingsPropertyToTerraform(struct?: DataTfEndpoint.PostgresSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -441,7 +441,7 @@ export function tfDataEndpointPostgresSettingsPropertyToTerraform(struct?: TfDat
 }
 
 
-export function tfDataEndpointPostgresSettingsPropertyToHclTerraform(struct?: TfDataEndpoint.PostgresSettingsProperty): any {
+export function dataTfEndpointPostgresSettingsPropertyToHclTerraform(struct?: DataTfEndpoint.PostgresSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -452,7 +452,7 @@ export function tfDataEndpointPostgresSettingsPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfDataEndpointRedisSettingsPropertyToTerraform(struct?: TfDataEndpoint.RedisSettingsProperty): any {
+export function dataTfEndpointRedisSettingsPropertyToTerraform(struct?: DataTfEndpoint.RedisSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -462,7 +462,7 @@ export function tfDataEndpointRedisSettingsPropertyToTerraform(struct?: TfDataEn
 }
 
 
-export function tfDataEndpointRedisSettingsPropertyToHclTerraform(struct?: TfDataEndpoint.RedisSettingsProperty): any {
+export function dataTfEndpointRedisSettingsPropertyToHclTerraform(struct?: DataTfEndpoint.RedisSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -473,7 +473,7 @@ export function tfDataEndpointRedisSettingsPropertyToHclTerraform(struct?: TfDat
 }
 
 
-export function tfDataEndpointRedshiftSettingsPropertyToTerraform(struct?: TfDataEndpoint.RedshiftSettingsProperty): any {
+export function dataTfEndpointRedshiftSettingsPropertyToTerraform(struct?: DataTfEndpoint.RedshiftSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -483,7 +483,7 @@ export function tfDataEndpointRedshiftSettingsPropertyToTerraform(struct?: TfDat
 }
 
 
-export function tfDataEndpointRedshiftSettingsPropertyToHclTerraform(struct?: TfDataEndpoint.RedshiftSettingsProperty): any {
+export function dataTfEndpointRedshiftSettingsPropertyToHclTerraform(struct?: DataTfEndpoint.RedshiftSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -494,7 +494,7 @@ export function tfDataEndpointRedshiftSettingsPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfDataEndpointS3SettingsPropertyToTerraform(struct?: TfDataEndpoint.S3SettingsProperty): any {
+export function dataTfEndpointS3SettingsPropertyToTerraform(struct?: DataTfEndpoint.S3SettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -504,7 +504,7 @@ export function tfDataEndpointS3SettingsPropertyToTerraform(struct?: TfDataEndpo
 }
 
 
-export function tfDataEndpointS3SettingsPropertyToHclTerraform(struct?: TfDataEndpoint.S3SettingsProperty): any {
+export function dataTfEndpointS3SettingsPropertyToHclTerraform(struct?: DataTfEndpoint.S3SettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -515,7 +515,7 @@ export function tfDataEndpointS3SettingsPropertyToHclTerraform(struct?: TfDataEn
 }
 
 
-export namespace TfDataEndpoint {
+export namespace DataTfEndpoint {
 export interface ElasticsearchSettingsProperty {
 }
 export class ElasticsearchSettingsPropertyOutputReference extends cdktn.ComplexObject {

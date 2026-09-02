@@ -5,11 +5,11 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataSavingsPlanConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfSavingsPlanConfig extends cdktn.TerraformMetaArguments {
   /**
   * The ID of the Savings Plan.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/savingsplans_savings_plan#savings_plan_id TfDataSavingsPlan#savings_plan_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/savingsplans_savings_plan#savings_plan_id DataTfSavingsPlan#savings_plan_id}
   */
   readonly savingsPlanId: string;
 }
@@ -17,7 +17,7 @@ export interface TfDataSavingsPlanConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/savingsplans_savings_plan aws_savingsplans_savings_plan}
 */
-export class TfDataSavingsPlan extends cdktn.TerraformDataSource {
+export class DataTfSavingsPlan extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -28,11 +28,11 @@ export class TfDataSavingsPlan extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataSavingsPlan resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfSavingsPlan resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataSavingsPlan to import
-  * @param importFromId The id of the existing TfDataSavingsPlan that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/savingsplans_savings_plan#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataSavingsPlan to import is found
+  * @param importToId The construct id used in the generated config for the DataTfSavingsPlan to import
+  * @param importFromId The id of the existing DataTfSavingsPlan that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/savingsplans_savings_plan#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfSavingsPlan to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_savingsplans_savings_plan", importId: importFromId, provider });
@@ -47,9 +47,9 @@ export class TfDataSavingsPlan extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataSavingsPlanConfig
+  * @param options DataTfSavingsPlanConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataSavingsPlanConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfSavingsPlanConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_savingsplans_savings_plan',
       terraformGeneratorMetadata: {

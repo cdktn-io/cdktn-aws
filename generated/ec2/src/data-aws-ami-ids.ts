@@ -5,58 +5,58 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataAmiIdsConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfAmiIdsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami_ids#executable_users TfDataAmiIds#executable_users}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami_ids#executable_users DataTfAmiIds#executable_users}
   */
   readonly executableUsers?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami_ids#id TfDataAmiIds#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami_ids#id DataTfAmiIds#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami_ids#include_deprecated TfDataAmiIds#include_deprecated}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami_ids#include_deprecated DataTfAmiIds#include_deprecated}
   */
   readonly includeDeprecated?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami_ids#name_regex TfDataAmiIds#name_regex}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami_ids#name_regex DataTfAmiIds#name_regex}
   */
   readonly nameRegex?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami_ids#owners TfDataAmiIds#owners}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami_ids#owners DataTfAmiIds#owners}
   */
   readonly owners: string[];
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami_ids#region TfDataAmiIds#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami_ids#region DataTfAmiIds#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami_ids#sort_ascending TfDataAmiIds#sort_ascending}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami_ids#sort_ascending DataTfAmiIds#sort_ascending}
   */
   readonly sortAscending?: boolean | cdktn.IResolvable;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami_ids#filter TfDataAmiIds#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami_ids#filter DataTfAmiIds#filter}
   */
-  readonly filter?: TfDataAmiIds.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataTfAmiIds.FilterProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami_ids#timeouts TfDataAmiIds#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami_ids#timeouts DataTfAmiIds#timeouts}
   */
-  readonly timeouts?: TfDataAmiIds.TimeoutsProperty;
+  readonly timeouts?: DataTfAmiIds.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami_ids aws_ami_ids}
 */
-export class TfDataAmiIds extends cdktn.TerraformDataSource {
+export class DataTfAmiIds extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -67,11 +67,11 @@ export class TfDataAmiIds extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataAmiIds resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfAmiIds resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataAmiIds to import
-  * @param importFromId The id of the existing TfDataAmiIds that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami_ids#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataAmiIds to import is found
+  * @param importToId The construct id used in the generated config for the DataTfAmiIds to import
+  * @param importFromId The id of the existing DataTfAmiIds that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami_ids#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfAmiIds to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ami_ids", importId: importFromId, provider });
@@ -86,9 +86,9 @@ export class TfDataAmiIds extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataAmiIdsConfig
+  * @param options DataTfAmiIdsConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataAmiIdsConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfAmiIdsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ami_ids',
       terraformGeneratorMetadata: {
@@ -234,11 +234,11 @@ export class TfDataAmiIds extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new TfDataAmiIds.FilterPropertyList(this, "filter", true);
+  private _filter = new DataTfAmiIds.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: TfDataAmiIds.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataTfAmiIds.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -250,11 +250,11 @@ export class TfDataAmiIds extends cdktn.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfDataAmiIds.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new DataTfAmiIds.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfDataAmiIds.TimeoutsProperty) {
+  public putTimeouts(value: DataTfAmiIds.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -278,8 +278,8 @@ export class TfDataAmiIds extends cdktn.TerraformDataSource {
       owners: cdktn.listMapper(cdktn.stringToTerraform, false)(this._owners),
       region: cdktn.stringToTerraform(this._region),
       sort_ascending: cdktn.booleanToTerraform(this._sortAscending),
-      filter: cdktn.listMapper(tfDataAmiIdsFilterPropertyToTerraform, true)(this._filter.internalValue),
-      timeouts: tfDataAmiIdsTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      filter: cdktn.listMapper(dataTfAmiIdsFilterPropertyToTerraform, true)(this._filter.internalValue),
+      timeouts: dataTfAmiIdsTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -328,16 +328,16 @@ export class TfDataAmiIds extends cdktn.TerraformDataSource {
         storageClassType: "boolean",
       },
       filter: {
-        value: cdktn.listMapperHcl(tfDataAmiIdsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataTfAmiIdsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfDataAmiIds.FilterPropertyList",
+        storageClassType: "DataTfAmiIds.FilterPropertyList",
       },
       timeouts: {
-        value: tfDataAmiIdsTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: dataTfAmiIdsTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfDataAmiIds.TimeoutsProperty",
+        storageClassType: "DataTfAmiIds.TimeoutsProperty",
       },
     };
 
@@ -346,7 +346,7 @@ export class TfDataAmiIds extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataAmiIdsFilterPropertyToTerraform(struct?: TfDataAmiIds.FilterProperty | cdktn.IResolvable): any {
+export function dataTfAmiIdsFilterPropertyToTerraform(struct?: DataTfAmiIds.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -358,7 +358,7 @@ export function tfDataAmiIdsFilterPropertyToTerraform(struct?: TfDataAmiIds.Filt
 }
 
 
-export function tfDataAmiIdsFilterPropertyToHclTerraform(struct?: TfDataAmiIds.FilterProperty | cdktn.IResolvable): any {
+export function dataTfAmiIdsFilterPropertyToHclTerraform(struct?: DataTfAmiIds.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -383,7 +383,7 @@ export function tfDataAmiIdsFilterPropertyToHclTerraform(struct?: TfDataAmiIds.F
 }
 
 
-export function tfDataAmiIdsTimeoutsPropertyToTerraform(struct?: TfDataAmiIds.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfAmiIdsTimeoutsPropertyToTerraform(struct?: DataTfAmiIds.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -394,7 +394,7 @@ export function tfDataAmiIdsTimeoutsPropertyToTerraform(struct?: TfDataAmiIds.Ti
 }
 
 
-export function tfDataAmiIdsTimeoutsPropertyToHclTerraform(struct?: TfDataAmiIds.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfAmiIdsTimeoutsPropertyToHclTerraform(struct?: DataTfAmiIds.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -413,14 +413,14 @@ export function tfDataAmiIdsTimeoutsPropertyToHclTerraform(struct?: TfDataAmiIds
 }
 
 
-export namespace TfDataAmiIds {
+export namespace DataTfAmiIds {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami_ids#name TfDataAmiIds#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami_ids#name DataTfAmiIds#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami_ids#values TfDataAmiIds#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami_ids#values DataTfAmiIds#values}
   */
   readonly values: string[];
 }
@@ -522,7 +522,7 @@ export class FilterPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami_ids#read TfDataAmiIds#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami_ids#read DataTfAmiIds#read}
   */
   readonly read?: string;
 }

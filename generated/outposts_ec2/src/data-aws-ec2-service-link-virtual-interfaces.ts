@@ -5,29 +5,29 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataServiceLinkVirtualInterfacesConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfServiceLinkVirtualInterfacesConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_service_link_virtual_interfaces#region TfDataServiceLinkVirtualInterfaces#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_service_link_virtual_interfaces#region DataTfServiceLinkVirtualInterfaces#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_service_link_virtual_interfaces#tags TfDataServiceLinkVirtualInterfaces#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_service_link_virtual_interfaces#tags DataTfServiceLinkVirtualInterfaces#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_service_link_virtual_interfaces#filter TfDataServiceLinkVirtualInterfaces#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_service_link_virtual_interfaces#filter DataTfServiceLinkVirtualInterfaces#filter}
   */
-  readonly filter?: TfDataServiceLinkVirtualInterfaces.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataTfServiceLinkVirtualInterfaces.FilterProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_service_link_virtual_interfaces aws_ec2_service_link_virtual_interfaces}
 */
-export class TfDataServiceLinkVirtualInterfaces extends cdktn.TerraformDataSource {
+export class DataTfServiceLinkVirtualInterfaces extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -38,11 +38,11 @@ export class TfDataServiceLinkVirtualInterfaces extends cdktn.TerraformDataSourc
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataServiceLinkVirtualInterfaces resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfServiceLinkVirtualInterfaces resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataServiceLinkVirtualInterfaces to import
-  * @param importFromId The id of the existing TfDataServiceLinkVirtualInterfaces that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_service_link_virtual_interfaces#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataServiceLinkVirtualInterfaces to import is found
+  * @param importToId The construct id used in the generated config for the DataTfServiceLinkVirtualInterfaces to import
+  * @param importFromId The id of the existing DataTfServiceLinkVirtualInterfaces that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_service_link_virtual_interfaces#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfServiceLinkVirtualInterfaces to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_service_link_virtual_interfaces", importId: importFromId, provider });
@@ -57,9 +57,9 @@ export class TfDataServiceLinkVirtualInterfaces extends cdktn.TerraformDataSourc
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataServiceLinkVirtualInterfacesConfig = {}
+  * @param options DataTfServiceLinkVirtualInterfacesConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataServiceLinkVirtualInterfacesConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfServiceLinkVirtualInterfacesConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_service_link_virtual_interfaces',
       terraformGeneratorMetadata: {
@@ -122,11 +122,11 @@ export class TfDataServiceLinkVirtualInterfaces extends cdktn.TerraformDataSourc
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new TfDataServiceLinkVirtualInterfaces.FilterPropertyList(this, "filter", true);
+  private _filter = new DataTfServiceLinkVirtualInterfaces.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: TfDataServiceLinkVirtualInterfaces.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataTfServiceLinkVirtualInterfaces.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -145,7 +145,7 @@ export class TfDataServiceLinkVirtualInterfaces extends cdktn.TerraformDataSourc
     return {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      filter: cdktn.listMapper(tfDataServiceLinkVirtualInterfacesFilterPropertyToTerraform, true)(this._filter.internalValue),
+      filter: cdktn.listMapper(dataTfServiceLinkVirtualInterfacesFilterPropertyToTerraform, true)(this._filter.internalValue),
     };
   }
 
@@ -164,10 +164,10 @@ export class TfDataServiceLinkVirtualInterfaces extends cdktn.TerraformDataSourc
         storageClassType: "stringMap",
       },
       filter: {
-        value: cdktn.listMapperHcl(tfDataServiceLinkVirtualInterfacesFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataTfServiceLinkVirtualInterfacesFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfDataServiceLinkVirtualInterfaces.FilterPropertyList",
+        storageClassType: "DataTfServiceLinkVirtualInterfaces.FilterPropertyList",
       },
     };
 
@@ -176,7 +176,7 @@ export class TfDataServiceLinkVirtualInterfaces extends cdktn.TerraformDataSourc
   }
 }
 
-export function tfDataServiceLinkVirtualInterfacesFilterPropertyToTerraform(struct?: TfDataServiceLinkVirtualInterfaces.FilterProperty | cdktn.IResolvable): any {
+export function dataTfServiceLinkVirtualInterfacesFilterPropertyToTerraform(struct?: DataTfServiceLinkVirtualInterfaces.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -188,7 +188,7 @@ export function tfDataServiceLinkVirtualInterfacesFilterPropertyToTerraform(stru
 }
 
 
-export function tfDataServiceLinkVirtualInterfacesFilterPropertyToHclTerraform(struct?: TfDataServiceLinkVirtualInterfaces.FilterProperty | cdktn.IResolvable): any {
+export function dataTfServiceLinkVirtualInterfacesFilterPropertyToHclTerraform(struct?: DataTfServiceLinkVirtualInterfaces.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -213,14 +213,14 @@ export function tfDataServiceLinkVirtualInterfacesFilterPropertyToHclTerraform(s
 }
 
 
-export namespace TfDataServiceLinkVirtualInterfaces {
+export namespace DataTfServiceLinkVirtualInterfaces {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_service_link_virtual_interfaces#name TfDataServiceLinkVirtualInterfaces#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_service_link_virtual_interfaces#name DataTfServiceLinkVirtualInterfaces#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_service_link_virtual_interfaces#values TfDataServiceLinkVirtualInterfaces#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_service_link_virtual_interfaces#values DataTfServiceLinkVirtualInterfaces#values}
   */
   readonly values: string[];
 }

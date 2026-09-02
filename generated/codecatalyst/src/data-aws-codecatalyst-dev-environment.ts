@@ -5,56 +5,56 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataDevEnvironmentConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfDevEnvironmentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecatalyst_dev_environment#alias TfDataDevEnvironment#alias}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecatalyst_dev_environment#alias DataTfDevEnvironment#alias}
   */
   readonly alias?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecatalyst_dev_environment#creator_id TfDataDevEnvironment#creator_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecatalyst_dev_environment#creator_id DataTfDevEnvironment#creator_id}
   */
   readonly creatorId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecatalyst_dev_environment#env_id TfDataDevEnvironment#env_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecatalyst_dev_environment#env_id DataTfDevEnvironment#env_id}
   */
   readonly envId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecatalyst_dev_environment#id TfDataDevEnvironment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecatalyst_dev_environment#id DataTfDevEnvironment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecatalyst_dev_environment#project_name TfDataDevEnvironment#project_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecatalyst_dev_environment#project_name DataTfDevEnvironment#project_name}
   */
   readonly projectName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecatalyst_dev_environment#region TfDataDevEnvironment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecatalyst_dev_environment#region DataTfDevEnvironment#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecatalyst_dev_environment#space_name TfDataDevEnvironment#space_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecatalyst_dev_environment#space_name DataTfDevEnvironment#space_name}
   */
   readonly spaceName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecatalyst_dev_environment#tags TfDataDevEnvironment#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecatalyst_dev_environment#tags DataTfDevEnvironment#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * repositories block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecatalyst_dev_environment#repositories TfDataDevEnvironment#repositories}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecatalyst_dev_environment#repositories DataTfDevEnvironment#repositories}
   */
-  readonly repositories?: TfDataDevEnvironment.RepositoriesProperty[] | cdktn.IResolvable;
+  readonly repositories?: DataTfDevEnvironment.RepositoriesProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecatalyst_dev_environment aws_codecatalyst_dev_environment}
 */
-export class TfDataDevEnvironment extends cdktn.TerraformDataSource {
+export class DataTfDevEnvironment extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -65,11 +65,11 @@ export class TfDataDevEnvironment extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataDevEnvironment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfDevEnvironment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataDevEnvironment to import
-  * @param importFromId The id of the existing TfDataDevEnvironment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecatalyst_dev_environment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataDevEnvironment to import is found
+  * @param importToId The construct id used in the generated config for the DataTfDevEnvironment to import
+  * @param importFromId The id of the existing DataTfDevEnvironment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecatalyst_dev_environment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfDevEnvironment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_codecatalyst_dev_environment", importId: importFromId, provider });
@@ -84,9 +84,9 @@ export class TfDataDevEnvironment extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataDevEnvironmentConfig
+  * @param options DataTfDevEnvironmentConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataDevEnvironmentConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfDevEnvironmentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_codecatalyst_dev_environment',
       terraformGeneratorMetadata: {
@@ -179,7 +179,7 @@ export class TfDataDevEnvironment extends cdktn.TerraformDataSource {
   }
 
   // ides - computed: true, optional: false, required: false
-  private _ides = new TfDataDevEnvironment.IdesPropertyList(this, "ides", false);
+  private _ides = new DataTfDevEnvironment.IdesPropertyList(this, "ides", false);
   public get ides() {
     return this._ides;
   }
@@ -200,7 +200,7 @@ export class TfDataDevEnvironment extends cdktn.TerraformDataSource {
   }
 
   // persistent_storage - computed: true, optional: false, required: false
-  private _persistentStorage = new TfDataDevEnvironment.PersistentStoragePropertyList(this, "persistent_storage", false);
+  private _persistentStorage = new DataTfDevEnvironment.PersistentStoragePropertyList(this, "persistent_storage", false);
   public get persistentStorage() {
     return this._persistentStorage;
   }
@@ -274,11 +274,11 @@ export class TfDataDevEnvironment extends cdktn.TerraformDataSource {
   }
 
   // repositories - computed: false, optional: true, required: false
-  private _repositories = new TfDataDevEnvironment.RepositoriesPropertyList(this, "repositories", false);
+  private _repositories = new DataTfDevEnvironment.RepositoriesPropertyList(this, "repositories", false);
   public get repositories() {
     return this._repositories;
   }
-  public putRepositories(value: TfDataDevEnvironment.RepositoriesProperty[] | cdktn.IResolvable) {
+  public putRepositories(value: DataTfDevEnvironment.RepositoriesProperty[] | cdktn.IResolvable) {
     this._repositories.internalValue = value;
   }
   public resetRepositories() {
@@ -303,7 +303,7 @@ export class TfDataDevEnvironment extends cdktn.TerraformDataSource {
       region: cdktn.stringToTerraform(this._region),
       space_name: cdktn.stringToTerraform(this._spaceName),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      repositories: cdktn.listMapper(tfDataDevEnvironmentRepositoriesPropertyToTerraform, true)(this._repositories.internalValue),
+      repositories: cdktn.listMapper(dataTfDevEnvironmentRepositoriesPropertyToTerraform, true)(this._repositories.internalValue),
     };
   }
 
@@ -358,10 +358,10 @@ export class TfDataDevEnvironment extends cdktn.TerraformDataSource {
         storageClassType: "stringMap",
       },
       repositories: {
-        value: cdktn.listMapperHcl(tfDataDevEnvironmentRepositoriesPropertyToHclTerraform, true)(this._repositories.internalValue),
+        value: cdktn.listMapperHcl(dataTfDevEnvironmentRepositoriesPropertyToHclTerraform, true)(this._repositories.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDataDevEnvironment.RepositoriesPropertyList",
+        storageClassType: "DataTfDevEnvironment.RepositoriesPropertyList",
       },
     };
 
@@ -370,7 +370,7 @@ export class TfDataDevEnvironment extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataDevEnvironmentIdesPropertyToTerraform(struct?: TfDataDevEnvironment.IdesProperty): any {
+export function dataTfDevEnvironmentIdesPropertyToTerraform(struct?: DataTfDevEnvironment.IdesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -380,7 +380,7 @@ export function tfDataDevEnvironmentIdesPropertyToTerraform(struct?: TfDataDevEn
 }
 
 
-export function tfDataDevEnvironmentIdesPropertyToHclTerraform(struct?: TfDataDevEnvironment.IdesProperty): any {
+export function dataTfDevEnvironmentIdesPropertyToHclTerraform(struct?: DataTfDevEnvironment.IdesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -391,7 +391,7 @@ export function tfDataDevEnvironmentIdesPropertyToHclTerraform(struct?: TfDataDe
 }
 
 
-export function tfDataDevEnvironmentPersistentStoragePropertyToTerraform(struct?: TfDataDevEnvironment.PersistentStorageProperty): any {
+export function dataTfDevEnvironmentPersistentStoragePropertyToTerraform(struct?: DataTfDevEnvironment.PersistentStorageProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -401,7 +401,7 @@ export function tfDataDevEnvironmentPersistentStoragePropertyToTerraform(struct?
 }
 
 
-export function tfDataDevEnvironmentPersistentStoragePropertyToHclTerraform(struct?: TfDataDevEnvironment.PersistentStorageProperty): any {
+export function dataTfDevEnvironmentPersistentStoragePropertyToHclTerraform(struct?: DataTfDevEnvironment.PersistentStorageProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -412,7 +412,7 @@ export function tfDataDevEnvironmentPersistentStoragePropertyToHclTerraform(stru
 }
 
 
-export function tfDataDevEnvironmentRepositoriesPropertyToTerraform(struct?: TfDataDevEnvironment.RepositoriesProperty | cdktn.IResolvable): any {
+export function dataTfDevEnvironmentRepositoriesPropertyToTerraform(struct?: DataTfDevEnvironment.RepositoriesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -422,7 +422,7 @@ export function tfDataDevEnvironmentRepositoriesPropertyToTerraform(struct?: TfD
 }
 
 
-export function tfDataDevEnvironmentRepositoriesPropertyToHclTerraform(struct?: TfDataDevEnvironment.RepositoriesProperty | cdktn.IResolvable): any {
+export function dataTfDevEnvironmentRepositoriesPropertyToHclTerraform(struct?: DataTfDevEnvironment.RepositoriesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -433,7 +433,7 @@ export function tfDataDevEnvironmentRepositoriesPropertyToHclTerraform(struct?: 
 }
 
 
-export namespace TfDataDevEnvironment {
+export namespace DataTfDevEnvironment {
 export interface IdesProperty {
 }
 export class IdesPropertyOutputReference extends cdktn.ComplexObject {

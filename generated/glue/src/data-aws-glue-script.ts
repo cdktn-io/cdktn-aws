@@ -5,42 +5,42 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataScriptConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfScriptConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_script#id TfDataScript#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_script#id DataTfScript#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_script#language TfDataScript#language}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_script#language DataTfScript#language}
   */
   readonly language?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_script#region TfDataScript#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_script#region DataTfScript#region}
   */
   readonly region?: string;
   /**
   * dag_edge block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_script#dag_edge TfDataScript#dag_edge}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_script#dag_edge DataTfScript#dag_edge}
   */
-  readonly dagEdge: TfDataScript.DagEdgeProperty[] | cdktn.IResolvable;
+  readonly dagEdge: DataTfScript.DagEdgeProperty[] | cdktn.IResolvable;
   /**
   * dag_node block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_script#dag_node TfDataScript#dag_node}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_script#dag_node DataTfScript#dag_node}
   */
-  readonly dagNode: TfDataScript.DagNodeProperty[] | cdktn.IResolvable;
+  readonly dagNode: DataTfScript.DagNodeProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_script aws_glue_script}
 */
-export class TfDataScript extends cdktn.TerraformDataSource {
+export class DataTfScript extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class TfDataScript extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataScript resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfScript resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataScript to import
-  * @param importFromId The id of the existing TfDataScript that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_script#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataScript to import is found
+  * @param importToId The construct id used in the generated config for the DataTfScript to import
+  * @param importFromId The id of the existing DataTfScript that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_script#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfScript to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_glue_script", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class TfDataScript extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataScriptConfig
+  * @param options DataTfScriptConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataScriptConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfScriptConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_glue_script',
       terraformGeneratorMetadata: {
@@ -158,11 +158,11 @@ export class TfDataScript extends cdktn.TerraformDataSource {
   }
 
   // dag_edge - computed: false, optional: false, required: true
-  private _dagEdge = new TfDataScript.DagEdgePropertyList(this, "dag_edge", false);
+  private _dagEdge = new DataTfScript.DagEdgePropertyList(this, "dag_edge", false);
   public get dagEdge() {
     return this._dagEdge;
   }
-  public putDagEdge(value: TfDataScript.DagEdgeProperty[] | cdktn.IResolvable) {
+  public putDagEdge(value: DataTfScript.DagEdgeProperty[] | cdktn.IResolvable) {
     this._dagEdge.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -171,11 +171,11 @@ export class TfDataScript extends cdktn.TerraformDataSource {
   }
 
   // dag_node - computed: false, optional: false, required: true
-  private _dagNode = new TfDataScript.DagNodePropertyList(this, "dag_node", false);
+  private _dagNode = new DataTfScript.DagNodePropertyList(this, "dag_node", false);
   public get dagNode() {
     return this._dagNode;
   }
-  public putDagNode(value: TfDataScript.DagNodeProperty[] | cdktn.IResolvable) {
+  public putDagNode(value: DataTfScript.DagNodeProperty[] | cdktn.IResolvable) {
     this._dagNode.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -192,8 +192,8 @@ export class TfDataScript extends cdktn.TerraformDataSource {
       id: cdktn.stringToTerraform(this._id),
       language: cdktn.stringToTerraform(this._language),
       region: cdktn.stringToTerraform(this._region),
-      dag_edge: cdktn.listMapper(tfDataScriptDagEdgePropertyToTerraform, true)(this._dagEdge.internalValue),
-      dag_node: cdktn.listMapper(tfDataScriptDagNodePropertyToTerraform, true)(this._dagNode.internalValue),
+      dag_edge: cdktn.listMapper(dataTfScriptDagEdgePropertyToTerraform, true)(this._dagEdge.internalValue),
+      dag_node: cdktn.listMapper(dataTfScriptDagNodePropertyToTerraform, true)(this._dagNode.internalValue),
     };
   }
 
@@ -218,16 +218,16 @@ export class TfDataScript extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       dag_edge: {
-        value: cdktn.listMapperHcl(tfDataScriptDagEdgePropertyToHclTerraform, true)(this._dagEdge.internalValue),
+        value: cdktn.listMapperHcl(dataTfScriptDagEdgePropertyToHclTerraform, true)(this._dagEdge.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDataScript.DagEdgePropertyList",
+        storageClassType: "DataTfScript.DagEdgePropertyList",
       },
       dag_node: {
-        value: cdktn.listMapperHcl(tfDataScriptDagNodePropertyToHclTerraform, true)(this._dagNode.internalValue),
+        value: cdktn.listMapperHcl(dataTfScriptDagNodePropertyToHclTerraform, true)(this._dagNode.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDataScript.DagNodePropertyList",
+        storageClassType: "DataTfScript.DagNodePropertyList",
       },
     };
 
@@ -236,7 +236,7 @@ export class TfDataScript extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataScriptDagEdgePropertyToTerraform(struct?: TfDataScript.DagEdgeProperty | cdktn.IResolvable): any {
+export function dataTfScriptDagEdgePropertyToTerraform(struct?: DataTfScript.DagEdgeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -249,7 +249,7 @@ export function tfDataScriptDagEdgePropertyToTerraform(struct?: TfDataScript.Dag
 }
 
 
-export function tfDataScriptDagEdgePropertyToHclTerraform(struct?: TfDataScript.DagEdgeProperty | cdktn.IResolvable): any {
+export function dataTfScriptDagEdgePropertyToHclTerraform(struct?: DataTfScript.DagEdgeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -280,7 +280,7 @@ export function tfDataScriptDagEdgePropertyToHclTerraform(struct?: TfDataScript.
 }
 
 
-export function tfDataScriptArgsPropertyToTerraform(struct?: TfDataScript.ArgsProperty | cdktn.IResolvable): any {
+export function dataTfScriptArgsPropertyToTerraform(struct?: DataTfScript.ArgsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -293,7 +293,7 @@ export function tfDataScriptArgsPropertyToTerraform(struct?: TfDataScript.ArgsPr
 }
 
 
-export function tfDataScriptArgsPropertyToHclTerraform(struct?: TfDataScript.ArgsProperty | cdktn.IResolvable): any {
+export function dataTfScriptArgsPropertyToHclTerraform(struct?: DataTfScript.ArgsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -324,7 +324,7 @@ export function tfDataScriptArgsPropertyToHclTerraform(struct?: TfDataScript.Arg
 }
 
 
-export function tfDataScriptDagNodePropertyToTerraform(struct?: TfDataScript.DagNodeProperty | cdktn.IResolvable): any {
+export function dataTfScriptDagNodePropertyToTerraform(struct?: DataTfScript.DagNodeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -333,12 +333,12 @@ export function tfDataScriptDagNodePropertyToTerraform(struct?: TfDataScript.Dag
     id: cdktn.stringToTerraform(struct!.id),
     line_number: cdktn.numberToTerraform(struct!.lineNumber),
     node_type: cdktn.stringToTerraform(struct!.nodeType),
-    args: cdktn.listMapper(tfDataScriptArgsPropertyToTerraform, true)(struct!.args),
+    args: cdktn.listMapper(dataTfScriptArgsPropertyToTerraform, true)(struct!.args),
   }
 }
 
 
-export function tfDataScriptDagNodePropertyToHclTerraform(struct?: TfDataScript.DagNodeProperty | cdktn.IResolvable): any {
+export function dataTfScriptDagNodePropertyToHclTerraform(struct?: DataTfScript.DagNodeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -363,7 +363,7 @@ export function tfDataScriptDagNodePropertyToHclTerraform(struct?: TfDataScript.
       storageClassType: "string",
     },
     args: {
-      value: cdktn.listMapperHcl(tfDataScriptArgsPropertyToHclTerraform, true)(struct!.args),
+      value: cdktn.listMapperHcl(dataTfScriptArgsPropertyToHclTerraform, true)(struct!.args),
       isBlock: true,
       type: "list",
       storageClassType: "ArgsPropertyList",
@@ -375,18 +375,18 @@ export function tfDataScriptDagNodePropertyToHclTerraform(struct?: TfDataScript.
 }
 
 
-export namespace TfDataScript {
+export namespace DataTfScript {
 export interface DagEdgeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_script#source TfDataScript#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_script#source DataTfScript#source}
   */
   readonly source: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_script#target TfDataScript#target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_script#target DataTfScript#target}
   */
   readonly target: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_script#target_parameter TfDataScript#target_parameter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_script#target_parameter DataTfScript#target_parameter}
   */
   readonly targetParameter?: string;
 }
@@ -510,15 +510,15 @@ export class DagEdgePropertyList extends cdktn.ComplexList {
 }
 export interface ArgsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_script#name TfDataScript#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_script#name DataTfScript#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_script#param TfDataScript#param}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_script#param DataTfScript#param}
   */
   readonly param?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_script#value TfDataScript#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_script#value DataTfScript#value}
   */
   readonly value: string;
 }
@@ -642,24 +642,24 @@ export class ArgsPropertyList extends cdktn.ComplexList {
 }
 export interface DagNodeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_script#id TfDataScript#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_script#id DataTfScript#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_script#line_number TfDataScript#line_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_script#line_number DataTfScript#line_number}
   */
   readonly lineNumber?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_script#node_type TfDataScript#node_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_script#node_type DataTfScript#node_type}
   */
   readonly nodeType: string;
   /**
   * args block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_script#args TfDataScript#args}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_script#args DataTfScript#args}
   */
   readonly args: ArgsProperty[] | cdktn.IResolvable;
 }

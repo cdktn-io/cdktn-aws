@@ -5,19 +5,19 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataSearchConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfSearchConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resourceexplorer2_search#query_string TfDataSearch#query_string}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resourceexplorer2_search#query_string DataTfSearch#query_string}
   */
   readonly queryString: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resourceexplorer2_search#region TfDataSearch#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resourceexplorer2_search#region DataTfSearch#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resourceexplorer2_search#view_arn TfDataSearch#view_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resourceexplorer2_search#view_arn DataTfSearch#view_arn}
   */
   readonly viewArn?: string;
 }
@@ -25,7 +25,7 @@ export interface TfDataSearchConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resourceexplorer2_search aws_resourceexplorer2_search}
 */
-export class TfDataSearch extends cdktn.TerraformDataSource {
+export class DataTfSearch extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -36,11 +36,11 @@ export class TfDataSearch extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataSearch resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfSearch resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataSearch to import
-  * @param importFromId The id of the existing TfDataSearch that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resourceexplorer2_search#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataSearch to import is found
+  * @param importToId The construct id used in the generated config for the DataTfSearch to import
+  * @param importFromId The id of the existing DataTfSearch that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resourceexplorer2_search#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfSearch to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_resourceexplorer2_search", importId: importFromId, provider });
@@ -55,9 +55,9 @@ export class TfDataSearch extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataSearchConfig
+  * @param options DataTfSearchConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataSearchConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfSearchConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_resourceexplorer2_search',
       terraformGeneratorMetadata: {
@@ -117,13 +117,13 @@ export class TfDataSearch extends cdktn.TerraformDataSource {
   }
 
   // resource_count - computed: true, optional: false, required: false
-  private _resourceCount = new TfDataSearch.ResourceCountPropertyList(this, "resource_count", false);
+  private _resourceCount = new DataTfSearch.ResourceCountPropertyList(this, "resource_count", false);
   public get resourceCount() {
     return this._resourceCount;
   }
 
   // resources - computed: true, optional: false, required: false
-  private _resources = new TfDataSearch.ResourcesPropertyList(this, "resources", false);
+  private _resources = new DataTfSearch.ResourcesPropertyList(this, "resources", false);
   public get resources() {
     return this._resources;
   }
@@ -183,7 +183,7 @@ export class TfDataSearch extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataSearchResourceCountPropertyToTerraform(struct?: TfDataSearch.ResourceCountProperty): any {
+export function dataTfSearchResourceCountPropertyToTerraform(struct?: DataTfSearch.ResourceCountProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -193,7 +193,7 @@ export function tfDataSearchResourceCountPropertyToTerraform(struct?: TfDataSear
 }
 
 
-export function tfDataSearchResourceCountPropertyToHclTerraform(struct?: TfDataSearch.ResourceCountProperty): any {
+export function dataTfSearchResourceCountPropertyToHclTerraform(struct?: DataTfSearch.ResourceCountProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -204,7 +204,7 @@ export function tfDataSearchResourceCountPropertyToHclTerraform(struct?: TfDataS
 }
 
 
-export function tfDataSearchPropertiesPropertyToTerraform(struct?: TfDataSearch.PropertiesProperty): any {
+export function dataTfSearchPropertiesPropertyToTerraform(struct?: DataTfSearch.PropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -214,7 +214,7 @@ export function tfDataSearchPropertiesPropertyToTerraform(struct?: TfDataSearch.
 }
 
 
-export function tfDataSearchPropertiesPropertyToHclTerraform(struct?: TfDataSearch.PropertiesProperty): any {
+export function dataTfSearchPropertiesPropertyToHclTerraform(struct?: DataTfSearch.PropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -225,7 +225,7 @@ export function tfDataSearchPropertiesPropertyToHclTerraform(struct?: TfDataSear
 }
 
 
-export function tfDataSearchResourcesPropertyToTerraform(struct?: TfDataSearch.ResourcesProperty): any {
+export function dataTfSearchResourcesPropertyToTerraform(struct?: DataTfSearch.ResourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -235,7 +235,7 @@ export function tfDataSearchResourcesPropertyToTerraform(struct?: TfDataSearch.R
 }
 
 
-export function tfDataSearchResourcesPropertyToHclTerraform(struct?: TfDataSearch.ResourcesProperty): any {
+export function dataTfSearchResourcesPropertyToHclTerraform(struct?: DataTfSearch.ResourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -246,7 +246,7 @@ export function tfDataSearchResourcesPropertyToHclTerraform(struct?: TfDataSearc
 }
 
 
-export namespace TfDataSearch {
+export namespace DataTfSearch {
 export interface ResourceCountProperty {
 }
 export class ResourceCountPropertyOutputReference extends cdktn.ComplexObject {

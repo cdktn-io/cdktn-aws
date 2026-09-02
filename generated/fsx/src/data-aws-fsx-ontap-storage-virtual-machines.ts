@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataOntapStorageVirtualMachinesConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfOntapStorageVirtualMachinesConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_ontap_storage_virtual_machines#id TfDataOntapStorageVirtualMachines#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_ontap_storage_virtual_machines#id DataTfOntapStorageVirtualMachines#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,21 +16,21 @@ export interface TfDataOntapStorageVirtualMachinesConfig extends cdktn.Terraform
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_ontap_storage_virtual_machines#region TfDataOntapStorageVirtualMachines#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_ontap_storage_virtual_machines#region DataTfOntapStorageVirtualMachines#region}
   */
   readonly region?: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_ontap_storage_virtual_machines#filter TfDataOntapStorageVirtualMachines#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_ontap_storage_virtual_machines#filter DataTfOntapStorageVirtualMachines#filter}
   */
-  readonly filter?: TfDataOntapStorageVirtualMachines.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataTfOntapStorageVirtualMachines.FilterProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_ontap_storage_virtual_machines aws_fsx_ontap_storage_virtual_machines}
 */
-export class TfDataOntapStorageVirtualMachines extends cdktn.TerraformDataSource {
+export class DataTfOntapStorageVirtualMachines extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -41,11 +41,11 @@ export class TfDataOntapStorageVirtualMachines extends cdktn.TerraformDataSource
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataOntapStorageVirtualMachines resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfOntapStorageVirtualMachines resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataOntapStorageVirtualMachines to import
-  * @param importFromId The id of the existing TfDataOntapStorageVirtualMachines that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_ontap_storage_virtual_machines#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataOntapStorageVirtualMachines to import is found
+  * @param importToId The construct id used in the generated config for the DataTfOntapStorageVirtualMachines to import
+  * @param importFromId The id of the existing DataTfOntapStorageVirtualMachines that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_ontap_storage_virtual_machines#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfOntapStorageVirtualMachines to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_fsx_ontap_storage_virtual_machines", importId: importFromId, provider });
@@ -60,9 +60,9 @@ export class TfDataOntapStorageVirtualMachines extends cdktn.TerraformDataSource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataOntapStorageVirtualMachinesConfig = {}
+  * @param options DataTfOntapStorageVirtualMachinesConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataOntapStorageVirtualMachinesConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfOntapStorageVirtualMachinesConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_fsx_ontap_storage_virtual_machines',
       terraformGeneratorMetadata: {
@@ -125,11 +125,11 @@ export class TfDataOntapStorageVirtualMachines extends cdktn.TerraformDataSource
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new TfDataOntapStorageVirtualMachines.FilterPropertyList(this, "filter", true);
+  private _filter = new DataTfOntapStorageVirtualMachines.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: TfDataOntapStorageVirtualMachines.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataTfOntapStorageVirtualMachines.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -148,7 +148,7 @@ export class TfDataOntapStorageVirtualMachines extends cdktn.TerraformDataSource
     return {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      filter: cdktn.listMapper(tfDataOntapStorageVirtualMachinesFilterPropertyToTerraform, true)(this._filter.internalValue),
+      filter: cdktn.listMapper(dataTfOntapStorageVirtualMachinesFilterPropertyToTerraform, true)(this._filter.internalValue),
     };
   }
 
@@ -167,10 +167,10 @@ export class TfDataOntapStorageVirtualMachines extends cdktn.TerraformDataSource
         storageClassType: "string",
       },
       filter: {
-        value: cdktn.listMapperHcl(tfDataOntapStorageVirtualMachinesFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataTfOntapStorageVirtualMachinesFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfDataOntapStorageVirtualMachines.FilterPropertyList",
+        storageClassType: "DataTfOntapStorageVirtualMachines.FilterPropertyList",
       },
     };
 
@@ -179,7 +179,7 @@ export class TfDataOntapStorageVirtualMachines extends cdktn.TerraformDataSource
   }
 }
 
-export function tfDataOntapStorageVirtualMachinesFilterPropertyToTerraform(struct?: TfDataOntapStorageVirtualMachines.FilterProperty | cdktn.IResolvable): any {
+export function dataTfOntapStorageVirtualMachinesFilterPropertyToTerraform(struct?: DataTfOntapStorageVirtualMachines.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -191,7 +191,7 @@ export function tfDataOntapStorageVirtualMachinesFilterPropertyToTerraform(struc
 }
 
 
-export function tfDataOntapStorageVirtualMachinesFilterPropertyToHclTerraform(struct?: TfDataOntapStorageVirtualMachines.FilterProperty | cdktn.IResolvable): any {
+export function dataTfOntapStorageVirtualMachinesFilterPropertyToHclTerraform(struct?: DataTfOntapStorageVirtualMachines.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -216,14 +216,14 @@ export function tfDataOntapStorageVirtualMachinesFilterPropertyToHclTerraform(st
 }
 
 
-export namespace TfDataOntapStorageVirtualMachines {
+export namespace DataTfOntapStorageVirtualMachines {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_ontap_storage_virtual_machines#name TfDataOntapStorageVirtualMachines#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_ontap_storage_virtual_machines#name DataTfOntapStorageVirtualMachines#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_ontap_storage_virtual_machines#values TfDataOntapStorageVirtualMachines#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_ontap_storage_virtual_machines#values DataTfOntapStorageVirtualMachines#values}
   */
   readonly values: string[];
 }

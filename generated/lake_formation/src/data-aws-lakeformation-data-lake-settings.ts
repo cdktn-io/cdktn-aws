@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataDataLakeSettingsConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfDataLakeSettingsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_data_lake_settings#catalog_id TfDataDataLakeSettings#catalog_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_data_lake_settings#catalog_id DataTfDataLakeSettings#catalog_id}
   */
   readonly catalogId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_data_lake_settings#id TfDataDataLakeSettings#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_data_lake_settings#id DataTfDataLakeSettings#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,7 +20,7 @@ export interface TfDataDataLakeSettingsConfig extends cdktn.TerraformMetaArgumen
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_data_lake_settings#region TfDataDataLakeSettings#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_data_lake_settings#region DataTfDataLakeSettings#region}
   */
   readonly region?: string;
 }
@@ -28,7 +28,7 @@ export interface TfDataDataLakeSettingsConfig extends cdktn.TerraformMetaArgumen
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_data_lake_settings aws_lakeformation_data_lake_settings}
 */
-export class TfDataDataLakeSettings extends cdktn.TerraformDataSource {
+export class DataTfDataLakeSettings extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class TfDataDataLakeSettings extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataDataLakeSettings resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfDataLakeSettings resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataDataLakeSettings to import
-  * @param importFromId The id of the existing TfDataDataLakeSettings that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_data_lake_settings#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataDataLakeSettings to import is found
+  * @param importToId The construct id used in the generated config for the DataTfDataLakeSettings to import
+  * @param importFromId The id of the existing DataTfDataLakeSettings that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_data_lake_settings#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfDataLakeSettings to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lakeformation_data_lake_settings", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class TfDataDataLakeSettings extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataDataLakeSettingsConfig = {}
+  * @param options DataTfDataLakeSettingsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataDataLakeSettingsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfDataLakeSettingsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_lakeformation_data_lake_settings',
       terraformGeneratorMetadata: {
@@ -122,13 +122,13 @@ export class TfDataDataLakeSettings extends cdktn.TerraformDataSource {
   }
 
   // create_database_default_permissions - computed: true, optional: false, required: false
-  private _createDatabaseDefaultPermissions = new TfDataDataLakeSettings.CreateDatabaseDefaultPermissionsPropertyList(this, "create_database_default_permissions", false);
+  private _createDatabaseDefaultPermissions = new DataTfDataLakeSettings.CreateDatabaseDefaultPermissionsPropertyList(this, "create_database_default_permissions", false);
   public get createDatabaseDefaultPermissions() {
     return this._createDatabaseDefaultPermissions;
   }
 
   // create_table_default_permissions - computed: true, optional: false, required: false
-  private _createTableDefaultPermissions = new TfDataDataLakeSettings.CreateTableDefaultPermissionsPropertyList(this, "create_table_default_permissions", false);
+  private _createTableDefaultPermissions = new DataTfDataLakeSettings.CreateTableDefaultPermissionsPropertyList(this, "create_table_default_permissions", false);
   public get createTableDefaultPermissions() {
     return this._createTableDefaultPermissions;
   }
@@ -225,7 +225,7 @@ export class TfDataDataLakeSettings extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataDataLakeSettingsCreateDatabaseDefaultPermissionsPropertyToTerraform(struct?: TfDataDataLakeSettings.CreateDatabaseDefaultPermissionsProperty): any {
+export function dataTfDataLakeSettingsCreateDatabaseDefaultPermissionsPropertyToTerraform(struct?: DataTfDataLakeSettings.CreateDatabaseDefaultPermissionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -235,7 +235,7 @@ export function tfDataDataLakeSettingsCreateDatabaseDefaultPermissionsPropertyTo
 }
 
 
-export function tfDataDataLakeSettingsCreateDatabaseDefaultPermissionsPropertyToHclTerraform(struct?: TfDataDataLakeSettings.CreateDatabaseDefaultPermissionsProperty): any {
+export function dataTfDataLakeSettingsCreateDatabaseDefaultPermissionsPropertyToHclTerraform(struct?: DataTfDataLakeSettings.CreateDatabaseDefaultPermissionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -246,7 +246,7 @@ export function tfDataDataLakeSettingsCreateDatabaseDefaultPermissionsPropertyTo
 }
 
 
-export function tfDataDataLakeSettingsCreateTableDefaultPermissionsPropertyToTerraform(struct?: TfDataDataLakeSettings.CreateTableDefaultPermissionsProperty): any {
+export function dataTfDataLakeSettingsCreateTableDefaultPermissionsPropertyToTerraform(struct?: DataTfDataLakeSettings.CreateTableDefaultPermissionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -256,7 +256,7 @@ export function tfDataDataLakeSettingsCreateTableDefaultPermissionsPropertyToTer
 }
 
 
-export function tfDataDataLakeSettingsCreateTableDefaultPermissionsPropertyToHclTerraform(struct?: TfDataDataLakeSettings.CreateTableDefaultPermissionsProperty): any {
+export function dataTfDataLakeSettingsCreateTableDefaultPermissionsPropertyToHclTerraform(struct?: DataTfDataLakeSettings.CreateTableDefaultPermissionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -267,7 +267,7 @@ export function tfDataDataLakeSettingsCreateTableDefaultPermissionsPropertyToHcl
 }
 
 
-export namespace TfDataDataLakeSettings {
+export namespace DataTfDataLakeSettings {
 export interface CreateDatabaseDefaultPermissionsProperty {
 }
 export class CreateDatabaseDefaultPermissionsPropertyOutputReference extends cdktn.ComplexObject {

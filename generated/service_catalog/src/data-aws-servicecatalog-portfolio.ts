@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataPortfolioConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfPortfolioConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_portfolio#accept_language TfDataPortfolio#accept_language}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_portfolio#accept_language DataTfPortfolio#accept_language}
   */
   readonly acceptLanguage?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_portfolio#id TfDataPortfolio#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_portfolio#id DataTfPortfolio#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,25 +20,25 @@ export interface TfDataPortfolioConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_portfolio#region TfDataPortfolio#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_portfolio#region DataTfPortfolio#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_portfolio#tags TfDataPortfolio#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_portfolio#tags DataTfPortfolio#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_portfolio#timeouts TfDataPortfolio#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_portfolio#timeouts DataTfPortfolio#timeouts}
   */
-  readonly timeouts?: TfDataPortfolio.TimeoutsProperty;
+  readonly timeouts?: DataTfPortfolio.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_portfolio aws_servicecatalog_portfolio}
 */
-export class TfDataPortfolio extends cdktn.TerraformDataSource {
+export class DataTfPortfolio extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class TfDataPortfolio extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataPortfolio resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfPortfolio resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataPortfolio to import
-  * @param importFromId The id of the existing TfDataPortfolio that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_portfolio#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataPortfolio to import is found
+  * @param importToId The construct id used in the generated config for the DataTfPortfolio to import
+  * @param importFromId The id of the existing DataTfPortfolio that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_portfolio#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfPortfolio to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_servicecatalog_portfolio", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class TfDataPortfolio extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataPortfolioConfig
+  * @param options DataTfPortfolioConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataPortfolioConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfPortfolioConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_servicecatalog_portfolio',
       terraformGeneratorMetadata: {
@@ -184,11 +184,11 @@ export class TfDataPortfolio extends cdktn.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfDataPortfolio.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new DataTfPortfolio.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfDataPortfolio.TimeoutsProperty) {
+  public putTimeouts(value: DataTfPortfolio.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -209,7 +209,7 @@ export class TfDataPortfolio extends cdktn.TerraformDataSource {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      timeouts: tfDataPortfolioTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: dataTfPortfolioTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -240,10 +240,10 @@ export class TfDataPortfolio extends cdktn.TerraformDataSource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: tfDataPortfolioTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: dataTfPortfolioTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfDataPortfolio.TimeoutsProperty",
+        storageClassType: "DataTfPortfolio.TimeoutsProperty",
       },
     };
 
@@ -252,7 +252,7 @@ export class TfDataPortfolio extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataPortfolioTimeoutsPropertyToTerraform(struct?: TfDataPortfolio.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfPortfolioTimeoutsPropertyToTerraform(struct?: DataTfPortfolio.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -263,7 +263,7 @@ export function tfDataPortfolioTimeoutsPropertyToTerraform(struct?: TfDataPortfo
 }
 
 
-export function tfDataPortfolioTimeoutsPropertyToHclTerraform(struct?: TfDataPortfolio.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfPortfolioTimeoutsPropertyToHclTerraform(struct?: DataTfPortfolio.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -282,10 +282,10 @@ export function tfDataPortfolioTimeoutsPropertyToHclTerraform(struct?: TfDataPor
 }
 
 
-export namespace TfDataPortfolio {
+export namespace DataTfPortfolio {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_portfolio#read TfDataPortfolio#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_portfolio#read DataTfPortfolio#read}
   */
   readonly read?: string;
 }

@@ -5,23 +5,23 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataBucketsConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfBucketsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_buckets#bucket_region TfDataBuckets#bucket_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_buckets#bucket_region DataTfBuckets#bucket_region}
   */
   readonly bucketRegion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_buckets#max_buckets TfDataBuckets#max_buckets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_buckets#max_buckets DataTfBuckets#max_buckets}
   */
   readonly maxBuckets?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_buckets#prefix TfDataBuckets#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_buckets#prefix DataTfBuckets#prefix}
   */
   readonly prefix?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_buckets#region TfDataBuckets#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_buckets#region DataTfBuckets#region}
   */
   readonly region?: string;
 }
@@ -29,7 +29,7 @@ export interface TfDataBucketsConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_buckets aws_s3_buckets}
 */
-export class TfDataBuckets extends cdktn.TerraformDataSource {
+export class DataTfBuckets extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -40,11 +40,11 @@ export class TfDataBuckets extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataBuckets resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfBuckets resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataBuckets to import
-  * @param importFromId The id of the existing TfDataBuckets that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_buckets#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataBuckets to import is found
+  * @param importToId The construct id used in the generated config for the DataTfBuckets to import
+  * @param importFromId The id of the existing DataTfBuckets that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_buckets#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfBuckets to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3_buckets", importId: importFromId, provider });
@@ -59,9 +59,9 @@ export class TfDataBuckets extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataBucketsConfig = {}
+  * @param options DataTfBucketsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataBucketsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfBucketsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_s3_buckets',
       terraformGeneratorMetadata: {
@@ -104,7 +104,7 @@ export class TfDataBuckets extends cdktn.TerraformDataSource {
   }
 
   // buckets - computed: true, optional: false, required: false
-  private _buckets = new TfDataBuckets.BucketsPropertyList(this, "buckets", false);
+  private _buckets = new DataTfBuckets.BucketsPropertyList(this, "buckets", false);
   public get buckets() {
     return this._buckets;
   }
@@ -203,7 +203,7 @@ export class TfDataBuckets extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataBucketsBucketsPropertyToTerraform(struct?: TfDataBuckets.BucketsProperty): any {
+export function dataTfBucketsBucketsPropertyToTerraform(struct?: DataTfBuckets.BucketsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -213,7 +213,7 @@ export function tfDataBucketsBucketsPropertyToTerraform(struct?: TfDataBuckets.B
 }
 
 
-export function tfDataBucketsBucketsPropertyToHclTerraform(struct?: TfDataBuckets.BucketsProperty): any {
+export function dataTfBucketsBucketsPropertyToHclTerraform(struct?: DataTfBuckets.BucketsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -224,7 +224,7 @@ export function tfDataBucketsBucketsPropertyToHclTerraform(struct?: TfDataBucket
 }
 
 
-export namespace TfDataBuckets {
+export namespace DataTfBuckets {
 export interface BucketsProperty {
 }
 export class BucketsPropertyOutputReference extends cdktn.ComplexObject {

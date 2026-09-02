@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataCertificateConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfCertificateConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/acmpca_certificate#arn TfDataCertificate#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/acmpca_certificate#arn DataTfCertificate#arn}
   */
   readonly arn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/acmpca_certificate#certificate_authority_arn TfDataCertificate#certificate_authority_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/acmpca_certificate#certificate_authority_arn DataTfCertificate#certificate_authority_arn}
   */
   readonly certificateAuthorityArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/acmpca_certificate#id TfDataCertificate#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/acmpca_certificate#id DataTfCertificate#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,7 +24,7 @@ export interface TfDataCertificateConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/acmpca_certificate#region TfDataCertificate#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/acmpca_certificate#region DataTfCertificate#region}
   */
   readonly region?: string;
 }
@@ -32,7 +32,7 @@ export interface TfDataCertificateConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/acmpca_certificate aws_acmpca_certificate}
 */
-export class TfDataCertificate extends cdktn.TerraformDataSource {
+export class DataTfCertificate extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class TfDataCertificate extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataCertificate resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfCertificate resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataCertificate to import
-  * @param importFromId The id of the existing TfDataCertificate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/acmpca_certificate#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataCertificate to import is found
+  * @param importToId The construct id used in the generated config for the DataTfCertificate to import
+  * @param importFromId The id of the existing DataTfCertificate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/acmpca_certificate#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfCertificate to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_acmpca_certificate", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class TfDataCertificate extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataCertificateConfig
+  * @param options DataTfCertificateConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataCertificateConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfCertificateConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_acmpca_certificate',
       terraformGeneratorMetadata: {

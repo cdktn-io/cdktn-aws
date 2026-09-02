@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataResourceShareConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfResourceShareConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ram_resource_share#id TfDataResourceShare#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ram_resource_share#id DataTfResourceShare#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ram_resource_share#name TfDataResourceShare#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ram_resource_share#name DataTfResourceShare#name}
   */
   readonly name?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ram_resource_share#region TfDataResourceShare#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ram_resource_share#region DataTfResourceShare#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ram_resource_share#resource_owner TfDataResourceShare#resource_owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ram_resource_share#resource_owner DataTfResourceShare#resource_owner}
   */
   readonly resourceOwner: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ram_resource_share#resource_share_status TfDataResourceShare#resource_share_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ram_resource_share#resource_share_status DataTfResourceShare#resource_share_status}
   */
   readonly resourceShareStatus?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ram_resource_share#tags TfDataResourceShare#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ram_resource_share#tags DataTfResourceShare#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ram_resource_share#filter TfDataResourceShare#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ram_resource_share#filter DataTfResourceShare#filter}
   */
-  readonly filter?: TfDataResourceShare.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataTfResourceShare.FilterProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ram_resource_share aws_ram_resource_share}
 */
-export class TfDataResourceShare extends cdktn.TerraformDataSource {
+export class DataTfResourceShare extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class TfDataResourceShare extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataResourceShare resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfResourceShare resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataResourceShare to import
-  * @param importFromId The id of the existing TfDataResourceShare that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ram_resource_share#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataResourceShare to import is found
+  * @param importToId The construct id used in the generated config for the DataTfResourceShare to import
+  * @param importFromId The id of the existing DataTfResourceShare that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ram_resource_share#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfResourceShare to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ram_resource_share", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class TfDataResourceShare extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataResourceShareConfig
+  * @param options DataTfResourceShareConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataResourceShareConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfResourceShareConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ram_resource_share',
       terraformGeneratorMetadata: {
@@ -221,11 +221,11 @@ export class TfDataResourceShare extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new TfDataResourceShare.FilterPropertyList(this, "filter", true);
+  private _filter = new DataTfResourceShare.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: TfDataResourceShare.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataTfResourceShare.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -248,7 +248,7 @@ export class TfDataResourceShare extends cdktn.TerraformDataSource {
       resource_owner: cdktn.stringToTerraform(this._resourceOwner),
       resource_share_status: cdktn.stringToTerraform(this._resourceShareStatus),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      filter: cdktn.listMapper(tfDataResourceShareFilterPropertyToTerraform, true)(this._filter.internalValue),
+      filter: cdktn.listMapper(dataTfResourceShareFilterPropertyToTerraform, true)(this._filter.internalValue),
     };
   }
 
@@ -291,10 +291,10 @@ export class TfDataResourceShare extends cdktn.TerraformDataSource {
         storageClassType: "stringMap",
       },
       filter: {
-        value: cdktn.listMapperHcl(tfDataResourceShareFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataTfResourceShareFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfDataResourceShare.FilterPropertyList",
+        storageClassType: "DataTfResourceShare.FilterPropertyList",
       },
     };
 
@@ -303,7 +303,7 @@ export class TfDataResourceShare extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataResourceShareFilterPropertyToTerraform(struct?: TfDataResourceShare.FilterProperty | cdktn.IResolvable): any {
+export function dataTfResourceShareFilterPropertyToTerraform(struct?: DataTfResourceShare.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -315,7 +315,7 @@ export function tfDataResourceShareFilterPropertyToTerraform(struct?: TfDataReso
 }
 
 
-export function tfDataResourceShareFilterPropertyToHclTerraform(struct?: TfDataResourceShare.FilterProperty | cdktn.IResolvable): any {
+export function dataTfResourceShareFilterPropertyToHclTerraform(struct?: DataTfResourceShare.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -340,14 +340,14 @@ export function tfDataResourceShareFilterPropertyToHclTerraform(struct?: TfDataR
 }
 
 
-export namespace TfDataResourceShare {
+export namespace DataTfResourceShare {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ram_resource_share#name TfDataResourceShare#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ram_resource_share#name DataTfResourceShare#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ram_resource_share#values TfDataResourceShare#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ram_resource_share#values DataTfResourceShare#values}
   */
   readonly values: string[];
 }

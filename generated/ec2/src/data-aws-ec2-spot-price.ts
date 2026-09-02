@@ -5,46 +5,46 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataSpotPriceConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfSpotPriceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_spot_price#availability_zone TfDataSpotPrice#availability_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_spot_price#availability_zone DataTfSpotPrice#availability_zone}
   */
   readonly availabilityZone?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_spot_price#id TfDataSpotPrice#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_spot_price#id DataTfSpotPrice#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_spot_price#instance_type TfDataSpotPrice#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_spot_price#instance_type DataTfSpotPrice#instance_type}
   */
   readonly instanceType?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_spot_price#region TfDataSpotPrice#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_spot_price#region DataTfSpotPrice#region}
   */
   readonly region?: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_spot_price#filter TfDataSpotPrice#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_spot_price#filter DataTfSpotPrice#filter}
   */
-  readonly filter?: TfDataSpotPrice.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataTfSpotPrice.FilterProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_spot_price#timeouts TfDataSpotPrice#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_spot_price#timeouts DataTfSpotPrice#timeouts}
   */
-  readonly timeouts?: TfDataSpotPrice.TimeoutsProperty;
+  readonly timeouts?: DataTfSpotPrice.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_spot_price aws_ec2_spot_price}
 */
-export class TfDataSpotPrice extends cdktn.TerraformDataSource {
+export class DataTfSpotPrice extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class TfDataSpotPrice extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataSpotPrice resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfSpotPrice resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataSpotPrice to import
-  * @param importFromId The id of the existing TfDataSpotPrice that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_spot_price#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataSpotPrice to import is found
+  * @param importToId The construct id used in the generated config for the DataTfSpotPrice to import
+  * @param importFromId The id of the existing DataTfSpotPrice that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_spot_price#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfSpotPrice to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_spot_price", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class TfDataSpotPrice extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataSpotPriceConfig = {}
+  * @param options DataTfSpotPriceConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataSpotPriceConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfSpotPriceConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_spot_price',
       terraformGeneratorMetadata: {
@@ -179,11 +179,11 @@ export class TfDataSpotPrice extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new TfDataSpotPrice.FilterPropertyList(this, "filter", true);
+  private _filter = new DataTfSpotPrice.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: TfDataSpotPrice.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataTfSpotPrice.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -195,11 +195,11 @@ export class TfDataSpotPrice extends cdktn.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfDataSpotPrice.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new DataTfSpotPrice.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfDataSpotPrice.TimeoutsProperty) {
+  public putTimeouts(value: DataTfSpotPrice.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -220,8 +220,8 @@ export class TfDataSpotPrice extends cdktn.TerraformDataSource {
       id: cdktn.stringToTerraform(this._id),
       instance_type: cdktn.stringToTerraform(this._instanceType),
       region: cdktn.stringToTerraform(this._region),
-      filter: cdktn.listMapper(tfDataSpotPriceFilterPropertyToTerraform, true)(this._filter.internalValue),
-      timeouts: tfDataSpotPriceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      filter: cdktn.listMapper(dataTfSpotPriceFilterPropertyToTerraform, true)(this._filter.internalValue),
+      timeouts: dataTfSpotPriceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -252,16 +252,16 @@ export class TfDataSpotPrice extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       filter: {
-        value: cdktn.listMapperHcl(tfDataSpotPriceFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataTfSpotPriceFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfDataSpotPrice.FilterPropertyList",
+        storageClassType: "DataTfSpotPrice.FilterPropertyList",
       },
       timeouts: {
-        value: tfDataSpotPriceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: dataTfSpotPriceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfDataSpotPrice.TimeoutsProperty",
+        storageClassType: "DataTfSpotPrice.TimeoutsProperty",
       },
     };
 
@@ -270,7 +270,7 @@ export class TfDataSpotPrice extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataSpotPriceFilterPropertyToTerraform(struct?: TfDataSpotPrice.FilterProperty | cdktn.IResolvable): any {
+export function dataTfSpotPriceFilterPropertyToTerraform(struct?: DataTfSpotPrice.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -282,7 +282,7 @@ export function tfDataSpotPriceFilterPropertyToTerraform(struct?: TfDataSpotPric
 }
 
 
-export function tfDataSpotPriceFilterPropertyToHclTerraform(struct?: TfDataSpotPrice.FilterProperty | cdktn.IResolvable): any {
+export function dataTfSpotPriceFilterPropertyToHclTerraform(struct?: DataTfSpotPrice.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -307,7 +307,7 @@ export function tfDataSpotPriceFilterPropertyToHclTerraform(struct?: TfDataSpotP
 }
 
 
-export function tfDataSpotPriceTimeoutsPropertyToTerraform(struct?: TfDataSpotPrice.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfSpotPriceTimeoutsPropertyToTerraform(struct?: DataTfSpotPrice.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -318,7 +318,7 @@ export function tfDataSpotPriceTimeoutsPropertyToTerraform(struct?: TfDataSpotPr
 }
 
 
-export function tfDataSpotPriceTimeoutsPropertyToHclTerraform(struct?: TfDataSpotPrice.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfSpotPriceTimeoutsPropertyToHclTerraform(struct?: DataTfSpotPrice.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -337,14 +337,14 @@ export function tfDataSpotPriceTimeoutsPropertyToHclTerraform(struct?: TfDataSpo
 }
 
 
-export namespace TfDataSpotPrice {
+export namespace DataTfSpotPrice {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_spot_price#name TfDataSpotPrice#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_spot_price#name DataTfSpotPrice#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_spot_price#values TfDataSpotPrice#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_spot_price#values DataTfSpotPrice#values}
   */
   readonly values: string[];
 }
@@ -446,7 +446,7 @@ export class FilterPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_spot_price#read TfDataSpotPrice#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_spot_price#read DataTfSpotPrice#read}
   */
   readonly read?: string;
 }

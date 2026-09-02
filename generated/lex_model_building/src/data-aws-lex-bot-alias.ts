@@ -5,26 +5,26 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataBotAliasConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfBotAliasConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lex_bot_alias#bot_name TfDataBotAlias#bot_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lex_bot_alias#bot_name DataTfBotAlias#bot_name}
   */
   readonly botName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lex_bot_alias#id TfDataBotAlias#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lex_bot_alias#id DataTfBotAlias#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lex_bot_alias#name TfDataBotAlias#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lex_bot_alias#name DataTfBotAlias#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lex_bot_alias#region TfDataBotAlias#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lex_bot_alias#region DataTfBotAlias#region}
   */
   readonly region?: string;
 }
@@ -32,7 +32,7 @@ export interface TfDataBotAliasConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lex_bot_alias aws_lex_bot_alias}
 */
-export class TfDataBotAlias extends cdktn.TerraformDataSource {
+export class DataTfBotAlias extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class TfDataBotAlias extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataBotAlias resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfBotAlias resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataBotAlias to import
-  * @param importFromId The id of the existing TfDataBotAlias that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lex_bot_alias#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataBotAlias to import is found
+  * @param importToId The construct id used in the generated config for the DataTfBotAlias to import
+  * @param importFromId The id of the existing DataTfBotAlias that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lex_bot_alias#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfBotAlias to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lex_bot_alias", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class TfDataBotAlias extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataBotAliasConfig
+  * @param options DataTfBotAliasConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataBotAliasConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfBotAliasConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lex_bot_alias',
       terraformGeneratorMetadata: {

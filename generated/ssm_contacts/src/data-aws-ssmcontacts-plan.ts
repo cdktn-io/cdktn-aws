@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataPlanConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfPlanConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssmcontacts_plan#contact_id TfDataPlan#contact_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssmcontacts_plan#contact_id DataTfPlan#contact_id}
   */
   readonly contactId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssmcontacts_plan#id TfDataPlan#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssmcontacts_plan#id DataTfPlan#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,7 +20,7 @@ export interface TfDataPlanConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssmcontacts_plan#region TfDataPlan#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssmcontacts_plan#region DataTfPlan#region}
   */
   readonly region?: string;
 }
@@ -28,7 +28,7 @@ export interface TfDataPlanConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssmcontacts_plan aws_ssmcontacts_plan}
 */
-export class TfDataPlan extends cdktn.TerraformDataSource {
+export class DataTfPlan extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class TfDataPlan extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataPlan resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfPlan resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataPlan to import
-  * @param importFromId The id of the existing TfDataPlan that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssmcontacts_plan#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataPlan to import is found
+  * @param importToId The construct id used in the generated config for the DataTfPlan to import
+  * @param importFromId The id of the existing DataTfPlan that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssmcontacts_plan#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfPlan to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ssmcontacts_plan", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class TfDataPlan extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataPlanConfig
+  * @param options DataTfPlanConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataPlanConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfPlanConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ssmcontacts_plan',
       terraformGeneratorMetadata: {
@@ -131,7 +131,7 @@ export class TfDataPlan extends cdktn.TerraformDataSource {
   }
 
   // stage - computed: true, optional: false, required: false
-  private _stage = new TfDataPlan.StagePropertyList(this, "stage", false);
+  private _stage = new DataTfPlan.StagePropertyList(this, "stage", false);
   public get stage() {
     return this._stage;
   }
@@ -175,7 +175,7 @@ export class TfDataPlan extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataPlanChannelTargetInfoPropertyToTerraform(struct?: TfDataPlan.ChannelTargetInfoProperty): any {
+export function dataTfPlanChannelTargetInfoPropertyToTerraform(struct?: DataTfPlan.ChannelTargetInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -185,7 +185,7 @@ export function tfDataPlanChannelTargetInfoPropertyToTerraform(struct?: TfDataPl
 }
 
 
-export function tfDataPlanChannelTargetInfoPropertyToHclTerraform(struct?: TfDataPlan.ChannelTargetInfoProperty): any {
+export function dataTfPlanChannelTargetInfoPropertyToHclTerraform(struct?: DataTfPlan.ChannelTargetInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -196,7 +196,7 @@ export function tfDataPlanChannelTargetInfoPropertyToHclTerraform(struct?: TfDat
 }
 
 
-export function tfDataPlanContactTargetInfoPropertyToTerraform(struct?: TfDataPlan.ContactTargetInfoProperty): any {
+export function dataTfPlanContactTargetInfoPropertyToTerraform(struct?: DataTfPlan.ContactTargetInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -206,7 +206,7 @@ export function tfDataPlanContactTargetInfoPropertyToTerraform(struct?: TfDataPl
 }
 
 
-export function tfDataPlanContactTargetInfoPropertyToHclTerraform(struct?: TfDataPlan.ContactTargetInfoProperty): any {
+export function dataTfPlanContactTargetInfoPropertyToHclTerraform(struct?: DataTfPlan.ContactTargetInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -217,7 +217,7 @@ export function tfDataPlanContactTargetInfoPropertyToHclTerraform(struct?: TfDat
 }
 
 
-export function tfDataPlanTargetPropertyToTerraform(struct?: TfDataPlan.TargetProperty): any {
+export function dataTfPlanTargetPropertyToTerraform(struct?: DataTfPlan.TargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -227,7 +227,7 @@ export function tfDataPlanTargetPropertyToTerraform(struct?: TfDataPlan.TargetPr
 }
 
 
-export function tfDataPlanTargetPropertyToHclTerraform(struct?: TfDataPlan.TargetProperty): any {
+export function dataTfPlanTargetPropertyToHclTerraform(struct?: DataTfPlan.TargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -238,7 +238,7 @@ export function tfDataPlanTargetPropertyToHclTerraform(struct?: TfDataPlan.Targe
 }
 
 
-export function tfDataPlanStagePropertyToTerraform(struct?: TfDataPlan.StageProperty): any {
+export function dataTfPlanStagePropertyToTerraform(struct?: DataTfPlan.StageProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -248,7 +248,7 @@ export function tfDataPlanStagePropertyToTerraform(struct?: TfDataPlan.StageProp
 }
 
 
-export function tfDataPlanStagePropertyToHclTerraform(struct?: TfDataPlan.StageProperty): any {
+export function dataTfPlanStagePropertyToHclTerraform(struct?: DataTfPlan.StageProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -259,7 +259,7 @@ export function tfDataPlanStagePropertyToHclTerraform(struct?: TfDataPlan.StageP
 }
 
 
-export namespace TfDataPlan {
+export namespace DataTfPlan {
 export interface ChannelTargetInfoProperty {
 }
 export class ChannelTargetInfoPropertyOutputReference extends cdktn.ComplexObject {

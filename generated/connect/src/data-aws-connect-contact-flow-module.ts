@@ -5,34 +5,34 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataContactFlowModuleConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfContactFlowModuleConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_contact_flow_module#contact_flow_module_id TfDataContactFlowModule#contact_flow_module_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_contact_flow_module#contact_flow_module_id DataTfContactFlowModule#contact_flow_module_id}
   */
   readonly contactFlowModuleId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_contact_flow_module#id TfDataContactFlowModule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_contact_flow_module#id DataTfContactFlowModule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_contact_flow_module#instance_id TfDataContactFlowModule#instance_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_contact_flow_module#instance_id DataTfContactFlowModule#instance_id}
   */
   readonly instanceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_contact_flow_module#name TfDataContactFlowModule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_contact_flow_module#name DataTfContactFlowModule#name}
   */
   readonly name?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_contact_flow_module#region TfDataContactFlowModule#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_contact_flow_module#region DataTfContactFlowModule#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_contact_flow_module#tags TfDataContactFlowModule#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_contact_flow_module#tags DataTfContactFlowModule#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -40,7 +40,7 @@ export interface TfDataContactFlowModuleConfig extends cdktn.TerraformMetaArgume
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_contact_flow_module aws_connect_contact_flow_module}
 */
-export class TfDataContactFlowModule extends cdktn.TerraformDataSource {
+export class DataTfContactFlowModule extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class TfDataContactFlowModule extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataContactFlowModule resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfContactFlowModule resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataContactFlowModule to import
-  * @param importFromId The id of the existing TfDataContactFlowModule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_contact_flow_module#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataContactFlowModule to import is found
+  * @param importToId The construct id used in the generated config for the DataTfContactFlowModule to import
+  * @param importFromId The id of the existing DataTfContactFlowModule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_contact_flow_module#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfContactFlowModule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_connect_contact_flow_module", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class TfDataContactFlowModule extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataContactFlowModuleConfig
+  * @param options DataTfContactFlowModuleConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataContactFlowModuleConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfContactFlowModuleConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_connect_contact_flow_module',
       terraformGeneratorMetadata: {

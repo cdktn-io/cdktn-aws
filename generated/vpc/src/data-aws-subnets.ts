@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataSubnetsConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfSubnetsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/subnets#id TfDataSubnets#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/subnets#id DataTfSubnets#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,31 +16,31 @@ export interface TfDataSubnetsConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/subnets#region TfDataSubnets#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/subnets#region DataTfSubnets#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/subnets#tags TfDataSubnets#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/subnets#tags DataTfSubnets#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/subnets#filter TfDataSubnets#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/subnets#filter DataTfSubnets#filter}
   */
-  readonly filter?: TfDataSubnets.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataTfSubnets.FilterProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/subnets#timeouts TfDataSubnets#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/subnets#timeouts DataTfSubnets#timeouts}
   */
-  readonly timeouts?: TfDataSubnets.TimeoutsProperty;
+  readonly timeouts?: DataTfSubnets.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/subnets aws_subnets}
 */
-export class TfDataSubnets extends cdktn.TerraformDataSource {
+export class DataTfSubnets extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class TfDataSubnets extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataSubnets resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfSubnets resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataSubnets to import
-  * @param importFromId The id of the existing TfDataSubnets that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/subnets#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataSubnets to import is found
+  * @param importToId The construct id used in the generated config for the DataTfSubnets to import
+  * @param importFromId The id of the existing DataTfSubnets that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/subnets#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfSubnets to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_subnets", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class TfDataSubnets extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataSubnetsConfig = {}
+  * @param options DataTfSubnetsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataSubnetsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfSubnetsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_subnets',
       terraformGeneratorMetadata: {
@@ -153,11 +153,11 @@ export class TfDataSubnets extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new TfDataSubnets.FilterPropertyList(this, "filter", true);
+  private _filter = new DataTfSubnets.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: TfDataSubnets.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataTfSubnets.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -169,11 +169,11 @@ export class TfDataSubnets extends cdktn.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfDataSubnets.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new DataTfSubnets.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfDataSubnets.TimeoutsProperty) {
+  public putTimeouts(value: DataTfSubnets.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -193,8 +193,8 @@ export class TfDataSubnets extends cdktn.TerraformDataSource {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      filter: cdktn.listMapper(tfDataSubnetsFilterPropertyToTerraform, true)(this._filter.internalValue),
-      timeouts: tfDataSubnetsTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      filter: cdktn.listMapper(dataTfSubnetsFilterPropertyToTerraform, true)(this._filter.internalValue),
+      timeouts: dataTfSubnetsTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -219,16 +219,16 @@ export class TfDataSubnets extends cdktn.TerraformDataSource {
         storageClassType: "stringMap",
       },
       filter: {
-        value: cdktn.listMapperHcl(tfDataSubnetsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataTfSubnetsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfDataSubnets.FilterPropertyList",
+        storageClassType: "DataTfSubnets.FilterPropertyList",
       },
       timeouts: {
-        value: tfDataSubnetsTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: dataTfSubnetsTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfDataSubnets.TimeoutsProperty",
+        storageClassType: "DataTfSubnets.TimeoutsProperty",
       },
     };
 
@@ -237,7 +237,7 @@ export class TfDataSubnets extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataSubnetsFilterPropertyToTerraform(struct?: TfDataSubnets.FilterProperty | cdktn.IResolvable): any {
+export function dataTfSubnetsFilterPropertyToTerraform(struct?: DataTfSubnets.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -249,7 +249,7 @@ export function tfDataSubnetsFilterPropertyToTerraform(struct?: TfDataSubnets.Fi
 }
 
 
-export function tfDataSubnetsFilterPropertyToHclTerraform(struct?: TfDataSubnets.FilterProperty | cdktn.IResolvable): any {
+export function dataTfSubnetsFilterPropertyToHclTerraform(struct?: DataTfSubnets.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -274,7 +274,7 @@ export function tfDataSubnetsFilterPropertyToHclTerraform(struct?: TfDataSubnets
 }
 
 
-export function tfDataSubnetsTimeoutsPropertyToTerraform(struct?: TfDataSubnets.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfSubnetsTimeoutsPropertyToTerraform(struct?: DataTfSubnets.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -285,7 +285,7 @@ export function tfDataSubnetsTimeoutsPropertyToTerraform(struct?: TfDataSubnets.
 }
 
 
-export function tfDataSubnetsTimeoutsPropertyToHclTerraform(struct?: TfDataSubnets.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfSubnetsTimeoutsPropertyToHclTerraform(struct?: DataTfSubnets.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -304,14 +304,14 @@ export function tfDataSubnetsTimeoutsPropertyToHclTerraform(struct?: TfDataSubne
 }
 
 
-export namespace TfDataSubnets {
+export namespace DataTfSubnets {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/subnets#name TfDataSubnets#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/subnets#name DataTfSubnets#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/subnets#values TfDataSubnets#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/subnets#values DataTfSubnets#values}
   */
   readonly values: string[];
 }
@@ -413,7 +413,7 @@ export class FilterPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/subnets#read TfDataSubnets#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/subnets#read DataTfSubnets#read}
   */
   readonly read?: string;
 }

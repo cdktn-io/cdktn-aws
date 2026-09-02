@@ -5,15 +5,15 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataCustomModelConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfCustomModelConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrock_custom_model#model_id TfDataCustomModel#model_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrock_custom_model#model_id DataTfCustomModel#model_id}
   */
   readonly modelId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrock_custom_model#region TfDataCustomModel#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrock_custom_model#region DataTfCustomModel#region}
   */
   readonly region?: string;
 }
@@ -21,7 +21,7 @@ export interface TfDataCustomModelConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrock_custom_model aws_bedrock_custom_model}
 */
-export class TfDataCustomModel extends cdktn.TerraformDataSource {
+export class DataTfCustomModel extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -32,11 +32,11 @@ export class TfDataCustomModel extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataCustomModel resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfCustomModel resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataCustomModel to import
-  * @param importFromId The id of the existing TfDataCustomModel that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrock_custom_model#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataCustomModel to import is found
+  * @param importToId The construct id used in the generated config for the DataTfCustomModel to import
+  * @param importFromId The id of the existing DataTfCustomModel that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrock_custom_model#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfCustomModel to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_bedrock_custom_model", importId: importFromId, provider });
@@ -51,9 +51,9 @@ export class TfDataCustomModel extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataCustomModelConfig
+  * @param options DataTfCustomModelConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataCustomModelConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfCustomModelConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_bedrock_custom_model',
       terraformGeneratorMetadata: {
@@ -149,7 +149,7 @@ export class TfDataCustomModel extends cdktn.TerraformDataSource {
   }
 
   // output_data_config - computed: true, optional: false, required: false
-  private _outputDataConfig = new TfDataCustomModel.OutputDataConfigPropertyList(this, "output_data_config", false);
+  private _outputDataConfig = new DataTfCustomModel.OutputDataConfigPropertyList(this, "output_data_config", false);
   public get outputDataConfig() {
     return this._outputDataConfig;
   }
@@ -171,25 +171,25 @@ export class TfDataCustomModel extends cdktn.TerraformDataSource {
   }
 
   // training_data_config - computed: true, optional: false, required: false
-  private _trainingDataConfig = new TfDataCustomModel.TrainingDataConfigPropertyList(this, "training_data_config", false);
+  private _trainingDataConfig = new DataTfCustomModel.TrainingDataConfigPropertyList(this, "training_data_config", false);
   public get trainingDataConfig() {
     return this._trainingDataConfig;
   }
 
   // training_metrics - computed: true, optional: false, required: false
-  private _trainingMetrics = new TfDataCustomModel.TrainingMetricsPropertyList(this, "training_metrics", false);
+  private _trainingMetrics = new DataTfCustomModel.TrainingMetricsPropertyList(this, "training_metrics", false);
   public get trainingMetrics() {
     return this._trainingMetrics;
   }
 
   // validation_data_config - computed: true, optional: false, required: false
-  private _validationDataConfig = new TfDataCustomModel.ValidationDataConfigPropertyList(this, "validation_data_config", false);
+  private _validationDataConfig = new DataTfCustomModel.ValidationDataConfigPropertyList(this, "validation_data_config", false);
   public get validationDataConfig() {
     return this._validationDataConfig;
   }
 
   // validation_metrics - computed: true, optional: false, required: false
-  private _validationMetrics = new TfDataCustomModel.ValidationMetricsPropertyList(this, "validation_metrics", false);
+  private _validationMetrics = new DataTfCustomModel.ValidationMetricsPropertyList(this, "validation_metrics", false);
   public get validationMetrics() {
     return this._validationMetrics;
   }
@@ -226,7 +226,7 @@ export class TfDataCustomModel extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataCustomModelOutputDataConfigPropertyToTerraform(struct?: TfDataCustomModel.OutputDataConfigProperty): any {
+export function dataTfCustomModelOutputDataConfigPropertyToTerraform(struct?: DataTfCustomModel.OutputDataConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -236,7 +236,7 @@ export function tfDataCustomModelOutputDataConfigPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfDataCustomModelOutputDataConfigPropertyToHclTerraform(struct?: TfDataCustomModel.OutputDataConfigProperty): any {
+export function dataTfCustomModelOutputDataConfigPropertyToHclTerraform(struct?: DataTfCustomModel.OutputDataConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -247,7 +247,7 @@ export function tfDataCustomModelOutputDataConfigPropertyToHclTerraform(struct?:
 }
 
 
-export function tfDataCustomModelTrainingDataConfigPropertyToTerraform(struct?: TfDataCustomModel.TrainingDataConfigProperty): any {
+export function dataTfCustomModelTrainingDataConfigPropertyToTerraform(struct?: DataTfCustomModel.TrainingDataConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -257,7 +257,7 @@ export function tfDataCustomModelTrainingDataConfigPropertyToTerraform(struct?: 
 }
 
 
-export function tfDataCustomModelTrainingDataConfigPropertyToHclTerraform(struct?: TfDataCustomModel.TrainingDataConfigProperty): any {
+export function dataTfCustomModelTrainingDataConfigPropertyToHclTerraform(struct?: DataTfCustomModel.TrainingDataConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -268,7 +268,7 @@ export function tfDataCustomModelTrainingDataConfigPropertyToHclTerraform(struct
 }
 
 
-export function tfDataCustomModelTrainingMetricsPropertyToTerraform(struct?: TfDataCustomModel.TrainingMetricsProperty): any {
+export function dataTfCustomModelTrainingMetricsPropertyToTerraform(struct?: DataTfCustomModel.TrainingMetricsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -278,7 +278,7 @@ export function tfDataCustomModelTrainingMetricsPropertyToTerraform(struct?: TfD
 }
 
 
-export function tfDataCustomModelTrainingMetricsPropertyToHclTerraform(struct?: TfDataCustomModel.TrainingMetricsProperty): any {
+export function dataTfCustomModelTrainingMetricsPropertyToHclTerraform(struct?: DataTfCustomModel.TrainingMetricsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -289,7 +289,7 @@ export function tfDataCustomModelTrainingMetricsPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfDataCustomModelValidatorPropertyToTerraform(struct?: TfDataCustomModel.ValidatorProperty): any {
+export function dataTfCustomModelValidatorPropertyToTerraform(struct?: DataTfCustomModel.ValidatorProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -299,7 +299,7 @@ export function tfDataCustomModelValidatorPropertyToTerraform(struct?: TfDataCus
 }
 
 
-export function tfDataCustomModelValidatorPropertyToHclTerraform(struct?: TfDataCustomModel.ValidatorProperty): any {
+export function dataTfCustomModelValidatorPropertyToHclTerraform(struct?: DataTfCustomModel.ValidatorProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -310,7 +310,7 @@ export function tfDataCustomModelValidatorPropertyToHclTerraform(struct?: TfData
 }
 
 
-export function tfDataCustomModelValidationDataConfigPropertyToTerraform(struct?: TfDataCustomModel.ValidationDataConfigProperty): any {
+export function dataTfCustomModelValidationDataConfigPropertyToTerraform(struct?: DataTfCustomModel.ValidationDataConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -320,7 +320,7 @@ export function tfDataCustomModelValidationDataConfigPropertyToTerraform(struct?
 }
 
 
-export function tfDataCustomModelValidationDataConfigPropertyToHclTerraform(struct?: TfDataCustomModel.ValidationDataConfigProperty): any {
+export function dataTfCustomModelValidationDataConfigPropertyToHclTerraform(struct?: DataTfCustomModel.ValidationDataConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -331,7 +331,7 @@ export function tfDataCustomModelValidationDataConfigPropertyToHclTerraform(stru
 }
 
 
-export function tfDataCustomModelValidationMetricsPropertyToTerraform(struct?: TfDataCustomModel.ValidationMetricsProperty): any {
+export function dataTfCustomModelValidationMetricsPropertyToTerraform(struct?: DataTfCustomModel.ValidationMetricsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -341,7 +341,7 @@ export function tfDataCustomModelValidationMetricsPropertyToTerraform(struct?: T
 }
 
 
-export function tfDataCustomModelValidationMetricsPropertyToHclTerraform(struct?: TfDataCustomModel.ValidationMetricsProperty): any {
+export function dataTfCustomModelValidationMetricsPropertyToHclTerraform(struct?: DataTfCustomModel.ValidationMetricsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -352,7 +352,7 @@ export function tfDataCustomModelValidationMetricsPropertyToHclTerraform(struct?
 }
 
 
-export namespace TfDataCustomModel {
+export namespace DataTfCustomModel {
 export interface OutputDataConfigProperty {
 }
 export class OutputDataConfigPropertyOutputReference extends cdktn.ComplexObject {

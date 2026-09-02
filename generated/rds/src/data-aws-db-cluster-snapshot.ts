@@ -5,46 +5,46 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataDbClusterSnapshotConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfDbClusterSnapshotConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/db_cluster_snapshot#db_cluster_identifier TfDataDbClusterSnapshot#db_cluster_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/db_cluster_snapshot#db_cluster_identifier DataTfDbClusterSnapshot#db_cluster_identifier}
   */
   readonly dbClusterIdentifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/db_cluster_snapshot#db_cluster_snapshot_identifier TfDataDbClusterSnapshot#db_cluster_snapshot_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/db_cluster_snapshot#db_cluster_snapshot_identifier DataTfDbClusterSnapshot#db_cluster_snapshot_identifier}
   */
   readonly dbClusterSnapshotIdentifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/db_cluster_snapshot#id TfDataDbClusterSnapshot#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/db_cluster_snapshot#id DataTfDbClusterSnapshot#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/db_cluster_snapshot#include_public TfDataDbClusterSnapshot#include_public}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/db_cluster_snapshot#include_public DataTfDbClusterSnapshot#include_public}
   */
   readonly includePublic?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/db_cluster_snapshot#include_shared TfDataDbClusterSnapshot#include_shared}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/db_cluster_snapshot#include_shared DataTfDbClusterSnapshot#include_shared}
   */
   readonly includeShared?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/db_cluster_snapshot#most_recent TfDataDbClusterSnapshot#most_recent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/db_cluster_snapshot#most_recent DataTfDbClusterSnapshot#most_recent}
   */
   readonly mostRecent?: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/db_cluster_snapshot#region TfDataDbClusterSnapshot#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/db_cluster_snapshot#region DataTfDbClusterSnapshot#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/db_cluster_snapshot#snapshot_type TfDataDbClusterSnapshot#snapshot_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/db_cluster_snapshot#snapshot_type DataTfDbClusterSnapshot#snapshot_type}
   */
   readonly snapshotType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/db_cluster_snapshot#tags TfDataDbClusterSnapshot#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/db_cluster_snapshot#tags DataTfDbClusterSnapshot#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -52,7 +52,7 @@ export interface TfDataDbClusterSnapshotConfig extends cdktn.TerraformMetaArgume
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/db_cluster_snapshot aws_db_cluster_snapshot}
 */
-export class TfDataDbClusterSnapshot extends cdktn.TerraformDataSource {
+export class DataTfDbClusterSnapshot extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -63,11 +63,11 @@ export class TfDataDbClusterSnapshot extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataDbClusterSnapshot resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfDbClusterSnapshot resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataDbClusterSnapshot to import
-  * @param importFromId The id of the existing TfDataDbClusterSnapshot that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/db_cluster_snapshot#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataDbClusterSnapshot to import is found
+  * @param importToId The construct id used in the generated config for the DataTfDbClusterSnapshot to import
+  * @param importFromId The id of the existing DataTfDbClusterSnapshot that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/db_cluster_snapshot#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfDbClusterSnapshot to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_db_cluster_snapshot", importId: importFromId, provider });
@@ -82,9 +82,9 @@ export class TfDataDbClusterSnapshot extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataDbClusterSnapshotConfig = {}
+  * @param options DataTfDbClusterSnapshotConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataDbClusterSnapshotConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfDbClusterSnapshotConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_db_cluster_snapshot',
       terraformGeneratorMetadata: {

@@ -5,19 +5,19 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataBucketObjectLockConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfBucketObjectLockConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_bucket_object_lock_configuration#bucket TfDataBucketObjectLockConfiguration#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_bucket_object_lock_configuration#bucket DataTfBucketObjectLockConfiguration#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_bucket_object_lock_configuration#expected_bucket_owner TfDataBucketObjectLockConfiguration#expected_bucket_owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_bucket_object_lock_configuration#expected_bucket_owner DataTfBucketObjectLockConfiguration#expected_bucket_owner}
   */
   readonly expectedBucketOwner?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_bucket_object_lock_configuration#region TfDataBucketObjectLockConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_bucket_object_lock_configuration#region DataTfBucketObjectLockConfiguration#region}
   */
   readonly region?: string;
 }
@@ -25,7 +25,7 @@ export interface TfDataBucketObjectLockConfigurationConfig extends cdktn.Terrafo
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_bucket_object_lock_configuration aws_s3_bucket_object_lock_configuration}
 */
-export class TfDataBucketObjectLockConfiguration extends cdktn.TerraformDataSource {
+export class DataTfBucketObjectLockConfiguration extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -36,11 +36,11 @@ export class TfDataBucketObjectLockConfiguration extends cdktn.TerraformDataSour
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataBucketObjectLockConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfBucketObjectLockConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataBucketObjectLockConfiguration to import
-  * @param importFromId The id of the existing TfDataBucketObjectLockConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_bucket_object_lock_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataBucketObjectLockConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the DataTfBucketObjectLockConfiguration to import
+  * @param importFromId The id of the existing DataTfBucketObjectLockConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_bucket_object_lock_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfBucketObjectLockConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3_bucket_object_lock_configuration", importId: importFromId, provider });
@@ -55,9 +55,9 @@ export class TfDataBucketObjectLockConfiguration extends cdktn.TerraformDataSour
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataBucketObjectLockConfigurationConfig
+  * @param options DataTfBucketObjectLockConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataBucketObjectLockConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfBucketObjectLockConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3_bucket_object_lock_configuration',
       terraformGeneratorMetadata: {
@@ -133,7 +133,7 @@ export class TfDataBucketObjectLockConfiguration extends cdktn.TerraformDataSour
   }
 
   // rule - computed: true, optional: false, required: false
-  private _rule = new TfDataBucketObjectLockConfiguration.RulePropertyList(this, "rule", false);
+  private _rule = new DataTfBucketObjectLockConfiguration.RulePropertyList(this, "rule", false);
   public get rule() {
     return this._rule;
   }
@@ -177,7 +177,7 @@ export class TfDataBucketObjectLockConfiguration extends cdktn.TerraformDataSour
   }
 }
 
-export function tfDataBucketObjectLockConfigurationDefaultRetentionPropertyToTerraform(struct?: TfDataBucketObjectLockConfiguration.DefaultRetentionProperty): any {
+export function dataTfBucketObjectLockConfigurationDefaultRetentionPropertyToTerraform(struct?: DataTfBucketObjectLockConfiguration.DefaultRetentionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -187,7 +187,7 @@ export function tfDataBucketObjectLockConfigurationDefaultRetentionPropertyToTer
 }
 
 
-export function tfDataBucketObjectLockConfigurationDefaultRetentionPropertyToHclTerraform(struct?: TfDataBucketObjectLockConfiguration.DefaultRetentionProperty): any {
+export function dataTfBucketObjectLockConfigurationDefaultRetentionPropertyToHclTerraform(struct?: DataTfBucketObjectLockConfiguration.DefaultRetentionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -198,7 +198,7 @@ export function tfDataBucketObjectLockConfigurationDefaultRetentionPropertyToHcl
 }
 
 
-export function tfDataBucketObjectLockConfigurationRulePropertyToTerraform(struct?: TfDataBucketObjectLockConfiguration.RuleProperty): any {
+export function dataTfBucketObjectLockConfigurationRulePropertyToTerraform(struct?: DataTfBucketObjectLockConfiguration.RuleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -208,7 +208,7 @@ export function tfDataBucketObjectLockConfigurationRulePropertyToTerraform(struc
 }
 
 
-export function tfDataBucketObjectLockConfigurationRulePropertyToHclTerraform(struct?: TfDataBucketObjectLockConfiguration.RuleProperty): any {
+export function dataTfBucketObjectLockConfigurationRulePropertyToHclTerraform(struct?: DataTfBucketObjectLockConfiguration.RuleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -219,7 +219,7 @@ export function tfDataBucketObjectLockConfigurationRulePropertyToHclTerraform(st
 }
 
 
-export namespace TfDataBucketObjectLockConfiguration {
+export namespace DataTfBucketObjectLockConfiguration {
 export interface DefaultRetentionProperty {
 }
 export class DefaultRetentionPropertyOutputReference extends cdktn.ComplexObject {

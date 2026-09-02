@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataDbNodesConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfDbNodesConfig extends cdktn.TerraformMetaArguments {
   /**
   * Id of the cloud VM cluster. The unique identifier of the VM cluster.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_db_nodes#cloud_vm_cluster_id TfDataDbNodes#cloud_vm_cluster_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_db_nodes#cloud_vm_cluster_id DataTfDbNodes#cloud_vm_cluster_id}
   */
   readonly cloudVmClusterId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_db_nodes#region TfDataDbNodes#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_db_nodes#region DataTfDbNodes#region}
   */
   readonly region?: string;
 }
@@ -23,7 +23,7 @@ export interface TfDataDbNodesConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_db_nodes aws_odb_db_nodes}
 */
-export class TfDataDbNodes extends cdktn.TerraformDataSource {
+export class DataTfDbNodes extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -34,11 +34,11 @@ export class TfDataDbNodes extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataDbNodes resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfDbNodes resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataDbNodes to import
-  * @param importFromId The id of the existing TfDataDbNodes that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_db_nodes#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataDbNodes to import is found
+  * @param importToId The construct id used in the generated config for the DataTfDbNodes to import
+  * @param importFromId The id of the existing DataTfDbNodes that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_db_nodes#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfDbNodes to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_odb_db_nodes", importId: importFromId, provider });
@@ -53,9 +53,9 @@ export class TfDataDbNodes extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataDbNodesConfig
+  * @param options DataTfDbNodesConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataDbNodesConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfDbNodesConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_odb_db_nodes',
       terraformGeneratorMetadata: {
@@ -93,7 +93,7 @@ export class TfDataDbNodes extends cdktn.TerraformDataSource {
   }
 
   // db_nodes - computed: true, optional: false, required: false
-  private _dbNodes = new TfDataDbNodes.DbNodesPropertyList(this, "db_nodes", false);
+  private _dbNodes = new DataTfDbNodes.DbNodesPropertyList(this, "db_nodes", false);
   public get dbNodes() {
     return this._dbNodes;
   }
@@ -146,7 +146,7 @@ export class TfDataDbNodes extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataDbNodesDbNodesPropertyToTerraform(struct?: TfDataDbNodes.DbNodesProperty): any {
+export function dataTfDbNodesDbNodesPropertyToTerraform(struct?: DataTfDbNodes.DbNodesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -156,7 +156,7 @@ export function tfDataDbNodesDbNodesPropertyToTerraform(struct?: TfDataDbNodes.D
 }
 
 
-export function tfDataDbNodesDbNodesPropertyToHclTerraform(struct?: TfDataDbNodes.DbNodesProperty): any {
+export function dataTfDbNodesDbNodesPropertyToHclTerraform(struct?: DataTfDbNodes.DbNodesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -167,7 +167,7 @@ export function tfDataDbNodesDbNodesPropertyToHclTerraform(struct?: TfDataDbNode
 }
 
 
-export namespace TfDataDbNodes {
+export namespace DataTfDbNodes {
 export interface DbNodesProperty {
 }
 export class DbNodesPropertyOutputReference extends cdktn.ComplexObject {

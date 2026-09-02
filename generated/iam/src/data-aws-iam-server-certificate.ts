@@ -5,28 +5,28 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataServerCertificateConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfServerCertificateConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_server_certificate#id TfDataServerCertificate#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_server_certificate#id DataTfServerCertificate#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_server_certificate#latest TfDataServerCertificate#latest}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_server_certificate#latest DataTfServerCertificate#latest}
   */
   readonly latest?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_server_certificate#name TfDataServerCertificate#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_server_certificate#name DataTfServerCertificate#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_server_certificate#name_prefix TfDataServerCertificate#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_server_certificate#name_prefix DataTfServerCertificate#name_prefix}
   */
   readonly namePrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_server_certificate#path_prefix TfDataServerCertificate#path_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_server_certificate#path_prefix DataTfServerCertificate#path_prefix}
   */
   readonly pathPrefix?: string;
 }
@@ -34,7 +34,7 @@ export interface TfDataServerCertificateConfig extends cdktn.TerraformMetaArgume
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_server_certificate aws_iam_server_certificate}
 */
-export class TfDataServerCertificate extends cdktn.TerraformDataSource {
+export class DataTfServerCertificate extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class TfDataServerCertificate extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataServerCertificate resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfServerCertificate resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataServerCertificate to import
-  * @param importFromId The id of the existing TfDataServerCertificate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_server_certificate#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataServerCertificate to import is found
+  * @param importToId The construct id used in the generated config for the DataTfServerCertificate to import
+  * @param importFromId The id of the existing DataTfServerCertificate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_server_certificate#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfServerCertificate to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iam_server_certificate", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class TfDataServerCertificate extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataServerCertificateConfig = {}
+  * @param options DataTfServerCertificateConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataServerCertificateConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfServerCertificateConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_iam_server_certificate',
       terraformGeneratorMetadata: {

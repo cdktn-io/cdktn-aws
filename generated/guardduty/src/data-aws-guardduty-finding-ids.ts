@@ -5,15 +5,15 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataFindingIdsConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfFindingIdsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/guardduty_finding_ids#detector_id TfDataFindingIds#detector_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/guardduty_finding_ids#detector_id DataTfFindingIds#detector_id}
   */
   readonly detectorId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/guardduty_finding_ids#region TfDataFindingIds#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/guardduty_finding_ids#region DataTfFindingIds#region}
   */
   readonly region?: string;
 }
@@ -21,7 +21,7 @@ export interface TfDataFindingIdsConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/guardduty_finding_ids aws_guardduty_finding_ids}
 */
-export class TfDataFindingIds extends cdktn.TerraformDataSource {
+export class DataTfFindingIds extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -32,11 +32,11 @@ export class TfDataFindingIds extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataFindingIds resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfFindingIds resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataFindingIds to import
-  * @param importFromId The id of the existing TfDataFindingIds that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/guardduty_finding_ids#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataFindingIds to import is found
+  * @param importToId The construct id used in the generated config for the DataTfFindingIds to import
+  * @param importFromId The id of the existing DataTfFindingIds that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/guardduty_finding_ids#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfFindingIds to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_guardduty_finding_ids", importId: importFromId, provider });
@@ -51,9 +51,9 @@ export class TfDataFindingIds extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataFindingIdsConfig
+  * @param options DataTfFindingIdsConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataFindingIdsConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfFindingIdsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_guardduty_finding_ids',
       terraformGeneratorMetadata: {

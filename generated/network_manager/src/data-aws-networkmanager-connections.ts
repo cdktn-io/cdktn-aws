@@ -5,24 +5,24 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataConnectionsConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfConnectionsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_connections#device_id TfDataConnections#device_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_connections#device_id DataTfConnections#device_id}
   */
   readonly deviceId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_connections#global_network_id TfDataConnections#global_network_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_connections#global_network_id DataTfConnections#global_network_id}
   */
   readonly globalNetworkId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_connections#id TfDataConnections#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_connections#id DataTfConnections#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_connections#tags TfDataConnections#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_connections#tags DataTfConnections#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -30,7 +30,7 @@ export interface TfDataConnectionsConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_connections aws_networkmanager_connections}
 */
-export class TfDataConnections extends cdktn.TerraformDataSource {
+export class DataTfConnections extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -41,11 +41,11 @@ export class TfDataConnections extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataConnections resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfConnections resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataConnections to import
-  * @param importFromId The id of the existing TfDataConnections that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_connections#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataConnections to import is found
+  * @param importToId The construct id used in the generated config for the DataTfConnections to import
+  * @param importFromId The id of the existing DataTfConnections that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_connections#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfConnections to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_networkmanager_connections", importId: importFromId, provider });
@@ -60,9 +60,9 @@ export class TfDataConnections extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataConnectionsConfig
+  * @param options DataTfConnectionsConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataConnectionsConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfConnectionsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_networkmanager_connections',
       terraformGeneratorMetadata: {

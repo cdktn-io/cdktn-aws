@@ -5,20 +5,20 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataCostCategoryConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfCostCategoryConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_cost_category#cost_category_arn TfDataCostCategory#cost_category_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_cost_category#cost_category_arn DataTfCostCategory#cost_category_arn}
   */
   readonly costCategoryArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_cost_category#id TfDataCostCategory#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_cost_category#id DataTfCostCategory#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_cost_category#tags TfDataCostCategory#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_cost_category#tags DataTfCostCategory#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -26,7 +26,7 @@ export interface TfDataCostCategoryConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_cost_category aws_ce_cost_category}
 */
-export class TfDataCostCategory extends cdktn.TerraformDataSource {
+export class DataTfCostCategory extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -37,11 +37,11 @@ export class TfDataCostCategory extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataCostCategory resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfCostCategory resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataCostCategory to import
-  * @param importFromId The id of the existing TfDataCostCategory that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_cost_category#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataCostCategory to import is found
+  * @param importToId The construct id used in the generated config for the DataTfCostCategory to import
+  * @param importFromId The id of the existing DataTfCostCategory that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_cost_category#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfCostCategory to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ce_cost_category", importId: importFromId, provider });
@@ -56,9 +56,9 @@ export class TfDataCostCategory extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataCostCategoryConfig
+  * @param options DataTfCostCategoryConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataCostCategoryConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfCostCategoryConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ce_cost_category',
       terraformGeneratorMetadata: {
@@ -133,7 +133,7 @@ export class TfDataCostCategory extends cdktn.TerraformDataSource {
   }
 
   // rule - computed: true, optional: false, required: false
-  private _rule = new TfDataCostCategory.RulePropertyList(this, "rule", true);
+  private _rule = new DataTfCostCategory.RulePropertyList(this, "rule", true);
   public get rule() {
     return this._rule;
   }
@@ -144,7 +144,7 @@ export class TfDataCostCategory extends cdktn.TerraformDataSource {
   }
 
   // split_charge_rule - computed: true, optional: false, required: false
-  private _splitChargeRule = new TfDataCostCategory.SplitChargeRulePropertyList(this, "split_charge_rule", true);
+  private _splitChargeRule = new DataTfCostCategory.SplitChargeRulePropertyList(this, "split_charge_rule", true);
   public get splitChargeRule() {
     return this._splitChargeRule;
   }
@@ -204,7 +204,7 @@ export class TfDataCostCategory extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataCostCategoryInheritedValuePropertyToTerraform(struct?: TfDataCostCategory.InheritedValueProperty): any {
+export function dataTfCostCategoryInheritedValuePropertyToTerraform(struct?: DataTfCostCategory.InheritedValueProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -214,7 +214,7 @@ export function tfDataCostCategoryInheritedValuePropertyToTerraform(struct?: TfD
 }
 
 
-export function tfDataCostCategoryInheritedValuePropertyToHclTerraform(struct?: TfDataCostCategory.InheritedValueProperty): any {
+export function dataTfCostCategoryInheritedValuePropertyToHclTerraform(struct?: DataTfCostCategory.InheritedValueProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -225,7 +225,7 @@ export function tfDataCostCategoryInheritedValuePropertyToHclTerraform(struct?: 
 }
 
 
-export function tfDataCostCategoryRuleRuleAndAndCostCategoryPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleAndAndCostCategoryProperty): any {
+export function dataTfCostCategoryRuleRuleAndAndCostCategoryPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleAndAndCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -235,7 +235,7 @@ export function tfDataCostCategoryRuleRuleAndAndCostCategoryPropertyToTerraform(
 }
 
 
-export function tfDataCostCategoryRuleRuleAndAndCostCategoryPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleAndAndCostCategoryProperty): any {
+export function dataTfCostCategoryRuleRuleAndAndCostCategoryPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleAndAndCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -246,7 +246,7 @@ export function tfDataCostCategoryRuleRuleAndAndCostCategoryPropertyToHclTerrafo
 }
 
 
-export function tfDataCostCategoryRuleRuleAndAndDimensionPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleAndAndDimensionProperty): any {
+export function dataTfCostCategoryRuleRuleAndAndDimensionPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleAndAndDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -256,7 +256,7 @@ export function tfDataCostCategoryRuleRuleAndAndDimensionPropertyToTerraform(str
 }
 
 
-export function tfDataCostCategoryRuleRuleAndAndDimensionPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleAndAndDimensionProperty): any {
+export function dataTfCostCategoryRuleRuleAndAndDimensionPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleAndAndDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -267,7 +267,7 @@ export function tfDataCostCategoryRuleRuleAndAndDimensionPropertyToHclTerraform(
 }
 
 
-export function tfDataCostCategoryRuleRuleAndAndTagsPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleAndAndTagsProperty): any {
+export function dataTfCostCategoryRuleRuleAndAndTagsPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleAndAndTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -277,7 +277,7 @@ export function tfDataCostCategoryRuleRuleAndAndTagsPropertyToTerraform(struct?:
 }
 
 
-export function tfDataCostCategoryRuleRuleAndAndTagsPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleAndAndTagsProperty): any {
+export function dataTfCostCategoryRuleRuleAndAndTagsPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleAndAndTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -288,7 +288,7 @@ export function tfDataCostCategoryRuleRuleAndAndTagsPropertyToHclTerraform(struc
 }
 
 
-export function tfDataCostCategoryRuleRuleAndAndPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleAndAndProperty): any {
+export function dataTfCostCategoryRuleRuleAndAndPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleAndAndProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -298,7 +298,7 @@ export function tfDataCostCategoryRuleRuleAndAndPropertyToTerraform(struct?: TfD
 }
 
 
-export function tfDataCostCategoryRuleRuleAndAndPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleAndAndProperty): any {
+export function dataTfCostCategoryRuleRuleAndAndPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleAndAndProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -309,7 +309,7 @@ export function tfDataCostCategoryRuleRuleAndAndPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfDataCostCategoryRuleRuleAndCostCategoryPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleAndCostCategoryProperty): any {
+export function dataTfCostCategoryRuleRuleAndCostCategoryPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleAndCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -319,7 +319,7 @@ export function tfDataCostCategoryRuleRuleAndCostCategoryPropertyToTerraform(str
 }
 
 
-export function tfDataCostCategoryRuleRuleAndCostCategoryPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleAndCostCategoryProperty): any {
+export function dataTfCostCategoryRuleRuleAndCostCategoryPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleAndCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -330,7 +330,7 @@ export function tfDataCostCategoryRuleRuleAndCostCategoryPropertyToHclTerraform(
 }
 
 
-export function tfDataCostCategoryRuleRuleAndDimensionPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleAndDimensionProperty): any {
+export function dataTfCostCategoryRuleRuleAndDimensionPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleAndDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -340,7 +340,7 @@ export function tfDataCostCategoryRuleRuleAndDimensionPropertyToTerraform(struct
 }
 
 
-export function tfDataCostCategoryRuleRuleAndDimensionPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleAndDimensionProperty): any {
+export function dataTfCostCategoryRuleRuleAndDimensionPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleAndDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -351,7 +351,7 @@ export function tfDataCostCategoryRuleRuleAndDimensionPropertyToHclTerraform(str
 }
 
 
-export function tfDataCostCategoryRuleRuleAndNotCostCategoryPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleAndNotCostCategoryProperty): any {
+export function dataTfCostCategoryRuleRuleAndNotCostCategoryPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleAndNotCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -361,7 +361,7 @@ export function tfDataCostCategoryRuleRuleAndNotCostCategoryPropertyToTerraform(
 }
 
 
-export function tfDataCostCategoryRuleRuleAndNotCostCategoryPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleAndNotCostCategoryProperty): any {
+export function dataTfCostCategoryRuleRuleAndNotCostCategoryPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleAndNotCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -372,7 +372,7 @@ export function tfDataCostCategoryRuleRuleAndNotCostCategoryPropertyToHclTerrafo
 }
 
 
-export function tfDataCostCategoryRuleRuleAndNotDimensionPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleAndNotDimensionProperty): any {
+export function dataTfCostCategoryRuleRuleAndNotDimensionPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleAndNotDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -382,7 +382,7 @@ export function tfDataCostCategoryRuleRuleAndNotDimensionPropertyToTerraform(str
 }
 
 
-export function tfDataCostCategoryRuleRuleAndNotDimensionPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleAndNotDimensionProperty): any {
+export function dataTfCostCategoryRuleRuleAndNotDimensionPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleAndNotDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -393,7 +393,7 @@ export function tfDataCostCategoryRuleRuleAndNotDimensionPropertyToHclTerraform(
 }
 
 
-export function tfDataCostCategoryRuleRuleAndNotTagsPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleAndNotTagsProperty): any {
+export function dataTfCostCategoryRuleRuleAndNotTagsPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleAndNotTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -403,7 +403,7 @@ export function tfDataCostCategoryRuleRuleAndNotTagsPropertyToTerraform(struct?:
 }
 
 
-export function tfDataCostCategoryRuleRuleAndNotTagsPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleAndNotTagsProperty): any {
+export function dataTfCostCategoryRuleRuleAndNotTagsPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleAndNotTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -414,7 +414,7 @@ export function tfDataCostCategoryRuleRuleAndNotTagsPropertyToHclTerraform(struc
 }
 
 
-export function tfDataCostCategoryRuleRuleAndNotPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleAndNotProperty): any {
+export function dataTfCostCategoryRuleRuleAndNotPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleAndNotProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -424,7 +424,7 @@ export function tfDataCostCategoryRuleRuleAndNotPropertyToTerraform(struct?: TfD
 }
 
 
-export function tfDataCostCategoryRuleRuleAndNotPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleAndNotProperty): any {
+export function dataTfCostCategoryRuleRuleAndNotPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleAndNotProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -435,7 +435,7 @@ export function tfDataCostCategoryRuleRuleAndNotPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfDataCostCategoryRuleRuleAndOrCostCategoryPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleAndOrCostCategoryProperty): any {
+export function dataTfCostCategoryRuleRuleAndOrCostCategoryPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleAndOrCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -445,7 +445,7 @@ export function tfDataCostCategoryRuleRuleAndOrCostCategoryPropertyToTerraform(s
 }
 
 
-export function tfDataCostCategoryRuleRuleAndOrCostCategoryPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleAndOrCostCategoryProperty): any {
+export function dataTfCostCategoryRuleRuleAndOrCostCategoryPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleAndOrCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -456,7 +456,7 @@ export function tfDataCostCategoryRuleRuleAndOrCostCategoryPropertyToHclTerrafor
 }
 
 
-export function tfDataCostCategoryRuleRuleAndOrDimensionPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleAndOrDimensionProperty): any {
+export function dataTfCostCategoryRuleRuleAndOrDimensionPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleAndOrDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -466,7 +466,7 @@ export function tfDataCostCategoryRuleRuleAndOrDimensionPropertyToTerraform(stru
 }
 
 
-export function tfDataCostCategoryRuleRuleAndOrDimensionPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleAndOrDimensionProperty): any {
+export function dataTfCostCategoryRuleRuleAndOrDimensionPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleAndOrDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -477,7 +477,7 @@ export function tfDataCostCategoryRuleRuleAndOrDimensionPropertyToHclTerraform(s
 }
 
 
-export function tfDataCostCategoryRuleRuleAndOrTagsPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleAndOrTagsProperty): any {
+export function dataTfCostCategoryRuleRuleAndOrTagsPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleAndOrTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -487,7 +487,7 @@ export function tfDataCostCategoryRuleRuleAndOrTagsPropertyToTerraform(struct?: 
 }
 
 
-export function tfDataCostCategoryRuleRuleAndOrTagsPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleAndOrTagsProperty): any {
+export function dataTfCostCategoryRuleRuleAndOrTagsPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleAndOrTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -498,7 +498,7 @@ export function tfDataCostCategoryRuleRuleAndOrTagsPropertyToHclTerraform(struct
 }
 
 
-export function tfDataCostCategoryRuleRuleAndOrPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleAndOrProperty): any {
+export function dataTfCostCategoryRuleRuleAndOrPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleAndOrProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -508,7 +508,7 @@ export function tfDataCostCategoryRuleRuleAndOrPropertyToTerraform(struct?: TfDa
 }
 
 
-export function tfDataCostCategoryRuleRuleAndOrPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleAndOrProperty): any {
+export function dataTfCostCategoryRuleRuleAndOrPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleAndOrProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -519,7 +519,7 @@ export function tfDataCostCategoryRuleRuleAndOrPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfDataCostCategoryRuleRuleAndTagsPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleAndTagsProperty): any {
+export function dataTfCostCategoryRuleRuleAndTagsPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleAndTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -529,7 +529,7 @@ export function tfDataCostCategoryRuleRuleAndTagsPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfDataCostCategoryRuleRuleAndTagsPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleAndTagsProperty): any {
+export function dataTfCostCategoryRuleRuleAndTagsPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleAndTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -540,7 +540,7 @@ export function tfDataCostCategoryRuleRuleAndTagsPropertyToHclTerraform(struct?:
 }
 
 
-export function tfDataCostCategoryRuleRuleAndPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleAndProperty): any {
+export function dataTfCostCategoryRuleRuleAndPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleAndProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -550,7 +550,7 @@ export function tfDataCostCategoryRuleRuleAndPropertyToTerraform(struct?: TfData
 }
 
 
-export function tfDataCostCategoryRuleRuleAndPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleAndProperty): any {
+export function dataTfCostCategoryRuleRuleAndPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleAndProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -561,7 +561,7 @@ export function tfDataCostCategoryRuleRuleAndPropertyToHclTerraform(struct?: TfD
 }
 
 
-export function tfDataCostCategoryRuleRuleCostCategoryPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleCostCategoryProperty): any {
+export function dataTfCostCategoryRuleRuleCostCategoryPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -571,7 +571,7 @@ export function tfDataCostCategoryRuleRuleCostCategoryPropertyToTerraform(struct
 }
 
 
-export function tfDataCostCategoryRuleRuleCostCategoryPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleCostCategoryProperty): any {
+export function dataTfCostCategoryRuleRuleCostCategoryPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -582,7 +582,7 @@ export function tfDataCostCategoryRuleRuleCostCategoryPropertyToHclTerraform(str
 }
 
 
-export function tfDataCostCategoryRuleRuleDimensionPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleDimensionProperty): any {
+export function dataTfCostCategoryRuleRuleDimensionPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -592,7 +592,7 @@ export function tfDataCostCategoryRuleRuleDimensionPropertyToTerraform(struct?: 
 }
 
 
-export function tfDataCostCategoryRuleRuleDimensionPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleDimensionProperty): any {
+export function dataTfCostCategoryRuleRuleDimensionPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -603,7 +603,7 @@ export function tfDataCostCategoryRuleRuleDimensionPropertyToHclTerraform(struct
 }
 
 
-export function tfDataCostCategoryRuleRuleNotAndCostCategoryPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleNotAndCostCategoryProperty): any {
+export function dataTfCostCategoryRuleRuleNotAndCostCategoryPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleNotAndCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -613,7 +613,7 @@ export function tfDataCostCategoryRuleRuleNotAndCostCategoryPropertyToTerraform(
 }
 
 
-export function tfDataCostCategoryRuleRuleNotAndCostCategoryPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleNotAndCostCategoryProperty): any {
+export function dataTfCostCategoryRuleRuleNotAndCostCategoryPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleNotAndCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -624,7 +624,7 @@ export function tfDataCostCategoryRuleRuleNotAndCostCategoryPropertyToHclTerrafo
 }
 
 
-export function tfDataCostCategoryRuleRuleNotAndDimensionPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleNotAndDimensionProperty): any {
+export function dataTfCostCategoryRuleRuleNotAndDimensionPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleNotAndDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -634,7 +634,7 @@ export function tfDataCostCategoryRuleRuleNotAndDimensionPropertyToTerraform(str
 }
 
 
-export function tfDataCostCategoryRuleRuleNotAndDimensionPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleNotAndDimensionProperty): any {
+export function dataTfCostCategoryRuleRuleNotAndDimensionPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleNotAndDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -645,7 +645,7 @@ export function tfDataCostCategoryRuleRuleNotAndDimensionPropertyToHclTerraform(
 }
 
 
-export function tfDataCostCategoryRuleRuleNotAndTagsPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleNotAndTagsProperty): any {
+export function dataTfCostCategoryRuleRuleNotAndTagsPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleNotAndTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -655,7 +655,7 @@ export function tfDataCostCategoryRuleRuleNotAndTagsPropertyToTerraform(struct?:
 }
 
 
-export function tfDataCostCategoryRuleRuleNotAndTagsPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleNotAndTagsProperty): any {
+export function dataTfCostCategoryRuleRuleNotAndTagsPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleNotAndTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -666,7 +666,7 @@ export function tfDataCostCategoryRuleRuleNotAndTagsPropertyToHclTerraform(struc
 }
 
 
-export function tfDataCostCategoryRuleRuleNotAndPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleNotAndProperty): any {
+export function dataTfCostCategoryRuleRuleNotAndPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleNotAndProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -676,7 +676,7 @@ export function tfDataCostCategoryRuleRuleNotAndPropertyToTerraform(struct?: TfD
 }
 
 
-export function tfDataCostCategoryRuleRuleNotAndPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleNotAndProperty): any {
+export function dataTfCostCategoryRuleRuleNotAndPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleNotAndProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -687,7 +687,7 @@ export function tfDataCostCategoryRuleRuleNotAndPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfDataCostCategoryRuleRuleNotCostCategoryPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleNotCostCategoryProperty): any {
+export function dataTfCostCategoryRuleRuleNotCostCategoryPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleNotCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -697,7 +697,7 @@ export function tfDataCostCategoryRuleRuleNotCostCategoryPropertyToTerraform(str
 }
 
 
-export function tfDataCostCategoryRuleRuleNotCostCategoryPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleNotCostCategoryProperty): any {
+export function dataTfCostCategoryRuleRuleNotCostCategoryPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleNotCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -708,7 +708,7 @@ export function tfDataCostCategoryRuleRuleNotCostCategoryPropertyToHclTerraform(
 }
 
 
-export function tfDataCostCategoryRuleRuleNotDimensionPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleNotDimensionProperty): any {
+export function dataTfCostCategoryRuleRuleNotDimensionPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleNotDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -718,7 +718,7 @@ export function tfDataCostCategoryRuleRuleNotDimensionPropertyToTerraform(struct
 }
 
 
-export function tfDataCostCategoryRuleRuleNotDimensionPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleNotDimensionProperty): any {
+export function dataTfCostCategoryRuleRuleNotDimensionPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleNotDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -729,7 +729,7 @@ export function tfDataCostCategoryRuleRuleNotDimensionPropertyToHclTerraform(str
 }
 
 
-export function tfDataCostCategoryRuleRuleNotNotCostCategoryPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleNotNotCostCategoryProperty): any {
+export function dataTfCostCategoryRuleRuleNotNotCostCategoryPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleNotNotCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -739,7 +739,7 @@ export function tfDataCostCategoryRuleRuleNotNotCostCategoryPropertyToTerraform(
 }
 
 
-export function tfDataCostCategoryRuleRuleNotNotCostCategoryPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleNotNotCostCategoryProperty): any {
+export function dataTfCostCategoryRuleRuleNotNotCostCategoryPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleNotNotCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -750,7 +750,7 @@ export function tfDataCostCategoryRuleRuleNotNotCostCategoryPropertyToHclTerrafo
 }
 
 
-export function tfDataCostCategoryRuleRuleNotNotDimensionPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleNotNotDimensionProperty): any {
+export function dataTfCostCategoryRuleRuleNotNotDimensionPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleNotNotDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -760,7 +760,7 @@ export function tfDataCostCategoryRuleRuleNotNotDimensionPropertyToTerraform(str
 }
 
 
-export function tfDataCostCategoryRuleRuleNotNotDimensionPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleNotNotDimensionProperty): any {
+export function dataTfCostCategoryRuleRuleNotNotDimensionPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleNotNotDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -771,7 +771,7 @@ export function tfDataCostCategoryRuleRuleNotNotDimensionPropertyToHclTerraform(
 }
 
 
-export function tfDataCostCategoryRuleRuleNotNotTagsPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleNotNotTagsProperty): any {
+export function dataTfCostCategoryRuleRuleNotNotTagsPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleNotNotTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -781,7 +781,7 @@ export function tfDataCostCategoryRuleRuleNotNotTagsPropertyToTerraform(struct?:
 }
 
 
-export function tfDataCostCategoryRuleRuleNotNotTagsPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleNotNotTagsProperty): any {
+export function dataTfCostCategoryRuleRuleNotNotTagsPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleNotNotTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -792,7 +792,7 @@ export function tfDataCostCategoryRuleRuleNotNotTagsPropertyToHclTerraform(struc
 }
 
 
-export function tfDataCostCategoryRuleRuleNotNotPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleNotNotProperty): any {
+export function dataTfCostCategoryRuleRuleNotNotPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleNotNotProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -802,7 +802,7 @@ export function tfDataCostCategoryRuleRuleNotNotPropertyToTerraform(struct?: TfD
 }
 
 
-export function tfDataCostCategoryRuleRuleNotNotPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleNotNotProperty): any {
+export function dataTfCostCategoryRuleRuleNotNotPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleNotNotProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -813,7 +813,7 @@ export function tfDataCostCategoryRuleRuleNotNotPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfDataCostCategoryRuleRuleNotOrCostCategoryPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleNotOrCostCategoryProperty): any {
+export function dataTfCostCategoryRuleRuleNotOrCostCategoryPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleNotOrCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -823,7 +823,7 @@ export function tfDataCostCategoryRuleRuleNotOrCostCategoryPropertyToTerraform(s
 }
 
 
-export function tfDataCostCategoryRuleRuleNotOrCostCategoryPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleNotOrCostCategoryProperty): any {
+export function dataTfCostCategoryRuleRuleNotOrCostCategoryPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleNotOrCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -834,7 +834,7 @@ export function tfDataCostCategoryRuleRuleNotOrCostCategoryPropertyToHclTerrafor
 }
 
 
-export function tfDataCostCategoryRuleRuleNotOrDimensionPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleNotOrDimensionProperty): any {
+export function dataTfCostCategoryRuleRuleNotOrDimensionPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleNotOrDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -844,7 +844,7 @@ export function tfDataCostCategoryRuleRuleNotOrDimensionPropertyToTerraform(stru
 }
 
 
-export function tfDataCostCategoryRuleRuleNotOrDimensionPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleNotOrDimensionProperty): any {
+export function dataTfCostCategoryRuleRuleNotOrDimensionPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleNotOrDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -855,7 +855,7 @@ export function tfDataCostCategoryRuleRuleNotOrDimensionPropertyToHclTerraform(s
 }
 
 
-export function tfDataCostCategoryRuleRuleNotOrTagsPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleNotOrTagsProperty): any {
+export function dataTfCostCategoryRuleRuleNotOrTagsPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleNotOrTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -865,7 +865,7 @@ export function tfDataCostCategoryRuleRuleNotOrTagsPropertyToTerraform(struct?: 
 }
 
 
-export function tfDataCostCategoryRuleRuleNotOrTagsPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleNotOrTagsProperty): any {
+export function dataTfCostCategoryRuleRuleNotOrTagsPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleNotOrTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -876,7 +876,7 @@ export function tfDataCostCategoryRuleRuleNotOrTagsPropertyToHclTerraform(struct
 }
 
 
-export function tfDataCostCategoryRuleRuleNotOrPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleNotOrProperty): any {
+export function dataTfCostCategoryRuleRuleNotOrPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleNotOrProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -886,7 +886,7 @@ export function tfDataCostCategoryRuleRuleNotOrPropertyToTerraform(struct?: TfDa
 }
 
 
-export function tfDataCostCategoryRuleRuleNotOrPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleNotOrProperty): any {
+export function dataTfCostCategoryRuleRuleNotOrPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleNotOrProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -897,7 +897,7 @@ export function tfDataCostCategoryRuleRuleNotOrPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfDataCostCategoryRuleRuleNotTagsPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleNotTagsProperty): any {
+export function dataTfCostCategoryRuleRuleNotTagsPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleNotTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -907,7 +907,7 @@ export function tfDataCostCategoryRuleRuleNotTagsPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfDataCostCategoryRuleRuleNotTagsPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleNotTagsProperty): any {
+export function dataTfCostCategoryRuleRuleNotTagsPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleNotTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -918,7 +918,7 @@ export function tfDataCostCategoryRuleRuleNotTagsPropertyToHclTerraform(struct?:
 }
 
 
-export function tfDataCostCategoryRuleRuleNotPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleNotProperty): any {
+export function dataTfCostCategoryRuleRuleNotPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleNotProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -928,7 +928,7 @@ export function tfDataCostCategoryRuleRuleNotPropertyToTerraform(struct?: TfData
 }
 
 
-export function tfDataCostCategoryRuleRuleNotPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleNotProperty): any {
+export function dataTfCostCategoryRuleRuleNotPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleNotProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -939,7 +939,7 @@ export function tfDataCostCategoryRuleRuleNotPropertyToHclTerraform(struct?: TfD
 }
 
 
-export function tfDataCostCategoryRuleRuleOrAndCostCategoryPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleOrAndCostCategoryProperty): any {
+export function dataTfCostCategoryRuleRuleOrAndCostCategoryPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleOrAndCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -949,7 +949,7 @@ export function tfDataCostCategoryRuleRuleOrAndCostCategoryPropertyToTerraform(s
 }
 
 
-export function tfDataCostCategoryRuleRuleOrAndCostCategoryPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleOrAndCostCategoryProperty): any {
+export function dataTfCostCategoryRuleRuleOrAndCostCategoryPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleOrAndCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -960,7 +960,7 @@ export function tfDataCostCategoryRuleRuleOrAndCostCategoryPropertyToHclTerrafor
 }
 
 
-export function tfDataCostCategoryRuleRuleOrAndDimensionPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleOrAndDimensionProperty): any {
+export function dataTfCostCategoryRuleRuleOrAndDimensionPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleOrAndDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -970,7 +970,7 @@ export function tfDataCostCategoryRuleRuleOrAndDimensionPropertyToTerraform(stru
 }
 
 
-export function tfDataCostCategoryRuleRuleOrAndDimensionPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleOrAndDimensionProperty): any {
+export function dataTfCostCategoryRuleRuleOrAndDimensionPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleOrAndDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -981,7 +981,7 @@ export function tfDataCostCategoryRuleRuleOrAndDimensionPropertyToHclTerraform(s
 }
 
 
-export function tfDataCostCategoryRuleRuleOrAndTagsPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleOrAndTagsProperty): any {
+export function dataTfCostCategoryRuleRuleOrAndTagsPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleOrAndTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -991,7 +991,7 @@ export function tfDataCostCategoryRuleRuleOrAndTagsPropertyToTerraform(struct?: 
 }
 
 
-export function tfDataCostCategoryRuleRuleOrAndTagsPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleOrAndTagsProperty): any {
+export function dataTfCostCategoryRuleRuleOrAndTagsPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleOrAndTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1002,7 +1002,7 @@ export function tfDataCostCategoryRuleRuleOrAndTagsPropertyToHclTerraform(struct
 }
 
 
-export function tfDataCostCategoryRuleRuleOrAndPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleOrAndProperty): any {
+export function dataTfCostCategoryRuleRuleOrAndPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleOrAndProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1012,7 +1012,7 @@ export function tfDataCostCategoryRuleRuleOrAndPropertyToTerraform(struct?: TfDa
 }
 
 
-export function tfDataCostCategoryRuleRuleOrAndPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleOrAndProperty): any {
+export function dataTfCostCategoryRuleRuleOrAndPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleOrAndProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1023,7 +1023,7 @@ export function tfDataCostCategoryRuleRuleOrAndPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfDataCostCategoryRuleRuleOrCostCategoryPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleOrCostCategoryProperty): any {
+export function dataTfCostCategoryRuleRuleOrCostCategoryPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleOrCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1033,7 +1033,7 @@ export function tfDataCostCategoryRuleRuleOrCostCategoryPropertyToTerraform(stru
 }
 
 
-export function tfDataCostCategoryRuleRuleOrCostCategoryPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleOrCostCategoryProperty): any {
+export function dataTfCostCategoryRuleRuleOrCostCategoryPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleOrCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1044,7 +1044,7 @@ export function tfDataCostCategoryRuleRuleOrCostCategoryPropertyToHclTerraform(s
 }
 
 
-export function tfDataCostCategoryRuleRuleOrDimensionPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleOrDimensionProperty): any {
+export function dataTfCostCategoryRuleRuleOrDimensionPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleOrDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1054,7 +1054,7 @@ export function tfDataCostCategoryRuleRuleOrDimensionPropertyToTerraform(struct?
 }
 
 
-export function tfDataCostCategoryRuleRuleOrDimensionPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleOrDimensionProperty): any {
+export function dataTfCostCategoryRuleRuleOrDimensionPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleOrDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1065,7 +1065,7 @@ export function tfDataCostCategoryRuleRuleOrDimensionPropertyToHclTerraform(stru
 }
 
 
-export function tfDataCostCategoryRuleRuleOrNotCostCategoryPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleOrNotCostCategoryProperty): any {
+export function dataTfCostCategoryRuleRuleOrNotCostCategoryPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleOrNotCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1075,7 +1075,7 @@ export function tfDataCostCategoryRuleRuleOrNotCostCategoryPropertyToTerraform(s
 }
 
 
-export function tfDataCostCategoryRuleRuleOrNotCostCategoryPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleOrNotCostCategoryProperty): any {
+export function dataTfCostCategoryRuleRuleOrNotCostCategoryPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleOrNotCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1086,7 +1086,7 @@ export function tfDataCostCategoryRuleRuleOrNotCostCategoryPropertyToHclTerrafor
 }
 
 
-export function tfDataCostCategoryRuleRuleOrNotDimensionPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleOrNotDimensionProperty): any {
+export function dataTfCostCategoryRuleRuleOrNotDimensionPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleOrNotDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1096,7 +1096,7 @@ export function tfDataCostCategoryRuleRuleOrNotDimensionPropertyToTerraform(stru
 }
 
 
-export function tfDataCostCategoryRuleRuleOrNotDimensionPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleOrNotDimensionProperty): any {
+export function dataTfCostCategoryRuleRuleOrNotDimensionPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleOrNotDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1107,7 +1107,7 @@ export function tfDataCostCategoryRuleRuleOrNotDimensionPropertyToHclTerraform(s
 }
 
 
-export function tfDataCostCategoryRuleRuleOrNotTagsPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleOrNotTagsProperty): any {
+export function dataTfCostCategoryRuleRuleOrNotTagsPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleOrNotTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1117,7 +1117,7 @@ export function tfDataCostCategoryRuleRuleOrNotTagsPropertyToTerraform(struct?: 
 }
 
 
-export function tfDataCostCategoryRuleRuleOrNotTagsPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleOrNotTagsProperty): any {
+export function dataTfCostCategoryRuleRuleOrNotTagsPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleOrNotTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1128,7 +1128,7 @@ export function tfDataCostCategoryRuleRuleOrNotTagsPropertyToHclTerraform(struct
 }
 
 
-export function tfDataCostCategoryRuleRuleOrNotPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleOrNotProperty): any {
+export function dataTfCostCategoryRuleRuleOrNotPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleOrNotProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1138,7 +1138,7 @@ export function tfDataCostCategoryRuleRuleOrNotPropertyToTerraform(struct?: TfDa
 }
 
 
-export function tfDataCostCategoryRuleRuleOrNotPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleOrNotProperty): any {
+export function dataTfCostCategoryRuleRuleOrNotPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleOrNotProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1149,7 +1149,7 @@ export function tfDataCostCategoryRuleRuleOrNotPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfDataCostCategoryRuleRuleOrOrCostCategoryPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleOrOrCostCategoryProperty): any {
+export function dataTfCostCategoryRuleRuleOrOrCostCategoryPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleOrOrCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1159,7 +1159,7 @@ export function tfDataCostCategoryRuleRuleOrOrCostCategoryPropertyToTerraform(st
 }
 
 
-export function tfDataCostCategoryRuleRuleOrOrCostCategoryPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleOrOrCostCategoryProperty): any {
+export function dataTfCostCategoryRuleRuleOrOrCostCategoryPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleOrOrCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1170,7 +1170,7 @@ export function tfDataCostCategoryRuleRuleOrOrCostCategoryPropertyToHclTerraform
 }
 
 
-export function tfDataCostCategoryRuleRuleOrOrDimensionPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleOrOrDimensionProperty): any {
+export function dataTfCostCategoryRuleRuleOrOrDimensionPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleOrOrDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1180,7 +1180,7 @@ export function tfDataCostCategoryRuleRuleOrOrDimensionPropertyToTerraform(struc
 }
 
 
-export function tfDataCostCategoryRuleRuleOrOrDimensionPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleOrOrDimensionProperty): any {
+export function dataTfCostCategoryRuleRuleOrOrDimensionPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleOrOrDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1191,7 +1191,7 @@ export function tfDataCostCategoryRuleRuleOrOrDimensionPropertyToHclTerraform(st
 }
 
 
-export function tfDataCostCategoryRuleRuleOrOrTagsPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleOrOrTagsProperty): any {
+export function dataTfCostCategoryRuleRuleOrOrTagsPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleOrOrTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1201,7 +1201,7 @@ export function tfDataCostCategoryRuleRuleOrOrTagsPropertyToTerraform(struct?: T
 }
 
 
-export function tfDataCostCategoryRuleRuleOrOrTagsPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleOrOrTagsProperty): any {
+export function dataTfCostCategoryRuleRuleOrOrTagsPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleOrOrTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1212,7 +1212,7 @@ export function tfDataCostCategoryRuleRuleOrOrTagsPropertyToHclTerraform(struct?
 }
 
 
-export function tfDataCostCategoryRuleRuleOrOrPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleOrOrProperty): any {
+export function dataTfCostCategoryRuleRuleOrOrPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleOrOrProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1222,7 +1222,7 @@ export function tfDataCostCategoryRuleRuleOrOrPropertyToTerraform(struct?: TfDat
 }
 
 
-export function tfDataCostCategoryRuleRuleOrOrPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleOrOrProperty): any {
+export function dataTfCostCategoryRuleRuleOrOrPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleOrOrProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1233,7 +1233,7 @@ export function tfDataCostCategoryRuleRuleOrOrPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfDataCostCategoryRuleRuleOrTagsPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleOrTagsProperty): any {
+export function dataTfCostCategoryRuleRuleOrTagsPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleOrTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1243,7 +1243,7 @@ export function tfDataCostCategoryRuleRuleOrTagsPropertyToTerraform(struct?: TfD
 }
 
 
-export function tfDataCostCategoryRuleRuleOrTagsPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleOrTagsProperty): any {
+export function dataTfCostCategoryRuleRuleOrTagsPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleOrTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1254,7 +1254,7 @@ export function tfDataCostCategoryRuleRuleOrTagsPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfDataCostCategoryRuleRuleOrPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleOrProperty): any {
+export function dataTfCostCategoryRuleRuleOrPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleOrProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1264,7 +1264,7 @@ export function tfDataCostCategoryRuleRuleOrPropertyToTerraform(struct?: TfDataC
 }
 
 
-export function tfDataCostCategoryRuleRuleOrPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleOrProperty): any {
+export function dataTfCostCategoryRuleRuleOrPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleOrProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1275,7 +1275,7 @@ export function tfDataCostCategoryRuleRuleOrPropertyToHclTerraform(struct?: TfDa
 }
 
 
-export function tfDataCostCategoryRuleRuleTagsPropertyToTerraform(struct?: TfDataCostCategory.RuleRuleTagsProperty): any {
+export function dataTfCostCategoryRuleRuleTagsPropertyToTerraform(struct?: DataTfCostCategory.RuleRuleTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1285,7 +1285,7 @@ export function tfDataCostCategoryRuleRuleTagsPropertyToTerraform(struct?: TfDat
 }
 
 
-export function tfDataCostCategoryRuleRuleTagsPropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleTagsProperty): any {
+export function dataTfCostCategoryRuleRuleTagsPropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1296,7 +1296,7 @@ export function tfDataCostCategoryRuleRuleTagsPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfDataCostCategoryRuleRulePropertyToTerraform(struct?: TfDataCostCategory.RuleRuleProperty): any {
+export function dataTfCostCategoryRuleRulePropertyToTerraform(struct?: DataTfCostCategory.RuleRuleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1306,7 +1306,7 @@ export function tfDataCostCategoryRuleRulePropertyToTerraform(struct?: TfDataCos
 }
 
 
-export function tfDataCostCategoryRuleRulePropertyToHclTerraform(struct?: TfDataCostCategory.RuleRuleProperty): any {
+export function dataTfCostCategoryRuleRulePropertyToHclTerraform(struct?: DataTfCostCategory.RuleRuleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1317,7 +1317,7 @@ export function tfDataCostCategoryRuleRulePropertyToHclTerraform(struct?: TfData
 }
 
 
-export function tfDataCostCategoryRulePropertyToTerraform(struct?: TfDataCostCategory.RuleProperty): any {
+export function dataTfCostCategoryRulePropertyToTerraform(struct?: DataTfCostCategory.RuleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1327,7 +1327,7 @@ export function tfDataCostCategoryRulePropertyToTerraform(struct?: TfDataCostCat
 }
 
 
-export function tfDataCostCategoryRulePropertyToHclTerraform(struct?: TfDataCostCategory.RuleProperty): any {
+export function dataTfCostCategoryRulePropertyToHclTerraform(struct?: DataTfCostCategory.RuleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1338,7 +1338,7 @@ export function tfDataCostCategoryRulePropertyToHclTerraform(struct?: TfDataCost
 }
 
 
-export function tfDataCostCategoryParameterPropertyToTerraform(struct?: TfDataCostCategory.ParameterProperty): any {
+export function dataTfCostCategoryParameterPropertyToTerraform(struct?: DataTfCostCategory.ParameterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1348,7 +1348,7 @@ export function tfDataCostCategoryParameterPropertyToTerraform(struct?: TfDataCo
 }
 
 
-export function tfDataCostCategoryParameterPropertyToHclTerraform(struct?: TfDataCostCategory.ParameterProperty): any {
+export function dataTfCostCategoryParameterPropertyToHclTerraform(struct?: DataTfCostCategory.ParameterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1359,7 +1359,7 @@ export function tfDataCostCategoryParameterPropertyToHclTerraform(struct?: TfDat
 }
 
 
-export function tfDataCostCategorySplitChargeRulePropertyToTerraform(struct?: TfDataCostCategory.SplitChargeRuleProperty): any {
+export function dataTfCostCategorySplitChargeRulePropertyToTerraform(struct?: DataTfCostCategory.SplitChargeRuleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1369,7 +1369,7 @@ export function tfDataCostCategorySplitChargeRulePropertyToTerraform(struct?: Tf
 }
 
 
-export function tfDataCostCategorySplitChargeRulePropertyToHclTerraform(struct?: TfDataCostCategory.SplitChargeRuleProperty): any {
+export function dataTfCostCategorySplitChargeRulePropertyToHclTerraform(struct?: DataTfCostCategory.SplitChargeRuleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1380,7 +1380,7 @@ export function tfDataCostCategorySplitChargeRulePropertyToHclTerraform(struct?:
 }
 
 
-export namespace TfDataCostCategory {
+export namespace DataTfCostCategory {
 export interface InheritedValueProperty {
 }
 export class InheritedValuePropertyOutputReference extends cdktn.ComplexObject {

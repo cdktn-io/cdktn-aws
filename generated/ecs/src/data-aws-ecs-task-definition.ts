@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataTaskDefinitionConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfTaskDefinitionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_definition#id TfDataTaskDefinition#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_definition#id DataTfTaskDefinition#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,11 +16,11 @@ export interface TfDataTaskDefinitionConfig extends cdktn.TerraformMetaArguments
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_definition#region TfDataTaskDefinition#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_definition#region DataTfTaskDefinition#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_definition#task_definition TfDataTaskDefinition#task_definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_definition#task_definition DataTfTaskDefinition#task_definition}
   */
   readonly taskDefinition: string;
 }
@@ -28,7 +28,7 @@ export interface TfDataTaskDefinitionConfig extends cdktn.TerraformMetaArguments
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_definition aws_ecs_task_definition}
 */
-export class TfDataTaskDefinition extends cdktn.TerraformDataSource {
+export class DataTfTaskDefinition extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class TfDataTaskDefinition extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataTaskDefinition resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfTaskDefinition resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataTaskDefinition to import
-  * @param importFromId The id of the existing TfDataTaskDefinition that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_definition#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataTaskDefinition to import is found
+  * @param importToId The construct id used in the generated config for the DataTfTaskDefinition to import
+  * @param importFromId The id of the existing DataTfTaskDefinition that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_definition#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfTaskDefinition to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ecs_task_definition", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class TfDataTaskDefinition extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataTaskDefinitionConfig
+  * @param options DataTfTaskDefinitionConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataTaskDefinitionConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfTaskDefinitionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ecs_task_definition',
       terraformGeneratorMetadata: {
@@ -111,7 +111,7 @@ export class TfDataTaskDefinition extends cdktn.TerraformDataSource {
   }
 
   // ephemeral_storage - computed: true, optional: false, required: false
-  private _ephemeralStorage = new TfDataTaskDefinition.EphemeralStoragePropertyList(this, "ephemeral_storage", false);
+  private _ephemeralStorage = new DataTfTaskDefinition.EphemeralStoragePropertyList(this, "ephemeral_storage", false);
   public get ephemeralStorage() {
     return this._ephemeralStorage;
   }
@@ -163,13 +163,13 @@ export class TfDataTaskDefinition extends cdktn.TerraformDataSource {
   }
 
   // placement_constraints - computed: true, optional: false, required: false
-  private _placementConstraints = new TfDataTaskDefinition.PlacementConstraintsPropertyList(this, "placement_constraints", true);
+  private _placementConstraints = new DataTfTaskDefinition.PlacementConstraintsPropertyList(this, "placement_constraints", true);
   public get placementConstraints() {
     return this._placementConstraints;
   }
 
   // proxy_configuration - computed: true, optional: false, required: false
-  private _proxyConfiguration = new TfDataTaskDefinition.ProxyConfigurationPropertyList(this, "proxy_configuration", false);
+  private _proxyConfiguration = new DataTfTaskDefinition.ProxyConfigurationPropertyList(this, "proxy_configuration", false);
   public get proxyConfiguration() {
     return this._proxyConfiguration;
   }
@@ -201,7 +201,7 @@ export class TfDataTaskDefinition extends cdktn.TerraformDataSource {
   }
 
   // runtime_platform - computed: true, optional: false, required: false
-  private _runtimePlatform = new TfDataTaskDefinition.RuntimePlatformPropertyList(this, "runtime_platform", false);
+  private _runtimePlatform = new DataTfTaskDefinition.RuntimePlatformPropertyList(this, "runtime_platform", false);
   public get runtimePlatform() {
     return this._runtimePlatform;
   }
@@ -230,7 +230,7 @@ export class TfDataTaskDefinition extends cdktn.TerraformDataSource {
   }
 
   // volume - computed: true, optional: false, required: false
-  private _volume = new TfDataTaskDefinition.VolumePropertyList(this, "volume", true);
+  private _volume = new DataTfTaskDefinition.VolumePropertyList(this, "volume", true);
   public get volume() {
     return this._volume;
   }
@@ -274,7 +274,7 @@ export class TfDataTaskDefinition extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataTaskDefinitionEphemeralStoragePropertyToTerraform(struct?: TfDataTaskDefinition.EphemeralStorageProperty): any {
+export function dataTfTaskDefinitionEphemeralStoragePropertyToTerraform(struct?: DataTfTaskDefinition.EphemeralStorageProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -284,7 +284,7 @@ export function tfDataTaskDefinitionEphemeralStoragePropertyToTerraform(struct?:
 }
 
 
-export function tfDataTaskDefinitionEphemeralStoragePropertyToHclTerraform(struct?: TfDataTaskDefinition.EphemeralStorageProperty): any {
+export function dataTfTaskDefinitionEphemeralStoragePropertyToHclTerraform(struct?: DataTfTaskDefinition.EphemeralStorageProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -295,7 +295,7 @@ export function tfDataTaskDefinitionEphemeralStoragePropertyToHclTerraform(struc
 }
 
 
-export function tfDataTaskDefinitionPlacementConstraintsPropertyToTerraform(struct?: TfDataTaskDefinition.PlacementConstraintsProperty): any {
+export function dataTfTaskDefinitionPlacementConstraintsPropertyToTerraform(struct?: DataTfTaskDefinition.PlacementConstraintsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -305,7 +305,7 @@ export function tfDataTaskDefinitionPlacementConstraintsPropertyToTerraform(stru
 }
 
 
-export function tfDataTaskDefinitionPlacementConstraintsPropertyToHclTerraform(struct?: TfDataTaskDefinition.PlacementConstraintsProperty): any {
+export function dataTfTaskDefinitionPlacementConstraintsPropertyToHclTerraform(struct?: DataTfTaskDefinition.PlacementConstraintsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -316,7 +316,7 @@ export function tfDataTaskDefinitionPlacementConstraintsPropertyToHclTerraform(s
 }
 
 
-export function tfDataTaskDefinitionProxyConfigurationPropertyToTerraform(struct?: TfDataTaskDefinition.ProxyConfigurationProperty): any {
+export function dataTfTaskDefinitionProxyConfigurationPropertyToTerraform(struct?: DataTfTaskDefinition.ProxyConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -326,7 +326,7 @@ export function tfDataTaskDefinitionProxyConfigurationPropertyToTerraform(struct
 }
 
 
-export function tfDataTaskDefinitionProxyConfigurationPropertyToHclTerraform(struct?: TfDataTaskDefinition.ProxyConfigurationProperty): any {
+export function dataTfTaskDefinitionProxyConfigurationPropertyToHclTerraform(struct?: DataTfTaskDefinition.ProxyConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -337,7 +337,7 @@ export function tfDataTaskDefinitionProxyConfigurationPropertyToHclTerraform(str
 }
 
 
-export function tfDataTaskDefinitionRuntimePlatformPropertyToTerraform(struct?: TfDataTaskDefinition.RuntimePlatformProperty): any {
+export function dataTfTaskDefinitionRuntimePlatformPropertyToTerraform(struct?: DataTfTaskDefinition.RuntimePlatformProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -347,7 +347,7 @@ export function tfDataTaskDefinitionRuntimePlatformPropertyToTerraform(struct?: 
 }
 
 
-export function tfDataTaskDefinitionRuntimePlatformPropertyToHclTerraform(struct?: TfDataTaskDefinition.RuntimePlatformProperty): any {
+export function dataTfTaskDefinitionRuntimePlatformPropertyToHclTerraform(struct?: DataTfTaskDefinition.RuntimePlatformProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -358,7 +358,7 @@ export function tfDataTaskDefinitionRuntimePlatformPropertyToHclTerraform(struct
 }
 
 
-export function tfDataTaskDefinitionDockerVolumeConfigurationPropertyToTerraform(struct?: TfDataTaskDefinition.DockerVolumeConfigurationProperty): any {
+export function dataTfTaskDefinitionDockerVolumeConfigurationPropertyToTerraform(struct?: DataTfTaskDefinition.DockerVolumeConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -368,7 +368,7 @@ export function tfDataTaskDefinitionDockerVolumeConfigurationPropertyToTerraform
 }
 
 
-export function tfDataTaskDefinitionDockerVolumeConfigurationPropertyToHclTerraform(struct?: TfDataTaskDefinition.DockerVolumeConfigurationProperty): any {
+export function dataTfTaskDefinitionDockerVolumeConfigurationPropertyToHclTerraform(struct?: DataTfTaskDefinition.DockerVolumeConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -379,7 +379,7 @@ export function tfDataTaskDefinitionDockerVolumeConfigurationPropertyToHclTerraf
 }
 
 
-export function tfDataTaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigPropertyToTerraform(struct?: TfDataTaskDefinition.VolumeEfsVolumeConfigurationAuthorizationConfigProperty): any {
+export function dataTfTaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigPropertyToTerraform(struct?: DataTfTaskDefinition.VolumeEfsVolumeConfigurationAuthorizationConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -389,7 +389,7 @@ export function tfDataTaskDefinitionVolumeEfsVolumeConfigurationAuthorizationCon
 }
 
 
-export function tfDataTaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigPropertyToHclTerraform(struct?: TfDataTaskDefinition.VolumeEfsVolumeConfigurationAuthorizationConfigProperty): any {
+export function dataTfTaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigPropertyToHclTerraform(struct?: DataTfTaskDefinition.VolumeEfsVolumeConfigurationAuthorizationConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -400,7 +400,7 @@ export function tfDataTaskDefinitionVolumeEfsVolumeConfigurationAuthorizationCon
 }
 
 
-export function tfDataTaskDefinitionEfsVolumeConfigurationPropertyToTerraform(struct?: TfDataTaskDefinition.EfsVolumeConfigurationProperty): any {
+export function dataTfTaskDefinitionEfsVolumeConfigurationPropertyToTerraform(struct?: DataTfTaskDefinition.EfsVolumeConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -410,7 +410,7 @@ export function tfDataTaskDefinitionEfsVolumeConfigurationPropertyToTerraform(st
 }
 
 
-export function tfDataTaskDefinitionEfsVolumeConfigurationPropertyToHclTerraform(struct?: TfDataTaskDefinition.EfsVolumeConfigurationProperty): any {
+export function dataTfTaskDefinitionEfsVolumeConfigurationPropertyToHclTerraform(struct?: DataTfTaskDefinition.EfsVolumeConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -421,7 +421,7 @@ export function tfDataTaskDefinitionEfsVolumeConfigurationPropertyToHclTerraform
 }
 
 
-export function tfDataTaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigPropertyToTerraform(struct?: TfDataTaskDefinition.VolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigProperty): any {
+export function dataTfTaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigPropertyToTerraform(struct?: DataTfTaskDefinition.VolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -431,7 +431,7 @@ export function tfDataTaskDefinitionVolumeFsxWindowsFileServerVolumeConfiguratio
 }
 
 
-export function tfDataTaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigPropertyToHclTerraform(struct?: TfDataTaskDefinition.VolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigProperty): any {
+export function dataTfTaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigPropertyToHclTerraform(struct?: DataTfTaskDefinition.VolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -442,7 +442,7 @@ export function tfDataTaskDefinitionVolumeFsxWindowsFileServerVolumeConfiguratio
 }
 
 
-export function tfDataTaskDefinitionFsxWindowsFileServerVolumeConfigurationPropertyToTerraform(struct?: TfDataTaskDefinition.FsxWindowsFileServerVolumeConfigurationProperty): any {
+export function dataTfTaskDefinitionFsxWindowsFileServerVolumeConfigurationPropertyToTerraform(struct?: DataTfTaskDefinition.FsxWindowsFileServerVolumeConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -452,7 +452,7 @@ export function tfDataTaskDefinitionFsxWindowsFileServerVolumeConfigurationPrope
 }
 
 
-export function tfDataTaskDefinitionFsxWindowsFileServerVolumeConfigurationPropertyToHclTerraform(struct?: TfDataTaskDefinition.FsxWindowsFileServerVolumeConfigurationProperty): any {
+export function dataTfTaskDefinitionFsxWindowsFileServerVolumeConfigurationPropertyToHclTerraform(struct?: DataTfTaskDefinition.FsxWindowsFileServerVolumeConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -463,7 +463,7 @@ export function tfDataTaskDefinitionFsxWindowsFileServerVolumeConfigurationPrope
 }
 
 
-export function tfDataTaskDefinitionS3filesVolumeConfigurationPropertyToTerraform(struct?: TfDataTaskDefinition.S3filesVolumeConfigurationProperty): any {
+export function dataTfTaskDefinitionS3filesVolumeConfigurationPropertyToTerraform(struct?: DataTfTaskDefinition.S3filesVolumeConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -473,7 +473,7 @@ export function tfDataTaskDefinitionS3filesVolumeConfigurationPropertyToTerrafor
 }
 
 
-export function tfDataTaskDefinitionS3filesVolumeConfigurationPropertyToHclTerraform(struct?: TfDataTaskDefinition.S3filesVolumeConfigurationProperty): any {
+export function dataTfTaskDefinitionS3filesVolumeConfigurationPropertyToHclTerraform(struct?: DataTfTaskDefinition.S3filesVolumeConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -484,7 +484,7 @@ export function tfDataTaskDefinitionS3filesVolumeConfigurationPropertyToHclTerra
 }
 
 
-export function tfDataTaskDefinitionVolumePropertyToTerraform(struct?: TfDataTaskDefinition.VolumeProperty): any {
+export function dataTfTaskDefinitionVolumePropertyToTerraform(struct?: DataTfTaskDefinition.VolumeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -494,7 +494,7 @@ export function tfDataTaskDefinitionVolumePropertyToTerraform(struct?: TfDataTas
 }
 
 
-export function tfDataTaskDefinitionVolumePropertyToHclTerraform(struct?: TfDataTaskDefinition.VolumeProperty): any {
+export function dataTfTaskDefinitionVolumePropertyToHclTerraform(struct?: DataTfTaskDefinition.VolumeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -505,7 +505,7 @@ export function tfDataTaskDefinitionVolumePropertyToHclTerraform(struct?: TfData
 }
 
 
-export namespace TfDataTaskDefinition {
+export namespace DataTfTaskDefinition {
 export interface EphemeralStorageProperty {
 }
 export class EphemeralStoragePropertyOutputReference extends cdktn.ComplexObject {

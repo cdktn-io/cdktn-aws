@@ -5,22 +5,22 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataBusConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfBusConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_event_bus#id TfDataBus#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_event_bus#id DataTfBus#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_event_bus#name TfDataBus#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_event_bus#name DataTfBus#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_event_bus#region TfDataBus#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_event_bus#region DataTfBus#region}
   */
   readonly region?: string;
 }
@@ -28,7 +28,7 @@ export interface TfDataBusConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_event_bus aws_cloudwatch_event_bus}
 */
-export class TfDataBus extends cdktn.TerraformDataSource {
+export class DataTfBus extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class TfDataBus extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataBus resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfBus resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataBus to import
-  * @param importFromId The id of the existing TfDataBus that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_event_bus#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataBus to import is found
+  * @param importToId The construct id used in the generated config for the DataTfBus to import
+  * @param importFromId The id of the existing DataTfBus that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_event_bus#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfBus to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudwatch_event_bus", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class TfDataBus extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataBusConfig
+  * @param options DataTfBusConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataBusConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfBusConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudwatch_event_bus',
       terraformGeneratorMetadata: {
@@ -91,7 +91,7 @@ export class TfDataBus extends cdktn.TerraformDataSource {
   }
 
   // dead_letter_config - computed: true, optional: false, required: false
-  private _deadLetterConfig = new TfDataBus.DeadLetterConfigPropertyList(this, "dead_letter_config", false);
+  private _deadLetterConfig = new DataTfBus.DeadLetterConfigPropertyList(this, "dead_letter_config", false);
   public get deadLetterConfig() {
     return this._deadLetterConfig;
   }
@@ -123,7 +123,7 @@ export class TfDataBus extends cdktn.TerraformDataSource {
   }
 
   // log_config - computed: true, optional: false, required: false
-  private _logConfig = new TfDataBus.LogConfigPropertyList(this, "log_config", false);
+  private _logConfig = new DataTfBus.LogConfigPropertyList(this, "log_config", false);
   public get logConfig() {
     return this._logConfig;
   }
@@ -196,7 +196,7 @@ export class TfDataBus extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataBusDeadLetterConfigPropertyToTerraform(struct?: TfDataBus.DeadLetterConfigProperty): any {
+export function dataTfBusDeadLetterConfigPropertyToTerraform(struct?: DataTfBus.DeadLetterConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -206,7 +206,7 @@ export function tfDataBusDeadLetterConfigPropertyToTerraform(struct?: TfDataBus.
 }
 
 
-export function tfDataBusDeadLetterConfigPropertyToHclTerraform(struct?: TfDataBus.DeadLetterConfigProperty): any {
+export function dataTfBusDeadLetterConfigPropertyToHclTerraform(struct?: DataTfBus.DeadLetterConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -217,7 +217,7 @@ export function tfDataBusDeadLetterConfigPropertyToHclTerraform(struct?: TfDataB
 }
 
 
-export function tfDataBusLogConfigPropertyToTerraform(struct?: TfDataBus.LogConfigProperty): any {
+export function dataTfBusLogConfigPropertyToTerraform(struct?: DataTfBus.LogConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -227,7 +227,7 @@ export function tfDataBusLogConfigPropertyToTerraform(struct?: TfDataBus.LogConf
 }
 
 
-export function tfDataBusLogConfigPropertyToHclTerraform(struct?: TfDataBus.LogConfigProperty): any {
+export function dataTfBusLogConfigPropertyToHclTerraform(struct?: DataTfBus.LogConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -238,7 +238,7 @@ export function tfDataBusLogConfigPropertyToHclTerraform(struct?: TfDataBus.LogC
 }
 
 
-export namespace TfDataBus {
+export namespace DataTfBus {
 export interface DeadLetterConfigProperty {
 }
 export class DeadLetterConfigPropertyOutputReference extends cdktn.ComplexObject {

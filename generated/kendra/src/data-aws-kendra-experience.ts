@@ -5,26 +5,26 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataExperienceConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfExperienceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kendra_experience#experience_id TfDataExperience#experience_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kendra_experience#experience_id DataTfExperience#experience_id}
   */
   readonly experienceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kendra_experience#id TfDataExperience#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kendra_experience#id DataTfExperience#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kendra_experience#index_id TfDataExperience#index_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kendra_experience#index_id DataTfExperience#index_id}
   */
   readonly indexId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kendra_experience#region TfDataExperience#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kendra_experience#region DataTfExperience#region}
   */
   readonly region?: string;
 }
@@ -32,7 +32,7 @@ export interface TfDataExperienceConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kendra_experience aws_kendra_experience}
 */
-export class TfDataExperience extends cdktn.TerraformDataSource {
+export class DataTfExperience extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class TfDataExperience extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataExperience resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfExperience resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataExperience to import
-  * @param importFromId The id of the existing TfDataExperience that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kendra_experience#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataExperience to import is found
+  * @param importToId The construct id used in the generated config for the DataTfExperience to import
+  * @param importFromId The id of the existing DataTfExperience that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kendra_experience#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfExperience to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_kendra_experience", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class TfDataExperience extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataExperienceConfig
+  * @param options DataTfExperienceConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataExperienceConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfExperienceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_kendra_experience',
       terraformGeneratorMetadata: {
@@ -96,7 +96,7 @@ export class TfDataExperience extends cdktn.TerraformDataSource {
   }
 
   // configuration - computed: true, optional: false, required: false
-  private _configuration = new TfDataExperience.ConfigurationPropertyList(this, "configuration", false);
+  private _configuration = new DataTfExperience.ConfigurationPropertyList(this, "configuration", false);
   public get configuration() {
     return this._configuration;
   }
@@ -112,7 +112,7 @@ export class TfDataExperience extends cdktn.TerraformDataSource {
   }
 
   // endpoints - computed: true, optional: false, required: false
-  private _endpoints = new TfDataExperience.EndpointsPropertyList(this, "endpoints", true);
+  private _endpoints = new DataTfExperience.EndpointsPropertyList(this, "endpoints", true);
   public get endpoints() {
     return this._endpoints;
   }
@@ -246,7 +246,7 @@ export class TfDataExperience extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataExperienceContentSourceConfigurationPropertyToTerraform(struct?: TfDataExperience.ContentSourceConfigurationProperty): any {
+export function dataTfExperienceContentSourceConfigurationPropertyToTerraform(struct?: DataTfExperience.ContentSourceConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -256,7 +256,7 @@ export function tfDataExperienceContentSourceConfigurationPropertyToTerraform(st
 }
 
 
-export function tfDataExperienceContentSourceConfigurationPropertyToHclTerraform(struct?: TfDataExperience.ContentSourceConfigurationProperty): any {
+export function dataTfExperienceContentSourceConfigurationPropertyToHclTerraform(struct?: DataTfExperience.ContentSourceConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -267,7 +267,7 @@ export function tfDataExperienceContentSourceConfigurationPropertyToHclTerraform
 }
 
 
-export function tfDataExperienceUserIdentityConfigurationPropertyToTerraform(struct?: TfDataExperience.UserIdentityConfigurationProperty): any {
+export function dataTfExperienceUserIdentityConfigurationPropertyToTerraform(struct?: DataTfExperience.UserIdentityConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -277,7 +277,7 @@ export function tfDataExperienceUserIdentityConfigurationPropertyToTerraform(str
 }
 
 
-export function tfDataExperienceUserIdentityConfigurationPropertyToHclTerraform(struct?: TfDataExperience.UserIdentityConfigurationProperty): any {
+export function dataTfExperienceUserIdentityConfigurationPropertyToHclTerraform(struct?: DataTfExperience.UserIdentityConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -288,7 +288,7 @@ export function tfDataExperienceUserIdentityConfigurationPropertyToHclTerraform(
 }
 
 
-export function tfDataExperienceConfigurationPropertyToTerraform(struct?: TfDataExperience.ConfigurationProperty): any {
+export function dataTfExperienceConfigurationPropertyToTerraform(struct?: DataTfExperience.ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -298,7 +298,7 @@ export function tfDataExperienceConfigurationPropertyToTerraform(struct?: TfData
 }
 
 
-export function tfDataExperienceConfigurationPropertyToHclTerraform(struct?: TfDataExperience.ConfigurationProperty): any {
+export function dataTfExperienceConfigurationPropertyToHclTerraform(struct?: DataTfExperience.ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -309,7 +309,7 @@ export function tfDataExperienceConfigurationPropertyToHclTerraform(struct?: TfD
 }
 
 
-export function tfDataExperienceEndpointsPropertyToTerraform(struct?: TfDataExperience.EndpointsProperty): any {
+export function dataTfExperienceEndpointsPropertyToTerraform(struct?: DataTfExperience.EndpointsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -319,7 +319,7 @@ export function tfDataExperienceEndpointsPropertyToTerraform(struct?: TfDataExpe
 }
 
 
-export function tfDataExperienceEndpointsPropertyToHclTerraform(struct?: TfDataExperience.EndpointsProperty): any {
+export function dataTfExperienceEndpointsPropertyToHclTerraform(struct?: DataTfExperience.EndpointsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -330,7 +330,7 @@ export function tfDataExperienceEndpointsPropertyToHclTerraform(struct?: TfDataE
 }
 
 
-export namespace TfDataExperience {
+export namespace DataTfExperience {
 export interface ContentSourceConfigurationProperty {
 }
 export class ContentSourceConfigurationPropertyOutputReference extends cdktn.ComplexObject {

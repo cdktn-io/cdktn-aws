@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataEmailIdentityConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfEmailIdentityConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ses_email_identity#email TfDataEmailIdentity#email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ses_email_identity#email DataTfEmailIdentity#email}
   */
   readonly email: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ses_email_identity#id TfDataEmailIdentity#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ses_email_identity#id DataTfEmailIdentity#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,7 +20,7 @@ export interface TfDataEmailIdentityConfig extends cdktn.TerraformMetaArguments 
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ses_email_identity#region TfDataEmailIdentity#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ses_email_identity#region DataTfEmailIdentity#region}
   */
   readonly region?: string;
 }
@@ -28,7 +28,7 @@ export interface TfDataEmailIdentityConfig extends cdktn.TerraformMetaArguments 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ses_email_identity aws_ses_email_identity}
 */
-export class TfDataEmailIdentity extends cdktn.TerraformDataSource {
+export class DataTfEmailIdentity extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class TfDataEmailIdentity extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataEmailIdentity resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfEmailIdentity resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataEmailIdentity to import
-  * @param importFromId The id of the existing TfDataEmailIdentity that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ses_email_identity#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataEmailIdentity to import is found
+  * @param importToId The construct id used in the generated config for the DataTfEmailIdentity to import
+  * @param importFromId The id of the existing DataTfEmailIdentity that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ses_email_identity#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfEmailIdentity to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ses_email_identity", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class TfDataEmailIdentity extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataEmailIdentityConfig
+  * @param options DataTfEmailIdentityConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataEmailIdentityConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfEmailIdentityConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ses_email_identity',
       terraformGeneratorMetadata: {

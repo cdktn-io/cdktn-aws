@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataGiVersionsConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfGiVersionsConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_gi_versions#region TfDataGiVersions#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_gi_versions#region DataTfGiVersions#region}
   */
   readonly region?: string;
   /**
   * The system shape.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_gi_versions#shape TfDataGiVersions#shape}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_gi_versions#shape DataTfGiVersions#shape}
   */
   readonly shape?: string;
 }
@@ -23,7 +23,7 @@ export interface TfDataGiVersionsConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_gi_versions aws_odb_gi_versions}
 */
-export class TfDataGiVersions extends cdktn.TerraformDataSource {
+export class DataTfGiVersions extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -34,11 +34,11 @@ export class TfDataGiVersions extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataGiVersions resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfGiVersions resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataGiVersions to import
-  * @param importFromId The id of the existing TfDataGiVersions that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_gi_versions#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataGiVersions to import is found
+  * @param importToId The construct id used in the generated config for the DataTfGiVersions to import
+  * @param importFromId The id of the existing DataTfGiVersions that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_gi_versions#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfGiVersions to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_odb_gi_versions", importId: importFromId, provider });
@@ -53,9 +53,9 @@ export class TfDataGiVersions extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataGiVersionsConfig = {}
+  * @param options DataTfGiVersionsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataGiVersionsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfGiVersionsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_odb_gi_versions',
       terraformGeneratorMetadata: {
@@ -80,7 +80,7 @@ export class TfDataGiVersions extends cdktn.TerraformDataSource {
   // ==========
 
   // gi_versions - computed: true, optional: false, required: false
-  private _giVersions = new TfDataGiVersions.GiVersionsPropertyList(this, "gi_versions", false);
+  private _giVersions = new DataTfGiVersions.GiVersionsPropertyList(this, "gi_versions", false);
   public get giVersions() {
     return this._giVersions;
   }
@@ -149,7 +149,7 @@ export class TfDataGiVersions extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataGiVersionsGiVersionsPropertyToTerraform(struct?: TfDataGiVersions.GiVersionsProperty): any {
+export function dataTfGiVersionsGiVersionsPropertyToTerraform(struct?: DataTfGiVersions.GiVersionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -159,7 +159,7 @@ export function tfDataGiVersionsGiVersionsPropertyToTerraform(struct?: TfDataGiV
 }
 
 
-export function tfDataGiVersionsGiVersionsPropertyToHclTerraform(struct?: TfDataGiVersions.GiVersionsProperty): any {
+export function dataTfGiVersionsGiVersionsPropertyToHclTerraform(struct?: DataTfGiVersions.GiVersionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -170,7 +170,7 @@ export function tfDataGiVersionsGiVersionsPropertyToHclTerraform(struct?: TfData
 }
 
 
-export namespace TfDataGiVersions {
+export namespace DataTfGiVersions {
 export interface GiVersionsProperty {
 }
 export class GiVersionsPropertyOutputReference extends cdktn.ComplexObject {

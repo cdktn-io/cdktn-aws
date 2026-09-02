@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataSerialConsoleAccessConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfSerialConsoleAccessConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_serial_console_access#id TfDataSerialConsoleAccess#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_serial_console_access#id DataTfSerialConsoleAccess#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,21 +16,21 @@ export interface TfDataSerialConsoleAccessConfig extends cdktn.TerraformMetaArgu
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_serial_console_access#region TfDataSerialConsoleAccess#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_serial_console_access#region DataTfSerialConsoleAccess#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_serial_console_access#timeouts TfDataSerialConsoleAccess#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_serial_console_access#timeouts DataTfSerialConsoleAccess#timeouts}
   */
-  readonly timeouts?: TfDataSerialConsoleAccess.TimeoutsProperty;
+  readonly timeouts?: DataTfSerialConsoleAccess.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_serial_console_access aws_ec2_serial_console_access}
 */
-export class TfDataSerialConsoleAccess extends cdktn.TerraformDataSource {
+export class DataTfSerialConsoleAccess extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -41,11 +41,11 @@ export class TfDataSerialConsoleAccess extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataSerialConsoleAccess resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfSerialConsoleAccess resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataSerialConsoleAccess to import
-  * @param importFromId The id of the existing TfDataSerialConsoleAccess that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_serial_console_access#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataSerialConsoleAccess to import is found
+  * @param importToId The construct id used in the generated config for the DataTfSerialConsoleAccess to import
+  * @param importFromId The id of the existing DataTfSerialConsoleAccess that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_serial_console_access#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfSerialConsoleAccess to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_serial_console_access", importId: importFromId, provider });
@@ -60,9 +60,9 @@ export class TfDataSerialConsoleAccess extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataSerialConsoleAccessConfig = {}
+  * @param options DataTfSerialConsoleAccessConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataSerialConsoleAccessConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfSerialConsoleAccessConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_serial_console_access',
       terraformGeneratorMetadata: {
@@ -125,11 +125,11 @@ export class TfDataSerialConsoleAccess extends cdktn.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfDataSerialConsoleAccess.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new DataTfSerialConsoleAccess.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfDataSerialConsoleAccess.TimeoutsProperty) {
+  public putTimeouts(value: DataTfSerialConsoleAccess.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -148,7 +148,7 @@ export class TfDataSerialConsoleAccess extends cdktn.TerraformDataSource {
     return {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      timeouts: tfDataSerialConsoleAccessTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: dataTfSerialConsoleAccessTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -167,10 +167,10 @@ export class TfDataSerialConsoleAccess extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfDataSerialConsoleAccessTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: dataTfSerialConsoleAccessTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfDataSerialConsoleAccess.TimeoutsProperty",
+        storageClassType: "DataTfSerialConsoleAccess.TimeoutsProperty",
       },
     };
 
@@ -179,7 +179,7 @@ export class TfDataSerialConsoleAccess extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataSerialConsoleAccessTimeoutsPropertyToTerraform(struct?: TfDataSerialConsoleAccess.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfSerialConsoleAccessTimeoutsPropertyToTerraform(struct?: DataTfSerialConsoleAccess.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -190,7 +190,7 @@ export function tfDataSerialConsoleAccessTimeoutsPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfDataSerialConsoleAccessTimeoutsPropertyToHclTerraform(struct?: TfDataSerialConsoleAccess.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfSerialConsoleAccessTimeoutsPropertyToHclTerraform(struct?: DataTfSerialConsoleAccess.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -209,10 +209,10 @@ export function tfDataSerialConsoleAccessTimeoutsPropertyToHclTerraform(struct?:
 }
 
 
-export namespace TfDataSerialConsoleAccess {
+export namespace DataTfSerialConsoleAccess {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_serial_console_access#read TfDataSerialConsoleAccess#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_serial_console_access#read DataTfSerialConsoleAccess#read}
   */
   readonly read?: string;
 }

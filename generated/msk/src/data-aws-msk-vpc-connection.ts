@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataVpcConnectionConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfVpcConnectionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/msk_vpc_connection#arn TfDataVpcConnection#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/msk_vpc_connection#arn DataTfVpcConnection#arn}
   */
   readonly arn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/msk_vpc_connection#id TfDataVpcConnection#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/msk_vpc_connection#id DataTfVpcConnection#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,11 +20,11 @@ export interface TfDataVpcConnectionConfig extends cdktn.TerraformMetaArguments 
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/msk_vpc_connection#region TfDataVpcConnection#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/msk_vpc_connection#region DataTfVpcConnection#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/msk_vpc_connection#tags TfDataVpcConnection#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/msk_vpc_connection#tags DataTfVpcConnection#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -32,7 +32,7 @@ export interface TfDataVpcConnectionConfig extends cdktn.TerraformMetaArguments 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/msk_vpc_connection aws_msk_vpc_connection}
 */
-export class TfDataVpcConnection extends cdktn.TerraformDataSource {
+export class DataTfVpcConnection extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class TfDataVpcConnection extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataVpcConnection resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfVpcConnection resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataVpcConnection to import
-  * @param importFromId The id of the existing TfDataVpcConnection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/msk_vpc_connection#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataVpcConnection to import is found
+  * @param importToId The construct id used in the generated config for the DataTfVpcConnection to import
+  * @param importFromId The id of the existing DataTfVpcConnection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/msk_vpc_connection#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfVpcConnection to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_msk_vpc_connection", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class TfDataVpcConnection extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataVpcConnectionConfig
+  * @param options DataTfVpcConnectionConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataVpcConnectionConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfVpcConnectionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_msk_vpc_connection',
       terraformGeneratorMetadata: {

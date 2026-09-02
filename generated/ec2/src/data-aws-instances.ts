@@ -5,46 +5,46 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataInstancesConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfInstancesConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instances#id TfDataInstances#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instances#id DataTfInstances#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instances#instance_state_names TfDataInstances#instance_state_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instances#instance_state_names DataTfInstances#instance_state_names}
   */
   readonly instanceStateNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instances#instance_tags TfDataInstances#instance_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instances#instance_tags DataTfInstances#instance_tags}
   */
   readonly instanceTags?: { [key: string]: string };
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instances#region TfDataInstances#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instances#region DataTfInstances#region}
   */
   readonly region?: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instances#filter TfDataInstances#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instances#filter DataTfInstances#filter}
   */
-  readonly filter?: TfDataInstances.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataTfInstances.FilterProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instances#timeouts TfDataInstances#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instances#timeouts DataTfInstances#timeouts}
   */
-  readonly timeouts?: TfDataInstances.TimeoutsProperty;
+  readonly timeouts?: DataTfInstances.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instances aws_instances}
 */
-export class TfDataInstances extends cdktn.TerraformDataSource {
+export class DataTfInstances extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class TfDataInstances extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataInstances resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfInstances resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataInstances to import
-  * @param importFromId The id of the existing TfDataInstances that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instances#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataInstances to import is found
+  * @param importToId The construct id used in the generated config for the DataTfInstances to import
+  * @param importFromId The id of the existing DataTfInstances that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instances#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfInstances to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_instances", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class TfDataInstances extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataInstancesConfig = {}
+  * @param options DataTfInstancesConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataInstancesConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfInstancesConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_instances',
       terraformGeneratorMetadata: {
@@ -189,11 +189,11 @@ export class TfDataInstances extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new TfDataInstances.FilterPropertyList(this, "filter", true);
+  private _filter = new DataTfInstances.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: TfDataInstances.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataTfInstances.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -205,11 +205,11 @@ export class TfDataInstances extends cdktn.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfDataInstances.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new DataTfInstances.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfDataInstances.TimeoutsProperty) {
+  public putTimeouts(value: DataTfInstances.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -230,8 +230,8 @@ export class TfDataInstances extends cdktn.TerraformDataSource {
       instance_state_names: cdktn.listMapper(cdktn.stringToTerraform, false)(this._instanceStateNames),
       instance_tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._instanceTags),
       region: cdktn.stringToTerraform(this._region),
-      filter: cdktn.listMapper(tfDataInstancesFilterPropertyToTerraform, true)(this._filter.internalValue),
-      timeouts: tfDataInstancesTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      filter: cdktn.listMapper(dataTfInstancesFilterPropertyToTerraform, true)(this._filter.internalValue),
+      timeouts: dataTfInstancesTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -262,16 +262,16 @@ export class TfDataInstances extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       filter: {
-        value: cdktn.listMapperHcl(tfDataInstancesFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataTfInstancesFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfDataInstances.FilterPropertyList",
+        storageClassType: "DataTfInstances.FilterPropertyList",
       },
       timeouts: {
-        value: tfDataInstancesTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: dataTfInstancesTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfDataInstances.TimeoutsProperty",
+        storageClassType: "DataTfInstances.TimeoutsProperty",
       },
     };
 
@@ -280,7 +280,7 @@ export class TfDataInstances extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataInstancesFilterPropertyToTerraform(struct?: TfDataInstances.FilterProperty | cdktn.IResolvable): any {
+export function dataTfInstancesFilterPropertyToTerraform(struct?: DataTfInstances.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -292,7 +292,7 @@ export function tfDataInstancesFilterPropertyToTerraform(struct?: TfDataInstance
 }
 
 
-export function tfDataInstancesFilterPropertyToHclTerraform(struct?: TfDataInstances.FilterProperty | cdktn.IResolvable): any {
+export function dataTfInstancesFilterPropertyToHclTerraform(struct?: DataTfInstances.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -317,7 +317,7 @@ export function tfDataInstancesFilterPropertyToHclTerraform(struct?: TfDataInsta
 }
 
 
-export function tfDataInstancesTimeoutsPropertyToTerraform(struct?: TfDataInstances.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfInstancesTimeoutsPropertyToTerraform(struct?: DataTfInstances.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -328,7 +328,7 @@ export function tfDataInstancesTimeoutsPropertyToTerraform(struct?: TfDataInstan
 }
 
 
-export function tfDataInstancesTimeoutsPropertyToHclTerraform(struct?: TfDataInstances.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfInstancesTimeoutsPropertyToHclTerraform(struct?: DataTfInstances.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -347,14 +347,14 @@ export function tfDataInstancesTimeoutsPropertyToHclTerraform(struct?: TfDataIns
 }
 
 
-export namespace TfDataInstances {
+export namespace DataTfInstances {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instances#name TfDataInstances#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instances#name DataTfInstances#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instances#values TfDataInstances#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instances#values DataTfInstances#values}
   */
   readonly values: string[];
 }
@@ -456,7 +456,7 @@ export class FilterPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instances#read TfDataInstances#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/instances#read DataTfInstances#read}
   */
   readonly read?: string;
 }

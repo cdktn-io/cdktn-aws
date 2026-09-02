@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataAssetsConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfAssetsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/outposts_assets#arn TfDataAssets#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/outposts_assets#arn DataTfAssets#arn}
   */
   readonly arn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/outposts_assets#host_id_filter TfDataAssets#host_id_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/outposts_assets#host_id_filter DataTfAssets#host_id_filter}
   */
   readonly hostIdFilter?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/outposts_assets#id TfDataAssets#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/outposts_assets#id DataTfAssets#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,11 +24,11 @@ export interface TfDataAssetsConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/outposts_assets#region TfDataAssets#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/outposts_assets#region DataTfAssets#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/outposts_assets#status_id_filter TfDataAssets#status_id_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/outposts_assets#status_id_filter DataTfAssets#status_id_filter}
   */
   readonly statusIdFilter?: string[];
 }
@@ -36,7 +36,7 @@ export interface TfDataAssetsConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/outposts_assets aws_outposts_assets}
 */
-export class TfDataAssets extends cdktn.TerraformDataSource {
+export class DataTfAssets extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class TfDataAssets extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataAssets resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfAssets resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataAssets to import
-  * @param importFromId The id of the existing TfDataAssets that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/outposts_assets#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataAssets to import is found
+  * @param importToId The construct id used in the generated config for the DataTfAssets to import
+  * @param importFromId The id of the existing DataTfAssets that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/outposts_assets#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfAssets to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_outposts_assets", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class TfDataAssets extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataAssetsConfig
+  * @param options DataTfAssetsConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataAssetsConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfAssetsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_outposts_assets',
       terraformGeneratorMetadata: {

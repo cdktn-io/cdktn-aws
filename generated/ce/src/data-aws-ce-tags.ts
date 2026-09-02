@@ -5,46 +5,46 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataTagsConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfTagsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#id TfDataTags#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#id DataTfTags#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#search_string TfDataTags#search_string}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#search_string DataTfTags#search_string}
   */
   readonly searchString?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#tag_key TfDataTags#tag_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#tag_key DataTfTags#tag_key}
   */
   readonly tagKey?: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#filter TfDataTags#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#filter DataTfTags#filter}
   */
-  readonly filter?: TfDataTags.FilterProperty;
+  readonly filter?: DataTfTags.FilterProperty;
   /**
   * sort_by block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#sort_by TfDataTags#sort_by}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#sort_by DataTfTags#sort_by}
   */
-  readonly sortBy?: TfDataTags.SortByProperty[] | cdktn.IResolvable;
+  readonly sortBy?: DataTfTags.SortByProperty[] | cdktn.IResolvable;
   /**
   * time_period block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#time_period TfDataTags#time_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#time_period DataTfTags#time_period}
   */
-  readonly timePeriod: TfDataTags.TimePeriodProperty;
+  readonly timePeriod: DataTfTags.TimePeriodProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags aws_ce_tags}
 */
-export class TfDataTags extends cdktn.TerraformDataSource {
+export class DataTfTags extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class TfDataTags extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataTags resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfTags resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataTags to import
-  * @param importFromId The id of the existing TfDataTags that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataTags to import is found
+  * @param importToId The construct id used in the generated config for the DataTfTags to import
+  * @param importFromId The id of the existing DataTfTags that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfTags to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ce_tags", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class TfDataTags extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataTagsConfig
+  * @param options DataTfTagsConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataTagsConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfTagsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ce_tags',
       terraformGeneratorMetadata: {
@@ -158,11 +158,11 @@ export class TfDataTags extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new TfDataTags.FilterPropertyOutputReference(this, "filter");
+  private _filter = new DataTfTags.FilterPropertyOutputReference(this, "filter");
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: TfDataTags.FilterProperty) {
+  public putFilter(value: DataTfTags.FilterProperty) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -174,11 +174,11 @@ export class TfDataTags extends cdktn.TerraformDataSource {
   }
 
   // sort_by - computed: false, optional: true, required: false
-  private _sortBy = new TfDataTags.SortByPropertyList(this, "sort_by", false);
+  private _sortBy = new DataTfTags.SortByPropertyList(this, "sort_by", false);
   public get sortBy() {
     return this._sortBy;
   }
-  public putSortBy(value: TfDataTags.SortByProperty[] | cdktn.IResolvable) {
+  public putSortBy(value: DataTfTags.SortByProperty[] | cdktn.IResolvable) {
     this._sortBy.internalValue = value;
   }
   public resetSortBy() {
@@ -190,11 +190,11 @@ export class TfDataTags extends cdktn.TerraformDataSource {
   }
 
   // time_period - computed: false, optional: false, required: true
-  private _timePeriod = new TfDataTags.TimePeriodPropertyOutputReference(this, "time_period");
+  private _timePeriod = new DataTfTags.TimePeriodPropertyOutputReference(this, "time_period");
   public get timePeriod() {
     return this._timePeriod;
   }
-  public putTimePeriod(value: TfDataTags.TimePeriodProperty) {
+  public putTimePeriod(value: DataTfTags.TimePeriodProperty) {
     this._timePeriod.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -211,9 +211,9 @@ export class TfDataTags extends cdktn.TerraformDataSource {
       id: cdktn.stringToTerraform(this._id),
       search_string: cdktn.stringToTerraform(this._searchString),
       tag_key: cdktn.stringToTerraform(this._tagKey),
-      filter: tfDataTagsFilterPropertyToTerraform(this._filter.internalValue),
-      sort_by: cdktn.listMapper(tfDataTagsSortByPropertyToTerraform, true)(this._sortBy.internalValue),
-      time_period: tfDataTagsTimePeriodPropertyToTerraform(this._timePeriod.internalValue),
+      filter: dataTfTagsFilterPropertyToTerraform(this._filter.internalValue),
+      sort_by: cdktn.listMapper(dataTfTagsSortByPropertyToTerraform, true)(this._sortBy.internalValue),
+      time_period: dataTfTagsTimePeriodPropertyToTerraform(this._timePeriod.internalValue),
     };
   }
 
@@ -238,22 +238,22 @@ export class TfDataTags extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       filter: {
-        value: tfDataTagsFilterPropertyToHclTerraform(this._filter.internalValue),
+        value: dataTfTagsFilterPropertyToHclTerraform(this._filter.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDataTags.FilterPropertyList",
+        storageClassType: "DataTfTags.FilterPropertyList",
       },
       sort_by: {
-        value: cdktn.listMapperHcl(tfDataTagsSortByPropertyToHclTerraform, true)(this._sortBy.internalValue),
+        value: cdktn.listMapperHcl(dataTfTagsSortByPropertyToHclTerraform, true)(this._sortBy.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDataTags.SortByPropertyList",
+        storageClassType: "DataTfTags.SortByPropertyList",
       },
       time_period: {
-        value: tfDataTagsTimePeriodPropertyToHclTerraform(this._timePeriod.internalValue),
+        value: dataTfTagsTimePeriodPropertyToHclTerraform(this._timePeriod.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDataTags.TimePeriodPropertyList",
+        storageClassType: "DataTfTags.TimePeriodPropertyList",
       },
     };
 
@@ -262,7 +262,7 @@ export class TfDataTags extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataTagsFilterAndCostCategoryPropertyToTerraform(struct?: TfDataTags.FilterAndCostCategoryPropertyOutputReference | TfDataTags.FilterAndCostCategoryProperty): any {
+export function dataTfTagsFilterAndCostCategoryPropertyToTerraform(struct?: DataTfTags.FilterAndCostCategoryPropertyOutputReference | DataTfTags.FilterAndCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -275,7 +275,7 @@ export function tfDataTagsFilterAndCostCategoryPropertyToTerraform(struct?: TfDa
 }
 
 
-export function tfDataTagsFilterAndCostCategoryPropertyToHclTerraform(struct?: TfDataTags.FilterAndCostCategoryPropertyOutputReference | TfDataTags.FilterAndCostCategoryProperty): any {
+export function dataTfTagsFilterAndCostCategoryPropertyToHclTerraform(struct?: DataTfTags.FilterAndCostCategoryPropertyOutputReference | DataTfTags.FilterAndCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -306,7 +306,7 @@ export function tfDataTagsFilterAndCostCategoryPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfDataTagsFilterAndDimensionPropertyToTerraform(struct?: TfDataTags.FilterAndDimensionPropertyOutputReference | TfDataTags.FilterAndDimensionProperty): any {
+export function dataTfTagsFilterAndDimensionPropertyToTerraform(struct?: DataTfTags.FilterAndDimensionPropertyOutputReference | DataTfTags.FilterAndDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -319,7 +319,7 @@ export function tfDataTagsFilterAndDimensionPropertyToTerraform(struct?: TfDataT
 }
 
 
-export function tfDataTagsFilterAndDimensionPropertyToHclTerraform(struct?: TfDataTags.FilterAndDimensionPropertyOutputReference | TfDataTags.FilterAndDimensionProperty): any {
+export function dataTfTagsFilterAndDimensionPropertyToHclTerraform(struct?: DataTfTags.FilterAndDimensionPropertyOutputReference | DataTfTags.FilterAndDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -350,7 +350,7 @@ export function tfDataTagsFilterAndDimensionPropertyToHclTerraform(struct?: TfDa
 }
 
 
-export function tfDataTagsFilterAndTagsPropertyToTerraform(struct?: TfDataTags.FilterAndTagsPropertyOutputReference | TfDataTags.FilterAndTagsProperty): any {
+export function dataTfTagsFilterAndTagsPropertyToTerraform(struct?: DataTfTags.FilterAndTagsPropertyOutputReference | DataTfTags.FilterAndTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -363,7 +363,7 @@ export function tfDataTagsFilterAndTagsPropertyToTerraform(struct?: TfDataTags.F
 }
 
 
-export function tfDataTagsFilterAndTagsPropertyToHclTerraform(struct?: TfDataTags.FilterAndTagsPropertyOutputReference | TfDataTags.FilterAndTagsProperty): any {
+export function dataTfTagsFilterAndTagsPropertyToHclTerraform(struct?: DataTfTags.FilterAndTagsPropertyOutputReference | DataTfTags.FilterAndTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -394,39 +394,39 @@ export function tfDataTagsFilterAndTagsPropertyToHclTerraform(struct?: TfDataTag
 }
 
 
-export function tfDataTagsAndPropertyToTerraform(struct?: TfDataTags.AndProperty | cdktn.IResolvable): any {
+export function dataTfTagsAndPropertyToTerraform(struct?: DataTfTags.AndProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cost_category: tfDataTagsFilterAndCostCategoryPropertyToTerraform(struct!.costCategory),
-    dimension: tfDataTagsFilterAndDimensionPropertyToTerraform(struct!.dimension),
-    tags: tfDataTagsFilterAndTagsPropertyToTerraform(struct!.tags),
+    cost_category: dataTfTagsFilterAndCostCategoryPropertyToTerraform(struct!.costCategory),
+    dimension: dataTfTagsFilterAndDimensionPropertyToTerraform(struct!.dimension),
+    tags: dataTfTagsFilterAndTagsPropertyToTerraform(struct!.tags),
   }
 }
 
 
-export function tfDataTagsAndPropertyToHclTerraform(struct?: TfDataTags.AndProperty | cdktn.IResolvable): any {
+export function dataTfTagsAndPropertyToHclTerraform(struct?: DataTfTags.AndProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cost_category: {
-      value: tfDataTagsFilterAndCostCategoryPropertyToHclTerraform(struct!.costCategory),
+      value: dataTfTagsFilterAndCostCategoryPropertyToHclTerraform(struct!.costCategory),
       isBlock: true,
       type: "list",
       storageClassType: "FilterAndCostCategoryPropertyList",
     },
     dimension: {
-      value: tfDataTagsFilterAndDimensionPropertyToHclTerraform(struct!.dimension),
+      value: dataTfTagsFilterAndDimensionPropertyToHclTerraform(struct!.dimension),
       isBlock: true,
       type: "list",
       storageClassType: "FilterAndDimensionPropertyList",
     },
     tags: {
-      value: tfDataTagsFilterAndTagsPropertyToHclTerraform(struct!.tags),
+      value: dataTfTagsFilterAndTagsPropertyToHclTerraform(struct!.tags),
       isBlock: true,
       type: "list",
       storageClassType: "FilterAndTagsPropertyList",
@@ -438,7 +438,7 @@ export function tfDataTagsAndPropertyToHclTerraform(struct?: TfDataTags.AndPrope
 }
 
 
-export function tfDataTagsFilterCostCategoryPropertyToTerraform(struct?: TfDataTags.FilterCostCategoryPropertyOutputReference | TfDataTags.FilterCostCategoryProperty): any {
+export function dataTfTagsFilterCostCategoryPropertyToTerraform(struct?: DataTfTags.FilterCostCategoryPropertyOutputReference | DataTfTags.FilterCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -451,7 +451,7 @@ export function tfDataTagsFilterCostCategoryPropertyToTerraform(struct?: TfDataT
 }
 
 
-export function tfDataTagsFilterCostCategoryPropertyToHclTerraform(struct?: TfDataTags.FilterCostCategoryPropertyOutputReference | TfDataTags.FilterCostCategoryProperty): any {
+export function dataTfTagsFilterCostCategoryPropertyToHclTerraform(struct?: DataTfTags.FilterCostCategoryPropertyOutputReference | DataTfTags.FilterCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -482,7 +482,7 @@ export function tfDataTagsFilterCostCategoryPropertyToHclTerraform(struct?: TfDa
 }
 
 
-export function tfDataTagsFilterDimensionPropertyToTerraform(struct?: TfDataTags.FilterDimensionPropertyOutputReference | TfDataTags.FilterDimensionProperty): any {
+export function dataTfTagsFilterDimensionPropertyToTerraform(struct?: DataTfTags.FilterDimensionPropertyOutputReference | DataTfTags.FilterDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -495,7 +495,7 @@ export function tfDataTagsFilterDimensionPropertyToTerraform(struct?: TfDataTags
 }
 
 
-export function tfDataTagsFilterDimensionPropertyToHclTerraform(struct?: TfDataTags.FilterDimensionPropertyOutputReference | TfDataTags.FilterDimensionProperty): any {
+export function dataTfTagsFilterDimensionPropertyToHclTerraform(struct?: DataTfTags.FilterDimensionPropertyOutputReference | DataTfTags.FilterDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -526,7 +526,7 @@ export function tfDataTagsFilterDimensionPropertyToHclTerraform(struct?: TfDataT
 }
 
 
-export function tfDataTagsFilterNotCostCategoryPropertyToTerraform(struct?: TfDataTags.FilterNotCostCategoryPropertyOutputReference | TfDataTags.FilterNotCostCategoryProperty): any {
+export function dataTfTagsFilterNotCostCategoryPropertyToTerraform(struct?: DataTfTags.FilterNotCostCategoryPropertyOutputReference | DataTfTags.FilterNotCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -539,7 +539,7 @@ export function tfDataTagsFilterNotCostCategoryPropertyToTerraform(struct?: TfDa
 }
 
 
-export function tfDataTagsFilterNotCostCategoryPropertyToHclTerraform(struct?: TfDataTags.FilterNotCostCategoryPropertyOutputReference | TfDataTags.FilterNotCostCategoryProperty): any {
+export function dataTfTagsFilterNotCostCategoryPropertyToHclTerraform(struct?: DataTfTags.FilterNotCostCategoryPropertyOutputReference | DataTfTags.FilterNotCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -570,7 +570,7 @@ export function tfDataTagsFilterNotCostCategoryPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfDataTagsFilterNotDimensionPropertyToTerraform(struct?: TfDataTags.FilterNotDimensionPropertyOutputReference | TfDataTags.FilterNotDimensionProperty): any {
+export function dataTfTagsFilterNotDimensionPropertyToTerraform(struct?: DataTfTags.FilterNotDimensionPropertyOutputReference | DataTfTags.FilterNotDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -583,7 +583,7 @@ export function tfDataTagsFilterNotDimensionPropertyToTerraform(struct?: TfDataT
 }
 
 
-export function tfDataTagsFilterNotDimensionPropertyToHclTerraform(struct?: TfDataTags.FilterNotDimensionPropertyOutputReference | TfDataTags.FilterNotDimensionProperty): any {
+export function dataTfTagsFilterNotDimensionPropertyToHclTerraform(struct?: DataTfTags.FilterNotDimensionPropertyOutputReference | DataTfTags.FilterNotDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -614,7 +614,7 @@ export function tfDataTagsFilterNotDimensionPropertyToHclTerraform(struct?: TfDa
 }
 
 
-export function tfDataTagsFilterNotTagsPropertyToTerraform(struct?: TfDataTags.FilterNotTagsPropertyOutputReference | TfDataTags.FilterNotTagsProperty): any {
+export function dataTfTagsFilterNotTagsPropertyToTerraform(struct?: DataTfTags.FilterNotTagsPropertyOutputReference | DataTfTags.FilterNotTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -627,7 +627,7 @@ export function tfDataTagsFilterNotTagsPropertyToTerraform(struct?: TfDataTags.F
 }
 
 
-export function tfDataTagsFilterNotTagsPropertyToHclTerraform(struct?: TfDataTags.FilterNotTagsPropertyOutputReference | TfDataTags.FilterNotTagsProperty): any {
+export function dataTfTagsFilterNotTagsPropertyToHclTerraform(struct?: DataTfTags.FilterNotTagsPropertyOutputReference | DataTfTags.FilterNotTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -658,39 +658,39 @@ export function tfDataTagsFilterNotTagsPropertyToHclTerraform(struct?: TfDataTag
 }
 
 
-export function tfDataTagsNotPropertyToTerraform(struct?: TfDataTags.NotPropertyOutputReference | TfDataTags.NotProperty): any {
+export function dataTfTagsNotPropertyToTerraform(struct?: DataTfTags.NotPropertyOutputReference | DataTfTags.NotProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cost_category: tfDataTagsFilterNotCostCategoryPropertyToTerraform(struct!.costCategory),
-    dimension: tfDataTagsFilterNotDimensionPropertyToTerraform(struct!.dimension),
-    tags: tfDataTagsFilterNotTagsPropertyToTerraform(struct!.tags),
+    cost_category: dataTfTagsFilterNotCostCategoryPropertyToTerraform(struct!.costCategory),
+    dimension: dataTfTagsFilterNotDimensionPropertyToTerraform(struct!.dimension),
+    tags: dataTfTagsFilterNotTagsPropertyToTerraform(struct!.tags),
   }
 }
 
 
-export function tfDataTagsNotPropertyToHclTerraform(struct?: TfDataTags.NotPropertyOutputReference | TfDataTags.NotProperty): any {
+export function dataTfTagsNotPropertyToHclTerraform(struct?: DataTfTags.NotPropertyOutputReference | DataTfTags.NotProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cost_category: {
-      value: tfDataTagsFilterNotCostCategoryPropertyToHclTerraform(struct!.costCategory),
+      value: dataTfTagsFilterNotCostCategoryPropertyToHclTerraform(struct!.costCategory),
       isBlock: true,
       type: "list",
       storageClassType: "FilterNotCostCategoryPropertyList",
     },
     dimension: {
-      value: tfDataTagsFilterNotDimensionPropertyToHclTerraform(struct!.dimension),
+      value: dataTfTagsFilterNotDimensionPropertyToHclTerraform(struct!.dimension),
       isBlock: true,
       type: "list",
       storageClassType: "FilterNotDimensionPropertyList",
     },
     tags: {
-      value: tfDataTagsFilterNotTagsPropertyToHclTerraform(struct!.tags),
+      value: dataTfTagsFilterNotTagsPropertyToHclTerraform(struct!.tags),
       isBlock: true,
       type: "list",
       storageClassType: "FilterNotTagsPropertyList",
@@ -702,7 +702,7 @@ export function tfDataTagsNotPropertyToHclTerraform(struct?: TfDataTags.NotPrope
 }
 
 
-export function tfDataTagsFilterOrCostCategoryPropertyToTerraform(struct?: TfDataTags.FilterOrCostCategoryPropertyOutputReference | TfDataTags.FilterOrCostCategoryProperty): any {
+export function dataTfTagsFilterOrCostCategoryPropertyToTerraform(struct?: DataTfTags.FilterOrCostCategoryPropertyOutputReference | DataTfTags.FilterOrCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -715,7 +715,7 @@ export function tfDataTagsFilterOrCostCategoryPropertyToTerraform(struct?: TfDat
 }
 
 
-export function tfDataTagsFilterOrCostCategoryPropertyToHclTerraform(struct?: TfDataTags.FilterOrCostCategoryPropertyOutputReference | TfDataTags.FilterOrCostCategoryProperty): any {
+export function dataTfTagsFilterOrCostCategoryPropertyToHclTerraform(struct?: DataTfTags.FilterOrCostCategoryPropertyOutputReference | DataTfTags.FilterOrCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -746,7 +746,7 @@ export function tfDataTagsFilterOrCostCategoryPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfDataTagsFilterOrDimensionPropertyToTerraform(struct?: TfDataTags.FilterOrDimensionPropertyOutputReference | TfDataTags.FilterOrDimensionProperty): any {
+export function dataTfTagsFilterOrDimensionPropertyToTerraform(struct?: DataTfTags.FilterOrDimensionPropertyOutputReference | DataTfTags.FilterOrDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -759,7 +759,7 @@ export function tfDataTagsFilterOrDimensionPropertyToTerraform(struct?: TfDataTa
 }
 
 
-export function tfDataTagsFilterOrDimensionPropertyToHclTerraform(struct?: TfDataTags.FilterOrDimensionPropertyOutputReference | TfDataTags.FilterOrDimensionProperty): any {
+export function dataTfTagsFilterOrDimensionPropertyToHclTerraform(struct?: DataTfTags.FilterOrDimensionPropertyOutputReference | DataTfTags.FilterOrDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -790,7 +790,7 @@ export function tfDataTagsFilterOrDimensionPropertyToHclTerraform(struct?: TfDat
 }
 
 
-export function tfDataTagsFilterOrTagsPropertyToTerraform(struct?: TfDataTags.FilterOrTagsPropertyOutputReference | TfDataTags.FilterOrTagsProperty): any {
+export function dataTfTagsFilterOrTagsPropertyToTerraform(struct?: DataTfTags.FilterOrTagsPropertyOutputReference | DataTfTags.FilterOrTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -803,7 +803,7 @@ export function tfDataTagsFilterOrTagsPropertyToTerraform(struct?: TfDataTags.Fi
 }
 
 
-export function tfDataTagsFilterOrTagsPropertyToHclTerraform(struct?: TfDataTags.FilterOrTagsPropertyOutputReference | TfDataTags.FilterOrTagsProperty): any {
+export function dataTfTagsFilterOrTagsPropertyToHclTerraform(struct?: DataTfTags.FilterOrTagsPropertyOutputReference | DataTfTags.FilterOrTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -834,39 +834,39 @@ export function tfDataTagsFilterOrTagsPropertyToHclTerraform(struct?: TfDataTags
 }
 
 
-export function tfDataTagsOrPropertyToTerraform(struct?: TfDataTags.OrProperty | cdktn.IResolvable): any {
+export function dataTfTagsOrPropertyToTerraform(struct?: DataTfTags.OrProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cost_category: tfDataTagsFilterOrCostCategoryPropertyToTerraform(struct!.costCategory),
-    dimension: tfDataTagsFilterOrDimensionPropertyToTerraform(struct!.dimension),
-    tags: tfDataTagsFilterOrTagsPropertyToTerraform(struct!.tags),
+    cost_category: dataTfTagsFilterOrCostCategoryPropertyToTerraform(struct!.costCategory),
+    dimension: dataTfTagsFilterOrDimensionPropertyToTerraform(struct!.dimension),
+    tags: dataTfTagsFilterOrTagsPropertyToTerraform(struct!.tags),
   }
 }
 
 
-export function tfDataTagsOrPropertyToHclTerraform(struct?: TfDataTags.OrProperty | cdktn.IResolvable): any {
+export function dataTfTagsOrPropertyToHclTerraform(struct?: DataTfTags.OrProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cost_category: {
-      value: tfDataTagsFilterOrCostCategoryPropertyToHclTerraform(struct!.costCategory),
+      value: dataTfTagsFilterOrCostCategoryPropertyToHclTerraform(struct!.costCategory),
       isBlock: true,
       type: "list",
       storageClassType: "FilterOrCostCategoryPropertyList",
     },
     dimension: {
-      value: tfDataTagsFilterOrDimensionPropertyToHclTerraform(struct!.dimension),
+      value: dataTfTagsFilterOrDimensionPropertyToHclTerraform(struct!.dimension),
       isBlock: true,
       type: "list",
       storageClassType: "FilterOrDimensionPropertyList",
     },
     tags: {
-      value: tfDataTagsFilterOrTagsPropertyToHclTerraform(struct!.tags),
+      value: dataTfTagsFilterOrTagsPropertyToHclTerraform(struct!.tags),
       isBlock: true,
       type: "list",
       storageClassType: "FilterOrTagsPropertyList",
@@ -878,7 +878,7 @@ export function tfDataTagsOrPropertyToHclTerraform(struct?: TfDataTags.OrPropert
 }
 
 
-export function tfDataTagsFilterTagsPropertyToTerraform(struct?: TfDataTags.FilterTagsPropertyOutputReference | TfDataTags.FilterTagsProperty): any {
+export function dataTfTagsFilterTagsPropertyToTerraform(struct?: DataTfTags.FilterTagsPropertyOutputReference | DataTfTags.FilterTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -891,7 +891,7 @@ export function tfDataTagsFilterTagsPropertyToTerraform(struct?: TfDataTags.Filt
 }
 
 
-export function tfDataTagsFilterTagsPropertyToHclTerraform(struct?: TfDataTags.FilterTagsPropertyOutputReference | TfDataTags.FilterTagsProperty): any {
+export function dataTfTagsFilterTagsPropertyToHclTerraform(struct?: DataTfTags.FilterTagsPropertyOutputReference | DataTfTags.FilterTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -922,60 +922,60 @@ export function tfDataTagsFilterTagsPropertyToHclTerraform(struct?: TfDataTags.F
 }
 
 
-export function tfDataTagsFilterPropertyToTerraform(struct?: TfDataTags.FilterPropertyOutputReference | TfDataTags.FilterProperty): any {
+export function dataTfTagsFilterPropertyToTerraform(struct?: DataTfTags.FilterPropertyOutputReference | DataTfTags.FilterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    and: cdktn.listMapper(tfDataTagsAndPropertyToTerraform, true)(struct!.and),
-    cost_category: tfDataTagsFilterCostCategoryPropertyToTerraform(struct!.costCategory),
-    dimension: tfDataTagsFilterDimensionPropertyToTerraform(struct!.dimension),
-    not: tfDataTagsNotPropertyToTerraform(struct!.not),
-    or: cdktn.listMapper(tfDataTagsOrPropertyToTerraform, true)(struct!.or),
-    tags: tfDataTagsFilterTagsPropertyToTerraform(struct!.tags),
+    and: cdktn.listMapper(dataTfTagsAndPropertyToTerraform, true)(struct!.and),
+    cost_category: dataTfTagsFilterCostCategoryPropertyToTerraform(struct!.costCategory),
+    dimension: dataTfTagsFilterDimensionPropertyToTerraform(struct!.dimension),
+    not: dataTfTagsNotPropertyToTerraform(struct!.not),
+    or: cdktn.listMapper(dataTfTagsOrPropertyToTerraform, true)(struct!.or),
+    tags: dataTfTagsFilterTagsPropertyToTerraform(struct!.tags),
   }
 }
 
 
-export function tfDataTagsFilterPropertyToHclTerraform(struct?: TfDataTags.FilterPropertyOutputReference | TfDataTags.FilterProperty): any {
+export function dataTfTagsFilterPropertyToHclTerraform(struct?: DataTfTags.FilterPropertyOutputReference | DataTfTags.FilterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     and: {
-      value: cdktn.listMapperHcl(tfDataTagsAndPropertyToHclTerraform, true)(struct!.and),
+      value: cdktn.listMapperHcl(dataTfTagsAndPropertyToHclTerraform, true)(struct!.and),
       isBlock: true,
       type: "set",
       storageClassType: "AndPropertyList",
     },
     cost_category: {
-      value: tfDataTagsFilterCostCategoryPropertyToHclTerraform(struct!.costCategory),
+      value: dataTfTagsFilterCostCategoryPropertyToHclTerraform(struct!.costCategory),
       isBlock: true,
       type: "list",
       storageClassType: "FilterCostCategoryPropertyList",
     },
     dimension: {
-      value: tfDataTagsFilterDimensionPropertyToHclTerraform(struct!.dimension),
+      value: dataTfTagsFilterDimensionPropertyToHclTerraform(struct!.dimension),
       isBlock: true,
       type: "list",
       storageClassType: "FilterDimensionPropertyList",
     },
     not: {
-      value: tfDataTagsNotPropertyToHclTerraform(struct!.not),
+      value: dataTfTagsNotPropertyToHclTerraform(struct!.not),
       isBlock: true,
       type: "list",
       storageClassType: "NotPropertyList",
     },
     or: {
-      value: cdktn.listMapperHcl(tfDataTagsOrPropertyToHclTerraform, true)(struct!.or),
+      value: cdktn.listMapperHcl(dataTfTagsOrPropertyToHclTerraform, true)(struct!.or),
       isBlock: true,
       type: "set",
       storageClassType: "OrPropertyList",
     },
     tags: {
-      value: tfDataTagsFilterTagsPropertyToHclTerraform(struct!.tags),
+      value: dataTfTagsFilterTagsPropertyToHclTerraform(struct!.tags),
       isBlock: true,
       type: "list",
       storageClassType: "FilterTagsPropertyList",
@@ -987,7 +987,7 @@ export function tfDataTagsFilterPropertyToHclTerraform(struct?: TfDataTags.Filte
 }
 
 
-export function tfDataTagsSortByPropertyToTerraform(struct?: TfDataTags.SortByProperty | cdktn.IResolvable): any {
+export function dataTfTagsSortByPropertyToTerraform(struct?: DataTfTags.SortByProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -999,7 +999,7 @@ export function tfDataTagsSortByPropertyToTerraform(struct?: TfDataTags.SortByPr
 }
 
 
-export function tfDataTagsSortByPropertyToHclTerraform(struct?: TfDataTags.SortByProperty | cdktn.IResolvable): any {
+export function dataTfTagsSortByPropertyToHclTerraform(struct?: DataTfTags.SortByProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1024,7 +1024,7 @@ export function tfDataTagsSortByPropertyToHclTerraform(struct?: TfDataTags.SortB
 }
 
 
-export function tfDataTagsTimePeriodPropertyToTerraform(struct?: TfDataTags.TimePeriodPropertyOutputReference | TfDataTags.TimePeriodProperty): any {
+export function dataTfTagsTimePeriodPropertyToTerraform(struct?: DataTfTags.TimePeriodPropertyOutputReference | DataTfTags.TimePeriodProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1036,7 +1036,7 @@ export function tfDataTagsTimePeriodPropertyToTerraform(struct?: TfDataTags.Time
 }
 
 
-export function tfDataTagsTimePeriodPropertyToHclTerraform(struct?: TfDataTags.TimePeriodPropertyOutputReference | TfDataTags.TimePeriodProperty): any {
+export function dataTfTagsTimePeriodPropertyToHclTerraform(struct?: DataTfTags.TimePeriodPropertyOutputReference | DataTfTags.TimePeriodProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1061,18 +1061,18 @@ export function tfDataTagsTimePeriodPropertyToHclTerraform(struct?: TfDataTags.T
 }
 
 
-export namespace TfDataTags {
+export namespace DataTfTags {
 export interface FilterAndCostCategoryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#key TfDataTags#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#key DataTfTags#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#match_options TfDataTags#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#match_options DataTfTags#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#values TfDataTags#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#values DataTfTags#values}
   */
   readonly values?: string[];
 }
@@ -1170,15 +1170,15 @@ export class FilterAndCostCategoryPropertyOutputReference extends cdktn.ComplexO
 }
 export interface FilterAndDimensionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#key TfDataTags#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#key DataTfTags#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#match_options TfDataTags#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#match_options DataTfTags#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#values TfDataTags#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#values DataTfTags#values}
   */
   readonly values?: string[];
 }
@@ -1276,15 +1276,15 @@ export class FilterAndDimensionPropertyOutputReference extends cdktn.ComplexObje
 }
 export interface FilterAndTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#key TfDataTags#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#key DataTfTags#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#match_options TfDataTags#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#match_options DataTfTags#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#values TfDataTags#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#values DataTfTags#values}
   */
   readonly values?: string[];
 }
@@ -1384,19 +1384,19 @@ export interface AndProperty {
   /**
   * cost_category block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#cost_category TfDataTags#cost_category}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#cost_category DataTfTags#cost_category}
   */
   readonly costCategory?: FilterAndCostCategoryProperty;
   /**
   * dimension block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#dimension TfDataTags#dimension}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#dimension DataTfTags#dimension}
   */
   readonly dimension?: FilterAndDimensionProperty;
   /**
   * tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#tags TfDataTags#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#tags DataTfTags#tags}
   */
   readonly tags?: FilterAndTagsProperty;
 }
@@ -1526,15 +1526,15 @@ export class AndPropertyList extends cdktn.ComplexList {
 }
 export interface FilterCostCategoryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#key TfDataTags#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#key DataTfTags#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#match_options TfDataTags#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#match_options DataTfTags#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#values TfDataTags#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#values DataTfTags#values}
   */
   readonly values?: string[];
 }
@@ -1632,15 +1632,15 @@ export class FilterCostCategoryPropertyOutputReference extends cdktn.ComplexObje
 }
 export interface FilterDimensionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#key TfDataTags#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#key DataTfTags#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#match_options TfDataTags#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#match_options DataTfTags#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#values TfDataTags#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#values DataTfTags#values}
   */
   readonly values?: string[];
 }
@@ -1738,15 +1738,15 @@ export class FilterDimensionPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface FilterNotCostCategoryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#key TfDataTags#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#key DataTfTags#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#match_options TfDataTags#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#match_options DataTfTags#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#values TfDataTags#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#values DataTfTags#values}
   */
   readonly values?: string[];
 }
@@ -1844,15 +1844,15 @@ export class FilterNotCostCategoryPropertyOutputReference extends cdktn.ComplexO
 }
 export interface FilterNotDimensionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#key TfDataTags#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#key DataTfTags#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#match_options TfDataTags#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#match_options DataTfTags#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#values TfDataTags#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#values DataTfTags#values}
   */
   readonly values?: string[];
 }
@@ -1950,15 +1950,15 @@ export class FilterNotDimensionPropertyOutputReference extends cdktn.ComplexObje
 }
 export interface FilterNotTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#key TfDataTags#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#key DataTfTags#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#match_options TfDataTags#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#match_options DataTfTags#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#values TfDataTags#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#values DataTfTags#values}
   */
   readonly values?: string[];
 }
@@ -2058,19 +2058,19 @@ export interface NotProperty {
   /**
   * cost_category block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#cost_category TfDataTags#cost_category}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#cost_category DataTfTags#cost_category}
   */
   readonly costCategory?: FilterNotCostCategoryProperty;
   /**
   * dimension block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#dimension TfDataTags#dimension}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#dimension DataTfTags#dimension}
   */
   readonly dimension?: FilterNotDimensionProperty;
   /**
   * tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#tags TfDataTags#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#tags DataTfTags#tags}
   */
   readonly tags?: FilterNotTagsProperty;
 }
@@ -2168,15 +2168,15 @@ export class NotPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface FilterOrCostCategoryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#key TfDataTags#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#key DataTfTags#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#match_options TfDataTags#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#match_options DataTfTags#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#values TfDataTags#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#values DataTfTags#values}
   */
   readonly values?: string[];
 }
@@ -2274,15 +2274,15 @@ export class FilterOrCostCategoryPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface FilterOrDimensionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#key TfDataTags#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#key DataTfTags#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#match_options TfDataTags#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#match_options DataTfTags#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#values TfDataTags#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#values DataTfTags#values}
   */
   readonly values?: string[];
 }
@@ -2380,15 +2380,15 @@ export class FilterOrDimensionPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface FilterOrTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#key TfDataTags#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#key DataTfTags#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#match_options TfDataTags#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#match_options DataTfTags#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#values TfDataTags#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#values DataTfTags#values}
   */
   readonly values?: string[];
 }
@@ -2488,19 +2488,19 @@ export interface OrProperty {
   /**
   * cost_category block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#cost_category TfDataTags#cost_category}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#cost_category DataTfTags#cost_category}
   */
   readonly costCategory?: FilterOrCostCategoryProperty;
   /**
   * dimension block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#dimension TfDataTags#dimension}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#dimension DataTfTags#dimension}
   */
   readonly dimension?: FilterOrDimensionProperty;
   /**
   * tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#tags TfDataTags#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#tags DataTfTags#tags}
   */
   readonly tags?: FilterOrTagsProperty;
 }
@@ -2630,15 +2630,15 @@ export class OrPropertyList extends cdktn.ComplexList {
 }
 export interface FilterTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#key TfDataTags#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#key DataTfTags#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#match_options TfDataTags#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#match_options DataTfTags#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#values TfDataTags#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#values DataTfTags#values}
   */
   readonly values?: string[];
 }
@@ -2738,37 +2738,37 @@ export interface FilterProperty {
   /**
   * and block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#and TfDataTags#and}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#and DataTfTags#and}
   */
   readonly and?: AndProperty[] | cdktn.IResolvable;
   /**
   * cost_category block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#cost_category TfDataTags#cost_category}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#cost_category DataTfTags#cost_category}
   */
   readonly costCategory?: FilterCostCategoryProperty;
   /**
   * dimension block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#dimension TfDataTags#dimension}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#dimension DataTfTags#dimension}
   */
   readonly dimension?: FilterDimensionProperty;
   /**
   * not block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#not TfDataTags#not}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#not DataTfTags#not}
   */
   readonly not?: NotProperty;
   /**
   * or block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#or TfDataTags#or}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#or DataTfTags#or}
   */
   readonly or?: OrProperty[] | cdktn.IResolvable;
   /**
   * tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#tags TfDataTags#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#tags DataTfTags#tags}
   */
   readonly tags?: FilterTagsProperty;
 }
@@ -2932,11 +2932,11 @@ export class FilterPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SortByProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#key TfDataTags#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#key DataTfTags#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#sort_order TfDataTags#sort_order}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#sort_order DataTfTags#sort_order}
   */
   readonly sortOrder?: string;
 }
@@ -3044,11 +3044,11 @@ export class SortByPropertyList extends cdktn.ComplexList {
 }
 export interface TimePeriodProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#end TfDataTags#end}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#end DataTfTags#end}
   */
   readonly end: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#start TfDataTags#start}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ce_tags#start DataTfTags#start}
   */
   readonly start: string;
 }

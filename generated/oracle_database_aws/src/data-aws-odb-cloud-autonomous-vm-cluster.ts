@@ -5,11 +5,11 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataCloudAutonomousVmClusterConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfCloudAutonomousVmClusterConfig extends cdktn.TerraformMetaArguments {
   /**
   * Unique ID of the Autonomous VM cluster.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_cloud_autonomous_vm_cluster#id TfDataCloudAutonomousVmCluster#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_cloud_autonomous_vm_cluster#id DataTfCloudAutonomousVmCluster#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -18,7 +18,7 @@ export interface TfDataCloudAutonomousVmClusterConfig extends cdktn.TerraformMet
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_cloud_autonomous_vm_cluster#region TfDataCloudAutonomousVmCluster#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_cloud_autonomous_vm_cluster#region DataTfCloudAutonomousVmCluster#region}
   */
   readonly region?: string;
 }
@@ -26,7 +26,7 @@ export interface TfDataCloudAutonomousVmClusterConfig extends cdktn.TerraformMet
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_cloud_autonomous_vm_cluster aws_odb_cloud_autonomous_vm_cluster}
 */
-export class TfDataCloudAutonomousVmCluster extends cdktn.TerraformDataSource {
+export class DataTfCloudAutonomousVmCluster extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -37,11 +37,11 @@ export class TfDataCloudAutonomousVmCluster extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataCloudAutonomousVmCluster resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfCloudAutonomousVmCluster resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataCloudAutonomousVmCluster to import
-  * @param importFromId The id of the existing TfDataCloudAutonomousVmCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_cloud_autonomous_vm_cluster#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataCloudAutonomousVmCluster to import is found
+  * @param importToId The construct id used in the generated config for the DataTfCloudAutonomousVmCluster to import
+  * @param importFromId The id of the existing DataTfCloudAutonomousVmCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_cloud_autonomous_vm_cluster#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfCloudAutonomousVmCluster to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_odb_cloud_autonomous_vm_cluster", importId: importFromId, provider });
@@ -56,9 +56,9 @@ export class TfDataCloudAutonomousVmCluster extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataCloudAutonomousVmClusterConfig
+  * @param options DataTfCloudAutonomousVmClusterConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataCloudAutonomousVmClusterConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfCloudAutonomousVmClusterConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_odb_cloud_autonomous_vm_cluster',
       terraformGeneratorMetadata: {
@@ -211,7 +211,7 @@ export class TfDataCloudAutonomousVmCluster extends cdktn.TerraformDataSource {
   }
 
   // maintenance_window - computed: true, optional: false, required: false
-  private _maintenanceWindow = new TfDataCloudAutonomousVmCluster.MaintenanceWindowPropertyList(this, "maintenance_window", false);
+  private _maintenanceWindow = new DataTfCloudAutonomousVmCluster.MaintenanceWindowPropertyList(this, "maintenance_window", false);
   public get maintenanceWindow() {
     return this._maintenanceWindow;
   }
@@ -400,7 +400,7 @@ export class TfDataCloudAutonomousVmCluster extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataCloudAutonomousVmClusterDaysOfWeekPropertyToTerraform(struct?: TfDataCloudAutonomousVmCluster.DaysOfWeekProperty): any {
+export function dataTfCloudAutonomousVmClusterDaysOfWeekPropertyToTerraform(struct?: DataTfCloudAutonomousVmCluster.DaysOfWeekProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -410,7 +410,7 @@ export function tfDataCloudAutonomousVmClusterDaysOfWeekPropertyToTerraform(stru
 }
 
 
-export function tfDataCloudAutonomousVmClusterDaysOfWeekPropertyToHclTerraform(struct?: TfDataCloudAutonomousVmCluster.DaysOfWeekProperty): any {
+export function dataTfCloudAutonomousVmClusterDaysOfWeekPropertyToHclTerraform(struct?: DataTfCloudAutonomousVmCluster.DaysOfWeekProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -421,7 +421,7 @@ export function tfDataCloudAutonomousVmClusterDaysOfWeekPropertyToHclTerraform(s
 }
 
 
-export function tfDataCloudAutonomousVmClusterMonthsPropertyToTerraform(struct?: TfDataCloudAutonomousVmCluster.MonthsProperty): any {
+export function dataTfCloudAutonomousVmClusterMonthsPropertyToTerraform(struct?: DataTfCloudAutonomousVmCluster.MonthsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -431,7 +431,7 @@ export function tfDataCloudAutonomousVmClusterMonthsPropertyToTerraform(struct?:
 }
 
 
-export function tfDataCloudAutonomousVmClusterMonthsPropertyToHclTerraform(struct?: TfDataCloudAutonomousVmCluster.MonthsProperty): any {
+export function dataTfCloudAutonomousVmClusterMonthsPropertyToHclTerraform(struct?: DataTfCloudAutonomousVmCluster.MonthsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -442,7 +442,7 @@ export function tfDataCloudAutonomousVmClusterMonthsPropertyToHclTerraform(struc
 }
 
 
-export function tfDataCloudAutonomousVmClusterMaintenanceWindowPropertyToTerraform(struct?: TfDataCloudAutonomousVmCluster.MaintenanceWindowProperty): any {
+export function dataTfCloudAutonomousVmClusterMaintenanceWindowPropertyToTerraform(struct?: DataTfCloudAutonomousVmCluster.MaintenanceWindowProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -452,7 +452,7 @@ export function tfDataCloudAutonomousVmClusterMaintenanceWindowPropertyToTerrafo
 }
 
 
-export function tfDataCloudAutonomousVmClusterMaintenanceWindowPropertyToHclTerraform(struct?: TfDataCloudAutonomousVmCluster.MaintenanceWindowProperty): any {
+export function dataTfCloudAutonomousVmClusterMaintenanceWindowPropertyToHclTerraform(struct?: DataTfCloudAutonomousVmCluster.MaintenanceWindowProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -463,7 +463,7 @@ export function tfDataCloudAutonomousVmClusterMaintenanceWindowPropertyToHclTerr
 }
 
 
-export namespace TfDataCloudAutonomousVmCluster {
+export namespace DataTfCloudAutonomousVmCluster {
 export interface DaysOfWeekProperty {
 }
 export class DaysOfWeekPropertyOutputReference extends cdktn.ComplexObject {

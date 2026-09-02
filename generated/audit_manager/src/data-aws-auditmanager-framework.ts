@@ -5,19 +5,19 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataFrameworkConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfFrameworkConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/auditmanager_framework#framework_type TfDataFramework#framework_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/auditmanager_framework#framework_type DataTfFramework#framework_type}
   */
   readonly frameworkType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/auditmanager_framework#name TfDataFramework#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/auditmanager_framework#name DataTfFramework#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/auditmanager_framework#region TfDataFramework#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/auditmanager_framework#region DataTfFramework#region}
   */
   readonly region?: string;
 }
@@ -25,7 +25,7 @@ export interface TfDataFrameworkConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/auditmanager_framework aws_auditmanager_framework}
 */
-export class TfDataFramework extends cdktn.TerraformDataSource {
+export class DataTfFramework extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -36,11 +36,11 @@ export class TfDataFramework extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataFramework resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfFramework resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataFramework to import
-  * @param importFromId The id of the existing TfDataFramework that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/auditmanager_framework#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataFramework to import is found
+  * @param importToId The construct id used in the generated config for the DataTfFramework to import
+  * @param importFromId The id of the existing DataTfFramework that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/auditmanager_framework#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfFramework to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_auditmanager_framework", importId: importFromId, provider });
@@ -55,9 +55,9 @@ export class TfDataFramework extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataFrameworkConfig
+  * @param options DataTfFrameworkConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataFrameworkConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfFrameworkConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_auditmanager_framework',
       terraformGeneratorMetadata: {
@@ -93,7 +93,7 @@ export class TfDataFramework extends cdktn.TerraformDataSource {
   }
 
   // control_sets - computed: true, optional: false, required: false
-  private _controlSets = new TfDataFramework.ControlSetsPropertyList(this, "control_sets", false);
+  private _controlSets = new DataTfFramework.ControlSetsPropertyList(this, "control_sets", false);
   public get controlSets() {
     return this._controlSets;
   }
@@ -195,7 +195,7 @@ export class TfDataFramework extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataFrameworkControlsPropertyToTerraform(struct?: TfDataFramework.ControlsProperty): any {
+export function dataTfFrameworkControlsPropertyToTerraform(struct?: DataTfFramework.ControlsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -205,7 +205,7 @@ export function tfDataFrameworkControlsPropertyToTerraform(struct?: TfDataFramew
 }
 
 
-export function tfDataFrameworkControlsPropertyToHclTerraform(struct?: TfDataFramework.ControlsProperty): any {
+export function dataTfFrameworkControlsPropertyToHclTerraform(struct?: DataTfFramework.ControlsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -216,7 +216,7 @@ export function tfDataFrameworkControlsPropertyToHclTerraform(struct?: TfDataFra
 }
 
 
-export function tfDataFrameworkControlSetsPropertyToTerraform(struct?: TfDataFramework.ControlSetsProperty): any {
+export function dataTfFrameworkControlSetsPropertyToTerraform(struct?: DataTfFramework.ControlSetsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -226,7 +226,7 @@ export function tfDataFrameworkControlSetsPropertyToTerraform(struct?: TfDataFra
 }
 
 
-export function tfDataFrameworkControlSetsPropertyToHclTerraform(struct?: TfDataFramework.ControlSetsProperty): any {
+export function dataTfFrameworkControlSetsPropertyToHclTerraform(struct?: DataTfFramework.ControlSetsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -237,7 +237,7 @@ export function tfDataFrameworkControlSetsPropertyToHclTerraform(struct?: TfData
 }
 
 
-export namespace TfDataFramework {
+export namespace DataTfFramework {
 export interface ControlsProperty {
 }
 export class ControlsPropertyOutputReference extends cdktn.ComplexObject {

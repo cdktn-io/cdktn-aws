@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataCustomerGatewayConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfCustomerGatewayConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/customer_gateway#id TfDataCustomerGateway#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/customer_gateway#id DataTfCustomerGateway#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,31 +16,31 @@ export interface TfDataCustomerGatewayConfig extends cdktn.TerraformMetaArgument
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/customer_gateway#region TfDataCustomerGateway#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/customer_gateway#region DataTfCustomerGateway#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/customer_gateway#tags TfDataCustomerGateway#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/customer_gateway#tags DataTfCustomerGateway#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/customer_gateway#filter TfDataCustomerGateway#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/customer_gateway#filter DataTfCustomerGateway#filter}
   */
-  readonly filter?: TfDataCustomerGateway.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataTfCustomerGateway.FilterProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/customer_gateway#timeouts TfDataCustomerGateway#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/customer_gateway#timeouts DataTfCustomerGateway#timeouts}
   */
-  readonly timeouts?: TfDataCustomerGateway.TimeoutsProperty;
+  readonly timeouts?: DataTfCustomerGateway.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/customer_gateway aws_customer_gateway}
 */
-export class TfDataCustomerGateway extends cdktn.TerraformDataSource {
+export class DataTfCustomerGateway extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class TfDataCustomerGateway extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataCustomerGateway resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfCustomerGateway resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataCustomerGateway to import
-  * @param importFromId The id of the existing TfDataCustomerGateway that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/customer_gateway#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataCustomerGateway to import is found
+  * @param importToId The construct id used in the generated config for the DataTfCustomerGateway to import
+  * @param importFromId The id of the existing DataTfCustomerGateway that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/customer_gateway#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfCustomerGateway to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_customer_gateway", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class TfDataCustomerGateway extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataCustomerGatewayConfig = {}
+  * @param options DataTfCustomerGatewayConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataCustomerGatewayConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfCustomerGatewayConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_customer_gateway',
       terraformGeneratorMetadata: {
@@ -183,11 +183,11 @@ export class TfDataCustomerGateway extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new TfDataCustomerGateway.FilterPropertyList(this, "filter", true);
+  private _filter = new DataTfCustomerGateway.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: TfDataCustomerGateway.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataTfCustomerGateway.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -199,11 +199,11 @@ export class TfDataCustomerGateway extends cdktn.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfDataCustomerGateway.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new DataTfCustomerGateway.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfDataCustomerGateway.TimeoutsProperty) {
+  public putTimeouts(value: DataTfCustomerGateway.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -223,8 +223,8 @@ export class TfDataCustomerGateway extends cdktn.TerraformDataSource {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      filter: cdktn.listMapper(tfDataCustomerGatewayFilterPropertyToTerraform, true)(this._filter.internalValue),
-      timeouts: tfDataCustomerGatewayTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      filter: cdktn.listMapper(dataTfCustomerGatewayFilterPropertyToTerraform, true)(this._filter.internalValue),
+      timeouts: dataTfCustomerGatewayTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -249,16 +249,16 @@ export class TfDataCustomerGateway extends cdktn.TerraformDataSource {
         storageClassType: "stringMap",
       },
       filter: {
-        value: cdktn.listMapperHcl(tfDataCustomerGatewayFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataTfCustomerGatewayFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfDataCustomerGateway.FilterPropertyList",
+        storageClassType: "DataTfCustomerGateway.FilterPropertyList",
       },
       timeouts: {
-        value: tfDataCustomerGatewayTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: dataTfCustomerGatewayTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfDataCustomerGateway.TimeoutsProperty",
+        storageClassType: "DataTfCustomerGateway.TimeoutsProperty",
       },
     };
 
@@ -267,7 +267,7 @@ export class TfDataCustomerGateway extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataCustomerGatewayFilterPropertyToTerraform(struct?: TfDataCustomerGateway.FilterProperty | cdktn.IResolvable): any {
+export function dataTfCustomerGatewayFilterPropertyToTerraform(struct?: DataTfCustomerGateway.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -279,7 +279,7 @@ export function tfDataCustomerGatewayFilterPropertyToTerraform(struct?: TfDataCu
 }
 
 
-export function tfDataCustomerGatewayFilterPropertyToHclTerraform(struct?: TfDataCustomerGateway.FilterProperty | cdktn.IResolvable): any {
+export function dataTfCustomerGatewayFilterPropertyToHclTerraform(struct?: DataTfCustomerGateway.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -304,7 +304,7 @@ export function tfDataCustomerGatewayFilterPropertyToHclTerraform(struct?: TfDat
 }
 
 
-export function tfDataCustomerGatewayTimeoutsPropertyToTerraform(struct?: TfDataCustomerGateway.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfCustomerGatewayTimeoutsPropertyToTerraform(struct?: DataTfCustomerGateway.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -315,7 +315,7 @@ export function tfDataCustomerGatewayTimeoutsPropertyToTerraform(struct?: TfData
 }
 
 
-export function tfDataCustomerGatewayTimeoutsPropertyToHclTerraform(struct?: TfDataCustomerGateway.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfCustomerGatewayTimeoutsPropertyToHclTerraform(struct?: DataTfCustomerGateway.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -334,14 +334,14 @@ export function tfDataCustomerGatewayTimeoutsPropertyToHclTerraform(struct?: TfD
 }
 
 
-export namespace TfDataCustomerGateway {
+export namespace DataTfCustomerGateway {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/customer_gateway#name TfDataCustomerGateway#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/customer_gateway#name DataTfCustomerGateway#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/customer_gateway#values TfDataCustomerGateway#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/customer_gateway#values DataTfCustomerGateway#values}
   */
   readonly values: string[];
 }
@@ -443,7 +443,7 @@ export class FilterPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/customer_gateway#read TfDataCustomerGateway#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/customer_gateway#read DataTfCustomerGateway#read}
   */
   readonly read?: string;
 }

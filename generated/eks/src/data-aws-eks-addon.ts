@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataAddonConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfAddonConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_addon#addon_name TfDataAddon#addon_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_addon#addon_name DataTfAddon#addon_name}
   */
   readonly addonName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_addon#cluster_name TfDataAddon#cluster_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_addon#cluster_name DataTfAddon#cluster_name}
   */
   readonly clusterName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_addon#id TfDataAddon#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_addon#id DataTfAddon#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,11 +24,11 @@ export interface TfDataAddonConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_addon#region TfDataAddon#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_addon#region DataTfAddon#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_addon#tags TfDataAddon#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_addon#tags DataTfAddon#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -36,7 +36,7 @@ export interface TfDataAddonConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_addon aws_eks_addon}
 */
-export class TfDataAddon extends cdktn.TerraformDataSource {
+export class DataTfAddon extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class TfDataAddon extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataAddon resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfAddon resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataAddon to import
-  * @param importFromId The id of the existing TfDataAddon that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_addon#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataAddon to import is found
+  * @param importToId The construct id used in the generated config for the DataTfAddon to import
+  * @param importFromId The id of the existing DataTfAddon that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_addon#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfAddon to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_eks_addon", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class TfDataAddon extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataAddonConfig
+  * @param options DataTfAddonConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataAddonConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfAddonConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_eks_addon',
       terraformGeneratorMetadata: {
@@ -163,7 +163,7 @@ export class TfDataAddon extends cdktn.TerraformDataSource {
   }
 
   // pod_identity_association - computed: true, optional: false, required: false
-  private _podIdentityAssociation = new TfDataAddon.PodIdentityAssociationPropertyList(this, "pod_identity_association", true);
+  private _podIdentityAssociation = new DataTfAddon.PodIdentityAssociationPropertyList(this, "pod_identity_association", true);
   public get podIdentityAssociation() {
     return this._podIdentityAssociation;
   }
@@ -258,7 +258,7 @@ export class TfDataAddon extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataAddonPodIdentityAssociationPropertyToTerraform(struct?: TfDataAddon.PodIdentityAssociationProperty): any {
+export function dataTfAddonPodIdentityAssociationPropertyToTerraform(struct?: DataTfAddon.PodIdentityAssociationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -268,7 +268,7 @@ export function tfDataAddonPodIdentityAssociationPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfDataAddonPodIdentityAssociationPropertyToHclTerraform(struct?: TfDataAddon.PodIdentityAssociationProperty): any {
+export function dataTfAddonPodIdentityAssociationPropertyToHclTerraform(struct?: DataTfAddon.PodIdentityAssociationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -279,7 +279,7 @@ export function tfDataAddonPodIdentityAssociationPropertyToHclTerraform(struct?:
 }
 
 
-export namespace TfDataAddon {
+export namespace DataTfAddon {
 export interface PodIdentityAssociationProperty {
 }
 export class PodIdentityAssociationPropertyOutputReference extends cdktn.ComplexObject {

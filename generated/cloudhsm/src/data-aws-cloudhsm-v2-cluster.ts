@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataClusterConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfClusterConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudhsm_v2_cluster#cluster_id TfDataCluster#cluster_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudhsm_v2_cluster#cluster_id DataTfCluster#cluster_id}
   */
   readonly clusterId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudhsm_v2_cluster#cluster_state TfDataCluster#cluster_state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudhsm_v2_cluster#cluster_state DataTfCluster#cluster_state}
   */
   readonly clusterState?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudhsm_v2_cluster#id TfDataCluster#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudhsm_v2_cluster#id DataTfCluster#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,7 +24,7 @@ export interface TfDataClusterConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudhsm_v2_cluster#region TfDataCluster#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudhsm_v2_cluster#region DataTfCluster#region}
   */
   readonly region?: string;
 }
@@ -32,7 +32,7 @@ export interface TfDataClusterConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudhsm_v2_cluster aws_cloudhsm_v2_cluster}
 */
-export class TfDataCluster extends cdktn.TerraformDataSource {
+export class DataTfCluster extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class TfDataCluster extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataCluster resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfCluster resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataCluster to import
-  * @param importFromId The id of the existing TfDataCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudhsm_v2_cluster#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataCluster to import is found
+  * @param importToId The construct id used in the generated config for the DataTfCluster to import
+  * @param importFromId The id of the existing DataTfCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudhsm_v2_cluster#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfCluster to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudhsm_v2_cluster", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class TfDataCluster extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataClusterConfig
+  * @param options DataTfClusterConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataClusterConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfClusterConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudhsm_v2_cluster',
       terraformGeneratorMetadata: {
@@ -91,7 +91,7 @@ export class TfDataCluster extends cdktn.TerraformDataSource {
   // ==========
 
   // cluster_certificates - computed: true, optional: false, required: false
-  private _clusterCertificates = new TfDataCluster.ClusterCertificatesPropertyList(this, "cluster_certificates", false);
+  private _clusterCertificates = new DataTfCluster.ClusterCertificatesPropertyList(this, "cluster_certificates", false);
   public get clusterCertificates() {
     return this._clusterCertificates;
   }
@@ -218,7 +218,7 @@ export class TfDataCluster extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataClusterClusterCertificatesPropertyToTerraform(struct?: TfDataCluster.ClusterCertificatesProperty): any {
+export function dataTfClusterClusterCertificatesPropertyToTerraform(struct?: DataTfCluster.ClusterCertificatesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -228,7 +228,7 @@ export function tfDataClusterClusterCertificatesPropertyToTerraform(struct?: TfD
 }
 
 
-export function tfDataClusterClusterCertificatesPropertyToHclTerraform(struct?: TfDataCluster.ClusterCertificatesProperty): any {
+export function dataTfClusterClusterCertificatesPropertyToHclTerraform(struct?: DataTfCluster.ClusterCertificatesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -239,7 +239,7 @@ export function tfDataClusterClusterCertificatesPropertyToHclTerraform(struct?: 
 }
 
 
-export namespace TfDataCluster {
+export namespace DataTfCluster {
 export interface ClusterCertificatesProperty {
 }
 export class ClusterCertificatesPropertyOutputReference extends cdktn.ComplexObject {

@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataEc2ManagedPrefixListsConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfEc2ManagedPrefixListsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_managed_prefix_lists#id TfDataEc2ManagedPrefixLists#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_managed_prefix_lists#id DataTfEc2ManagedPrefixLists#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,25 +16,25 @@ export interface TfDataEc2ManagedPrefixListsConfig extends cdktn.TerraformMetaAr
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_managed_prefix_lists#region TfDataEc2ManagedPrefixLists#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_managed_prefix_lists#region DataTfEc2ManagedPrefixLists#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_managed_prefix_lists#tags TfDataEc2ManagedPrefixLists#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_managed_prefix_lists#tags DataTfEc2ManagedPrefixLists#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_managed_prefix_lists#filter TfDataEc2ManagedPrefixLists#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_managed_prefix_lists#filter DataTfEc2ManagedPrefixLists#filter}
   */
-  readonly filter?: TfDataEc2ManagedPrefixLists.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataTfEc2ManagedPrefixLists.FilterProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_managed_prefix_lists aws_ec2_managed_prefix_lists}
 */
-export class TfDataEc2ManagedPrefixLists extends cdktn.TerraformDataSource {
+export class DataTfEc2ManagedPrefixLists extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class TfDataEc2ManagedPrefixLists extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataEc2ManagedPrefixLists resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfEc2ManagedPrefixLists resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataEc2ManagedPrefixLists to import
-  * @param importFromId The id of the existing TfDataEc2ManagedPrefixLists that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_managed_prefix_lists#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataEc2ManagedPrefixLists to import is found
+  * @param importToId The construct id used in the generated config for the DataTfEc2ManagedPrefixLists to import
+  * @param importFromId The id of the existing DataTfEc2ManagedPrefixLists that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_managed_prefix_lists#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfEc2ManagedPrefixLists to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_managed_prefix_lists", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class TfDataEc2ManagedPrefixLists extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataEc2ManagedPrefixListsConfig = {}
+  * @param options DataTfEc2ManagedPrefixListsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataEc2ManagedPrefixListsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfEc2ManagedPrefixListsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_managed_prefix_lists',
       terraformGeneratorMetadata: {
@@ -146,11 +146,11 @@ export class TfDataEc2ManagedPrefixLists extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new TfDataEc2ManagedPrefixLists.FilterPropertyList(this, "filter", true);
+  private _filter = new DataTfEc2ManagedPrefixLists.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: TfDataEc2ManagedPrefixLists.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataTfEc2ManagedPrefixLists.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -170,7 +170,7 @@ export class TfDataEc2ManagedPrefixLists extends cdktn.TerraformDataSource {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      filter: cdktn.listMapper(tfDataEc2ManagedPrefixListsFilterPropertyToTerraform, true)(this._filter.internalValue),
+      filter: cdktn.listMapper(dataTfEc2ManagedPrefixListsFilterPropertyToTerraform, true)(this._filter.internalValue),
     };
   }
 
@@ -195,10 +195,10 @@ export class TfDataEc2ManagedPrefixLists extends cdktn.TerraformDataSource {
         storageClassType: "stringMap",
       },
       filter: {
-        value: cdktn.listMapperHcl(tfDataEc2ManagedPrefixListsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataTfEc2ManagedPrefixListsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfDataEc2ManagedPrefixLists.FilterPropertyList",
+        storageClassType: "DataTfEc2ManagedPrefixLists.FilterPropertyList",
       },
     };
 
@@ -207,7 +207,7 @@ export class TfDataEc2ManagedPrefixLists extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataEc2ManagedPrefixListsFilterPropertyToTerraform(struct?: TfDataEc2ManagedPrefixLists.FilterProperty | cdktn.IResolvable): any {
+export function dataTfEc2ManagedPrefixListsFilterPropertyToTerraform(struct?: DataTfEc2ManagedPrefixLists.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -219,7 +219,7 @@ export function tfDataEc2ManagedPrefixListsFilterPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfDataEc2ManagedPrefixListsFilterPropertyToHclTerraform(struct?: TfDataEc2ManagedPrefixLists.FilterProperty | cdktn.IResolvable): any {
+export function dataTfEc2ManagedPrefixListsFilterPropertyToHclTerraform(struct?: DataTfEc2ManagedPrefixLists.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -244,14 +244,14 @@ export function tfDataEc2ManagedPrefixListsFilterPropertyToHclTerraform(struct?:
 }
 
 
-export namespace TfDataEc2ManagedPrefixLists {
+export namespace DataTfEc2ManagedPrefixLists {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_managed_prefix_lists#name TfDataEc2ManagedPrefixLists#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_managed_prefix_lists#name DataTfEc2ManagedPrefixLists#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_managed_prefix_lists#values TfDataEc2ManagedPrefixLists#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_managed_prefix_lists#values DataTfEc2ManagedPrefixLists#values}
   */
   readonly values: string[];
 }

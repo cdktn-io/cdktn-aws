@@ -5,19 +5,19 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataTableConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfTableConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/timestreamwrite_table#database_name TfDataTable#database_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/timestreamwrite_table#database_name DataTfTable#database_name}
   */
   readonly databaseName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/timestreamwrite_table#name TfDataTable#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/timestreamwrite_table#name DataTfTable#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/timestreamwrite_table#region TfDataTable#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/timestreamwrite_table#region DataTfTable#region}
   */
   readonly region?: string;
 }
@@ -25,7 +25,7 @@ export interface TfDataTableConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/timestreamwrite_table aws_timestreamwrite_table}
 */
-export class TfDataTable extends cdktn.TerraformDataSource {
+export class DataTfTable extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -36,11 +36,11 @@ export class TfDataTable extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataTable resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfTable resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataTable to import
-  * @param importFromId The id of the existing TfDataTable that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/timestreamwrite_table#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataTable to import is found
+  * @param importToId The construct id used in the generated config for the DataTfTable to import
+  * @param importFromId The id of the existing DataTfTable that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/timestreamwrite_table#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfTable to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_timestreamwrite_table", importId: importFromId, provider });
@@ -55,9 +55,9 @@ export class TfDataTable extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataTableConfig
+  * @param options DataTfTableConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataTableConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfTableConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_timestreamwrite_table',
       terraformGeneratorMetadata: {
@@ -111,7 +111,7 @@ export class TfDataTable extends cdktn.TerraformDataSource {
   }
 
   // magnetic_store_write_properties - computed: true, optional: false, required: false
-  private _magneticStoreWriteProperties = new TfDataTable.MagneticStoreWritePropertiesPropertyList(this, "magnetic_store_write_properties", false);
+  private _magneticStoreWriteProperties = new DataTfTable.MagneticStoreWritePropertiesPropertyList(this, "magnetic_store_write_properties", false);
   public get magneticStoreWriteProperties() {
     return this._magneticStoreWriteProperties;
   }
@@ -146,13 +146,13 @@ export class TfDataTable extends cdktn.TerraformDataSource {
   }
 
   // retention_properties - computed: true, optional: false, required: false
-  private _retentionProperties = new TfDataTable.RetentionPropertiesPropertyList(this, "retention_properties", false);
+  private _retentionProperties = new DataTfTable.RetentionPropertiesPropertyList(this, "retention_properties", false);
   public get retentionProperties() {
     return this._retentionProperties;
   }
 
   // schema - computed: true, optional: false, required: false
-  private _schema = new TfDataTable.SchemaPropertyList(this, "schema", false);
+  private _schema = new DataTfTable.SchemaPropertyList(this, "schema", false);
   public get schema() {
     return this._schema;
   }
@@ -201,7 +201,7 @@ export class TfDataTable extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataTableS3ConfigurationPropertyToTerraform(struct?: TfDataTable.S3ConfigurationProperty): any {
+export function dataTfTableS3ConfigurationPropertyToTerraform(struct?: DataTfTable.S3ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -211,7 +211,7 @@ export function tfDataTableS3ConfigurationPropertyToTerraform(struct?: TfDataTab
 }
 
 
-export function tfDataTableS3ConfigurationPropertyToHclTerraform(struct?: TfDataTable.S3ConfigurationProperty): any {
+export function dataTfTableS3ConfigurationPropertyToHclTerraform(struct?: DataTfTable.S3ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -222,7 +222,7 @@ export function tfDataTableS3ConfigurationPropertyToHclTerraform(struct?: TfData
 }
 
 
-export function tfDataTableMagneticStoreRejectedDataLocationPropertyToTerraform(struct?: TfDataTable.MagneticStoreRejectedDataLocationProperty): any {
+export function dataTfTableMagneticStoreRejectedDataLocationPropertyToTerraform(struct?: DataTfTable.MagneticStoreRejectedDataLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -232,7 +232,7 @@ export function tfDataTableMagneticStoreRejectedDataLocationPropertyToTerraform(
 }
 
 
-export function tfDataTableMagneticStoreRejectedDataLocationPropertyToHclTerraform(struct?: TfDataTable.MagneticStoreRejectedDataLocationProperty): any {
+export function dataTfTableMagneticStoreRejectedDataLocationPropertyToHclTerraform(struct?: DataTfTable.MagneticStoreRejectedDataLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -243,7 +243,7 @@ export function tfDataTableMagneticStoreRejectedDataLocationPropertyToHclTerrafo
 }
 
 
-export function tfDataTableMagneticStoreWritePropertiesPropertyToTerraform(struct?: TfDataTable.MagneticStoreWritePropertiesProperty): any {
+export function dataTfTableMagneticStoreWritePropertiesPropertyToTerraform(struct?: DataTfTable.MagneticStoreWritePropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -253,7 +253,7 @@ export function tfDataTableMagneticStoreWritePropertiesPropertyToTerraform(struc
 }
 
 
-export function tfDataTableMagneticStoreWritePropertiesPropertyToHclTerraform(struct?: TfDataTable.MagneticStoreWritePropertiesProperty): any {
+export function dataTfTableMagneticStoreWritePropertiesPropertyToHclTerraform(struct?: DataTfTable.MagneticStoreWritePropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -264,7 +264,7 @@ export function tfDataTableMagneticStoreWritePropertiesPropertyToHclTerraform(st
 }
 
 
-export function tfDataTableRetentionPropertiesPropertyToTerraform(struct?: TfDataTable.RetentionPropertiesProperty): any {
+export function dataTfTableRetentionPropertiesPropertyToTerraform(struct?: DataTfTable.RetentionPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -274,7 +274,7 @@ export function tfDataTableRetentionPropertiesPropertyToTerraform(struct?: TfDat
 }
 
 
-export function tfDataTableRetentionPropertiesPropertyToHclTerraform(struct?: TfDataTable.RetentionPropertiesProperty): any {
+export function dataTfTableRetentionPropertiesPropertyToHclTerraform(struct?: DataTfTable.RetentionPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -285,7 +285,7 @@ export function tfDataTableRetentionPropertiesPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfDataTableCompositePartitionKeyPropertyToTerraform(struct?: TfDataTable.CompositePartitionKeyProperty): any {
+export function dataTfTableCompositePartitionKeyPropertyToTerraform(struct?: DataTfTable.CompositePartitionKeyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -295,7 +295,7 @@ export function tfDataTableCompositePartitionKeyPropertyToTerraform(struct?: TfD
 }
 
 
-export function tfDataTableCompositePartitionKeyPropertyToHclTerraform(struct?: TfDataTable.CompositePartitionKeyProperty): any {
+export function dataTfTableCompositePartitionKeyPropertyToHclTerraform(struct?: DataTfTable.CompositePartitionKeyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -306,7 +306,7 @@ export function tfDataTableCompositePartitionKeyPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfDataTableSchemaPropertyToTerraform(struct?: TfDataTable.SchemaProperty): any {
+export function dataTfTableSchemaPropertyToTerraform(struct?: DataTfTable.SchemaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -316,7 +316,7 @@ export function tfDataTableSchemaPropertyToTerraform(struct?: TfDataTable.Schema
 }
 
 
-export function tfDataTableSchemaPropertyToHclTerraform(struct?: TfDataTable.SchemaProperty): any {
+export function dataTfTableSchemaPropertyToHclTerraform(struct?: DataTfTable.SchemaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -327,7 +327,7 @@ export function tfDataTableSchemaPropertyToHclTerraform(struct?: TfDataTable.Sch
 }
 
 
-export namespace TfDataTable {
+export namespace DataTfTable {
 export interface S3ConfigurationProperty {
 }
 export class S3ConfigurationPropertyOutputReference extends cdktn.ComplexObject {

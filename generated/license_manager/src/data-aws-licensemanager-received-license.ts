@@ -5,22 +5,22 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataReceivedLicenseConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfReceivedLicenseConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/licensemanager_received_license#id TfDataReceivedLicense#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/licensemanager_received_license#id DataTfReceivedLicense#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/licensemanager_received_license#license_arn TfDataReceivedLicense#license_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/licensemanager_received_license#license_arn DataTfReceivedLicense#license_arn}
   */
   readonly licenseArn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/licensemanager_received_license#region TfDataReceivedLicense#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/licensemanager_received_license#region DataTfReceivedLicense#region}
   */
   readonly region?: string;
 }
@@ -28,7 +28,7 @@ export interface TfDataReceivedLicenseConfig extends cdktn.TerraformMetaArgument
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/licensemanager_received_license aws_licensemanager_received_license}
 */
-export class TfDataReceivedLicense extends cdktn.TerraformDataSource {
+export class DataTfReceivedLicense extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class TfDataReceivedLicense extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataReceivedLicense resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfReceivedLicense resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataReceivedLicense to import
-  * @param importFromId The id of the existing TfDataReceivedLicense that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/licensemanager_received_license#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataReceivedLicense to import is found
+  * @param importToId The construct id used in the generated config for the DataTfReceivedLicense to import
+  * @param importFromId The id of the existing DataTfReceivedLicense that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/licensemanager_received_license#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfReceivedLicense to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_licensemanager_received_license", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class TfDataReceivedLicense extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataReceivedLicenseConfig
+  * @param options DataTfReceivedLicenseConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataReceivedLicenseConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfReceivedLicenseConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_licensemanager_received_license',
       terraformGeneratorMetadata: {
@@ -91,7 +91,7 @@ export class TfDataReceivedLicense extends cdktn.TerraformDataSource {
   }
 
   // consumption_configuration - computed: true, optional: false, required: false
-  private _consumptionConfiguration = new TfDataReceivedLicense.ConsumptionConfigurationPropertyList(this, "consumption_configuration", false);
+  private _consumptionConfiguration = new DataTfReceivedLicense.ConsumptionConfigurationPropertyList(this, "consumption_configuration", false);
   public get consumptionConfiguration() {
     return this._consumptionConfiguration;
   }
@@ -102,7 +102,7 @@ export class TfDataReceivedLicense extends cdktn.TerraformDataSource {
   }
 
   // entitlements - computed: true, optional: false, required: false
-  private _entitlements = new TfDataReceivedLicense.EntitlementsPropertyList(this, "entitlements", true);
+  private _entitlements = new DataTfReceivedLicense.EntitlementsPropertyList(this, "entitlements", true);
   public get entitlements() {
     return this._entitlements;
   }
@@ -129,7 +129,7 @@ export class TfDataReceivedLicense extends cdktn.TerraformDataSource {
   }
 
   // issuer - computed: true, optional: false, required: false
-  private _issuer = new TfDataReceivedLicense.IssuerPropertyList(this, "issuer", false);
+  private _issuer = new DataTfReceivedLicense.IssuerPropertyList(this, "issuer", false);
   public get issuer() {
     return this._issuer;
   }
@@ -148,7 +148,7 @@ export class TfDataReceivedLicense extends cdktn.TerraformDataSource {
   }
 
   // license_metadata - computed: true, optional: false, required: false
-  private _licenseMetadata = new TfDataReceivedLicense.LicenseMetadataPropertyList(this, "license_metadata", true);
+  private _licenseMetadata = new DataTfReceivedLicense.LicenseMetadataPropertyList(this, "license_metadata", true);
   public get licenseMetadata() {
     return this._licenseMetadata;
   }
@@ -169,7 +169,7 @@ export class TfDataReceivedLicense extends cdktn.TerraformDataSource {
   }
 
   // received_metadata - computed: true, optional: false, required: false
-  private _receivedMetadata = new TfDataReceivedLicense.ReceivedMetadataPropertyList(this, "received_metadata", false);
+  private _receivedMetadata = new DataTfReceivedLicense.ReceivedMetadataPropertyList(this, "received_metadata", false);
   public get receivedMetadata() {
     return this._receivedMetadata;
   }
@@ -196,7 +196,7 @@ export class TfDataReceivedLicense extends cdktn.TerraformDataSource {
   }
 
   // validity - computed: true, optional: false, required: false
-  private _validity = new TfDataReceivedLicense.ValidityPropertyList(this, "validity", false);
+  private _validity = new DataTfReceivedLicense.ValidityPropertyList(this, "validity", false);
   public get validity() {
     return this._validity;
   }
@@ -245,7 +245,7 @@ export class TfDataReceivedLicense extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataReceivedLicenseBorrowConfigurationPropertyToTerraform(struct?: TfDataReceivedLicense.BorrowConfigurationProperty): any {
+export function dataTfReceivedLicenseBorrowConfigurationPropertyToTerraform(struct?: DataTfReceivedLicense.BorrowConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -255,7 +255,7 @@ export function tfDataReceivedLicenseBorrowConfigurationPropertyToTerraform(stru
 }
 
 
-export function tfDataReceivedLicenseBorrowConfigurationPropertyToHclTerraform(struct?: TfDataReceivedLicense.BorrowConfigurationProperty): any {
+export function dataTfReceivedLicenseBorrowConfigurationPropertyToHclTerraform(struct?: DataTfReceivedLicense.BorrowConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -266,7 +266,7 @@ export function tfDataReceivedLicenseBorrowConfigurationPropertyToHclTerraform(s
 }
 
 
-export function tfDataReceivedLicenseProvisionalConfigurationPropertyToTerraform(struct?: TfDataReceivedLicense.ProvisionalConfigurationProperty): any {
+export function dataTfReceivedLicenseProvisionalConfigurationPropertyToTerraform(struct?: DataTfReceivedLicense.ProvisionalConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -276,7 +276,7 @@ export function tfDataReceivedLicenseProvisionalConfigurationPropertyToTerraform
 }
 
 
-export function tfDataReceivedLicenseProvisionalConfigurationPropertyToHclTerraform(struct?: TfDataReceivedLicense.ProvisionalConfigurationProperty): any {
+export function dataTfReceivedLicenseProvisionalConfigurationPropertyToHclTerraform(struct?: DataTfReceivedLicense.ProvisionalConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -287,7 +287,7 @@ export function tfDataReceivedLicenseProvisionalConfigurationPropertyToHclTerraf
 }
 
 
-export function tfDataReceivedLicenseConsumptionConfigurationPropertyToTerraform(struct?: TfDataReceivedLicense.ConsumptionConfigurationProperty): any {
+export function dataTfReceivedLicenseConsumptionConfigurationPropertyToTerraform(struct?: DataTfReceivedLicense.ConsumptionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -297,7 +297,7 @@ export function tfDataReceivedLicenseConsumptionConfigurationPropertyToTerraform
 }
 
 
-export function tfDataReceivedLicenseConsumptionConfigurationPropertyToHclTerraform(struct?: TfDataReceivedLicense.ConsumptionConfigurationProperty): any {
+export function dataTfReceivedLicenseConsumptionConfigurationPropertyToHclTerraform(struct?: DataTfReceivedLicense.ConsumptionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -308,7 +308,7 @@ export function tfDataReceivedLicenseConsumptionConfigurationPropertyToHclTerraf
 }
 
 
-export function tfDataReceivedLicenseEntitlementsPropertyToTerraform(struct?: TfDataReceivedLicense.EntitlementsProperty): any {
+export function dataTfReceivedLicenseEntitlementsPropertyToTerraform(struct?: DataTfReceivedLicense.EntitlementsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -318,7 +318,7 @@ export function tfDataReceivedLicenseEntitlementsPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfDataReceivedLicenseEntitlementsPropertyToHclTerraform(struct?: TfDataReceivedLicense.EntitlementsProperty): any {
+export function dataTfReceivedLicenseEntitlementsPropertyToHclTerraform(struct?: DataTfReceivedLicense.EntitlementsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -329,7 +329,7 @@ export function tfDataReceivedLicenseEntitlementsPropertyToHclTerraform(struct?:
 }
 
 
-export function tfDataReceivedLicenseIssuerPropertyToTerraform(struct?: TfDataReceivedLicense.IssuerProperty): any {
+export function dataTfReceivedLicenseIssuerPropertyToTerraform(struct?: DataTfReceivedLicense.IssuerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -339,7 +339,7 @@ export function tfDataReceivedLicenseIssuerPropertyToTerraform(struct?: TfDataRe
 }
 
 
-export function tfDataReceivedLicenseIssuerPropertyToHclTerraform(struct?: TfDataReceivedLicense.IssuerProperty): any {
+export function dataTfReceivedLicenseIssuerPropertyToHclTerraform(struct?: DataTfReceivedLicense.IssuerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -350,7 +350,7 @@ export function tfDataReceivedLicenseIssuerPropertyToHclTerraform(struct?: TfDat
 }
 
 
-export function tfDataReceivedLicenseLicenseMetadataPropertyToTerraform(struct?: TfDataReceivedLicense.LicenseMetadataProperty): any {
+export function dataTfReceivedLicenseLicenseMetadataPropertyToTerraform(struct?: DataTfReceivedLicense.LicenseMetadataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -360,7 +360,7 @@ export function tfDataReceivedLicenseLicenseMetadataPropertyToTerraform(struct?:
 }
 
 
-export function tfDataReceivedLicenseLicenseMetadataPropertyToHclTerraform(struct?: TfDataReceivedLicense.LicenseMetadataProperty): any {
+export function dataTfReceivedLicenseLicenseMetadataPropertyToHclTerraform(struct?: DataTfReceivedLicense.LicenseMetadataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -371,7 +371,7 @@ export function tfDataReceivedLicenseLicenseMetadataPropertyToHclTerraform(struc
 }
 
 
-export function tfDataReceivedLicenseReceivedMetadataPropertyToTerraform(struct?: TfDataReceivedLicense.ReceivedMetadataProperty): any {
+export function dataTfReceivedLicenseReceivedMetadataPropertyToTerraform(struct?: DataTfReceivedLicense.ReceivedMetadataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -381,7 +381,7 @@ export function tfDataReceivedLicenseReceivedMetadataPropertyToTerraform(struct?
 }
 
 
-export function tfDataReceivedLicenseReceivedMetadataPropertyToHclTerraform(struct?: TfDataReceivedLicense.ReceivedMetadataProperty): any {
+export function dataTfReceivedLicenseReceivedMetadataPropertyToHclTerraform(struct?: DataTfReceivedLicense.ReceivedMetadataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -392,7 +392,7 @@ export function tfDataReceivedLicenseReceivedMetadataPropertyToHclTerraform(stru
 }
 
 
-export function tfDataReceivedLicenseValidityPropertyToTerraform(struct?: TfDataReceivedLicense.ValidityProperty): any {
+export function dataTfReceivedLicenseValidityPropertyToTerraform(struct?: DataTfReceivedLicense.ValidityProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -402,7 +402,7 @@ export function tfDataReceivedLicenseValidityPropertyToTerraform(struct?: TfData
 }
 
 
-export function tfDataReceivedLicenseValidityPropertyToHclTerraform(struct?: TfDataReceivedLicense.ValidityProperty): any {
+export function dataTfReceivedLicenseValidityPropertyToHclTerraform(struct?: DataTfReceivedLicense.ValidityProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -413,7 +413,7 @@ export function tfDataReceivedLicenseValidityPropertyToHclTerraform(struct?: TfD
 }
 
 
-export namespace TfDataReceivedLicense {
+export namespace DataTfReceivedLicense {
 export interface BorrowConfigurationProperty {
 }
 export class BorrowConfigurationPropertyOutputReference extends cdktn.ComplexObject {

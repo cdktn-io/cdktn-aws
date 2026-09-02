@@ -5,19 +5,19 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataLifecyclePolicyDocumentConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfLifecyclePolicyDocumentConfig extends cdktn.TerraformMetaArguments {
   /**
   * rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_lifecycle_policy_document#rule TfDataLifecyclePolicyDocument#rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_lifecycle_policy_document#rule DataTfLifecyclePolicyDocument#rule}
   */
-  readonly rule?: TfDataLifecyclePolicyDocument.RuleProperty[] | cdktn.IResolvable;
+  readonly rule?: DataTfLifecyclePolicyDocument.RuleProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_lifecycle_policy_document aws_ecr_lifecycle_policy_document}
 */
-export class TfDataLifecyclePolicyDocument extends cdktn.TerraformDataSource {
+export class DataTfLifecyclePolicyDocument extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -28,11 +28,11 @@ export class TfDataLifecyclePolicyDocument extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataLifecyclePolicyDocument resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfLifecyclePolicyDocument resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataLifecyclePolicyDocument to import
-  * @param importFromId The id of the existing TfDataLifecyclePolicyDocument that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_lifecycle_policy_document#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataLifecyclePolicyDocument to import is found
+  * @param importToId The construct id used in the generated config for the DataTfLifecyclePolicyDocument to import
+  * @param importFromId The id of the existing DataTfLifecyclePolicyDocument that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_lifecycle_policy_document#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfLifecyclePolicyDocument to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ecr_lifecycle_policy_document", importId: importFromId, provider });
@@ -47,9 +47,9 @@ export class TfDataLifecyclePolicyDocument extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataLifecyclePolicyDocumentConfig = {}
+  * @param options DataTfLifecyclePolicyDocumentConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataLifecyclePolicyDocumentConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfLifecyclePolicyDocumentConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_ecr_lifecycle_policy_document',
       terraformGeneratorMetadata: {
@@ -78,11 +78,11 @@ export class TfDataLifecyclePolicyDocument extends cdktn.TerraformDataSource {
   }
 
   // rule - computed: false, optional: true, required: false
-  private _rule = new TfDataLifecyclePolicyDocument.RulePropertyList(this, "rule", false);
+  private _rule = new DataTfLifecyclePolicyDocument.RulePropertyList(this, "rule", false);
   public get rule() {
     return this._rule;
   }
-  public putRule(value: TfDataLifecyclePolicyDocument.RuleProperty[] | cdktn.IResolvable) {
+  public putRule(value: DataTfLifecyclePolicyDocument.RuleProperty[] | cdktn.IResolvable) {
     this._rule.internalValue = value;
   }
   public resetRule() {
@@ -99,17 +99,17 @@ export class TfDataLifecyclePolicyDocument extends cdktn.TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      rule: cdktn.listMapper(tfDataLifecyclePolicyDocumentRulePropertyToTerraform, true)(this._rule.internalValue),
+      rule: cdktn.listMapper(dataTfLifecyclePolicyDocumentRulePropertyToTerraform, true)(this._rule.internalValue),
     };
   }
 
   protected synthesizeHclAttributes(): { [name: string]: any } {
     const attrs = {
       rule: {
-        value: cdktn.listMapperHcl(tfDataLifecyclePolicyDocumentRulePropertyToHclTerraform, true)(this._rule.internalValue),
+        value: cdktn.listMapperHcl(dataTfLifecyclePolicyDocumentRulePropertyToHclTerraform, true)(this._rule.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDataLifecyclePolicyDocument.RulePropertyList",
+        storageClassType: "DataTfLifecyclePolicyDocument.RulePropertyList",
       },
     };
 
@@ -118,7 +118,7 @@ export class TfDataLifecyclePolicyDocument extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataLifecyclePolicyDocumentActionPropertyToTerraform(struct?: TfDataLifecyclePolicyDocument.ActionProperty | cdktn.IResolvable): any {
+export function dataTfLifecyclePolicyDocumentActionPropertyToTerraform(struct?: DataTfLifecyclePolicyDocument.ActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -130,7 +130,7 @@ export function tfDataLifecyclePolicyDocumentActionPropertyToTerraform(struct?: 
 }
 
 
-export function tfDataLifecyclePolicyDocumentActionPropertyToHclTerraform(struct?: TfDataLifecyclePolicyDocument.ActionProperty | cdktn.IResolvable): any {
+export function dataTfLifecyclePolicyDocumentActionPropertyToHclTerraform(struct?: DataTfLifecyclePolicyDocument.ActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -155,7 +155,7 @@ export function tfDataLifecyclePolicyDocumentActionPropertyToHclTerraform(struct
 }
 
 
-export function tfDataLifecyclePolicyDocumentSelectionPropertyToTerraform(struct?: TfDataLifecyclePolicyDocument.SelectionProperty | cdktn.IResolvable): any {
+export function dataTfLifecyclePolicyDocumentSelectionPropertyToTerraform(struct?: DataTfLifecyclePolicyDocument.SelectionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -172,7 +172,7 @@ export function tfDataLifecyclePolicyDocumentSelectionPropertyToTerraform(struct
 }
 
 
-export function tfDataLifecyclePolicyDocumentSelectionPropertyToHclTerraform(struct?: TfDataLifecyclePolicyDocument.SelectionProperty | cdktn.IResolvable): any {
+export function dataTfLifecyclePolicyDocumentSelectionPropertyToHclTerraform(struct?: DataTfLifecyclePolicyDocument.SelectionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -227,7 +227,7 @@ export function tfDataLifecyclePolicyDocumentSelectionPropertyToHclTerraform(str
 }
 
 
-export function tfDataLifecyclePolicyDocumentRulePropertyToTerraform(struct?: TfDataLifecyclePolicyDocument.RuleProperty | cdktn.IResolvable): any {
+export function dataTfLifecyclePolicyDocumentRulePropertyToTerraform(struct?: DataTfLifecyclePolicyDocument.RuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -235,13 +235,13 @@ export function tfDataLifecyclePolicyDocumentRulePropertyToTerraform(struct?: Tf
   return {
     description: cdktn.stringToTerraform(struct!.description),
     priority: cdktn.numberToTerraform(struct!.priority),
-    action: cdktn.listMapper(tfDataLifecyclePolicyDocumentActionPropertyToTerraform, true)(struct!.action),
-    selection: cdktn.listMapper(tfDataLifecyclePolicyDocumentSelectionPropertyToTerraform, true)(struct!.selection),
+    action: cdktn.listMapper(dataTfLifecyclePolicyDocumentActionPropertyToTerraform, true)(struct!.action),
+    selection: cdktn.listMapper(dataTfLifecyclePolicyDocumentSelectionPropertyToTerraform, true)(struct!.selection),
   }
 }
 
 
-export function tfDataLifecyclePolicyDocumentRulePropertyToHclTerraform(struct?: TfDataLifecyclePolicyDocument.RuleProperty | cdktn.IResolvable): any {
+export function dataTfLifecyclePolicyDocumentRulePropertyToHclTerraform(struct?: DataTfLifecyclePolicyDocument.RuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -260,13 +260,13 @@ export function tfDataLifecyclePolicyDocumentRulePropertyToHclTerraform(struct?:
       storageClassType: "number",
     },
     action: {
-      value: cdktn.listMapperHcl(tfDataLifecyclePolicyDocumentActionPropertyToHclTerraform, true)(struct!.action),
+      value: cdktn.listMapperHcl(dataTfLifecyclePolicyDocumentActionPropertyToHclTerraform, true)(struct!.action),
       isBlock: true,
       type: "list",
       storageClassType: "ActionPropertyList",
     },
     selection: {
-      value: cdktn.listMapperHcl(tfDataLifecyclePolicyDocumentSelectionPropertyToHclTerraform, true)(struct!.selection),
+      value: cdktn.listMapperHcl(dataTfLifecyclePolicyDocumentSelectionPropertyToHclTerraform, true)(struct!.selection),
       isBlock: true,
       type: "list",
       storageClassType: "SelectionPropertyList",
@@ -278,14 +278,14 @@ export function tfDataLifecyclePolicyDocumentRulePropertyToHclTerraform(struct?:
 }
 
 
-export namespace TfDataLifecyclePolicyDocument {
+export namespace DataTfLifecyclePolicyDocument {
 export interface ActionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_lifecycle_policy_document#target_storage_class TfDataLifecyclePolicyDocument#target_storage_class}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_lifecycle_policy_document#target_storage_class DataTfLifecyclePolicyDocument#target_storage_class}
   */
   readonly targetStorageClass?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_lifecycle_policy_document#type TfDataLifecyclePolicyDocument#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_lifecycle_policy_document#type DataTfLifecyclePolicyDocument#type}
   */
   readonly type: string;
 }
@@ -390,31 +390,31 @@ export class ActionPropertyList extends cdktn.ComplexList {
 }
 export interface SelectionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_lifecycle_policy_document#count_number TfDataLifecyclePolicyDocument#count_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_lifecycle_policy_document#count_number DataTfLifecyclePolicyDocument#count_number}
   */
   readonly countNumber: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_lifecycle_policy_document#count_type TfDataLifecyclePolicyDocument#count_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_lifecycle_policy_document#count_type DataTfLifecyclePolicyDocument#count_type}
   */
   readonly countType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_lifecycle_policy_document#count_unit TfDataLifecyclePolicyDocument#count_unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_lifecycle_policy_document#count_unit DataTfLifecyclePolicyDocument#count_unit}
   */
   readonly countUnit?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_lifecycle_policy_document#storage_class TfDataLifecyclePolicyDocument#storage_class}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_lifecycle_policy_document#storage_class DataTfLifecyclePolicyDocument#storage_class}
   */
   readonly storageClass?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_lifecycle_policy_document#tag_pattern_list TfDataLifecyclePolicyDocument#tag_pattern_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_lifecycle_policy_document#tag_pattern_list DataTfLifecyclePolicyDocument#tag_pattern_list}
   */
   readonly tagPatternList?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_lifecycle_policy_document#tag_prefix_list TfDataLifecyclePolicyDocument#tag_prefix_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_lifecycle_policy_document#tag_prefix_list DataTfLifecyclePolicyDocument#tag_prefix_list}
   */
   readonly tagPrefixList?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_lifecycle_policy_document#tag_status TfDataLifecyclePolicyDocument#tag_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_lifecycle_policy_document#tag_status DataTfLifecyclePolicyDocument#tag_status}
   */
   readonly tagStatus: string;
 }
@@ -623,23 +623,23 @@ export class SelectionPropertyList extends cdktn.ComplexList {
 }
 export interface RuleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_lifecycle_policy_document#description TfDataLifecyclePolicyDocument#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_lifecycle_policy_document#description DataTfLifecyclePolicyDocument#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_lifecycle_policy_document#priority TfDataLifecyclePolicyDocument#priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_lifecycle_policy_document#priority DataTfLifecyclePolicyDocument#priority}
   */
   readonly priority: number;
   /**
   * action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_lifecycle_policy_document#action TfDataLifecyclePolicyDocument#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_lifecycle_policy_document#action DataTfLifecyclePolicyDocument#action}
   */
   readonly action?: ActionProperty[] | cdktn.IResolvable;
   /**
   * selection block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_lifecycle_policy_document#selection TfDataLifecyclePolicyDocument#selection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_lifecycle_policy_document#selection DataTfLifecyclePolicyDocument#selection}
   */
   readonly selection?: SelectionProperty[] | cdktn.IResolvable;
 }

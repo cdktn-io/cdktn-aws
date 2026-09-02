@@ -5,16 +5,16 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataCachePolicyConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfCachePolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudfront_cache_policy#id TfDataCachePolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudfront_cache_policy#id DataTfCachePolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudfront_cache_policy#name TfDataCachePolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudfront_cache_policy#name DataTfCachePolicy#name}
   */
   readonly name?: string;
 }
@@ -22,7 +22,7 @@ export interface TfDataCachePolicyConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudfront_cache_policy aws_cloudfront_cache_policy}
 */
-export class TfDataCachePolicy extends cdktn.TerraformDataSource {
+export class DataTfCachePolicy extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -33,11 +33,11 @@ export class TfDataCachePolicy extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataCachePolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfCachePolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataCachePolicy to import
-  * @param importFromId The id of the existing TfDataCachePolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudfront_cache_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataCachePolicy to import is found
+  * @param importToId The construct id used in the generated config for the DataTfCachePolicy to import
+  * @param importFromId The id of the existing DataTfCachePolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudfront_cache_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfCachePolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudfront_cache_policy", importId: importFromId, provider });
@@ -52,9 +52,9 @@ export class TfDataCachePolicy extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataCachePolicyConfig = {}
+  * @param options DataTfCachePolicyConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataCachePolicyConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfCachePolicyConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudfront_cache_policy',
       terraformGeneratorMetadata: {
@@ -141,7 +141,7 @@ export class TfDataCachePolicy extends cdktn.TerraformDataSource {
   }
 
   // parameters_in_cache_key_and_forwarded_to_origin - computed: true, optional: false, required: false
-  private _parametersInCacheKeyAndForwardedToOrigin = new TfDataCachePolicy.ParametersInCacheKeyAndForwardedToOriginPropertyList(this, "parameters_in_cache_key_and_forwarded_to_origin", false);
+  private _parametersInCacheKeyAndForwardedToOrigin = new DataTfCachePolicy.ParametersInCacheKeyAndForwardedToOriginPropertyList(this, "parameters_in_cache_key_and_forwarded_to_origin", false);
   public get parametersInCacheKeyAndForwardedToOrigin() {
     return this._parametersInCacheKeyAndForwardedToOrigin;
   }
@@ -178,7 +178,7 @@ export class TfDataCachePolicy extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataCachePolicyCookiesPropertyToTerraform(struct?: TfDataCachePolicy.CookiesProperty): any {
+export function dataTfCachePolicyCookiesPropertyToTerraform(struct?: DataTfCachePolicy.CookiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -188,7 +188,7 @@ export function tfDataCachePolicyCookiesPropertyToTerraform(struct?: TfDataCache
 }
 
 
-export function tfDataCachePolicyCookiesPropertyToHclTerraform(struct?: TfDataCachePolicy.CookiesProperty): any {
+export function dataTfCachePolicyCookiesPropertyToHclTerraform(struct?: DataTfCachePolicy.CookiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -199,7 +199,7 @@ export function tfDataCachePolicyCookiesPropertyToHclTerraform(struct?: TfDataCa
 }
 
 
-export function tfDataCachePolicyCookiesConfigPropertyToTerraform(struct?: TfDataCachePolicy.CookiesConfigProperty): any {
+export function dataTfCachePolicyCookiesConfigPropertyToTerraform(struct?: DataTfCachePolicy.CookiesConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -209,7 +209,7 @@ export function tfDataCachePolicyCookiesConfigPropertyToTerraform(struct?: TfDat
 }
 
 
-export function tfDataCachePolicyCookiesConfigPropertyToHclTerraform(struct?: TfDataCachePolicy.CookiesConfigProperty): any {
+export function dataTfCachePolicyCookiesConfigPropertyToHclTerraform(struct?: DataTfCachePolicy.CookiesConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -220,7 +220,7 @@ export function tfDataCachePolicyCookiesConfigPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfDataCachePolicyHeadersPropertyToTerraform(struct?: TfDataCachePolicy.HeadersProperty): any {
+export function dataTfCachePolicyHeadersPropertyToTerraform(struct?: DataTfCachePolicy.HeadersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -230,7 +230,7 @@ export function tfDataCachePolicyHeadersPropertyToTerraform(struct?: TfDataCache
 }
 
 
-export function tfDataCachePolicyHeadersPropertyToHclTerraform(struct?: TfDataCachePolicy.HeadersProperty): any {
+export function dataTfCachePolicyHeadersPropertyToHclTerraform(struct?: DataTfCachePolicy.HeadersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -241,7 +241,7 @@ export function tfDataCachePolicyHeadersPropertyToHclTerraform(struct?: TfDataCa
 }
 
 
-export function tfDataCachePolicyHeadersConfigPropertyToTerraform(struct?: TfDataCachePolicy.HeadersConfigProperty): any {
+export function dataTfCachePolicyHeadersConfigPropertyToTerraform(struct?: DataTfCachePolicy.HeadersConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -251,7 +251,7 @@ export function tfDataCachePolicyHeadersConfigPropertyToTerraform(struct?: TfDat
 }
 
 
-export function tfDataCachePolicyHeadersConfigPropertyToHclTerraform(struct?: TfDataCachePolicy.HeadersConfigProperty): any {
+export function dataTfCachePolicyHeadersConfigPropertyToHclTerraform(struct?: DataTfCachePolicy.HeadersConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -262,7 +262,7 @@ export function tfDataCachePolicyHeadersConfigPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfDataCachePolicyQueryStringsPropertyToTerraform(struct?: TfDataCachePolicy.QueryStringsProperty): any {
+export function dataTfCachePolicyQueryStringsPropertyToTerraform(struct?: DataTfCachePolicy.QueryStringsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -272,7 +272,7 @@ export function tfDataCachePolicyQueryStringsPropertyToTerraform(struct?: TfData
 }
 
 
-export function tfDataCachePolicyQueryStringsPropertyToHclTerraform(struct?: TfDataCachePolicy.QueryStringsProperty): any {
+export function dataTfCachePolicyQueryStringsPropertyToHclTerraform(struct?: DataTfCachePolicy.QueryStringsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -283,7 +283,7 @@ export function tfDataCachePolicyQueryStringsPropertyToHclTerraform(struct?: TfD
 }
 
 
-export function tfDataCachePolicyQueryStringsConfigPropertyToTerraform(struct?: TfDataCachePolicy.QueryStringsConfigProperty): any {
+export function dataTfCachePolicyQueryStringsConfigPropertyToTerraform(struct?: DataTfCachePolicy.QueryStringsConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -293,7 +293,7 @@ export function tfDataCachePolicyQueryStringsConfigPropertyToTerraform(struct?: 
 }
 
 
-export function tfDataCachePolicyQueryStringsConfigPropertyToHclTerraform(struct?: TfDataCachePolicy.QueryStringsConfigProperty): any {
+export function dataTfCachePolicyQueryStringsConfigPropertyToHclTerraform(struct?: DataTfCachePolicy.QueryStringsConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -304,7 +304,7 @@ export function tfDataCachePolicyQueryStringsConfigPropertyToHclTerraform(struct
 }
 
 
-export function tfDataCachePolicyParametersInCacheKeyAndForwardedToOriginPropertyToTerraform(struct?: TfDataCachePolicy.ParametersInCacheKeyAndForwardedToOriginProperty): any {
+export function dataTfCachePolicyParametersInCacheKeyAndForwardedToOriginPropertyToTerraform(struct?: DataTfCachePolicy.ParametersInCacheKeyAndForwardedToOriginProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -314,7 +314,7 @@ export function tfDataCachePolicyParametersInCacheKeyAndForwardedToOriginPropert
 }
 
 
-export function tfDataCachePolicyParametersInCacheKeyAndForwardedToOriginPropertyToHclTerraform(struct?: TfDataCachePolicy.ParametersInCacheKeyAndForwardedToOriginProperty): any {
+export function dataTfCachePolicyParametersInCacheKeyAndForwardedToOriginPropertyToHclTerraform(struct?: DataTfCachePolicy.ParametersInCacheKeyAndForwardedToOriginProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -325,7 +325,7 @@ export function tfDataCachePolicyParametersInCacheKeyAndForwardedToOriginPropert
 }
 
 
-export namespace TfDataCachePolicy {
+export namespace DataTfCachePolicy {
 export interface CookiesProperty {
 }
 export class CookiesPropertyOutputReference extends cdktn.ComplexObject {

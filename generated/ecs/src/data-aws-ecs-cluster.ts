@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataClusterConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfClusterConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_cluster#cluster_name TfDataCluster#cluster_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_cluster#cluster_name DataTfCluster#cluster_name}
   */
   readonly clusterName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_cluster#id TfDataCluster#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_cluster#id DataTfCluster#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,11 +20,11 @@ export interface TfDataClusterConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_cluster#region TfDataCluster#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_cluster#region DataTfCluster#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_cluster#tags TfDataCluster#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_cluster#tags DataTfCluster#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -32,7 +32,7 @@ export interface TfDataClusterConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_cluster aws_ecs_cluster}
 */
-export class TfDataCluster extends cdktn.TerraformDataSource {
+export class DataTfCluster extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class TfDataCluster extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataCluster resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfCluster resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataCluster to import
-  * @param importFromId The id of the existing TfDataCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_cluster#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataCluster to import is found
+  * @param importToId The construct id used in the generated config for the DataTfCluster to import
+  * @param importFromId The id of the existing DataTfCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_cluster#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfCluster to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ecs_cluster", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class TfDataCluster extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataClusterConfig
+  * @param options DataTfClusterConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataClusterConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfClusterConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ecs_cluster',
       terraformGeneratorMetadata: {
@@ -156,13 +156,13 @@ export class TfDataCluster extends cdktn.TerraformDataSource {
   }
 
   // service_connect_defaults - computed: true, optional: false, required: false
-  private _serviceConnectDefaults = new TfDataCluster.ServiceConnectDefaultsPropertyList(this, "service_connect_defaults", false);
+  private _serviceConnectDefaults = new DataTfCluster.ServiceConnectDefaultsPropertyList(this, "service_connect_defaults", false);
   public get serviceConnectDefaults() {
     return this._serviceConnectDefaults;
   }
 
   // setting - computed: true, optional: false, required: false
-  private _setting = new TfDataCluster.SettingPropertyList(this, "setting", true);
+  private _setting = new DataTfCluster.SettingPropertyList(this, "setting", true);
   public get setting() {
     return this._setting;
   }
@@ -234,7 +234,7 @@ export class TfDataCluster extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataClusterServiceConnectDefaultsPropertyToTerraform(struct?: TfDataCluster.ServiceConnectDefaultsProperty): any {
+export function dataTfClusterServiceConnectDefaultsPropertyToTerraform(struct?: DataTfCluster.ServiceConnectDefaultsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -244,7 +244,7 @@ export function tfDataClusterServiceConnectDefaultsPropertyToTerraform(struct?: 
 }
 
 
-export function tfDataClusterServiceConnectDefaultsPropertyToHclTerraform(struct?: TfDataCluster.ServiceConnectDefaultsProperty): any {
+export function dataTfClusterServiceConnectDefaultsPropertyToHclTerraform(struct?: DataTfCluster.ServiceConnectDefaultsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -255,7 +255,7 @@ export function tfDataClusterServiceConnectDefaultsPropertyToHclTerraform(struct
 }
 
 
-export function tfDataClusterSettingPropertyToTerraform(struct?: TfDataCluster.SettingProperty): any {
+export function dataTfClusterSettingPropertyToTerraform(struct?: DataTfCluster.SettingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -265,7 +265,7 @@ export function tfDataClusterSettingPropertyToTerraform(struct?: TfDataCluster.S
 }
 
 
-export function tfDataClusterSettingPropertyToHclTerraform(struct?: TfDataCluster.SettingProperty): any {
+export function dataTfClusterSettingPropertyToHclTerraform(struct?: DataTfCluster.SettingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -276,7 +276,7 @@ export function tfDataClusterSettingPropertyToHclTerraform(struct?: TfDataCluste
 }
 
 
-export namespace TfDataCluster {
+export namespace DataTfCluster {
 export interface ServiceConnectDefaultsProperty {
 }
 export class ServiceConnectDefaultsPropertyOutputReference extends cdktn.ComplexObject {

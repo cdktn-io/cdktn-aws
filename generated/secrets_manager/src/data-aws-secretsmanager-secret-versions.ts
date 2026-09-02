@@ -5,19 +5,19 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataSecretVersionsConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfSecretVersionsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_secret_versions#include_deprecated TfDataSecretVersions#include_deprecated}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_secret_versions#include_deprecated DataTfSecretVersions#include_deprecated}
   */
   readonly includeDeprecated?: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_secret_versions#region TfDataSecretVersions#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_secret_versions#region DataTfSecretVersions#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_secret_versions#secret_id TfDataSecretVersions#secret_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_secret_versions#secret_id DataTfSecretVersions#secret_id}
   */
   readonly secretId: string;
 }
@@ -25,7 +25,7 @@ export interface TfDataSecretVersionsConfig extends cdktn.TerraformMetaArguments
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_secret_versions aws_secretsmanager_secret_versions}
 */
-export class TfDataSecretVersions extends cdktn.TerraformDataSource {
+export class DataTfSecretVersions extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -36,11 +36,11 @@ export class TfDataSecretVersions extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataSecretVersions resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfSecretVersions resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataSecretVersions to import
-  * @param importFromId The id of the existing TfDataSecretVersions that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_secret_versions#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataSecretVersions to import is found
+  * @param importToId The construct id used in the generated config for the DataTfSecretVersions to import
+  * @param importFromId The id of the existing DataTfSecretVersions that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_secret_versions#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfSecretVersions to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_secretsmanager_secret_versions", importId: importFromId, provider });
@@ -55,9 +55,9 @@ export class TfDataSecretVersions extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataSecretVersionsConfig
+  * @param options DataTfSecretVersionsConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataSecretVersionsConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfSecretVersionsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_secretsmanager_secret_versions',
       terraformGeneratorMetadata: {
@@ -148,7 +148,7 @@ export class TfDataSecretVersions extends cdktn.TerraformDataSource {
   }
 
   // versions - computed: true, optional: false, required: false
-  private _versions = new TfDataSecretVersions.VersionsPropertyList(this, "versions", false);
+  private _versions = new DataTfSecretVersions.VersionsPropertyList(this, "versions", false);
   public get versions() {
     return this._versions;
   }
@@ -192,7 +192,7 @@ export class TfDataSecretVersions extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataSecretVersionsVersionsPropertyToTerraform(struct?: TfDataSecretVersions.VersionsProperty): any {
+export function dataTfSecretVersionsVersionsPropertyToTerraform(struct?: DataTfSecretVersions.VersionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -202,7 +202,7 @@ export function tfDataSecretVersionsVersionsPropertyToTerraform(struct?: TfDataS
 }
 
 
-export function tfDataSecretVersionsVersionsPropertyToHclTerraform(struct?: TfDataSecretVersions.VersionsProperty): any {
+export function dataTfSecretVersionsVersionsPropertyToHclTerraform(struct?: DataTfSecretVersions.VersionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -213,7 +213,7 @@ export function tfDataSecretVersionsVersionsPropertyToHclTerraform(struct?: TfDa
 }
 
 
-export namespace TfDataSecretVersions {
+export namespace DataTfSecretVersions {
 export interface VersionsProperty {
 }
 export class VersionsPropertyOutputReference extends cdktn.ComplexObject {

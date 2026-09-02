@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataResponsePlanConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfResponsePlanConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssmincidents_response_plan#arn TfDataResponsePlan#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssmincidents_response_plan#arn DataTfResponsePlan#arn}
   */
   readonly arn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssmincidents_response_plan#id TfDataResponsePlan#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssmincidents_response_plan#id DataTfResponsePlan#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,11 +20,11 @@ export interface TfDataResponsePlanConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssmincidents_response_plan#region TfDataResponsePlan#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssmincidents_response_plan#region DataTfResponsePlan#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssmincidents_response_plan#tags TfDataResponsePlan#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssmincidents_response_plan#tags DataTfResponsePlan#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -32,7 +32,7 @@ export interface TfDataResponsePlanConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssmincidents_response_plan aws_ssmincidents_response_plan}
 */
-export class TfDataResponsePlan extends cdktn.TerraformDataSource {
+export class DataTfResponsePlan extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class TfDataResponsePlan extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataResponsePlan resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfResponsePlan resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataResponsePlan to import
-  * @param importFromId The id of the existing TfDataResponsePlan that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssmincidents_response_plan#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataResponsePlan to import is found
+  * @param importToId The construct id used in the generated config for the DataTfResponsePlan to import
+  * @param importFromId The id of the existing DataTfResponsePlan that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssmincidents_response_plan#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfResponsePlan to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ssmincidents_response_plan", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class TfDataResponsePlan extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataResponsePlanConfig
+  * @param options DataTfResponsePlanConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataResponsePlanConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfResponsePlanConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ssmincidents_response_plan',
       terraformGeneratorMetadata: {
@@ -91,7 +91,7 @@ export class TfDataResponsePlan extends cdktn.TerraformDataSource {
   // ==========
 
   // action - computed: true, optional: false, required: false
-  private _action = new TfDataResponsePlan.ActionPropertyList(this, "action", false);
+  private _action = new DataTfResponsePlan.ActionPropertyList(this, "action", false);
   public get action() {
     return this._action;
   }
@@ -141,13 +141,13 @@ export class TfDataResponsePlan extends cdktn.TerraformDataSource {
   }
 
   // incident_template - computed: true, optional: false, required: false
-  private _incidentTemplate = new TfDataResponsePlan.IncidentTemplatePropertyList(this, "incident_template", false);
+  private _incidentTemplate = new DataTfResponsePlan.IncidentTemplatePropertyList(this, "incident_template", false);
   public get incidentTemplate() {
     return this._incidentTemplate;
   }
 
   // integration - computed: true, optional: false, required: false
-  private _integration = new TfDataResponsePlan.IntegrationPropertyList(this, "integration", false);
+  private _integration = new DataTfResponsePlan.IntegrationPropertyList(this, "integration", false);
   public get integration() {
     return this._integration;
   }
@@ -235,7 +235,7 @@ export class TfDataResponsePlan extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataResponsePlanParameterPropertyToTerraform(struct?: TfDataResponsePlan.ParameterProperty): any {
+export function dataTfResponsePlanParameterPropertyToTerraform(struct?: DataTfResponsePlan.ParameterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -245,7 +245,7 @@ export function tfDataResponsePlanParameterPropertyToTerraform(struct?: TfDataRe
 }
 
 
-export function tfDataResponsePlanParameterPropertyToHclTerraform(struct?: TfDataResponsePlan.ParameterProperty): any {
+export function dataTfResponsePlanParameterPropertyToHclTerraform(struct?: DataTfResponsePlan.ParameterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -256,7 +256,7 @@ export function tfDataResponsePlanParameterPropertyToHclTerraform(struct?: TfDat
 }
 
 
-export function tfDataResponsePlanSsmAutomationPropertyToTerraform(struct?: TfDataResponsePlan.SsmAutomationProperty): any {
+export function dataTfResponsePlanSsmAutomationPropertyToTerraform(struct?: DataTfResponsePlan.SsmAutomationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -266,7 +266,7 @@ export function tfDataResponsePlanSsmAutomationPropertyToTerraform(struct?: TfDa
 }
 
 
-export function tfDataResponsePlanSsmAutomationPropertyToHclTerraform(struct?: TfDataResponsePlan.SsmAutomationProperty): any {
+export function dataTfResponsePlanSsmAutomationPropertyToHclTerraform(struct?: DataTfResponsePlan.SsmAutomationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -277,7 +277,7 @@ export function tfDataResponsePlanSsmAutomationPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfDataResponsePlanActionPropertyToTerraform(struct?: TfDataResponsePlan.ActionProperty): any {
+export function dataTfResponsePlanActionPropertyToTerraform(struct?: DataTfResponsePlan.ActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -287,7 +287,7 @@ export function tfDataResponsePlanActionPropertyToTerraform(struct?: TfDataRespo
 }
 
 
-export function tfDataResponsePlanActionPropertyToHclTerraform(struct?: TfDataResponsePlan.ActionProperty): any {
+export function dataTfResponsePlanActionPropertyToHclTerraform(struct?: DataTfResponsePlan.ActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -298,7 +298,7 @@ export function tfDataResponsePlanActionPropertyToHclTerraform(struct?: TfDataRe
 }
 
 
-export function tfDataResponsePlanNotificationTargetPropertyToTerraform(struct?: TfDataResponsePlan.NotificationTargetProperty): any {
+export function dataTfResponsePlanNotificationTargetPropertyToTerraform(struct?: DataTfResponsePlan.NotificationTargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -308,7 +308,7 @@ export function tfDataResponsePlanNotificationTargetPropertyToTerraform(struct?:
 }
 
 
-export function tfDataResponsePlanNotificationTargetPropertyToHclTerraform(struct?: TfDataResponsePlan.NotificationTargetProperty): any {
+export function dataTfResponsePlanNotificationTargetPropertyToHclTerraform(struct?: DataTfResponsePlan.NotificationTargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -319,7 +319,7 @@ export function tfDataResponsePlanNotificationTargetPropertyToHclTerraform(struc
 }
 
 
-export function tfDataResponsePlanIncidentTemplatePropertyToTerraform(struct?: TfDataResponsePlan.IncidentTemplateProperty): any {
+export function dataTfResponsePlanIncidentTemplatePropertyToTerraform(struct?: DataTfResponsePlan.IncidentTemplateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -329,7 +329,7 @@ export function tfDataResponsePlanIncidentTemplatePropertyToTerraform(struct?: T
 }
 
 
-export function tfDataResponsePlanIncidentTemplatePropertyToHclTerraform(struct?: TfDataResponsePlan.IncidentTemplateProperty): any {
+export function dataTfResponsePlanIncidentTemplatePropertyToHclTerraform(struct?: DataTfResponsePlan.IncidentTemplateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -340,7 +340,7 @@ export function tfDataResponsePlanIncidentTemplatePropertyToHclTerraform(struct?
 }
 
 
-export function tfDataResponsePlanPagerdutyPropertyToTerraform(struct?: TfDataResponsePlan.PagerdutyProperty): any {
+export function dataTfResponsePlanPagerdutyPropertyToTerraform(struct?: DataTfResponsePlan.PagerdutyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -350,7 +350,7 @@ export function tfDataResponsePlanPagerdutyPropertyToTerraform(struct?: TfDataRe
 }
 
 
-export function tfDataResponsePlanPagerdutyPropertyToHclTerraform(struct?: TfDataResponsePlan.PagerdutyProperty): any {
+export function dataTfResponsePlanPagerdutyPropertyToHclTerraform(struct?: DataTfResponsePlan.PagerdutyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -361,7 +361,7 @@ export function tfDataResponsePlanPagerdutyPropertyToHclTerraform(struct?: TfDat
 }
 
 
-export function tfDataResponsePlanIntegrationPropertyToTerraform(struct?: TfDataResponsePlan.IntegrationProperty): any {
+export function dataTfResponsePlanIntegrationPropertyToTerraform(struct?: DataTfResponsePlan.IntegrationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -371,7 +371,7 @@ export function tfDataResponsePlanIntegrationPropertyToTerraform(struct?: TfData
 }
 
 
-export function tfDataResponsePlanIntegrationPropertyToHclTerraform(struct?: TfDataResponsePlan.IntegrationProperty): any {
+export function dataTfResponsePlanIntegrationPropertyToHclTerraform(struct?: DataTfResponsePlan.IntegrationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -382,7 +382,7 @@ export function tfDataResponsePlanIntegrationPropertyToHclTerraform(struct?: TfD
 }
 
 
-export namespace TfDataResponsePlan {
+export namespace DataTfResponsePlan {
 export interface ParameterProperty {
 }
 export class ParameterPropertyOutputReference extends cdktn.ComplexObject {

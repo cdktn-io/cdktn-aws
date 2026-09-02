@@ -5,54 +5,54 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataKeyPairConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfKeyPairConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/key_pair#id TfDataKeyPair#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/key_pair#id DataTfKeyPair#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/key_pair#include_public_key TfDataKeyPair#include_public_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/key_pair#include_public_key DataTfKeyPair#include_public_key}
   */
   readonly includePublicKey?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/key_pair#key_name TfDataKeyPair#key_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/key_pair#key_name DataTfKeyPair#key_name}
   */
   readonly keyName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/key_pair#key_pair_id TfDataKeyPair#key_pair_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/key_pair#key_pair_id DataTfKeyPair#key_pair_id}
   */
   readonly keyPairId?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/key_pair#region TfDataKeyPair#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/key_pair#region DataTfKeyPair#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/key_pair#tags TfDataKeyPair#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/key_pair#tags DataTfKeyPair#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/key_pair#filter TfDataKeyPair#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/key_pair#filter DataTfKeyPair#filter}
   */
-  readonly filter?: TfDataKeyPair.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataTfKeyPair.FilterProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/key_pair#timeouts TfDataKeyPair#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/key_pair#timeouts DataTfKeyPair#timeouts}
   */
-  readonly timeouts?: TfDataKeyPair.TimeoutsProperty;
+  readonly timeouts?: DataTfKeyPair.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/key_pair aws_key_pair}
 */
-export class TfDataKeyPair extends cdktn.TerraformDataSource {
+export class DataTfKeyPair extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -63,11 +63,11 @@ export class TfDataKeyPair extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataKeyPair resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfKeyPair resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataKeyPair to import
-  * @param importFromId The id of the existing TfDataKeyPair that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/key_pair#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataKeyPair to import is found
+  * @param importToId The construct id used in the generated config for the DataTfKeyPair to import
+  * @param importFromId The id of the existing DataTfKeyPair that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/key_pair#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfKeyPair to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_key_pair", importId: importFromId, provider });
@@ -82,9 +82,9 @@ export class TfDataKeyPair extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataKeyPairConfig = {}
+  * @param options DataTfKeyPairConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataKeyPairConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfKeyPairConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_key_pair',
       terraformGeneratorMetadata: {
@@ -236,11 +236,11 @@ export class TfDataKeyPair extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new TfDataKeyPair.FilterPropertyList(this, "filter", true);
+  private _filter = new DataTfKeyPair.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: TfDataKeyPair.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataTfKeyPair.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -252,11 +252,11 @@ export class TfDataKeyPair extends cdktn.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfDataKeyPair.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new DataTfKeyPair.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfDataKeyPair.TimeoutsProperty) {
+  public putTimeouts(value: DataTfKeyPair.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -279,8 +279,8 @@ export class TfDataKeyPair extends cdktn.TerraformDataSource {
       key_pair_id: cdktn.stringToTerraform(this._keyPairId),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      filter: cdktn.listMapper(tfDataKeyPairFilterPropertyToTerraform, true)(this._filter.internalValue),
-      timeouts: tfDataKeyPairTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      filter: cdktn.listMapper(dataTfKeyPairFilterPropertyToTerraform, true)(this._filter.internalValue),
+      timeouts: dataTfKeyPairTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -323,16 +323,16 @@ export class TfDataKeyPair extends cdktn.TerraformDataSource {
         storageClassType: "stringMap",
       },
       filter: {
-        value: cdktn.listMapperHcl(tfDataKeyPairFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataTfKeyPairFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfDataKeyPair.FilterPropertyList",
+        storageClassType: "DataTfKeyPair.FilterPropertyList",
       },
       timeouts: {
-        value: tfDataKeyPairTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: dataTfKeyPairTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfDataKeyPair.TimeoutsProperty",
+        storageClassType: "DataTfKeyPair.TimeoutsProperty",
       },
     };
 
@@ -341,7 +341,7 @@ export class TfDataKeyPair extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataKeyPairFilterPropertyToTerraform(struct?: TfDataKeyPair.FilterProperty | cdktn.IResolvable): any {
+export function dataTfKeyPairFilterPropertyToTerraform(struct?: DataTfKeyPair.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -353,7 +353,7 @@ export function tfDataKeyPairFilterPropertyToTerraform(struct?: TfDataKeyPair.Fi
 }
 
 
-export function tfDataKeyPairFilterPropertyToHclTerraform(struct?: TfDataKeyPair.FilterProperty | cdktn.IResolvable): any {
+export function dataTfKeyPairFilterPropertyToHclTerraform(struct?: DataTfKeyPair.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -378,7 +378,7 @@ export function tfDataKeyPairFilterPropertyToHclTerraform(struct?: TfDataKeyPair
 }
 
 
-export function tfDataKeyPairTimeoutsPropertyToTerraform(struct?: TfDataKeyPair.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfKeyPairTimeoutsPropertyToTerraform(struct?: DataTfKeyPair.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -389,7 +389,7 @@ export function tfDataKeyPairTimeoutsPropertyToTerraform(struct?: TfDataKeyPair.
 }
 
 
-export function tfDataKeyPairTimeoutsPropertyToHclTerraform(struct?: TfDataKeyPair.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfKeyPairTimeoutsPropertyToHclTerraform(struct?: DataTfKeyPair.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -408,14 +408,14 @@ export function tfDataKeyPairTimeoutsPropertyToHclTerraform(struct?: TfDataKeyPa
 }
 
 
-export namespace TfDataKeyPair {
+export namespace DataTfKeyPair {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/key_pair#name TfDataKeyPair#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/key_pair#name DataTfKeyPair#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/key_pair#values TfDataKeyPair#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/key_pair#values DataTfKeyPair#values}
   */
   readonly values: string[];
 }
@@ -517,7 +517,7 @@ export class FilterPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/key_pair#read TfDataKeyPair#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/key_pair#read DataTfKeyPair#read}
   */
   readonly read?: string;
 }

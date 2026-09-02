@@ -5,30 +5,30 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataVirtualGatewayConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfVirtualGatewayConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_virtual_gateway#id TfDataVirtualGateway#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_virtual_gateway#id DataTfVirtualGateway#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_virtual_gateway#mesh_name TfDataVirtualGateway#mesh_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_virtual_gateway#mesh_name DataTfVirtualGateway#mesh_name}
   */
   readonly meshName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_virtual_gateway#name TfDataVirtualGateway#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_virtual_gateway#name DataTfVirtualGateway#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_virtual_gateway#region TfDataVirtualGateway#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_virtual_gateway#region DataTfVirtualGateway#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_virtual_gateway#tags TfDataVirtualGateway#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_virtual_gateway#tags DataTfVirtualGateway#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -36,7 +36,7 @@ export interface TfDataVirtualGatewayConfig extends cdktn.TerraformMetaArguments
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_virtual_gateway aws_appmesh_virtual_gateway}
 */
-export class TfDataVirtualGateway extends cdktn.TerraformDataSource {
+export class DataTfVirtualGateway extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class TfDataVirtualGateway extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataVirtualGateway resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfVirtualGateway resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataVirtualGateway to import
-  * @param importFromId The id of the existing TfDataVirtualGateway that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_virtual_gateway#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataVirtualGateway to import is found
+  * @param importToId The construct id used in the generated config for the DataTfVirtualGateway to import
+  * @param importFromId The id of the existing DataTfVirtualGateway that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_virtual_gateway#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfVirtualGateway to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appmesh_virtual_gateway", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class TfDataVirtualGateway extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataVirtualGatewayConfig
+  * @param options DataTfVirtualGatewayConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataVirtualGatewayConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfVirtualGatewayConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_appmesh_virtual_gateway',
       terraformGeneratorMetadata: {
@@ -179,7 +179,7 @@ export class TfDataVirtualGateway extends cdktn.TerraformDataSource {
   }
 
   // spec - computed: true, optional: false, required: false
-  private _spec = new TfDataVirtualGateway.SpecPropertyList(this, "spec", false);
+  private _spec = new DataTfVirtualGateway.SpecPropertyList(this, "spec", false);
   public get spec() {
     return this._spec;
   }
@@ -253,7 +253,7 @@ export class TfDataVirtualGateway extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFilePropertyToTerraform(struct?: TfDataVirtualGateway.SpecBackendDefaultsClientPolicyTlsCertificateFileProperty): any {
+export function dataTfVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFilePropertyToTerraform(struct?: DataTfVirtualGateway.SpecBackendDefaultsClientPolicyTlsCertificateFileProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -263,7 +263,7 @@ export function tfDataVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificat
 }
 
 
-export function tfDataVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFilePropertyToHclTerraform(struct?: TfDataVirtualGateway.SpecBackendDefaultsClientPolicyTlsCertificateFileProperty): any {
+export function dataTfVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFilePropertyToHclTerraform(struct?: DataTfVirtualGateway.SpecBackendDefaultsClientPolicyTlsCertificateFileProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -274,7 +274,7 @@ export function tfDataVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificat
 }
 
 
-export function tfDataVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsPropertyToTerraform(struct?: TfDataVirtualGateway.SpecBackendDefaultsClientPolicyTlsCertificateSdsProperty): any {
+export function dataTfVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsPropertyToTerraform(struct?: DataTfVirtualGateway.SpecBackendDefaultsClientPolicyTlsCertificateSdsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -284,7 +284,7 @@ export function tfDataVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificat
 }
 
 
-export function tfDataVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsPropertyToHclTerraform(struct?: TfDataVirtualGateway.SpecBackendDefaultsClientPolicyTlsCertificateSdsProperty): any {
+export function dataTfVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsPropertyToHclTerraform(struct?: DataTfVirtualGateway.SpecBackendDefaultsClientPolicyTlsCertificateSdsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -295,7 +295,7 @@ export function tfDataVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificat
 }
 
 
-export function tfDataVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificatePropertyToTerraform(struct?: TfDataVirtualGateway.SpecBackendDefaultsClientPolicyTlsCertificateProperty): any {
+export function dataTfVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificatePropertyToTerraform(struct?: DataTfVirtualGateway.SpecBackendDefaultsClientPolicyTlsCertificateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -305,7 +305,7 @@ export function tfDataVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificat
 }
 
 
-export function tfDataVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificatePropertyToHclTerraform(struct?: TfDataVirtualGateway.SpecBackendDefaultsClientPolicyTlsCertificateProperty): any {
+export function dataTfVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificatePropertyToHclTerraform(struct?: DataTfVirtualGateway.SpecBackendDefaultsClientPolicyTlsCertificateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -316,7 +316,7 @@ export function tfDataVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificat
 }
 
 
-export function tfDataVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchPropertyToTerraform(struct?: TfDataVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchProperty): any {
+export function dataTfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchPropertyToTerraform(struct?: DataTfVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -326,7 +326,7 @@ export function tfDataVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidation
 }
 
 
-export function tfDataVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchPropertyToHclTerraform(struct?: TfDataVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchProperty): any {
+export function dataTfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchPropertyToHclTerraform(struct?: DataTfVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -337,7 +337,7 @@ export function tfDataVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidation
 }
 
 
-export function tfDataVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesPropertyToTerraform(struct?: TfDataVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesProperty): any {
+export function dataTfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesPropertyToTerraform(struct?: DataTfVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -347,7 +347,7 @@ export function tfDataVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidation
 }
 
 
-export function tfDataVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesPropertyToHclTerraform(struct?: TfDataVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesProperty): any {
+export function dataTfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesPropertyToHclTerraform(struct?: DataTfVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -358,7 +358,7 @@ export function tfDataVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidation
 }
 
 
-export function tfDataVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcmPropertyToTerraform(struct?: TfDataVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustAcmProperty): any {
+export function dataTfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcmPropertyToTerraform(struct?: DataTfVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustAcmProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -368,7 +368,7 @@ export function tfDataVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidation
 }
 
 
-export function tfDataVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcmPropertyToHclTerraform(struct?: TfDataVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustAcmProperty): any {
+export function dataTfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcmPropertyToHclTerraform(struct?: DataTfVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustAcmProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -379,7 +379,7 @@ export function tfDataVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidation
 }
 
 
-export function tfDataVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFilePropertyToTerraform(struct?: TfDataVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustFileProperty): any {
+export function dataTfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFilePropertyToTerraform(struct?: DataTfVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustFileProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -389,7 +389,7 @@ export function tfDataVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidation
 }
 
 
-export function tfDataVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFilePropertyToHclTerraform(struct?: TfDataVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustFileProperty): any {
+export function dataTfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFilePropertyToHclTerraform(struct?: DataTfVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustFileProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -400,7 +400,7 @@ export function tfDataVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidation
 }
 
 
-export function tfDataVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustSdsPropertyToTerraform(struct?: TfDataVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustSdsProperty): any {
+export function dataTfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustSdsPropertyToTerraform(struct?: DataTfVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustSdsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -410,7 +410,7 @@ export function tfDataVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidation
 }
 
 
-export function tfDataVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustSdsPropertyToHclTerraform(struct?: TfDataVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustSdsProperty): any {
+export function dataTfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustSdsPropertyToHclTerraform(struct?: DataTfVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustSdsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -421,7 +421,7 @@ export function tfDataVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidation
 }
 
 
-export function tfDataVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustPropertyToTerraform(struct?: TfDataVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustProperty): any {
+export function dataTfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustPropertyToTerraform(struct?: DataTfVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -431,7 +431,7 @@ export function tfDataVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidation
 }
 
 
-export function tfDataVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustPropertyToHclTerraform(struct?: TfDataVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustProperty): any {
+export function dataTfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustPropertyToHclTerraform(struct?: DataTfVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -442,7 +442,7 @@ export function tfDataVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidation
 }
 
 
-export function tfDataVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationPropertyToTerraform(struct?: TfDataVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationProperty): any {
+export function dataTfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationPropertyToTerraform(struct?: DataTfVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -452,7 +452,7 @@ export function tfDataVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidation
 }
 
 
-export function tfDataVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationPropertyToHclTerraform(struct?: TfDataVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationProperty): any {
+export function dataTfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationPropertyToHclTerraform(struct?: DataTfVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -463,7 +463,7 @@ export function tfDataVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidation
 }
 
 
-export function tfDataVirtualGatewaySpecBackendDefaultsClientPolicyTlsPropertyToTerraform(struct?: TfDataVirtualGateway.SpecBackendDefaultsClientPolicyTlsProperty): any {
+export function dataTfVirtualGatewaySpecBackendDefaultsClientPolicyTlsPropertyToTerraform(struct?: DataTfVirtualGateway.SpecBackendDefaultsClientPolicyTlsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -473,7 +473,7 @@ export function tfDataVirtualGatewaySpecBackendDefaultsClientPolicyTlsPropertyTo
 }
 
 
-export function tfDataVirtualGatewaySpecBackendDefaultsClientPolicyTlsPropertyToHclTerraform(struct?: TfDataVirtualGateway.SpecBackendDefaultsClientPolicyTlsProperty): any {
+export function dataTfVirtualGatewaySpecBackendDefaultsClientPolicyTlsPropertyToHclTerraform(struct?: DataTfVirtualGateway.SpecBackendDefaultsClientPolicyTlsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -484,7 +484,7 @@ export function tfDataVirtualGatewaySpecBackendDefaultsClientPolicyTlsPropertyTo
 }
 
 
-export function tfDataVirtualGatewayClientPolicyPropertyToTerraform(struct?: TfDataVirtualGateway.ClientPolicyProperty): any {
+export function dataTfVirtualGatewayClientPolicyPropertyToTerraform(struct?: DataTfVirtualGateway.ClientPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -494,7 +494,7 @@ export function tfDataVirtualGatewayClientPolicyPropertyToTerraform(struct?: TfD
 }
 
 
-export function tfDataVirtualGatewayClientPolicyPropertyToHclTerraform(struct?: TfDataVirtualGateway.ClientPolicyProperty): any {
+export function dataTfVirtualGatewayClientPolicyPropertyToHclTerraform(struct?: DataTfVirtualGateway.ClientPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -505,7 +505,7 @@ export function tfDataVirtualGatewayClientPolicyPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfDataVirtualGatewayBackendDefaultsPropertyToTerraform(struct?: TfDataVirtualGateway.BackendDefaultsProperty): any {
+export function dataTfVirtualGatewayBackendDefaultsPropertyToTerraform(struct?: DataTfVirtualGateway.BackendDefaultsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -515,7 +515,7 @@ export function tfDataVirtualGatewayBackendDefaultsPropertyToTerraform(struct?: 
 }
 
 
-export function tfDataVirtualGatewayBackendDefaultsPropertyToHclTerraform(struct?: TfDataVirtualGateway.BackendDefaultsProperty): any {
+export function dataTfVirtualGatewayBackendDefaultsPropertyToHclTerraform(struct?: DataTfVirtualGateway.BackendDefaultsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -526,7 +526,7 @@ export function tfDataVirtualGatewayBackendDefaultsPropertyToHclTerraform(struct
 }
 
 
-export function tfDataVirtualGatewayGrpcPropertyToTerraform(struct?: TfDataVirtualGateway.GrpcProperty): any {
+export function dataTfVirtualGatewayGrpcPropertyToTerraform(struct?: DataTfVirtualGateway.GrpcProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -536,7 +536,7 @@ export function tfDataVirtualGatewayGrpcPropertyToTerraform(struct?: TfDataVirtu
 }
 
 
-export function tfDataVirtualGatewayGrpcPropertyToHclTerraform(struct?: TfDataVirtualGateway.GrpcProperty): any {
+export function dataTfVirtualGatewayGrpcPropertyToHclTerraform(struct?: DataTfVirtualGateway.GrpcProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -547,7 +547,7 @@ export function tfDataVirtualGatewayGrpcPropertyToHclTerraform(struct?: TfDataVi
 }
 
 
-export function tfDataVirtualGatewayHttpPropertyToTerraform(struct?: TfDataVirtualGateway.HttpProperty): any {
+export function dataTfVirtualGatewayHttpPropertyToTerraform(struct?: DataTfVirtualGateway.HttpProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -557,7 +557,7 @@ export function tfDataVirtualGatewayHttpPropertyToTerraform(struct?: TfDataVirtu
 }
 
 
-export function tfDataVirtualGatewayHttpPropertyToHclTerraform(struct?: TfDataVirtualGateway.HttpProperty): any {
+export function dataTfVirtualGatewayHttpPropertyToHclTerraform(struct?: DataTfVirtualGateway.HttpProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -568,7 +568,7 @@ export function tfDataVirtualGatewayHttpPropertyToHclTerraform(struct?: TfDataVi
 }
 
 
-export function tfDataVirtualGatewayHttp2PropertyToTerraform(struct?: TfDataVirtualGateway.Http2Property): any {
+export function dataTfVirtualGatewayHttp2PropertyToTerraform(struct?: DataTfVirtualGateway.Http2Property): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -578,7 +578,7 @@ export function tfDataVirtualGatewayHttp2PropertyToTerraform(struct?: TfDataVirt
 }
 
 
-export function tfDataVirtualGatewayHttp2PropertyToHclTerraform(struct?: TfDataVirtualGateway.Http2Property): any {
+export function dataTfVirtualGatewayHttp2PropertyToHclTerraform(struct?: DataTfVirtualGateway.Http2Property): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -589,7 +589,7 @@ export function tfDataVirtualGatewayHttp2PropertyToHclTerraform(struct?: TfDataV
 }
 
 
-export function tfDataVirtualGatewayConnectionPoolPropertyToTerraform(struct?: TfDataVirtualGateway.ConnectionPoolProperty): any {
+export function dataTfVirtualGatewayConnectionPoolPropertyToTerraform(struct?: DataTfVirtualGateway.ConnectionPoolProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -599,7 +599,7 @@ export function tfDataVirtualGatewayConnectionPoolPropertyToTerraform(struct?: T
 }
 
 
-export function tfDataVirtualGatewayConnectionPoolPropertyToHclTerraform(struct?: TfDataVirtualGateway.ConnectionPoolProperty): any {
+export function dataTfVirtualGatewayConnectionPoolPropertyToHclTerraform(struct?: DataTfVirtualGateway.ConnectionPoolProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -610,7 +610,7 @@ export function tfDataVirtualGatewayConnectionPoolPropertyToHclTerraform(struct?
 }
 
 
-export function tfDataVirtualGatewayHealthCheckPropertyToTerraform(struct?: TfDataVirtualGateway.HealthCheckProperty): any {
+export function dataTfVirtualGatewayHealthCheckPropertyToTerraform(struct?: DataTfVirtualGateway.HealthCheckProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -620,7 +620,7 @@ export function tfDataVirtualGatewayHealthCheckPropertyToTerraform(struct?: TfDa
 }
 
 
-export function tfDataVirtualGatewayHealthCheckPropertyToHclTerraform(struct?: TfDataVirtualGateway.HealthCheckProperty): any {
+export function dataTfVirtualGatewayHealthCheckPropertyToHclTerraform(struct?: DataTfVirtualGateway.HealthCheckProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -631,7 +631,7 @@ export function tfDataVirtualGatewayHealthCheckPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfDataVirtualGatewayPortMappingPropertyToTerraform(struct?: TfDataVirtualGateway.PortMappingProperty): any {
+export function dataTfVirtualGatewayPortMappingPropertyToTerraform(struct?: DataTfVirtualGateway.PortMappingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -641,7 +641,7 @@ export function tfDataVirtualGatewayPortMappingPropertyToTerraform(struct?: TfDa
 }
 
 
-export function tfDataVirtualGatewayPortMappingPropertyToHclTerraform(struct?: TfDataVirtualGateway.PortMappingProperty): any {
+export function dataTfVirtualGatewayPortMappingPropertyToHclTerraform(struct?: DataTfVirtualGateway.PortMappingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -652,7 +652,7 @@ export function tfDataVirtualGatewayPortMappingPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfDataVirtualGatewaySpecListenerTlsCertificateAcmPropertyToTerraform(struct?: TfDataVirtualGateway.SpecListenerTlsCertificateAcmProperty): any {
+export function dataTfVirtualGatewaySpecListenerTlsCertificateAcmPropertyToTerraform(struct?: DataTfVirtualGateway.SpecListenerTlsCertificateAcmProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -662,7 +662,7 @@ export function tfDataVirtualGatewaySpecListenerTlsCertificateAcmPropertyToTerra
 }
 
 
-export function tfDataVirtualGatewaySpecListenerTlsCertificateAcmPropertyToHclTerraform(struct?: TfDataVirtualGateway.SpecListenerTlsCertificateAcmProperty): any {
+export function dataTfVirtualGatewaySpecListenerTlsCertificateAcmPropertyToHclTerraform(struct?: DataTfVirtualGateway.SpecListenerTlsCertificateAcmProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -673,7 +673,7 @@ export function tfDataVirtualGatewaySpecListenerTlsCertificateAcmPropertyToHclTe
 }
 
 
-export function tfDataVirtualGatewaySpecListenerTlsCertificateFilePropertyToTerraform(struct?: TfDataVirtualGateway.SpecListenerTlsCertificateFileProperty): any {
+export function dataTfVirtualGatewaySpecListenerTlsCertificateFilePropertyToTerraform(struct?: DataTfVirtualGateway.SpecListenerTlsCertificateFileProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -683,7 +683,7 @@ export function tfDataVirtualGatewaySpecListenerTlsCertificateFilePropertyToTerr
 }
 
 
-export function tfDataVirtualGatewaySpecListenerTlsCertificateFilePropertyToHclTerraform(struct?: TfDataVirtualGateway.SpecListenerTlsCertificateFileProperty): any {
+export function dataTfVirtualGatewaySpecListenerTlsCertificateFilePropertyToHclTerraform(struct?: DataTfVirtualGateway.SpecListenerTlsCertificateFileProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -694,7 +694,7 @@ export function tfDataVirtualGatewaySpecListenerTlsCertificateFilePropertyToHclT
 }
 
 
-export function tfDataVirtualGatewaySpecListenerTlsCertificateSdsPropertyToTerraform(struct?: TfDataVirtualGateway.SpecListenerTlsCertificateSdsProperty): any {
+export function dataTfVirtualGatewaySpecListenerTlsCertificateSdsPropertyToTerraform(struct?: DataTfVirtualGateway.SpecListenerTlsCertificateSdsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -704,7 +704,7 @@ export function tfDataVirtualGatewaySpecListenerTlsCertificateSdsPropertyToTerra
 }
 
 
-export function tfDataVirtualGatewaySpecListenerTlsCertificateSdsPropertyToHclTerraform(struct?: TfDataVirtualGateway.SpecListenerTlsCertificateSdsProperty): any {
+export function dataTfVirtualGatewaySpecListenerTlsCertificateSdsPropertyToHclTerraform(struct?: DataTfVirtualGateway.SpecListenerTlsCertificateSdsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -715,7 +715,7 @@ export function tfDataVirtualGatewaySpecListenerTlsCertificateSdsPropertyToHclTe
 }
 
 
-export function tfDataVirtualGatewaySpecListenerTlsCertificatePropertyToTerraform(struct?: TfDataVirtualGateway.SpecListenerTlsCertificateProperty): any {
+export function dataTfVirtualGatewaySpecListenerTlsCertificatePropertyToTerraform(struct?: DataTfVirtualGateway.SpecListenerTlsCertificateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -725,7 +725,7 @@ export function tfDataVirtualGatewaySpecListenerTlsCertificatePropertyToTerrafor
 }
 
 
-export function tfDataVirtualGatewaySpecListenerTlsCertificatePropertyToHclTerraform(struct?: TfDataVirtualGateway.SpecListenerTlsCertificateProperty): any {
+export function dataTfVirtualGatewaySpecListenerTlsCertificatePropertyToHclTerraform(struct?: DataTfVirtualGateway.SpecListenerTlsCertificateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -736,7 +736,7 @@ export function tfDataVirtualGatewaySpecListenerTlsCertificatePropertyToHclTerra
 }
 
 
-export function tfDataVirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatchPropertyToTerraform(struct?: TfDataVirtualGateway.SpecListenerTlsValidationSubjectAlternativeNamesMatchProperty): any {
+export function dataTfVirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatchPropertyToTerraform(struct?: DataTfVirtualGateway.SpecListenerTlsValidationSubjectAlternativeNamesMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -746,7 +746,7 @@ export function tfDataVirtualGatewaySpecListenerTlsValidationSubjectAlternativeN
 }
 
 
-export function tfDataVirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatchPropertyToHclTerraform(struct?: TfDataVirtualGateway.SpecListenerTlsValidationSubjectAlternativeNamesMatchProperty): any {
+export function dataTfVirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatchPropertyToHclTerraform(struct?: DataTfVirtualGateway.SpecListenerTlsValidationSubjectAlternativeNamesMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -757,7 +757,7 @@ export function tfDataVirtualGatewaySpecListenerTlsValidationSubjectAlternativeN
 }
 
 
-export function tfDataVirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesPropertyToTerraform(struct?: TfDataVirtualGateway.SpecListenerTlsValidationSubjectAlternativeNamesProperty): any {
+export function dataTfVirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesPropertyToTerraform(struct?: DataTfVirtualGateway.SpecListenerTlsValidationSubjectAlternativeNamesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -767,7 +767,7 @@ export function tfDataVirtualGatewaySpecListenerTlsValidationSubjectAlternativeN
 }
 
 
-export function tfDataVirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesPropertyToHclTerraform(struct?: TfDataVirtualGateway.SpecListenerTlsValidationSubjectAlternativeNamesProperty): any {
+export function dataTfVirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesPropertyToHclTerraform(struct?: DataTfVirtualGateway.SpecListenerTlsValidationSubjectAlternativeNamesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -778,7 +778,7 @@ export function tfDataVirtualGatewaySpecListenerTlsValidationSubjectAlternativeN
 }
 
 
-export function tfDataVirtualGatewaySpecListenerTlsValidationTrustFilePropertyToTerraform(struct?: TfDataVirtualGateway.SpecListenerTlsValidationTrustFileProperty): any {
+export function dataTfVirtualGatewaySpecListenerTlsValidationTrustFilePropertyToTerraform(struct?: DataTfVirtualGateway.SpecListenerTlsValidationTrustFileProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -788,7 +788,7 @@ export function tfDataVirtualGatewaySpecListenerTlsValidationTrustFilePropertyTo
 }
 
 
-export function tfDataVirtualGatewaySpecListenerTlsValidationTrustFilePropertyToHclTerraform(struct?: TfDataVirtualGateway.SpecListenerTlsValidationTrustFileProperty): any {
+export function dataTfVirtualGatewaySpecListenerTlsValidationTrustFilePropertyToHclTerraform(struct?: DataTfVirtualGateway.SpecListenerTlsValidationTrustFileProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -799,7 +799,7 @@ export function tfDataVirtualGatewaySpecListenerTlsValidationTrustFilePropertyTo
 }
 
 
-export function tfDataVirtualGatewaySpecListenerTlsValidationTrustSdsPropertyToTerraform(struct?: TfDataVirtualGateway.SpecListenerTlsValidationTrustSdsProperty): any {
+export function dataTfVirtualGatewaySpecListenerTlsValidationTrustSdsPropertyToTerraform(struct?: DataTfVirtualGateway.SpecListenerTlsValidationTrustSdsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -809,7 +809,7 @@ export function tfDataVirtualGatewaySpecListenerTlsValidationTrustSdsPropertyToT
 }
 
 
-export function tfDataVirtualGatewaySpecListenerTlsValidationTrustSdsPropertyToHclTerraform(struct?: TfDataVirtualGateway.SpecListenerTlsValidationTrustSdsProperty): any {
+export function dataTfVirtualGatewaySpecListenerTlsValidationTrustSdsPropertyToHclTerraform(struct?: DataTfVirtualGateway.SpecListenerTlsValidationTrustSdsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -820,7 +820,7 @@ export function tfDataVirtualGatewaySpecListenerTlsValidationTrustSdsPropertyToH
 }
 
 
-export function tfDataVirtualGatewaySpecListenerTlsValidationTrustPropertyToTerraform(struct?: TfDataVirtualGateway.SpecListenerTlsValidationTrustProperty): any {
+export function dataTfVirtualGatewaySpecListenerTlsValidationTrustPropertyToTerraform(struct?: DataTfVirtualGateway.SpecListenerTlsValidationTrustProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -830,7 +830,7 @@ export function tfDataVirtualGatewaySpecListenerTlsValidationTrustPropertyToTerr
 }
 
 
-export function tfDataVirtualGatewaySpecListenerTlsValidationTrustPropertyToHclTerraform(struct?: TfDataVirtualGateway.SpecListenerTlsValidationTrustProperty): any {
+export function dataTfVirtualGatewaySpecListenerTlsValidationTrustPropertyToHclTerraform(struct?: DataTfVirtualGateway.SpecListenerTlsValidationTrustProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -841,7 +841,7 @@ export function tfDataVirtualGatewaySpecListenerTlsValidationTrustPropertyToHclT
 }
 
 
-export function tfDataVirtualGatewaySpecListenerTlsValidationPropertyToTerraform(struct?: TfDataVirtualGateway.SpecListenerTlsValidationProperty): any {
+export function dataTfVirtualGatewaySpecListenerTlsValidationPropertyToTerraform(struct?: DataTfVirtualGateway.SpecListenerTlsValidationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -851,7 +851,7 @@ export function tfDataVirtualGatewaySpecListenerTlsValidationPropertyToTerraform
 }
 
 
-export function tfDataVirtualGatewaySpecListenerTlsValidationPropertyToHclTerraform(struct?: TfDataVirtualGateway.SpecListenerTlsValidationProperty): any {
+export function dataTfVirtualGatewaySpecListenerTlsValidationPropertyToHclTerraform(struct?: DataTfVirtualGateway.SpecListenerTlsValidationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -862,7 +862,7 @@ export function tfDataVirtualGatewaySpecListenerTlsValidationPropertyToHclTerraf
 }
 
 
-export function tfDataVirtualGatewaySpecListenerTlsPropertyToTerraform(struct?: TfDataVirtualGateway.SpecListenerTlsProperty): any {
+export function dataTfVirtualGatewaySpecListenerTlsPropertyToTerraform(struct?: DataTfVirtualGateway.SpecListenerTlsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -872,7 +872,7 @@ export function tfDataVirtualGatewaySpecListenerTlsPropertyToTerraform(struct?: 
 }
 
 
-export function tfDataVirtualGatewaySpecListenerTlsPropertyToHclTerraform(struct?: TfDataVirtualGateway.SpecListenerTlsProperty): any {
+export function dataTfVirtualGatewaySpecListenerTlsPropertyToHclTerraform(struct?: DataTfVirtualGateway.SpecListenerTlsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -883,7 +883,7 @@ export function tfDataVirtualGatewaySpecListenerTlsPropertyToHclTerraform(struct
 }
 
 
-export function tfDataVirtualGatewayListenerPropertyToTerraform(struct?: TfDataVirtualGateway.ListenerProperty): any {
+export function dataTfVirtualGatewayListenerPropertyToTerraform(struct?: DataTfVirtualGateway.ListenerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -893,7 +893,7 @@ export function tfDataVirtualGatewayListenerPropertyToTerraform(struct?: TfDataV
 }
 
 
-export function tfDataVirtualGatewayListenerPropertyToHclTerraform(struct?: TfDataVirtualGateway.ListenerProperty): any {
+export function dataTfVirtualGatewayListenerPropertyToHclTerraform(struct?: DataTfVirtualGateway.ListenerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -904,7 +904,7 @@ export function tfDataVirtualGatewayListenerPropertyToHclTerraform(struct?: TfDa
 }
 
 
-export function tfDataVirtualGatewayJsonPropertyToTerraform(struct?: TfDataVirtualGateway.JsonProperty): any {
+export function dataTfVirtualGatewayJsonPropertyToTerraform(struct?: DataTfVirtualGateway.JsonProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -914,7 +914,7 @@ export function tfDataVirtualGatewayJsonPropertyToTerraform(struct?: TfDataVirtu
 }
 
 
-export function tfDataVirtualGatewayJsonPropertyToHclTerraform(struct?: TfDataVirtualGateway.JsonProperty): any {
+export function dataTfVirtualGatewayJsonPropertyToHclTerraform(struct?: DataTfVirtualGateway.JsonProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -925,7 +925,7 @@ export function tfDataVirtualGatewayJsonPropertyToHclTerraform(struct?: TfDataVi
 }
 
 
-export function tfDataVirtualGatewayFormatPropertyToTerraform(struct?: TfDataVirtualGateway.FormatProperty): any {
+export function dataTfVirtualGatewayFormatPropertyToTerraform(struct?: DataTfVirtualGateway.FormatProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -935,7 +935,7 @@ export function tfDataVirtualGatewayFormatPropertyToTerraform(struct?: TfDataVir
 }
 
 
-export function tfDataVirtualGatewayFormatPropertyToHclTerraform(struct?: TfDataVirtualGateway.FormatProperty): any {
+export function dataTfVirtualGatewayFormatPropertyToHclTerraform(struct?: DataTfVirtualGateway.FormatProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -946,7 +946,7 @@ export function tfDataVirtualGatewayFormatPropertyToHclTerraform(struct?: TfData
 }
 
 
-export function tfDataVirtualGatewaySpecLoggingAccessLogFilePropertyToTerraform(struct?: TfDataVirtualGateway.SpecLoggingAccessLogFileProperty): any {
+export function dataTfVirtualGatewaySpecLoggingAccessLogFilePropertyToTerraform(struct?: DataTfVirtualGateway.SpecLoggingAccessLogFileProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -956,7 +956,7 @@ export function tfDataVirtualGatewaySpecLoggingAccessLogFilePropertyToTerraform(
 }
 
 
-export function tfDataVirtualGatewaySpecLoggingAccessLogFilePropertyToHclTerraform(struct?: TfDataVirtualGateway.SpecLoggingAccessLogFileProperty): any {
+export function dataTfVirtualGatewaySpecLoggingAccessLogFilePropertyToHclTerraform(struct?: DataTfVirtualGateway.SpecLoggingAccessLogFileProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -967,7 +967,7 @@ export function tfDataVirtualGatewaySpecLoggingAccessLogFilePropertyToHclTerrafo
 }
 
 
-export function tfDataVirtualGatewayAccessLogPropertyToTerraform(struct?: TfDataVirtualGateway.AccessLogProperty): any {
+export function dataTfVirtualGatewayAccessLogPropertyToTerraform(struct?: DataTfVirtualGateway.AccessLogProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -977,7 +977,7 @@ export function tfDataVirtualGatewayAccessLogPropertyToTerraform(struct?: TfData
 }
 
 
-export function tfDataVirtualGatewayAccessLogPropertyToHclTerraform(struct?: TfDataVirtualGateway.AccessLogProperty): any {
+export function dataTfVirtualGatewayAccessLogPropertyToHclTerraform(struct?: DataTfVirtualGateway.AccessLogProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -988,7 +988,7 @@ export function tfDataVirtualGatewayAccessLogPropertyToHclTerraform(struct?: TfD
 }
 
 
-export function tfDataVirtualGatewayLoggingPropertyToTerraform(struct?: TfDataVirtualGateway.LoggingProperty): any {
+export function dataTfVirtualGatewayLoggingPropertyToTerraform(struct?: DataTfVirtualGateway.LoggingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -998,7 +998,7 @@ export function tfDataVirtualGatewayLoggingPropertyToTerraform(struct?: TfDataVi
 }
 
 
-export function tfDataVirtualGatewayLoggingPropertyToHclTerraform(struct?: TfDataVirtualGateway.LoggingProperty): any {
+export function dataTfVirtualGatewayLoggingPropertyToHclTerraform(struct?: DataTfVirtualGateway.LoggingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1009,7 +1009,7 @@ export function tfDataVirtualGatewayLoggingPropertyToHclTerraform(struct?: TfDat
 }
 
 
-export function tfDataVirtualGatewaySpecPropertyToTerraform(struct?: TfDataVirtualGateway.SpecProperty): any {
+export function dataTfVirtualGatewaySpecPropertyToTerraform(struct?: DataTfVirtualGateway.SpecProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1019,7 +1019,7 @@ export function tfDataVirtualGatewaySpecPropertyToTerraform(struct?: TfDataVirtu
 }
 
 
-export function tfDataVirtualGatewaySpecPropertyToHclTerraform(struct?: TfDataVirtualGateway.SpecProperty): any {
+export function dataTfVirtualGatewaySpecPropertyToHclTerraform(struct?: DataTfVirtualGateway.SpecProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1030,7 +1030,7 @@ export function tfDataVirtualGatewaySpecPropertyToHclTerraform(struct?: TfDataVi
 }
 
 
-export namespace TfDataVirtualGateway {
+export namespace DataTfVirtualGateway {
 export interface SpecBackendDefaultsClientPolicyTlsCertificateFileProperty {
 }
 export class SpecBackendDefaultsClientPolicyTlsCertificateFilePropertyOutputReference extends cdktn.ComplexObject {

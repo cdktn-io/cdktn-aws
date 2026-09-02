@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataResolverEndpointConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfResolverEndpointConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_endpoint#id TfDataResolverEndpoint#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_endpoint#id DataTfResolverEndpoint#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,25 +16,25 @@ export interface TfDataResolverEndpointConfig extends cdktn.TerraformMetaArgumen
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_endpoint#region TfDataResolverEndpoint#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_endpoint#region DataTfResolverEndpoint#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_endpoint#resolver_endpoint_id TfDataResolverEndpoint#resolver_endpoint_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_endpoint#resolver_endpoint_id DataTfResolverEndpoint#resolver_endpoint_id}
   */
   readonly resolverEndpointId?: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_endpoint#filter TfDataResolverEndpoint#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_endpoint#filter DataTfResolverEndpoint#filter}
   */
-  readonly filter?: TfDataResolverEndpoint.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataTfResolverEndpoint.FilterProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_endpoint aws_route53_resolver_endpoint}
 */
-export class TfDataResolverEndpoint extends cdktn.TerraformDataSource {
+export class DataTfResolverEndpoint extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class TfDataResolverEndpoint extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataResolverEndpoint resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfResolverEndpoint resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataResolverEndpoint to import
-  * @param importFromId The id of the existing TfDataResolverEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_endpoint#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataResolverEndpoint to import is found
+  * @param importToId The construct id used in the generated config for the DataTfResolverEndpoint to import
+  * @param importFromId The id of the existing DataTfResolverEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_endpoint#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfResolverEndpoint to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_route53_resolver_endpoint", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class TfDataResolverEndpoint extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataResolverEndpointConfig = {}
+  * @param options DataTfResolverEndpointConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDataResolverEndpointConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfResolverEndpointConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_route53_resolver_endpoint',
       terraformGeneratorMetadata: {
@@ -191,11 +191,11 @@ export class TfDataResolverEndpoint extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new TfDataResolverEndpoint.FilterPropertyList(this, "filter", true);
+  private _filter = new DataTfResolverEndpoint.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: TfDataResolverEndpoint.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataTfResolverEndpoint.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -215,7 +215,7 @@ export class TfDataResolverEndpoint extends cdktn.TerraformDataSource {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       resolver_endpoint_id: cdktn.stringToTerraform(this._resolverEndpointId),
-      filter: cdktn.listMapper(tfDataResolverEndpointFilterPropertyToTerraform, true)(this._filter.internalValue),
+      filter: cdktn.listMapper(dataTfResolverEndpointFilterPropertyToTerraform, true)(this._filter.internalValue),
     };
   }
 
@@ -240,10 +240,10 @@ export class TfDataResolverEndpoint extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       filter: {
-        value: cdktn.listMapperHcl(tfDataResolverEndpointFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataTfResolverEndpointFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfDataResolverEndpoint.FilterPropertyList",
+        storageClassType: "DataTfResolverEndpoint.FilterPropertyList",
       },
     };
 
@@ -252,7 +252,7 @@ export class TfDataResolverEndpoint extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataResolverEndpointFilterPropertyToTerraform(struct?: TfDataResolverEndpoint.FilterProperty | cdktn.IResolvable): any {
+export function dataTfResolverEndpointFilterPropertyToTerraform(struct?: DataTfResolverEndpoint.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -264,7 +264,7 @@ export function tfDataResolverEndpointFilterPropertyToTerraform(struct?: TfDataR
 }
 
 
-export function tfDataResolverEndpointFilterPropertyToHclTerraform(struct?: TfDataResolverEndpoint.FilterProperty | cdktn.IResolvable): any {
+export function dataTfResolverEndpointFilterPropertyToHclTerraform(struct?: DataTfResolverEndpoint.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -289,14 +289,14 @@ export function tfDataResolverEndpointFilterPropertyToHclTerraform(struct?: TfDa
 }
 
 
-export namespace TfDataResolverEndpoint {
+export namespace DataTfResolverEndpoint {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_endpoint#name TfDataResolverEndpoint#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_endpoint#name DataTfResolverEndpoint#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_endpoint#values TfDataResolverEndpoint#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_endpoint#values DataTfResolverEndpoint#values}
   */
   readonly values: string[];
 }

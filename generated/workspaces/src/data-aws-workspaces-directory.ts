@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataDirectoryConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfDirectoryConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/workspaces_directory#directory_id TfDataDirectory#directory_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/workspaces_directory#directory_id DataTfDirectory#directory_id}
   */
   readonly directoryId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/workspaces_directory#id TfDataDirectory#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/workspaces_directory#id DataTfDirectory#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,11 +20,11 @@ export interface TfDataDirectoryConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/workspaces_directory#region TfDataDirectory#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/workspaces_directory#region DataTfDirectory#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/workspaces_directory#tags TfDataDirectory#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/workspaces_directory#tags DataTfDirectory#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -32,7 +32,7 @@ export interface TfDataDirectoryConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/workspaces_directory aws_workspaces_directory}
 */
-export class TfDataDirectory extends cdktn.TerraformDataSource {
+export class DataTfDirectory extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class TfDataDirectory extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataDirectory resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfDirectory resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataDirectory to import
-  * @param importFromId The id of the existing TfDataDirectory that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/workspaces_directory#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataDirectory to import is found
+  * @param importToId The construct id used in the generated config for the DataTfDirectory to import
+  * @param importFromId The id of the existing DataTfDirectory that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/workspaces_directory#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfDirectory to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_workspaces_directory", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class TfDataDirectory extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataDirectoryConfig
+  * @param options DataTfDirectoryConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataDirectoryConfig) {
+  public constructor(scope: Construct, id: string, config: DataTfDirectoryConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_workspaces_directory',
       terraformGeneratorMetadata: {
@@ -91,7 +91,7 @@ export class TfDataDirectory extends cdktn.TerraformDataSource {
   // ==========
 
   // active_directory_config - computed: true, optional: false, required: false
-  private _activeDirectoryConfig = new TfDataDirectory.ActiveDirectoryConfigPropertyList(this, "active_directory_config", true);
+  private _activeDirectoryConfig = new DataTfDirectory.ActiveDirectoryConfigPropertyList(this, "active_directory_config", true);
   public get activeDirectoryConfig() {
     return this._activeDirectoryConfig;
   }
@@ -102,7 +102,7 @@ export class TfDataDirectory extends cdktn.TerraformDataSource {
   }
 
   // certificate_based_auth_properties - computed: true, optional: false, required: false
-  private _certificateBasedAuthProperties = new TfDataDirectory.CertificateBasedAuthPropertiesPropertyList(this, "certificate_based_auth_properties", false);
+  private _certificateBasedAuthProperties = new DataTfDirectory.CertificateBasedAuthPropertiesPropertyList(this, "certificate_based_auth_properties", false);
   public get certificateBasedAuthProperties() {
     return this._certificateBasedAuthProperties;
   }
@@ -188,13 +188,13 @@ export class TfDataDirectory extends cdktn.TerraformDataSource {
   }
 
   // saml_properties - computed: true, optional: false, required: false
-  private _samlProperties = new TfDataDirectory.SamlPropertiesPropertyList(this, "saml_properties", false);
+  private _samlProperties = new DataTfDirectory.SamlPropertiesPropertyList(this, "saml_properties", false);
   public get samlProperties() {
     return this._samlProperties;
   }
 
   // self_service_permissions - computed: true, optional: false, required: false
-  private _selfServicePermissions = new TfDataDirectory.SelfServicePermissionsPropertyList(this, "self_service_permissions", false);
+  private _selfServicePermissions = new DataTfDirectory.SelfServicePermissionsPropertyList(this, "self_service_permissions", false);
   public get selfServicePermissions() {
     return this._selfServicePermissions;
   }
@@ -231,13 +231,13 @@ export class TfDataDirectory extends cdktn.TerraformDataSource {
   }
 
   // workspace_access_properties - computed: true, optional: false, required: false
-  private _workspaceAccessProperties = new TfDataDirectory.WorkspaceAccessPropertiesPropertyList(this, "workspace_access_properties", false);
+  private _workspaceAccessProperties = new DataTfDirectory.WorkspaceAccessPropertiesPropertyList(this, "workspace_access_properties", false);
   public get workspaceAccessProperties() {
     return this._workspaceAccessProperties;
   }
 
   // workspace_creation_properties - computed: true, optional: false, required: false
-  private _workspaceCreationProperties = new TfDataDirectory.WorkspaceCreationPropertiesPropertyList(this, "workspace_creation_properties", false);
+  private _workspaceCreationProperties = new DataTfDirectory.WorkspaceCreationPropertiesPropertyList(this, "workspace_creation_properties", false);
   public get workspaceCreationProperties() {
     return this._workspaceCreationProperties;
   }
@@ -308,7 +308,7 @@ export class TfDataDirectory extends cdktn.TerraformDataSource {
   }
 }
 
-export function tfDataDirectoryActiveDirectoryConfigPropertyToTerraform(struct?: TfDataDirectory.ActiveDirectoryConfigProperty): any {
+export function dataTfDirectoryActiveDirectoryConfigPropertyToTerraform(struct?: DataTfDirectory.ActiveDirectoryConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -318,7 +318,7 @@ export function tfDataDirectoryActiveDirectoryConfigPropertyToTerraform(struct?:
 }
 
 
-export function tfDataDirectoryActiveDirectoryConfigPropertyToHclTerraform(struct?: TfDataDirectory.ActiveDirectoryConfigProperty): any {
+export function dataTfDirectoryActiveDirectoryConfigPropertyToHclTerraform(struct?: DataTfDirectory.ActiveDirectoryConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -329,7 +329,7 @@ export function tfDataDirectoryActiveDirectoryConfigPropertyToHclTerraform(struc
 }
 
 
-export function tfDataDirectoryCertificateBasedAuthPropertiesPropertyToTerraform(struct?: TfDataDirectory.CertificateBasedAuthPropertiesProperty): any {
+export function dataTfDirectoryCertificateBasedAuthPropertiesPropertyToTerraform(struct?: DataTfDirectory.CertificateBasedAuthPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -339,7 +339,7 @@ export function tfDataDirectoryCertificateBasedAuthPropertiesPropertyToTerraform
 }
 
 
-export function tfDataDirectoryCertificateBasedAuthPropertiesPropertyToHclTerraform(struct?: TfDataDirectory.CertificateBasedAuthPropertiesProperty): any {
+export function dataTfDirectoryCertificateBasedAuthPropertiesPropertyToHclTerraform(struct?: DataTfDirectory.CertificateBasedAuthPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -350,7 +350,7 @@ export function tfDataDirectoryCertificateBasedAuthPropertiesPropertyToHclTerraf
 }
 
 
-export function tfDataDirectorySamlPropertiesPropertyToTerraform(struct?: TfDataDirectory.SamlPropertiesProperty): any {
+export function dataTfDirectorySamlPropertiesPropertyToTerraform(struct?: DataTfDirectory.SamlPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -360,7 +360,7 @@ export function tfDataDirectorySamlPropertiesPropertyToTerraform(struct?: TfData
 }
 
 
-export function tfDataDirectorySamlPropertiesPropertyToHclTerraform(struct?: TfDataDirectory.SamlPropertiesProperty): any {
+export function dataTfDirectorySamlPropertiesPropertyToHclTerraform(struct?: DataTfDirectory.SamlPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -371,7 +371,7 @@ export function tfDataDirectorySamlPropertiesPropertyToHclTerraform(struct?: TfD
 }
 
 
-export function tfDataDirectorySelfServicePermissionsPropertyToTerraform(struct?: TfDataDirectory.SelfServicePermissionsProperty): any {
+export function dataTfDirectorySelfServicePermissionsPropertyToTerraform(struct?: DataTfDirectory.SelfServicePermissionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -381,7 +381,7 @@ export function tfDataDirectorySelfServicePermissionsPropertyToTerraform(struct?
 }
 
 
-export function tfDataDirectorySelfServicePermissionsPropertyToHclTerraform(struct?: TfDataDirectory.SelfServicePermissionsProperty): any {
+export function dataTfDirectorySelfServicePermissionsPropertyToHclTerraform(struct?: DataTfDirectory.SelfServicePermissionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -392,7 +392,7 @@ export function tfDataDirectorySelfServicePermissionsPropertyToHclTerraform(stru
 }
 
 
-export function tfDataDirectoryWorkspaceAccessPropertiesPropertyToTerraform(struct?: TfDataDirectory.WorkspaceAccessPropertiesProperty): any {
+export function dataTfDirectoryWorkspaceAccessPropertiesPropertyToTerraform(struct?: DataTfDirectory.WorkspaceAccessPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -402,7 +402,7 @@ export function tfDataDirectoryWorkspaceAccessPropertiesPropertyToTerraform(stru
 }
 
 
-export function tfDataDirectoryWorkspaceAccessPropertiesPropertyToHclTerraform(struct?: TfDataDirectory.WorkspaceAccessPropertiesProperty): any {
+export function dataTfDirectoryWorkspaceAccessPropertiesPropertyToHclTerraform(struct?: DataTfDirectory.WorkspaceAccessPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -413,7 +413,7 @@ export function tfDataDirectoryWorkspaceAccessPropertiesPropertyToHclTerraform(s
 }
 
 
-export function tfDataDirectoryWorkspaceCreationPropertiesPropertyToTerraform(struct?: TfDataDirectory.WorkspaceCreationPropertiesProperty): any {
+export function dataTfDirectoryWorkspaceCreationPropertiesPropertyToTerraform(struct?: DataTfDirectory.WorkspaceCreationPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -423,7 +423,7 @@ export function tfDataDirectoryWorkspaceCreationPropertiesPropertyToTerraform(st
 }
 
 
-export function tfDataDirectoryWorkspaceCreationPropertiesPropertyToHclTerraform(struct?: TfDataDirectory.WorkspaceCreationPropertiesProperty): any {
+export function dataTfDirectoryWorkspaceCreationPropertiesPropertyToHclTerraform(struct?: DataTfDirectory.WorkspaceCreationPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -434,7 +434,7 @@ export function tfDataDirectoryWorkspaceCreationPropertiesPropertyToHclTerraform
 }
 
 
-export namespace TfDataDirectory {
+export namespace DataTfDirectory {
 export interface ActiveDirectoryConfigProperty {
 }
 export class ActiveDirectoryConfigPropertyOutputReference extends cdktn.ComplexObject {
