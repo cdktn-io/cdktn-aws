@@ -165,3 +165,23 @@ awss3.NewTfBucketVersioning(stack, jsii.String("v"), &awss3.TfBucketVersioningCo
 ```
 
 `examples/go-consumer/main.go` is the compiled proof of that spelling.
+
+## Evidence
+
+Every gate, run on this tree at the commit that renamed it (macOS, 12 cores):
+
+| gate | command | result |
+| --- | --- | --- |
+| groups | `pnpm check:groups` | PASS — 257 groups, gate C: 259 prefixes, all used, 0 class-name collisions |
+| miner is clean | `pnpm mine` | proposes no diff against the committed `groups.json` |
+| generator | `pnpm generate` | 3,434 files / 258 groups / 2,401 classes in 3.5 s; a second run leaves `git status` clean |
+| types | `pnpm typecheck` | 258/258 packages OK, 98 s |
+| tests | `pnpm test` | 2,194 passed, 9 snapshots |
+| fixtures | `pnpm fixture:check` | up to date |
+| jsii (full fleet) | `pnpm jsii` | 258/258 OK, **197 s** serial — JSII3 **0**, JSII6 **0**, JSII5018 2,519 (the same count M3 recorded) |
+| runtime contract | `pnpm check:contract --strict` | `aws_lb` 22/22 units identical to `../ref-provider-aws` |
+| synth | `pnpm synth:smoke` | PASS with validation ON — `aws_lb`, `aws_alb` |
+| isolation | `pnpm check:imports` / `pnpm check:go-imports` | 0 cross-group imports over 2,660 TS files / 258 Go modules |
+| pacmak (full fleet) | `pnpm pacmak:go` | 258/258, every module path asserted against its own manifest, 698 s serial |
+| Go build | `scripts/go-tidy-build.mjs` over the packed fleet | 258/258 tidied and `go build ./...` clean, 47.5 s at 10-way |
+| Go consumer | `scripts/go-consumer.mjs` | 36 modules, all 35 sampled types present, every assertion OK |
