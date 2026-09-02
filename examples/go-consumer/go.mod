@@ -1,7 +1,12 @@
-// The fleet is not published: nothing under github.com/cdktn-io/cdktn-aws-go resolves through
-// the module proxy yet, and the requires below carry a placeholder version on purpose. The
-// program is built in workspace mode against a local checkout — `node scripts/go-consumer.mjs`
-// writes the go.work that supplies it. See README.md.
+// This example is built in WORKSPACE MODE, against a local checkout of the fleet: the requires
+// below carry a placeholder v0.0.0 that is never resolved, and `node scripts/go-consumer.mjs`
+// writes the go.work whose `replace` directives supply the real directories. That is deliberate —
+// the example measures and proves the fleet as it stands in this repository, not the last release.
+//
+// A real consumer does not need any of that. The fleet IS published: every module under
+// github.com/cdktn-io/cdktn-aws-go resolves at v0.1.1 through proxy.golang.org (verified against
+// the proxy, e.g. .../awsprovider/@latest -> v0.1.1). Requiring `.../awsprovider v0.1.1` and
+// dropping the workspace is all it takes. See README.md.
 module github.com/cdktn-io/cdktn-aws/examples/go-consumer
 
 go 1.25.0

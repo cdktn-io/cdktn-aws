@@ -12,8 +12,10 @@
 // program, every one of them resolves the same `cdktn` core, and the synthesised cdk.tf.json
 // names the real terraform types.
 //
-// Run it with `node scripts/go-consumer.mjs` from the repository root, which writes the
-// `go.work` this needs (the fleet is not published; see README.md).
+// Run it with `node scripts/go-consumer.mjs` from the repository root, which writes the `go.work`
+// that points this at the local fleet checkout. The fleet is published — every module resolves at
+// `v0.1.1` through `proxy.golang.org` — but the committed example stays in workspace mode so that
+// it measures the tree in this repository rather than the last release. See README.md.
 package main
 
 import (
@@ -230,7 +232,7 @@ func main() {
 	// (2) The provider module. Its own assembly, and the one cdktn's ValidateProviderPresence
 	// needs: without it, Synth fails rather than silently emitting an unprovisioned stack.
 	tProv := time.Now()
-	awsprovider.NewAwsProvider(stack, jsii.String("aws"), &awsprovider.AwsProviderConfig{
+	provider := awsprovider.NewAwsProvider(stack, jsii.String("aws"), &awsprovider.AwsProviderConfig{
 		Region: jsii.String("eu-west-1"),
 	})
 	providerLoad := time.Since(tProv)
@@ -250,16 +252,21 @@ func main() {
 	// first-touch minus this is the part of the per-group cost that is really assembly load.
 	tCtl := time.Now()
 	awss3.NewAwsS3BucketVersioning(stack, jsii.String("versioning"), &awss3.AwsS3BucketVersioningConfig{
-		Bucket:                jsii.String("consumer-bucket"),
+		Bucket:                  jsii.String("consumer-bucket"),
 		VersioningConfiguration: &awss3.AwsS3BucketVersioning_VersioningConfigurationProperty{Status: jsii.String("Enabled")},
 	})
 	construct := time.Since(tCtl)
 
-	// (5) A provider-defined function. `provider::aws::arn_build(...)` is a terraform 1.8+
-	// expression the provider itself implements; it has to survive the jsii round-trip and land
-	// in cdk.tf.json verbatim.
-	fns := awsprovider.NewAwsProviderFunctions(jsii.String("aws"))
-	arn := fns.ArnBuild(jsii.String("aws"), jsii.String("s3"), jsii.String(""), jsii.String(""), jsii.String("consumer-bucket"))
+	// (5) A provider-defined function, reached the way the design intends: off the provider
+	// instance. `provider::aws::arn_build(...)` is a terraform 1.8+ expression the provider itself
+	// implements; it has to survive the jsii round-trip and land in cdk.tf.json verbatim.
+	// `Functions()` is lazy and hands the provider's own local name to the function namespace, so
+	// the rendered call can never drift from the `required_providers` key this stack emits.
+	// `awsprovider.NewAwsProviderFunctions(localName)` is the standalone form, for when you do not
+	// hold the provider instance — that argument is the `required_providers` LOCAL NAME, never a
+	// provider alias, because `provider::<name>::` namespaces by local name and aliases do not
+	// change it.
+	arn := provider.Functions().ArnBuild(jsii.String("aws"), jsii.String("s3"), jsii.String(""), jsii.String(""), jsii.String("consumer-bucket"))
 	cdktn.NewTerraformOutput(stack, jsii.String("bucket_arn"), &cdktn.TerraformOutputConfig{Value: arn})
 
 	// (6) Synth, with cdktn's default validations ON — no SkipValidation, no
