@@ -89,10 +89,15 @@ function declaredNames(file: SourceFile): Set<string> {
     SyntaxKind.ImportSpecifier,
     SyntaxKind.ImportClause,
     SyntaxKind.NamespaceImport,
+    SyntaxKind.ImportEqualsDeclaration,
   ];
   for (const kind of DECLARATIONS) {
     for (const node of file.getDescendantsOfKind(kind)) {
-      const name = (node as { getNameNode?: () => Node | undefined }).getNameNode?.();
+      // `import { readFileSync as s3 }` binds `s3`, not `readFileSync`: the local name is the one a
+      // group barrel member would collide with, and the imported name is not bound at all.
+      const name = Node.isImportSpecifier(node)
+        ? node.getAliasNode() ?? node.getNameNode()
+        : (node as { getNameNode?: () => Node | undefined }).getNameNode?.();
       if (name && Node.isIdentifier(name)) names.add(name.getText());
     }
   }

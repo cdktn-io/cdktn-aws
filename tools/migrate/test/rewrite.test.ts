@@ -52,6 +52,24 @@ describe("aliasing", () => {
     );
   });
 
+  it("aliases around a name an import ALIAS bound — the local name, not the imported one", () => {
+    expect(
+      migrated(
+        [
+          "import { readFileSync as s3 } from 'node:fs';",
+          "import { S3Bucket } from '@cdktn/provider-aws/lib/s3-bucket';",
+          "export const a = (scope: any) => { s3('x'); return new S3Bucket(scope, 'x', {}); };",
+        ].join("\n"),
+      ),
+    ).toBe(
+      [
+        "import { readFileSync as s3 } from 'node:fs';",
+        "import { s3 as s3_ } from '@cdktn/aws';",
+        "export const a = (scope: any) => { s3('x'); return new s3_.TfBucket(scope, 'x', {}); };",
+      ].join("\n"),
+    );
+  });
+
   it("keeps aliasing deterministically when the obvious alias is taken too", () => {
     expect(
       migrated(
