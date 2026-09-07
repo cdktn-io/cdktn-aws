@@ -1,0 +1,5 @@
+# The exact build examples/migrate/typescript/golden/cdk.tf.json is the synth of.
+# Refresh with `pnpm migrate:golden:refresh`; see scripts/migrate-golden.mjs.
+@cdktn/provider-aws=25.3.0
+terraform-provider-aws=6.62.0
+cdktn=0.24.0

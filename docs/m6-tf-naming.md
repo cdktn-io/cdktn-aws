@@ -307,3 +307,25 @@ they were only ever the dashed terraform type.
 The 11 `A`-suffixed classic names above are the reason the derivation runs the vendored parser
 instead of restating a rule; a re-implementation would have got every one of them wrong, and the
 2,401-row cross-check is what proved that before the map was committed.
+
+### The map grows a nested section, 2026-09-02 (M8)
+
+`naming-map.json` carried one row per generated class and nothing about nested block types, which
+is the smaller half of what a migrating consumer holds. Each entry now also carries
+`nested: { "<terraform path>": { className, classic } }` — one row per struct — plus a
+`mapperPrefix` on the five `s3`/`waf` entries whose mappers take the `Mapper` disambiguator, and the
+file publishes the fixed suffix rules that derive the OutputReference/List/Map classes and the two
+mapper functions on both sides. The classic side still comes from the vendored parser: the two
+parses are joined positionally and every row is checked to end in the PascalCased terraform path it
+claims. 9,856 nested rows; the file went from 866 KB to 3.0 MB. Nothing under `generated/` changed.
+The record is [`docs/m8-migration.md`](./m8-migration.md).
+
+### The Config interface's classic name is recorded too, 2026-09-02 (M8)
+
+The map published `<classic.className>Config` as a derivation rule for the classic Config
+interface. It is false for one entry in 2,401: the config struct is drawn from the same
+`uniqueClassName` pool as every nested struct, so `aws_wafv2_web_acl_association` — whose
+`Wafv2WebAclAssociationConfig` name was taken first — is `Wafv2WebAclAssociationConfigA`, and the
+migration tool had no row for the one symbol a consumer of that resource's config type holds. Each
+entry now carries `classic.configClassName`, read off the same parser models the class names are,
+and the rule is gone. `classic-naming.test.ts` asserts all 2,401 against `../ref-provider-aws`.

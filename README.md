@@ -80,6 +80,10 @@ a breaking change for us because the slug becomes the submodule name.
   stripped (`awss3.TfBucket`), the curated `stripPrefixes` list that decides the stem lands in
   `groups.json`, and `naming-map.json` records every rename for the migration tool —
   [`docs/m6-tf-naming.md`](./docs/m6-tf-naming.md).
+* **M8 — migration, TypeScript. Done.** `naming-map.json` grows a nested-type section (9,856 rows),
+  `tools/migrate` becomes `@cdktn/aws-migrate`, and `examples/migrate/typescript/` is a project
+  migrated by the tool whose synth is compared to the classic library's on every pull request —
+  [`docs/m8-migration.md`](./docs/m8-migration.md). Go and Python are later slices.
 
 ## M3 — the Go fleet (done)
 
@@ -153,6 +157,29 @@ exact match backs off (`aws_vpc` → `TfVpc`). `AwsProvider` is unchanged — it
 `naming-map.json` at the repo root is the rename table from `@cdktn/provider-aws`: every terraform
 type against both its classic identity and its new one. The decision, the
 algorithm and the curated overrides are in [`docs/m6-tf-naming.md`](./docs/m6-tf-naming.md).
+
+## Migrating from `@cdktn/provider-aws`
+
+There is a tool, and it is a dry run by default:
+
+```bash
+npx @cdktn/aws-migrate ts --project tsconfig.json            # print the diff and the report
+npx @cdktn/aws-migrate ts --project tsconfig.json --write    # apply it
+
+# not published yet — until it is, run it from a checkout of this repository:
+pnpm migrate ts --project ../my-app/tsconfig.json
+```
+
+It rewrites every import form (deep, barrel, `* as`, and the `require()` spelling of each), every
+reference in value and type positions, nested block types onto their class
+(`S3BucketCorsRule` → `s3.TfBucket.CorsRuleProperty`) and the `package.json` dependency — driven
+only by [`naming-map.json`](./naming-map.json), never by a guess. Anything the map does not cover
+is reported and left alone, and the exit code says so.
+
+[`examples/migrate/typescript/`](./examples/migrate/typescript/) is the worked reference: one stack
+before and after, plus the proof that both synthesise the same `cdk.tf.json`, re-checked on every
+pull request. The guide is [`docs/migrating-from-provider-aws.md`](./docs/migrating-from-provider-aws.md);
+the milestone record is [`docs/m8-migration.md`](./docs/m8-migration.md). Go and Python are planned.
 
 ## M1 — the generator (done)
 

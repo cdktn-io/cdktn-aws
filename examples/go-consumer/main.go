@@ -13,9 +13,10 @@
 // names the real terraform types.
 //
 // Run it with `node scripts/go-consumer.mjs` from the repository root, which writes the `go.work`
-// that points this at the local fleet checkout. The fleet is published — every module resolves at
-// `v0.1.1` through `proxy.golang.org` — but the committed example stays in workspace mode so that
-// it measures the tree in this repository rather than the last release. See README.md.
+// that points this at the local fleet checkout. The fleet is published at the names below — every
+// module resolves at `v0.2.0` through `proxy.golang.org` — but the committed example stays in
+// workspace mode so that it measures the tree in this repository rather than the last release.
+// See README.md.
 package main
 
 import (

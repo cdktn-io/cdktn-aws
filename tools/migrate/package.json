@@ -1,0 +1,23 @@
+{
+  "name": "@cdktn/aws-migrate",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MPL-2.0",
+  "description": "Rewrites a @cdktn/provider-aws project onto @cdktn/aws, driven by the checked-in naming-map.json",
+  "bin": {
+    "cdktn-aws-migrate": "bin/migrate.ts"
+  },
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "tsx bin/migrate.ts"
+  },
+  "dependencies": {
+    "codemaker": "^1.117.0",
+    "ts-morph": "^27.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

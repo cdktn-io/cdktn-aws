@@ -1,0 +1,13 @@
+{
+  "name": "cdktn-aws-migrate-example",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MPL-2.0",
+  "description": "The worked example of the @cdktn/provider-aws -> @cdktn/aws migration",
+  "main": "main.ts",
+  "dependencies": {
+    "@cdktn/provider-aws": "25.3.0",
+    "cdktn": "^0.24.0",
+    "constructs": "^10.7.0"
+  }
+}

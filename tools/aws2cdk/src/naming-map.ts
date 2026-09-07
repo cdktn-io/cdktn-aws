@@ -11,29 +11,124 @@
  * place. The classic side is derived by running the vendored parser (see `classic-naming.ts`), not
  * by any rule restated here.
  *
+ * Each entry also carries its NESTED types: one row per terraform block/attribute path, with the
+ * name it is mounted under on our class's namespace and the flat class name the classic library
+ * gave it. Only the struct itself gets a row — the OutputReference/List/Map classes and the two
+ * mapper functions are derived from it by the fixed suffix rules in `NESTED_SUFFIX_RULES`, which
+ * are emitted into the file so it documents itself.
+ *
  * It is emitted by a FULL `pnpm generate` only — a partial run would drop the other 250-odd groups
  * — and committed, for the same reason `generated/hashes.json` is.
  */
 import * as fs from "node:fs";
 import * as path from "node:path";
+import { toPascalCase, toSnakeCase } from "codemaker";
 import { CLASSIC_ROOTS, ClassicName, ClassicNameIndex } from "./classic-naming";
 import type { GenerateResult } from "./generate";
 
 export const NAMING_MAP_FILE = "naming-map.json";
+
+/**
+ * How every other spelling of a nested type is derived from its one row, on both sides. The
+ * migration tool implements exactly this and nothing else, so it lives here, in the file, rather
+ * than only in prose that could drift from it.
+ */
+export const NESTED_SUFFIX_RULES = {
+  note:
+    "One row per nested struct. Everything else about it is derived: <classic> is the row's " +
+    "`classic`, <property> its `className`, <class> the entry's `className`, and <mapper> the " +
+    "entry's `mapperPrefix` (absent = `className`) with a lowercased first letter.",
+  classic: "<classic><suffix>",
+  grouped: "<class>.<property><suffix>",
+  suffixes: ["", "OutputReference", "List", "Map", "MapList", "ListMap", "ListList"],
+  mapperFunction: {
+    classic: "<classic with a lowercased first letter>ToTerraform / ToHclTerraform",
+    grouped: "<mapper><property>ToTerraform / ToHclTerraform",
+  },
+  configInterface: {
+    classic:
+      "recorded, not derived: `classic.configClassName`. The config struct competes for the same " +
+      "`uniqueClassName` pool as every other struct, so it is not always `<classic.className>Config` " +
+      "— `aws_wafv2_web_acl_association`'s is `Wafv2WebAclAssociationConfigA`.",
+    grouped: "<class>Config",
+  },
+} as const;
+
+export interface NamingMapNested {
+  /** the name mounted on the class's merged namespace, e.g. `CorsRuleProperty` */
+  readonly className: string;
+  /** the flat class the classic library declares for the same block, e.g. `S3BucketCorsRule` */
+  readonly classic: string;
+}
 
 export interface NamingMapEntry {
   /** `resource` | `data_source` | `ephemeral_resource` | `provider` */
   readonly surface: string;
   readonly group: string;
   readonly className: string;
+  /**
+   * Present only when the module-level mapper functions are NOT prefixed with `className` — the
+   * `Mapper` disambiguator `naming.mapperPrefixesForGroup` applies to five entries, three in `s3`
+   * and two in `waf`. Absent means `className`, so the other 2,396 rows stay free of a column that
+   * says nothing.
+   */
+  readonly mapperPrefix?: string;
   /** where the same terraform type lives in `@cdktn/provider-aws`, per language */
   readonly classic: ClassicName;
+  /** nested block/attribute types, keyed by their terraform path; absent when there are none */
+  readonly nested?: Record<string, NamingMapNested>;
 }
 
 export interface NamingMapFile {
   /** the classic library's package roots — the per-entry names hang off these */
   readonly classicRoots: typeof CLASSIC_ROOTS;
+  /** how the four derived spellings of each `nested` row are formed on both sides */
+  readonly nestedSuffixRules: typeof NESTED_SUFFIX_RULES;
   readonly entries: Record<string, NamingMapEntry>;
+}
+
+const cmp = (a: string, b: string): number => (a < b ? -1 : a > b ? 1 : 0);
+
+/**
+ * The two parsers' struct lists, joined.
+ *
+ * The join is positional — both walk one schema block in the same order, because the grouped parser
+ * is an adaptation of the vendored one rather than a re-implementation — and the position is not
+ * trusted: every row is checked to end in the PascalCased terraform path it claims to be, allowing
+ * only the classic dedup suffixes (`A`, from `uniqueClassName`, and `Struct`, from the reserved-name
+ * guard). A schema whose two parses disagree stops the run instead of committing a wrong rename.
+ */
+function joinNested(
+  key: string,
+  ours: readonly { path: string; className: string }[],
+  classic: readonly string[],
+): Record<string, NamingMapNested> | undefined {
+  if (ours.length !== classic.length) {
+    throw new Error(
+      `naming map: "${key}" parses to ${ours.length} nested types here and ${classic.length} in ` +
+        "@cdktn/provider-aws — the two parsers disagree about the schema",
+    );
+  }
+  const nested: Record<string, NamingMapNested> = {};
+  ours.forEach((struct, i) => {
+    const classicName = classic[i];
+    const expected = toPascalCase(
+      struct.path
+        .split(".")
+        .map((s) => toSnakeCase(s))
+        .join("_"),
+    );
+    if (!classicName.replace(/(A+|Struct)$/, "").endsWith(expected) && !classicName.endsWith(expected)) {
+      throw new Error(
+        `naming map: "${key}" nested type [${struct.path}] lines up with the classic class ` +
+          `"${classicName}", which does not end in "${expected}" — the struct orders have diverged`,
+      );
+    }
+    nested[struct.path] = { className: struct.className, classic: classicName };
+  });
+  const sorted: Record<string, NamingMapNested> = {};
+  for (const p of Object.keys(nested).sort(cmp)) sorted[p] = nested[p];
+  return Object.keys(sorted).length > 0 ? sorted : undefined;
 }
 
 export function buildNamingMap(result: GenerateResult, classic: ClassicNameIndex): NamingMapFile {
@@ -45,17 +140,25 @@ export function buildNamingMap(result: GenerateResult, classic: ClassicNameIndex
       if (!identity) {
         throw new Error(`naming map: no @cdktn/provider-aws identity for "${e.parserType}"`);
       }
+      const nested = joinNested(e.parserType, e.nested, identity.nested);
       return {
         key: e.parserType,
-        value: { surface: e.schemaType, group: g.slug, className: e.className, classic: identity },
+        value: {
+          surface: e.schemaType,
+          group: g.slug,
+          className: e.className,
+          ...(e.mapperPrefix === e.className ? {} : { mapperPrefix: e.mapperPrefix }),
+          classic: identity.identity,
+          ...(nested ? { nested } : {}),
+        },
       };
     }),
   );
   const entries: Record<string, NamingMapEntry> = {};
-  for (const row of rows.sort((a, b) => (a.key < b.key ? -1 : a.key > b.key ? 1 : 0))) {
+  for (const row of rows.sort((a, b) => cmp(a.key, b.key))) {
     entries[row.key] = row.value;
   }
-  return { classicRoots: CLASSIC_ROOTS, entries };
+  return { classicRoots: CLASSIC_ROOTS, nestedSuffixRules: NESTED_SUFFIX_RULES, entries };
 }
 
 export function writeNamingMap(dir: string, map: NamingMapFile): string {

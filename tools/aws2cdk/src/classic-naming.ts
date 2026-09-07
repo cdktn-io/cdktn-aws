@@ -29,14 +29,34 @@ export interface ClassicName {
   /** the source directory, i.e. `src/<module>/index.ts` in the classic tree */
   readonly module: string;
   readonly className: string;
+  /**
+   * The Config interface's class name. It is NOT `<className>Config`: the config struct is drawn
+   * from the same `uniqueClassName` pool as everything else, so it takes a dedup suffix when a
+   * nested struct got there first — `aws_wafv2_web_acl_association` is `Wafv2WebAclAssociationConfigA`.
+   * Recorded per entry because no rule predicts it, exactly like the `…A` class names.
+   */
+  readonly configClassName: string;
   /** jsii-pacmak's Go package for that submodule — see `goPackageForSubmodule` */
   readonly go: string;
   /** jsii-pacmak's Python submodule — see `pythonModuleForSubmodule` */
   readonly python: string;
 }
 
+export interface ClassicIdentity {
+  readonly identity: ClassicName;
+  /**
+   * The classic class name of every nested struct, in the vendored parser's own struct order.
+   *
+   * Order is the join key with the grouped parser's struct paths (`naming-map.ts` zips the two),
+   * and it is meaningful because both parsers walk one schema block the same way — the grouped
+   * parser is an adaptation of this one, not a re-implementation. The zip asserts the alignment
+   * per row rather than trusting it.
+   */
+  readonly nested: readonly string[];
+}
+
 /** Keyed exactly like `naming-map.json`: the surface-marked terraform type. */
-export type ClassicNameIndex = Record<string, ClassicName>;
+export type ClassicNameIndex = Record<string, ClassicIdentity>;
 
 /**
  * The TS submodule name: the export alias `provider-generator.ts#emitIndexFile` writes into
@@ -77,14 +97,23 @@ export function buildClassicNameIndex(schema: any, fqpn: string = AWS_FQPN): Cla
 
   const parser = new ResourceParser();
   const index: ClassicNameIndex = {};
-  const record = (key: string, model: { className: string; fileName: string }) => {
+  const record = (
+    key: string,
+    model: { className: string; fileName: string; structs: { name: string }[] },
+  ) => {
     const module = model.fileName.replace(/\/index\.ts$/, "");
     const submodule = submoduleForModule(module);
     index[key] = {
-      module,
-      className: model.className,
-      go: goPackageForSubmodule(submodule),
-      python: pythonModuleForSubmodule(submodule),
+      identity: {
+        module,
+        className: model.className,
+        configClassName: model.structs[0].name,
+        go: goPackageForSubmodule(submodule),
+        python: pythonModuleForSubmodule(submodule),
+      },
+      // `ResourceModel#structs` is `[configStruct, ...nested]` — the head is the entry's own Config
+      // interface, recorded above, so only the tail is a nested type.
+      nested: model.structs.slice(1).map((s) => s.name),
     };
   };
 
