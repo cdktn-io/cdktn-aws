@@ -101,7 +101,7 @@ loosening the gate.
 ```
 gate C: group "foo" has no stripPrefixes (see docs/curation.md)
 gate C: group "foo" prefix "bar" matches no member — an unused prefix is a curation error
-gate C: group "foo" derives TfThing from both "aws_foo_thing" and "aws_thing"
+gate C: group "foo" derives AwsThing from both "aws_foo_thing" and "aws_thing"
 ```
 
 1. **A new group** arrives with a mechanically proposed list. Read it against the rule — strip
@@ -237,7 +237,7 @@ slug.
 ```
 slug            msk
 npm             @cdktn/aws-msk
-jsii submodule  aws_msk
+jsii submodule  msk
 Go packageName  msk                                    (goPackageName: the slug, "_" stripped)
 Go import path  github.com/cdktn-io/cdktn-aws-go/msk    (GO_MODULE_ROOT + "/" + packageName)
 Go release tag  msk/vX.Y.Z

@@ -294,8 +294,15 @@ taken: an L1 class is `Aws<Stem>` (`lambda.AwsFunction`, `s3.AwsBucket`, `s3.Dat
 `lambda.EphemeralAwsInvocation`), and a Go package is the slug with no `aws` prefix
 (`github.com/cdktn-io/cdktn-aws-go/s3`, tag `s3/v0.3.0`).
 
-Read every `Tf` in this report and in the M6 addendum as `Aws`, and every `aws<group>` Go path as
-`<group>`. Nothing else moved — the stem algorithm, the curated prefix lists, the file names, the
+Read every `Tf` as `Aws`, and every `aws<group>` Go path as `<group>`, throughout this report, the
+M6 addendum above, and the milestone records it links to that predate 0.3.0 —
+[`m1-generator.md`](./docs/m1-generator.md), [`m2-scale.md`](./docs/m2-scale.md),
+[`m3-go.md`](./docs/m3-go.md), [`m4-publishing.md`](./docs/m4-publishing.md) (which carries its own
+dated addendum, because its "Still open" list is live) and
+[`m8-migration.md`](./docs/m8-migration.md). One rationale in `m1-generator.md` does not survive the
+substitution and is worth naming: the slug `provider` was chosen partly because `awsprovider` would
+have yielded `awsawsprovider`, which under 0.3.0 it would not — the slug is unchanged regardless.
+Nothing else moved — the stem algorithm, the curated prefix lists, the file names, the
 nested mount and its `Property` suffix, the grouping, the type counts and every measurement in this
 report are unchanged, and the regeneration was verified to be a pure rename over all 3,434 files.
 Decision, before/after table and the module-proxy consequences:
