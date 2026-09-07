@@ -3,10 +3,9 @@
 // writes the go.work whose `replace` directives supply the real directories. That is deliberate —
 // the example measures and proves the fleet as it stands in this repository, not the last release.
 //
-// A real consumer does not need any of that — but the import paths below are 0.3.0's, and 0.3.0 is
-// NOT published yet. What proxy.golang.org serves today is v0.2.0 under the old directory names
-// (.../awsprovider, .../awss3), at the old `NewTfBucket` spelling. When 0.3.0 ships, requiring
-// `.../provider v0.3.0` and dropping the workspace is all it takes. See README.md.
+// A real consumer does not need any of that: the import paths below are 0.3.0's, and v0.3.0
+// resolves through proxy.golang.org at exactly these paths, so requiring `.../provider v0.3.0`
+// instead of the placeholder and dropping the workspace is all it takes. See README.md.
 module github.com/cdktn-io/cdktn-aws/examples/go-consumer
 
 go 1.25.0

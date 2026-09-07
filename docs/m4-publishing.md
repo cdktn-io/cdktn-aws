@@ -268,11 +268,12 @@ holding publishing credentials.
 - [ ] Wire the changed-groups-only release path (`scripts/release.mjs`) into `release.yml` for the
       second release onward. It is implemented and unit-tested; it is unwired because the first
       release has nothing to diff against.
-- [ ] **After** the 0.3.0 push: hand-edit `cdktn-aws-go`'s top-level `README.md`. `publib-golang`'s
-      sweep only `git rm`s top-level entries that contain a `go.mod`, so that file — the landing
-      page, naming `awsdetective`/`awsprovider`, the `aws` + slug rule and `awsdetective/v0.1.0`
-      tags — survives the publish verbatim and then contradicts every directory beside it. See the
-      0.3.0 addendum at the end of this file and [`v030-naming.md`](./v030-naming.md).
+- [x] **After** the 0.3.0 push: hand-edit `cdktn-aws-go`'s top-level `README.md`. Resolved
+      2026-09-07 with nothing to edit — the surviving file turned out to be a two-line stub naming
+      no directory, no import path and no tag, so it contradicts nothing. The sweep behaved as
+      predicted on the other half: all 258 `aws<group>/` directories were `git rm`'d by the publish
+      itself, and the tree now holds exactly 258 directories at the new names. See the 0.3.0
+      addendum at the end of this file and [`v030-naming.md`](./v030-naming.md).
 
 **The three decisions that were the user's, not the implementer's** — all three are permanent, all
 three were needed *before the first tag*, and all three are now settled:
@@ -465,3 +466,8 @@ Read every `aws<slug>` in this document as `<slug>` — §2's `awslexv2models`/`
 §4's `awsmsk/v2/` major-version paths included (`msk/v2/`, tags `msk/v2/v2.0.0`). Decisions 2 and 3
 are untouched. The decision, the before/after table and what `publib-golang` does and does not
 clean up: [`v030-naming.md`](./v030-naming.md).
+
+**Released 2026-09-07.** 0.3.0 went out on release run `34093053651`, 16/16 jobs green: npm
+`@cdktn/aws` 0.3.0, PyPI 0.3.0, GitHub Release `v0.3.0`, and `cdktn-aws-go` at 258 top-level module
+directories with 258 `<pkg>/v0.3.0` tags. The pipeline this section describes needed no manual step
+on the day.
