@@ -66,6 +66,9 @@ export function run(options: RunOptions): RunResult {
     .filter((m): m is ManifestResult => m !== undefined);
   // One report row per (file, block); one diff and one write per file.
   const manifests: ManifestChange[] = rewritten.flatMap((m) => m.changes);
+  // A manifest this run refuses to touch (a pre-existing `@cdktn/aws` range it will not guess at)
+  // reports like an unmapped symbol does, which is what makes it a non-zero exit.
+  const manifestFindings = rewritten.flatMap((m) => m.unmapped);
 
   const diff = [
     ...files.map((f) => unifiedDiff(f.file, f.before, f.after)),
@@ -81,7 +84,7 @@ export function run(options: RunOptions): RunResult {
     for (const m of rewritten) fs.writeFileSync(path.resolve(options.root, m.file), m.after);
   }
 
-  return { files, manifests, wrote: options.write, diff };
+  return { files, manifests, manifestFindings, wrote: options.write, diff };
 }
 
 export function reportOf(result: RunResult): string {

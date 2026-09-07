@@ -8,11 +8,14 @@
  * CI job gate on the tool rather than on someone reading its output.
  */
 import { ManifestChange } from "./manifest";
+import { TARGET_PACKAGE } from "./map";
 import { FileResult, Unmapped } from "./rewrite";
 
 export interface Report {
   readonly files: readonly FileResult[];
   readonly manifests: readonly ManifestChange[];
+  /** findings from `package.json` itself — an existing `@cdktn/aws` range this run will not guess at */
+  readonly manifestFindings?: readonly Unmapped[];
   readonly wrote: boolean;
 }
 
@@ -23,13 +26,20 @@ const table = (headers: readonly string[], rows: readonly (readonly string[])[])
 ];
 
 export function unmappedOf(report: Report): Unmapped[] {
-  return report.files.flatMap((f) => f.unmapped);
+  return [...report.files.flatMap((f) => f.unmapped), ...(report.manifestFindings ?? [])];
 }
 
 export function renderReport(report: Report): string {
   const changed = report.files.filter((f) => f.before !== f.after);
   const rewrites = report.files.reduce((n, f) => n + f.rewrites, 0);
   const unmapped = unmappedOf(report);
+  // A manifest finding gets its own row, so the total is the sum of the column above it.
+  const findings = report.manifestFindings ?? [];
+  const manifestRows = [...new Set(findings.map((f) => f.file))].map((f) => [
+    f,
+    "0",
+    String(findings.filter((x) => x.file === f).length),
+  ]);
 
   const out: string[] = [
     `# @cdktn/provider-aws -> @cdktn/aws (${report.wrote ? "written" : "dry run"})`,
@@ -38,6 +48,7 @@ export function renderReport(report: Report): string {
       ["file", "references rewritten", "unmapped"],
       [
         ...report.files.map((f) => [f.file, String(f.rewrites), String(f.unmapped.length)]),
+        ...manifestRows,
         ["**total**", `**${rewrites}**`, `**${unmapped.length}**`],
       ],
     ),
@@ -54,9 +65,11 @@ export function renderReport(report: Report): string {
           m.file,
           m.block,
           `\`@cdktn/provider-aws@${m.from}\``,
+          // What the manifest actually ends up with — a pre-existing `@cdktn/aws` range this run
+          // kept is not `TARGET_RANGE`, and the report used to print the constant either way.
           m.keptClassic
-            ? "`@cdktn/aws@^0.2.0`, classic kept — the residual imports still need it"
-            : "`@cdktn/aws@^0.2.0`",
+            ? `\`${TARGET_PACKAGE}@${m.to}\`, classic kept — the residual imports still need it`
+            : `\`${TARGET_PACKAGE}@${m.to}\``,
         ]),
       ),
       "",

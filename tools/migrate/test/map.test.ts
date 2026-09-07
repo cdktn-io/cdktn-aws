@@ -8,10 +8,10 @@ import * as fs from "node:fs";
 import * as os from "node:os";
 import * as path from "node:path";
 import { toCamelCase } from "codemaker";
-import { classicModuleOfSpecifier, isClassicSpecifier } from "../src/map";
+import { TARGET_RANGE, classicModuleOfSpecifier, isClassicSpecifier } from "../src/map";
 import { index } from "./helpers";
-import { migrateManifest } from "../src/manifest";
-import { renderReport } from "../src/report";
+import { migrateManifest, satisfiesTarget } from "../src/manifest";
+import { renderReport, unmappedOf } from "../src/report";
 
 describe("the symbol index", () => {
   it("covers every classic submodule the library exports", () => {
@@ -96,10 +96,10 @@ describe("package.json", () => {
     });
     const result = migrateManifest(file, "package.json")!;
     expect(result.changes).toEqual([
-      { file: "package.json", block: "dependencies", from: "^25.3.0", keptClassic: false },
+      { file: "package.json", block: "dependencies", from: "^25.3.0", to: TARGET_RANGE, keptClassic: false },
     ]);
     expect(JSON.parse(result.after).dependencies).toEqual({
-      "@cdktn/aws": "^0.2.0",
+      "@cdktn/aws": TARGET_RANGE,
       cdktn: "0.24.0",
       constructs: "^10.7.0",
     });
@@ -130,6 +130,51 @@ describe("package.json", () => {
     expect(JSON.parse(result.after).dependencies).toEqual({
       "@cdktn/aws": "^0.2.0",
       "@cdktn/provider-aws": "^25.3.0",
+    });
+  });
+
+  // Round 4: the rebuild wrote TARGET_RANGE when it met the classic entry and a later pre-existing
+  // `@cdktn/aws` entry overwrote it, so which range survived fell out of JSON key order — and the
+  // report printed the constant either way.
+  describe("a manifest that already names @cdktn/aws", () => {
+    const partiallyMigrated = (deps: Record<string, string>) =>
+      migrateManifest(write({ name: "example", dependencies: deps }), "package.json")!;
+
+    it.each([
+      ["classic first", { "@cdktn/provider-aws": "25.3.0", "@cdktn/aws": "~0.1.0" }],
+      ["target first", { "@cdktn/aws": "~0.1.0", "@cdktn/provider-aws": "25.3.0" }],
+    ])("refuses an incompatible range in either key order (%s)", (_name, deps) => {
+      const result = partiallyMigrated(deps);
+      expect(result.after).toBe(result.before);
+      expect(result.changes).toEqual([]);
+      expect(result.unmapped.map((u) => u.reason)).toEqual([
+        `existing @cdktn/aws range ~0.1.0 conflicts with ${TARGET_RANGE}: resolve by hand`,
+      ]);
+    });
+
+    it.each([
+      ["classic first", { "@cdktn/provider-aws": "25.3.0", "@cdktn/aws": "~0.2.1" }],
+      ["target first", { "@cdktn/aws": "~0.2.1", "@cdktn/provider-aws": "25.3.0" }],
+    ])("keeps a compatible range as it is, in either key order (%s)", (_name, deps) => {
+      const result = partiallyMigrated(deps);
+      expect(result.unmapped).toEqual([]);
+      expect(result.changes[0].to).toBe("~0.2.1");
+      expect(JSON.parse(result.after).dependencies).toEqual({ "@cdktn/aws": "~0.2.1" });
+    });
+
+    it("answers the range question narrowly, and never with a guess", () => {
+      // Yes only for the set TARGET_RANGE itself allows. A wrong yes pins a consumer to a library
+      // the rewritten source does not compile against, so anything else is a human's problem.
+      expect(satisfiesTarget("^0.2.0")).toBe(true);
+      expect(satisfiesTarget("~0.2.0")).toBe(true);
+      expect(satisfiesTarget("0.2.5")).toBe(true);
+      expect(satisfiesTarget("~0.1.0")).toBe(false);
+      expect(satisfiesTarget("^0.3.0")).toBe(false);
+      expect(satisfiesTarget("0.2.0 || 0.3.0")).toBe(false);
+      expect(satisfiesTarget(">=0.2.0")).toBe(false);
+      expect(satisfiesTarget("workspace:*")).toBe(false);
+      // …and it moves with the constant, which is what a TARGET_RANGE bump has to be able to rely on.
+      expect(satisfiesTarget("^0.3.0", "^0.3.0")).toBe(true);
     });
   });
 
@@ -164,5 +209,31 @@ describe("the report", () => {
       wrote: false,
     });
     expect(report).toContain("| main.ts | 3 | `s3Bucket.Invented` | no naming-map row for this classic export |");
+  });
+
+  it("prints the range the manifest actually ends up with, not the constant", () => {
+    // The column was hardcoded to `@cdktn/aws@^0.2.0` whatever the manifest got.
+    const report = renderReport({
+      files: [],
+      manifests: [
+        { file: "package.json", block: "dependencies", from: "25.3.0", to: "~0.2.1", keptClassic: false },
+      ],
+      wrote: true,
+    });
+    expect(report).toContain("| package.json | dependencies | `@cdktn/provider-aws@25.3.0` | `@cdktn/aws@~0.2.1` |");
+  });
+
+  it("counts a manifest finding towards the unmapped total, which is the exit code", () => {
+    const finding = {
+      file: "package.json",
+      line: 4,
+      symbol: "@cdktn/aws (dependencies)",
+      reason: `existing @cdktn/aws range ~0.1.0 conflicts with ${TARGET_RANGE}: resolve by hand`,
+    };
+    const report = renderReport({ files: [], manifests: [], manifestFindings: [finding], wrote: false });
+    expect(unmappedOf({ files: [], manifests: [], manifestFindings: [finding], wrote: false })).toHaveLength(1);
+    expect(report).toContain("| package.json | 0 | 1 |");
+    expect(report).toContain("| **total** | **0** | **1** |");
+    expect(report).toContain(`| package.json | 4 | \`@cdktn/aws (dependencies)\` | ${finding.reason} |`);
   });
 });
