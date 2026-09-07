@@ -68,8 +68,9 @@ tool restates a naming rule.
 
 It rewrites:
 
-* every import form — deep named, deep `* as`, barrel named, barrel `* as`, and the `require()`
-  spelling of each. Deep and barrel-named imports merge into one sorted
+* every import form — deep named, deep `* as`, barrel named, barrel `* as`, and the loader
+  spellings of each: `require()`, `module.require()` and `const ns = await import('…')`, which all
+  bind the same namespace object. Deep and barrel-named imports merge into one sorted
   `import { … } from '@cdktn/aws'` per file; a `import * as aws from '@cdktn/provider-aws'` keeps
   its shape and only changes package, because `aws.s3.TfBucket` is a perfectly good call site;
 * every reference to those bindings, in value **and** type positions — `typeof`, generics,
@@ -105,7 +106,9 @@ closing `grep` below is there to catch:
 | a shorthand property assignment (`{ S3Bucket }`) | reported — renaming it would rename the property too |
 | a re-export of a classic binding (`export { S3Bucket };`) | reported — `export { s3.TfBucket }` is not valid syntax; re-export it by hand |
 | `export … from '@cdktn/provider-aws/…'`, `export *` | reported — the classic names are part of *your* API there, so the choice is yours |
-| `import x = require('@cdktn/provider-aws/…')`, `import('…')` | reported — the specifier is recognised, the form is not rewritten |
+| `import x = require('@cdktn/provider-aws/…')`, an un-awaited `import('…')` | reported — the specifier is recognised, the form is not rewritten (an un-awaited `import()` binds a Promise, not a namespace) |
+| any other call taking a classic specifier — `require.resolve('…')`, `jest.requireActual('…')`, a `module.require('…')` that is not a whole `const … =` statement | reported — the string is seen, but what the call does with it is not something to guess at |
+| a classic specifier written as a bare string anywhere else | reported — the backstop scans every string literal, not the positions the tool recognises |
 | a subpath with no map row | reported, and its import kept whole |
 | a default import (`import aws from '@cdktn/provider-aws'`) | reported — neither library has a default export, so the binding stays on the classic package, and a `* as` binding sharing that statement stays with it |
 

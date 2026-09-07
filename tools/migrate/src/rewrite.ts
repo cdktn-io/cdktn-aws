@@ -122,15 +122,39 @@ function aliasFor(group: string, taken: Set<string>): string {
   }
 }
 
-/** The `require('…')` call a variable statement is initialised from, if that is what it is. */
-function requiredSpecifier(statement: VariableStatement): string | undefined {
+/** A loader call a variable statement is initialised from, and how the source spells it. */
+interface LoadCall {
+  readonly specifier: string;
+  /** `require`, `module.require`, `await import` — written back verbatim in a residual statement */
+  readonly callee: string;
+}
+
+/** The synchronous loaders that bind a namespace object; `module.require` IS `require` under CJS. */
+const SYNC_LOADERS = new Set(["require", "module.require"]);
+
+/**
+ * The load a variable statement is initialised from, if that is what it is.
+ *
+ * `require`, `module.require` and `await import(…)` all bind the namespace object, so all three
+ * destructure and hop identically and all three are rewritten. A bare `import(…)` binds a Promise
+ * rather than a namespace, so it is left to the backstop rather than guessed at.
+ */
+function loadCall(statement: VariableStatement): LoadCall | undefined {
   const declarations = statement.getDeclarations();
   if (declarations.length !== 1) return undefined;
   const initializer = declarations[0].getInitializer();
-  if (!initializer || !Node.isCallExpression(initializer)) return undefined;
-  if (initializer.getExpression().getText() !== "require") return undefined;
-  const [arg] = initializer.getArguments();
-  return arg && Node.isStringLiteral(arg) ? arg.getLiteralValue() : undefined;
+  if (!initializer) return undefined;
+  const awaited = Node.isAwaitExpression(initializer);
+  const call = awaited ? initializer.getExpression() : initializer;
+  if (!Node.isCallExpression(call)) return undefined;
+  const expression = call.getExpression();
+  const callee = expression.getText();
+  const usable =
+    expression.getKind() === SyntaxKind.ImportKeyword ? awaited : !awaited && SYNC_LOADERS.has(callee);
+  if (!usable) return undefined;
+  const [arg] = call.getArguments();
+  if (!arg || !Node.isStringLiteral(arg)) return undefined;
+  return { specifier: arg.getLiteralValue(), callee: awaited ? `await ${callee}` : callee };
 }
 
 function moduleFor(
@@ -218,7 +242,7 @@ function classicBindings(file: SourceFile, index: SymbolIndex): Binding[] {
   }
 
   for (const statement of file.getVariableStatements()) {
-    const specifier = requiredSpecifier(statement);
+    const specifier = loadCall(statement)?.specifier;
     if (!specifier || !isClassicSpecifier(specifier)) continue;
     const deep = classicModuleOfSpecifier(specifier);
     const declaration = statement.getDeclarations()[0];
@@ -415,13 +439,13 @@ function residualImport(statement: ImportDeclaration | VariableStatement, kept: 
     const keyword = statement.isTypeOnly() ? "import type" : "import";
     return `${keyword} ${clauses.join(", ")} from '${specifier}';`;
   }
-  const specifier = requiredSpecifier(statement)!;
+  const { specifier, callee } = loadCall(statement)!;
   const declaration = statement.getDeclarations()[0];
   const nameNode = declaration.getNameNode();
   const binding = Node.isIdentifier(nameNode)
     ? nameNode.getText()
     : `{ ${kept.map((b) => b.clause).join(", ")} }`;
-  return `${statement.getDeclarationKind()} ${binding} = require('${specifier}');`;
+  return `${statement.getDeclarationKind()} ${binding} = ${callee}('${specifier}');`;
 }
 
 /** Every name the file's imports and `require` destructurings bind, in source order. */
@@ -437,7 +461,7 @@ function importedLocalNames(file: SourceFile): string[] {
     }
   }
   for (const statement of file.getVariableStatements()) {
-    if (!requiredSpecifier(statement)) continue;
+    if (!loadCall(statement)) continue;
     const nameNode = statement.getDeclarations()[0].getNameNode();
     if (Node.isIdentifier(nameNode)) names.push(nameNode.getText());
     else if (Node.isObjectBindingPattern(nameNode)) {
@@ -504,16 +528,30 @@ function isModuleSpecifier(literal: Node): boolean {
   return false;
 }
 
+/** How the source reaches a classic specifier that is not in a module-specifier position. */
+function specifierForm(literal: Node): string {
+  const parent = literal.getParent();
+  if (parent && Node.isCallExpression(parent) && parent.getArguments().some((a) => a === literal)) {
+    return `${parent.getExpression().getText()}(…)`;
+  }
+  return "a string literal";
+}
+
 /**
- * The backstop: every classic specifier this run did not decide about — an import form the tool
- * does not model (`export … from`, `import x = require(…)`, `import('…')`) or a subpath it cannot
- * resolve. Reporting them is not a nicety: `package.json` drops the classic dependency, so a form
- * that is passed over silently leaves the project importing a package it no longer depends on.
+ * The backstop: EVERY classic specifier this run did not decide about, whatever position it is
+ * written in — an import form the tool does not model (`export … from`, `import x = require(…)`,
+ * a bare `import('…')`), a subpath it cannot resolve, a loader it does not know (`require.resolve`,
+ * `jest.requireActual`), or a bare string somewhere else entirely.
+ *
+ * It scans every string literal rather than the positions the tool recognises, because a form the
+ * recognizer misses is exactly the one this exists to catch. Reporting is not a nicety:
+ * `package.json` drops the classic dependency, so a specifier that is passed over silently leaves
+ * the project loading a package it no longer depends on, at exit 0.
  */
 function unhandledClassicImports(file: SourceFile, handled: ReadonlySet<Node>, relative: string): Unmapped[] {
   const findings: Unmapped[] = [];
   for (const literal of file.getDescendantsOfKind(SyntaxKind.StringLiteral)) {
-    if (!isClassicSpecifier(literal.getLiteralValue()) || !isModuleSpecifier(literal)) continue;
+    if (!isClassicSpecifier(literal.getLiteralValue())) continue;
     let owner: Node | undefined = literal;
     while (owner && !handled.has(owner)) owner = owner.getParent();
     if (owner) continue;
@@ -521,7 +559,9 @@ function unhandledClassicImports(file: SourceFile, handled: ReadonlySet<Node>, r
       file: relative,
       line: lineOf(literal),
       symbol: literal.getLiteralValue(),
-      reason: "classic import form the tool does not rewrite — move it by hand",
+      reason: isModuleSpecifier(literal)
+        ? "classic import form the tool does not rewrite — move it by hand"
+        : `classic specifier left in place: ${specifierForm(literal)} — move it by hand`,
     });
   }
   return findings;

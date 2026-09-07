@@ -101,6 +101,42 @@ describe("import forms", () => {
     );
   });
 
+  it("rewrites `module.require` and `await import`, which bind the same namespace object", () => {
+    expect(
+      migrated(
+        [
+          "const s3Bucket = module.require('@cdktn/provider-aws/lib/s3-bucket');",
+          "const { IamRole } = module.require('@cdktn/provider-aws/lib/iam-role');",
+          "const iamPolicy = await import('@cdktn/provider-aws/lib/iam-policy');",
+          "new s3Bucket.S3Bucket(this, 'b', { bucket: 'x' });",
+          "new IamRole(this, 'r', {});",
+          "new iamPolicy.IamPolicy(this, 'p', {});",
+        ].join("\n"),
+      ),
+    ).toBe(
+      [
+        "import { iam, s3 } from '@cdktn/aws';",
+        "new s3.TfBucket(this, 'b', { bucket: 'x' });",
+        "new iam.TfRole(this, 'r', {});",
+        "new iam.TfPolicy(this, 'p', {});",
+      ].join("\n"),
+    );
+  });
+
+  it("spells a residual `module.require` back as `module.require`, not as `require`", () => {
+    // The residual has to be the same load the file had: `require` is not in scope in an ES module,
+    // and rewriting the callee would be a change the tool never decided to make.
+    const result = migrate(
+      [
+        "const { S3Bucket, Invented } = module.require('@cdktn/provider-aws/lib/s3-bucket');",
+        "export const x = (s: any) => [new S3Bucket(s, 'b', {}), Invented];",
+      ].join("\n"),
+    );
+    expect(result.after).toContain(
+      "const { Invented } = module.require('@cdktn/provider-aws/lib/s3-bucket');",
+    );
+  });
+
   it("rewrites the split-out structs subpath of a large module", () => {
     expect(
       migrated(
@@ -173,6 +209,44 @@ describe("forms the tool does not model", () => {
         ].join("\n"),
       ).map(([symbol]) => symbol),
     ).toEqual(["@cdktn/provider-aws/lib/s3-bucket", "@cdktn/provider-aws/lib/iam-role"]);
+  });
+
+  it("reports a loader it does not know, wherever the specifier is written", () => {
+    // Round 4: the recognizer only knew a bare `require`, so `module.require` in a form it cannot
+    // rewrite — and every other call taking the specifier — was neither rewritten NOR reported, and
+    // `--write` dropped the classic dependency out from under a file that still loads it.
+    expect(
+      reasons(
+        [
+          "export const p = require.resolve('@cdktn/provider-aws/lib/s3-bucket');",
+          "export const q = jest.requireActual('@cdktn/provider-aws/lib/iam-role');",
+          "export const r = load(module.require('@cdktn/provider-aws/lib/iam-policy'));",
+          "console.log('@cdktn/provider-aws');",
+        ].join("\n"),
+      ),
+    ).toEqual([
+      [
+        "@cdktn/provider-aws/lib/s3-bucket",
+        "classic specifier left in place: require.resolve(…) — move it by hand",
+      ],
+      [
+        "@cdktn/provider-aws/lib/iam-role",
+        "classic specifier left in place: jest.requireActual(…) — move it by hand",
+      ],
+      [
+        "@cdktn/provider-aws/lib/iam-policy",
+        "classic specifier left in place: module.require(…) — move it by hand",
+      ],
+      ["@cdktn/provider-aws", "classic specifier left in place: console.log(…) — move it by hand"],
+    ]);
+  });
+
+  it("reports a bare `import('…')` bound to a variable — a Promise is not a namespace", () => {
+    const source = "const s3Bucket = import('@cdktn/provider-aws/lib/s3-bucket');";
+    expect(reasons(source)).toEqual([
+      ["@cdktn/provider-aws/lib/s3-bucket", "classic import form the tool does not rewrite — move it by hand"],
+    ]);
+    expect(migrate(source).after).toBe(source);
   });
 
   it("reports a subpath with no map row instead of dropping its import", () => {
