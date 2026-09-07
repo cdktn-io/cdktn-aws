@@ -13,10 +13,10 @@
 // names the real terraform types.
 //
 // Run it with `node scripts/go-consumer.mjs` from the repository root, which writes the `go.work`
-// that points this at the local fleet checkout. The fleet is published at the names below — every
-// module resolves at `v0.2.0` through `proxy.golang.org` — but the committed example stays in
-// workspace mode so that it measures the tree in this repository rather than the last release.
-// See README.md.
+// that points this at the local fleet checkout. Workspace mode is what makes that possible, and it
+// is also what makes this file honest today: the names below are 0.3.0's, and 0.3.0 is not
+// published yet. The published fleet is v0.2.0, at the old `awss3.NewTfBucket` spelling. Once
+// 0.3.0 ships, a follow-up says so here. See README.md.
 package main
 
 import (
@@ -31,50 +31,52 @@ import (
 	"github.com/aws/jsii-runtime-go"
 	"github.com/open-constructs/cdk-terrain-go/cdktn"
 
-	"github.com/cdktn-io/cdktn-aws-go/awsapigatewayv2"
-	"github.com/cdktn-io/cdktn-aws-go/awsathena"
-	"github.com/cdktn-io/cdktn-aws-go/awscloudcontrolapi"
-	"github.com/cdktn-io/cdktn-aws-go/awscloudfront"
-	"github.com/cdktn-io/cdktn-aws-go/awscloudwatchlogs"
-	"github.com/cdktn-io/cdktn-aws-go/awsdetective"
-	"github.com/cdktn-io/cdktn-aws-go/awsdynamodb"
-	"github.com/cdktn-io/cdktn-aws-go/awsec2"
-	"github.com/cdktn-io/cdktn-aws-go/awsecr"
-	"github.com/cdktn-io/cdktn-aws-go/awsecs"
-	"github.com/cdktn-io/cdktn-aws-go/awsefs"
-	"github.com/cdktn-io/cdktn-aws-go/awseks"
-	"github.com/cdktn-io/cdktn-aws-go/awselasticache"
-	"github.com/cdktn-io/cdktn-aws-go/awselb"
-	"github.com/cdktn-io/cdktn-aws-go/awselementalmediastore"
-	"github.com/cdktn-io/cdktn-aws-go/awsglue"
-	"github.com/cdktn-io/cdktn-aws-go/awsiam"
-	"github.com/cdktn-io/cdktn-aws-go/awskinesis"
-	"github.com/cdktn-io/cdktn-aws-go/awskinesisvideo"
-	"github.com/cdktn-io/cdktn-aws-go/awskms"
-	"github.com/cdktn-io/cdktn-aws-go/awslambda"
-	"github.com/cdktn-io/cdktn-aws-go/awsprovider"
-	"github.com/cdktn-io/cdktn-aws-go/awsrds"
-	"github.com/cdktn-io/cdktn-aws-go/awsroute53"
-	"github.com/cdktn-io/cdktn-aws-go/awss3"
-	"github.com/cdktn-io/cdktn-aws-go/awss3glacier"
-	"github.com/cdktn-io/cdktn-aws-go/awssecretsmanager"
-	"github.com/cdktn-io/cdktn-aws-go/awssfn"
-	"github.com/cdktn-io/cdktn-aws-go/awssns"
-	"github.com/cdktn-io/cdktn-aws-go/awssqs"
-	"github.com/cdktn-io/cdktn-aws-go/awsssm"
-	"github.com/cdktn-io/cdktn-aws-go/awssts"
-	"github.com/cdktn-io/cdktn-aws-go/awsswf"
-	"github.com/cdktn-io/cdktn-aws-go/awsusernotificationscontacts"
-	"github.com/cdktn-io/cdktn-aws-go/awswavelength"
-	"github.com/cdktn-io/cdktn-aws-go/awsxray"
+	"github.com/cdktn-io/cdktn-aws-go/apigatewayv2"
+	"github.com/cdktn-io/cdktn-aws-go/athena"
+	"github.com/cdktn-io/cdktn-aws-go/cloudcontrolapi"
+	"github.com/cdktn-io/cdktn-aws-go/cloudfront"
+	"github.com/cdktn-io/cdktn-aws-go/cloudwatchlogs"
+	"github.com/cdktn-io/cdktn-aws-go/detective"
+	"github.com/cdktn-io/cdktn-aws-go/dynamodb"
+	"github.com/cdktn-io/cdktn-aws-go/ec2"
+	"github.com/cdktn-io/cdktn-aws-go/ecr"
+	"github.com/cdktn-io/cdktn-aws-go/ecs"
+	"github.com/cdktn-io/cdktn-aws-go/efs"
+	"github.com/cdktn-io/cdktn-aws-go/eks"
+	"github.com/cdktn-io/cdktn-aws-go/elasticache"
+	"github.com/cdktn-io/cdktn-aws-go/elb"
+	"github.com/cdktn-io/cdktn-aws-go/elementalmediastore"
+	"github.com/cdktn-io/cdktn-aws-go/glue"
+	"github.com/cdktn-io/cdktn-aws-go/iam"
+	"github.com/cdktn-io/cdktn-aws-go/kinesis"
+	"github.com/cdktn-io/cdktn-aws-go/kinesisvideo"
+	"github.com/cdktn-io/cdktn-aws-go/kms"
+	"github.com/cdktn-io/cdktn-aws-go/lambda"
+	// aliased: with 0.3.0 dropping the `aws` prefix, the package name `provider` collides with the
+	// obvious name for the construct this program builds from it.
+	awsprovider "github.com/cdktn-io/cdktn-aws-go/provider"
+	"github.com/cdktn-io/cdktn-aws-go/rds"
+	"github.com/cdktn-io/cdktn-aws-go/route53"
+	"github.com/cdktn-io/cdktn-aws-go/s3"
+	"github.com/cdktn-io/cdktn-aws-go/s3glacier"
+	"github.com/cdktn-io/cdktn-aws-go/secretsmanager"
+	"github.com/cdktn-io/cdktn-aws-go/sfn"
+	"github.com/cdktn-io/cdktn-aws-go/sns"
+	"github.com/cdktn-io/cdktn-aws-go/sqs"
+	"github.com/cdktn-io/cdktn-aws-go/ssm"
+	"github.com/cdktn-io/cdktn-aws-go/sts"
+	"github.com/cdktn-io/cdktn-aws-go/swf"
+	"github.com/cdktn-io/cdktn-aws-go/usernotificationscontacts"
+	"github.com/cdktn-io/cdktn-aws-go/wavelength"
+	"github.com/cdktn-io/cdktn-aws-go/xray"
 )
 
-// One entry per fleet module the program imports. `tfType` is the terraform type the construct
+// One entry per fleet module the program imports. `awsType` is the terraform type the construct
 // must land under in cdk.tf.json — asserted after synth, so a construct that silently changes
 // its resource type fails the run rather than the review.
 type sample struct {
 	module  string
-	tfType  string
+	awsType  string
 	isData  bool
 	build   func(stack cdktn.TerraformStack)
 	elapsed time.Duration
@@ -82,119 +84,119 @@ type sample struct {
 
 func samples() []*sample {
 	return []*sample{
-		{module: "awsapigatewayv2", tfType: "aws_apigatewayv2_deployment", build: func(s cdktn.TerraformStack) {
-			awsapigatewayv2.NewTfDeployment(s, jsii.String("apigwv2"), &awsapigatewayv2.TfDeploymentConfig{ApiId: jsii.String("a1b2c3")})
+		{module: "apigatewayv2", awsType: "aws_apigatewayv2_deployment", build: func(s cdktn.TerraformStack) {
+			apigatewayv2.NewAwsDeployment(s, jsii.String("apigwv2"), &apigatewayv2.AwsDeploymentConfig{ApiId: jsii.String("a1b2c3")})
 		}},
-		{module: "awsathena", tfType: "aws_athena_workgroup", build: func(s cdktn.TerraformStack) {
-			awsathena.NewTfWorkgroup(s, jsii.String("athena"), &awsathena.TfWorkgroupConfig{Name: jsii.String("consumer-wg")})
+		{module: "athena", awsType: "aws_athena_workgroup", build: func(s cdktn.TerraformStack) {
+			athena.NewAwsWorkgroup(s, jsii.String("athena"), &athena.AwsWorkgroupConfig{Name: jsii.String("consumer-wg")})
 		}},
-		{module: "awscloudcontrolapi", tfType: "aws_cloudcontrolapi_resource", build: func(s cdktn.TerraformStack) {
-			awscloudcontrolapi.NewTfResource(s, jsii.String("ccapi"), &awscloudcontrolapi.TfResourceConfig{
+		{module: "cloudcontrolapi", awsType: "aws_cloudcontrolapi_resource", build: func(s cdktn.TerraformStack) {
+			cloudcontrolapi.NewAwsResource(s, jsii.String("ccapi"), &cloudcontrolapi.AwsResourceConfig{
 				DesiredState: jsii.String(`{"LogGroupName":"consumer"}`),
 				TypeName:     jsii.String("AWS::Logs::LogGroup"),
 			})
 		}},
-		{module: "awscloudfront", tfType: "aws_cloudfront_origin_access_identity", build: func(s cdktn.TerraformStack) {
-			awscloudfront.NewTfOriginAccessIdentity(s, jsii.String("oai"), &awscloudfront.TfOriginAccessIdentityConfig{})
+		{module: "cloudfront", awsType: "aws_cloudfront_origin_access_identity", build: func(s cdktn.TerraformStack) {
+			cloudfront.NewAwsOriginAccessIdentity(s, jsii.String("oai"), &cloudfront.AwsOriginAccessIdentityConfig{})
 		}},
-		{module: "awscloudwatchlogs", tfType: "aws_cloudwatch_log_group", build: func(s cdktn.TerraformStack) {
-			awscloudwatchlogs.NewTfGroup(s, jsii.String("logs"), &awscloudwatchlogs.TfGroupConfig{Name: jsii.String("/consumer/log")})
+		{module: "cloudwatchlogs", awsType: "aws_cloudwatch_log_group", build: func(s cdktn.TerraformStack) {
+			cloudwatchlogs.NewAwsGroup(s, jsii.String("logs"), &cloudwatchlogs.AwsGroupConfig{Name: jsii.String("/consumer/log")})
 		}},
-		{module: "awsdetective", tfType: "aws_detective_graph", build: func(s cdktn.TerraformStack) {
-			awsdetective.NewTfGraph(s, jsii.String("detective"), &awsdetective.TfGraphConfig{})
+		{module: "detective", awsType: "aws_detective_graph", build: func(s cdktn.TerraformStack) {
+			detective.NewAwsGraph(s, jsii.String("detective"), &detective.AwsGraphConfig{})
 		}},
-		{module: "awsdynamodb", tfType: "aws_dynamodb_table", build: func(s cdktn.TerraformStack) {
-			awsdynamodb.NewTfTable(s, jsii.String("ddb"), &awsdynamodb.TfTableConfig{Name: jsii.String("consumer-table")})
+		{module: "dynamodb", awsType: "aws_dynamodb_table", build: func(s cdktn.TerraformStack) {
+			dynamodb.NewAwsTable(s, jsii.String("ddb"), &dynamodb.AwsTableConfig{Name: jsii.String("consumer-table")})
 		}},
-		{module: "awsec2", tfType: "aws_ec2_instance_metadata_defaults", build: func(s cdktn.TerraformStack) {
-			awsec2.NewTfInstanceMetadataDefaults(s, jsii.String("imds"), &awsec2.TfInstanceMetadataDefaultsConfig{HttpTokens: jsii.String("required")})
+		{module: "ec2", awsType: "aws_ec2_instance_metadata_defaults", build: func(s cdktn.TerraformStack) {
+			ec2.NewAwsInstanceMetadataDefaults(s, jsii.String("imds"), &ec2.AwsInstanceMetadataDefaultsConfig{HttpTokens: jsii.String("required")})
 		}},
-		{module: "awsecr", tfType: "aws_ecr_replication_configuration", build: func(s cdktn.TerraformStack) {
-			awsecr.NewTfReplicationConfiguration(s, jsii.String("ecrrepl"), &awsecr.TfReplicationConfigurationConfig{})
+		{module: "ecr", awsType: "aws_ecr_replication_configuration", build: func(s cdktn.TerraformStack) {
+			ecr.NewAwsReplicationConfiguration(s, jsii.String("ecrrepl"), &ecr.AwsReplicationConfigurationConfig{})
 		}},
-		{module: "awsecs", tfType: "aws_ecs_cluster", build: func(s cdktn.TerraformStack) {
-			awsecs.NewTfCluster(s, jsii.String("ecs"), &awsecs.TfClusterConfig{Name: jsii.String("consumer-cluster")})
+		{module: "ecs", awsType: "aws_ecs_cluster", build: func(s cdktn.TerraformStack) {
+			ecs.NewAwsCluster(s, jsii.String("ecs"), &ecs.AwsClusterConfig{Name: jsii.String("consumer-cluster")})
 		}},
-		{module: "awsefs", tfType: "aws_efs_file_system", build: func(s cdktn.TerraformStack) {
-			awsefs.NewTfFileSystem(s, jsii.String("efs"), &awsefs.TfFileSystemConfig{Encrypted: jsii.Bool(true)})
+		{module: "efs", awsType: "aws_efs_file_system", build: func(s cdktn.TerraformStack) {
+			efs.NewAwsFileSystem(s, jsii.String("efs"), &efs.AwsFileSystemConfig{Encrypted: jsii.Bool(true)})
 		}},
-		{module: "awseks", tfType: "aws_eks_access_entry", build: func(s cdktn.TerraformStack) {
-			awseks.NewTfAccessEntry(s, jsii.String("eks"), &awseks.TfAccessEntryConfig{
+		{module: "eks", awsType: "aws_eks_access_entry", build: func(s cdktn.TerraformStack) {
+			eks.NewAwsAccessEntry(s, jsii.String("eks"), &eks.AwsAccessEntryConfig{
 				ClusterName:  jsii.String("consumer-eks"),
 				PrincipalArn: jsii.String("arn:aws:iam::123456789012:role/consumer"),
 			})
 		}},
-		{module: "awselasticache", tfType: "aws_elasticache_cluster", build: func(s cdktn.TerraformStack) {
-			awselasticache.NewTfCluster(s, jsii.String("cache"), &awselasticache.TfClusterConfig{ClusterId: jsii.String("consumer-cache")})
+		{module: "elasticache", awsType: "aws_elasticache_cluster", build: func(s cdktn.TerraformStack) {
+			elasticache.NewAwsCluster(s, jsii.String("cache"), &elasticache.AwsClusterConfig{ClusterId: jsii.String("consumer-cache")})
 		}},
-		{module: "awselb", tfType: "aws_alb", build: func(s cdktn.TerraformStack) {
-			awselb.NewTfAlb(s, jsii.String("alb"), &awselb.TfAlbConfig{Name: jsii.String("consumer-alb"), Internal: jsii.Bool(true)})
+		{module: "elb", awsType: "aws_alb", build: func(s cdktn.TerraformStack) {
+			elb.NewAwsAlb(s, jsii.String("alb"), &elb.AwsAlbConfig{Name: jsii.String("consumer-alb"), Internal: jsii.Bool(true)})
 		}},
-		{module: "awselementalmediastore", tfType: "aws_media_store_container", build: func(s cdktn.TerraformStack) {
-			awselementalmediastore.NewTfContainer(s, jsii.String("mediastore"), &awselementalmediastore.TfContainerConfig{Name: jsii.String("consumercontainer")})
+		{module: "elementalmediastore", awsType: "aws_media_store_container", build: func(s cdktn.TerraformStack) {
+			elementalmediastore.NewAwsContainer(s, jsii.String("mediastore"), &elementalmediastore.AwsContainerConfig{Name: jsii.String("consumercontainer")})
 		}},
-		{module: "awsglue", tfType: "aws_glue_workflow", build: func(s cdktn.TerraformStack) {
-			awsglue.NewTfWorkflow(s, jsii.String("glue"), &awsglue.TfWorkflowConfig{Name: jsii.String("consumer-workflow")})
+		{module: "glue", awsType: "aws_glue_workflow", build: func(s cdktn.TerraformStack) {
+			glue.NewAwsWorkflow(s, jsii.String("glue"), &glue.AwsWorkflowConfig{Name: jsii.String("consumer-workflow")})
 		}},
-		{module: "awsiam", tfType: "aws_iam_account_password_policy", build: func(s cdktn.TerraformStack) {
-			awsiam.NewTfAccountPasswordPolicy(s, jsii.String("iampw"), &awsiam.TfAccountPasswordPolicyConfig{MinimumPasswordLength: jsii.Number(24)})
+		{module: "iam", awsType: "aws_iam_account_password_policy", build: func(s cdktn.TerraformStack) {
+			iam.NewAwsAccountPasswordPolicy(s, jsii.String("iampw"), &iam.AwsAccountPasswordPolicyConfig{MinimumPasswordLength: jsii.Number(24)})
 		}},
-		{module: "awskinesis", tfType: "aws_kinesis_account_settings", build: func(s cdktn.TerraformStack) {
-			awskinesis.NewTfAccountSettings(s, jsii.String("kinesisacct"), &awskinesis.TfAccountSettingsConfig{})
+		{module: "kinesis", awsType: "aws_kinesis_account_settings", build: func(s cdktn.TerraformStack) {
+			kinesis.NewAwsAccountSettings(s, jsii.String("kinesisacct"), &kinesis.AwsAccountSettingsConfig{})
 		}},
-		{module: "awskinesisvideo", tfType: "aws_kinesis_video_stream", build: func(s cdktn.TerraformStack) {
-			awskinesisvideo.NewTfStream(s, jsii.String("kvs"), &awskinesisvideo.TfStreamConfig{Name: jsii.String("consumer-kvs")})
+		{module: "kinesisvideo", awsType: "aws_kinesis_video_stream", build: func(s cdktn.TerraformStack) {
+			kinesisvideo.NewAwsStream(s, jsii.String("kvs"), &kinesisvideo.AwsStreamConfig{Name: jsii.String("consumer-kvs")})
 		}},
-		{module: "awskms", tfType: "aws_kms_external_key", build: func(s cdktn.TerraformStack) {
-			awskms.NewTfExternalKey(s, jsii.String("kms"), &awskms.TfExternalKeyConfig{Description: jsii.String("consumer key")})
+		{module: "kms", awsType: "aws_kms_external_key", build: func(s cdktn.TerraformStack) {
+			kms.NewAwsExternalKey(s, jsii.String("kms"), &kms.AwsExternalKeyConfig{Description: jsii.String("consumer key")})
 		}},
-		{module: "awslambda", tfType: "aws_lambda_capacity_provider", build: func(s cdktn.TerraformStack) {
-			awslambda.NewTfCapacityProvider(s, jsii.String("lambdacap"), &awslambda.TfCapacityProviderConfig{Name: jsii.String("consumer-capacity")})
+		{module: "lambda", awsType: "aws_lambda_capacity_provider", build: func(s cdktn.TerraformStack) {
+			lambda.NewAwsCapacityProvider(s, jsii.String("lambdacap"), &lambda.AwsCapacityProviderConfig{Name: jsii.String("consumer-capacity")})
 		}},
-		{module: "awsrds", tfType: "aws_db_event_subscription", build: func(s cdktn.TerraformStack) {
-			awsrds.NewTfDbEventSubscription(s, jsii.String("rdsevents"), &awsrds.TfDbEventSubscriptionConfig{SnsTopic: jsii.String("arn:aws:sns:eu-west-1:123456789012:consumer")})
+		{module: "rds", awsType: "aws_db_event_subscription", build: func(s cdktn.TerraformStack) {
+			rds.NewAwsDbEventSubscription(s, jsii.String("rdsevents"), &rds.AwsDbEventSubscriptionConfig{SnsTopic: jsii.String("arn:aws:sns:eu-west-1:123456789012:consumer")})
 		}},
-		{module: "awsroute53", tfType: "aws_route53_delegation_set", build: func(s cdktn.TerraformStack) {
-			awsroute53.NewTfDelegationSet(s, jsii.String("r53ds"), &awsroute53.TfDelegationSetConfig{ReferenceName: jsii.String("consumer")})
+		{module: "route53", awsType: "aws_route53_delegation_set", build: func(s cdktn.TerraformStack) {
+			route53.NewAwsDelegationSet(s, jsii.String("r53ds"), &route53.AwsDelegationSetConfig{ReferenceName: jsii.String("consumer")})
 		}},
-		{module: "awss3", tfType: "aws_s3_bucket", build: func(s cdktn.TerraformStack) {
-			awss3.NewTfBucket(s, jsii.String("bucket"), &awss3.TfBucketConfig{Bucket: jsii.String("consumer-bucket")})
+		{module: "s3", awsType: "aws_s3_bucket", build: func(s cdktn.TerraformStack) {
+			s3.NewAwsBucket(s, jsii.String("bucket"), &s3.AwsBucketConfig{Bucket: jsii.String("consumer-bucket")})
 		}},
-		{module: "awss3glacier", tfType: "aws_glacier_vault", build: func(s cdktn.TerraformStack) {
-			awss3glacier.NewTfVault(s, jsii.String("vault"), &awss3glacier.TfVaultConfig{Name: jsii.String("consumer-vault")})
+		{module: "s3glacier", awsType: "aws_glacier_vault", build: func(s cdktn.TerraformStack) {
+			s3glacier.NewAwsVault(s, jsii.String("vault"), &s3glacier.AwsVaultConfig{Name: jsii.String("consumer-vault")})
 		}},
-		{module: "awssecretsmanager", tfType: "aws_secretsmanager_secret", build: func(s cdktn.TerraformStack) {
-			awssecretsmanager.NewTfSecret(s, jsii.String("secret"), &awssecretsmanager.TfSecretConfig{Name: jsii.String("consumer-secret")})
+		{module: "secretsmanager", awsType: "aws_secretsmanager_secret", build: func(s cdktn.TerraformStack) {
+			secretsmanager.NewAwsSecret(s, jsii.String("secret"), &secretsmanager.AwsSecretConfig{Name: jsii.String("consumer-secret")})
 		}},
-		{module: "awssfn", tfType: "aws_sfn_activity", build: func(s cdktn.TerraformStack) {
-			awssfn.NewTfActivity(s, jsii.String("sfn"), &awssfn.TfActivityConfig{Name: jsii.String("consumer-activity")})
+		{module: "sfn", awsType: "aws_sfn_activity", build: func(s cdktn.TerraformStack) {
+			sfn.NewAwsActivity(s, jsii.String("sfn"), &sfn.AwsActivityConfig{Name: jsii.String("consumer-activity")})
 		}},
-		{module: "awssns", tfType: "aws_sns_sms_preferences", build: func(s cdktn.TerraformStack) {
-			awssns.NewTfSmsPreferences(s, jsii.String("snsprefs"), &awssns.TfSmsPreferencesConfig{})
+		{module: "sns", awsType: "aws_sns_sms_preferences", build: func(s cdktn.TerraformStack) {
+			sns.NewAwsSmsPreferences(s, jsii.String("snsprefs"), &sns.AwsSmsPreferencesConfig{})
 		}},
-		{module: "awssqs", tfType: "aws_sqs_queue", build: func(s cdktn.TerraformStack) {
-			awssqs.NewTfQueue(s, jsii.String("queue"), &awssqs.TfQueueConfig{Name: jsii.String("consumer-queue")})
+		{module: "sqs", awsType: "aws_sqs_queue", build: func(s cdktn.TerraformStack) {
+			sqs.NewAwsQueue(s, jsii.String("queue"), &sqs.AwsQueueConfig{Name: jsii.String("consumer-queue")})
 		}},
-		{module: "awsssm", tfType: "aws_ssm_activation", build: func(s cdktn.TerraformStack) {
-			awsssm.NewTfActivation(s, jsii.String("ssm"), &awsssm.TfActivationConfig{IamRole: jsii.String("consumer-ssm-role")})
+		{module: "ssm", awsType: "aws_ssm_activation", build: func(s cdktn.TerraformStack) {
+			ssm.NewAwsActivation(s, jsii.String("ssm"), &ssm.AwsActivationConfig{IamRole: jsii.String("consumer-ssm-role")})
 		}},
-		{module: "awssts", tfType: "aws_caller_identity", isData: true, build: func(s cdktn.TerraformStack) {
-			awssts.NewDataTfCallerIdentity(s, jsii.String("caller"), &awssts.DataTfCallerIdentityConfig{})
+		{module: "sts", awsType: "aws_caller_identity", isData: true, build: func(s cdktn.TerraformStack) {
+			sts.NewDataAwsCallerIdentity(s, jsii.String("caller"), &sts.DataAwsCallerIdentityConfig{})
 		}},
-		{module: "awsswf", tfType: "aws_swf_domain", build: func(s cdktn.TerraformStack) {
-			awsswf.NewTfDomain(s, jsii.String("swf"), &awsswf.TfDomainConfig{WorkflowExecutionRetentionPeriodInDays: jsii.String("7")})
+		{module: "swf", awsType: "aws_swf_domain", build: func(s cdktn.TerraformStack) {
+			swf.NewAwsDomain(s, jsii.String("swf"), &swf.AwsDomainConfig{WorkflowExecutionRetentionPeriodInDays: jsii.String("7")})
 		}},
-		{module: "awsusernotificationscontacts", tfType: "aws_notificationscontacts_email_contact", build: func(s cdktn.TerraformStack) {
-			awsusernotificationscontacts.NewTfEmailContact(s, jsii.String("contact"), &awsusernotificationscontacts.TfEmailContactConfig{
+		{module: "usernotificationscontacts", awsType: "aws_notificationscontacts_email_contact", build: func(s cdktn.TerraformStack) {
+			usernotificationscontacts.NewAwsEmailContact(s, jsii.String("contact"), &usernotificationscontacts.AwsEmailContactConfig{
 				EmailAddress: jsii.String("ops@example.invalid"),
 				Name:         jsii.String("consumer-ops"),
 			})
 		}},
-		{module: "awswavelength", tfType: "aws_ec2_carrier_gateway", build: func(s cdktn.TerraformStack) {
-			awswavelength.NewTfCarrierGateway(s, jsii.String("carriergw"), &awswavelength.TfCarrierGatewayConfig{VpcId: jsii.String("vpc-0123456789abcdef0")})
+		{module: "wavelength", awsType: "aws_ec2_carrier_gateway", build: func(s cdktn.TerraformStack) {
+			wavelength.NewAwsCarrierGateway(s, jsii.String("carriergw"), &wavelength.AwsCarrierGatewayConfig{VpcId: jsii.String("vpc-0123456789abcdef0")})
 		}},
-		{module: "awsxray", tfType: "aws_xray_encryption_config", build: func(s cdktn.TerraformStack) {
-			awsxray.NewTfEncryptionConfig(s, jsii.String("xray"), &awsxray.TfEncryptionConfigConfig{Type: jsii.String("NONE")})
+		{module: "xray", awsType: "aws_xray_encryption_config", build: func(s cdktn.TerraformStack) {
+			xray.NewAwsEncryptionConfig(s, jsii.String("xray"), &xray.AwsEncryptionConfigConfig{Type: jsii.String("NONE")})
 		}},
 	}
 }
@@ -252,9 +254,9 @@ func main() {
 	// (4) A construct-only control: a second resource out of an assembly that is already loaded.
 	// first-touch minus this is the part of the per-group cost that is really assembly load.
 	tCtl := time.Now()
-	awss3.NewTfBucketVersioning(stack, jsii.String("versioning"), &awss3.TfBucketVersioningConfig{
+	s3.NewAwsBucketVersioning(stack, jsii.String("versioning"), &s3.AwsBucketVersioningConfig{
 		Bucket:                  jsii.String("consumer-bucket"),
-		VersioningConfiguration: &awss3.TfBucketVersioning_VersioningConfigurationProperty{Status: jsii.String("Enabled")},
+		VersioningConfiguration: &s3.AwsBucketVersioning_VersioningConfigurationProperty{Status: jsii.String("Enabled")},
 	})
 	construct := time.Since(tCtl)
 
@@ -341,8 +343,8 @@ func assert(outdir string, all []*sample, arn *string) {
 		if s.isData {
 			bag = doc.Data
 		}
-		if _, ok := bag[s.tfType]; !ok {
-			missing = append(missing, s.module+":"+s.tfType)
+		if _, ok := bag[s.awsType]; !ok {
+			missing = append(missing, s.module+":"+s.awsType)
 		}
 	}
 	check(len(missing) == 0, "all %d group terraform types present (missing: %v)", len(all), missing)

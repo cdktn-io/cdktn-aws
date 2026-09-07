@@ -33,7 +33,7 @@ restates a naming decision.
 | `S3BucketCorsRule` | `s3.AwsBucket.CorsRuleProperty` |
 | `S3BucketCorsRuleOutputReference` / `…List` | `s3.AwsBucket.CorsRulePropertyOutputReference` / `…PropertyList` |
 | `s3BucketCorsRuleToTerraform` | `s3.awsBucketMapperCorsRulePropertyToTerraform` |
-| `@cdktn/provider-aws` in `package.json` | `@cdktn/aws@^0.2.0` |
+| `@cdktn/provider-aws` in `package.json` | `@cdktn/aws@^0.3.0` |
 
 The `require()` forms of every import shape are handled too, and every occurrence is resolved
 through the TypeScript symbol rather than by matching text — so a local `const S3Bucket = …`, a

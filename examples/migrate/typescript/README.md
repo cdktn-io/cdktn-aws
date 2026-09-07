@@ -52,10 +52,10 @@ publishes, minus the copy-in.
 +const ASSUME_ROLE: provider.AwsProvider.AssumeRoleProperty = { … };
 
 -new s3BucketVersioning.S3BucketVersioningA(this, 'assets-versioning', { … });
-+new s3.TfBucketVersioning(this, 'assets-versioning', { … });
++new s3.AwsBucketVersioning(this, 'assets-versioning', { … });
 
 -new alb.Alb(this, 'edge', { … });
-+new elb.TfAlb(this, 'edge', { … });
++new elb.AwsAlb(this, 'edge', { … });
 ```
 
 Four import declarations become one; six classic submodules collapse into six service groups.
