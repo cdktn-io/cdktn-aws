@@ -11,6 +11,11 @@
  */
 import * as fs from "node:fs";
 import * as path from "node:path";
+import {
+  PROVIDER_GROUP,
+  goPackageName as generatorGoPackageName,
+  readGroups,
+} from "../src/groups";
 import type { HashesManifest } from "../src/hashes";
 import {
   fleetVersion,
@@ -140,6 +145,15 @@ describe("tag and module naming", () => {
     expect(goPackageName("msk_connect")).toBe("mskconnect");
     expect(goPackageName("lex_v2_models")).toBe("lexv2models");
     expect(goPackageName("s3")).toBe("s3");
+  });
+
+  it("agrees with the generator's copy on every real slug", () => {
+    // `release-plan.ts` restates `goPackageName` deliberately, and its comment promises the two are
+    // caught disagreeing. Nothing asserted that: both were only ever tested apart, against their
+    // own restatements of the rule. This is the loop, over the names that actually get published.
+    for (const slug of [...Object.keys(readGroups().groups), PROVIDER_GROUP]) {
+      expect([slug, goPackageName(slug)]).toEqual([slug, generatorGoPackageName(slug)]);
+    }
   });
 
   it("puts the /vN suffix in the module path, so the tag is <dir>/v2/vX.Y.Z", () => {
