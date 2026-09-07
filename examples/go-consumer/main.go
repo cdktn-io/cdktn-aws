@@ -76,7 +76,7 @@ import (
 // its resource type fails the run rather than the review.
 type sample struct {
 	module  string
-	awsType  string
+	awsType string
 	isData  bool
 	build   func(stack cdktn.TerraformStack)
 	elapsed time.Duration

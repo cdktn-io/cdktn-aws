@@ -1,8 +1,9 @@
 # `examples/go-consumer`
 
 A Go program that consumes 36 modules of the assembled fleet — `provider` (imported as
-`awsprovider`, because 0.3.0 dropped the `aws` prefix and the bare package name is also the
-obvious name for the construct) plus 35 group modules — and synthesises a `cdk.tf.json` with cdktn's validations **on**.
+`awsprovider`, because 0.3.0 dropped the `aws` prefix and the bare package name is also the obvious
+name for the construct) plus 35 group modules — and synthesises a `cdk.tf.json` with cdktn's
+validations **on**.
 
 It exists to answer the one question `VERDICT.md` left open (risk #2): Option A's per-assembly
 consumer cost was extrapolated from a three-module prototype, and the real fleet's tarballs are up
