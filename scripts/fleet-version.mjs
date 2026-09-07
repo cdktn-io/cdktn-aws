@@ -20,8 +20,9 @@
  * `GoReleaser.extractVersion` compares the file's RAW contents against `$VERSION` — no trim — and
  * uses the result to build the tag name. pacmak writes `0.0.0\n` (`VersionFile` emits a `code.line`),
  * so a `version` file with a newline either conflicts with `$VERSION` or, if `$VERSION` is unset,
- * produces a tag called `awsswf/v0.1.0\n`. Hence `writeGoVersionFile`: exactly the version, no
- * newline, which is the only content that both matches `$VERSION` and tags correctly.
+ * produces a tag called `swf/v0.1.0\n` (`awsswf/…` in 0.1.0's directory names). Hence
+ * `writeGoVersionFile`: exactly the version, no newline, which is the only content that both
+ * matches `$VERSION` and tags correctly.
  */
 import { readFileSync, writeFileSync } from "node:fs";
 import * as path from "node:path";

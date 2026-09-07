@@ -199,7 +199,7 @@ describe("the target range", () => {
   });
 
   it("is the range the guide, the README and the worked example all quote", () => {
-    // The next bump is `^0.3.0` on a follow-up branch. It is one line in `map.ts` — and this test is
+    // The next bump (`^0.4.0`, whenever it comes) is one line in `map.ts` — and this test is
     // what makes leaving the prose or the golden example behind a red suite rather than a surprise.
     const version = TARGET_RANGE.replace(/^[~^]/, "");
     // Every `@cdktn/aws@…` these three name — the guide also states the bare version in prose — is
