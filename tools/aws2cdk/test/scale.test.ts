@@ -179,14 +179,17 @@ describe("provider-defined functions", () => {
     );
   });
 
-  it("keeps the functions class on the provider's own name, outside the Tf grammar", () => {
+  it("keeps the functions class on the provider's own classic name", () => {
     const text = read(fnFile);
     // `AwsProviderFunctions` hangs off the provider construct, which is not an L1 resource: both
-    // keep the names `@cdktn/provider-aws` gives them, and are the only exports the grammar excuses.
+    // keep the names `@cdktn/provider-aws` gives them, which is why the grammar asserts carry an
+    // `isProviderExport` escape at all. Since 0.3.0 spells the L1 prefix `Aws`, those classic names
+    // also happen to satisfy `resourceClass` — an accident of spelling, so the escape is asserted
+    // by name and not by the regex disagreeing.
     for (const { name } of topLevelExports(text)) {
       expect(isProviderExport(name)).toBe(true);
-      expect(name).not.toMatch(NAME_GRAMMAR.resourceClass);
     }
+    expect(topLevelExports(text).map((e) => e.name)).toContain("AwsProviderFunctions");
     expect(namespaceMembers(text)).toEqual([]);
   });
 });
@@ -307,8 +310,8 @@ describe("naming grammar over the whole generated tree", () => {
       if (rel === "index.ts") continue;
       const text = fs.readFileSync(path.join(srcDir, rel), "utf-8");
       for (const { kind, name } of topLevelExports(text)) {
-        // AwsProvider/AwsProviderConfig/AwsProviderFunctions are outside the grammar by decision:
-        // the provider construct is not an L1 resource and keeps its classic name (docs/m6-tf-naming.md).
+        // AwsProvider/AwsProviderConfig/AwsProviderFunctions are excused by decision: the provider
+        // construct is not an L1 resource and keeps its classic name (docs/m6-tf-naming.md).
         if (isProviderExport(name)) continue;
         if (kind === "function") expect(name).toMatch(NAME_GRAMMAR.mapperFunction);
         else if (kind === "class") expect(name).toMatch(NAME_GRAMMAR.resourceClass);

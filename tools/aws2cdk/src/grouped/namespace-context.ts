@@ -2,14 +2,14 @@
 // SPDX-License-Identifier: MPL-2.0
 // Forked from cdktn-io/cdktn-awscc's src/grouped/namespace-context.ts — see the fork-provenance
 // table in tools/aws2cdk/README.md. The code is verbatim; only the doc comments are retargeted
-// from awscc's naming (CcVPC / CcVPCProps) to this repo's (TfVpc / TfVpcConfig).
+// from awscc's naming (CcVPC / CcVPCProps) to this repo's (AwsVpc / AwsVpcConfig).
 /**
  * A resource's nested types (`TagProperty`, `TagPropertyOutputReference`, …) are declared once,
- * inside `export namespace TfVpc { ... }`, but referenced from two places: from *inside* that same
+ * inside `export namespace AwsVpc { ... }`, but referenced from two places: from *inside* that same
  * namespace (sibling struct interfaces/classes referencing each other — no qualification needed,
- * plain scoping resolves it) and from *outside* it (the `TfVpcConfig` interface and the `TfVpc`
+ * plain scoping resolves it) and from *outside* it (the `AwsVpcConfig` interface and the `AwsVpc`
  * class body, both emitted at the top level of the file — TypeScript's class+namespace
- * declaration-merging trick exposes nested members only under the qualified name `TfVpc.Foo`, not
+ * declaration-merging trick exposes nested members only under the qualified name `AwsVpc.Foo`, not
  * bare `Foo`, even from inside the class's own methods).
  *
  * `models/attribute-type-model.ts`'s `StructAttributeTypeModel` is the one place a struct's type

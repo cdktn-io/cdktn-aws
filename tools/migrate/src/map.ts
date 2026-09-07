@@ -32,7 +32,7 @@ export const TARGET_RANGE = "^0.2.0";
 /** Where a classic symbol lands: the group barrel, and the member path below it. */
 export interface Target {
   readonly group: string;
-  /** e.g. `TfBucket`, `TfBucketConfig`, `TfBucket.CorsRulePropertyList`, `tfBucketMapper…ToTerraform` */
+  /** e.g. `AwsBucket`, `AwsBucketConfig`, `AwsBucket.CorsRulePropertyList`, `awsBucketMapper…ToTerraform` */
   readonly member: string;
 }
 

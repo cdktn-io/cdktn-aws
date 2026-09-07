@@ -11,10 +11,10 @@
  *
  * The emitted file per schema entry is:
  *
- *     <top level>            TfInstanceConfig, class TfInstance, the *ToTerraform mappers
- *     export namespace TfInstance { <namespace body> }   nested interfaces + Output/List/Map
+ *     <top level>            AwsInstanceConfig, class AwsInstance, the *ToTerraform mappers
+ *     export namespace AwsInstance { <namespace body> }   nested interfaces + Output/List/Map
  *
- * TypeScript merges the class and the namespace, so `TfInstance.EbsBlockDeviceProperty` is a
+ * TypeScript merges the class and the namespace, so `AwsInstance.EbsBlockDeviceProperty` is a
  * real, jsii-visible nested type. Mapper *functions* stay module-level because jsii ignores
  * functions entirely — putting them in the namespace would make the namespace un-mergeable
  * with the class for jsii's assembler.
@@ -124,7 +124,7 @@ export interface GenerateResult {
  *  - `parserType` is the full terraform type as the vendored parser spells it (`aws_lb`,
  *    `data_aws_lb`, `ephemeral_aws_lambda_invocation`, `aws_provider`). It feeds BOTH names a file
  *    has: the class name, through the owning group's `stripPrefixes` (`aws_lambda_function` ->
- *    `TfFunction`), and the FILE name, through its own dashed spelling (`aws-lambda-function.ts`)
+ *    `AwsFunction`), and the FILE name, through its own dashed spelling (`aws-lambda-function.ts`)
  *    — which is why the two are derived by two different functions in `src/naming.ts`.
  *  - `baseName` is the vendored parser's `baseName`, i.e. `parserType` with the `aws_` prefix
  *    removed (`lb`, but `data_aws_lb` unchanged). Nothing is named after it; it exists only

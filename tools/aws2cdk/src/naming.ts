@@ -15,13 +15,16 @@
  * map. Nested types are named off the terraform block/attribute leaf name, which aws (unlike awscc)
  * actually has.
  *
- * ## The class-name rule (M6, docs/m6-tf-naming.md)
+ * ## The class-name rule (M6, docs/m6-tf-naming.md; revised for 0.3.0, docs/v030-naming.md)
  *
- * `Tf` is the L1/source-layer indicator, the analogue of aws-cdk-lib's `Cfn`: it marks a class
- * generated 1:1 from a terraform resource type, and keeps the bare name (`s3.Bucket`) free for a
- * future L2. The service group already names the service, so the group's own service tokens are
- * stripped from the stem — `awss3.TfBucket`, not `awss3.TfS3Bucket`. Which tokens those are is not
- * inferred here: it is the curated `stripPrefixes` list groups.json carries per group.
+ * `Aws` is the L1/source-layer indicator, the analogue of aws-cdk-lib's `Cfn` and of awscc's `Cc`:
+ * it marks a class generated 1:1 from a terraform resource type, and keeps the bare name
+ * (`s3.Bucket`) free for a future L2. 0.2.0 spelled it `Tf`; the community read that infix as
+ * semantically empty and asked for a prefix that names the provider, so `Aws` replaced it — the
+ * stem algorithm below did not move. The service group already names the service, so the group's
+ * own service tokens are stripped from the stem — `s3.AwsBucket`, not `s3.AwsS3Bucket`. Which
+ * tokens those are is not inferred here: it is the curated `stripPrefixes` list groups.json carries
+ * per group.
  *
  * What a migrating consumer is coming FROM is not computed here: the `@cdktn/provider-aws` name of
  * the same terraform type is read off the vendored parser's own models in `classic-naming.ts`,
@@ -33,7 +36,7 @@ import { toPascalCase } from "codemaker";
 const PROVIDER_NAME = "aws";
 
 /** The L1 marker every generated resource/data-source/ephemeral class name starts with. */
-export const CLASS_PREFIX = "Tf";
+export const CLASS_PREFIX = "Aws";
 
 /** How the vendored parser spells each surface, and what each contributes to a class name. */
 export type EntrySurface = "resource" | "data_source" | "ephemeral_resource" | "provider";
@@ -44,10 +47,10 @@ const SURFACE_MARKER: Record<"data_source" | "ephemeral_resource", string> = {
 };
 
 /**
- * The surface marker sits at position 0: `DataTfBucket`, `EphemeralTfInvocation`. So anything
- * starting with `Tf` is a resource — 23 resources whose terraform type leads with a `data_`/
+ * The surface marker sits at position 0: `DataAwsBucket`, `EphemeralAwsInvocation`. So anything
+ * starting with `Aws` is a resource — 23 resources whose terraform type leads with a `data_`/
  * `database` token would otherwise read as data sources — and cdktn's leading `Data…` shape
- * survives for migrating consumers.
+ * survives for migrating consumers, now spelled exactly as the classic library spells it.
  */
 const SURFACE_PREFIX: Record<EntrySurface, string> = {
   resource: "",
@@ -58,8 +61,10 @@ const SURFACE_PREFIX: Record<EntrySurface, string> = {
 
 /**
  * The provider construct is not an L1 resource — it is the thing every L1 resource needs in its
- * stack — so it keeps the name `@cdktn/provider-aws` gives it, and its three exports are the one
- * exception to `NAME_GRAMMAR`.
+ * stack — so it keeps the name `@cdktn/provider-aws` gives it. Under 0.2.0's `Tf` prefix those
+ * three exports were the one exception to `NAME_GRAMMAR`; under `Aws` they satisfy it by accident
+ * of spelling. They are still listed here, because what makes them special is that the classic
+ * library named them, not that a regex happens to accept them.
  */
 export const PROVIDER_CLASS_NAME = "AwsProvider";
 
@@ -112,9 +117,9 @@ export function rawTypeFor(parserType: string, surface: EntrySurface = surfaceOf
  *
  * A prefix that matches the raw type EXACTLY leaves nothing to name the class after, so it is
  * skipped and the next-longest prefix gets its turn: `transit_gateway` lists
- * `[ec2, ec2_transit_gateway]`, and `ec2_transit_gateway` falls through to `ec2` -> `TfTransitGateway`.
- * Only when NO prefix leaves a non-empty stem is the raw type kept (`aws_vpc` in `vpc` -> `TfVpc`,
- * `aws_lb` in `elb` -> `TfLb`). That is the one place the stripping backs off entirely.
+ * `[ec2, ec2_transit_gateway]`, and `ec2_transit_gateway` falls through to `ec2` -> `AwsTransitGateway`.
+ * Only when NO prefix leaves a non-empty stem is the raw type kept (`aws_vpc` in `vpc` -> `AwsVpc`,
+ * `aws_lb` in `elb` -> `AwsLb`). That is the one place the stripping backs off entirely.
  */
 export function stemFor(raw: string, stripPrefixes: readonly string[]): string {
   const byLongest = [...stripPrefixes].sort((a, b) => b.length - a.length || (a < b ? -1 : a > b ? 1 : 0));
@@ -125,7 +130,7 @@ export function stemFor(raw: string, stripPrefixes: readonly string[]): string {
 }
 
 /**
- * The class name for one schema entry: the surface marker + `Tf` + PascalCase of the stem.
+ * The class name for one schema entry: the surface marker + `Aws` + PascalCase of the stem.
  *
  * `toPascalCase` is codemaker's, the same one the vendored parser uses for its own class names, so
  * `s3_bucket` and `bucket` PascalCase the same way they always did.
@@ -364,17 +369,17 @@ export interface MapperNamingEntry {
  * enough. At 257-group scale it is not: string concatenation is not injective when one class name
  * is a prefix of another. Two real cases in aws 6.62.0 —
  *
- *     TfWebAcl  + RuleActionAllowProperty  ┐ both spell
- *     TfWebAclRule  + ActionAllowProperty  ┘ tfWebAclRuleActionAllowPropertyToTerraform
- *     TfBucket + ObjectLockConfigurationRuleProperty ┐ both spell
- *     TfBucketObjectLockConfiguration + RuleProperty ┘ tfBucket…RulePropertyToTerraform
+ *     AwsWebAcl  + RuleActionAllowProperty  ┐ both spell
+ *     AwsWebAclRule  + ActionAllowProperty  ┘ awsWebAclRuleActionAllowPropertyToTerraform
+ *     AwsBucket + ObjectLockConfigurationRuleProperty ┐ both spell
+ *     AwsBucketObjectLockConfiguration + RuleProperty ┘ awsBucket…RulePropertyToTerraform
  *
  * — 21 duplicate exports in `waf` and `s3`, which `tsc` reports as TS2308 on the barrel and which
  * would otherwise let one mapper silently shadow another. (Stripping the group prefix did not
  * create this: the same two families collided as `AwsWafv2WebAcl…`/`AwsS3Bucket…` in 0.1.x.)
  *
  * The fallback: every class in a colliding cluster gets `Mapper` inserted at the boundary
- * (`tfWebAclMapperRuleActionAllowPropertyToTerraform`). It is applied to the whole cluster, not
+ * (`awsWebAclMapperRuleActionAllowPropertyToTerraform`). It is applied to the whole cluster, not
  * just to a "loser", so the result does not depend on iteration order; a class not in any cluster
  * keeps the plain prefix, which is why only `waf` and `s3` are touched at all. The disambiguator is
  * alphanumeric, so `NAME_GRAMMAR.mapperFunction` still holds.
@@ -467,8 +472,8 @@ function downcaseFirst(s: string): string {
  * accident, so the assert sites let those through explicitly.
  */
 export const NAME_GRAMMAR = {
-  resourceClass: /^(Data|Ephemeral)?Tf[A-Z][A-Za-z0-9]*$/,
-  configInterface: /^(Data|Ephemeral)?Tf[A-Z][A-Za-z0-9]*Config$/,
+  resourceClass: /^(Data|Ephemeral)?Aws[A-Z][A-Za-z0-9]*$/,
+  configInterface: /^(Data|Ephemeral)?Aws[A-Z][A-Za-z0-9]*Config$/,
   propertyInterface: /^[A-Z][A-Za-z0-9]*Property$/,
   propertyOutputReference: /^[A-Z][A-Za-z0-9]*PropertyOutputReference$/,
   propertyList: /^[A-Z][A-Za-z0-9]*PropertyList$/,

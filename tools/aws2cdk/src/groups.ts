@@ -19,7 +19,7 @@ export interface Group {
   readonly title: string;
   /**
    * The service-name token prefixes this group's own title already conveys, stripped off a member's
-   * terraform type before it is turned into a class name (`aws_s3_bucket` -> `TfBucket`). Curated,
+   * terraform type before it is turned into a class name (`aws_s3_bucket` -> `AwsBucket`). Curated,
    * never inferred — see docs/curation.md and `src/naming.ts#classNameForEntry`.
    */
   readonly stripPrefixes: string[];
