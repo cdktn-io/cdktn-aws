@@ -3345,7 +3345,7 @@ Do not edit by hand.
 
 This package is \`private: true\` and is never published to npm. It exists to be compiled by
 \`jsii\` and packed by \`jsii-pacmak\`; the Go distribution is
-\`github.com/cdktn-io/cdktn-aws-go/awselb\`.
+\`github.com/cdktn-io/cdktn-aws-go/elb\`.
 
 Every construct here needs an \`AwsProvider\` in the same stack — see \`@cdktn/aws-provider\`.
 "
@@ -3379,7 +3379,7 @@ exports[`snapshots emits stable package manifests: elb/package.json 1`] = `
     "targets": {
       "go": {
         "moduleName": "github.com/cdktn-io/cdktn-aws-go",
-        "packageName": "awselb"
+        "packageName": "elb"
       }
     }
   },
@@ -3406,7 +3406,7 @@ Do not edit by hand.
 
 This package is \`private: true\` and is never published to npm. It exists to be compiled by
 \`jsii\` and packed by \`jsii-pacmak\`; the Go distribution is
-\`github.com/cdktn-io/cdktn-aws-go/awslambda\`.
+\`github.com/cdktn-io/cdktn-aws-go/lambda\`.
 
 Every construct here needs an \`AwsProvider\` in the same stack — see \`@cdktn/aws-provider\`.
 "
@@ -3440,7 +3440,7 @@ exports[`snapshots emits stable package manifests: lambda/package.json 1`] = `
     "targets": {
       "go": {
         "moduleName": "github.com/cdktn-io/cdktn-aws-go",
-        "packageName": "awslambda"
+        "packageName": "lambda"
       }
     }
   },
@@ -3467,7 +3467,7 @@ Do not edit by hand.
 
 This package is \`private: true\` and is never published to npm. It exists to be compiled by
 \`jsii\` and packed by \`jsii-pacmak\`; the Go distribution is
-\`github.com/cdktn-io/cdktn-aws-go/awsprovider\`.
+\`github.com/cdktn-io/cdktn-aws-go/provider\`.
 
 Every construct here needs an \`AwsProvider\` in the same stack — see \`@cdktn/aws-provider\`.
 "
@@ -3501,7 +3501,7 @@ exports[`snapshots emits stable package manifests: provider/package.json 1`] = `
     "targets": {
       "go": {
         "moduleName": "github.com/cdktn-io/cdktn-aws-go",
-        "packageName": "awsprovider"
+        "packageName": "provider"
       }
     }
   },

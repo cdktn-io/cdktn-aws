@@ -125,7 +125,7 @@ describe("the per-group manifests still carry their Go targets", () => {
     const group = JSON.parse(fs.readFileSync(p, "utf-8"));
     expect(group.jsii.targets.go).toEqual({
       moduleName: "github.com/cdktn-io/cdktn-aws-go",
-      packageName: "awslambda",
+      packageName: "lambda",
     });
   });
 });

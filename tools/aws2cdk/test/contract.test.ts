@@ -504,15 +504,29 @@ describe("package manifests", () => {
       expect(p.jsii.targets.go.packageName).toMatch(/^[a-z][a-z0-9]*$/);
       expect(read(`${group}/README.md`).length).toBeGreaterThan(0);
     }
-    expect(pkg("provider").jsii.targets.go.packageName).toBe("awsprovider");
+    expect(pkg("provider").jsii.targets.go.packageName).toBe("provider");
   });
 
-  it("produces a unique Go packageName for every one of the real 257 groups", () => {
+  it("produces a unique, legal, non-keyword Go packageName for every one of the real 257 groups", () => {
     const real = readGroups(groupsJsonPath);
     const byName = assertUniqueGoPackageNames(real);
-    // 257 groups + the synthetic provider group
+    // 257 groups + the synthetic provider group. Injectivity matters more since 0.3.0 dropped the
+    // `aws` prefix: the names are shorter, so two slugs have less to differ by.
     expect(byName.size).toBe(Object.keys(real.groups).length + 1);
     for (const name of byName.keys()) expect(name).toMatch(/^[a-z][a-z0-9]*$/);
+    expect(byName.get("provider")).toBe("provider");
+    expect(byName.get("acmpca")).toBe("acm_pca");
+    expect(byName.get("s3")).toBe("s3");
+  });
+
+  it("refuses a slug that would name a Go keyword, which no import of could compile", () => {
+    // Not reachable from aws 6.62.0, and the point is that a future group named `map` or `range`
+    // fails here rather than in a consumer's `go build`.
+    for (const kw of ["map", "range", "type", "select"]) {
+      expect(() => goPackageName(kw)).toThrow(/produces the Go keyword/);
+    }
+    // a predeclared identifier is shadowable and stays legal
+    expect(goPackageName("string")).toBe("string");
   });
 });
 

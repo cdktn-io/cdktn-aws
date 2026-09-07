@@ -62,7 +62,7 @@ export function readGroups(file = groupsJsonPath): GroupsFile {
 /**
  * The synthetic group that holds the generated `AwsProvider` construct. It is not in groups.json
  * (which maps *schema entries* to service groups, and the provider block is not one), but it is a
- * package exactly like any other: `@cdktn/aws-provider`, Go package `awsprovider`. Every consumer
+ * package exactly like any other: `@cdktn/aws-provider`, Go package `provider`. Every consumer
  * needs it, because cdktn's default `ValidateProviderPresence` fails synth without a provider
  * construct in the stack.
  */
@@ -151,16 +151,33 @@ export function membersOf(
  * `github.com/cdktn-io/cdktn-aws-go` and the prefix of that module's release tags. jsii requires
  * it to match `^[a-z][a-z0-9]*$`, so the slug's underscores are simply removed.
  *
- * Every group is prefixed with `aws` (`elb` -> `awselb`) so a Go import path names the provider it
- * binds, matching the spike's `awsdetective`/`awscloudfront`/`awsprovider`.
+ * It is the SLUG, with no `aws` prefix (`elb` -> `elb`, `acm_pca` -> `acmpca`), so the Go import
+ * path ends in the same service name TypeScript and Python spell (0.3.0, docs/v030-naming.md): the
+ * module path already says `cdktn-aws-go`, and `awss3.NewAwsBucket` stuttered twice over. A Go
+ * package name is also a bare identifier at every call site, so it must additionally not be a Go
+ * keyword — `map`, `range`, `type` — which no aws 6.62.0 slug is, and which this refuses if a
+ * future one ever is.
  */
 export function goPackageName(slug: string): string {
-  const name = `aws${slug.replace(/_/g, "")}`;
+  const name = slug.replace(/_/g, "");
   if (!/^[a-z][a-z0-9]*$/.test(name)) {
     throw new Error(`group "${slug}" produces an illegal jsii Go packageName "${name}"`);
   }
+  if (GO_KEYWORDS.has(name)) {
+    throw new Error(
+      `group "${slug}" produces the Go keyword "${name}" as its package name — no import of it ` +
+        "can compile; rename the group in groups.json (docs/group-moves.md)",
+    );
+  }
   return name;
 }
+
+/** go.dev/ref/spec#Keywords. Predeclared identifiers (`string`, `len`) are shadowable; these are not. */
+const GO_KEYWORDS = new Set([
+  "break", "case", "chan", "const", "continue", "default", "defer", "else", "fallthrough", "for",
+  "func", "go", "goto", "if", "import", "interface", "map", "package", "range", "return", "select",
+  "struct", "switch", "type", "var",
+]);
 
 /**
  * npm package name. The slug's underscores become hyphens: `acm_pca` -> `@cdktn/aws-acm-pca`.

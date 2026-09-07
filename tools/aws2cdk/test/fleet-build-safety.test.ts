@@ -52,7 +52,7 @@ function workingManifest(group: string): string {
 
 describe("--pacmak-go over a stale assembly", () => {
   const GROUP = "sts";
-  const MODULE = "awssts";
+  const MODULE = "sts";
   const moduleDir = path.join(repoRoot, "generated", GROUP, "dist", "go", MODULE);
   const versionFile = path.join(moduleDir, "version");
   const COMPILED = "0.7.7";
