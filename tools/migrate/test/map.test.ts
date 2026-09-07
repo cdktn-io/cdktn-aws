@@ -119,8 +119,8 @@ describe("package.json", () => {
       ["peerDependencies", "^25.0.0"],
     ]);
     const after = JSON.parse(result.after);
-    expect(after.dependencies).toEqual({ "@cdktn/aws": "^0.2.0" });
-    expect(after.peerDependencies).toEqual({ "@cdktn/aws": "^0.2.0", cdktn: "^0.24.0" });
+    expect(after.dependencies).toEqual({ "@cdktn/aws": TARGET_RANGE });
+    expect(after.peerDependencies).toEqual({ "@cdktn/aws": TARGET_RANGE, cdktn: "^0.24.0" });
   });
 
   it("keeps the classic dependency while the run has residual imports to install", () => {
@@ -128,7 +128,7 @@ describe("package.json", () => {
     const result = migrateManifest(file, "package.json", true)!;
     expect(result.changes[0].keptClassic).toBe(true);
     expect(JSON.parse(result.after).dependencies).toEqual({
-      "@cdktn/aws": "^0.2.0",
+      "@cdktn/aws": TARGET_RANGE,
       "@cdktn/provider-aws": "^25.3.0",
     });
   });
@@ -180,6 +180,42 @@ describe("package.json", () => {
 
   it("says nothing about a manifest that never depended on the classic library", () => {
     expect(migrateManifest(write({ name: "example", dependencies: { cdktn: "0.24.0" } }), "package.json")).toBeUndefined();
+  });
+});
+
+describe("the target range", () => {
+  const repo = path.resolve(__dirname, "..", "..", "..");
+  const src = path.join(repo, "tools", "migrate", "src");
+  const read = (...parts: string[]) => fs.readFileSync(path.join(repo, ...parts), "utf-8");
+
+  it("is spelled out in exactly one place in the tool", () => {
+    // `report.ts` hardcoded `@cdktn/aws@^0.2.0` in its "becomes" column and printed it whatever the
+    // manifest actually got. One constant, and this is what keeps it one.
+    const others = fs
+      .readdirSync(src)
+      .filter((f) => f.endsWith(".ts") && f !== "map.ts")
+      .filter((f) => fs.readFileSync(path.join(src, f), "utf-8").includes(TARGET_RANGE));
+    expect(others).toEqual([]);
+  });
+
+  it("is the range the guide, the README and the worked example all quote", () => {
+    // The next bump is `^0.3.0` on a follow-up branch. It is one line in `map.ts` — and this test is
+    // what makes leaving the prose or the golden example behind a red suite rather than a surprise.
+    const version = TARGET_RANGE.replace(/^[~^]/, "");
+    // Every `@cdktn/aws@…` these three name — the guide also states the bare version in prose — is
+    // the target's, and the two that tell a consumer what to install name the range itself.
+    for (const file of [
+      ["docs", "migrating-from-provider-aws.md"],
+      ["tools", "migrate", "README.md"],
+      ["examples", "migrate", "typescript", "migrated", "package.json"],
+    ]) {
+      const text = read(...file);
+      const named = [...text.matchAll(/@cdktn\/aws(?:@|":\s*")([~^]?\d+\.\d+\.\d+)/g)].map((m) =>
+        m[1].replace(/^[~^]/, ""),
+      );
+      expect([file.join("/"), [...new Set(named)]]).toEqual([file.join("/"), [version]]);
+      expect([file.join("/"), text.includes(TARGET_RANGE)]).toEqual([file.join("/"), true]);
+    }
   });
 });
 

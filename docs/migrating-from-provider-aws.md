@@ -81,7 +81,7 @@ It rewrites:
   report row each. A touched block is rebuilt from a sorted key list, so the result does not depend
   on the order the file happened to have, and the report's *becomes* column prints the range the
   manifest actually ends up with. A block that already declares `@cdktn/aws` keeps its own range
-  when that range is inside `^0.2.0`; when it is not, nothing in the manifest is touched at all —
+  when that range is inside `@cdktn/aws@^0.2.0`; when it is not, nothing in the manifest is touched —
   see the limits table.
 
 If the group name is already bound in a file, the barrel member is aliased deterministically
@@ -114,7 +114,7 @@ closing `grep` below is there to catch:
 | any other call taking a classic specifier — `require.resolve('…')`, `jest.requireActual('…')`, a `module.require('…')` that is not a whole `const … =` statement | reported — the string is seen, but what the call does with it is not something to guess at |
 | a classic specifier written as a bare string anywhere else | reported — the backstop scans every string literal, not the positions the tool recognises |
 | a subpath with no map row | reported, and its import kept whole |
-| a `package.json` that already declares `@cdktn/aws` at a range outside `^0.2.0` | reported, and the manifest is left exactly as it was — overwriting an intentional pin, or keeping an incompatible one, are both guesses. Resolve the range by hand and re-run |
+| a `package.json` that already declares `@cdktn/aws` at a range outside `@cdktn/aws@^0.2.0` | reported, and the manifest is left exactly as it was — overwriting an intentional pin, or keeping an incompatible one, are both guesses. Resolve the range by hand and re-run |
 | a default import (`import aws from '@cdktn/provider-aws'`) | reported — neither library has a default export, so the binding stays on the classic package, and a `* as` binding sharing that statement stays with it |
 
 After a `--write` run, `grep -r '@cdktn/provider-aws' .` is the honest last step.
@@ -145,3 +145,9 @@ same map drives them when they land. Until then:
 provider's — `@cdktn/provider-aws@25.3.0` and `@cdktn/aws@0.2.0` bind the same
 `terraform-provider-aws` 6.62.0. Check `schemas/PROVIDER_VERSION` here and `cdktn.provider.version`
 in the classic package's manifest before assuming two builds agree.
+
+The range `--write` puts in a manifest is written down once, in `tools/migrate/src/map.ts` as
+`TARGET_RANGE` — not derived from this repository's own `package.json`, whose version is the *next*
+release's for the whole of a development cycle. Bumping it is that one line;
+`tools/migrate/test/map.test.ts` § "the target range" then fails until this page, the tool's README
+and the worked example's manifest have caught up, which is what keeps them from drifting apart.

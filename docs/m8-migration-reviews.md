@@ -92,3 +92,41 @@ tool a way to catch the family itself.
 
 11 new tests in the tool's suite (38 -> 49) and one more in the generator's, 2,304 across the
 repository.
+
+## Round 4 (review comment 5564708251)
+
+Two P1s, both the same shape as round 1's: the tool reporting a clean run — 0 unmapped, exit 0 —
+over a project that no longer installs or resolves.
+
+* **The loader recognizer knew one form, and the backstop only checked the forms it knew.**
+  `requiredSpecifier()` matched a bare `require('…')`; `module.require('…')` matched neither it nor
+  `isModuleSpecifier()`, so the reviewer's file was neither rewritten nor reported — and
+  `keepClassic` derives only from the unmapped findings, so `--write` dropped `@cdktn/provider-aws`
+  from `package.json` while the source still loaded it. The backstop is conservative now: it scans
+  EVERY string literal whose value is a classic specifier, not the positions the recognizer models,
+  and reports each one the run did not decide about ("classic specifier left in place:
+  `require.resolve(…)` — move it by hand"), which is what makes it a report row, an exit code of 1
+  and a kept classic dependency. Alongside that, the two forms that are cheap and unambiguous are
+  rewritten where the bare `require` already was: `module.require(…)`, which is the same call under
+  CommonJS, and `const ns = await import('…')`, which binds the same namespace object — same
+  identifier and destructuring patterns, and a residual spells its own callee back. An un-awaited
+  `import('…')` binds a Promise, not a namespace, so it stays reported. The reviewer's case now
+  migrates to `import { s3 } from '@cdktn/aws'; export const b = s3.TfBucket;`.
+* **A pre-existing `@cdktn/aws` dependency was resolved by JSON key order, and the report lied about
+  it.** The rebuild wrote `TARGET_RANGE` at the classic entry and let a later target entry overwrite
+  it, so `{provider-aws, aws}` kept `~0.1.0` and `{aws, provider-aws}` replaced it — either way the
+  "becomes" column printed the hardcoded `@cdktn/aws@^0.2.0` at exit 0. The policy is decided from
+  the block as a whole before the rebuild, so key order cannot reach it: a range already inside
+  `TARGET_RANGE` is kept and reported as itself; one that is not leaves the whole manifest untouched
+  with a finding ("existing @cdktn/aws range ~0.1.0 conflicts with ^0.2.0: resolve by hand") that
+  counts towards the unmapped total. Overwriting an intentional pin and keeping an incompatible one
+  are both guesses. `satisfiesTarget` is narrow and deliberately not `semver` — a wrong yes pins a
+  consumer to a library the rewritten source does not compile against.
+* **The target range is one constant, and forgetting to bump it is now a red suite.**
+  `map.ts#TARGET_RANGE` is the only spelling in `src/` (`report.ts` had a second), and a test
+  asserts that plus the guide, the tool's README and the worked example's manifest all quoting it.
+  It is not derived from this repository's `package.json`: that version is the next release's for a
+  whole development cycle, so deriving would either publish a wrong range or forbid the skew.
+
+13 new tests in the tool's suite (49 -> 62). The guide's limits table gains the three reported rows
+this round added and the manifest-conflict row; the two silent limits are unchanged.

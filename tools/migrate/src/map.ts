@@ -14,7 +14,19 @@ import { toCamelCase } from "codemaker";
 
 export const CLASSIC_PACKAGE = "@cdktn/provider-aws";
 export const TARGET_PACKAGE = "@cdktn/aws";
-/** What `--write` puts in a migrated package.json. The library's first release under this name. */
+/**
+ * What `--write` puts in a migrated package.json — and the ONE place the migration's target version
+ * is written down.
+ *
+ * Not derived from this repository's own `package.json`: that version is the NEXT release's, bumped
+ * by a release commit on a release branch, while this is what a consumer should install today — the
+ * two are legitimately different for the whole of a development cycle, so deriving one from the
+ * other would either publish a wrong range or forbid the skew. Everything else that needs it reads
+ * it from here, and `map.test.ts` § "the target range" asserts that: the constant is the only
+ * spelling in `src/`, and the guide, the tool's README and the worked example's manifest all quote
+ * this exact range. Bumping it is therefore a one-line change plus a red suite until the prose and
+ * the example catch up.
+ */
 export const TARGET_RANGE = "^0.2.0";
 
 /** Where a classic symbol lands: the group barrel, and the member path below it. */
